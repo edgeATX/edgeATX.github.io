@@ -1,7 +1,5 @@
 # Bleeding Edge Web
 
-*A meetup for the discerning web app developer*
-
 http://www.meetup.com/bleeding-edge-web/
 
 We meet at the awesome [Capital Factory](http://capitalfactory.com/) at 7pm on the 4th Wednesday of each month.
