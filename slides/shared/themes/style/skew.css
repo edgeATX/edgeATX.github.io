@@ -39,7 +39,7 @@
         font-weight: bold;
         color: #888; }
     /* line 51, skew.scss */
-    .deck-container .slide table td {
+    .deck-container .slide table.table td {
       border: 1px solid #ccc;
       padding: 5px; }
     /* line 55, skew.scss */
