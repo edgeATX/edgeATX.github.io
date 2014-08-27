@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bleeding Edge Web: December 2013</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr.custom.js"></script>
+  
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+  
+</head>
+<body class="deck-container language-javascript">
+
+<!-- ===========  Title  ========= -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- ===========  Intro  ========= -->
+
+<section class="slide">
+  <h2>December 2013: Debugging Tools</h2>
+  <h3>News from the Bleeding Edge / traceGL Demo</h3>
+  <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Performance Analysis using Chrome DevTools</h3>
+  <p>&mdash; Renuka Rajan (<a href="http://twitter.com/renukarajan2013 ">@renukarajan2013 </a>)</p>
+  
+  <h3>Dive into Firefox Developer Tools</h3>
+  <p>&mdash; Ryan Stinnett, Mozilla (<a href="http://twitter.com/jrynas">@jryans</a>)</p>
+
+  <h3>Drinks</h3>
+</section>
+
+<!-- ===========  Sponsor  ========= -->
+
+<section class="slide">
+  <h2>Sponsor: CM First</h2>
+  <p><a href="http://www.cmfirstgroup.com/">http://www.cmfirstgroup.com/</a></p>
+  <p>Contact <a href="http://www.meetup.com/bleeding-edge-web/members/20441561/">John Rhodes</a> for more info</p>
+  <img src="images/cm-first.png" style="position:absolute;right:0;bottom:0;width:100%;z-index:-999;">
+</section>
+
+<!-- ===========  Theme  ========= -->
+
+<section class="slide title">
+  <h1>Today's Theme</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(images/breaking-bad.png)">
+
+</section>
+
+<section class="slide">
+  <h2>Golden Age of Web Dev</h2>
+  <img src="images/golden-age.gif">
+</section>
+
+<section class="slide">
+  <h2>Golden Age of Web Dev</h2>
+  <p>Driven by many factors</p>
+  <ul>
+    <li>Competition</li>
+    <li>Choice</li>
+    <li>Quality</li>
+    <li>Innovation</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>End of the Year</h2>
+  <p>It's a good time to step back and reflect</p>
+  <p>What makes this a golden age?</p>
+</section>
+
+<section class="slide title">
+  <h1>The Cloud is Here to Stay</h1>
+</section>
+
+<section class="slide">
+  <h2>Amazon Web Services for JS</h2>
+  <p><a href="http://aws.typepad.com/aws/2013/10/developer-preview-aws-sdk-for-javascript.html">http://aws.typepad.com/aws/2013/10/developer-preview-aws-sdk-for-javascript.html</a></p>
+  <p>In developer preview since October</p>
+  <ul>
+    <li>Access AWS APIs without server-side code</li>
+    <li>Supports S3, SQS (message queues), SNS (distributed notifications), DynamoDB</li>
+    <li>CORS support out of the box</li>
+  </ul>
+  <img src="images/aws.jpeg" style="width:50%;">
+</section>
+
+<section class="slide">
+  <h2>Rackspace Open Cloud</h2>
+  <p><a href="http://www.rackspace.com/open-cloud/">http://www.rackspace.com/open-cloud/</a></p>
+  <p>Announced in November</p>
+  <ul>
+    <li>Built on OpenStack APIs</li>
+    <li>100% SSD storage</li>
+  </ul>
+  <img src="images/rackspace-cloud.png">
+</section>
+
+<section class="slide">
+  <h2>Google Cloud Platform</h2>
+  <p><a href="https://cloud.google.com/">https://cloud.google.com/</a></p>
+  <blockquote>Virtual machines. Managed platform. Blob storage. Block storage.
+    NoSQL datastore. MySQL database. Big Data analytics. Google Cloud Platform has
+    all the services your application architecture needs.</blockquote>
+  <ul>
+    <li>App Engine, Cloud SQL / Datastore, Hadoop, Cloud Storage, Google APIs</li>
+    <li>Officially "generally available" as of today</li>
+  </ul>
+  <img src="images/google-cloud.png" style="width:60%;">
+</section>
+
+<section class="slide">
+  <h2>Amazon WorkSpaces</h2>
+  <p><a href="http://aws.amazon.com/workspaces/">http://aws.amazon.com/workspaces/</a></p>
+  <p>"Fully managed desktop computing service in the cloud"</p>
+  <img src="images/amazon-workspaces.gif">
+</section>
+
+<!-- ===========  Platforms  ========= -->
+
+<section class="slide title">
+  <h1>The Browser War is Dead. Long Live the Browser War!</h1>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>IE</li>
+    <li>Chrome</li>
+    <li>Firefox</li>
+    <li>Safari</li>
+    <li>Opera</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>HINT &mdash; versions as of October 2013:</p>
+  <ul>
+    <li>IE <strong style="color:#36d">10</strong></li>
+    <li>Chrome <strong style="color:#36d;">29</strong></li>
+    <li>Firefox <strong style="color:#36d">23</strong></li>
+    <li>Safari <strong style="color:#36d">6</strong></li>
+    <li>Opera <strong style="color:#36d;">16</strong></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>IE <span class="strike dim">10</span> &rarr; <strong style="color:#d00">11</strong></li>
+    <li>Chrome <span class="strike dim">29</span> &rarr; <strong style="color:#d00;">31</strong></li>
+    <li>Firefox <span class="strike dim">23</span> &rarr; <strong style="color:#d00">25</strong></li>
+    <li>Safari <span class="strike dim">6</span> &rarr; <strong style="color:#d00">7</strong></li>
+    <li>Opera <span class="strike dim">16</span> &rarr; <strong style="color:#d00;">18</strong></li>
+  </ul>
+  <p><small>(since October 2013)</small></p>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>A gentle reminder of where we were, not long ago:</p>
+  <img src="images/ie-history.gif">
+</section>
+
+
+<!-- ===========  Libraries  ========= -->
+
+<section class="slide title">
+  <h1>Libraries &amp; Tools Keep Getting Better</h1>
+</section>
+
+<section class="slide">
+  <h2>Google Web Designer</h2>
+  <p><a href="https://www.google.com/webdesigner/">https://www.google.com/webdesigner/</a></p>
+  <blockquote>Create engaging, interactive HTML5-based designs and motion graphics that can run on any device</blockquote>
+  <ul>
+    <li>Scene-based animation builder</li>
+    <li>CSS3-based 3D content authoring</li>
+  </ul>
+  <p><small>( compare to Adobe Edge Animate, Sencha Animator, etc. )</small></p>
+  <img src="images/google-web-designer.png">
+</section>
+
+<section class="slide">
+  <h2>Imager.js</h2>
+  <p>By BBC News</p>
+  <p><a href="https://github.com/BBC-News/Imager.js">https://github.com/BBC-News/Imager.js</a></p>
+  <blockquote>Responsive images while we wait for srcset to finish cooking</blockquote>
+  <ul>
+    <li>Image placeholders</li>
+    <li>Lazy-loading of images</li>
+    <li>Responsive image generation via Grunt</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Retire.js</h2>
+  <p><a href="http://bekk.github.io/retire.js/">http://bekk.github.io/retire.js/</a></p>
+  <blockquote>Helps detect versions of third-party libraries with known security vulnerabilities</blockquote>
+  <ul>
+    <li>Command line code scanner</li>
+    <li>Grunt plugin</li>
+    <li>Chrome plugin</li>
+    <li>Scans JS libs and/or Node modules</li>
+  </ul>
+</section>
+
+<section class="slide title">
+  <h1>Open Source has Arrived</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(images/neck-beard.png);">
+  <h1 style="font-size:2.5em;">Not Just for "Neck Beards" Anymore</h1>
+</section>
+
+<section class="slide">
+  <h2>Big (New) Players</h1>
+  <ul>
+    <li>Facebook: <a href="http://facebook.github.io/react/">React</a> / <a href="http://phabricator.org/">Phabricator</a></li>
+    <li>LinkedIn: <a href="http://linkedin.github.io/hopscotch">Hopscotch</a> / <a href="http://linkedin.github.io/dustjs/">Dustjs</a></li>
+    <li>Netflix: <a href="https://github.com/Netflix/SimianArmy">SimianArmy</a> / <a href="https://github.com/Netflix/asgard">Asgard</a></li>
+    <li>PayPal: <a href="http://krakenjs.com/">Krakenjs</a></li>
+    <li>Twitter: <a href="http://getbootstrap.com/">Bootstrap</a> / <a href="http://twitter.github.io/flight/">Flight</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Pop Quiz</h2>
+  <p>What do all the previous projects have in common?</p>
+</section>
+
+<section class="slide">
+  <img src="images/octocat.png" style="width:100%;">
+</section>
+
+<section class="slide title">
+  <h1>So, in summary...</h1>
+</section>
+
+<section class="slide" style="background-color:#A54CC9;">
+  <h1 style="color:#fff;font-size:2.7em;">It's never been a better time to be a web developer!</h1>
+</section>
+
+<section class="slide">
+  <h2>Looking Toward 2014</h2>
+  <p>Some food for thought:</p>
+  <ul>
+    <li>If you aren't in the cloud, you're building for obsolescence</li>
+    <li>If you aren't taking open source seriously, START NOW</li>
+    <li>If you are a developer and not on Github, you don't exist</li>
+  </ul>
+</section>
+
+<!-- ===========  Tracing  ========= -->
+
+<section class="slide title">
+  <h1>traceGL Demo</h1>
+</section>
+
+<section class="slide">
+  <h2>D'oh...</h2>
+  <h3 style="color:#bd2426;text-align:center;font-size:2em;">#FAIL</h3>
+  <img src="images/trace.gl.png">
+</section>
+
+<section class="slide title">
+  <h1>OK, Tracing in General</h1>
+</section>
+
+<section class="slide">
+  <h2>Google WTF</h2>
+  <p><a href="http://google.github.io/tracing-framework/">http://google.github.io/tracing-framework/</a></p>
+  <img src="images/wtf.png">
+</section>
+
+<section class="slide">
+  <h2>spy-js</h2>
+  <p><a href="https://github.com/spy-js/spy-js">https://github.com/spy-js/spy-js</a></p>
+  <p>Debug/trace/profile JavaScript running on different platforms/browsers/devices</p>
+  <img src="images/spy-js.png">
+</section>
+
+
+<!-- ===========  Local Happenings  ========= -->
+
+<section class="slide title">
+  <h1>Local Happenings</h1>
+</section>
+
+<section class="slide">
+  <h2>Upcoming Events</h1>
+
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/events/152771312/">2013 Austin Web Bash</a></h3>
+  <p>Tues, Dec 10, 7pm &mdash; free!</p>
+  
+  <h3><a href="http://datadaytexas.com/">Data Day Texas</a></h3>
+  <p>Sat, Jan 11, 8:30am &mdash; $165 (through Dec 7)</p>
+</section>
+
+<!-- ===========  Tips & Tricks  ========= -->
+
+<section class="slide title">
+  <h1>Tips &amp; Tricks</h2>
+</section>
+
+<section class="slide">
+  <h2>Performance Calendar</h2>
+  <p>A new performance article every day in December</p>
+  <p><a href="http://calendar.perfplanet.com/2013/">http://calendar.perfplanet.com/2013/</a></p>
+  <blockquote>The speed geek's favorite time of the year</blockquote>
+  <img src="images/perf-cal.png">
+</section>
+
+<section class="slide">
+  <h2>Resume with pauses blocked</h2>
+  <p>Long-press the "resume" button at breakpoints (Chrome DevTools)</p>
+  <p>Easily preserve breakpoints / debugger statements between passes</p>
+  <img src="images/resume.gif">
+</section>
+
+<section class="slide">
+  <h2>Console.table()</h2>
+  <pre><code>var browsers = [
+    { name: "IE",      version: 11, vendor: "Microsoft" },
+    { name: "Chrome",  version: 31, vendor: "Google" },
+    { name: "Firefox", version: 25, vendor: "Mozilla" },
+    { name: "Safari",  version: 7,  vendor: "Apple" },
+    { name: "Opera",   version: 18, vendor: "Opera Software" }
+];</code></pre>
+  <img src="images/console.log.gif" style="width:60%;">
+</section>
+
+<section class="slide">
+  <h2>Console.table()</h2>
+  <pre><code>var browsers = [
+    { name: "IE",      version: 11, vendor: "Microsoft" },
+    { name: "Chrome",  version: 31, vendor: "Google" },
+    { name: "Firefox", version: 25, vendor: "Mozilla" },
+    { name: "Safari",  version: 7,  vendor: "Apple" },
+    { name: "Opera",   version: 18, vendor: "Opera Software" }
+];</code></pre>
+  <img src="images/console.table.gif" style="width:90%;">
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Q &amp; A</h2>
+  <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <h1>Thanks!</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

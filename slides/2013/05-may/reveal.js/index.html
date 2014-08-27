@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intro to JSDuck</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+        <section>
+          <h1>JSDuck</h1>
+          <h3>Create your own "Sencha" docs.</h3>
+          <p>
+            <small>With <a href="http://artofidea.com">Corey Butler</a> / <a href="http://twitter.com/goldglovecb">@goldglovecb</a></small>
+          </p>
+        </section>
+
+        <section style="text-align: left;">
+          <h2>About Corey</h2>
+          <ol>
+            <li>Cofounder, <a href="http://thinkfirst.biz/corey">ThinkFirst, LLC</a></li>
+            <li>Consultant @ Amazon, Atlassian, Discover Card, Constant Contact, ++</li>
+            <li>Blog @<a href="http://artofidea.com" target="_blank">ArtOfIdea.com</a></li>
+            <li><a href="http://github.com/coreybutler" target="_blank">github.com/coreybutler</a></li>
+          </ol>
+          <aside class="notes">
+            <p>Publicly, ThinkFirst is a contract & consulting group, but behind the scenes we are developing
+            several online services. We also contribute to the open source community.</p>
+            <p>
+              I founded a consulting firm in Chicago & ran it for 10yrs before coming to Austin in 2010.
+            </p>
+            <p>Blog isn't very mobile friendly. Apologize.</p>
+            <p>
+              I've got some work on Github, some of which will be covered.
+            </p>
+          </aside>
+        </section>
+
+				<section>
+				  <section>
+				    <h1>About</h1>
+				  </section>
+				  <section>
+				    <h2>Good For:</h2>
+				    <ol>
+				      <li>Class-like code documentation.</li>
+				      <li>General guides (including user guides).</li>
+				    </ol>
+				  </section>
+				  <section>
+            <h2>JSDuck - Built for Sencha</h2>
+            <img src="../images/welcome.png" width="90%" alt="Welcome">
+            <aside class="notes">
+              <li>Landing Page.</li>
+              <li>People learn where to go.</li>
+              <br/>
+              Built by Rene Saarsoo (nene) of Estonia.
+            </aside>
+          </section>
+          <section>
+            <h2>Used By Sencha Component Developers (Bryntum)</h2>
+            <img src="../images/siesta.png" width="90%" alt="Guides"/>
+          </section>
+          <section>
+            <h2>Adapted By Others (Titanium)</h2>
+            <img src="../images/titanium.png" width="90%" alt="Guides"/>
+            <aside class="notes">
+              Titanium has nothing to do with Sencha, but it does use a class-like inheritance pattern.
+            </aside>
+          </section>
+        </section>
+        <section>
+					<section>
+            <h1>Features</h1>
+          </section>
+          <section>
+  					<h2>API</h2>
+  					<a href="http://docs.sencha.com/extjs/4.2.0/#!/api/Ext.data.ArrayStore" target="_blank"><img width="90%" src="../images/ArrayStore.png" alt="ArrayStore"></a>
+  					<aside class="notes">
+  						<li>The meat and potatoes.</li>
+  						<li>Doesn't have to be Ext or Touch. (more later)</li>
+  						<b>Cool Features</b>
+  						<li>Visualization of the API (Tree)</li>
+  						<li>Quick Navigation & Search</li>
+  						<li>View Source Directly</li>
+  					</aside>
+					</section>
+          <section>
+            <h2>Guides</h2>
+            <img src="../images/guides.png" width="90%" alt="Guides"/>
+            <aside class="notes">
+              <li>Customized via JSON Config.</li>
+            </aside>
+          </section>
+          <section>
+            <img src="../images/guides-2.png" width="90%" alt="Guides"/>
+            <aside class="notes">
+              <li>Render Markdown or HTML</l class="notes"i>
+              <li>"Free" goodies like TOC.</li>
+            </aside>
+          </section>
+          <section>
+            <h2>Videos</h2>
+            <img src="../images/Videos.png" width="90%" alt="Videos">
+            <aside class="notes">
+              <li>Similar to Guides</li>
+              <li><b>Only supports Vimeo videos.</b></li>
+            </aside>
+          </section>
+          <section>
+            <h2>Examples</h2>
+            <img src="../images/Examples.png" width="90%" alt="Examples">
+            <aside class="notes">
+              <li>Less Common</li>
+              <li>Examples are live</li>
+            </aside>
+          </section>
+				</section>
+
+        <section style="text-align: left;">
+          <h1>Get It</h1>
+          <code>gem install jsduck</code><br/><br/>
+          or
+          <br/><br/>
+          <a href="http://github.com/senchalabs/jsduck">github.com/senchalabs/jsduck</a><br/><br/>
+          (<code>jsduck.exe</code> available for Windows)
+          <aside class="notes">
+            Mention that Windows users will need to do some extra setup.
+          </aside>
+        </section>
+
+				<section>
+          <h1>How do <span style="color: gold;">I</span> use it?</h1>
+          <ol>
+            <li class="fragment">Comment your <code>code</code>.</li>
+            <li class="fragment">Execute <code>jsduck</code> command line program.</li>
+          </ol>
+          <aside class="notes">
+            Commenting works because JSDuck uses Esprima to parse JavaScript.
+          </aside>
+        </section>
+
+				<section>
+					<section>
+						<h2>Hello JSDuck</h2>
+            <pre><code>
+            /**
+             * A duck, not just a stupid bird.
+             */
+            Duck = Ext.extend(Bird, {
+              ...
+            });
+            </code></pre>
+            <span class="fragment">
+            or
+            <pre><code>
+            /**
+             * @class Duck
+             * A duck, not just a stupid bird.
+             * @extends Bird
+             * @mixins Ext.util.Observable
+             * @mixins Fliable
+             * @singleton
+             */
+            Duck = Ext.extend(Bird, {
+              ...
+            });
+            </code></pre>
+            </span>
+					</section>
+					<section>
+            <img src="./images/icons.png"/>
+					</section>
+				</section>
+
+				<section>
+				  <section>
+  				  <div style="float:left;text-align: left;">
+  				    @abstract<br/>
+              @accessor<br/>
+              @alias<br/>
+              @alternateClassName<br/>
+              @aside<br/>
+              @author<br/>
+              @cfg<br/>
+              @chainable<br/>
+              @class<br/>
+              @constructor<br/>
+              @deprecated<br/>
+              @docauthor<br/>
+              @enum<br/>
+              @event<br/>
+              @evented<br/>
+              <span style="color:gold;">@example</span>
+  				  </div>
+  				  <div style="float:left;text-align: left;margin: 0 30px 0 30px;padding: 0 30px 0 30px;border-left: 2px dashed #222;border-right: 2px dashed #222;">
+              @extends<br/>
+              <span style="color:gold;">@ftype</span><br/>
+              @hide<br/>
+              @ignore<br/>
+              @inheritable<br/>
+              @inheritdoc<br/>
+              @markdown<br/>
+              @member<br/>
+              @method<br/>
+              @mixins<br/>
+              @new<br/>
+              @override<br/>
+              @param<br/>
+              @preventable<br/>
+              @private<br/>
+              @property
+  				  </div>
+            <div style="float:left;text-align: left;">
+              @protected<br/>
+              <span style="color:gold;">@ptype</span><br/>
+              @readonly<br/>
+              @removed<br/>
+              @requires<br/>
+              @return<br/>
+              @scss mixin<br/>
+              @since<br/>
+              @singleton<br/>
+              @static<br/>
+              <span style="color:gold;">@template</span><br/>
+              @throws<br/>
+              @type<br/>
+              @uses<br/>
+              @var<br/>
+              <span style="color:gold;">@xtype</span>
+            </div>
+          </section>
+          <section>
+            <h2>My Own Tags?</h2>
+            <div class="fragment">
+              <span style="color:magenta;">@experimental</span>
+              <br/>Document an experimental feature that may break.<br/><br/>
+            </div>
+            <span class="fragment">@product</span>
+            <span class="fragment" style="margin: 0 20px 0 20px;">@highlight</span>
+            <span class="fragment">@permissions</span>
+          </section>
+				</section>
+
+        <section>
+          <section>
+            <h1>Customization</h1>
+          </section>
+
+  				<section>
+  				  <h2>Custom Tags</h2>
+  				  <span>Written in <code>ruby</code>.</span>
+  				  <pre class="fragment"><code style="max-height:625px !important;">
+require "jsduck/meta_tag"
+
+module JsDuck::Tag
+  # Implementation of @experimental tag
+  class Experimental < JsDuck::MetaTag
+    def initialize
+      @name = "experimental"
+      @key = :experimental
+      @signature = {:long => "experimental", :short => "EXP"}
+      @multiline = false
+      @position = :top
+    end
+
+    def to_html(context)
+      <<-EOHTML
+        &lt;p style='color:#ccc;border:2px dashed #eee;font-size:200%;border-radius:6px;'&gt;
+        This is an experimental feature that is not officially supported (yet).
+        &lt;/p&gt;
+      EOHTML
+    end
+  end
+end
+  				  </code></pre>
+  				  <span class="fragment"><i>Modified template for JSDuck 4.x</i></span>
+  				  <aside class="notes">Mention that JSDuck 5 has simplified syntax.</aside>
+  				</section>
+  				<section>
+  				  <h2>JSDuck 5 Syntax</h2>
+  				  <pre><code>
+require "jsduck/tag/boolean_tag"
+
+class Inner < JsDuck::Tag::BooleanTag
+  def initialize
+    @pattern = "inner"
+    @signature = {:long => "inner", :short => "in"}
+    @html_position = POS_DOC + 0.1
+    super
+  end
+
+  def to_html(context)
+    "&lt;p&gt;This is an inner method, only accessible within the class itself.&lt;/p&gt;"
+  end
+end
+  				  </code></pre>
+  				</section>
+  				<section>
+  				  <img src="../images/custom.png" width="500px"/>
+  				</section>
+        </section>
+
+				<section>
+				  <h2>Cross References</h2>
+				  <pre><code style="max-height:625px !important;">
+Object.defineProperties(account,{
+
+  /**
+   * @cfg {String} user
+   * The login assigned to a My.api.Login#person <-- References a different file
+   */
+  user: {
+    value: config.user || 'unknown'
+  },
+
+  // Intentionally Ignored
+  pwd: {
+    enumerable: false,
+    configurable: false,
+    value: null
+  },
+
+  /**
+   * @cfg {String} password
+   * The password assigned to the #user  <-- references local configuration
+   */
+  password: {
+    enumerable: false,
+    get: function(){ return this.pwd.replace(/.*/gi,'*'); },
+    set: function(value){ this.pwd = value; }
+  }
+
+});
+            </code></pre>
+            <aside class="notes">
+              Once you are writing your own custom docs with custom tags, it's time to think
+              about usability.
+              <br/><br/>
+              Cross References simplify navigation through the docs in a "wiki" like way.
+            </aside>
+				</section>
+
+        <section>
+  				<section>
+  					<h2>Guides</h2>
+  					<pre>
+# NGN Command Line
+
+The NGN command line interface (CLI) automates some of the more tedious aspects
+of creating and maintaining projects. The NGN CLI is available as an npm global
+installation, i.e.
+
+  npm install ngn -g
+
+## Generate Class Stubs
+
+Class stubs are a "fill in the blank" JavaScript class based on the NGN class system.
+The CLI utility provides a wizard that will generate a working shell file. These files
+should be filled in with the appropriate logic, but they will work natively with
+developer-defined attributes.
+
+To use the stub generator, execute the following command.
+
+`ngn --create class`
+  					</pre>
+  					<br/>
+  					<span>Written with <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a>.</span>
+  				</section>
+  				<section>
+  				  <img src="../images/ngnguide.png"/>
+  				  <aside class="notes">
+  				    Notice the automatic table of contents, use of markdown (inline and example).
+  				    <li>Mention images</li>
+  				    <li>Mention cross references again.</li>
+  				  </aside>
+  				</section>
+  				<section>
+  				  <h2>Easy To Create</h2>
+  				  <img src="../images/guidelayout.png"/>
+            <img src="../images/icon.png" class="fragment"/>
+            <img src="../images/icon-custom.png" class="fragment"/>
+  				  <aside class="notes">
+  				    Mention that it's possible to provide a file called icon.png (120x90px) for the guide landing page.
+  				  </aside>
+  				</section>
+  				<section>
+  				  <h2>guides.json</h2>
+  				  <pre><code>
+[{
+  "title": "Command Line Utilities",
+  "items": [{
+        "name": "cli",
+        "title": "Wizards",
+        "description": "Use NGN from the command line wizards..."
+      }
+   ]
+},{
+  ...
+}
+  				  </code></pre>
+  				</section>
+  		  </section>
+
+        <section>
+          <section>
+            <h1>Customization++</h1>
+          </section>
+          <section>
+            <h2>Use CSS to Customize</h2>
+            <img src="../images/customcss.png"/>
+            <span><i>Override CSS classes & make new ones</i></span>
+            <aside class="notes">
+              A lot of visual customization can be done with CSS. JSDuck is just static HTML.
+            </aside>
+          </section>
+  				<section>
+  					<pre><code>
+.console {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -khtml-border-radius: 20px;
+  behavior: url(/assets/css/border-radius.htc);
+  border-radius: 20px;
+  position: relative;
+  zoom: 1;
+  background-color: #000000;
+  color: #eeeeee;
+  font-family: Monaco, Consolas, Arial, Helvetica, Sans-Serif;
+  border: 1px solid #888888;
+  border-top: 16px solid #888888;
+}
+  					</code></pre>
+  					<div class="fragment">
+    					<i>This file is included in the head-html configuration option:</i>
+  					  <pre style="text-align:center;"><code>&lt;link rel="stylesheet" href="resources/css/custom.css" type="text/css"&gt;</code></pre>
+  					</div>
+  					<aside class="notes">
+  					  This could be different by browser, i.e. showing a Windows terminal instead of Mac.
+  					  It's better to use CSS when possible so you're not messing with Ruby.
+  					  <br/><br/>
+  					  The CSS must be manually added to the output after it is generated.
+  					</aside>
+  				</section>
+  		  </section>
+
+        <section>
+          <section>
+            <h1>Build It</h1>
+          </section>
+  				<section>
+  					<h2>Generating Docs</h2>
+  					<pre><code>
+$ jsduck --builtin-classes --output my/docs project1/files/js project2/files/js
+  					</code></pre>
+  					<pre class="fragment"><code>
+$ jsduck --title="My personal docs" \
+         --welcome="welcome.html" \
+         --warnings=-link \
+         --warnings=-no_doc \
+         --seo \
+         --html-head="&lt;link rel='stylesheet' href='css/custom.css' type='text/css'&gt;"
+         src/Foo.js src/Bar.js src/Baz.js
+  					</code></pre>
+  				</section>
+  				<section>
+  				  <h2>Use The Config</h2>
+  				  <pre><code>
+{
+  "--title":    "NGN",
+  "--welcome":  "assets/html/welcome.html",
+  "--warnings": ["-link"],
+  "--":       [],
+  "--categories": "categories.json",
+  "--guides":   "guides.json",
+  "--html-head": "&lt;link rel='stylesheet' href='css/custom.css' type='text/css'&gt;",
+  "--output":   "../manual"
+}
+  				  </code></pre>
+  				  <code>$ jsduck --config=myconfig.json</code>
+  				</section>
+        </section>
+
+				<section>
+				  <section>
+  				  <img src="../images/grunt.png" style="background:none;border:0px;box-shadow: none !important;">
+				    <aside class="notes">
+				      Grunt is a task runner, based on Node.JS. There is a JSDuck plugin.
+				    </aside>
+				  </section>
+				  <section>
+            <h2 style="text-align: left;">Get GruntJS</h2>
+            <ol>
+              <li>Install <a href="http://nodejs.org" target="_blank">Node.JS</a>.</li>
+              <li><code>npm install -g grunt</code></li>
+              <li><code>npm install grunt-jsduck</code></li>
+              <li class="fragment"><code>npm install grunt-contrib-clean grunt-contrib-copy</code> (Optional, but recommended)</li>
+            </ol>
+          </section>
+          <section>
+            <pre><code style="max-height:625px !important;">
+jsduck: {
+  main: {
+    // source paths with your code
+    src: [
+      '../ngn/lib',
+      '../ngn-idk/lib/core',
+      './src/node/node'
+    ],
+
+    // docs output dir
+    dest: './manual',
+
+    // extra options
+    options: {
+      'title': 'NGN v'+cfg.ngn.version,
+      'welcome': 'src/assets/html/welcome.html',
+      'head-html': '<link rel="stylesheet" href="resources/css/ngn.css" type="text/css">',
+      'categories': 'src/categories.json',
+      'guides': 'src/guides.json',
+      'meta-tags': 'custom/tags',
+      'color': true,
+      'builtin-classes': true,
+      'comments-url':'http://comments.nodengn.com:81/auth',
+      'comments-domain':'ngn/0.0.8',
+      'warnings': ['-req_after_opt'],
+      'external': ['XMLHttpRequest']
+    }
+  }
+}
+            </code></pre>
+          </section>
+          <section>
+            <pre><code>
+clean: {
+  docs: ["./manual"],
+},
+copy: {
+  jsduckassets: {
+    files: [
+      {expand: true, cwd: './src/css/', src:['*.*'], dest: './out/css/'},
+      {expand: true, cwd: './src/images/', src:['*.*'], dest: './out/images/'}//,
+    ]
+  }
+}
+...
+grunt.registerTask('default', ['clean:docs','jsduck','copy:jsduckassets']);
+            </code></pre>
+          </section>
+				</section>
+
+				<section>
+				  <h1>Can JSDuck doc:</h1>
+				  <span class="fragment">Java?</span>
+				  <span class="fragment">PHP?</span>
+				  <span class="fragment">NodeJS?</span><br/><br/>
+				  <h3 class="fragment">Yup.</h3>
+				  <a href="http://localhost:84/#!/api/com.amazon.cba.cart" target="_blank" class="fragment">Even ColdFusion</a>
+				</section>
+
+        <section>
+  				<section>
+  				  <h1>Sneak Peak: NGN</h1>
+  				  <h3>Real Life JSDuck for Node.JS</h3>
+  				</section>
+  				<section>
+  				  <h2>Where JSDuck Helps</h2>
+  				  <div style="text-align: left;margin-left:20%;">
+    				  <li>Infrastructure Development Kit (IDK) - <span style="color:gold;">API</span></li>
+    				  <li>Software Development Kit (SDK) - <span style="color:gold;">API</span></li>
+    				  <li>Services - <span style="color:gold;">Guides</span></li>
+    				  <li>Developer Tools - <span style="color:gold;">Guides</span></li>
+    				  <li>Getting Started - <span style="color:gold;">Examples/Videos</span></li>
+    				</div>
+  				</section>
+  				<section>
+  				  <h2>Required Customizations</h2>
+  				  <ol>
+  				    <li>Basic Branding</li>
+  				    <li>Welcome Page</li>
+  				    <li>Tags (@process, @experimental)</li>
+  				    <li style="color: cyan;">Node Icons</li>
+  				    <li>CSS for Guides</li>
+  				  </ol>
+  				</section>
+  				<section>
+  				  <a href="http://localhost:83" target="_blank">NGN Example Docs</a>
+  				</section>
+  		  </section>
+
+				<section>
+					<section data-state="soothe">
+						<h1>Questions?</h1>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

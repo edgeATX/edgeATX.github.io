@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bleeding Edge Web: September 2013</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<section class="slide">
+  <h2>September 2013</h2>
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>10 Months with Meteor.js</h3>
+  <p>&mdash; Phillip Jacobs (<a href="http://twitter.com/phillyqueso">@phillyqueso</a>) &amp;
+    Jason Griffin (<a href="http://twitter.com/haircuttedfreak">@haircuttedfreak</a>)</p>
+  <p><a href="Meteor Preso.pdf">Meteor Slides</a></p>
+
+  <h3>Drinks</h3>
+</section>
+
+<section class="slide">
+  <h2>Google Developer Group (GDG Austin)</h2>
+  <p>Organized by Daniel Parker</p>
+  <p>Thanks for sponsoring tonight's meetup!</p>
+  <p><a href="http://www.meetup.com/gdgaustin/">http://www.meetup.com/gdgaustin/</a></p>
+  <img src="images/gdg.jpg">
+</section>
+
+<!-- ===========  Industry  ========= -->
+
+<section class="slide">
+  <h1>Industry</h1>
+</section>
+
+<section class="slide">
+  <h2><a href="https://developer.amazon.com/post/Tx2HGWRGOW5YG8/Amazon-is-Now-Accepting-HTML5-Web-Apps-Making-it-Easy-for-You-to-Reach-Millions.html">Amazon HTML5 App Support</a></h2>
+  <blockquote>Starting [August 7], you can submit your web apps and mobile optimized web sites and have
+    them merchandised alongside native apps on Amazon and Kindle Fire in nearly 200 countries
+    worldwide, without any third-party software or doing any native app development.</blockquote>
+  <p><a href="https://developer.amazon.com/sdk/webapps/runtime-feature-support.html">Kindle
+    Fire runtime</a> is based on Chromium, GPU-accelerated</p>
+  <p>Free web app tester available</p>
+  <p><strong>Amazon in-app purchasing API for JavaScript available</strong></p>
+  <img src="images/amazon-html5.png">
+</section>
+
+<section class="slide">
+  <h2><a href="http://espadrine.github.io/New-In-A-Spec/es6/">ECMAScript 6 (Harmony)</a></h2>
+  <p><strong>Proxies</strong>: Objects with virtualized properties, i.e. detect changes to an object attribute.</p>
+  <p><strong>let</strong>: scope to a block as opposed to fn()</p>
+  <pre><code>let x = 1;</code></pre>
+  <p><strong>const</strong>: like <i>var</i>, but cannot be changed once it's set.</p>
+  <pre><code>const pi = 3.141593;</code></pre>
+  <p><strong>Defaults</strong>: Define default arg values</p>
+  <pre><code>function(a, b=1, c='test'){...}</code></pre>
+</section>
+
+<section class="slide">
+  <h2>ES6: Generators</h2>
+  <pre><code>function* values() {
+  for (var i = 0; i &gt; arguments.length; i++) {
+    yield arguments[i];
+  }
+}
+
+var o = values(1,2,3); // Obj. Generator
+
+o.next(); // => { value: 1, done: false }
+o.next(); // => { value: 2, done: false }
+o.next(); // => { value: 3, done: false }
+o.next(); // => { value: undefined, done: true }</code></pre>
+<p>Alternative to callbacks &amp; promises!</p>
+</section>
+
+<section class="slide">
+  <h2>ES6: Classes</h2>
+  <pre><code>class Point extends Base {
+  constructor(x,y) {
+    super();
+    this[px] = x, this[py] = y;
+    this.r = function() { return Math.sqrt(x*x + y*y); }
+  }
+  get x() { return this[px]; }
+  get y() { return this[py]; }
+  proto_r() { return Math.sqrt(this[px] * this[px] + this[py] * this[py]); }
+  equals(p) { return this[px] === p[px] &amp;&amp; this[py] === p[py]; }
+}</code></pre>
+<p>Mostly syntactic sugar</p>
+</section>
+
+<section class="slide">
+  <h2>ES6: Modules</h2>
+  <pre><code>module math {
+  export function sum(x, y) {
+    return x + y;
+  }
+  export var pi = 3.141593;
+}
+
+import {sum, pi} from math;
+
+alert(sum(pi, pi));</code></pre>
+</section>
+
+<section class="slide">
+  <h2>ES6: Summary</h2>
+  <p>Many more upcoming features</p>
+  <p>Several features supported in Node.js</p>
+  <pre><code>node --harmony myfile.js</code></pre>
+  <p>Many polyfills work but aren't complete</p>
+  <p>Spec isn't complete</p>
+  <p>ES7 work has already started</p>
+</section>
+
+<!-- ===========  Platforms  ========= -->
+
+<section class="slide">
+  <h1>Platforms</h1>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>IE</li>
+    <li>Chrome</li>
+    <li>Firefox</li>
+    <li>Safari</li>
+    <li>Opera</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>IE <strong style="color:#36d">10</strong></li>
+    <li>Chrome <span class="strike dim">28</span> &rarr; <strong style="color:#d00;">29</strong></li>
+    <li>Firefox <strong style="color:#36d">23</strong></li>
+    <li>Safari <strong style="color:#36d">6</strong></li>
+    <li>Opera <span class="strike dim">15</span> &rarr; <strong style="color:#d00;">16</strong></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Chrome 29</h2>
+  <p><a href="http://techcrunch.com/2013/08/20/google-launches-chrome-29-with-improved-omnibox-suggestions-on-desktop-webrtc-on-android/">Released</a> August 20</p>
+  <ul>
+    <li>Improved Omnibox</li>
+    <li>WebRTC support (Android only)</li>
+    <li>Bug and security fixes</li>
+    <li>Sencha Touch alert: this version <a href="http://www.sencha.com/forum/showthread.php?268962-Title-disappears-in-TitleBar-component-(only-Chrome-Canary">broke</a>
+      HBox/VBox layouts!</li>
+  </ul>
+  <img src="../../shared/resources/images/chrome.png" style="margin-bottom:-150px;">
+</section>
+
+<section class="slide">
+  <h2>Opera 16</h2>
+  <p><a href="http://my.opera.com/desktopteam/blog/2013/08/27/opera-16">Released</a> August 27</p>
+  <ul>
+    <li>W3C Geolocation API support</li>
+    <li>Performance improvements</li>
+    <li>Upgraded to Chromium 29 engine</li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" style="margin-bottom:-150px;">
+</section>
+
+<section class="slide">
+  <h2>Firebug 1.12</h2>
+  <p><a href="https://hacks.mozilla.org/2013/08/firebug-1-12-new-features/">Released</a> August 21</p>
+  <ul>
+    <li>Copy CSS properties</li>
+    <li>Filter DOM event logging per element/event</li>
+    <li>"Use in command line" as $p</li>
+    <li>A lot more</li>
+  </ul>
+  <img src="../../shared/resources/images/firebug.png">
+</section>
+
+
+<!-- ===========  Libraries  ========= -->
+
+<section class="slide">
+  <h1>Libraries</h1>
+</section>
+
+<section class="slide">
+  <h2>Ember 1.0</h2>
+  <p><a href="http://emberjs.com/blog/2013/08/31/ember-1-0-released.html">Released Sept 1</a></p>
+  <p>Ember Data beta 1: "a reboot of the data layer"</p>
+  <p>Focus on performance, docs and testing</p>
+  <p>Includes <a href="https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi">Ember Inspector</a> Chrome plugin</p>
+  <img src="../../shared/resources/images/ember.png">
+</section>
+
+<section class="slide">
+  <h2>Yeoman 1.0</h2>
+  <p><a href="http://emberjs.com/blog/2013/08/31/ember-1-0-released.html">Released Aug 23</a></p>
+  <p>Generators for common frameworks (Backbone, Angular, jQuery, etc.)</p>
+  <p>Helpful grunt config (LiveReload, Sass, Uglify, CoffeeScript, etc.)</p>
+  <img src="../../shared/resources/images/yeoman.png">
+</section>
+
+<section class="slide">
+  <h2><a href="http://slimerjs.org/">SlimerJS</a></h2>
+  <p>"PhantomJS for Gecko"</p>
+  <p>Works with Firefox 20+, renders in browser (not headless)</p>
+  <p>Supports Flash, WebGL, audio/video</p>
+</section>
+
+<section class="slide">
+  <h1>Nifty Stuff</h1>
+</section>
+
+<section class="slide">
+  <h2 id="hs-1"><a href="http://linkedin.github.io/hopscotch/">Hopscotch</a></h2>
+  <p>Easy product tours for web pages</p>
+  <p id="hs-2">Developed by LinkedIn</p>
+  <pre id="hs-3"><code>var tour = {
+    id: "hello-hopscotch",
+    steps: [
+      { title: "Step 1", ... },
+      { title: "Step 2", ... }
+    ]
+};
+hopscotch.startTour(tour);</code></pre>
+  <a href="#" id="hs-start">Try a tour</a>
+</section>
+
+<section class="slide">
+  <h2><a href="http://technical.io/">Tessel</a></h2>
+  <p>An Internet-connected microcontroller, programmable by JavaScript</p>
+  <p>Sensors, RFID, Audio, Bluetooth, Micro SD, etc.</p>
+  <p>Supports Node packages via npm</p>
+  <pre><code>$ npm install hardware -g
+$ tessel shell
+> var tessel = require('tessel')
+> tessel.led(1).blink()</code></pre>
+  <a href="http://technical.io/">http://technical.io/</a>
+  <img src="images/tessel.jpg">
+</section>
+
+<!-- ===========  Local Happenings  ========= -->
+
+<section class="slide">
+  <h1>Local Happenings</h1>
+</section>
+
+<section class="slide">
+  <h2>September Events</h1>
+
+  <h3><a href="http://battlehack.org/austin/">Battle Hack: Austin</a></h3>
+  <p>Sept 28-29, free</p>
+</section>
+
+<section class="slide">
+  <h2>On the Radar</h1>
+
+  <h3><a href="http://atxstartupcrawl.eventbrite.com/">ATX Startup Crawl</a></h3>
+  <p>Oct 10, 5-10pm (free, register now)</p>
+
+  <h3><a href="https://www.facebook.com/HackTX">Hack TX</a></h3>
+  <p>Nov 15-16 ($??, not open yet) &mdash; <a href="http://hacktx.eventbrite.com/">more info</a></p>
+
+  <h3><a href="http://www.wizardworld.com/home-tx.html">Austin Comic Con</a></h3>
+  <p>Nov 22-24 ($80 advance)</p>
+
+  <img src="images/comic-con.jpg" width="60%">
+</section>
+
+<!-- ===========  Tips & Tricks  ========= -->
+
+<section class="slide">
+  <h1>Tips &amp; Tricks</h2>
+</section>
+
+<section class="slide">
+  <h2>Did You Know</h2>
+  <p>...that the Chrome and Firebug consoles have a handy <code>monitorEvents()</code> command line utility?</p>
+  <p>Complete <a href="http://www.briangrinstead.com/blog/chrome-developer-tools-monitorevents">details here</a>. A few examples:</p>
+  <pre><code>// Named target:
+monitorEvents(document.body, ['click', 'mousemove']);
+
+// Target selected in dom:
+monitorEvents($0, ['mousemove']);
+
+// Stop monitoring
+unmonitorEvents($0, ['mousemove']);</code></pre>
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Q &amp; A</h2>
+  <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <h1>Thanks!</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+
+<!-- Hopscotch, just for this specific presentation -->
+<script src="hopscotch/hopscotch-0.1.1.js"></script>
+<link rel="stylesheet" href="hopscotch/hopscotch-0.1.1.css">
+<script>
+var tour = {
+  steps: [{
+      title: "Hopscotch!",
+      content: "Apparently it works. Neat!",
+      target: "hs-1",
+      placement: "bottom"
+    },{
+      title: "Another Thing",
+      content: "Look at this &mdash; it's cool.",
+      target: "hs-2",
+      placement: "bottom"
+    },{
+      title: "The End",
+      content: "And that's it! Hope you liked it.",
+      target: "hs-3",
+      placement: "top"
+    }
+  ]
+};
+
+$('#hs-start').on('click', function(e) {
+  e.preventDefault();
+  hopscotch.startTour(tour);
+})
+</script>
+</body>
+</html>

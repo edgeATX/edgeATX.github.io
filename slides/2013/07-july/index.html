@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bleeding Edge Web: July 2013</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<section class="slide">
+  <h2>July 2013</h2>
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Learn About Google Glass</h3>
+  <p>&mdash; <a href="http://kylesamani.com/">Kyle Samani</a>, CEO of Pristine</p>
+
+  <h3>Glass Hands-on Demo</h3>
+
+  <h3>Drinks</h3>
+</section>
+
+<!-- ===========  Industry  ========= -->
+
+<section class="slide">
+  <h1>Industry</h1>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3>Web Components</h3>
+  <img src="images/web-comp.jpg">
+  <p><a href="http://jonrimmer.github.io/are-we-componentized-yet/">http://jonrimmer.github.io/are-we-componentized-yet/</a></p>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/">HTML Templates</a></h3>
+  <blockquote>Document fragments which are unused by the document when loaded, but are parsed as HTML and
+    are available at runtime for use by the web page.</blockquote>
+  <pre><code>// HTML:
+&lt;template id="comment-template">
+  &lt;img class="avatar" src="">
+  &lt;div class="comment-text">&lt;/div>
+&lt;/template>
+
+// JS:
+var comment = document
+    .querySelector("#commentTemplate")
+    .content.cloneNode(true);
+</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/">Custom Elements</a></h3>
+  <blockquote>Describes the method for enabling the author to define and use new types of DOM elements in a document.</blockquote>
+  <pre><code>&lt;my-thing>Cool!&lt;/my-thing></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/">HTML Imports</a></h3>
+  <blockquote>HTML documents that are linked as external resources from another HTML document. The document
+    that links to an import is called a master document.</blockquote>
+  <pre><code>&lt;link rel="import" href="/imports/another.html"></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/shadow/">Shadow DOM</a></h3>
+  <blockquote>Allows multiple DOM trees...to be composed into one larger tree when rendered. These shadow
+    trees...establish encapsulation boundaries while retaining standard DOM composability semantics.</blockquote>
+  <pre><code>&lt;shadow-root>...&lt;/shadow-root></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html#decorator-section">Decorators</a></h3>
+  <blockquote>Something that enhances or overrides the presentation of an existing element.</blockquote>
+  <p>Concept only, no official spec yet</p>
+  <pre><code>// HTML:
+&lt;decorator id="details-open">
+    &lt;template>
+        &lt;p>Open: &lt;content>&lt;/content>&lt;/p>
+    &lt;/template>
+&lt;/decorator>
+
+// CSS:
+details[open] {
+    decorator: url(#details-open);
+}</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3>And now for something completely different...</h3>
+</section>
+
+<section class="slide">
+  <h2>Interesting W3C Specs</h2>
+  <h3><a href="http://www.w3.org/TR/gamepad/">Gamepad API</a></h3>
+  <p>Handle console gamepad events via JS</p>
+  <p>Working draft status</p>
+  <p>Implemented in Chrome &amp; FF dev channels</p>
+  <p><a href="http://www.gamepadjs.com/">Gamepad.js</a></p>
+  <img src="images/gamepad.gif" style="max-width:40%;"/>
+</section>
+
+<!-- ===========  Platforms  ========= -->
+
+<section class="slide">
+  <h1>Platforms</h1>
+</section>
+
+<section class="slide">
+  <h2>Firefox OS</h2>
+  <p>ZTE Open smartphone <a href="http://www.computerworld.com/s/article/9240494/Mozilla_s_Firefox_OS_smartphones_do_matter_to_developers_and_buyers">launched</a> in Spain TODAY (July 2)!</p>
+  <p>Initial focus on emerging markets</p>
+  <p><strong>Adaptive app search</strong> will "transform [the device]<br>to fit a user’s needs at any moment."</p>
+  <blockquote style="font-size:1em;">"First devices powered completely<br>by Web technologies"</blockquote>
+  <img src="images/zte-open.png" style="position:absolute;right:10px;bottom:-120px;max-width:40%;"/>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>Chrome</li>
+    <li>Firefox</li>
+    <li>Safari</li>
+    <li>Opera</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Name the latest versions of:</p>
+  <ul>
+    <li>Chrome <strong>27</strong></li>
+    <li>Firefox <strong>22</strong></li>
+    <li>Safari <strong>6</strong></li>
+    <li>Opera <strong>15</strong></li>
+  </ul>
+  <p>Oh yeah, IE is at 10. But you knew that ;)</p>
+</section>
+
+<section class="slide">
+  <h2>Chrome 27</h2>
+  <p>Switching from WebKit to Blink in Chrome 28 (currently in beta)</p>
+  <p>Removed ~9M lines of code</p>
+  <p>New threaded HTML parser</p>
+  <blockquote>Loads DOM content about 10% faster and reduces the maximum
+    stop time due to parsing by 40%</blockquote>
+  <img src="images/chrome.png" style="margin-bottom:-150px;">
+</section>
+
+<section class="slide">
+  <h2>Firefox 22</h2>
+  <p>Released June 25</p>
+  <p><a href="http://dev.w3.org/csswg/css-flexbox/">CSS3 Flexbox</a> (unprefixed, enabled by default)</p>
+  <p><a href="http://www.w3.org/TR/notifications/">Web Notifications API</a></p>
+  <p><a href="http://asmjs.org/">asm.js</a> (within 2X native performance)</p>
+  <p><a href="http://www.webrtc.org/">WebRTC</a> (Real-Time Communication) API</p>
+  <p>HTML5 <code>&lt;data></code> and <code>&lt;time></code> elements</p>
+  <img src="images/firefox.png" style="margin-bottom:-150px;">
+</section>
+
+<section class="slide">
+  <h2>Opera 15</h2>
+  <p>Released July 2 (today!)</p>
+  <p>First release based on Chromium (Blink)</p>
+  <p>Missing some features still (tabs, settings sync, themes)</p>
+  <img src="images/opera.png" style="margin-bottom:-150px;">
+</section>
+
+<section class="slide">
+  <h2>IE 11</h2>
+  <p><a href="http://microsoft-news.com/webgl-spdy3-new-dev-tools-more-confirmed-for-ie11-in-win-8-1/">Coming</a> in Windows 8.1 (already in preview)</p>
+  <p><a href="http://www.khronos.org/webgl/">WebGL</a>! (low-level 3D graphics API)</p>
+  <p>New console / debugging tools</p>
+  <p>Support for <a href="http://en.wikipedia.org/wiki/SPDY">SPDY</a> (Google's network protocol)</p>
+  <img src="images/IE11.png" />
+</section>
+
+<section class="slide">
+  <h2>IE 11: Console Sneak Peek</h2>
+  <img src="images/IE11-UI-Responsiveness-Report.png" />
+</section>
+
+<section class="slide">
+  <h2>Chrome Frame</h2>
+  <p>Awesome plugin that modernizes old IE</p>
+  <p>Google is <a href="http://blog.chromium.org/2013/06/retiring-chrome-frame.html">retiring it</a> in January 2014</p>
+  <img src="images/chrome_frame.png" />
+</section>
+
+<section class="slide">
+  <h2>iOS 7</h2>
+  <p>Coming "this Fall"</p>
+  <img src="images/ios7.jpg" />
+</section>
+
+<section class="slide">
+  <h2>Google Glass</h2>
+  <p>New full-fledged <strong>web browser</strong>, as of TODAY (July 2)</p>
+  <img src="images/glass.jpg" />
+</section>
+
+
+<!-- ===========  Libraries  ========= -->
+
+<section class="slide">
+  <h1>Libraries</h1>
+</section>
+
+<section class="slide">
+  <h2>Coming Soon</h2>
+  <h3><a href="http://phonegap.com/blog/2013/06/20/coming-soon-phonegap30/">PhoneGap 3.0</a></h3>
+  <p>No ETA yet (2.9 was <a href="http://phonegap.com/blog/2013/06/26/pg-290-released/">just
+    released</a> June 26, last 2.x release)</p>
+  <p>New plugin architecture / slim core</p>
+  <p><a href="http://log.michaelbrooks.ca/post/phonegap-cli-preview">PhoneGap CLI</a></p>
+  <p>New APIs: <strong>InAppBrowser</strong> (formerly ChildBrowser plugin), <strong>Globalization</strong></p>
+  <p>Plugin discovery based on npm</p>
+  <img src="images/phonegap3.png" />
+</section>
+
+<section class="slide">
+  <h2>New &amp; Interesting</h2>
+  <h3><a href="http://facebook.github.io/react/">React</a></h3>
+  <p>Published by Facebook last month</p>
+  <p>"Composite Components"</p>
+  <p>Declarative markup &amp; events</p>
+  <p>Bi-directional data binding</p>
+  <p>Plays nicely with other libs (jQuery, Bootstrap, etc.)</p>
+  <blockquote>With React, you *never* generate strings. Instead, you construct a tree of lightweight
+    objects that represent HTML elements and subcomponents that make up your component. This tree of
+    objects is eventually serialized to HTML.</blockquote>
+</section>
+
+<section class="slide">
+  <h2>Web Components Today!</h2>
+  <p>Native web components are still a little way off.</p>
+  <p>Luckily (as usual) libraries are leading the way!</p>
+</section>
+
+<section class="slide">
+  <h2>Polymer</h2>
+  <p>Full Web Component <a href="http://www.polymer-project.org/">polyfill library</a> by Google</p>
+  <pre><code>&lt;element name="tk-element-databinding">
+  &lt;template>
+    This is &lt;strong><span style="color:#EE4021;">{{owner}}</span>&lt;/strong>'s tk-element.
+  &lt;/template>
+  &lt;script>
+    Polymer.register(this, {
+      <span style="color:#EE4021;">owner: 'Brian'</span>
+    });
+  &lt;/script>
+&lt;/element></code></pre>
+</section>
+
+<section class="slide">
+  <h2>X-Tags</h2>
+  <p>By Mozilla, mainly focused on <a href="http://www.x-tags.org/">custom elements</a></p>
+  <pre><code>// JS:
+xtag.register(<span style="color:#EE4021;">'modal'</span>, {
+  ...
+});
+
+// HTML:
+&lt;<span style="color:#EE4021;">x-modal</span>>
+  &lt;h3>X-Tags Modal Map&lt;/h3>
+  &lt;x-map data-key="6c86bb5b30a442c">&lt;/x-map>
+&lt;/<span style="color:#EE4021;">x-modal</span>></code></pre>
+</section>
+
+<section class="slide">
+  <h2>React Components</h2>
+  <pre><code>var Hello = React.createClass({
+    render: function() {
+        return &lt;div>Hello <span style="color:#EE4021;">{this.props.name}</span>&lt;/div>;
+    }
+});
+
+React.renderComponent(
+    &lt;Hello <span style="color:#EE4021;">name="World"</span> />, document.body
+);</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Angular Components</h2>
+  <pre><code>&lt;label>Name:&lt;/label>
+&lt;input type="text" <span style="color:#EE4021;">ng-model="yourName"</span> value="World">
+
+&lt;h1>Hello <span style="color:#EE4021;">{{yourName}}</span>!&lt;/h1></code></pre>
+</section>
+
+<section class="slide">
+  <h2>Ember Components</h2>
+  <pre><code>App.ApplicationController =
+  Ember.Controller.extend({
+    <span style="color:#EE4021;">yourName</span>: "World"
+});
+
+&lt;p>Hello, <span style="color:#EE4021;">{{yourName}}</span>!&lt;/p></code></pre>
+</section>
+
+<!-- ===========  Local Happenings  ========= -->
+
+<section class="slide">
+  <h1>Local Happenings</h1>
+</section>
+
+<section class="slide">
+  <h2>July Events</h1>
+
+  <h3><a href="http://www.meetup.com/openhackatx/events/126341852/">OpenHack Austin</a></h3>
+  <p>July 3 (tomorrow) at 7pm, right here (free)</p>
+
+  <h3><a href="http://txdevfest.com/">Google Developer Group TX DevFest</a></h3>
+  <p>Fri-Sat, July 12-13 ($20)<br>
+  <span style="background:#ff9;padding:2px 10px;">"Google Glass WTF" by Whurley, hands-on Glass demos</span></p>
+
+  <h3><a href="http://www.lonestarruby.org/">LoneStarRuby Conference</a></h3>
+  <p>Fri-Sat, July 19-20 ($300)</p>
+
+  <h3><a href="http://www.eventbrite.com/event/6013511575/">Startup Grind Austin: Mike Maples, Sr</a></h3>
+  <p>Mon, July 29, 6-9pm ($15)</p>
+</section>
+
+<section class="slide">
+  <h2>On the Radar</h1>
+
+  <h3><a href="http://aneventapart.com/event/austin-2013?/2013/austin/">An Event Apart: Austin</a></h3>
+  <p>Sept 30-Oct 1 ($945 through Aug 5, register now)</p>
+
+  <h3><a href="http://atxstartupcrawl.eventbrite.com/">ATX Startup Crawl</a></h3>
+  <p>Oct 10, 5-10pm (free, register now)</p>
+
+  <h3><a href="https://www.facebook.com/HackTX">Hack TX</a></h3>
+  <p>Nov 15-16 ($??, not open yet) &mdash; <a "href=http://hacktx.eventbrite.com/">more info</a></p>
+</section>
+
+<!-- ===========  Tips & Tricks  ========= -->
+
+<section class="slide">
+  <h1>Tips &amp; Tricks</h2>
+</section>
+
+<section class="slide">
+  <h2>Did You Know</h2>
+  <p>...that Chrome's style inspector has a built-in color picker?</p>
+  <p><img src="images/color-picker.jpg"></p>
+</section>
+
+<section class="slide">
+  <h2>Did You Know</h2>
+  <p>...that Chrome can un-minify JavaScript in the console?</p>
+  <p><img src="images/chrome-unminify.jpg"></p>
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Q &amp; A</h2>
+  <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <h1>Thanks!</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
