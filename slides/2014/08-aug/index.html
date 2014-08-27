@@ -57,26 +57,34 @@
 <!-- ===========  Intro  ========= -->
 
 <section class="slide">
-  <h2>Bleeding Edge Web: July 2014</h2>
+  <h2>Bleeding Edge Web: August 2014</h2>
   <h3>News from the Bleeding Edge</h3>
   <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
 
-  <h3>Web App by Example: Node.js</h3>
+  <h3>Web App by Example: Python</h3>
   <p>
-    &mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)<br>
-    &mdash; Corey Butler (<a href="http://twitter.com/goldglovecb/">@goldglovecb</a>)
+    &mdash; Joe McCullough (<a href="http://twitter.com/joe_query/">@joe_query</a>)
   </p>
 </section>
 
-<!-- ===========  Sponsor  ========= -->
+<!-- ===========  Sponsors  ========= -->
 
-<!-- <section class="slide cover" style="background-image:url(images/hot-lava.png)">
-  <div class="shim"></div>
-  <h1 style="color:#fff;">
-    Sponsor: Hot Lava<br>
-    <span style="font-size:70%;">hot lava obstacle course.com</span>
-  </h1>
-</section> -->
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsor:</p>
+  <div style="text-align:center;padding-top:100px">
+    <img src="images/help-logo.svg">
+    <p><a href="http://help.com/" style="color:#fff !important;font-size:80px;">Help.com</a></p>
+    <p>Next-generation customer service software</p>
+  </div>
+</section>
+
+<section class="slide " style="background:#555;color:#fff;">
+  <p>Thanks to our sponsor:</p>
+  <div style="text-align:center;padding-top:100px">
+    <a href="http://www.austincodingacademy.com/"><img src="images/aca-logo.png"></a>
+    <p>10-week Python and HTML/CSS training courses</p>
+  </div>
+</section>
 
 <!-- ===========  Bleeding Edge ========= -->
 
@@ -90,7 +98,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; December 2013 (7 months ago):</p>
+  <p>Last version check &mdash; July 2014 (last month):</p>
   <table class="browsers">
     <tr>
       <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
@@ -100,9 +108,9 @@
       <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
     </tr>
     <tr>
+      <td class="ver">36</td>
       <td class="ver">31</td>
-      <td class="ver">25</td>
-      <td class="ver">18</td>
+      <td class="ver">22</td>
       <td class="ver">7</td>
       <td class="ver">11</td>
     </tr>
@@ -111,7 +119,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>As of July 2014:</p>
+  <p>As of August 26, 2014:</p>
   <table class="browsers">
     <tr>
       <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
@@ -121,526 +129,77 @@
       <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
     </tr>
     <tr>
-      <td class="ver"><span class="strike dim">31</span><br><strong style="color:#d00">36</strong></td>
-      <td class="ver"><span class="strike dim">25</span><br><strong style="color:#d00">30</strong></td>
-      <td class="ver"><span class="strike dim">18</span><br><strong style="color:#d00">22</strong></td>
-      <td class="ver"><span class="strike dim">7</span><br><strong>7</strong></td>
-      <td class="ver"><span class="strike dim">11</span><br><strong>11</strong></td>
+      <td class="ver"><span class="strike dim">36</span><br><strong style="color:#d00">37</strong></td>
+      <td class="ver">31</td>
+      <td class="ver"><span class="strike dim">22</span><br><strong style="color:#d00">23</strong></td>
+      <td class="ver">7</td>
+      <td class="ver">11</td>
     </tr>
   </table>
 </section>
 
 <section class="slide">
   <h2>Chrome Highlights</h2>
-  <h3>Version 32</h3>
+  <h3>Version 37 (Aug 26th)</h3>
   <ul>
-    <li>Disabled all but 6 Netscape Plugin API plugins by default</li>
-    <li>Phasing out support completely</li>
+    <li>DirectWrite support on Windows (upgraded from GDI, promises improved font rendering)</li>
+    <li>64-bit Windows support</li>
+    <li>Disabled support for <span class="code">showModalDialog</span> (will be removed May 2015)</li>
+    <li>$51k in bug/security bounties ($30k to a single researcher)</li>
   </ul>
   <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
-</section>
-
-<section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3>Version 33</h3>
-  <ul>
-    <li><a href="http://w3c.github.io/webcomponents/spec/custom/">Web Component API</a> custom element support (<span class="code">&lt;my-widget&gt;</span>)</li>
-    <li><a href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">Web Speech API</a> support</li>
-  </ul>
-  <pre><code>var msg = new SpeechSynthesisUtterance("Bleeding Edge Web Rules!");
-window.speechSynthesis.speak(msg);</code></pre>
-  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
-</section>
-
-<section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3>Version 34</h3>
-  <ul>
-    <li>Responsive image support:<br><span
-      class="code">&lt;img src="low-res.jpg" srcset="high-res.jpg 2x, ultra-res.jpg 4x"&gt;</span></li>
-    <li>Note: Will soon be superceded by <span class="code">&lt;picture&gt;</span></li>
-  </ul>
-  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
-</section>
-
-<section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3>Version 35</h3>
-  <ul>
-    <li>Unprefixed support for <a href="http://webaudio.github.io/web-audio-api/">Web Audio API</a> (<span class="code">window.AudioContext</span>)</li>
-  </ul>
-  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
-</section>
-
-<section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3>Version 36</h3>
-  <ul>
-    <li><a href="http://www.w3.org/TR/html-imports/">HTML Imports</a> enabled by default (<span class="code">&lt;link rel="import" href="foo.html"&gt;</span>)</li>
-    <li>Unprefixed CSS transforms (<span class="code">&lt;div style="transform: rotate(90deg);"></span>)</li>
-    <li>Support for <a href="http://www.html5rocks.com/en/tutorials/es7/observe/"><span class="code">Object.observe()</span></a> and
-      <a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36"><span class="code">element.animate()</span></a></li>
-  </ul>
-  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
-</section>
-
-<section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3>As of Chrome 36:</h3>
-  <img src="images/chrome-web-comp-status.png">
 </section>
 
 <section class="slide">
   <h2>Firefox Highlights</h2>
-  <h3>Version 27</h3>
+  <h3>Version 32 (Preview, still in beta)</h3>
   <ul>
-    <li>Reset CSS styles per element via <a href="http://mcc.id.au/blog/2013/10/all-unset"><span class="code">'all:unset'</span></a></li>
-    <li>Support for ES6 generators</li>
+    <li>New HTTP caching (improved page render performance)</li>
+    <li>New ES6 Array methods: <span class="code">Array.from</span>, <span class="code">Array.copyWithin</span></li>
+    <li><span class="code">position: sticky</span> enabled by default (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">details</a>)</li>
+    <li>Web Audio Editor (examine/edit an audio context and visualize its output)</li>
   </ul>
   <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
 </section>
 
-<section class="slide">
-  <h2>Firefox Highlights</h2>
-  <h3>Version 29</h3>
-  <ul>
-    <li>Support for ES6 Promises</li>
-    <li>Support for <span class="code">&lt;input type="number"></span> and <span class="code">&lt;input type="color"></span></li>
-  </ul>
-  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
-</section>
-
-<section class="slide">
-  <h2>Firefox Highlights</h2>
-  <h3>Version 30</h3>
-  <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions">Array
-      comprehensions</a>: compact syntax for assembling a new array from an existing one</li>
-  </ul>
-<pre><code>[for (i of [ 1, 2, 3 ]) i*i ];
-// [ 1, 4, 9 ]
-
-var abc = [ "A", "B", "C" ];
-[for (letters of abc) letters.toLowerCase()];
-// [ "a", "b", "c" ]</code></pre>
-  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
-</section>
-
-<section class="slide">
-  <h2>Firefox 31</h2>
-  <p>Released <strong>yesterday</strong></p>
-  <p>Continued push toward ES6 API compatibility:</p>
-  <ul>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><span class="code">Array.prototype.fill()</span></a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf"><span class="code">Object.setPrototypeOf()</span></a></li>
-    <li>CSS3 variables</li>
-  </ul>
-  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
-</section>
-
-<section class="slide">
-  <h2>Safari Highlights</h2>
-  <p>Basically not much changed. But...</p>
-  <p>Version 8.0 will be released with OSX 10.10 (Yosemite) "Fall 2014"</p>
-  <p>Consumer-focused, slow to adopt ES6 / W3C specs</p>
-  <img src="../../shared/resources/images/safari.png" width="50%" alt="Safari">
-</section>
-
-<section class="slide">
-  <h2>Opera Highlights</h2>
-  <p>Last one here, please turn out the lights</p>
-  <img src="../../shared/resources/images/opera.png" width="40%" alt="Opera">
-</section>
-
-<section class="slide">
-  <h2>Opera Highlights</h2>
-  <img src="images/browser-share.jpg" width="100%" alt="Browser share, April 2014">
-</section>
-
-<section class="slide">
-  <h2>IE Highlights</h2>
-  <p>Mostly minor fixes, security patches</p>
-  <p>Relased first <a href="http://devchannel.modern.ie/">"dev channel" version</a> of IE on June 16th!</p>
-  <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
-</section>
-
-<section class="slide">
-  <h2>IE ES6 / Web Components Status</h2>
-  <p>From <a href="http://status.modern.ie/">http://status.modern.ie/</a></p>
-  <img src="images/ie-next.png" alt="IE.Next">
-</section>
-
-<section class="slide">
-  <h2>IE Highlights</h2>
-  <p>So what's actually happening in dev channel?</p>
-  <ul>
-    <li>WebGL improvements (OK, actually useful)</li>
-    <li>Gamepad API support (cool for gamers)</li>
-    <li>WebDriver support (OS-level web page interaction scripting / testing)</li>
-    <li>"F12" developer console improvements</li>
-  </ul>
-  <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
-</section>
-
-<!-- ===========  ES6 ========= -->
+<!-- ===========  Frameworks  ========= -->
 
 <section class="slide title title-cyan">
-  <h1>What was all that about "ES6"?</h1>
+  <h1>Frameworks</h1>
 </section>
 
 <section class="slide">
-  <h2>ES6: What is it?</h2>
-  <p>EcmaScript version 6 ("Harmony")</p>
-  <p>Language, syntax and core object improvements</p>
-  <p>Should <em>eventually</em> filter to all JS environments (may be a while...)</p>
-  <p>Polyfills available today for most useful parts</p>
+  <h2>Flux</h2>
+  <p><a href="https://github.com/facebook/flux">https://github.com/facebook/flux</a></p>
+  <blockquote>An application architecture for React utilizing a unidirectional data flow</blockquote>
+  <p><img src="images/flux-arch.png"></p>
 </section>
 
 <section class="slide">
-  <h2>ES6 Explainers</h2>
-  <ul>
-    <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts">The official specs</a></li>
-    <li><a href="http://addyosmani.com/blog/ecmascript-6-resources-for-the-curious-javascripter/">Addy Osmani's resource roundup</a></li>
-    <li><a href="http://espadrine.github.com/New-In-A-Spec/es6/">Lazy person's guide</a></li>
-  </ul>
+  <h2>Ampersand.js</h2>
+  <p><a href="http://ampersandjs.com/">http://ampersandjs.com/</a></p>
+  <p>New Backbone-inspired, modular JS framework</p>
+  <p>"Tiny modules" philosophy (a la Node), minimal DOM manipulation</p>
+  <p>Mobile-optimized, offline-first</p>
+  <p><img src="images/ampersand.svg" style="max-width:40%;"></p>
 </section>
 
 <section class="slide">
-  <h2>ES6 in a Nutshell</h2>
-  <ul>
-    <li>Syntactical improvements (<span class="code">let</span>, <span class="code">const</span>, parameter defaults)</li>
-    <li>"Class" syntax (<span class="code">class</span>, <span class="code">extends</span>, <span class="code">module</span>)</li>
-    <li>Language modernization ("fat arrow" <span class="code">=></span>, Promises, proxies, generators)</li>
-    <li>Lots of new Object, Array, String, Regex and Math methods</li>
-  </ul>
+  <h2></h2>
+  <p></p>
 </section>
 
-<section class="slide">
-  <h2>ES6 Compatibility Today</h2>
-  <p>Source: <a href="http://kangax.github.io/compat-table/es6/">http://kangax.github.io/compat-table/es6/</a></p>
-  <img src="images/es6-compat.png" alt="ES6 Compat Table">
-</section>
-
-<section class="slide">
-  <h2>ES6 Compatibility Today</h2>
-  <h3>So, if you're keeping score:</h3><br>
-  <table class="browsers">
-    <tr>
-      <td width="20%"><img src="../../shared/resources/images/firefox.png" width="80%" alt="Firefox"></td>
-      <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
-      <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
-      <td width="20%"><img src="../../shared/resources/images/opera.png" width="70%" alt="Opera"></td>
-      <td width="20%"><img src="../../shared/resources/images/safari.png" width="80%" alt="Safari"></td>
-    </tr>
-    <tr>
-      <td class="ver">67%</td>
-      <td class="ver">52%</td>
-      <td class="ver">11%</td>
-      <td class="ver">9% (?)</td>
-      <td class="ver">6%</td>
-    </tr>
-  </table>
-</section>
-
-<section class="slide cover" style="background-image:url(images/depressed.jpg)"></section>
-
-<section class="slide">
-  <h2>ES6: Why Should I Care?</h2>
-  <ul>
-    <li>JavaScript is the runtime of the web</li>
-    <li>ES6 is inevitable (at some point)</li>
-    <li>Basic native syntax improvements (block scope, promises)</li>
-    <li>Built in support for useful patterns (module, class)</li>
-    <li>Already very useful today, in some environments (Node)</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>ES6: Why Should I Care?</h2>
-  <h3><a href="http://blog.codinghorror.com/the-principle-of-least-power/">Atwood's Law</a>:</h3>
-  <blockquote style="font-size:1.5em;">
-    Any application that can be written in JavaScript, will eventually be written in JavaScript.
-  </blockquote>
-</section>
-
-<!-- ===========  Node by Example ========= -->
-
-<section class="slide title">
-  <h1>Web App by Example: Node.js</h2>
-</section>
-
-<section class="slide">
-  <h2>The Problem</h2>
-  <p>There's no easy way to compare full-stack web app architectures apples-to-apples.</p>
-  <p>On the client-side there's TodoMVC (<a href="http://todomvc.com/">http://todomvc.com/</a>):</p>
-  <img src="images/todomvc.png" alt="TodoMVC">
-</section>
-
-<section class="slide">
-  <h2>The Problem</h2>
-  <p>TodoMVC is cool, and useful, but pretty simple (and client-only)</p>
-  <img src="images/todos.png" alt="Todo list">
-</section>
-
-<section class="slide">
-  <h2>Goals</h2>
-  <p>We wanted to see this concept expanded to include the server-side.</p>
-  <p>We also wanted to show common <strong>real</strong> architectural requirements:</p>
-  <ul>
-    <li>Dependency / package management</li>
-    <li>Application structure (MVC, MVVM, etc.) on client and server</li>
-    <li>Request routing</li>
-    <li>REST API support</li>
-    <li>Server UI templating (loosely coupled to API)</li>
-    <li>Data model / ORM / persistence layer</li>
-    <li>Validation</li>
-    <li>Unit tests</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Goals</h2>
-  <h3>Sample Application</h3>
-  <ul>
-    <li>Full stack with interchangeable layers</li>
-    <li>Small in scope, but not trivial</li>
-    <li>Multiple related data models</li>
-    <li>Defined specs, but general to any framework</li>
-    <li>Interesting in the context of our meetup</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Introducing Groops</h2>
-  <img src="images/groops/main.png">
-</section>
-
-<section class="slide">
-  <h2>Introducing Groops</h2>
-  <h3>On-demand virtual group Q&amp;A</h3>
-  <ul>
-    <li>Basic profile</li>
-    <li>Ability to create and join rooms</li>
-    <li>Simple group chat</li>
-  </ul>
-  <div style="border:1px solid #999;padding:30px 30px 20px;background:#f6f6f6;text-align:center;">
-    <h3><strong><a href="http://groops-demo.herokuapp.com/" target="_blank">http://groops-demo.herokuapp.com</a></strong></h3>
-  </div>
-  <p style="margin-top:30px;font-size:.7em;"><em>Should work during this presentation, at least... :)</em></p>
-</section>
+<!-- ===========  Resources  ========= -->
 
 <section class="slide title title-cyan">
-  <h1>Specs</h1>
+  <h1>Resources</h1>
 </section>
 
 <section class="slide">
-  <h2>Design</h2>
-  <p><a href="https://github.com/groops/examples/wiki/Application-Specs">https://github.com/groops/examples/wiki/Application-Specs</a></p>
-  <img src="images/groops/specs.png" style="border:2px solid #ddd;box-shadow:0 5px 15px #ddd;">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Spec highlights</h3>
-  <ul>
-    <li>UI use cases</li>
-    <li>REST API</li>
-    <li>Data "entities" (User, Room, Message)</li>
-  </ul>
-</section>
-
-<section class="slide title title-cyan">
-  <h1>UI Design</h1>
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Register / Profile</h3>
-  <img src="images/groops/design/register.png">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Register / Profile</h3>
-  <img src="images/groops/register.png">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Main View</h3>
-  <img src="images/groops/design/main.png">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Main View</h3>
-  <img src="images/groops/main.png">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Group</h3>
-  <img src="images/groops/design/group.png">
-</section>
-
-<section class="slide">
-  <h2>Design</h2>
-  <h3>Group</h3>
-  <img src="images/groops/group.png">
-</section>
-
-<section class="slide title title-cyan">
-  <h1>Technical Details</h1>
-</section>
-
-<section class="slide">
-  <h2>Architecture</h2>
-  <p>Pretty simple, relatable to any framework</p>
-  <img src="images/groops/architecture.png">
-</section>
-
-<section class="slide cover" style="background-image:url(images/nodejs.png)"></section>
-
-<section class="slide">
-  <h2>Tools</h2>
-  <h3>Basics:</h3>
-  <ul>
-    <li>Node.js</li>
-    <li>npm (package management)</li>
-    <li>Express (web / application server)</li>
-    <li>Mongodb (Mongo DB client library)</li>
-    <li>Bootstrap (UI styling)</li>
-  </ul>
-  <h3>Node modules:</h3>
-  <ul>
-    <li>Express middleware (body-parser, express-session, etc.)</li>
-    <li>request (http client library)</li>
-    <li>socket.io (web sockets)</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Getting Started</h2>
-  <p>Express quick start (after installing Node and npm):</p>
-  <pre><code>// Get express set up:
-npm install express
-npm install -g express-generator
-
-// Generate an app skeleton
-express myapp
-
-// Install the app's dependencies:
-cd myapp
-npm install
-
-// Run it!
-npm start</code></pre>
-</section>
-
-<section class="slide">
-  <h2>Getting Started</h2>
-  <img src="images/express-output.png">
-</section>
-
-<section class="slide">
-  <h2>Adding New Libraries</h2>
-  <p>One of the really nice features of Node + npm:</p>
-  <pre><code>// Install and save dependency info:
-npm install socket.io --save
-
-// Install and save as a dev-only dependency:
-npm install mocha --save-dev</code></pre>
-</section>
-
-<section class="slide">
-  <h2>Server-side Templating</h2>
-  <h3>EJS</h3>
-  <ul>
-    <li>Support built into Express</li>
-    <li>Simple, familiar syntax</li>
-    <li>Basic filter support</li>
-    <li>Not super flexible</li>
-  </ul>
-  <h3>Other options to consider</h3>
-  <ul>
-    <li>Jade (like HAML)</li>
-    <li>Handlebars / Mustache</li>
-    <li>Nunjucks</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Server-side Templating</h2>
-  <h3>EJS Syntax Example</h3>
-  <pre><code>&lt;table id="messages" class="table table-striped">
-  &lt;tbody>
-  &lt;% for (var i=0; i < messages.length; i++) { %>
-    &lt;tr>
-      &lt;td>&lt;%= messages[i].content %>&lt;/td>
-    &lt;/tr>
-  &lt;% } %>
-  &lt;/tbody>
-&lt;/table></code></pre>
-</section>
-
-<section class="slide">
-  <h2>Mongo DB</h2>
-  <ul>
-    <li>Native JSON (actually BSON) fits really well with Node/JS</li>
-    <li>Easy to get up and running</li>
-    <li>No schemas / SQL (good and bad)</li>
-    <li>Good hosted options (MongoLab, MongoHQ)</li>
-    <li>Production deployment / scaling takes some thought</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Deployment</h2>
-  <p>Using <a href="https://www.heroku.com/">Heroku</a> for the demo</p>
-  <pre><code>// Init Heroku for myapp
-cd myapp
-heroku login
-heroku create
-
-// Deploy it
-git commit -m "Deploying to Heroku!"
-git push heroku master
-
-// Manage the app
-heroku ps:scale web=3
-heroku logs
-heroku restart
-</pre></code>
-</section>
-
-<section class="slide cover" style="background-image:url(images/matrix.jpg)">
-  <h1>Let's See Some Code</h1>
-</section>
-
-<section class="slide">
-  <h2>Next Steps</h2>
-  <p>Some things to consider for extending Groops to the next level.</p>
-  <p>(Translation: Stuff we ran out of time to include...)</p>
-  <ul>
-    <li><strong>More robust data model</strong>: <a href="http://mongoosejs.com/">Mongoose</a> perhaps</li>
-    <li><strong>Production-readiness</strong>: security, validation, logging, etc.</li>
-    <li><strong>Unit testing</strong>: <a href="http://visionmedia.github.io/mocha/">Mocha</a>, many others</li>
-    <li><strong>Code quality / process</strong>: Grunt/Gulp, jshint, CI</li>
-    <li><strong>Additional features</strong>: upvote messages, more group features</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Next Steps</h2>
-  <p>Our main goal is being able to compare Node/Express to other frameworks.</p>
-  <p>In the next week or so:</p>
-  <ul>
-    <li>Finalize the specs / docs</li>
-    <li>Clean up the demo app code</li>
-    <li>Implement some basic unit tests and API validation tests</li>
-  </ul>
-  <p>If all goes well, we'll see a <strong>Django</strong> version next month!</p>
-  <p>Anyone interested in porting to Rails or anything else?</p>
+  <h2>JS Books</h2>
+  <p>List of free JavaScript/Node (and related) books</p>
+  <p><a href="http://jsbooks.revolunet.com/">http://jsbooks.revolunet.com/</a></p>
+  <img src="images/jsbooks.png">
 </section>
 
 <!-- ===========  Fin  ========= -->
@@ -648,7 +207,6 @@ heroku restart
 <section class="slide">
   <h2>Q &amp; A</h2>
   <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
-  <h3>Corey Butler &mdash; <a href="http://twitter.com/goldglovecb">@goldglovecb</a></h3>
   <h1>Thanks!</h1>
 </section>
 
