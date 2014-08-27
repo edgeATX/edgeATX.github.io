@@ -58,13 +58,13 @@
 
 <section class="slide">
   <h2>Bleeding Edge Web: August 2014</h2>
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
   <h3>News from the Bleeding Edge</h3>
   <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
 
   <h3>Web App by Example: Python</h3>
-  <p>
-    &mdash; Joe McCullough (<a href="http://twitter.com/joe_query/">@joe_query</a>)
-  </p>
+  <p>&mdash; Joe McCullough (<a href="http://twitter.com/joe_query/">@joe_query</a>)</p>
 </section>
 
 <!-- ===========  Sponsors  ========= -->
@@ -162,10 +162,152 @@
   <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
 </section>
 
+<!-- ===========  Web Components  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>W3C Specs</h1>
+</section>
+
+<section class="slide">
+  <h2>W3C Standards for Mobile Web Apps: Current State &amp; Roadmap</h2>
+  <p><a href="http://www.w3.org/2014/07/mobile-web-app-state/">http://www.w3.org/2014/07/mobile-web-app-state/</a></p>
+  <blockquote>Summarizes the various technologies developed in W3C that increase the capabilities of Web applications,
+    and how they apply more specifically to the mobile context.</blockquote>
+  <p>Summary of specs by technology category:</p>
+  <img src="images/w3c-web-app-tech.png" width="70%">
+</section>
+
+<section class="slide">
+  <h2>W3C Standards for Mobile Web Apps: Current State &amp; Roadmap</h2>
+  <p><a href="http://www.w3.org/2014/07/mobile-web-app-state/">http://www.w3.org/2014/07/mobile-web-app-state/</a></p>
+  <p>Summary of specs by W3C status:</p>
+  <table>
+    <thead>
+      <tr>
+        <td>Emerging work</td>
+        <td>First Public Working Draft</td>
+        <td>Last Call for Feedback</td>
+        <td>Candidate Recommendation</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <ul>
+            <li>Wake lock API</li>
+            <li>Geofencing API</li>
+            <li>Named web sockets</li>
+            <li>Web Bluetooth API</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Service workers</li>
+            <li>WOFF 2.0 (web font format)</li>
+            <li>CSS font loading</li>
+            <li>Beacon API</li>
+            <li>Media queries level 4</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Canvas API</li>
+            <li>Ambient light events</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>HTML5 (includes <em>a lot</em> of stuff)</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>W3C Standards for Mobile Web Apps: Current State &amp; Roadmap</h2>
+  <p><a href="http://www.w3.org/2014/07/mobile-web-app-state/">http://www.w3.org/2014/07/mobile-web-app-state/</a></p>
+  <img src="images/w3c-spec-status.png" width="70%">
+</section>
+
+<section class="slide">
+  <h2>WebPlatform.org</h2>
+  <p><a href="http://www.webplatform.org/">http://www.webplatform.org/</a></p>
+  <blockquote>The latest information on how to use the technology that runs the web — HTML, CSS, JavaScript and more.</blockquote>
+  <p>A crowdsourced, work-in-progress (early) resource for documenting web standards</p>
+  <p>Currently pushing for JavaScript-focused contributions</p>
+  <img src="images/webplatform.png">
+</section>
+
+<!-- ===========  Web Components  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>Web Components</h1>
+</section>
+
+<section class="slide">
+  <h2>State of the Componentised Web</h2>
+  <p><a href="http://www.futureinsights.com/home/the-state-of-the-componentised-web.html">http://www.futureinsights.com/home/the-state-of-the-componentised-web.html</a></p>
+  <p>Excellent overview of web components</p>
+  <p>Current W3C status update</p>
+  <p>Custom component example implemented in several frameworks to compare syntax</p>
+  <p><img src="images/web-comp.png"></p>
+</section>
+
+<section class="slide">
+  <h2>Why Web Components Are Ready For Production</h2>
+  <p><a href="http://developer.telerik.com/featured/web-components-ready-production/">http://developer.telerik.com/featured/web-components-ready-production/</a></p>
+  <p>Focused on <strong>custom elements</strong> portion of Web Components</p>
+  <p>Real-world implementation of a clock face component with example code</p>
+  <p>Discussion of practical application, polyfills, potential issues</p>
+  <p><img src="images/clockface.png"></p>
+</section>
+
 <!-- ===========  Frameworks  ========= -->
 
 <section class="slide title title-cyan">
-  <h1>Frameworks</h1>
+  <h1>Languages &amp; Frameworks</h1>
+</section>
+
+<section class="slide">
+  <h2>Swift</h2>
+  <blockquote>Swift is a new object-oriented programming language for iOS and OS X development.
+    Swift is modern, powerful, and easy to use.</blockquote>
+  <p>Introduced at WWDC in June, still in development</p>
+  <p>JS-like syntax, compiled, modern features, compatible with Objective-C</p>
+  <p><img src="images/swift.jpg"></p>
+</section>
+
+<section class="slide">
+  <h2>Swift</h2>
+  <p><a href="http://realm.io/news/swift-for-javascript-developers/">http://realm.io/news/swift-for-javascript-developers/</a></p>
+  <p>Great overview of Swift for JS developers (screencast + code examples)</p>
+  <pre><code>// JavaScript
+function Car(model){
+  this.model = model;
+}
+Car.prototype.drive = function() {
+  return 'Driving my ' + this.model;
+}
+
+// Swift
+class Car {
+    var model = ""
+    func drive() -> String {
+        return "Driving my " + model
+    }
+}</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Meteor</h2>
+  <p><a href="https://www.meteor.com/">https://www.meteor.com/</a></p>
+  <ul>
+    <li>Version 0.9.0 just released</li>
+    <li>Primary focus: overhauled packaging system</li>
+    <li>Moving steadily toward 1.0</li>
+  </ul>
 </section>
 
 <section class="slide">
@@ -182,11 +324,6 @@
   <p>"Tiny modules" philosophy (a la Node), minimal DOM manipulation</p>
   <p>Mobile-optimized, offline-first</p>
   <p><img src="images/ampersand.svg" style="max-width:40%;"></p>
-</section>
-
-<section class="slide">
-  <h2></h2>
-  <p></p>
 </section>
 
 <!-- ===========  Resources  ========= -->
@@ -206,6 +343,8 @@
 
 <section class="slide">
   <h2>Q &amp; A</h2>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <br>
   <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
   <h1>Thanks!</h1>
 </section>

@@ -48,6 +48,14 @@
       }
     }
 
+    table td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+    thead td {
+      font-weight: 800;
+    }
+
     span.code {
       font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
       margin: 0;
