@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
 
-  <title>Bleeding Edge Web: September 2014</title>
+  <title>Bleeding Edge Web: October 2014</title>
 
   <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
@@ -57,23 +57,24 @@
 <!-- ===========  Intro  ========= -->
 
 <section class="slide">
-  <h2>Bleeding Edge Web: September 2014</h2>
-  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+  <h2>Bleeding Edge Web: October 2014</h2>
 
   <h3>News from the Bleeding Edge</h3>
   <p>&mdash; Brian Moeskau (<a href="http://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
+  <h3>D3.js: Data Visualization for the Modern Web</h3>
+  <p>&mdash; Andrew Thornton (<a href="http://twitter.com/encodingpixels/">@encodingpixels</a>)</p>
 </section>
 
 <!-- ===========  Sponsors  ========= -->
 
-<!-- <section class="slide" style="background:#4598e9;color:#fff;">
+<section class="slide" style="background:#4598e9;color:#fff;">
   <p>Thanks to our sponsor:</p>
   <div style="text-align:center;padding-top:100px;font-size:200%;">
-    <img src="images/help-logo.svg">
-    <p><a href="http://help.com/" style="color:#fff !important;font-size:100px;">Help.com</a></p>
-    <p>Next-generation customer service software</p>
+    <p><a href="https://www.paypal.com/"><img src="images/paypal.png" alt="PayPal"></a></p>
   </div>
-</section> -->
+</section>
 
 <section class="slide title">
   <h1>Bleeding Edge Web(site)</h2>
@@ -92,13 +93,25 @@
   <h1>News from the Bleeding Edge</h2>
 </section>
 
+<section class="slide">
+  <h2>What Is This?</h2>
+  <p>A monthly-ish update of the latest and greatest in:</p>
+  <ul>
+    <li>Browser news</li>
+    <li>W3C standards updates</li>
+    <li>Interesting language &amp; framework releases</li>
+    <li>Emphasis on JavaScript and Node</li>
+  </ul>
+  <p><strong>Anything else that might be interesting to web app devs!</strong></p>
+</section>
+
 <section class="slide title title-cyan">
   <h1>Browser Update</h1>
 </section>
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; August 2014 (last month):</p>
+  <p>Last version check &mdash; August 2014 (2 months ago):</p>
   <table class="browsers">
     <tr>
       <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
@@ -119,7 +132,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>As of September 23, 2014:</p>
+  <p>As of October 23, 2014:</p>
   <table class="browsers">
     <tr>
       <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
@@ -129,10 +142,10 @@
       <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
     </tr>
     <tr>
-      <td class="ver"><span class="strike dim">36</span><br><strong style="color:#d00">??</strong></td>
-      <td class="ver">??</td>
-      <td class="ver"><span class="strike dim">22</span><br><strong style="color:#d00">??</strong></td>
-      <td class="ver">7</td>
+      <td class="ver"><span class="strike dim">37</span><br><strong style="color:#d00">38</strong></td>
+      <td class="ver"><span class="strike dim">31</span><br><strong style="color:#d00">33</strong></td>
+      <td class="ver"><span class="strike dim">23</span><br><strong style="color:#d00">25</strong></td>
+      <td class="ver"><span class="strike dim">7</span><br><strong style="color:#d00">8</strong></td>
       <td class="ver">11</td>
     </tr>
   </table>
@@ -140,7 +153,7 @@
 
 <section class="slide">
   <h2>Chrome Highlights</h2>
-  <h3>Version ...</h3>
+  <h3>Version 38</h3>
   <ul>
     <li></li>
   </ul>
@@ -149,13 +162,39 @@
 
 <section class="slide">
   <h2>Firefox Highlights</h2>
-  <h3>Version ...</h3>
+  <h3>Version 33</h3>
   <ul>
     <li></li>
   </ul>
   <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
 </section>
 
+<section class="slide">
+  <h2>Opera Highlights</h2>
+  <h3>Version 25</h3>
+  <ul>
+    <li></li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="50%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari Highlights</h2>
+  <h3>Version 8</h3>
+  <ul>
+    <li></li>
+  </ul>
+  <img src="../../shared/resources/images/safari.png" width="50%" alt="Safari">
+</section>
+
+<section class="slide">
+  <h2>IE Highlights</h2>
+  <h3>Version 11</h3>
+  <ul>
+    <li></li>
+  </ul>
+  <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
+</section>
 
 <!-- ===========  Frameworks  ========= -->
 
@@ -164,13 +203,43 @@
 </section>
 
 <section class="slide">
+  <h2>Node-os</h2>
+  <p><a href="http://node-os.com/">http://node-os.com/</a></p>
+  <blockquote>The first operating system powered by npm</blockquote>
+  <ul>
+    <li>A full OS built on top of the Linux kernel</li>
+    <li>Node is the primary runtime environment (i.e. no bash)</li>
+    <li>Native OS-level support for npm</li>
+    <li>Open source (on Github)</li>
+  </ul>
+  <p><img src="images/node-os.png"></p>
+</section>
+
+<section class="slide">
   <h2>Mojolicious</h2>
   <p><a href="http://mojolicio.us/">http://mojolicio.us/</a></p>
-  <blockquote>A next generation web framework for the Perl programming language.</blockquote>
+  <blockquote>A next generation web framework for the Perl programming language</blockquote>
   <p>All the modern features you expect: REST, routes, plugins, even WebSockets</p>
   <p>"Perl-ish" templates</p>
   <p><img src="images/mojolicious.jpg"></p>
 </section>
+
+<section class="slide">
+  <h2>Mojolicious (con't)</h2>
+  <p><a href="http://mojolicio.us/">http://mojolicio.us/</a></p>
+  <p>Example of parsing a web page:</p>
+  <pre><code>use Mojo::Base -strict;
+use Mojo::ByteStream 'b';
+use Mojo::UserAgent;
+
+# Extract named character references from HTML spec
+my $tx = Mojo::UserAgent->new->get('https://html.spec.whatwg.org');
+b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
+  for $tx->res->dom('#named-character-references-table tbody > tr')->each;
+
+1;</code></pre>
+</section>
+
 
 <!-- ===========  Resources  ========= -->
 
@@ -178,12 +247,14 @@
   <h1>Resources</h1>
 </section>
 
-<!-- <section class="slide">
-  <h2>JS Books</h2>
-  <p>List of free JavaScript/Node (and related) books</p>
-  <p><a href="http://jsbooks.revolunet.com/">http://jsbooks.revolunet.com/</a></p>
-  <img src="images/jsbooks.png">
-</section> -->
+<section class="slide">
+  <h2>Iconmonstr</h2>
+  <p><a href="http://iconmonstr.com/">http://iconmonstr.com/</a></p>
+  <p>2,600+ high-quality, royalty-free and <strong>customizable</strong> icons</p>
+  <p>Keyword search and curated collections</p>
+  <img src="images/iconmonstr.png">
+</section>
+
 
 <!-- ===========  Fin  ========= -->
 
