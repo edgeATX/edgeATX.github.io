@@ -17,11 +17,12 @@
       letter-spacing: -.05em; }
     /* line 22, skew.scss */
     .deck-container .slide h3 {
-      color: #444; }
-    /* line 27, skew.scss */
+      color: #444;
+      margin-bottom: .7em; }
+    /* line 28, skew.scss */
     .deck-container .slide pre code {
       overflow: hidden; }
-    /* line 31, skew.scss */
+    /* line 32, skew.scss */
     .deck-container .slide blockquote {
       font-size: 1em;
       font-style: italic;
@@ -29,23 +30,23 @@
       color: #333;
       background: #f6f6f6;
       border-left: 5px solid #ccc; }
-      /* line 39, skew.scss */
+      /* line 40, skew.scss */
       .deck-container .slide blockquote p {
         margin: 0; }
-      /* line 43, skew.scss */
+      /* line 44, skew.scss */
       .deck-container .slide blockquote cite {
         font-size: .5em;
         font-style: normal;
         font-weight: bold;
         color: #888; }
-    /* line 51, skew.scss */
+    /* line 52, skew.scss */
     .deck-container .slide table.table td {
       border: 1px solid #ccc;
       padding: 5px; }
-    /* line 55, skew.scss */
+    /* line 56, skew.scss */
     .deck-container .slide thead td {
       font-weight: 800; }
-    /* line 59, skew.scss */
+    /* line 60, skew.scss */
     .deck-container .slide span.code {
       font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
       margin: 0;
@@ -53,64 +54,64 @@
       background-color: #f8f8f8;
       border-radius: 3px;
       padding: 1px 8px; }
-    /* line 68, skew.scss */
+    /* line 69, skew.scss */
     .deck-container .slide ::-moz-selection {
       background: #c00;
       color: #fff; }
-    /* line 69, skew.scss */
+    /* line 70, skew.scss */
     .deck-container .slide ::selection {
       background: #c00;
       color: #fff; }
-    /* line 71, skew.scss */
+    /* line 72, skew.scss */
     .deck-container .slide a {
       color: #1c68be !important; }
-      /* line 74, skew.scss */
+      /* line 75, skew.scss */
       .deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited {
         color: #c00;
         text-decoration: none; }
-      /* line 79, skew.scss */
+      /* line 80, skew.scss */
       .deck-container .slide a:hover, .deck-container .slide a:focus {
         text-decoration: underline; }
-    /* line 84, skew.scss */
+    /* line 85, skew.scss */
     .deck-container .slide li {
       line-height: 1.5em; }
-    /* line 88, skew.scss */
+    /* line 89, skew.scss */
     .deck-container .slide .strike {
       text-decoration: line-through; }
-    /* line 91, skew.scss */
+    /* line 92, skew.scss */
     .deck-container .slide .dim {
       opacity: .4; }
-  /* line 97, skew.scss */
+  /* line 98, skew.scss */
   .deck-container > .slide .deck-before, .deck-container > .slide .deck-previous {
     opacity: 0.4; }
-    /* line 101, skew.scss */
+    /* line 102, skew.scss */
     .deck-container > .slide .deck-before:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-before:not(.deck-child-current) .deck-previous, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-previous {
       opacity: 1; }
-  /* line 107, skew.scss */
+  /* line 108, skew.scss */
   .deck-container > .slide .deck-child-current {
     opacity: 1; }
-  /* line 112, skew.scss */
+  /* line 113, skew.scss */
   .deck-container .deck-prev-link, .deck-container .deck-next-link {
     background: #ccc;
     font-family: serif; }
-    /* line 116, skew.scss */
+    /* line 117, skew.scss */
     .deck-container .deck-prev-link, .deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-prev-link:active, .deck-container .deck-prev-link:visited, .deck-container .deck-next-link, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus, .deck-container .deck-next-link:active, .deck-container .deck-next-link:visited {
       color: #fff; }
-    /* line 120, skew.scss */
+    /* line 121, skew.scss */
     .deck-container .deck-prev-link:hover, .deck-container .deck-prev-link:focus, .deck-container .deck-next-link:hover, .deck-container .deck-next-link:focus {
       background: #1f4c7f;
       text-decoration: none; }
-  /* line 126, skew.scss */
+  /* line 127, skew.scss */
   .deck-container .deck-status {
     font-size: 0.6666em;
     right: 15px; }
-  /* line 132, skew.scss */
+  /* line 133, skew.scss */
   .deck-container.deck-menu .slide {
     background: #eee; }
-  /* line 136, skew.scss */
+  /* line 137, skew.scss */
   .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
     background: #ddf; }
-  /* line 141, skew.scss */
+  /* line 142, skew.scss */
   .deck-container .cover {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -119,21 +120,21 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    /* line 150, skew.scss */
+    /* line 151, skew.scss */
     .deck-container .cover h1 {
       color: #fff;
       text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); }
-    /* line 155, skew.scss */
+    /* line 156, skew.scss */
     .deck-container .cover h2 {
       color: #fff;
       border-bottom: none; }
-    /* line 160, skew.scss */
+    /* line 161, skew.scss */
     .deck-container .cover a, .deck-container .cover a:visited {
       color: #fff !important; }
-    /* line 164, skew.scss */
+    /* line 165, skew.scss */
     .deck-container .cover p {
       color: #999; }
-    /* line 168, skew.scss */
+    /* line 169, skew.scss */
     .deck-container .cover .shim {
       background: #000;
       position: absolute;
@@ -142,24 +143,24 @@
       bottom: 0;
       right: 0;
       opacity: .3; }
-  /* line 179, skew.scss */
+  /* line 180, skew.scss */
   .deck-container .title {
     background-color: #0F91DA; }
-    /* line 182, skew.scss */
+    /* line 183, skew.scss */
     .deck-container .title h1, .deck-container .title h2, .deck-container .title h3 {
       color: #fff; }
-  /* line 187, skew.scss */
+  /* line 188, skew.scss */
   .deck-container .home {
     background-image: url(../../resources/images/bleeding-edge.jpg); }
-  /* line 192, skew.scss */
+  /* line 193, skew.scss */
   .deck-container .browser-table td {
     text-align: center;
     width: 20%; }
-    /* line 196, skew.scss */
+    /* line 197, skew.scss */
     .deck-container .browser-table td img {
       height: 7em;
       margin-bottom: 0; }
-    /* line 200, skew.scss */
+    /* line 201, skew.scss */
     .deck-container .browser-table td p {
       margin-top: 15px;
       font-size: 2em; }

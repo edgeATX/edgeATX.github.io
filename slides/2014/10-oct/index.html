@@ -244,9 +244,12 @@
 
 <section class="slide">
   <h2>Safari Highlights</h2>
-  <h3>Version 8</h3>
+  <h3><a href="http://en.wikipedia.org/wiki/Safari_(web_browser)#New_features_in_Safari_8">Version 8</a></h3>
   <ul>
-    <li></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a> support</li>
+    <li><a href="https://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">IndexedDB</a> support</li>
+    <li>JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a></li>
+    <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">CSS Shapes</a></li>
   </ul>
   <img src="../../shared/resources/images/safari.png" width="50%" alt="Safari">
 </section>
@@ -258,6 +261,103 @@
     <li></li>
   </ul>
   <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
+</section>
+
+<!-- ===========  W3C Specs  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>W3C Spec Highlights</h1>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <p><a href="http://www.w3.org/TR/css-shapes/">http://www.w3.org/TR/css-shapes/</a></p>
+  <blockquote>CSS Shapes allow web designers to wrap content around custom paths, like circles,
+    ellipses and polygons, thus breaking free from the constraints of the rectangle.</blockquote>
+
+  <img class="shape" src="images/bleeding-web.gif">
+  <div style="font-size:.8em;padding:50px;">
+    <p>We're no strangers to love<br>
+    You know the rules and so do I<br>
+    A full commitment's what I'm thinking of<br>
+    You wouldn't get this from any other guy</p>
+    <p>I just wanna tell you how I'm feeling<br>
+    Gotta make you understand</p>
+    <p>Never gonna give you up<br>
+    Never gonna let you down<br>
+    Never gonna run around and desert you<br>
+    Never gonna make you cry<br>
+    Never gonna say goodbye<br>
+    Never gonna tell a lie and hurt you</p>
+  </div>
+
+  <style>
+  .shape {
+    shape-outside: url(images/bleeding-web.gif);
+    float: left;
+  }
+  </style>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <p>Code for the previous example:</p>
+
+  <pre><code>&lt;img class="shape" src="images/bleeding-web.gif">
+
+&lt;p>We're no strangers to love...&lt;/p>
+&lt;p>I just wanna tell you how I'm feeling...&lt;/p>
+
+&lt;style>
+.shape {
+  shape-outside: url(images/bleeding-web.gif);
+  float: left;
+}
+&lt;/style></code></pre>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <p><strong>Key concept:</strong> target shapes must be <strong>floated</strong></p>
+  <p>Built-in shapes: circle, ellipse, polygon</p>
+  <p>Additional layout properties, e.g. <span class="code">shape-margin: 1em;</span></p>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <h3>Why is this interesting?</h3>
+  <ul>
+    <li>Finally able to create print-quality layouts natively in HTML</li>
+    <li>W3C Candidate Recommendation status</li>
+    <li>Now supported by default in Chrome, Opera and Safari *</li>
+    <li><a href="http://blogs.adobe.com/webplatform/2014/05/12/css-shapes-polyfill/">Polyfill</a>
+      available for other browsers</li>
+  </ul>
+  <p style="font-size:.6em;">* Surprisingly, Firefox typically leads on W3C spec support, but does
+    NOT currently support Shapes.</p>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <h3>Resources</h3>
+  <ul>
+    <li><a href="http://www.w3.org/TR/css-shapes/">Official spec</a></li>
+    <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">Getting
+      Started with CSS Shapes</a></li>
+    <li><a href="http://alistapart.com/article/css-shapes-101">CSS Shapes 101</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>CSS Shapes - Level 1</h2>
+  <h3>Why "Level 1"?</h3>
+  <p>There is also a <a href="http://dev.w3.org/csswg/css-shapes-2/">Level 2 spec</a> (currently in Editor's Draft status)</p>
+  <p>Will extend Level 1:</p>
+  <ul>
+    <li>Adds support for defining "exclusion" areas via <span class="code">shape-inside</span></li>
+    <li>Support for standard positioning, in addition to floats</li>
+  </ul>
+  <img src="images/shapes-exclusion.png">
 </section>
 
 <!-- ===========  Frameworks  ========= -->
