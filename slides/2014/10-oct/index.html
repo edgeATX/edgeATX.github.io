@@ -153,27 +153,91 @@
 
 <section class="slide">
   <h2>Chrome Highlights</h2>
-  <h3>Version 38</h3>
+  <h3><a href="http://blog.chromium.org/2014/08/chrome-38-beta-new-primitives-for-next.html">Version 38</a></h3>
   <ul>
-    <li></li>
+    <li><a href="http://www.html5rocks.com/en/tutorials/responsive/picture-element/">Responsive images</a> via
+      <span class="code">&lt;picture&gt;</span>, <span class="code">&lt;source&gt;</span> and the
+      <span class="code">srcset</span> attribute</li>
+    <li>Support for ES6 <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map"><span
+      class="code">Maps</span></a>, <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"><span
+      class="code">Sets</span></a> and <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of"><span
+      class="code">iterable</span></a> objects</li>
+    <li>A bunch of new <a href="https://www.chromestatus.com/feature/5920790725787648">ES6 math functions</a></li>
+    <li>Support for W3C <a href="https://w3c.github.io/screen-orientation/">Screen Orientation API</a></li>
   </ul>
   <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
 </section>
 
 <section class="slide">
   <h2>Firefox Highlights</h2>
-  <h3>Version 33</h3>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/32">Version 32</a></h3>
   <ul>
-    <li></li>
+    <li>New <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Audio_Editor">Web Audio Editor</a> (still beta)</li>
+    <li>ES6 (experimental) methods: <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from"><span
+      class="code">Array.from()</span></a>, <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin"><span
+      class="code">Array.prototype.copyWithin()</span></a>, <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger"><span
+      class="code">Number.isSafeInteger()</span></a></li>
+    <li>CSS properties: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode"><span
+      class="code">mix-blend-mode</span></a> and <a
+      href="http://www.sitepoint.com/css-position-sticky-introduction-polyfills/"><span
+      class="code">position: sticky</span></a></li>
+    <li>Flexbox properties: <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow"><span class="code">flex-grow</span></a>
+      and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink"><span class="code">flex-shrink</span></a>
+      (candidate recommendation <a href="http://dev.w3.org/csswg/css-flexbox/">W3C spec</a>)</li>
+    <li>Experimental support: <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset"><span
+      class="code">&lt;img&gt; srcset</span></a>, <a
+      href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break"><span
+      class="code">box-decoration-break</span></a></li>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://www.mozilla.org/en-US/firefox/33.0/releasenotes/">Version 33</a></h3>
+  <ul>
+    <li>New CSS property: <a href="http://dev.w3.org/csswg/css-counter-styles/#the-counter-style-rule"><span
+      class="code">@counter-style</span></a></li>
+    <li>A ton of <a href="https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/">dev
+      tools additions</a>:</a>
+      <ul>
+        <li>Event listeners popup</li>
+        <li>@media sidebar</li>
+        <li>CSS transform highlighting</li>
+        <li>more...</li>
+      </ul></li>
   </ul>
   <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
 </section>
 
 <section class="slide">
   <h2>Opera Highlights</h2>
-  <h3>Version 25</h3>
+  <h3><a href="https://dev.opera.com/blog/opera-24/">Version 24</a> (based on Chromium 37)</h3>
   <ul>
-    <li></li>
+    <li>Support for W3C <a href="http://dev.w3.org/csswg/css-shapes/">CSS Shapes</a></li>
+    <li>New CSS properties: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/all"><span
+      class="code">all</span></a>, <a href="http://dev.w3.org/csswg/css-ui/#cursor"><span
+      class="code">cursor: zoom-in|out</span></a></li>
+    <li>New <a href="https://html.spec.whatwg.org/multipage/forms.html#the-dialog-element"><span
+      class="code">&lt;dialog&gt;</span></a> tag (replaces <span class="code">showModalDialog()</span>)</li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="50%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Opera Highlights</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-25/">Version 25</a> (based on Chromium 38)</h3>
+  <ul>
+    <li>Basically the same additions as Chrome 38 (responsive images, Screen Orientation API, Maps, Sets, etc.)</li>
+    <li>New support for W3C <a href="https://notifications.spec.whatwg.org/">Notifications API</a> (in Chrome for a while)</li>
   </ul>
   <img src="../../shared/resources/images/opera.png" width="50%" alt="Opera">
 </section>
@@ -248,6 +312,14 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 </section>
 
 <section class="slide">
+  <h2>Can I Use?</h2>
+  <p><a href="http://caniuse.com/">http://caniuse.com/</a></p>
+  <p>Massive matrix of browser-specific feature support</p>
+  <p>Includes known issues, links to specs and polyfills and more</p>
+  <img src="images/caniuse.png">
+</section>
+
+<section class="slide">
   <h2>Iconmonstr</h2>
   <p><a href="http://iconmonstr.com/">http://iconmonstr.com/</a></p>
   <p>2,600+ high-quality, royalty-free and <strong>customizable</strong> icons</p>
@@ -310,7 +382,10 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
   $(function() {
+    // Init slides
     $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
   });
 </script>
 </body>
