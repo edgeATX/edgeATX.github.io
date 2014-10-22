@@ -167,6 +167,7 @@
       class="code">iterable</span></a> objects</li>
     <li>A bunch of new <a href="https://www.chromestatus.com/feature/5920790725787648">ES6 math functions</a></li>
     <li>Support for W3C <a href="https://w3c.github.io/screen-orientation/">Screen Orientation API</a></li>
+    <li>Over $75k in security bounties fixed</li>
   </ul>
   <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
 </section>
@@ -406,10 +407,44 @@
   <img src="images/shapes-exclusion.png">
 </section>
 
+<!-- ===========  Break  ========= -->
+
+<section class="slide title" style="background:#555;">
+  <h1>Intermission</h1>
+</section>
+
+<section class="slide">
+  <h2>Trivia Question</h2>
+  <p>Windows is currently called Windows 8.</p>
+  <p>The next planned version is (currently) Windows 10.</p>
+  <h3>Why no Windows 9?</h3>
+  <img src="images/win-10.png">
+</section>
+
+<section class="slide">
+  <h2>Trivia Question (con't)</h2>
+  <p>Official party line:</p>
+  <blockquote>Windows 10 carries Windows forward into a new way of doing things. It is not an
+    incremental change, but a new Windows that will empower the next billion users.<br><br>
+    &mdash; "Microsoft Spokesman"</blockquote>
+</section>
+
+<section class="slide">
+  <h2>Trivia Question (con't)</h2>
+  <p>Official party line:</p>
+  <blockquote>Windows 10 carries Windows forward into a new way of doing things. It is not an
+    incremental change, but a new Windows that will empower the next billion users.<br><br>
+    &mdash; "Microsoft Spokesman"</blockquote>
+  <p>Most likely real answer:</p>
+  <blockquote>I bet the real reason it's called Windows 10 is because some enterprise app
+    written 20 years ago checks for "Windows 9x"<br><br>
+    &mdash; Anil Dash (@anildash)</blockquote>
+</section>
+
 <!-- ===========  Frameworks  ========= -->
 
 <section class="slide title title-cyan">
-  <h1>Languages &amp; Frameworks</h1>
+  <h1>Languages, Frameworks &amp; Tools</h1>
 </section>
 
 <section class="slide">
@@ -450,6 +485,35 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 1;</code></pre>
 </section>
 
+<section class="slide">
+  <h2>uilang</h2>
+  <p><a href="http://uilang.com/">http://uilang.com/</a></p>
+  <blockquote>A minimal, ui-focused programming language for web designers</blockquote>
+  <img src="images/uilang.png">
+  <pre><code>&lt;script src="uilang.js">&lt;/script>
+
+&lt;div id="notification">
+  &lt;p>You have 3 unread messages.&lt;/p>
+  &lt;button class="hide">Hide&lt;/button>
+&lt;/div>
+
+&lt;code>
+  clicking on ".hide" adds class "hidden" on "#notification"
+&lt;/code></code></pre>
+</section>
+
+<section class="slide">
+  <h2>PayPal HTML5 Video Player</h2>
+  <p><a href="http://paypal.github.io/accessible-html5-video-player/">http://paypal.github.io/accessible-html5-video-player/</a> (<a
+    href="https://www.paypal-engineering.com/2014/09/05/introducing-an-accessible-html5-video-player/">Overview</a>)</p>
+  <ul>
+    <li>Native HTML5 playback controls</li>
+    <li>Supports captions</li>
+    <li>Accessibility features for keybaord and screen readers</li>
+    <li>No external dependencies (vanilla JS)</li>
+  </ul>
+  <img src="images/pp-video-player.png">
+</section>
 
 <!-- ===========  Resources  ========= -->
 
@@ -466,6 +530,29 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 </section>
 
 <section class="slide">
+  <h2>Polyfill.io</h2>
+  <p><a href="https://cdn.polyfill.io/v1/">https://cdn.polyfill.io/v1/</a>
+    (<a href="http://labs.ft.com/2014/09/polyfills-as-a-service/">Overview</a>)
+  </p>
+  <p>Hosted HTML5 / CSS3 / ES6 polyfill delivery service</p>
+  <blockquote>A way of sending one single copy of each of the best polyfills, in the right order
+    (respecting dependencies), to just the browsers that lack a native implementation.</blockquote>
+  <ul>
+    <li>Reads the requesting browser's UA string (customized per request)</li>
+    <li>Eliminates duplication and manual polyfill management</li>
+    <li>"Care-free" ability to leverage latest standards</li>
+  </ul>
+  <pre><code style="font-size:.8em;">/* Detected: chrome/37.0.2062
+ *
+ * - Array.isArray, License: CC0  (required by modernizr:es5array)
+ * - Array.prototype.every, License: CC0  (required by modernizr:es5array)
+ * - Array.prototype.filter, License: CC0  (required by modernizr:es5array)
+ *   etc...
+ */
+</code></pre>
+</section>
+
+<section class="slide">
   <h2>Iconmonstr</h2>
   <p><a href="http://iconmonstr.com/">http://iconmonstr.com/</a></p>
   <p>2,600+ high-quality, royalty-free and <strong>customizable</strong> icons</p>
@@ -475,8 +562,8 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 
 <!-- ===========  Other  ========= -->
 
-<section class="slide title">
-  <h1>Last But Not Least...</h1>
+<section class="slide cover" style="background-image:url(images/anfscd.jpg)">
+  <h1>And now for something completely different...</h1>
 </section>
 
 <section class="slide title title-cyan">
@@ -507,9 +594,9 @@ b($_->at('td > code')->text . ' ' . $_->children('td')->[1]->text)->trim->say
 <!-- ===========  Fin  ========= -->
 
 <section class="slide">
-  <h2>Q &amp; A</h2>
+  <h2>Fin</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
   <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
-  <br>
   <h3>Brian Moeskau &mdash; <a href="http://twitter.com/bmoeskau">@bmoeskau</a></h3>
   <h1>Thanks!</h1>
 </section>
