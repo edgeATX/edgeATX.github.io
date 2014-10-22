@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
 
   <!-- Required Modernizr file -->
-  <script src="../../shared/resources/js/modernizr.custom.js"></script>
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
 
   <!-- Preety print -->
   <script src="../../shared/prism/prism.js"></script>
@@ -94,7 +94,7 @@
 </section>
 
 <section class="slide">
-  <h2>What Is This?</h2>
+  <h2>What Is Bleeding Edge Web?</h2>
   <p>A monthly-ish update of the latest and greatest in:</p>
   <ul>
     <li>Browser news</li>
@@ -256,10 +256,6 @@
 
 <section class="slide">
   <h2>IE Highlights</h2>
-  <h3>Version 11</h3>
-  <ul>
-    <li></li>
-  </ul>
   <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
 </section>
 
@@ -275,27 +271,44 @@
   <blockquote>CSS Shapes allow web designers to wrap content around custom paths, like circles,
     ellipses and polygons, thus breaking free from the constraints of the rectangle.</blockquote>
 
-  <img class="shape" src="images/bleeding-web.gif">
-  <div style="font-size:.8em;padding:50px;">
-    <p>We're no strangers to love<br>
-    You know the rules and so do I<br>
-    A full commitment's what I'm thinking of<br>
-    You wouldn't get this from any other guy</p>
-    <p>I just wanna tell you how I'm feeling<br>
-    Gotta make you understand</p>
-    <p>Never gonna give you up<br>
-    Never gonna let you down<br>
-    Never gonna run around and desert you<br>
-    Never gonna make you cry<br>
-    Never gonna say goodbye<br>
-    Never gonna tell a lie and hurt you</p>
+  <div class="shapes-example">
+    <p>This is a live example &mdash; select text or resize the browser!</p>
+    <img class="shape" src="images/bleeding-web.gif">
+    <div style="font-size:.8em;padding:50px;">
+      <p>We're no strangers to love<br>
+      You know the rules and so do I<br>
+      A full commitment's what I'm thinking of<br>
+      You wouldn't get this from any other guy</p>
+      <p>I just wanna tell you how I'm feeling<br>
+      Gotta make you understand</p>
+      <p>Never gonna give you up<br>
+      Never gonna let you down<br>
+      Never gonna run around and desert you<br>
+      Never gonna make you cry<br>
+      Never gonna say goodbye<br>
+      Never gonna tell a lie and hurt you</p>
+    </div>
+
+    <style>
+    .shape {
+      shape-outside: url(images/bleeding-web.gif);
+      float: left;
+    }
+    </style>
+  </div>
+  <div class="shapes-preview">
+    <p><strong style="color:#c33;">To view the live example, use a browser that supports CSS Shapes!</strong></p>
+    <img src="images/shapes-preview.png">
   </div>
 
   <style>
-  .shape {
-    shape-outside: url(images/bleeding-web.gif);
-    float: left;
-  }
+    .shapes-example,
+    .shapes .shapes-preview {
+      display: none;
+    }
+    .shapes .shapes-example {
+      display: block;
+    }
   </style>
 </section>
 
@@ -316,6 +329,34 @@
 &lt;/style></code></pre>
 </section>
 
+
+<section class="slide">
+  <h2>Quick Side Note...</h2>
+  <h3><a href="http://modernizr.com/">Modernizr</a> is awesome!</h3>
+  <p>Compare the previous slide in browsers that do and do NOT support CSS shapes.</p>
+  <p>The <span class="code">shapes</span> CSS class gets added to the <span class="code">&lt;html></span>
+    tag by Modernizr if supported</p>
+  <pre><code>&lt;script src="modernizr.js">&lt;/script>
+
+&lt;div class="shapes-example">
+  // Example HTML and code
+&lt;/div>
+&lt;div class="shapes-preview">
+  &lt;img src="shapes-preview.png">
+&lt;/div>
+
+&lt;style>
+  .shapes-example,
+  .shapes .shapes-preview {
+    display: none;
+  }
+  .shapes .shapes-example {
+    display: block;
+  }
+&lt;/style>
+</code></pre>
+</section>
+
 <section class="slide">
   <h2>CSS Shapes - Level 1</h2>
   <p><strong>Key concept:</strong> target shapes must be <strong>floated</strong></p>
@@ -332,8 +373,10 @@
     <li>Now supported by default in Chrome, Opera and Safari *</li>
     <li><a href="http://blogs.adobe.com/webplatform/2014/05/12/css-shapes-polyfill/">Polyfill</a>
       available for other browsers</li>
+    <li>WSYWIG editors available for Chrome and Brackets</li>
   </ul>
-  <p style="font-size:.6em;">* Surprisingly, Firefox typically leads on W3C spec support, but does
+  <img src="images/shapes-editor.png">
+  <p style="font-size:.7em;">* Surprisingly, Firefox typically leads on W3C spec support, but does
     NOT currently support Shapes.</p>
 </section>
 
@@ -345,6 +388,9 @@
     <li><a href="http://www.html5rocks.com/en/tutorials/shapes/getting-started/">Getting
       Started with CSS Shapes</a></li>
     <li><a href="http://alistapart.com/article/css-shapes-101">CSS Shapes 101</a></li>
+    <li><a href="http://blogs.adobe.com/webplatform/2014/05/12/css-shapes-polyfill/">Polyfill library</a></li>
+    <li>Editor extensions for <a href="https://chrome.google.com/webstore/detail/css-shapes-editor/nenndldnbcncjmeacmnondmkkfedmgmp">Chrome</a>
+      and <a href="http://blog.brackets.io/2014/04/17/css-shapes-editor/">Brackets</li>
   </ul>
 </section>
 
