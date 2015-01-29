@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bleeding Edge Web: January 2015</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!-- ===========  Title  ========= -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- ===========  Intro  ========= -->
+
+<section class="slide">
+  <h2>Bleeding Edge Web: January 2015</h2>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Corey Butler (<a href="http://twitter.com/goldglovecb/">@goldglovecb</a>)</p>
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
+  <h3>Accelerating Your Development, Deployment and Learning with Yeoman</h3>
+  <p>&mdash; Ryan Vice (<a href="http://vicesoftware.com">vicesoftware.com</a>)</p>
+</section>
+
+<!-- ===========  Sponsors  ========= -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<section class="slide title">
+  <h1>Bleeding Edge Web (work)</h2>
+</section>
+
+<section class="slide">
+  <h2>Want to work with Bleeding Edge Web tech?</h2>
+
+  <ol>
+    <li>Same format.</li>
+    <li>Meet quarterly?</li>
+    <li>Different locations around Austin (sponsored).</li>
+    <li>Discussions around tech jobs and career development in Austin.</li>
+  </ol>
+
+  <p>Sponsored by employers.</p>
+
+</section>
+
+<!-- ===========  Bleeding Edge ========= -->
+
+<section class="slide title">
+  <h1>News from the Bleeding Edge</h2>
+</section>
+
+<section class="slide">
+  <h2>What Is Bleeding Edge Web?</h2>
+  <p>A monthly-ish update of the latest and greatest in:</p>
+  <ul>
+    <li>Browser news</li>
+    <li>W3C standards updates</li>
+    <li>Interesting language &amp; framework releases</li>
+    <li>Emphasis on JavaScript and Node</li>
+  </ul>
+  <p><strong>Anything else that might be interesting to web app devs!</strong></p>
+</section>
+
+<section class="slide title title-cyan">
+  <h1>Browser Update</h1>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; October 23, 2014 (3 months ago):</p>
+  <table class="browsers">
+    <tr>
+      <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
+      <td width="20%"><img src="../../shared/resources/images/firefox.png" width="80%" alt="Firefox"></td>
+      <td width="20%"><img src="../../shared/resources/images/opera.png" width="70%" alt="Opera"></td>
+      <td width="20%"><img src="../../shared/resources/images/safari.png" width="80%" alt="Safari"></td>
+      <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
+    </tr>
+    <tr>
+      <td class="ver">38</td>
+      <td class="ver">33</td>
+      <td class="ver">25</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of January 28, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
+      <td width="20%"><img src="../../shared/resources/images/firefox.png" width="80%" alt="Firefox"></td>
+      <td width="20%"><img src="../../shared/resources/images/opera.png" width="70%" alt="Opera"></td>
+      <td width="20%"><img src="../../shared/resources/images/safari.png" width="80%" alt="Safari"></td>
+      <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">38</span><br><strong style="color:#d00">40</strong></td>
+      <td class="ver"><span class="strike dim">33</span><br><strong style="color:#d00">35</strong></td>
+      <td class="ver"><span class="strike dim">25</span><br><strong style="color:#d00">27</strong></td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3>Version 39</h3>
+  <ul>
+    <li>64-bit support for Mac.</li>
+    <li>Stability &amp; performance updates. $16.5k bounties issued.</li>
+    <li><a href="https://www.chromestatus.com/features/4959347197083648">ES6 Generators</a>!</li>
+    <li>Initial support for <a href="https://www.chromestatus.com/features/5517433905348608">Beacons</a>.</li>
+  </ul>
+  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
+</section>
+
+<section class="slide">
+  <h2>More Chrome Highlights</h2>
+  <h3>Version 40</h3>
+  <ul>
+    <li>62 Security Updates, $35K in bounties paid.</li>
+    <li>New <a href="https://www.chromestatus.com/features/6561526227927040">ServiceWorkers</a> (formerly Navigation Controllers).</li>
+    <li>Negative Text Filters:</li>
+  </ul>
+  <img src="./images/negativefilters.png" width="50%" alt="Chrome">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/34">Version 34</a></h3>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Storage Inspector: a new tool enabling you to view data stored by web pages</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Performance">Performance tool: revamped Profiler UI and frame rate timeline</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/tools/Working_with_iframes">Frame switching: point the developer tools at a specific iframe in the page</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.table">console.table support</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Examining_event_listeners">jQuery events are visible in the Page Inspector</a></li>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/34">Version 35</a></h3>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#.3A.3Abefore_and_.3A.3Aafter">See ::before and ::after pseudo elements in the Page Inspector</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Style_Editor#Source_map_support">CSS source maps are now enabled by default</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector#Element_popup_menu_2">"Show DOM Properties" from the Page Inspector</a></li>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Newsmakers</h2>
+  <p>Firefox will not support HTML Imports.</p>
+  <p>... and (drumroll)... </p>
+  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
+</section>
+
+
+<section class="slide">
+  <h2>Firefox Developer Edition</h2>
+  <p>The first browser built for developers.</p>
+  <ul>
+    <li><strong>Debug any browser:</strong> Inspect and debug your app across any browser or device with Valence — a powerful, pre-installed extension that you’ll only find in Firefox Developer Edition.</li>
+    <li><strong>Pixel-perfect coding:</strong> Target screen sizes with the Responsive Design View and tweak your CSS on the fly with the built-in Style Editor for pixel-perfect coding.</li>
+    <li><a href="http://dev.w3.org/2006/webapi/FileAPI/#file">Global File constructor</a></li>
+  </ul>
+  <img src="./images/firefoxdev.jpg" width="50%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Opera Highlights</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-26/">Version 26</a> (based on Chromium 39)</h3>
+  <ul>
+    <li>Beacon API</li>
+    <li>ES6 Generators</li>
+    <li>64-bit OSX Support</li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="50%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Opera Highlights</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-27/">Version 27</a> (based on Chromium 40)</h3>
+  <ul>
+    <li>ServiceWorkers</li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="50%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari Highlights</h2>
+  <h3><a href="http://en.wikipedia.org/wiki/Safari_(web_browser)#New_features_in_Safari_8">Version 8</a></h3>
+  <img src="../../shared/resources/images/safari.png" width="50%" alt="Safari">
+</section>
+
+<section class="slide">
+  <h2>IE Highlights</h2>
+  <li><a href="http://modern.ie">http://modern.ie</a></li>
+  <img src="../../shared/resources/images/ie.png" width="50%" alt="IE">
+</section>
+
+<!-- ===========  W3C Specs  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>W3C Spec Highlights</h1>
+</section>
+
+<section class="slide">
+  <h2>Indexed Database API - Recommendation</h2>
+  <p><a href="http://www.w3.org/TR/IndexedDB/">http://www.w3.org/TR/IndexedDB/</a></p>
+  <blockquote>Defines APIs for a database of records holding simple values and hierarchical objects (key/value).The database maintains indexes over records it stores. An application developer directly uses an API to locate records either by their key or by using an index. A query language can be layered on this API. An indexed database can be implemented using a persistent B-tree data structure.</blockquote>
+</section>
+
+<section class="slide">
+  <h2>Server-Sent Events - Proposed Recommendation</h2>
+  <p><a href="http://www.w3.org/TR/eventsource/">http://www.w3.org/TR/eventsource/</a></p>
+  <blockquote>This specification defines an API for opening an HTTP connection for receiving push notifications from a server in the form of DOM events. The API is designed such that it can be extended to work with other push notification schemes such as Push SMS.</blockquote>
+  <p>A possible alternative to websockets in some scenarios.</p>
+</section>
+
+<!-- ===========  Frameworks  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>Languages, Frameworks &amp; Tools</h1>
+</section>
+
+<section class="slide">
+  <h2>Node.js</h2>
+  <p><a href="http://nodejs.org/">http://nodejs.org/</a></p>
+  <li>v0.10.36 (stable) &amp; v0.11.15 (unstable) released.</li>
+  <li>Updated OpenSSL to 1.0.1l</li>
+  <li>V8 Upgrades (Unstable: 3.28.73)</li>
+  <li>npm Upgrades (Unstable: 2.1.6)</li>
+  <li>libuv updates</li>
+  <img src="./images/node.png" alt="node.js">
+</section>
+
+<section class="slide">
+  <h2>Node.js: 2014 In Review</h2>
+  <li>Red Hat bought FeedHenry (node-based platform)</li>
+  <li>Apigee endorsed Node via support in their platform.</li>
+  <li>Oracle announced the Oracle Node Cloud Service</li>
+  <li>F5 used node in their BIG-IP series.</li>
+  <li>Mulesoft released Osprey, the first Node RAML implementation.</li>
+  <li>Amazon Lambda shipped with Node as it's first platform.</li>
+  <br/>
+  <li>Node core had 17 maintenance releases and 595 commits</li>
+  <li>NPM doubled from around 50K modules to over 110K modules</li>
+  <li>Major server frameworks express, Connect, Hapi, LoopBack, and Sails each doubled downloads.</li>
+  <img src="./images/node.png" alt="node.js">
+</section>
+
+<section class="slide">
+  <h2>Node.js: 2014 In Review (cont)</h2>
+  <li>Used by Apple, MetLife, & Zappos.</li>
+  <li>GE started using Node.js in their appliances.</li>
+  <img src="./images/node.png" alt="node.js">
+</section>
+
+<section class="slide">
+  <h2>io.js</h2>
+  <p><a href="http://node-os.com/">http://iojs.org/</a></p>
+  <blockquote>io.js is an npm compatible platform originally based on <a href="http://nodejs.org">node.js</a>.</blockquote>
+  <p><strong>How does it differ from node.js?</strong></p>
+  <blockquote>The project aims to continue development under an <a href="https://github.com/iojs/io.js/blob/v1.x/GOVERNANCE.md#readme">open governance model</a>.</blockquote>
+  <img src="./images/iojs.png" width="30%" alt="io.js">
+</section>
+
+<section class="slide">
+  <h2>More io.js</h2>
+  <h3>From the <a href="https://medium.com/node-js-javascript/state-of-io-js-2b3094e6f923">State of io.js</a>:</h3>
+  <blockquote>There have been 4 patch releases downloaded over 400K times.</blockquote>
+  <blockquote>In the lifetime of node.js™ there have never been more than 8 active committers. Last week Chris Dickinson onboarded 8 new committers to io.js with plans to bring on another round this week.</blockquote>
+  <blockquote>... you can expect io.js to be marked stable in March.</blockquote>
+  <blockquote>Some tasks outside of core development have already grown to the point that they necessitate their own project teams and committers.</blockquote>
+  <blockquote>Now io.js’ biggest problem is keeping up with the flood of contributors coming in, participating in every facet of the project. io.js isn’t just healthier than node.js™ today, it’s healthier than node.js™ ever was and this is only the beginning.</blockquote>
+  <img src="./images/iojs.png" width="30%" alt="io.js"/>
+</section>
+
+
+<!-- ===========  Other  ========= -->
+
+<section class="slide cover" style="background-image:url(images/anfscd.jpg)">
+  <h1>And now for something completely different...</h1>
+</section>
+
+<section class="slide title title-cyan">
+  <h1>Events</h1>
+
+</section>
+
+<section class="slide">
+  <h2>Start Thinking About...</h2>
+  <li><a href="http://spacecityjs.com/">SpaceCityJS</a> - March 28, 2015 in Houston</li>
+  <li>Bleeding Edge Web Work - Maybe? :-)</li>
+  <li>More?</li>
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Fin</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Corey Butler &mdash; <a href="http://twitter.com/goldglovecb">@goldglovecb</a></h3>
+  <h1>Thanks!</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
