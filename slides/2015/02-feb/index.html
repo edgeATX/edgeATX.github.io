@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Bleeding Edge Web: February 2015</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!-- ===========  Title  ========= -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- ===========  Intro  ========= -->
+
+<section class="slide">
+  <h2>Bleeding Edge Web: February 2015</h2>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
+  <h3>Typescript Deep Dive</h3>
+  <p>&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+  <p><a href="http://light.ly/">http://light.ly</a></p>
+</section>
+
+<!-- ===========  Sponsors  ========= -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<!-- ===========  Bleeding Edge ========= -->
+
+<section class="slide title">
+  <h1>News from the<br>Bleeding Edge</h2>
+</section>
+
+<section class="slide">
+  <h2>What Is Bleeding Edge Web?</h2>
+  <p>A monthly-ish update of the latest and greatest in:</p>
+  <ul>
+    <li>Browser news</li>
+    <li>W3C standards updates</li>
+    <li>Interesting language &amp; framework releases</li>
+    <li>Emphasis on JavaScript and Node</li>
+  </ul>
+  <p><strong>Anything else that might be interesting to web app devs!</strong></p>
+</section>
+
+<section class="slide title title-cyan">
+  <h1>Browser Update</h1>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; January 2015 (last month):</p>
+  <table class="browsers">
+    <tr>
+      <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
+      <td width="20%"><img src="../../shared/resources/images/firefox.png" width="80%" alt="Firefox"></td>
+      <td width="20%"><img src="../../shared/resources/images/opera.png" width="70%" alt="Opera"></td>
+      <td width="20%"><img src="../../shared/resources/images/safari.png" width="80%" alt="Safari"></td>
+      <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
+    </tr>
+    <tr>
+      <td class="ver">40</td>
+      <td class="ver">35</td>
+      <td class="ver">27</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of February 24, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="20%"><img src="../../shared/resources/images/chrome.png" width="80%" alt="Chrome"></td>
+      <td width="20%"><img src="../../shared/resources/images/firefox.png" width="80%" alt="Firefox"></td>
+      <td width="20%"><img src="../../shared/resources/images/opera.png" width="70%" alt="Opera"></td>
+      <td width="20%"><img src="../../shared/resources/images/safari.png" width="80%" alt="Safari"></td>
+      <td width="20%"><img src="../../shared/resources/images/ie.png" width="80%" alt="IE"></td>
+    </tr>
+    <tr>
+      <td class="ver">40</td>
+      <td class="ver"><span class="strike dim">35</span><br><strong style="color:#d00">36</strong></td>
+      <td class="ver">27</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3>Version 41 (<a href="http://blog.chromium.org/2015/01/chrome-41-beta-new-es6-features-and.html">beta</a>)</h3>
+  <ul>
+    <li><a href="http://googleonlinesecurity.blogspot.co.uk/2014/09/gradually-sunsetting-sha-1.html"/>Phasing
+      out</a> support for SHA-1 / 1024-bit SSL certificates</li>
+  </ul>
+  <img src="../../shared/resources/images/chrome.png" width="50%" alt="Chrome">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/36">Version 36</a></h3>
+  <ul>
+    <li>Full support for <a href="http://http2.github.io/">HTTP/2 protocol</a></li>
+    <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-range"><span
+      class="code">unicode-range</span></a> for <span class="code">@font-face</span> subsets<br>
+      <small>(Firefox was the last major holdout &ndash; even IE9+ supports it)</small>
+    </li>
+    <li>More new HTML5 CSS features:<br>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"><span class="code">object-fit</span></a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"><span class="code">object-position</span></a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/will-change"><span class="code">will-change</span></a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior"><span class="code">scroll-behavior</span></a>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="50%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Sidebar: HTTP/2</h2>
+  <h3><a href="http://http2.github.io/faq/">http://http2.github.io/faq/</a></h3>
+  <p>New version of HTTP, mainly focused on improving page load performance</p>
+  <p>Based on <a href="http://en.wikipedia.org/wiki/SPDY">SPDY</a> from Google</p>
+  <ul>
+    <li>Binary rather than textual</li>
+    <li>Multiplexed, not ordered/blocking</li>
+    <li>Single connection can load multiple resources in parallel</li>
+    <li>Header compression reduces overhead</li>
+    <li>Servers can proactively "push" data to client cache</li>
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/36">Version 36</a></h3>
+  <ul>
+    <li><a href="https://blog.mozilla.org/security/2015/01/28/phase-2-phasing-out-certificates-with-1024-bit-rsa-keys"/>Phasing
+      out</a> support for SHA-1 / 1024-bit SSL certificates</li>
+    <li>Improved ES 6 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><span
+      class="code">const</span></a> support</li>
+    <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol"><span class="code">Symbol</span></a>
+      and other ES Next additions</a>
+    <li>DOM <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Type-specific_rich_output">Promises inspection</a>:</li>
+  </ul>
+  <img src="images/promise-inspection.png" width="90%">
+</section>
+
+<section class="slide cover" style="background-image:url(images/ssl-cover.jpg)">
+  <h1>Do You Use SSL?</h1>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.zdnet.com/article/google-accelerates-end-of-sha-1-support-certificate-authorities-nervous/">SHA-1 Phase Out</a></h2>
+  <p>Process has already started in Chrome and Firefox</p>
+  <p>Microsoft plans to withdraw support in Windows by 2017</p>
+  <ul>
+    <li>SHA-1 first published in 1995</li>
+    <li>Viable attacks proposed since 2005 (still theoretical)</li>
+    <li><a href="http://en.wikipedia.org/wiki/SHA-2">SHA-2</a> uses much longer hashes (224-512 bits vs 160)</li>
+    <li><a href="http://en.wikipedia.org/wiki/SHA-3">SHA-3</a> in the works</li>
+  </ul>
+  <p>SHA-1 SSL certificates should be replaced ASAP to avoid this:</p>
+  <img src="images/ssl.png" width="70%">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <p>Expect version 28 after Chrome 41 ships</p>
+  <img src="../../shared/resources/images/opera.png" width="30%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari &amp; IE</h2>
+  <p>Security updates</p>
+  <table class="browsers">
+    <tr>
+      <td width="50%"><img src="../../shared/resources/images/safari.png" width="50%" align="right" alt="Safari"></td>
+      <td width="50%"><img src="../../shared/resources/images/ie.png" width="50%" align="left" alt="IE"></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide title title-cyan">
+  <h1>Forgetting Anything?</h1>
+</section>
+
+<section class="slide">
+  <h2><a href="http://blogs.msdn.com/b/ie/archive/2015/01/22/project-spartan-and-the-windows-10-january-preview-build.aspx">Project
+    Spartan</a></h2>
+  <h3>Holy crap, a new browser! From Microsoft!</h3>
+  <p>Announced Jan 21 &ndash; will ship with Windows 10</p>
+  <p>User features:</p>
+  <ul>
+    <li>First-class mobile / touch support</li>
+    <li>Cortana (voice command) integration</li>
+    <li>Web page annotation support</li>
+  </ul>
+  <img src="../../shared/resources/images/spartan.png" width="40%" alt="Spartan">
+</section>
+
+<section class="slide">
+  <h2><a href="http://blogs.msdn.com/b/ie/archive/2015/01/22/project-spartan-and-the-windows-10-january-preview-build.aspx">Project
+    Spartan</a></h2>
+  <ul>
+    <li><strong>New rendering engine</strong> (EdgeHTML.dll)
+    <li>Ignores legacy document modes (<span class="code">X-UA-Compatible</span>)</li>
+    <li>Loads IE 11 engine (Trident) for "enterprise legacy apps"</li>
+    <li>Both engines will ship in IE also</li>
+    <li>Self-updating ("evergreen")</li>
+    <li>Extensive ES 6 support, tons of new APIs</li>
+    <li><a href="http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx">Too
+      many features to list</a></li>
+  </ul>
+  <img src="../../shared/resources/images/spartan.png" width="40%" alt="Spartan">
+</section>
+
+<section class="slide">
+  <h2><a href="http://blogs.msdn.com/b/ie/archive/2015/01/22/project-spartan-and-the-windows-10-january-preview-build.aspx">Project
+    Spartan</a></h2>
+  <p><a href="http://www.smashingmagazine.com/2015/01/26/inside-microsofts-new-rendering-engine-project-spartan/">Interesting
+    context</a> from a member of the MS browser team</p>
+  <p>On forking Trident:</p>
+  <blockquote>
+    It took almost 45 minutes just to process [the commit] (just committing the changes,
+    not building!)...<br><br>In the coming months, swathes of IE legacy were deleted from the new engine.
+    Gone were document modes. Removed was the subsystem responsible for emulating IE8 layout
+    quirks. VBScript eliminated. Remnants like attachEvent, X-UA-Compatible, currentStyle were
+    all purged from the new engine. The codebase looks little like Trident anymore (far more
+    diverged already than even Blink is from WebKit).
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <h3>Coming soon...</h3>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/spartan.png" width="70%" alt="Spartan"></td>
+    </tr>
+    <tr>
+      <td class="ver">40</td>
+      <td class="ver">36</td>
+      <td class="ver">27</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver"><strong style="color:#d00">1.0</strong></td>
+    </tr>
+  </table>
+</section>
+
+<!-- ===========  Frameworks  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>Languages, Frameworks &amp; Tools</h1>
+</section>
+
+<section class="slide">
+  <h2>React Native</h2>
+  <p><a href="https://www.youtube.com/watch?v=KVZ-P-ZI6W4">Introduced at React.js Conf 2015</a></p>
+  <p><a href="https://www.youtube.com/watch?v=7rDsRXj9-cU">Deep dive keynote</a></p>
+  <ul>
+    <li>Build native (iOS &amp; Android) apps with JavaScript (or JSX) and React.js</li>
+    <li>Build with JS components, render to native UI views</li>
+    <li>Instant app refresh during dev (no compilation)</li>
+    <li>Compile-to-JS languages work too (CoffeScript, <strong>TypeScript</strong>)</li>
+  </ul>
+  <p>Not much official info yet (<a href="http://www.reactnative.com/">reactnative.com</a>)</p>
+</section>
+
+<section class="slide">
+  <h2>React Native</h2>
+  <p><a href="http://jlongster.com/First-Impressions-using-React-Native">"First Impressions"</a> blog post</p>
+  <p><img src="images/react-native-demo.gif" width="100%"></p>
+</section>
+
+<section class="slide">
+  <h2>Babel</h2>
+  <p><a href="http://babeljs.io/">http://babeljs.io/</a></p>
+  <p>Transpiles ES 6 code to ES 5 syntax (formerly "6to5")</p>
+  <p>Provides polyfills for many ES 6 features</p>
+  <p>Includes an interactive <a href="http://babeljs.io/repl">REPL</a></p>
+</section>
+
+<section class="slide">
+  <h2>Aurelia</h2>
+  <p><a href="http://aurelia.io/">http://aurelia.io/</a></p>
+  <p>New "next generation" JS framework (<a
+    href="http://blog.durandal.io/2015/01/26/introducing-aurelia/">introduction</a>)</p>
+  <ul>
+    <li>Written with ES 6/7</li>
+    <li>Integrates with web components (HTML compiler)</li>
+    <li>Small focused modules (monolithic or modular, your choice)</li>
+    <li>Convention-based MV* architecture</li>
+    <li>2-way data binding, routing, dependency injection, etc.</li>
+  </ul>
+  <p><a href="http://eisenbergeffect.bluespire.com/leaving-angular/">Interesting background</a></p>
+  <p><img src="images/aurelia-logo.png" width="50%"></p>
+</section>
+
+<section class="slide">
+  <h2>Other Notable Releases</h2>
+  <ul>
+    <li><a href="http://blog.nodejs.org/2015/02/06/node-v0-12-0-stable/">Node v0.12.0</a> (stable)
+      &ndash; v0.10 released March 2013</li>
+    <li><a href="http://phantomjs.org/release-2.0.html">PhantomJS 2.0</a></li>
+    <li><a href="http://www.infoq.com/news/2015/02/coffeescript-19-generators">CoffeeScript 1.9</a> (ES6 generator support)</li>
+    <li><a href="http://underscorejs.org/#changelog">Underscore 1.8</a></li>
+    <li><a href="http://blog.jquery.com/2015/02/06/esprima-2-0-released/">Esprima 2.0</a> (ES 6 support)</li>
+  </ul>
+</section>
+
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Fin</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <h1>Thanks!</h1>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
