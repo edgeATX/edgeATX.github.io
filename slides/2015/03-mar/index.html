@@ -243,6 +243,30 @@
 </section>
 
 <section class="slide">
+  <h2>First Time Setup</h2>
+  <p>Only required if you plan to publish a module</p>
+  <ol>
+    <li>Create an account at <a href="https://www.npmjs.com/">npmjs.com</a></li>
+    <li>Run <span class="code">npm adduser</span> to connect your local config to npmjs.com</li>
+    <li>Run <span class="code">npm set</span> to configure your standard <span class="code">package.json</span> fields</li>
+  </ol>
+</section>
+
+<section class="slide">
+  <h2>Typical Project Lifecycle</h2>
+  <ol>
+    <li>Run <span class="code">npm init</span> to generate <span class="code">package.json</span></li>
+    <li>Develop your module, library, etc.</li>
+    <li>Use <span class="code">npm install --save[Dev]</span> to add dependencies</li>
+    <li>Write some unit tests and connect to CI (optional, but recommended)</li>
+    <li>Update your README, license, etc.</li>
+    <li>Update the version in <span class="code">package.json</span></li>
+    <li>Publish with <span class="code">npm publish</span></li>
+    <li>Go to #2</li>
+  </ol>
+</section>
+
+<section class="slide">
   <h2>How?</h2>
   DEMO (Instructions Here), Scratch --> Public module
 </section>
