@@ -226,8 +226,8 @@
 </section>
 
 <section class="slide">
-  <h2>ES 6</h2>
-  <p>ES 6 === EcmaScript v6 === ES.next === Ecma-262 Edition 6</p>
+  <h2>ES6</h2>
+  <p>ES6 === EcmaScript v6 === ES.next === Ecma-262 Edition 6</p>
   <p>Next generation of JavaScript (available <a href="https://babeljs.io/">now</a>)</p>
   <p><a href="http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts#march_17_2015_rev_36_release_candidate_3">Release candiates</a>:</p>
   <ul>
@@ -238,10 +238,82 @@
   <p><em>Any day now...</em></p>
 </section>
 
+<section class="slide">
+  <h2><a href="https://hacks.mozilla.org/2015/03/this-api-is-so-fetching/">Fetch API</a></h2>
+  <p>Not actually a W3C spec (it's a <a href="https://fetch.spec.whatwg.org/">WHATWG spec</a>)</p>
+  <p>Aims to improve on the age-old <span class="code">XMLHttpRequest</span> (Ajax) API</p>
+  <ul>
+    <li>Separate interfaces for <span class="code">Headers</span>, <span class="code">Request</span> and
+      <span class="code">Response</span></li>
+    <li>Promise-based API</li>
+    <li>Typed request/response body data (ArrayBuffer, Blob, FormData)</li>
+    <li>Matching methods (<span class="code">.arrayBuffer()</span>, <span
+      class="code">.blob()</span>, <span class="code">.formData()</span> etc.)</li>
+    <li>Stream support (planned)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://hacks.mozilla.org/2015/03/this-api-is-so-fetching/">Fetch API</a></h2>
+  <code><pre>fetch("/data.json").then(function (response) {
+  if (response.ok) {
+    res.json().then(function (data) {
+      // use the data!
+    });
+  }
+  else {
+    console.log("Response is bad", res.status);
+  }
+},
+function (err) {
+  console.log("Fetch failed!", err);
+});</pre></code>
+  <p>Currently available in FF 39 (nightly) and Chrome 42 (canary).</p>
+  <p>Github also provides a <a href="https://github.com/github/fetch">polyfill</a>.</p>
+</section>
+
+<section class="slide">
+  <h2>Sidebar: W3C vs HTMLWG vs WHATWG</h2>
+  <h3><a href="http://www.webmonkey.com/glossary/the-difference-between-the-whatwg-and-the-htmlwg/">Brief history</a></h3>
+  <ul>
+    <li><a href="http://en.wikipedia.org/wiki/World_Wide_Web_Consortium">W3C</a> formed in 1994,
+      founded by<a href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a></li>
+    <li>HTML Working Group (<a href="http://www.w3.org/html/wg/">HTMLWG</a>) is a subgroup of W3C</li>
+    <li>After HTML 4.01 was released in 1999, HTMLWG pursued XHTML 2.0</li>
+    <li>Mozilla + Opera formed <a href="https://wiki.whatwg.org/wiki/FAQ">WHATWG</a> to pursue what became "HTML5"</li>
+    <li>W3C eventually dropped focus on XHTML and adopted HTML5</li>
+    <img src="./images/w3c-whatwg.jpg" width="80%">
+</section>
+
+<section class="slide">
+  <h2>Sidebar: W3C vs HTMLWG vs WHATWG</h2>
+  <h3>Today</h3>
+  <ul>
+    <li>WHATWG manages "<a href="https://html.spec.whatwg.org/multipage/">living standards</a>" and moves fast</li>
+    <li>W3C / HTMLWG move much slower, but "snapshot" certain WHATWG standards as stable specs</li>
+    <li>All that matters is browser implementation (see <span class="code">fetch</span>)</li>
+</section>
+
 <!-- ===========  Frameworks  ========= -->
 
 <section class="slide title title-magenta">
   <h1>Languages, Frameworks &amp; Tools</h1>
+</section>
+
+<section class="slide">
+  <h2><a href="http://facebook.github.io/react/blog/2015/03/10/react-v0.13.html">React v0.13</a></h2>
+  <ul>
+    <li>Mostly React-specific fixes and tweaks, but...</li>
+    <li>Now supports ES6 class syntax</li>
+  </ul>
+  <p>Yet another example of why ES6 is so important <em>today!</em></p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.patrick-wied.at/static/nudejs/">Nude.js</a></h2>
+  <ul>
+    <li>JS-based nudity detection</li>
+  </ul>
 </section>
 
 <!-- ===========  Tips and Tricks  ========= -->
@@ -272,7 +344,7 @@
 <section class="slide">
   <h2><a href="http://libraries.io/">Libraries.io</a></h2>
   <p>Subscribe to receive updates when packages change!</p>
-  <img src="./images/libraries-subscribe.jpg" width="90%">
+  <img src="./images/libraries-subscribe.jpg" width="80%">
 </section>
 
 <!-- ===========  Events  ========= -->
@@ -288,6 +360,22 @@
   <p>March 26 (tomorrow), times flexible</p>
   <p>A "few hours" of your time, plus get paid!</p>
   <p><img src="images/canjs.jpg" width="40%"></p>
+</section>
+
+<!-- ===========  Other :)  ========= -->
+
+<section class="slide cover" style="background-image:url(../../../images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim"></div>
+</section>
+
+<section class="slide">
+  <h2>VIM Adventures</h2>
+  <blockquote>Learning VIM while playing a game</blockquote>
+  <p>$25 / 6 months access to all levels</p>
+  <img src="./images/vim.jpg" width="80%">
 </section>
 
 <!-- ===========  Fin  ========= -->
@@ -378,7 +466,7 @@
   <div class="content">
     <h1>Demo</h1>
     <div style="position:absolute;bottom:5%;left:0;right:0;padding:0 50px;background-color:#393;opacity:.8;">
-      <h2>http://...</h2>
+      <h2>https://github.com/edgeATX/npm-demo</h2>
     </div>
   </div>
   <div class="shim"></div>
