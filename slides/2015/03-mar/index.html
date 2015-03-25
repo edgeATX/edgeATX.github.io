@@ -124,9 +124,9 @@
       <td width="16.667%"><img src="../../shared/resources/images/spartan.png" width="70%" alt="Spartan"></td>
     </tr>
     <tr>
-      <td class="ver">40</td>
+      <td class="ver"><span class="strike dim">40</span><br><strong style="color:#d00">41</strong></td>
       <td class="ver">36</td>
-      <td class="ver">27</td>
+      <td class="ver"><span class="strike dim">27</span><br><strong style="color:#d00">28</strong></td>
       <td class="ver">8</td>
       <td class="ver">11</td>
       <td class="ver">0</td>
@@ -136,35 +136,40 @@
 
 <section class="slide">
   <h2>Chrome Highlights</h2>
-  <h3>Version 41 (<a href="http://blog.chromium.org/2015/01/chrome-41-beta-new-es6-features-and.html">beta</a>)</h3>
+  <h3><a href="http://googlechromereleases.blogspot.com/2015/03/stable-channel-update.html">Version 41</a></h3>
   <ul>
-    <li><a href="http://googleonlinesecurity.blogspot.co.uk/2014/09/gradually-sunsetting-sha-1.html"/>Phasing
-      out</a> support for SHA-1 / 1024-bit SSL certificates</li>
+    <li><a href="http://updates.html5rocks.com/2015/01/ES6-Template-Strings"/>ES6 Template
+      Literals</a>, e.g. <span class="code">alert(`Hello, ${name}`);</span>
+    </li>
+    <li><a href="http://updates.html5rocks.com/2015/01/ES6-Template-Strings"/>ES6
+      Lexical Declarations</a>: <span class="code">let</span>, <span class="code">const</span>
+    </li>
+    <li><a href="http://updates.html5rocks.com/2015/01/pixelated"><span class="code">image-rendering:
+      pixelated</span></a> CSS property
+    </li>
+    <li><a href="https://googlechrome.github.io/samples/media-hover-pointer/index.html"><span
+      class="code">any-pointer</span> / <span class="code">any-hover</span></a> media queries
+    </li>
+    <li>Animation speed slider in dev tools:</li>
+    <img src="./images/anim-slider.jpg" width="50%">
   </ul>
-  <img src="../../shared/resources/images/chrome.png" width="20%" alt="Chrome">
 </section>
 
 <section class="slide">
   <h2>Firefox Highlights</h2>
-  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/36">Version 36</a></h3>
-  <ul>
-    <li>Full support for <a href="http://http2.github.io/">HTTP/2 protocol</a></li>
-    <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/unicode-range"><span
-      class="code">unicode-range</span></a> for <span class="code">@font-face</span> subsets<br>
-      <small>(Firefox was the last major holdout &ndash; even IE9+ supports it)</small>
-    </li>
-    <li>More new HTML5 CSS features:<br>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"><span class="code">object-fit</span></a>,
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"><span class="code">object-position</span></a>,
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/will-change"><span class="code">will-change</span></a>,
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior"><span class="code">scroll-behavior</span></a>
-  </ul>
+  <h3>Version 37 (<a href="https://developer.mozilla.org/en-US/Firefox/Releases/37">beta</a>)</h3>
+  <p>Shipping next week</p>
+  <p>As usual, lots of new ES6 features</p>
+  <p>Details next month... ;)</p>
+  <p></p>
   <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
 </section>
 
 <section class="slide">
   <h2>Opera</h2>
-  <p>Expect version 28 after Chrome 41 ships</p>
+  <h3><a href="http://blogs.opera.com/desktop/2015/03/opera-28-stable-update/">Version 28</a></h3>
+  <p>Based on Chrome 41</p>
+  <p>Not much else to talk about from a dev perspective</p>
   <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
 </section>
 
@@ -184,14 +189,34 @@
     Spartan</a></h2>
   <h3>Holy crap, a new browser! From Microsoft!</h3>
   <p>Announced Jan 21 &ndash; will ship with Windows 10</p>
-  <p>User features:</p>
-  <ul>
-    <li>First-class mobile / touch support</li>
-    <li>Cortana (voice command) integration</li>
-    <li>Web page annotation support</li>
-  </ul>
+  <p>See <a href="http://edgeatx.github.io/slides/2015/02-feb/#slide-17">our slides</a> from last month for details</p>
   <img src="../../shared/resources/images/spartan.png" width="20%" alt="Spartan">
 </section>
+
+<section class="slide">
+  <h2><a href="http://blogs.msdn.com/b/ie/archive/2015/01/22/project-spartan-and-the-windows-10-january-preview-build.aspx">Project
+    Spartan</a></h2>
+  <h3>Culture change?</h3>
+  <p>One small, but hopeful, example...</p>
+  <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode"><span
+    class="code">background-blend-mode</span></a> is well supported, with <em>one</em> exception:</p>
+  <img src="./images/bg-blend-compat.jpg" width="90%">
+</section>
+
+<section class="slide">
+  <h2><a href="http://blogs.msdn.com/b/ie/archive/2015/01/22/project-spartan-and-the-windows-10-january-preview-build.aspx">Project
+    Spartan</a></h2>
+  <p>Microsoft on Monday announced a <a
+    href="http://thenextweb.com/microsoft/2015/03/23/adobe-is-contributing-to-microsofts-spartan-browser/">code
+    contribution from Adobe</a>!</p>
+  <blockquote>Adobe’s Web Platform Team provided its first contribution in the latest build of
+    Windows 10, supplying a feature for CSS gradient midpoints. It allows developers to choose
+    a location between color stops of a CSS gradient and is specified in the CSS images draft...
+    [providing] full support for blend modes.</blockquote>
+  <img src="./images/blended-tigers.jpg" width="90%">
+</section>
+
+
 
 <!-- ===========  Frameworks  ========= -->
 
@@ -209,9 +234,9 @@
   <h2>Bitovi Open Source Event</h2>
   <h3><a href="http://www.meetup.com/bleeding-edge-web/messages/boards/thread/48803078">http://www.meetup.com/bleeding-edge-web/messages/boards/thread/48803078</a></h3>
   <p>Help Bitovi (makers of <a href="http://canjs.com/">CanJS</a>, <a href="http://jquerypp.com/">jQuery++</a>, etc.) test the CanJS docs</p>
-  <p>March 24 or 26, times flexible</p>
+  <p>March 26 (tomorrow), times flexible</p>
   <p>A "few hours" of your time, plus get paid!</p>
-  <p><img src="images/canjs.png" width="40%"></p>
+  <p><img src="images/canjs.jpg" width="40%"></p>
 </section>
 
 <!-- ===========  Fin  ========= -->
@@ -243,7 +268,7 @@
   <blockquote style="position:absolute;left:10px;right:10px;bottom:50px;">
     <em style="color:#666;">* Note that there is no specification of "Node.js" or "JavaScript". Npm is everywhere.</em>
   </blockquote>
-  <img src="./images/awesome.png" style="position:absolute;top: 15%; right: 5%;width:40%;"/>
+  <img src="./images/awesome.jpg" style="position:absolute;top: 15%; right: 5%;width:40%;"/>
 </section>
 
 <section class="slide cover-light" style="background-image: url(./images/crowd.jpg);">
@@ -288,7 +313,7 @@
 
 <section class="slide">
   <h2>npm vs. Bower</h2>
-  <img src="./images/npmbower.png" width="80%" alt="npm vs Bower">
+  <img src="./images/npmbower.jpg" width="80%" alt="npm vs Bower">
 </section>
 
 <section class="slide cover" style="background-image:url(./images/demo-code.jpg);">
@@ -366,7 +391,7 @@
     <li><a href="https://www.nodejitsu.com/documentation/npm/">Nodejitsu</a> (maybe? Recently acquired by GoDaddy, so...)</li>
   </ul>
   <p><em>It's an evolving ecosystem</em></p>
-  <img src="./images/private.png" width="80%" alt="Sinopia: Private npm"/>
+  <img src="./images/private.jpg" width="80%" alt="Sinopia: Private npm"/>
 </section>
 
 <section class="slide">
