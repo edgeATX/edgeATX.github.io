@@ -2,7 +2,7 @@
 
 .deck-container {
   font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
-  font-size:1.75em;
+  font-size:2em;
   background:#fff;
 
   .slide {
@@ -140,9 +140,9 @@
   }
 
   .cover {
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,28 +152,52 @@
       color: #fff;
       @include text-shadow(0 5px 10px rgba(0,0,0,.7));
     }
-
     h2 {
       color: #fff;
       border-bottom: none;
     }
-
     a, a:visited {
       color: #fff !important;
     }
-
-    p {
-      color: #999;
+    p, li {
+      color: #eee;
     }
-
+    .content {
+      z-index: 99;
+    }
     .shim {
+      z-index: -99;
       background: #000;
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
       right: 0;
-      opacity: .3;
+      opacity: .6;
+    }
+  }
+
+  .cover-light {
+    @extend .cover;
+    .shim {
+      background: #fff;
+      opacity: .7;
+    }
+    h1 {
+      color: #000;
+    }
+    h2 {
+      color: #1f4c7f;
+    }
+    h3 {
+      color: #444;
+    }
+    h1, h2, h3 {
+      @include text-shadow(0 2px 0 rgba(255,255,255,.7));
+    }
+    a, a:visited, p, li {
+      color: #333;
+      @include text-shadow(0 1px 0 rgba(255,255,255,.7));
     }
   }
 
