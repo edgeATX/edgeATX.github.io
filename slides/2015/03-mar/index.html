@@ -232,31 +232,41 @@
 <section class="slide">
   <h2>What is npm?</h2>
   <ul>
-    <li>A repository of open source <strong>projects*</strong>.</li>
-    <li>A CLI Package Manager.</li>
-    <li>Bundled with Node.js.</li>
+    <li>A repository of open source <strong>projects *</strong></li>
+    <li>A CLI package manager</li>
+    <li>Bundled with Node.js</li>
   </ul>
   <br/>
   <h3>Purpose:</h3>
-  Simplify the development of applications and tooling.
+  <p>Simplify the development of applications and tooling</p>
 
-  <blockquote style="position:absolute;bottom: 6px;">
-    <em style="color:#666;">* Notice there is no specification of "Node.js" or "JavaScript". Npm is everywhere.</em>
+  <blockquote style="position:absolute;left:10px;right:10px;bottom:50px;">
+    <em style="color:#666;">* Note that there is no specification of "Node.js" or "JavaScript". Npm is everywhere.</em>
   </blockquote>
   <img src="./images/awesome.png" style="position:absolute;top: 15%; right: 5%;width:40%;"/>
 </section>
 
+<section class="slide cover-light" style="background-image: url(./images/crowd.jpg);">
+  <div class="content">
+    <h2>Why npm Matters?</h2>
+    <ul>
+      <li>No choice =)</li>
+      <li>Ease of use</li>
+      <li>DRY, modular code (Unix philosophy)</li>
+      <li>Standards - kinda</li>
+      <li>Centralized development approach</li>
+      <li>Package managers are the center of a development ecosystem</li>
+    </ul>
+  </div>
+  <div class="shim"></div>
+</section>
+
 <section class="slide">
   <h2>Why npm Matters?</h2>
-  <ul>
-    <li>No choice =)</li>
-    <li>Ease of use.</li>
-    <li>DRY, modular code (Unix philosophy).</li>
-    <li>Standards - kinda.</li>
-    <li>Centralized development approach.</li>
-    <li>Package managers are the center of a development ecosystem.</li>
-  </ul>
-  <img src="./images/crowd.jpg" style="position:absolute;top: 15%; right: 5%;"/>
+  <p>Here are a few stats:</p>
+  <img src="./images/npm-stats.jpg" alt="npm stats" width="70%">
+  <p>That's nearly 1.2 <em>billion</em> packages downloaded.</p>
+  <p>Last <em>month</em>.</p>
 </section>
 
 <section class="slide">
@@ -277,16 +287,22 @@
 </section>
 
 <section class="slide">
-  <h2>Bower</h2>
-  <img src="./images/npmbower.png" width="50%" alt="NPM vs BOWER">
+  <h2>npm vs. Bower</h2>
+  <img src="./images/npmbower.png" width="80%" alt="npm vs Bower">
 </section>
 
-<section class="slide title">
-  <h1>Demo</h1>
+<section class="slide cover" style="background-image:url(./images/demo-code.jpg);">
+  <div class="content">
+    <h1>Demo</h1>
+    <div style="position:absolute;bottom:5%;left:0;right:0;padding:0 50px;background-color:#393;opacity:.8;">
+      <h2>http://...</h2>
+    </div>
+  </div>
+  <div class="shim"></div>
 </section>
 
 <section class="slide">
-  <h2>First Time Setup</h2>
+  <h2>First-time Setup</h2>
   <p>Only required if you plan to publish a module</p>
   <ol>
     <li>Create an account at <a href="https://www.npmjs.com/">npmjs.com</a></li>
@@ -314,11 +330,11 @@
   <ul>
     <li>Instill community confidence by writing unit tests. (<a href="http://travis-ci.org" target="_blank">Travis CI</a> &amp; <a href="https://codeclimate.com/" target="_blank">CodeClimate</a> are free for OSS)</li>
     <li>Always provide a README. Lazy folks might like <a href="https://www.npmjs.com/package/package-json-to-readme" target="_blank">package-json-to-readme</a></li>
-    <li><a href="https://medium.com/@goldglovecb/npm-needs-a-personal-trainer-537e0f8859c6" target="_blank">Do your part in preventing npm obesity.</a> <strong>tldr;  Use a .npmignore file!</strong></li>
+    <li><a href="https://medium.com/@goldglovecb/npm-needs-a-personal-trainer-537e0f8859c6" target="_blank">Do your part to prevent npm obesity.</a> <strong>tl;dr</strong> Use a <span class="code">.npmignore</span> file!</li>
     <li>When contributing to another project, use the author's style.</li>
-    <li>If you want contributors to work with your style, include a .jshint file.</li>
+    <li>If you want contributors to work with your style, include a <span class="code">.jshint</span> file.</li>
   </ul>
-  <h3>Don't Abuse Npm</h3>
+  <h3>Don't Abuse npm</h3>
   <ul>
     <li>Be mindful of copyrights.</li>
     <li>Read the <a href="https://www.npmjs.com/policies/conduct/">code of conduct</a>.</li>
@@ -327,49 +343,58 @@
 
 <section class="slide">
   <h2>Workflow</h2>
+  <blockquote>Research &rarr; Build &rarr; Test &rarr; Publish &rarr; Announce</blockquote>
+  <p>Announce? No fear!</p>
   <ul>
-    <li>Research &raquo; Build &raquo; Test &raquo; Publish &raquo; <strong>Announce</strong>. No fear!</li>
-    <ul>
-      <li>DailyJS</li>
-      <li>Node Weekly</li>
-      <li>Tweet with #nodejs</li>
-    </ul>
+    <li><a href="http://dailyjs.com/">DailyJS</a></li>
+    <li><a href="http://nodeweekly.com/">Node Weekly</a></li>
+    <li>Tweet with <a href="https://twitter.com/search?q=%23nodejs">#nodejs</a></li>
+  </ul>
+  <p>Also...</p>
+  <ul>
     <li><a href="http://mochajs.org" target="_blank">MochaJS</a> is pretty awesome... just sayin'.</li>
     <li>Learn the CLI shortcuts to save time.</li>
-    <li>Private registries are real: <a href="https://www.npmjs.com/package/sinopia" target="_blank">Sinopia</a> (free module), NPM inc., Nodejitsu. <em>An evolving ecosystem.</em></li>
   </ul>
-  <img src="./images/private.png" width="50%" alt="Sinopia: Private npm" style="position: absolute; bottom:-25%;left:25%;"/>
+</section>
+
+<section class="slide">
+  <h2>Private Registries</h2>
+  <p>They are real!</p>
+  <ul>
+    <li><a href="https://www.npmjs.com/package/sinopia">Sinopia</a> (free module)</li>
+    <li><a href="https://www.npmjs.com/private-modules">npm, inc.</a> (coming in "early 2015")</li>
+    <li><a href="https://www.nodejitsu.com/documentation/npm/">Nodejitsu</a> (maybe? Recently acquired by GoDaddy, so...)</li>
+  </ul>
+  <p><em>It's an evolving ecosystem</em></p>
+  <img src="./images/private.png" width="80%" alt="Sinopia: Private npm"/>
 </section>
 
 <section class="slide">
   <h2>Tips 'n' Tricks</h2>
-  <ul>
-    <code>npm i mymodule // npm install mymodule</code>
-    <code>npm i mymodule -S // npm install mymodule --save</code>
-    <code>npm link // Link to a global module</code>
-    <code>npm update npm // Upgrade your npm installation</code>
-    <code>
-      package.json
-      "scripts": {
-        "start": "node --harmony index.js",
-        "test": "mocha test"
-      }
-
-      CLI:
-      npm test, npm start
-    </code>
+  <code>npm i mymodule // npm install mymodule</code>
+  <code>npm i mymodule -S // npm install mymodule --save</code>
+  <code>npm link // Link to a global module</code>
+  <code>npm update npm // Upgrade your npm installation</code>
+  <p>package.json:</p>
+  <code>  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "mocha test"
+  }</code>
+  <p>CLI:</p>
+    <code>npm test
+npm start</code>
   </ul>
 </section>
 
 <section class="slide">
   <h2>Npm Roadmap Highlights</h2>
   <ul>
-    <li>Multi-stage installs.</li>
-    <li>Progress bars.</li>
-    <li>Automatic dedupe.</li>
-    <li>Lot's of dependency management options (peer, optional, etc).</li>
-    <li>Better shrinkwrap.</li>
-    <li>More thoughts on use cases outside of the Node.js ecosystem.</li>
+    <li>Multi-stage installs</li>
+    <li>Progress bars</li>
+    <li>Automatic dedupe</li>
+    <li>Lot's of dependency management options (peer, optional, etc)</li>
+    <li>Better shrinkwrap</li>
+    <li>More thoughts on use cases outside of the Node.js ecosystem</li>
   </ul>
 </section>
 
