@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: May 2015</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!-- ===========  Title  ========= -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- ===========  Intro  ========= -->
+
+<section class="slide">
+  <h2>Bleeding Edge Web: March 2015</h2>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb/">@goldglovecb</a>)</p>
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
+  <h3>A Discussion With:</h3>
+  <p>&mdash; Jeff Lindsay (<a href="https://twitter.com/progrium">@progrium</a>)</p>
+  <p><a href="http://progrium.com/">http://progrium.com/</a></p>
+</section>
+
+<!-- ===========  Sponsors  ========= -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="http://gliderlabs.com"><img src="./images/gliderlabs.png" alt="Gliderlabs.com" style="background-color:#fff; padding:20px;border-radius:3px;"></a></p>
+    <p><a href="https://www.capitalfactory.com/"><img src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory" width="20%;"></a></p>
+  </div>
+</section>
+
+<!-- ===========  Bleeding Edge ========= -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; March 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/spartan.png" width="70%" alt="Spartan"></td>
+    </tr>
+    <tr>
+      <td class="ver">41</td>
+      <td class="ver">36</td>
+      <td class="ver">28</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">0</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of May 27, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">41</span><br><strong style="color:#d00">43</strong></td>
+      <td class="ver"><span class="strike dim">36</span><br><strong style="color:#d00">38</strong></td>
+      <td class="ver"><span class="strike dim">28</span><br><strong style="color:#d00">29</strong></td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">0</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3><a href="http://googlechromereleases.blogspot.com/2015/05/stable-channel-update_25.html">Version 43</a></h3>
+  <b>Enabled by default:</b>
+  <ul>
+    <li>Unprefixed CSS Animations (no -webkit).</li>
+    <li>Cache API (global scope).</li>
+    <li>Fetch API: streaming response body. (produces ReadableStream)</li>
+    <li>Permissions API</li>
+    <li>autocapitalize.</li>
+  </ul>
+    <code class="language-markup">
+      &lt;input type="text" autocapitalize="sentences"&gt;
+      &lt;input type="text" autocapitalize="words"&gt;
+      &lt;input type="text" autocapitalize="characters"&gt;
+    </code>
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/38">Version 38</a></h3>
+  <ul>
+    <li>
+      <span class="code">fetch()</span> now implemented.
+    </li>
+    <li>
+      Websockets can be used in workers.
+    </li>
+    <li>
+      Better ES6 support for standard features (generators, maps, weakmaps)
+    </li>
+    <li>
+      Array methods for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays" target="_blank">typed arrays</a>:
+      <span class="code">of()</span>
+      <span class="code">from()</span>
+      <span class="code">forEach()</span>
+      <span class="code">filter()</span>
+      <span class="code">map()</span>
+      <span class="code">slice()</span>
+    </li>
+    <li>
+      <span class="code">&lt;picture&gt;</span> now activated by default.
+    </li>
+    <li>Devtools: Identify XHR Requests</li>
+  </ul>
+  <img src="https://mdn.mozillademos.org/files/10167/web-console-xhr.png"/>
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <h3><a href="http://blogs.opera.com/desktop/2015/03/opera-28-stable-update/">Version 29</a></h3>
+  <p>Based on Chrome 42</p>
+  <p>Not much else to talk about from a dev perspective</p>
+  <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari &amp; IE</h2>
+  <p>Security updates</p>
+  <table class="browsers">
+    <tr>
+      <td width="50%"><img src="../../shared/resources/images/safari.png" width="30%" align="right" alt="Safari"></td>
+      <td width="50%"><img src="../../shared/resources/images/ie.png" width="30%" align="left" alt="IE"></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide title title-blue">
+  <h1>Spartan &raquo; Edge</h1>
+</section>
+
+<section class="slide">
+  <h2><a href="http://dev.modern.ie/">Microsoft Edge</a></h2>
+  <p>
+    A <a href="http://dev.modern.ie/platform/status/classeses6?filter=s3f0000bf" target="_blank">ton of stuff</a> planned &amp; under consideration...
+  </p>
+  <ul>
+    <li>
+      ES6 Classes, Proxies, Promises... the whole gamut.
+    </li>
+    <li>
+      Gamepad API
+    </li>
+    <li>
+      Touch Events
+    </li>
+    <li>
+      Ambient Light Events
+    </li>
+    <li>
+      <b>WebRTC</b> (in development)
+    </li>
+    <li>
+      <a href="http://blogs.windows.com/msedgedev/2015/05/18/using-chakra-for-scripting-applications-across-windows-10/?utm_source=javascriptweekly&utm_medium=email" target="blank">Chakra</a> JS Engine - Think Node-Webkit/NWJS.
+    </li>
+  </ul>
+</section>
+
+<!-- ===========  W3C Specs  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>W3C Specs</h1>
+</section>
+
+<section class="slide">
+  <h2>New Recommendations</h2>
+  <h3><a href="http://www.w3.org/TR/2015/REC-webmessaging-20150519" target="_blank">HTML5 Web Messaging</a></h3>
+  <code>
+    var message = "Hello there";
+    var origin  = "http://tutorials.jenkov.com";
+
+    var theIframe = document.getElementById("theIframe");
+
+    theIframe.contentWindow.postMessage(message, origin);
+  </code>
+  <h3><a href="http://www.w3.org/TR/2015/CR-notifications-20150519/?utm_source=html5weekly&utm_medium=email" target="_blank">Web Notifications</a></h3>
+  <code>
+    var notification = new Notification('Email received', {
+      body: 'You have a total of 3 unread emails'
+    });
+  </code>
+</section>
+
+<!-- ===========  Frameworks  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>Languages, Frameworks &amp; Tools</h1>
+</section>
+
+<section class="slide">
+  <h2>Node &amp; io.js</h2>
+  <p>
+    io.js 2.0 released.
+  </p>
+  <p><a href="http://blog.nodejs.org/2015/05/15/node-leaders-are-building-an-open-foundation" target="_blank">Merging back together</a>.</p>
+</section>
+
+<section class="slide">
+  <h2>Framework Updates</h2>
+  <ul>
+    <li>
+      Backbone 1.2.0
+    </li>
+    <li>
+      Ember 1.12 &amp; 1.13 Beta
+    </li>
+    <li>
+      Polymer 0.9
+    </li>
+    <li>
+      NativeScript 1.0.0
+    </li>
+    <li>
+      JQuery 1.11.3 &amp; 2.1.4
+    </li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Libraries &amp; Tools</h2>
+  <h3><a href="http://vorlonjs.com">Vorlon.js</a></h3>
+  <p>
+    An open source, extensible, platform-agnostic tool for remotely debugging and testing your JavaScript. Powered by node.js and socket.io.
+  </p>
+  <h3>MeteorJS Raised $20M</h3>
+  <h3>Atom-Shell is now <a href="http://electron.atom.io" target="_blank">Electron</a>.</h3>
+</section>
+
+<!-- ===========  Tips and Tricks  ========= -->
+
+<!-- <section class="slide title title-magenta">
+  <h1>Tips and<br>Tricks</h1>
+</section> -->
+
+<!-- ===========  Events  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>Upcoming<br>Events</h1>
+</section>
+
+<section class="slide">
+  <h2>Faceoff on the Lake</h2>
+  <h3>June 2nd, 6-8pm, Abel's on the Lake</h3>
+  <p>
+    <a href="http://www.cmfirstgroup.com" target="_blank">CM First</a> presents Gautam Agrawal, Director of Product Management for <a href="http://sencha.com" target="_blank">Sencha</a>.
+    <br/>
+    <a href="http://www.meetup.com/bleeding-edge-web/events/222717464/">RSVP on Meetup.com</a>
+  </p>
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Corey Butler &mdash; <a href="https://twitter.com/goldglovecb">@goldglovecb</a></h3>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
