@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: June 2015</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!-- ===========  Title  ========= -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- ===========  Intro  ========= -->
+
+<section class="slide">
+  <h2>Bleeding Edge Web: June 2015</h2>
+
+  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Lightning Talks!</h3>
+</section>
+
+<!-- ===========  Sponsors  ========= -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img
+      src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<!-- ===========  Bleeding Edge ========= -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; May 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/spartan.png" width="70%" alt="Spartan"></td>
+    </tr>
+    <tr>
+      <td class="ver">40</td>
+      <td class="ver">36</td>
+      <td class="ver">27</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">0</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of June 24, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/spartan.png" width="70%" alt="Spartan"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">40</span><br><strong style="color:#d00">41</strong></td>
+      <td class="ver">36</td>
+      <td class="ver"><span class="strike dim">27</span><br><strong style="color:#d00">28</strong></td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">0</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3><a href="http://googlechromereleases.blogspot.com/2015/03/stable-channel-update.html">Version 41</a></h3>
+
+  <img src="../../shared/resources/images/chrome.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3>Version 37 (<a href="https://developer.mozilla.org/en-US/Firefox/Releases/37">beta</a>)</h3>
+
+  <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <h3><a href="http://blogs.opera.com/desktop/2015/03/opera-28-stable-update/">Version 28</a></h3>
+
+  <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari &amp; IE</h2>
+  <p>Security updates</p>
+  <table class="browsers">
+    <tr>
+      <td width="50%"><img src="../../shared/resources/images/safari.png" width="30%" align="right" alt="Safari"></td>
+      <td width="50%"><img src="../../shared/resources/images/ie.png" width="30%" align="left" alt="IE"></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2><a href="http://dev.modern.ie/">Microsoft Edge</a></h2>
+
+  <img src="../../shared/resources/images/spartan.png" width="20%" alt="Spartan">
+</section>
+
+<!-- ===========  W3C Specs  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>W3C Specs</h1>
+</section>
+
+
+
+<!-- ===========  Frameworks  ========= -->
+
+<section class="slide title title-cyan">
+  <h1>Languages, Frameworks &amp; Tools</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/smart_phones.jpg)">
+  <h1>Mobile App Frameworks</h1>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://ionicframework.com/">Ionic</a></h2>
+  <ul>
+    <li></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.idangero.us/swiper/">Swiper</a></h2>
+  <ul>
+    <li></li>
+  </ul>
+</section>
+
+<!-- ===========  Tips and Tricks  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>Tips and<br>Tricks</h1>
+</section>
+
+
+
+<!-- ===========  Events  ========= -->
+
+<section class="slide title title-magenta">
+  <h1>Upcoming<br>Events</h1>
+</section>
+
+
+
+<!-- ===========  Other :)  ========= -->
+
+<section class="slide cover" style="background-image:url(../../../images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim"></div>
+</section>
+
+<section class="slide">
+  <h2>VIM Adventures</h2>
+  <blockquote>Learning VIM while playing a game</blockquote>
+  <p>$25 / 6 months access to all levels</p>
+  <img src="./images/vim.jpg" width="80%">
+</section>
+
+<!-- ===========  Fin  ========= -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+</section>
+
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
