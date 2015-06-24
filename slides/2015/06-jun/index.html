@@ -82,7 +82,7 @@
   <p>Thanks to our sponsors:</p>
   <div style="text-align:center;padding-top:100px;font-size:200%;">
     <p><a href="http://home.docketnavigator.com/"><img
-      src="images/docket_navigator_logo.png" alt="Capital Factory"></a></p>
+      src="./images/docket_navigator_logo.png" alt="Capital Factory"></a></p>
   </div>
 </section>
 
@@ -192,7 +192,7 @@
 
 <section class="slide">
   <h2>Safari &amp; IE</h2>
-  <img src="images/awkward-silence.jpg">
+  <img src="./images/awkward-silence.jpg">
   <table class="browsers">
     <tr>
       <td width="50%"><img src="../../shared/resources/images/safari.png" width="30%" align="right" alt="Safari"></td>
@@ -201,13 +201,151 @@
   </table>
 </section>
 
-<!-- ===========  W3C Specs  ========= -->
+<!-- ===========  ES 6  ========= -->
 
-<section class="slide title title-magenta">
-  <h1>W3C Specs</h1>
+<section class="slide cover" style="background-image:url(./images/ponies.png)">
+  <h1>ES 6 Harmony</h1>
+  <div class="shim" style="background-color:#d15dd1;opacity:.8;"></div>
 </section>
 
+<section class="slide">
+  <h2><a href="http://mlp.wikia.com/wiki/Elements_of_Harmony">Elements of Harmony</a></h2>
+  <blockquote>
+    The Elements of Harmony are six supernatural artifacts representing subjective aspects of
+    harmony. They are arguably the most powerful force in Equestria.
+  </blockquote>
+  <img src="./images/harmony.jpg">
+</section>
 
+<section class="slide">
+  <h2>ES 6 is Final!</h2>
+  <ul>
+    <li>ES 5 standardized in 2009</li>
+    <li>First working draft published as "ES.next" on July 12,2011</li>
+    <li>Feature-frozen in August 2014</li>
+    <li>Approved and published as <a
+      href="http://www.ecma-international.org/ecma-262/6.0/index.html">ECMA-262 6th Edition</a>
+      on June 17, 2015 by Ecma General Assembly</li>
+  </ul>
+  <p><strong>This is great news for web app developers!</strong></p>
+  <p>Need a refresher? Excellent <a href="https://github.com/lukehoban/es6features">intro to ES 6</a> via code examples</p>
+</section>
+
+<section class="slide">
+  <h2>Trivia Question</h2>
+  <blockquote>What does "ECMA" stand for?</blockquote>
+</section>
+
+<section class="slide">
+  <h2>Trivia Question</h2>
+  <blockquote>ECMA = European Computer Manufacturers Association</blockquote>
+  <ul>
+    <li><a href="http://www.ecma-international.org/memento/history.htm">Founded</a> in Geneva in
+      1961, became Ecma International in 1994</li>
+    <li>Netscape turned over JavaScript to Ecma for standardization in Nov 1996</li>
+    <li>The ECMA-262 First Edition was published in June 1997</li>
+    <li>"ECMAScript" was a <a href="https://en.wikipedia.org/wiki/ECMAScript#History">compromise</a>
+      mainly between Netscape (JavaScript) and Microsoft (JScript)</li>
+  </ul>
+  <blockquote>ECMAScript was always an unwanted trade name that sounds like a skin disease.<br><br>
+    &mdash; Brendan Eich
+  </blockquote>
+</section>
+
+<section class="slide">
+  <h2><a href="http://kangax.github.io/compat-table/es5/">Browser Support: ES 5</a></h2>
+  <p>Essentially 100% across IE9+, Chrome 23+, FF 21+, Safari 6+ and Opera 12+</p>
+  <img src="./images/es5-table.jpg">
+</section>
+
+<section class="slide">
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
+  <p>Not quite as impressive... yet</p>
+  <img src="./images/es6-table.png">
+</section>
+
+<section class="slide">
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
+  <p>ES 6 features supported by major browsers today:</p>
+  <img style="width:80%;" src="./images/es6-browser-support.jpg">
+</section>
+
+<section class="slide">
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
+  <p>Good news: <a href="https://babeljs.io/">Babel</a> is available today &mdash; covers 71% of ES 6 already</p>
+  <img src="./images/es6-table-babel.png">
+</section>
+
+<!-- ===========  WebAssembly  ========= -->
+
+<section class="slide cover" style="background-image:url(./images/matrix.jpg)">
+  <h1>WebAssembly</h1>
+  <div class="shim" style="background-color:#083F08;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Background</h2>
+  <p>We've been trying to run native code on the web for 20 years</p>
+  <ul>
+    <li>Java applets</li>
+    <li>ActiveX</li>
+    <li>Flash</li>
+  </ul>
+  <p>Issues: security, performance, difficult to develop</p>
+</section>
+
+<section class="slide">
+  <h2><a href="https://developer.chrome.com/native-client/nacl-and-pnacl">NaCl / PNaCl</a></h2>
+  <p>(Portable) Native Client</p>
+  <ul>
+    <li>Developed by Google</li>
+    <li>NaCl compiles C/C++ to architecture-specific executables (~ActiveX)</li>
+    <li>PNaCl produces intermediate bitcode, compiled by the browser (~Java)</li>
+  </ul>
+  <p>Code is sandboxed for security</p>
+  <p>Compilation is AOT (ahead-of-time) not JIT for near-native performance</p>
+  <p>Chrome only</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.2ality.com/2013/02/asm-js.html">Asm.js</a></h2>
+  <ul>
+    <li>Developed by Mozilla</li>
+    <li>Strict subset of JS focused on AOT optimzation / performance</li>
+    <li>Static languages like C can be compiled to asm.js, e.g. via <a
+      href="https://en.wikipedia.org/wiki/Emscripten">Emscripten</a> or <a
+      href="http://www.mandreel.com/?page_id=48">Mandreel</a></li>
+  </ul>
+  <p>Runs in all modern browsers, optimized in FF, Chrome and Edge</p>
+  <p>Slower than PNaCl, but much faster than vanilla JS</p>
+  <p>Same security model as JS</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.2ality.com/2015/06/web-assembly.html">WebAssembly</a></h2>
+  <blockquote>A binary format for the web</blockquote>
+  <ul>
+    <li>Or "wasm" &mdash; developed by Mozilla, Google, MS and others</li>
+    <li>Essentially asm.js delivered in binary format</li>
+    <li>Can be decoded much faster than JS can be parsed, especially on mobile</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.2ality.com/2015/06/web-assembly.html">WebAssembly</a></h2>
+  <p>Why this a Big Deal:</p>
+  <ul>
+    <li>True cross-platform (asm.js) + native (PNaCl) code</li>
+    <li>Backed by all major browser vendors via the <a
+      href="https://www.w3.org/community/webassembly/">W3C WebAssembly Community Group</a></li>
+    <li>Much better compile target than plain JS</li>
+    <li>Source will be <a href="https://github.com/WebAssembly/design/blob/master/TextFormat.md">human-readble</a>
+      and hand-writable</li>
+    <li>Designed to coexist with and enhance, not replace, JS</li>
+    <li>Supports synchronous calls to/from plain JS</li>
+  </ul>
+  <p>Using WebAssembly components from JS will be as simple as <span class="code">require</span>'ing a module</p>
+</section>
 
 <!-- ===========  Frameworks  ========= -->
 
@@ -260,10 +398,9 @@
 </section>
 
 <section class="slide">
-  <h2>VIM Adventures</h2>
-  <blockquote>Learning VIM while playing a game</blockquote>
-  <p>$25 / 6 months access to all levels</p>
-  <img src="./images/vim.jpg" width="80%">
+  <h2><a href="https://jariz.github.io/vibrant.js/">Vibrant.js</a></h2>
+  <blockquote>Extract prominent colors from an image.</blockquote>
+  <img src="./images/vibrant.jpg" width="80%">
 </section>
 
 <!-- ===========  Fin  ========= -->
