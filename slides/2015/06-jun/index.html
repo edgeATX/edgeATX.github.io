@@ -168,11 +168,14 @@
 
 <section class="slide">
   <h2>Opera</h2>
-  <h3><a href="http://blogs.opera.com/desktop/2015/06/view-tabs-easier-get-sidebar-extensions-opera-30/">Version 30</a></h3>
+  <h3><a href="https://dev.opera.com/blog/opera-30/">Version 30</a></h3>
   <ul>
     <li>Based on Chromium 43</li>
-    <li>Primarily a bugfix and consumer feature release</li>
+    <li>Support for the <a href="https://w3c.github.io/media-source/">Media Source Extensions</a> spec (MSE) with H.264</li>
+    <li>New <span class="code">upgrade-insecure-requests</span> CSP directive to avoid mixed secure/insecure content warnings</li>
+    <li>Support for JavaScript copy/cut: <span class="code">execCommand('copy')</span></li>
   </ul>
+  <p>And more...</p>
   <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
 </section>
 
@@ -199,12 +202,14 @@
       <td width="50%"><img src="../../shared/resources/images/ie.png" width="30%" align="left" alt="IE"></td>
     </tr>
   </table>
+  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
+    9</a> is coming soon though...)</p>
 </section>
 
-<!-- ===========  ES 6  ========= -->
+<!-- ===========  ES6  ========= -->
 
 <section class="slide cover" style="background-image:url(./images/ponies.png)">
-  <h1>ES 6 Harmony</h1>
+  <h1>ES6 Harmony</h1>
   <div class="shim" style="background-color:#d15dd1;opacity:.8;"></div>
 </section>
 
@@ -218,9 +223,9 @@
 </section>
 
 <section class="slide">
-  <h2>ES 6 is Final!</h2>
+  <h2>ES6 is Final!</h2>
   <ul>
-    <li>ES 5 standardized in 2009</li>
+    <li>ES5 standardized in 2009</li>
     <li>First working draft published as "ES.next" on July 12,2011</li>
     <li>Feature-frozen in August 2014</li>
     <li>Approved and published as <a
@@ -228,7 +233,7 @@
       on June 17, 2015 by Ecma General Assembly</li>
   </ul>
   <p><strong>This is great news for web app developers!</strong></p>
-  <p>Need a refresher? Excellent <a href="https://github.com/lukehoban/es6features">intro to ES 6</a> via code examples</p>
+  <p>Need a refresher? Excellent <a href="https://github.com/lukehoban/es6features">intro to ES6</a> via code examples</p>
 </section>
 
 <section class="slide">
@@ -259,21 +264,29 @@
 </section>
 
 <section class="slide">
-  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES6</a></h2>
   <p>Not quite as impressive... yet</p>
   <img src="./images/es6-table.png">
 </section>
 
 <section class="slide">
-  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
-  <p>ES 6 features supported by major browsers today:</p>
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES6</a></h2>
+  <p>ES6 features supported by major browsers today:</p>
   <img style="width:80%;" src="./images/es6-browser-support.jpg">
 </section>
 
 <section class="slide">
-  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES 6</a></h2>
-  <p>Good news: <a href="https://babeljs.io/">Babel</a> is available today &mdash; covers 71% of ES 6 already</p>
+  <h2><a href="http://kangax.github.io/compat-table/es6/">Browser Support: ES6</a></h2>
+  <p>Good news: <a href="https://babeljs.io/">Babel</a> is available today &mdash; covers 71% of ES6 already</p>
   <img src="./images/es6-table-babel.png">
+</section>
+
+<section class="slide">
+  <h2><a href="https://leanpub.com/exploring-es6/read">Exploring ES6</a></h2>
+  <p>Online (free) and print (paid) book by <a
+    href="http://www.2ality.com/2015/06/announcing-exploring-es6.html">Dr. Axel Rauschmeyer</a></p>
+  <p>Everything you ever wanted to know about ES6 (and JS generally)</p>
+  <a href="https://leanpub.com/exploring-es6/read"><img src="./images/exploring-es6.jpg"></a>
 </section>
 
 <!-- ===========  WebAssembly  ========= -->
@@ -323,10 +336,12 @@
 
 <section class="slide">
   <h2><a href="http://www.2ality.com/2015/06/web-assembly.html">WebAssembly</a></h2>
-  <blockquote>A binary format for the web</blockquote>
+  <p>Read <a href="https://brendaneich.com/2015/06/from-asm-js-to-webassembly/">Brendan's announcement</a>
+    (seriously, you should read it)</p>
+  <blockquote>A new intermediate representation for <strong>safe</strong> code on the Web</blockquote>
   <ul>
     <li>Or "wasm" &mdash; developed by Mozilla, Google, MS and others</li>
-    <li>Essentially asm.js delivered in binary format</li>
+    <li>Essentially asm.js delivered in binary (bytecode) format</li>
     <li>Can be decoded much faster than JS can be parsed, especially on mobile</li>
   </ul>
 </section>
@@ -347,46 +362,64 @@
   <p>Using WebAssembly components from JS will be as simple as <span class="code">require</span>'ing a module</p>
 </section>
 
-<!-- ===========  Frameworks  ========= -->
-
-<section class="slide title title-cyan">
-  <h1>Languages, Frameworks &amp; Tools</h1>
+<section class="slide">
+  <h2><a href="http://www.2ality.com/2015/06/web-assembly.html">WebAssembly</a></h2>
+  <p><a href="http://lukewagner.github.io/AngryBotsPacked/">AngryBots</a> &mdash; proof of concept Unity game port</p>
+  <img src="./images/angry-bots.jpg">
 </section>
 
+<!-- ===========  Frameworks  ========= -->
+
 <section class="slide cover" style="background-image:url(./images/smart_phones.jpg)">
-  <h1>Mobile App Frameworks</h1>
+  <h1>Mobile Frameworks</h1>
   <div class="shim" style="background-color:#369;opacity:.8;"></div>
 </section>
 
 <section class="slide">
   <h2><a href="http://ionicframework.com/">Ionic</a></h2>
   <ul>
-    <li></li>
+    <li>Free and MIT-licensed mobile app development framework</li>
+    <li>Built on <a href="http://angularjs.org/">Angular</a> and CSS</li>
+    <li>Includes a CLI: <span class="code">ionic start MyApp</span></li>
   </ul>
+  <img src="./images/ionic.jpg">
+</section>
+
+<section class="slide">
+  <h2><a href="http://ionicframework.com/">Ionic</a></h2>
+  <p>Released <a href="http://blog.ionic.io/announcing-ionic-1-0/">version 1.0</a> (uranium-unicorn) in May</p>
+  <p>Recently-released platform services:</p>
+  <ul>
+    <li><a href="http://blog.ionic.io/announcing-ionic-push-alpha/">Ionic Push</a> (push notifications)</li>
+    <li><a href="http://blog.ionic.io/announcing-ionic-deploy-alpha-update-your-app-without-waiting/">Ionic
+      Deploy</a> (instant deploy/rollback, no app store required)</li>
+    <li><a href="http://blog.ionic.io/optimize-your-apps-growth-with-ionic-analytics-now-in-alpha/">Ionic
+      Analytics</a> (in-app analytics tracking)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://www.nativescript.org/">NativeScript</a></h2>
+  <p>New cross-platform mobile framework by Telerik</p>
+  <p>Released <a href="https://www.nativescript.org/blog/nativescript-1.0.0-is-now-available">version 1.0</a>
+    in May (1.1 just last week)</p>
+  <ul>
+    <li>Free, open source, built on JS + CSS</li>
+    <li>Shared business logic / data models</li>
+    <li>Integrates with <a href="http://www.telerik.com/platform#overview">Telerik Platform</a> ($$)</li>
+  </ul>
+  <img src="./images/nativescript.jpg">
 </section>
 
 <section class="slide">
   <h2><a href="http://www.idangero.us/swiper/">Swiper</a></h2>
   <ul>
-    <li></li>
+    <li>Modern mobile touch slider component</li>
+    <li>Works on iOS, Android, Win Phone 8, desktop</li>
+    <li>Supports parallax, transition effects, RTL, lazy loading, and more</li>
   </ul>
+  <img src="./images/swiper.jpg">
 </section>
-
-<!-- ===========  Tips and Tricks  ========= -->
-
-<section class="slide title title-magenta">
-  <h1>Tips and<br>Tricks</h1>
-</section>
-
-
-
-<!-- ===========  Events  ========= -->
-
-<section class="slide title title-magenta">
-  <h1>Upcoming<br>Events</h1>
-</section>
-
-
 
 <!-- ===========  Other :)  ========= -->
 
@@ -398,9 +431,44 @@
 </section>
 
 <section class="slide">
-  <h2><a href="https://jariz.github.io/vibrant.js/">Vibrant.js</a></h2>
-  <blockquote>Extract prominent colors from an image.</blockquote>
-  <img src="./images/vibrant.jpg" width="80%">
+  <h2><a href="http://jsonapi.org/">JSON API</a></h2>
+  <blockquote>A specification for building APIs in JSON</blockquote>
+  <p>Version 1.0 of the spec <a href="http://www.cerebris.com/blog/2015/06/04/jsonapi-1-0/">released June 4</a></p>
+  <ul>
+    <li>It's basically REST optimized for JSON data</li>
+    <li>Shared conventions for data structure, resource linking, caching, etc.</li>
+    <li>Mime type <span class="code">application/vnd.api+json</span></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://blog.unicode.org/2015/06/announcing-unicode-standard-version-80.html">Unicode v8.0</a></h2>
+  <ul>
+    <li>5,771 new ideographs for Chinese, Japanese and Korean</li>
+    <li>86 lowercase Cherokee syllables</li>
+    <li>New languages supported: Arwi, Ik, Kulango</li>
+  </ul>
+  <p>But most important of all...</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://blog.unicode.org/2015/06/announcing-unicode-standard-version-80.html">Unicode v8.0</a></h2>
+  <p><strong><a href="http://unicode.org/reports/tr51/#Standard_Additions_8">New emoji!</a></strong></p>
+  <img src="./images/emoji.jpg">
+</section>
+
+<section class="slide">
+  <h2><a href="http://blog.unicode.org/2015/06/announcing-unicode-standard-version-80.html">Unicode v8.0</a></h2>
+  <p>Human emoji now support <a href="http://unicode.org/reports/tr51/#Diversity">skin tone modifiers</a></p>
+  <ul>
+    <li>Reflection of global use / diversity</li>
+    <li>Based on 6 tones of the <a
+      href="http://www.arpansa.gov.au/pubs/RadiationProtection/FitzpatrickSkinType.pdf">Fitzpatrick
+      scale</a> in dermatology</li>
+    <li>Already available in <a
+      href="http://blog.emojipedia.org/os-x-10103-emoji-refinements">OSX</a> and other platforms</li>
+  </ul>
+  <img src="./images/emoji-skin.jpg">
 </section>
 
 <!-- ===========  Fin  ========= -->
