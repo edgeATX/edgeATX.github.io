@@ -57,10 +57,15 @@
 
 <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
 
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.7;"></div>
+</section>
+
 <section class="slide">
   <h2>Bleeding Edge Web: July 2015</h2>
-
-  <p><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></p>
 
   <h3>Announcements</h3>
 
@@ -68,7 +73,7 @@
   <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
 
   <h3>On the Edge</h3>
-  <h4>Introducing the new browser and rendering engine from Microsoft</h4>
+  <p>Introducing the new browser and rendering engine from Microsoft</p>
   <p>&mdash; Ryan Joy (<a href="https://twitter.com/atxryan/">@atxryan</a>)</p>
 </section>
 
@@ -243,6 +248,7 @@
   <blockquote>Enables applications to take advantage of persistent background processing,
     including hooks to enable bootstrapping of web applications while offline.</blockquote>
   <p><a href="http://www.w3.org/TR/2014/WD-service-workers-20140508/">W3C spec</a></p>
+  <p>Added in Firefox, already in Chrome &mdash; let's learn a little more...</p>
 </section>
 
 <section class="slide">
@@ -286,24 +292,6 @@
     ServiceWorker Ready?</a></p>
 </section>
 
-<!-- - - - - - - - - - -  ES2015  - - - - - - - - - - -->
-
-<section class="slide cover" style="background-image:url(./images/ponies.png)">
-  <h1>ES6</h1>
-  <div class="shim" style="background-color:#d15dd1;opacity:.8;"></div>
-</section>
-
-<section class="slide">
-  <h2>ES6 &rarr; ES2015</h2>
-
-  <p>Need a refresher? Excellent <a href="https://github.com/lukehoban/es6features">intro to ES6</a> via code examples</p>
-</section>
-
-<section class="slide">
-  <h2>ES2015 &amp; Meteor 1.2</h2>
-
-</section>
-
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
@@ -315,6 +303,7 @@
 <section class="slide">
   <h2>Notable Releases</h2>
   <ul>
+    <li><a href="https://github.com/npm/npm/releases/tag/v3.0.0">npm 3.0 (beta)</a> (June 25)</li>
     <li><a href="http://www.sencha.com/blog/ext-js-6-beta-is-now-available/">Ext JS 6.0 GA</a> (July 1)</li>
     <li><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">jQuery
       3.0 Alpha</a> (July 13)</li>
@@ -323,9 +312,28 @@
 
 <section class="slide">
   <h2><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">jQuery
-    3.0</a> &mdash; What's Coming</h2>
+    3.0</a> (preview)</h2>
+
+  <p>Potentially-breaking changes:</p>
   <ul>
-    <li></li>
+    <li>Simplified <span class="code">.show()</span> and <span class="code">.hide()</span> logic</li>
+    <li>Changed <span class="code">.data()</span> to more closely match the <a
+      href="https://html.spec.whatwg.org/multipage/dom.html#dom-dataset">dataset spec</a></li>
+    <li><span class="code">$.Deferred</span> is now fully Promises/A+ compatible (major changes
+      to how the existing <span class="code">.then()</span> method works and handles errors)</li>
+    <li>Removal of "special-case" Ajax methods (e.g. <span class="code">.abort()</span>)</li>
+    <li>And more! <a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">Details...</a></li>
+  </ul>
+  <p><a href="http://code.jquery.com/jquery-migrate-git.js">Migrate plugin</a> provided to ease transition</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://info.meteor.com/blog/whats-coming-in-meteor-12-and-beyond">Meteor
+    1.2</a> ("later this summer")</h2>
+  <ul>
+    <li>Adopting ES2105 as the "official JavaScript" of Meteor!</li>
+    <li>Auto-transpiling via <a href="https://babeljs.io/">Babel</a></li>
+    <li>First-class support for "reactive" rendering via Angular and JSX</li>
   </ul>
 </section>
 
@@ -340,7 +348,16 @@
   <div class="shim" style="background-color:#555;opacity:.7;"></div>
 </section>
 
-
+<section class="slide">
+  <h2><a href="http://www.jsbreakouts.org/">Breakouts</a></h2>
+  <blockquote>Helping you choose a JavaScript game engine</blockquote>
+  <ul>
+    <li>Basically <a href="http://todomvc.com/">TodoMVC</a> using Breakout instead of a todo list</li>
+    <li>Features: collision detection, sprite animation, sound fx, tiled backgrounds, etc.</li>
+    <li>Over a dozen JS game frameworks represented</li>
+  </ul>
+  <img src="./images/breakout.png">
+</section>
 
 <!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
 
@@ -355,6 +372,7 @@
   <h2>Texas Linux Festival 2015</h2>
   <blockquote>State-wide, annual, community-run conference for Linux and open source software
     users and enthusiasts from around the Lone Star State</blockquote>
+  <img src="./images/texas-linux-fest.jpg">
   <ul>
     <li><a href="https://2015.texaslinuxfest.org/">https://2015.texaslinuxfest.org</a></li>
     <li>Friday, August 21, 9am (in San Marcos)</li>
@@ -363,18 +381,26 @@
 </section>
 
 <section class="slide">
-  <h2>Video Games Live (VGL)</h2>
+  <h2><a href="http://www.cedarparkcenter.com/events/detail/video-games-live">Video Games Live</a></h2>
+  <blockquote>Combines video game music masterfully performed by a full symphony and choir with the
+    explosive energy of a rock concert.</blockquote>
+  <img src="./images/vgl.jpg">
   <ul>
-
+    <li>Classic video game themes played by live symphony</li>
+    <li>Interactive contests and live gaming set to music</li>
+    <li>August 2, 7pm at Cedar Park Center</li>
+    <li>$47 and up (up to $10 off via <a href="http://www.cedarparkcenter.com/VGLInsiders">this link</a>)</li>
   </ul>
-  <a href="http://www.cedarparkcenter.com/VGLInsiders">Buy tickets</a> (discounted via this link)
 </section>
 
 <section class="slide">
   <h2>OpenAIR &mdash; Accessibility Hackathon</h2>
+  <p>Work with a team to develop a web project to benefit a nonprofit or community organization</p>
   <ul>
+    <li>More than just a "hackthon": 5 weeks, work directly with "client", weekly meetings, etc.</li>
     <li>Team training: September 1</li>
     <li>Competition: October 1 - early November</li>
+    <li>Requires $100-150 team fee, prizes to top teams</li>
   </ul>
   <a href="http://air-rallies.org/for-openair-teams/">Sign up</a>
 </section>
