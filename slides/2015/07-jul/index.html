@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: June 2015</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2>Bleeding Edge Web: July 2015</h2>
+
+  <h3>Announcements</h3>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>On the Edge</h3>
+  <p>Introducing the new browser and rendering engine from Microsoft</p>
+  <p>&mdash; Ryan Joy (<a href="https://twitter.com/atxryan/">@atxryan</a>)</p>
+</section>
+
+<!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img
+      src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<section class="slide">
+  <p>Thanks to our sponsors:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="http://www.modis.com/"><img width="80%"
+      src="images/modis-logo.jpg" alt="Modis"></a></p>
+  </div>
+    <ul>
+      <li>IT staffing &mdash; in the Austin market for over 10 years</li>
+      <li>Specializing in Technology: Software Development and Infrastructure</li>
+      <li><a href="http://www.modis.com/">www.modis.com</a></li>
+    </ul>
+    <p>Thanks to <a href="mailto:Tricia.Guerrina@modis.com">Tricia Guerrina</a> &amp; <a
+        href="mailto:Samantha.Brown@modis.com">Samantha Brown</a></p>
+</section>
+
+<!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; June 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+    </tr>
+    <tr>
+      <td class="ver">43</td>
+      <td class="ver">38</td>
+      <td class="ver">30</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">&mdash;</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of July 22, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">43</span><br><strong style="color:#d00">44</strong></td>
+      <td class="ver"><span class="strike dim">38</span><br><strong style="color:#d00">39</strong></td>
+      <td class="ver">30</td>
+      <td class="ver">8</td>
+      <td class="ver">11</td>
+      <td class="ver">&mdash;</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3><a href="http://blog.chromium.org/2015/06/chrome-44-beta-improvements-to.html">Version 44</a></h3>
+  <ul>
+    <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names">computed
+      property names</a> in object literals</li>
+    <li>Improvements to push notifications</li>
+  </ul>
+  <img src="../../shared/resources/images/chrome.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/39">Version 39</a></h3>
+  <ul>
+    <li>Lots of <a href="https://hacks.mozilla.org/2015/06/trainspotting-firefox-39/">dev tools improvements</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-snap-points-x">CSS scroll snap points</a> support</li>
+    <li>OSX improvements: smoother animations, improved performance <a
+      href="https://bugzilla.mozilla.org/show_bug.cgi?id=1123019">displaying dashed lines</a></li>
+    <li>Expanded <a href="http://www.html5rocks.com/en/tutorials/service-worker/introduction/">Service
+      Worker</a> API support (catching up to Chrome)</li>
+    <li><a href="https://developer.mozilla.org/en-US/Firefox/Releases/39">A lot more...</a></li>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <h3>Version 30</h3>
+  <ul>
+    <li>No updates</span></li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
+  <p>Still in preview, to be finalized with Windows 10 (<a
+    href="http://www.itpro.co.uk/operating-systems/23119/windows-10-release-date-and-specs">July 29</a> - next week!)</p>
+  <p>Interesting features added since last month:</p>
+  <ul>
+    <li><a href="http://blogs.windows.com/msedgedev/2015/07/21/announcing-the-latest-improvements-for-the-f12-developer-tools-in-windows-10/">F12
+      developer tools improvements</a></li>
+    <li>Begun implementing <a href="http://blogs.windows.com/msedgedev/2015/07/15/microsoft-edge-and-web-components/">Web Components APIs</a></li>
+  </ul>
+  <img src="../../shared/resources/images/edge.png" width="20%" alt="Edge">
+</section>
+
+<section class="slide">
+  <h2>Safari &amp; IE</h2>
+  <img src="./images/awkward-silence.jpg">
+  <table class="browsers">
+    <tr>
+      <td width="50%"><img src="../../shared/resources/images/safari.png" width="30%" align="right" alt="Safari"></td>
+      <td width="50%"><img src="../../shared/resources/images/ie.png" width="30%" align="left" alt="IE"></td>
+    </tr>
+  </table>
+  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
+    9</a> is coming soon though...)</p>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/ie-dead.jpg)">
+  <h1>It's Time</h1>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<section class="slide">
+  <h2>Farewell IE</h2>
+  <ul>
+    <li>Edge is the new IE</li>
+    <li>Starting next month we'll no longer discuss IE, barring some major unexpected development</li>
+  </ul>
+  <img src="./images/ie-no.png">
+</section>
+
+<!-- - - - - - - - - - -  Service Workers  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(./images/service-workers.jpg)">
+  <h1>Spotlight:<br>Service Worker</h1>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <blockquote>Enables applications to take advantage of persistent background processing,
+    including hooks to enable bootstrapping of web applications while offline.</blockquote>
+  <p><a href="http://www.w3.org/TR/2014/WD-service-workers-20140508/">W3C spec</a></p>
+  <p>Added in Firefox, already in Chrome &mdash; let's learn a little more...</p>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+    <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+    <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
+    <li>Can <strong>NOT</strong> modify the DOM directly (but can notify page scripts via
+      <span class="code">postMessage</span>)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+    <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
+    <li>Can <strong>NOT</strong> modify the DOM directly (but can notify page scripts via
+      <span class="code">postMessage</span>)</li>
+    <li>Is fully async / promise-based</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <p>So what is all of this good for? <strong>Powerful offline / mobile support!</strong></p>
+  <ul>
+    <li>Detect when offline and serve from cache</li>
+    <li>Build your own selective cache based on resources requested</li>
+    <li>Prefetch resources in the background (e.g. responsive images)</li>
+    <li><a href="http://jakearchibald.com/2014/offline-cookbook/#serviceworker-side-templating">ServiceWorker-side templating</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <h3>Current <a href="https://jakearchibald.github.io/isserviceworkerready/index.html">Status</a>:</h3>
+  <img src="./images/service-worker-status.jpg">
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <h3>Bottom Line</h3>
+  <ul>
+    <li>Not yet ready for prime time, but coming along</li>
+    <li>Could still be useful today for specific use cases</li>
+  </ul>
+  <p><a href="https://jakearchibald.github.io/isserviceworkerready/index.html">Is
+    ServiceWorker Ready?</a></p>
+</section>
+
+
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <ul>
+    <li><a href="https://github.com/npm/npm/releases/tag/v3.0.0">npm 3.0 (beta)</a> (June 25)</li>
+    <li><a href="http://www.sencha.com/blog/ext-js-6-beta-is-now-available/">Ext JS 6.0 GA</a> (July 1)</li>
+    <li><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">jQuery
+      3.0 Alpha</a> (July 13)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">jQuery
+    3.0</a> (preview)</h2>
+
+  <p>Potentially-breaking changes:</p>
+  <ul>
+    <li>Simplified <span class="code">.show()</span> and <span class="code">.hide()</span> logic</li>
+    <li>Changed <span class="code">.data()</span> to more closely match the <a
+      href="https://html.spec.whatwg.org/multipage/dom.html#dom-dataset">dataset spec</a></li>
+    <li><span class="code">$.Deferred</span> is now fully Promises/A+ compatible (major changes
+      to how the existing <span class="code">.then()</span> method works and handles errors)</li>
+    <li>Removal of "special-case" Ajax methods (e.g. <span class="code">.abort()</span>)</li>
+    <li><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">And more!</a></li>
+  </ul>
+  <p><a href="http://code.jquery.com/jquery-migrate-git.js">Migrate plugin</a> provided to ease transition</p>
+  <img src="../../shared/resources/images/jquery.png" alt="jQuery">
+</section>
+
+<section class="slide">
+  <h2><a href="http://info.meteor.com/blog/whats-coming-in-meteor-12-and-beyond">Meteor
+    1.2</a> ("later this summer")</h2>
+  <ul>
+    <li>Adopting ES2105 as the "official JavaScript" of Meteor!</li>
+    <li>Auto-transpiling via <a href="https://babeljs.io/">Babel</a></li>
+    <li>First-class support for "reactive" rendering via Angular and JSX</li>
+  </ul>
+  <img src="../../shared/resources/images/meteor.png" alt="Meteor">
+</section>
+
+
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.jsbreakouts.org/">Breakouts</a></h2>
+  <blockquote>Helping you choose a JavaScript game engine</blockquote>
+  <ul>
+    <li>Basically <a href="http://todomvc.com/">TodoMVC</a> using Breakout instead of a todo list</li>
+    <li>Features: collision detection, sprite animation, sound fx, tiled backgrounds, etc.</li>
+    <li>Over a dozen JS game frameworks represented</li>
+  </ul>
+  <img src="./images/breakout.png">
+</section>
+
+<!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+  <div class="content">
+    <h1>Upcoming<br>Events</h1>
+  </div>
+  <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2>Texas Linux Festival 2015</h2>
+  <blockquote>State-wide, annual, community-run conference for Linux and open source software
+    users and enthusiasts from around the Lone Star State</blockquote>
+  <img src="./images/texas-linux-fest.jpg">
+  <ul>
+    <li><a href="https://2015.texaslinuxfest.org/">https://2015.texaslinuxfest.org</a></li>
+    <li>Friday, August 21, 9am (in San Marcos)</li>
+    <li>$20 to attend</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.cedarparkcenter.com/events/detail/video-games-live">Video Games Live</a></h2>
+  <blockquote>Combines video game music masterfully performed by a full symphony and choir with the
+    explosive energy of a rock concert.</blockquote>
+  <img src="./images/vgl.jpg">
+  <ul>
+    <li>Classic video game themes played by live symphony</li>
+    <li>Interactive contests and live gaming set to music</li>
+    <li>August 2, 7pm at Cedar Park Center</li>
+    <li>$47 and up (up to $10 off via <a href="http://www.cedarparkcenter.com/VGLInsiders">this link</a>)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://air-rallies.org/for-openair-teams/">OpenAIR</a> &mdash; Accessibility Hackathon</h2>
+  <p>Work with a team to develop a web project to benefit a nonprofit or community organization</p>
+  <ul>
+    <li>More than just a "hackthon": 5 weeks, work directly with "client", weekly meetings, etc.</li>
+    <li>Team training: September 1</li>
+    <li>Competition: October 1 - early November</li>
+    <li>Requires $100-150 team fee, prizes to top teams</li>
+  </ul>
+  <a href="http://air-rallies.org/for-openair-teams/">Sign up</a>
+</section>
+
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>

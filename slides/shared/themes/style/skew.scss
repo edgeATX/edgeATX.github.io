@@ -1,8 +1,9 @@
 @import "compass/css3/text-shadow";
 
 .deck-container {
-  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size:2em;
+  font-weight: 600;
   background:#fff;
 
   .slide {
@@ -59,6 +60,7 @@
 
     span.code {
       font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-weight: 400;
       margin: 0;
       border: 1px solid #ccc;
       background-color: #f8f8f8;
