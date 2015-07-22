@@ -8,7 +8,8 @@
 
   <title>Bleeding Edge Web: June 2015</title>
 
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" href="../../shared/core/deck.core.css">
@@ -181,7 +182,7 @@
     <li>OSX improvements: smoother animations, improved performance <a
       href="https://bugzilla.mozilla.org/show_bug.cgi?id=1123019">displaying dashed lines</a></li>
     <li>Expanded <a href="http://www.html5rocks.com/en/tutorials/service-worker/introduction/">Service
-      Workers</a> API support (catching up to Chrome)</li>
+      Worker</a> API support (catching up to Chrome)</li>
     <li><a href="https://developer.mozilla.org/en-US/Firefox/Releases/39">A lot more...</a></li>
   </ul>
   <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
@@ -239,12 +240,12 @@
 <!-- - - - - - - - - - -  Service Workers  - - - - - - - - - - -->
 
 <section class="slide cover" style="background-image:url(./images/service-workers.jpg)">
-  <h1>Service Workers</h1>
+  <h1>Spotlight:<br>Service Worker</h1>
   <div class="shim" style="background-color:#369;opacity:.8;"></div>
 </section>
 
 <section class="slide">
-  <h2>Service Workers</h2>
+  <h2>Service Worker</h2>
   <blockquote>Enables applications to take advantage of persistent background processing,
     including hooks to enable bootstrapping of web applications while offline.</blockquote>
   <p><a href="http://www.w3.org/TR/2014/WD-service-workers-20140508/">W3C spec</a></p>
@@ -252,7 +253,41 @@
 </section>
 
 <section class="slide">
-  <h2>Service Workers</h2>
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+    <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
   <ul>
     <li>Can run JS outside of the scope of a web page</li>
     <li>Can control multiple pages</li>
@@ -260,12 +295,24 @@
     <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
     <li>Can <strong>NOT</strong> modify the DOM directly (but can notify page scripts via
       <span class="code">postMessage</span>)</li>
-    <li>Are fully async / promise-based</li>
   </ul>
 </section>
 
 <section class="slide">
-  <h2>Service Workers</h2>
+  <h2>Service Worker</h2>
+  <ul>
+    <li>Can run JS outside of the scope of a web page</li>
+    <li>Can control multiple pages</li>
+    <li>Can intercept / modify navigation requests (like a cliet-side proxy)</li>
+    <li>Can use browser caching for persistence (via <span class="code">indexedDB</span>)</li>
+    <li>Can <strong>NOT</strong> modify the DOM directly (but can notify page scripts via
+      <span class="code">postMessage</span>)</li>
+    <li>Is fully async / promise-based</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Service Worker</h2>
   <p>So what is all of this good for? <strong>Powerful offline / mobile support!</strong></p>
   <ul>
     <li>Detect when offline and serve from cache</li>
@@ -276,13 +323,13 @@
 </section>
 
 <section class="slide">
-  <h2>Service Workers</h2>
+  <h2>Service Worker</h2>
   <h3>Current <a href="https://jakearchibald.github.io/isserviceworkerready/index.html">Status</a>:</h3>
   <img src="./images/service-worker-status.jpg">
 </section>
 
 <section class="slide">
-  <h2>Service Workers</h2>
+  <h2>Service Worker</h2>
   <h3>Bottom Line</h3>
   <ul>
     <li>Not yet ready for prime time, but coming along</li>
@@ -322,9 +369,10 @@
     <li><span class="code">$.Deferred</span> is now fully Promises/A+ compatible (major changes
       to how the existing <span class="code">.then()</span> method works and handles errors)</li>
     <li>Removal of "special-case" Ajax methods (e.g. <span class="code">.abort()</span>)</li>
-    <li>And more! <a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">Details...</a></li>
+    <li><a href="http://blog.jquery.com/2015/07/13/jquery-3-0-and-jquery-compat-3-0-alpha-versions-released/">And more!</a></li>
   </ul>
   <p><a href="http://code.jquery.com/jquery-migrate-git.js">Migrate plugin</a> provided to ease transition</p>
+  <img src="../../shared/resources/images/jquery.png" alt="jQuery">
 </section>
 
 <section class="slide">
@@ -335,6 +383,7 @@
     <li>Auto-transpiling via <a href="https://babeljs.io/">Babel</a></li>
     <li>First-class support for "reactive" rendering via Angular and JSX</li>
   </ul>
+  <img src="../../shared/resources/images/meteor.png" alt="Meteor">
 </section>
 
 
@@ -394,7 +443,7 @@
 </section>
 
 <section class="slide">
-  <h2>OpenAIR &mdash; Accessibility Hackathon</h2>
+  <h2><a href="http://air-rallies.org/for-openair-teams/">OpenAIR</a> &mdash; Accessibility Hackathon</h2>
   <p>Work with a team to develop a web project to benefit a nonprofit or community organization</p>
   <ul>
     <li>More than just a "hackthon": 5 weeks, work directly with "client", weekly meetings, etc.</li>
@@ -413,6 +462,7 @@
   <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
   <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
   <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
 </section>
 
 
