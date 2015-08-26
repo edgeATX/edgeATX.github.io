@@ -197,6 +197,13 @@
 </section>
 
 <section class="slide">
+  <h2>Safari</h2>
+  <img src="./images/awkward-silence.jpg">
+  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
+    9</a> is coming soon...)</p>
+</section>
+
+<section class="slide">
   <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
   <p>Just released in July with Windows 10</p>
   <p>Brand new <a href="http://dev.modern.ie/platform/status/">Platform Status page</p>
@@ -208,15 +215,12 @@
     <li>New canvas features, <span class="code">&lt;picture&gt;</span> support</li>
     <li>And more!</li>
   </ul>
-  <p>MS is finally again serious about browsers!</p>
   <img src="../../shared/resources/images/edge.png" width="20%" alt="Edge">
 </section>
 
-<section class="slide">
-  <h2>Safari</h2>
-  <img src="./images/awkward-silence.jpg">
-  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
-    9</a> is coming soon...)</p>
+<section class="slide cover" style="background-image:url(./images/party-bg.jpg)">
+  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
+  <img src="./images/hooray.jpg" style="width:80%;">
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -229,7 +233,6 @@
 <section class="slide">
   <h2>Notable Releases</h2>
   <ul>
-    <li><a href="http://facebook.github.io/react/blog/2015/08/11/relay-technical-preview.html">Relay - tech preview</a> (Aug 11)</li>
     <li><a href="http://emberjs.com/blog/2015/08/13/ember-2-0-released.html">Ember 2.0</a> (Aug 13)</li>
     <li><a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Bootstrap 4.0 - alpha</a> (Aug 19)</li>
   </ul>
@@ -244,7 +247,7 @@
     <li>Improved grid system + flexbox support</li>
     <li>Wells / thumbnails / panels &rarr; <strong>cards</strong></li>
     <li>Every plugin now written in ES6</li>
-    <li>Lots, lots more</li>
+    <li><a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Lots, lots more</a></li>
   </ul>
   <img src="./images/bootstrap.jpg" style="border:1px solid #ccc;">
 </section>
@@ -257,11 +260,85 @@
 
 <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
 
+<section class="slide cover" style="background-image:url(./images/blue-steel.jpg)">
+  <h1>Trendspotting</h1>
+  <div class="shim" style="background-color:#369;opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Declarative Data Management</h2>
+  <p>Today, developers mostly have to solve these themselves:</p>
+  <ul>
+    <li>Local vs. remote data</li>
+    <li>Caching</li>
+    <li>Optimizing requests</li>
+    <li>Designing for graph retrieval</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="http://facebook.github.io/react/blog/2015/08/11/relay-technical-preview.html">Relay</a></h2>
+  <ul>
+    <li>Released by Facebook on August 11</li>
+    <li>Works with FB's <a
+      href="https://facebook.github.io/react/blog/2015/05/01/graphql-introduction.html">GraphQL</a>
+      (query language for graph data)</li>
+    <li>Components can describe the data necessary to render them</li>
+    <li>Automatic data consistency on client/server</li>
+  </ul>
+  <p>Currently a tech preview, but used in production at FB</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://netflix.github.io/falcor/">Falcor</a></h2>
+  <a href="http://www.imdb.com/title/tt0088323/"><img src="./images/falcor-dragon.jpg" style="width:80%;"></a>
+  <p style="text-align:center;">No, not <em>that</em> one</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://netflix.github.io/falcor/">Falcor</a></h2>
+  <p>Created by Netflix</p>
+  <ul>
+    <li>"One model everywhere" via a virtual JSON graph (sorta like GraphQL)</li>
+    <li>Object-oreiented data API via get/set, path syntax, routing</li>
+    <li>Transparent network calls, auto batching and de-duping</li>
+    <li>Side note: they are using this with React also!</li>
+  </ul>
+  <p>Currently a developer preview, but used in production at Netflix</p>
+  <img src="./images/falcor.jpg">
+</section>
+
+<section class="slide">
+  <h2>Summary</h2>
+  <p>Specify <em>what</em> to fetch, but not necessarily <em>how</em> or <em>where</em> to get it</p>
+  <ul>
+    <li>Declarative data definition</li>
+    <li>JSON-based</li>
+    <li>Designed for complex graph data</li>
+    <li>Transparent remote API</li>
+    <li>Request caching / batching / de-duping</li>
+  </ul>
+  <p>Not <em>quite</em> ready for primetime, but watch this space...</p>
+</section>
+
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
 <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
   <div class="content">
     <h1>And now for something completely different...</h1>
   </div>
   <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://uber.github.io/">Uber Open Source</a></h2>
+  <p>Uber just launched their <a href="http://uber.github.io/">open source presence</a> <em>today</em></p>
+  <ul>
+    <li><a href="http://uber.github.io/ringpop">ringpop</a>: Scalable, fault-tolerant application-layer sharding</li>
+    <li><a href="http://uber.github.io/tchannel">tchannel</a>: Network multiplexing and framing protocol for RPC</li>
+  </ul>
+  <img src="./images/oss-uber.jpg">
 </section>
 
 <section class="slide">
