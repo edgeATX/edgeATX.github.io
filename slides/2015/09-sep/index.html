@@ -161,7 +161,7 @@
       <td class="ver"><span class="strike dim">44</span><br><strong style="color:#F75A5A">45</strong></td>
       <td class="ver"><span class="strike dim">40</span><br><strong style="color:#F75A5A">41</strong></td>
       <td class="ver"><span class="strike dim">31</span><br><strong style="color:#F75A5A">32</strong></td>
-      <td class="ver"><span class="strike dim">1 (?)</span><br><strong style="color:#F75A5A">13</strong></td>
+      <td class="ver"><span class="strike dim">1 (?)</span><br><strong style="color:#F75A5A">13 *</strong></td>
       <td class="ver">8</td>
     </tr>
   </table>
@@ -219,10 +219,12 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
 
 <section class="slide">
   <h2>Firefox 41</h2>
-  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/41">Release notes</a></h3>
-  <p>Shipped yesterday!</p>
-  <p>Tons of mostly minor changes</p>
-  <p>A few interesting highlights...</p>
+  <h3><a href="https://www.mozilla.org/en-US/firefox/41.0/releasenotes/">Release notes</a></h3>
+  <ul>
+    <li>Shipped yesterday!</li>
+    <li>Tons of mostly minor changes</li>
+    <li>A few interesting highlights...</li>
+  </ul>
 </section>
 
 <section class="slide">
@@ -253,8 +255,72 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
 </section>
 
 <section class="slide">
-  <h2>Edge 12</h2>
+  <h2>Edge 13</h2>
+  <p><a href="https://blogs.windows.com/msedgedev/2015/09/21/understanding-versions-in-an-evergreen-browser/">Edge versioning overview</a></p>
+  <ul>
+    <li>Shipped user-agent was "Edge/12.10240"</li>
+    <li>On Monday they updated to "Edge/13.*" (major.build) &#10025;</li>
+    <li>Build number tracks the Windows build it ships with</li>
+  </ul>
+  <br>
+  <p>&#10025; To be precise:</p>
+  <p><blockquote>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10547</blockquote></p>
+</section>
 
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>Already working with <a href="http://caniuse.com/#search=pointer">third parties</a> to reflect v.13</p>
+  <p><a href="http://caniuse.com/#search=pointer"><img src="./images/caniuse-edge.png"></a></p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>As of today Edge is at <a href="http://kangax.github.io/compat-table/es6/">80% ES2015 compatibility</a>. This is amazing.</p>
+  <p><a href="http://kangax.github.io/compat-table/es6/"><img src="./images/edge-es2015-compat.jpg"></a></p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>So what actually changed? <a href="https://dev.modern.ie/platform/changelog/desktop/10547/">Lots of stuff!</a></p>
+  <p>A few highlights...</p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;template&gt;</span> element (part of Web Components)</p>
+  <ul>
+    <li>Hidden by default</li>
+    <li>Inline scripts ignored by default</li>
+    <li>Templated resources (e.g. &lt;img&gt;) not fetched until template render</li>
+  </ul>
+<pre><code>&lt;div id="items_list"&gt;&lt;/div&gt;
+
+&lt;template id="items"&gt;
+  &lt;span class="item"&gt;&lt;/span&gt;
+&lt;/template&gt;
+</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;picture&gt;</span> element &amp; <span class="code">srcset</span> sizes attribute</p>
+  <ul>
+    <li>Enables proper responsive image support</li>
+  </ul>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset="medium.jpg 1000w, large.jpg 2000w"&gt;
+  &lt;img src="small.png"&gt;
+&lt;/picture&gt;</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;a [download]&gt;</span> attribute</p>
+  <ul>
+    <li>Differentiate navigation from download links</li>
+    <li>Give downloaded files a custom name</li>
+  </ul>
+<pre><code>&lt;a href="docs/some-doc-v.1.2.txt" download="Cool_Doc.txt"&gt;Download&lt;/a&gt;</pre></code>
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -305,8 +371,7 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
   <p>Virtual conference on Angular and other JS/Node topics</p>
   <ul>
     <li>September 24-26, 12-4:30pm EST</li>
-    <li>$100 / person</li>
-    <li>Not many details posted yet, caveat emptor!</li>
+    <li>$100 / person (20% discount with code "meetup")</li>
   </ul>
 </section>
 
