@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: September 2015</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!--
+
+ Ideas:
+ upcoming stackoverflow docs
+
+
+-->
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Bleeding Edge Web: September 2015</h2>
+
+  <h3>Announcements</h3>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Lightning Talks</h3>
+</section>
+
+<!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our venue sponsor:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img
+      src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<section class="slide" style="background:#fff;color:#555;">
+  <p>Thanks to our food sponsor:</p>
+  <div style="text-align:center;padding-top:200px;font-size:200%;">
+    <p><a href="http://www.enolalabs.com/"><img src="images/enola-labs.png" alt="Enola Labs"></a></p>
+  </div>
+</section>
+
+<section class="slide" style="background:#fff;color:#555;">
+  <p>Thanks to our sticker sponsor:</p>
+  <div style="text-align:center;padding-top:200px;font-size:200%;">
+    <p><a href="http://frontside.io/"><img src="images/the-frontside.jpg" width="50%" alt="The Frontside"></a></p>
+  </div>
+</section>
+
+<!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; June 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">44</td>
+      <td class="ver">40</td>
+      <td class="ver">31</td>
+      <td class="ver">8</td>
+      <td class="ver">1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of September 22, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+    </tr>
+    <tr>
+      <td class="ver">44</td>
+      <td class="ver"><span class="strike dim">39</span><br><strong style="color:#d00">40</strong></td>
+      <td class="ver"><span class="strike dim">30</span><br><strong style="color:#d00">31</strong></td>
+      <td class="ver">8</td>
+      <td class="ver"><span class="strike dim">11</span><br><img width="75px" src="images/red-skull.png"></td>
+      <td class="ver"><span class="strike dim">beta</span><br><strong style="color:#d00">1 (?)</strong></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome Highlights</h2>
+  <h3><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Version 45</a></h3>
+
+  <!-- https://developers.google.com/web/updates/2015/08/27/using-requestidlecallback -->
+
+  <img src="../../shared/resources/images/chrome.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Firefox Highlights</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/40">Version 40</a></h3>
+  <ul>
+    <li>Lots of <a href="https://hacks.mozilla.org/2015/08/trainspotting-firefox-40">dev tools improvements</a>, as usual</a></li>
+    <li>Experimental <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push API</a> support</li>
+    <li>Mostly minor ES6 additions and fixes</li>
+  </ul>
+  <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-31/">Version 31</a></h3>
+  <ul>
+    <li>Updated Chromium/Blink to version 44</li>
+    <li>New <a href="https://googlechrome.github.io/samples/multi-column-css/">CSS multi-column
+      layout</a> implementation</li>
+    <li>Minor ES6 and Web Audio improvements</li>
+  </ul>
+  <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
+</section>
+
+<section class="slide">
+  <h2>Safari</h2>
+  <img src="./images/awkward-silence.jpg">
+  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
+    9</a> is coming soon...)</p>
+</section>
+
+<section class="slide">
+  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
+  <p>Just released in July with Windows 10</p>
+  <p>Brand new <a href="http://dev.modern.ie/platform/status/">Platform Status page</p>
+  <p>New features <a href="http://blogs.windows.com/msedgedev/2015/08/18/previewing-our-first-platform-updates-for-microsoft-edge/"></a>in
+    development for next version:</p>
+  <ul>
+    <li>New CSS pseduo-classes and keywords</li>
+    <li>New form input types</li>
+    <li>New canvas features, <span class="code">&lt;picture&gt;</span> support</li>
+    <li>And more!</li>
+  </ul>
+  <img src="../../shared/resources/images/edge.png" width="20%" alt="Edge">
+</section>
+
+<section class="slide cover" style="background-image:url(./images/party-bg.jpg)">
+  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
+  <img src="./images/hooray.jpg" style="width:80%;">
+</section>
+
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <ul>
+    <li><a href="http://emberjs.com/blog/2015/08/13/ember-2-0-released.html">Ember 2.0</a> (Aug 13)</li>
+    <li><a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Bootstrap 4.0 - alpha</a> (Aug 19)</li>
+  </ul>
+</section>
+
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(./images/blue-steel.jpg)">
+  <h1>Trendspotting</h1>
+  <div class="shim" style="background-color:#369;opacity:.6;"></div>
+</section>
+
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+
+<!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+  <div class="content">
+    <h1>Upcoming<br>Events</h1>
+  </div>
+  <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://angularremoteconf.com/">Angular Remote Conf</a></h2>
+  <p>Virtual conference on Angular and other JS/Node topics</p>
+  <ul>
+    <li>September 24-26, 12-4:30pm EST</li>
+    <li>$100 / person</li>
+    <li>Not many details posted yet, caveat emptor!</li>
+  </ul>
+</section>
+
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
