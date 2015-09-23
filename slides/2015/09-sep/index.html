@@ -99,17 +99,17 @@
 
 <section class="slide" style="background:#fff;color:#555;">
   <p>Thanks to our food sponsor:</p>
-  <div style="text-align:center;padding-top:200px;font-size:200%;">
+  <div style="text-align:center;padding-top:250px;font-size:200%;">
     <p><a href="http://www.enolalabs.com/"><img src="images/enola-labs.png" alt="Enola Labs"></a></p>
   </div>
 </section>
 
 <section class="slide cover" style="background-image:url(./images/ember-stickers.jpg)">
   <p>Thanks to our swag sponsor:</p>
-  <div style="text-align:center;padding-top:200px;font-size:200%;">
+  <div style="text-align:center;padding-top:250px;font-size:200%;">
     <p><a href="http://frontside.io/"><img src="images/the-frontside.png" width="50%" alt="The Frontside"></a></p>
   </div>
-  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  <div class="shim" style="background-color:#393E81;opacity:.85;"></div>
 </section>
 
 <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
@@ -333,19 +333,71 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
 <section class="slide">
   <h2>Notable Releases</h2>
   <ul>
-    <li><a href="http://emberjs.com/blog/2015/08/13/ember-2-0-released.html">Ember 2.0</a> (Aug 13)</li>
-    <li><a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">Bootstrap 4.0 - alpha</a> (Aug 19)</li>
+    <li><a href="https://nodejs.org/en/blog/release/v4.0.0/">Node 4.0.0</a> (Sep 8)</li>
+    <li><a href="https://modernizr.com/news/modernizr-3-new-release-site">Modernizr 3.0</a> (Sep 11)</li>
+    <li><a href="https://code.facebook.com/posts/1189117404435352/">React Native for Android</a> (Sep 14)</li>
+    <li><a href="http://blogs.msdn.com/b/typescript/archive/2015/09/16/announcing-typescript-1-6.aspx">Typescript 1.6</a> (Sep 16)</li>
   </ul>
 </section>
 
-
-<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
-
-<section class="slide cover" style="background-image:url(./images/blue-steel.jpg)">
-  <h1>Trendspotting</h1>
-  <div class="shim" style="background-color:#369;opacity:.6;"></div>
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <ul>
+    <li>First official merged iojs + Node release</li>
+    <li>Official plan for <a href="https://github.com/nodejs/LTS/">long-term support</a></li>
+    <li><a href="https://nodejs.org/en/blog/release/v4.0.0/">Lots of changes</a> (since iojs v3)</li>
+    <li>A few <a href="https://github.com/nodejs/LTS/wiki/Breaking-changes-between-v0.12-and-next-LTS-release">possibly breaking changes</a></li>
 </section>
 
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Contains V8 (JS engine) &mdash; same version as current Chrome</p>
+  <p>Translation: ES2015 out of the box!</p>
+  <table width="80%">
+    <tr>
+      <td>
+        <ul>
+          <li>block scoping</li>
+          <li>classes</li>
+          <li>typed arrays</li>
+          <li>generators</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>promises</li>
+          <li>arrow functions</li>
+          <li>template strings</li>
+          <li>Map, Set, etc.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <a href="https://twitter.com/horse_js/status/641118043595079680"><img src="./images/node-4.0.0.png" width="80%"></a>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Node is now following <a href="https://nodesource.com/blog/nodejs-is-semver">semver</a> (sorta)</p>
+  <p>All x.0 releases stable, but only even releases will get long-term support</p>
+  <img src="./images/node-releases.png" width="80%">
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Oh yeah, by the way...</p>
+  <p>Node 4.1.0 <a href="https://nodejs.org/en/blog/release/v4.1.0/">was released</a> Sep 17th :)</p>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Is this interesting to you?</p>
+  <p>Keep an eye out for next month's meetup...</p>
+</section>
 
 <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
 
@@ -356,6 +408,28 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
   <div class="shim" style="background-color:#555;opacity:.7;"></div>
 </section>
 
+<section class="slide">
+  <h2>ECMAScript now on Github</h2>
+  <blockquote>This release marks the beginning of ECMAScript's journey toward version 2016.</blockquote>
+  <ul>
+    <li><a href="http://tc39.github.io/ecma262/">Current spec</a> (<a
+      href="https://github.com/tc39/ecma262/releases/tag/es2016-draft-1">source</a>)</li>
+    <li>New drafts of ECMAScript via GitHub releases</li>
+    <li>You now have no excuse not to <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">contribute</a>!</li>
+  </ul>
+  <p>Great rundown of the new <a
+    href="http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/">ES
+    versioning scheme</a></p>
+</section>
+
+<section class="slide">
+  <h2>ECMAScript now on Github</h2>
+  <p>Uses <a href="http://bterlson.github.io/ecmarkup/">Ecmarkup</a> (custom HTML superset)</p>
+<pre><code>&lt;emu-figure&gt;
+  &lt;img src="figure.png"&gt;
+  &lt;emu-caption&gt;Example figure&lt;/emu-caption&gt;
+&lt;/emu-figure&gt;</pre></code>
+</section>
 
 <!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
 
