@@ -81,6 +81,9 @@
   <h3>News from the Bleeding Edge</h3>
   <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
 
+  <h3>An Overview of Ember</h3>
+  <p>&mdash; Jeffrey Biles (<a href="https://twitter.com/jeffreybiles/">@jeffreybiles</a>)</p>
+
   <h3>Lightning Talks</h3>
 </section>
 
@@ -101,11 +104,12 @@
   </div>
 </section>
 
-<section class="slide" style="background:#fff;color:#555;">
-  <p>Thanks to our sticker sponsor:</p>
+<section class="slide cover" style="background-image:url(./images/ember-stickers.jpg)">
+  <p>Thanks to our swag sponsor:</p>
   <div style="text-align:center;padding-top:200px;font-size:200%;">
-    <p><a href="http://frontside.io/"><img src="images/the-frontside.jpg" width="50%" alt="The Frontside"></a></p>
+    <p><a href="http://frontside.io/"><img src="images/the-frontside.png" width="50%" alt="The Frontside"></a></p>
   </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
 </section>
 
 <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
@@ -123,7 +127,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; June 2015:</p>
+  <p>Last version check &mdash; August 2015:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -136,8 +140,8 @@
       <td class="ver">44</td>
       <td class="ver">40</td>
       <td class="ver">31</td>
+      <td class="ver">1 (?)</td>
       <td class="ver">8</td>
-      <td class="ver">1</td>
     </tr>
   </table>
 </section>
@@ -150,78 +154,107 @@
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
       <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
       <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
-      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
-      <td width="16.667%"><img src="../../shared/resources/images/ie.png" width="70%" alt="IE"></td>
       <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver">44</td>
-      <td class="ver"><span class="strike dim">39</span><br><strong style="color:#d00">40</strong></td>
-      <td class="ver"><span class="strike dim">30</span><br><strong style="color:#d00">31</strong></td>
+      <td class="ver"><span class="strike dim">44</span><br><strong style="color:#F75A5A">45</strong></td>
+      <td class="ver"><span class="strike dim">40</span><br><strong style="color:#F75A5A">41</strong></td>
+      <td class="ver"><span class="strike dim">31</span><br><strong style="color:#F75A5A">32</strong></td>
+      <td class="ver"><span class="strike dim">1 (?)</span><br><strong style="color:#F75A5A">13</strong></td>
       <td class="ver">8</td>
-      <td class="ver"><span class="strike dim">11</span><br><img width="75px" src="images/red-skull.png"></td>
-      <td class="ver"><span class="strike dim">beta</span><br><strong style="color:#d00">1 (?)</strong></td>
     </tr>
   </table>
 </section>
 
 <section class="slide">
-  <h2>Chrome Highlights</h2>
-  <h3><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Version 45</a></h3>
-
-  <!-- https://developers.google.com/web/updates/2015/08/27/using-requestidlecallback -->
-
-  <img src="../../shared/resources/images/chrome.png" width="20%" alt="Firefox">
+  <h2>Chrome 45</h2>
+  <p><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Release notes</a></p>
+  <p><a href="https://googlechrome.github.io/samples/arrows-es6/index.html">ES2015: "Fat arrow" functions</a></p>
+<pre><code>// Concise syntax
+let square = x => x * x;
+console.log(square(10)); // 100</pre></code>
+<pre><code>// Auto binding of `this` to lexical scope
+let counter_es6 = function() {
+  this.seconds = 0;
+  setInterval(() => this.seconds++, 1000);
+};</pre></code>
 </section>
 
 <section class="slide">
-  <h2>Firefox Highlights</h2>
-  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/40">Version 40</a></h3>
+  <h2>Chrome 45</h2>
+  <p><a href="https://googlechrome.github.io/samples/array-methods-es6/index.html">ES2015: Array methods</a>
+    (and <a href="https://googlechrome.github.io/samples/typedarray-methods-es6/index.html">TypedArray</a>)</p>
+<pre><code>Array.from('hello'); // ["h", "e", "l", "l", "o"]
+Array.of('hello'); // ["hello"]</pre></code>
+<pre><code>[0, 1, 2, 3, 4].fill(5); // [5, 5, 5, 5, 5]</pre></code>
+<pre><code>['brian', 'corey'].find(function(item, index, array) {
+  return item.startsWith('b') ? item : null;
+}); // 'brian'</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="https://googlechrome.github.io/samples/array-methods-es6/index.html">ES2015: Object.assign</a></p>
+  <blockquote>Copies the values (of all enumerable own properties) from one or more source objects
+    to a target object.</blockquote>
+<pre><code>// Merge multiple objects
+Object.assign({foo: 0}, {bar: 1}); // {foo: 0, bar: 1}</pre></code>
+<pre><code>// Ovrewrite equal keys
+Object.assign({hello: 0}, {hello: 1}); // {hello: 1}</pre></code>
+<pre><code>// Clone an object
+let obj = { person: 'Brian'};
+let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Additional changes</a>:</p>
   <ul>
-    <li>Lots of <a href="https://hacks.mozilla.org/2015/08/trainspotting-firefox-40">dev tools improvements</a>, as usual</a></li>
-    <li>Experimental <a href="https://developer.mozilla.org/en-US/docs/Web/API/Push_API">Push API</a> support</li>
-    <li>Mostly minor ES6 additions and fixes</li>
-  </ul>
-  <img src="../../shared/resources/images/firefox.png" width="20%" alt="Firefox">
+    <li>General performance improvements</li>
+    <li>Service worker improvments</li>
+    <li>Push API <a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web#what-changes-exist-in-the-push-api-since-chrome-42">updates</a></li>
+    <li>Lots of minor additions and fixes</li>
 </section>
 
 <section class="slide">
-  <h2>Opera</h2>
-  <h3><a href="https://dev.opera.com/blog/opera-31/">Version 31</a></h3>
+  <h2>Firefox 41</h2>
+  <h3><a href="https://developer.mozilla.org/en-US/Firefox/Releases/41">Release notes</a></h3>
+  <p>Shipped yesterday!</p>
+  <p>Tons of mostly minor changes</p>
+  <p>A few interesting highlights...</p>
+</section>
+
+<section class="slide">
+  <h2>Firefox 41</h2>
+  <img src="./images/ff-popup.png" alt="Screenshot node">
+</section>
+
+<section class="slide">
+  <h2>Firefox 41</h2>
+  <img src="./images/ff-copy-img-as-data.png" alt="Copy image as data url">
+</section>
+
+<section class="slide">
+  <h2>Opera 32</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-32/">Release notes</a></h3>
   <ul>
-    <li>Updated Chromium/Blink to version 44</li>
-    <li>New <a href="https://googlechrome.github.io/samples/multi-column-css/">CSS multi-column
-      layout</a> implementation</li>
-    <li>Minor ES6 and Web Audio improvements</li>
+    <li>Based on Chromium 45</li>
+    <li>Added arrow functions, Array methods, Object.assign</li>
+    <li>Other minor CSS, DOM, ServiceWorker updates</li>
   </ul>
-  <img src="../../shared/resources/images/opera.png" width="20%" alt="Opera">
 </section>
 
 <section class="slide">
-  <h2>Safari</h2>
+  <h2>Safari 8</h2>
   <img src="./images/awkward-silence.jpg">
   <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
     9</a> is coming soon...)</p>
 </section>
 
 <section class="slide">
-  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
-  <p>Just released in July with Windows 10</p>
-  <p>Brand new <a href="http://dev.modern.ie/platform/status/">Platform Status page</p>
-  <p>New features <a href="http://blogs.windows.com/msedgedev/2015/08/18/previewing-our-first-platform-updates-for-microsoft-edge/"></a>in
-    development for next version:</p>
-  <ul>
-    <li>New CSS pseduo-classes and keywords</li>
-    <li>New form input types</li>
-    <li>New canvas features, <span class="code">&lt;picture&gt;</span> support</li>
-    <li>And more!</li>
-  </ul>
-  <img src="../../shared/resources/images/edge.png" width="20%" alt="Edge">
-</section>
+  <h2>Edge 12</h2>
 
-<section class="slide cover" style="background-image:url(./images/party-bg.jpg)">
-  <h2><a href="http://dev.modern.ie/platform/status/?filter=f070000bb">Microsoft Edge</a></h2>
-  <img src="./images/hooray.jpg" style="width:80%;">
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
