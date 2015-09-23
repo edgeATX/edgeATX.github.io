@@ -107,7 +107,7 @@
 <section class="slide cover" style="background-image:url(./images/ember-stickers.jpg)">
   <p>Thanks to our swag sponsor:</p>
   <div style="text-align:center;padding-top:250px;font-size:200%;">
-    <p><a href="http://frontside.io/"><img src="images/the-frontside.png" width="50%" alt="The Frontside"></a></p>
+    <p><a href="http://frontside.io/"><img src="images/the-frontside.png" width="60%" alt="The Frontside"></a></p>
   </div>
   <div class="shim" style="background-color:#393E81;opacity:.85;"></div>
 </section>
@@ -258,7 +258,7 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
   <h2>Edge 13</h2>
   <p><a href="https://blogs.windows.com/msedgedev/2015/09/21/understanding-versions-in-an-evergreen-browser/">Edge versioning overview</a></p>
   <ul>
-    <li>Shipped user-agent was "Edge/12.10240"</li>
+    <li>User-agent at launch was "Edge/12.10240"</li>
     <li>On Monday they updated to "Edge/13.*" (major.build) &#10025;</li>
     <li>Build number tracks the Windows build it ships with</li>
   </ul>
@@ -306,6 +306,8 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
   <p>HTML5 <span class="code">&lt;picture&gt;</span> element &amp; <span class="code">srcset</span> sizes attribute</p>
   <ul>
     <li>Enables proper responsive image support</li>
+    <li>Great overview: <a href="https://jakearchibald.com/2015/anatomy-of-responsive-images/">Anatomy of
+      responsive images</a></li>
   </ul>
 <pre><code>&lt;picture&gt;
   &lt;source srcset="medium.jpg 1000w, large.jpg 2000w"&gt;
@@ -320,7 +322,8 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
     <li>Differentiate navigation from download links</li>
     <li>Give downloaded files a custom name</li>
   </ul>
-<pre><code>&lt;a href="docs/some-doc-v.1.2.txt" download="Cool_Doc.txt"&gt;Download&lt;/a&gt;</pre></code>
+<pre><code>&lt;a href="docs/some-doc-v.1.2.txt"
+   download="Cool_Doc.txt"&gt;Download&lt;/a&gt;</pre></code>
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -341,9 +344,22 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
 </section>
 
 <section class="slide">
+  <h2>Office UI Fabric</h2>
+  <blockquote>The front-end framework for building experiences for Office and Office 365</blockquote>
+  <p>Open-sourced (MIT) <a href="https://github.com/OfficeDev/Office-UI-Fabric">on Github</a> (whaa?)</p>
+  <ul>
+    <li>Implementation of the Microsoft Design Language (Office look and feel)</li>
+    <li>Built with LESS, similar to Bootstrap, etc.</li>
+    <li>Namespaced to play nicely with other frameworks</li>
+  </ul>
+</section>
+
+<section class="slide">
   <h2>Node 4.0.0</h2>
   <ul>
     <li>First official merged iojs + Node release</li>
+    <li>Node.js Foundation <a href="https://nodejs.org/en/blog/announcements/foundation-elects-board/">board
+      of directors</a> elected</li>
     <li>Official plan for <a href="https://github.com/nodejs/LTS/">long-term support</a></li>
     <li><a href="https://nodejs.org/en/blog/release/v4.0.0/">Lots of changes</a> (since iojs v3)</li>
     <li>A few <a href="https://github.com/nodejs/LTS/wiki/Breaking-changes-between-v0.12-and-next-LTS-release">possibly breaking changes</a></li>
@@ -441,12 +457,25 @@ let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
 </section>
 
 <section class="slide">
-  <h2><a href="https://angularremoteconf.com/">Angular Remote Conf</a></h2>
-  <p>Virtual conference on Angular and other JS/Node topics</p>
+  <h2>Angular Remote Conf</h2>
+  <p><a href="https://angularremoteconf.com/">Virtual conference</a> on Angular and other JS/Node topics</p>
   <ul>
     <li>September 24-26, 12-4:30pm EST</li>
     <li>$100 / person (20% discount with code "meetup")</li>
   </ul>
+</section>
+
+<section class="slide">
+  <h2>Camp Grounded</h2>
+  <blockquote>Where Grownups Go to Unplug, Get Away, and Be Kids Again.</blockquote>
+  <ul>
+    <li>"<a href="http://campgrounded.org/">Digital detox</a>" &mdash; no phones, computers or clocks</li>
+    <li>Healthy meals, arts+crafts, yoga, games, sing-a-longs... (50+ activities)
+    <li>October 9-12 in Marble Falls</li>
+    <li>$400 / person through *tonight*, then $595 (<a
+      href="https://www.eventbrite.com/e/camp-grounded-2015-summer-camp-for-adults-marble-falls-texas-tickets-18006662412">register</a>)</li>
+  </ul>
+  <img src="./images/camp-grounded-logo.png" width="15%">
 </section>
 
 
