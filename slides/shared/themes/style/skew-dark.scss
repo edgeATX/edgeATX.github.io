@@ -1,0 +1,232 @@
+@import "compass/css3/text-shadow";
+
+.deck-container {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+  background: #000000;
+  color: #ffffff;
+
+  .slide {
+    background: #000000;
+
+    h1 {
+      color: #888888;
+      letter-spacing: -.05em;
+    }
+    h2 {
+      color: #D6B70A;
+      border-bottom: 1px solid #D6B70A;
+      letter-spacing: -.05em;
+    }
+    h3 {
+      color: #888888;
+      margin-bottom: .7em;
+    }
+    h4 {
+      color: #888888;
+    }
+
+    pre {
+      code {
+        overflow: hidden;
+        font-size: .9em;
+        letter-spacing: 1.5px;
+      }
+    }
+    blockquote {
+      font-size: 1em;
+      font-style: italic;
+      padding: .8em 3em .8em 1.5em;
+      color: #cccccc;
+      background: #333333;
+      border-left: 5px solid #666666;
+
+      p {
+        margin:0;
+      }
+
+      cite {
+        font-size: .5em;
+        font-style: normal;
+        font-weight: bold;
+        color: #cccccc;
+      }
+    }
+
+    table.table td {
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+    thead td {
+      font-weight: 800;
+    }
+
+    span.code {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      font-weight: 400;
+      margin: 0;
+      color: #EC557B;
+      border: 1px solid #777777;
+      background-color: #222222;
+      border-radius: 3px;
+      padding: 1px 8px;
+    }
+
+    ::-moz-selection{ background:#c00; color:#fff; }
+    ::selection { background:#c00; color:#fff; }
+
+    a {
+      color: #75B1F5 !important;
+      border-bottom: 2px dotted #333B46;
+
+      &, &:hover, &:focus, &:active, &:visited {
+        color: #c00;
+        text-decoration: none;
+      }
+
+      &:hover, &:focus {
+        border-bottom: 1px solid #1c68be;
+      }
+    }
+
+    li {
+      line-height: 1.5em;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+    .dim {
+      opacity: .4;
+    }
+  }
+
+  > .slide {
+    .deck-before, .deck-previous {
+      opacity:0.4;
+
+      &:not(.deck-child-current) {
+        .deck-before, .deck-previous {
+          opacity:1;
+        }
+      }
+    }
+
+    .deck-child-current {
+      opacity:1;
+    }
+  }
+
+  .deck-prev-link, .deck-next-link {
+    background: #222222 !important;
+    color: #999999 !important;
+    font-family: serif;
+  }
+
+  .deck-status {
+    font-size: 0.6666em;
+    right: 15px;
+    color: #555555;
+  }
+
+  &.deck-menu {
+    .slide {
+      background:#eee;
+    }
+
+    .deck-current, .no-touch & .slide:hover {
+      background:#ddf;
+    }
+  }
+
+  .cover {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    h1 {
+      color: #fff;
+      @include text-shadow(0 5px 10px rgba(0,0,0,.7));
+    }
+    h2 {
+      color: #fff;
+      border-bottom: none;
+    }
+    a, a:visited {
+      color: #fff !important;
+    }
+    p, li {
+      color: #eee;
+    }
+    .content {
+      z-index: 99;
+    }
+    .shim {
+      z-index: -99;
+      background: #000;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: .6;
+    }
+  }
+
+  .cover-light {
+    @extend .cover;
+    .shim {
+      background: #fff;
+      opacity: .7;
+    }
+    h1 {
+      color: #000;
+    }
+    h2 {
+      color: #1f4c7f;
+    }
+    h3 {
+      color: #444;
+    }
+    h1, h2, h3 {
+      @include text-shadow(0 2px 0 rgba(255,255,255,.7));
+    }
+    a, a:visited, p, li {
+      color: #333;
+      @include text-shadow(0 1px 0 rgba(255,255,255,.7));
+    }
+  }
+
+  .title {
+    background-color: #0F91DA;
+
+    h1, h2, h3 {
+      color: #fff;
+    }
+  }
+
+  .home {
+    background-image: url(../../resources/images/bleeding-edge.jpg);
+  }
+
+  .browser-table {
+    td {
+      text-align: center;
+      width: 20%;
+
+      img {
+        height: 7em;
+        margin-bottom: 0;
+      }
+      p {
+        margin-top: 15px;
+        font-size: 2em;
+      }
+    }
+  }
+}

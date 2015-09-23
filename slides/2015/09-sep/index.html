@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: September 2015</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!--
+
+ Ideas:
+ upcoming stackoverflow docs
+
+
+-->
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Bleeding Edge Web: September 2015</h2>
+
+  <h3>Announcements</h3>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>An Overview of Ember</h3>
+  <p>&mdash; Jeffrey Biles (<a href="https://twitter.com/jeffreybiles/">@jeffreybiles</a>)</p>
+
+  <h3>Lightning Talks</h3>
+</section>
+
+<!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our venue sponsor:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://www.capitalfactory.com/"><img
+      src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<section class="slide" style="background:#fff;color:#555;">
+  <p>Thanks to our food sponsor:</p>
+  <div style="text-align:center;padding-top:250px;font-size:200%;">
+    <p><a href="http://www.enolalabs.com/"><img src="images/enola-labs.png" alt="Enola Labs"></a></p>
+  </div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/ember-stickers.jpg)">
+  <p>Thanks to our swag sponsor:</p>
+  <div style="text-align:center;padding-top:250px;font-size:200%;">
+    <p><a href="http://frontside.io/"><img src="images/the-frontside.png" width="60%" alt="The Frontside"></a></p>
+  </div>
+  <div class="shim" style="background-color:#393E81;opacity:.85;"></div>
+</section>
+
+<!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; August 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">44</td>
+      <td class="ver">40</td>
+      <td class="ver">31</td>
+      <td class="ver">1 (?)</td>
+      <td class="ver">8</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of September 22, 2015:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">44</span><br><strong style="color:#F75A5A">45</strong></td>
+      <td class="ver"><span class="strike dim">40</span><br><strong style="color:#F75A5A">41</strong></td>
+      <td class="ver"><span class="strike dim">31</span><br><strong style="color:#F75A5A">32</strong></td>
+      <td class="ver"><span class="strike dim">1 (?)</span><br><strong style="color:#F75A5A">13 *</strong></td>
+      <td class="ver">8</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Release notes</a></p>
+  <p><a href="https://googlechrome.github.io/samples/arrows-es6/index.html">ES2015: "Fat arrow" functions</a></p>
+<pre><code>// Concise syntax
+let square = x => x * x;
+console.log(square(10)); // 100</pre></code>
+<pre><code>// Auto binding of `this` to lexical scope
+let counter_es6 = function() {
+  this.seconds = 0;
+  setInterval(() => this.seconds++, 1000);
+};</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="https://googlechrome.github.io/samples/array-methods-es6/index.html">ES2015: Array methods</a>
+    (and <a href="https://googlechrome.github.io/samples/typedarray-methods-es6/index.html">TypedArray</a>)</p>
+<pre><code>Array.from('hello'); // ["h", "e", "l", "l", "o"]
+Array.of('hello'); // ["hello"]</pre></code>
+<pre><code>[0, 1, 2, 3, 4].fill(5); // [5, 5, 5, 5, 5]</pre></code>
+<pre><code>['brian', 'corey'].find(function(item, index, array) {
+  return item.startsWith('b') ? item : null;
+}); // 'brian'</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="https://googlechrome.github.io/samples/array-methods-es6/index.html">ES2015: Object.assign</a></p>
+  <blockquote>Copies the values (of all enumerable own properties) from one or more source objects
+    to a target object.</blockquote>
+<pre><code>// Merge multiple objects
+Object.assign({foo: 0}, {bar: 1}); // {foo: 0, bar: 1}</pre></code>
+<pre><code>// Ovrewrite equal keys
+Object.assign({hello: 0}, {hello: 1}); // {hello: 1}</pre></code>
+<pre><code>// Clone an object
+let obj = { person: 'Brian'};
+let clone = Object.assign({}, obj); // {person: 'Brian'}</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Chrome 45</h2>
+  <p><a href="http://blog.chromium.org/2015/07/chrome-45-beta-new-es2015-features.html">Additional changes</a>:</p>
+  <ul>
+    <li>General performance improvements</li>
+    <li>Service worker improvments</li>
+    <li>Push API <a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web#what-changes-exist-in-the-push-api-since-chrome-42">updates</a></li>
+    <li>Lots of minor additions and fixes</li>
+</section>
+
+<section class="slide">
+  <h2>Firefox 41</h2>
+  <h3><a href="https://www.mozilla.org/en-US/firefox/41.0/releasenotes/">Release notes</a></h3>
+  <ul>
+    <li>Shipped yesterday!</li>
+    <li>Tons of mostly minor changes</li>
+    <li>A few interesting highlights...</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox 41</h2>
+  <img src="./images/ff-popup.png" alt="Screenshot node">
+</section>
+
+<section class="slide">
+  <h2>Firefox 41</h2>
+  <img src="./images/ff-copy-img-as-data.png" alt="Copy image as data url">
+</section>
+
+<section class="slide">
+  <h2>Opera 32</h2>
+  <h3><a href="https://dev.opera.com/blog/opera-32/">Release notes</a></h3>
+  <ul>
+    <li>Based on Chromium 45</li>
+    <li>Added arrow functions, Array methods, Object.assign</li>
+    <li>Other minor CSS, DOM, ServiceWorker updates</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 8</h2>
+  <img src="./images/awkward-silence.jpg">
+  <p style="text-align:center;">(<a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Safari
+    9</a> is coming soon...)</p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p><a href="https://blogs.windows.com/msedgedev/2015/09/21/understanding-versions-in-an-evergreen-browser/">Edge versioning overview</a></p>
+  <ul>
+    <li>User-agent at launch was "Edge/12.10240"</li>
+    <li>On Monday they updated to "Edge/13.*" (major.build) &#10025;</li>
+    <li>Build number tracks the Windows build it ships with</li>
+  </ul>
+  <br>
+  <p>&#10025; To be precise:</p>
+  <p><blockquote>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10547</blockquote></p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>Already working with <a href="http://caniuse.com/#search=pointer">third parties</a> to reflect v.13</p>
+  <p><a href="http://caniuse.com/#search=pointer"><img src="./images/caniuse-edge.png"></a></p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>As of today Edge is at <a href="http://kangax.github.io/compat-table/es6/">80% ES2015 compatibility</a>. This is amazing.</p>
+  <p><a href="http://kangax.github.io/compat-table/es6/"><img src="./images/edge-es2015-compat.jpg"></a></p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>So what actually changed? <a href="https://dev.modern.ie/platform/changelog/desktop/10547/">Lots of stuff!</a></p>
+  <p>A few highlights...</p>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;template&gt;</span> element (part of Web Components)</p>
+  <ul>
+    <li>Hidden by default</li>
+    <li>Inline scripts ignored by default</li>
+    <li>Templated resources (e.g. &lt;img&gt;) not fetched until template render</li>
+  </ul>
+<pre><code>&lt;div id="items_list"&gt;&lt;/div&gt;
+
+&lt;template id="items"&gt;
+  &lt;span class="item"&gt;&lt;/span&gt;
+&lt;/template&gt;
+</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;picture&gt;</span> element &amp; <span class="code">srcset</span> sizes attribute</p>
+  <ul>
+    <li>Enables proper responsive image support</li>
+    <li>Great overview: <a href="https://jakearchibald.com/2015/anatomy-of-responsive-images/">Anatomy of
+      responsive images</a></li>
+  </ul>
+<pre><code>&lt;picture&gt;
+  &lt;source srcset="medium.jpg 1000w, large.jpg 2000w"&gt;
+  &lt;img src="small.png"&gt;
+&lt;/picture&gt;</pre></code>
+</section>
+
+<section class="slide">
+  <h2>Edge 13</h2>
+  <p>HTML5 <span class="code">&lt;a [download]&gt;</span> attribute</p>
+  <ul>
+    <li>Differentiate navigation from download links</li>
+    <li>Give downloaded files a custom name</li>
+  </ul>
+<pre><code>&lt;a href="docs/some-doc-v.1.2.txt"
+   download="Cool_Doc.txt"&gt;Download&lt;/a&gt;</pre></code>
+</section>
+
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <ul>
+    <li><a href="https://nodejs.org/en/blog/release/v4.0.0/">Node 4.0.0</a> (Sep 8)</li>
+    <li><a href="https://modernizr.com/news/modernizr-3-new-release-site">Modernizr 3.0</a> (Sep 11)</li>
+    <li><a href="https://code.facebook.com/posts/1189117404435352/">React Native for Android</a> (Sep 14)</li>
+    <li><a href="http://blogs.msdn.com/b/typescript/archive/2015/09/16/announcing-typescript-1-6.aspx">Typescript 1.6</a> (Sep 16)</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Office UI Fabric</h2>
+  <blockquote>The front-end framework for building experiences for Office and Office 365</blockquote>
+  <p>Open-sourced (MIT) <a href="https://github.com/OfficeDev/Office-UI-Fabric">on Github</a> (whaa?)</p>
+  <ul>
+    <li>Implementation of the Microsoft Design Language (Office look and feel)</li>
+    <li>Built with LESS, similar to Bootstrap, etc.</li>
+    <li>Namespaced to play nicely with other frameworks</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <ul>
+    <li>First official merged iojs + Node release</li>
+    <li>Node.js Foundation <a href="https://nodejs.org/en/blog/announcements/foundation-elects-board/">board
+      of directors</a> elected</li>
+    <li>Official plan for <a href="https://github.com/nodejs/LTS/">long-term support</a></li>
+    <li><a href="https://nodejs.org/en/blog/release/v4.0.0/">Lots of changes</a> (since iojs v3)</li>
+    <li>A few <a href="https://github.com/nodejs/LTS/wiki/Breaking-changes-between-v0.12-and-next-LTS-release">possibly breaking changes</a></li>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Contains V8 (JS engine) &mdash; same version as current Chrome</p>
+  <p>Translation: ES2015 out of the box!</p>
+  <table width="80%">
+    <tr>
+      <td>
+        <ul>
+          <li>block scoping</li>
+          <li>classes</li>
+          <li>typed arrays</li>
+          <li>generators</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>promises</li>
+          <li>arrow functions</li>
+          <li>template strings</li>
+          <li>Map, Set, etc.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <a href="https://twitter.com/horse_js/status/641118043595079680"><img src="./images/node-4.0.0.png" width="80%"></a>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Node is now following <a href="https://nodesource.com/blog/nodejs-is-semver">semver</a> (sorta)</p>
+  <p>All x.0 releases stable, but only even releases will get long-term support</p>
+  <img src="./images/node-releases.png" width="80%">
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Oh yeah, by the way...</p>
+  <p>Node 4.1.0 <a href="https://nodejs.org/en/blog/release/v4.1.0/">was released</a> Sep 17th :)</p>
+</section>
+
+<section class="slide">
+  <h2>Node 4.0.0</h2>
+  <p>Is this interesting to you?</p>
+  <p>Keep an eye out for next month's meetup...</p>
+</section>
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2>ECMAScript now on Github</h2>
+  <blockquote>This release marks the beginning of ECMAScript's journey toward version 2016.</blockquote>
+  <ul>
+    <li><a href="http://tc39.github.io/ecma262/">Current spec</a> (<a
+      href="https://github.com/tc39/ecma262/releases/tag/es2016-draft-1">source</a>)</li>
+    <li>New drafts of ECMAScript via GitHub releases</li>
+    <li>You now have no excuse not to <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">contribute</a>!</li>
+  </ul>
+  <p>Great rundown of the new <a
+    href="http://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning/">ES
+    versioning scheme</a></p>
+</section>
+
+<section class="slide">
+  <h2>ECMAScript now on Github</h2>
+  <p>Uses <a href="http://bterlson.github.io/ecmarkup/">Ecmarkup</a> (custom HTML superset)</p>
+<pre><code>&lt;emu-figure&gt;
+  &lt;img src="figure.png"&gt;
+  &lt;emu-caption&gt;Example figure&lt;/emu-caption&gt;
+&lt;/emu-figure&gt;</pre></code>
+</section>
+
+<!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+  <div class="content">
+    <h1>Upcoming<br>Events</h1>
+  </div>
+  <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2>Angular Remote Conf</h2>
+  <p><a href="https://angularremoteconf.com/">Virtual conference</a> on Angular and other JS/Node topics</p>
+  <ul>
+    <li>September 24-26, 12-4:30pm EST</li>
+    <li>$100 / person (20% discount with code "meetup")</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Camp Grounded</h2>
+  <blockquote>Where Grownups Go to Unplug, Get Away, and Be Kids Again.</blockquote>
+  <ul>
+    <li>"<a href="http://campgrounded.org/">Digital detox</a>" &mdash; no phones, computers or clocks</li>
+    <li>Healthy meals, arts+crafts, yoga, games, sing-a-longs... (50+ activities)
+    <li>October 9-12 in Marble Falls</li>
+    <li>$400 / person through *tonight*, then $595 (<a
+      href="https://www.eventbrite.com/e/camp-grounded-2015-summer-camp-for-adults-marble-falls-texas-tickets-18006662412">register</a>)</li>
+  </ul>
+  <img src="./images/camp-grounded-logo.png" width="15%">
+</section>
+
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+  });
+</script>
+</body>
+</html>
