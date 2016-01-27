@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
 
   <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <link rel="stylesheet" href="../../shared/themes/style/skew.css">
 
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
@@ -96,7 +96,7 @@
 </section>
 
 <section class="slide">
-  <h2>Bleeding Edge Web: January 2015</h2>
+  <h2>Bleeding Edge Web: January 2016</h2>
 
   <h3>Announcements</h3>
 
@@ -141,7 +141,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; September 2015:</p>
+  <p>Last version check &mdash; October 2015:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -151,18 +151,18 @@
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver">45</td>
+      <td class="ver">46</td>
       <td class="ver">41</td>
-      <td class="ver">32</td>
-      <td class="ver">13</td>
-      <td class="ver">8</td>
+      <td class="ver">33</td>
+      <td class="ver">13+</td>
+      <td class="ver">9</td>
     </tr>
   </table>
 </section>
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>As of October 27, 2015:</p>
+  <p>As of January 27, 2016:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -172,330 +172,145 @@
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver"><span class="strike dim">45</span><br><strong style="color:#F75A5A">46</strong></td>
-      <td class="ver">41</td>
-      <td class="ver"><span class="strike dim">32</span><br><strong style="color:#F75A5A">33</strong></td>
-      <td class="ver"><span class="strike dim">13</span><br><strong style="color:#F75A5A">13+</strong></td>
-      <td class="ver"><span class="strike dim">8</span><br><strong style="color:#F75A5A">9</strong></td>
+      <td class="ver"><span class="strike dim">46</span><br><strong style="color:#F75A5A">48</strong></td>
+      <td class="ver"><span class="strike dim">41</span><br><strong style="color:#F75A5A">44</strong></td>
+      <td class="ver"><span class="strike dim">33</span><br><strong style="color:#F75A5A">34</strong></td>
+      <td class="ver"><span class="strike dim">13+</span><br><strong style="color:#F75A5A">10586</strong></td>
+      <td class="ver"><span class="strike dim">9</span><br><strong style="color:#F75A5A">9.1</strong></td>
     </tr>
   </table>
   <br/>
-  <p style="margin: auto;margin-top: 30px;text-align:center;">See last month's talk for notes about <a href="http://edgeatx.github.io/slides/2015/09-sep/#slide-19">Microsoft Edge Versioning</a>.</p>
+  <p style="margin: auto;margin-top: 30px;text-align:center;">See our notes about <a href="http://edgeatx.github.io/slides/2015/09-sep/#slide-19">Microsoft Edge Versioning</a>.</p>
 </section>
 
 <section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="http://blog.chromium.org/2015/09/chrome-46-beta-flexible-animations-and.html">Release notes</a></p>
-  <p><a href="https://googlechrome.github.io/samples/css-motion-path/index.html">"Simplified" CSS Motion Paths</a></p>
-  <iframe id="cp_embed_ZGmeRO" src="//codepen.io/anon/embed/ZGmeRO?slug-hash=ZGmeRO&amp;default-tab=result&amp;height=300&amp;theme-id=0&amp;user=anon" scrolling="no" frameborder="0" height="300" allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="CodePen Embed" class="cp_embed_iframe undefined" style="width: 100%; overflow: hidden;"></iframe>
-  <svg xmlns="http://www.w3.org/2000/svg"
-     width="700"
-     height="450"
-     viewBox="350 0 1400 900">
-  <rect x="595"
-        y="423"
-        width="610"
-        height="377"
-        fill="blue" />
-  <polygon points="506,423 900,190 1294,423"
-           fill="yellow" />
-  <polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" />
-  <path d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
-        fill="none"
-        stroke="black"
-        stroke-width="13"
-        stroke-linejoin="round"
-        stroke-linecap="round" />
-  <path id="firstScissorHalf"
-        d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
-        transform="translate(0,0)"
-        fill="green"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
-  <path id="secondScissorHalf"
-        d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
-        transform="translate(0,0)"
-        fill="forestgreen"
-        stroke="black"
-        stroke-width="5"
-        stroke-linejoin="round"
-        stroke-linecap="round"
-        fill-rule="evenodd" />
-</svg>
-</section>
-
-<section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints">Automating resource selection with Client Hints</a>
-  <pre><code>&lt;picture&gt;
-  &lt;!-- serve WebP to Chrome and Opera --&gt;
-  &lt;source
-    media="(min-width: 50em)"
-    sizes="50vw"
-    srcset="/image/thing-200.webp 200w, /image/thing-400.webp 400w,
-        /image/thing-800.webp 800w, /image/thing-1200.webp 1200w,
-        /image/thing-1600.webp 1600w, /image/thing-2000.webp 2000w"
-    type="image/webp"&gt;
-  &lt;source
-    sizes="(min-width: 30em) 100vw"
-    srcset="/image/thing-crop-200.webp 200w, /image/thing-crop-400.webp 400w,
-        /image/thing-crop-800.webp 800w, /image/thing-crop-1200.webp 1200w,
-        /image/thing-crop-1600.webp 1600w, /image/thing-crop-2000.webp 2000w"
-    type="image/webp"&gt;
-  &lt;!-- serve JPEGXR to Edge --&gt;
-  &lt;source
-    media="(min-width: 50em)"
-    sizes="50vw"
-    srcset="/image/thing-200.jpgxr 200w, /image/thing-400.jpgxr 400w,
-        /image/thing-800.jpgxr 800w, /image/thing-1200.jpgxr 1200w,
-        /image/thing-1600.jpgxr 1600w, /image/thing-2000.jpgxr 2000w"
-    type="image/vnd.ms-photo"&gt;
-  &lt;source
-    sizes="(min-width: 30em) 100vw"
-    srcset="/image/thing-crop-200.jpgxr 200w, /image/thing-crop-400.jpgxr 400w,
-        /image/thing-crop-800.jpgxr 800w, /image/thing-crop-1200.jpgxr 1200w,
-        /image/thing-crop-1600.jpgxr 1600w, /image/thing-crop-2000.jpgxr 2000w"
-    type="image/vnd.ms-photo"&gt;
-  &lt;!-- serve JPEG to others --&gt;
-  &lt;source
-    media="(min-width: 50em)"
-    sizes="50vw"
-    srcset="/image/thing-200.jpg 200w, /image/thing-400.jpg 400w,
-        /image/thing-800.jpg 800w, /image/thing-1200.jpg 1200w,
-        /image/thing-1600.jpg 1600w, /image/thing-2000.jpg 2000w"&gt;
-  &lt;source
-    sizes="(min-width: 30em) 100vw"
-    srcset="/image/thing-crop-200.jpg 200w, /image/thing-crop-400.jpg 400w,
-        /image/thing-crop-800.jpg 800w, /image/thing-crop-1200.jpg 1200w,
-        /image/thing-crop-1600.jpg 1600w, /image/thing-crop-2000.jpg 2000w"&gt;
-  &lt;!-- fallback for browsers that don't support picture --&gt;
-  &lt;img src="/image/thing.jpg" width="50%"&gt;
-&lt;/picture&gt;</code></pre>
-</section>
-
-<section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://developers.google.com/web/updates/2015/09/automating-resource-selection-with-client-hints">Automating resource selection with Client Hints (cont...)</a></p>
-  <b>Use this instead...</b>
-  <pre><code>&lt;meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"&gt;
-...
-&lt;picture&gt;
-  &lt;source media="(min-width: 50em)" sizes="50vw" srcset="/image/thing"&gt;
-  &lt;img sizes="100vw" src="/image/thing-crop"&gt;
-&lt;/picture&gt;</code></pre>
-  <p>Developers can now negotiate with the server to download the best image variant for a device using straightforward HTTP request headers. These headers communicate DPR, Viewport-Width, and the intended display width of the resource being fetched to the server.</p>
-  <blockquote>The answer to a good and sustainable optimization strategy for images, and other resources with similar properties is simple: automation. If you’re hand-tuning your resources, you’re doing it wrong: you’ll forget, you’ll get lazy, or someone else will make these mistake for you—guaranteed.</blockquote>
-</section>
-
-<section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://googlechrome.github.io/samples/spread-operator/index.html">ES2015: "Spread" Operator</a></p>
-  <b>Old Way</b>
-<pre><code>function myFunction(x, y, z) { }
-var args = [0, 1, 2];
-myFunction.apply(null, args);</pre></code>
-  <b>Using Spread</b>
-<pre><code>function myFunction(x, y, z) { }
-var args = [0, 1, 2];
-myFunction(...args);
-
-// myFunction(-1, ...args, 2, ...[3]);</pre></code>
-</section>
-
-<section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-built-in-function-objects">new.target</a></p>
-<pre><code>'use strict';
-class Parent {
-  constructor() {
-    // new.target is a constructor reference, and new.target.name is human-friendly name.
-    console.log('Hello from Parent! ' + 'Constructed from ' + new.target.name + '()');
-  }
+  <h2>Chrome 47 &amp; 48</h2>
+  <ul>
+    <li>Array.prototype.includes</li>
+    <pre><code class="language-javascript">var basketOfApples = ['🍎', '🍏', '🍎', '🍏', '🌰', '🍎', '🍏'];
+if (basketOfApples.includes('🌰')) {
+  ChromeSamples.log('Your basket of apples contains a chestnut.');
+}
+// The old way still "works"...
+if (basketOfApples.indexOf('🌰') !== -1) {
+  ChromeSamples.log('Your basket of apples contains a chestnut.');
+}</code></pre>
+    <li>Rest parameters (ES6)</li>
+    <pre><code class="language-javascript">function listAnimalsArrows(...animals) {
+  animals.forEach(animal => ChromeSamples.log(animal));
 }
 
-class Child extends Parent {}
-
-function notAConstructor() {
-  console.log('Hello from notAConstructor()! My new.target is ' + new.target);
-}
-
-// Call all the constructors and the function when the page loads.
-new Parent();
-new Child();
-notAConstructor();</code></pre>
-  <pre>Hello from Parent! I was constructed via new Parent()
-Hello from Parent! I was constructed via new Child()
-Hello from notAConstructor()! My new.target is undefined</pre>
+listAnimalsArrows('🐯', '🐰', '🐘', '🐴', '🐥');</code></pre>
+  </ul>
 </section>
 
 <section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://www.igvita.com/2015/08/17/eliminating-roundtrips-with-preconnect/">Preconnect</a></p>
-  <img src="https://www.igvita.com/posts/15/font-preconnect.png"/>
-<pre><code>&lt;link href='https://fonts.gstatic.com' rel='preconnect' crossorigin&gt;
-&lt;link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans' rel='stylesheet'&gt;</pre></code>
+  <h2>Chrome (cont...)</h2>
+  <p>requestIdleCallback allows scheduling a task to run when the browser is idle. This makes it possible to perform background work on the main event loop, without impacting latency-critical events such as animation and input response.</p>
+  <pre><code class="language-javascript">requestIdleCallback(function (deadline) {
+  while (deadline.timeRemaining() > 0)
+    doWorkIfNeeded();
+});</code></pre>
 </section>
 
 <section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://googlechrome.github.io/samples/event-istrusted/index.html">Event.isTrusted</a>
-  <pre><code>var greenButton = document.querySelector('#greenButton');
-var redButton = document.querySelector('#redButton');
+  <h2>Chrome (cont...)</h2>
+  <ul>
+    <li>Unprefixed CSS Writing Modes with syntax updates</li>
+    <p style="color:rgba(0,0,0,.35);">CSS Writing Modes Level 3 without "webkit" prefix, along with syntax updates to the most recent CR.
 
-greenButton.addEventListener('click', function(event) {
-  if (event.isTrusted) {
-    ChromeSamples.log('User clicked the green button. It is a trusted event.');
-  } else {
-    ChromeSamples.log('User did NOT click the green button.');
-  }
-});
-
-redButton.addEventListener('click', function(event) {
-  greenButton.click();
-});
-
-// User clicked the green button. It is a trusted event.
-// User did NOT click the green button.</code></pre>
+   As part of the work, a non-standard value "horizontal-bt" is removed from -webkit-writing-mode.</p>
+    <li>min-width/height fixes &amp; auto implementation for flex items</li>
+    <li><a href="https://support.google.com/chrome/answer/99020?hl=en">5 million "safe browsing" messages.</a></li>
+  </ul>
 </section>
 
 <section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMException">Generate DOMException from script</a></p>
-  <pre><code>var domException = new DOMException(message, name)</code></pre>
-  <li>Useful for polyfills &amp; web components.</li>
-</section>
-
-
-<section class="slide">
-  <h2>Chrome 46</h2>
-  <p><a href="https://code.google.com/p/chromium/issues/detail?id=501380">Cache API is SSL Only</a><br/><br/>
-  Part of Google's initiative to disable powerful API's over insecure connections.
-  </p>
+  <h2>Chrome Devtools Security Panel</h2>
+  <ul>
+    <li>SSL Certificate Validation</li>
+    <li>Subresource security (does the site use insecure HTTP resources?)</li>
+    <li>View TLS Connection</li>
+    <li><a href="http://blog.chromium.org/2016/01/introducing-security-panel-in-devtools.html">More Details</a></li>
+  </ul>
+  <img src="https://lh3.googleusercontent.com/YwqjeEptAWMAI6GQx1n6u9Jp04ZITqU9kM1nIomrqyuzjPCja3ThMRxlbo3ySOrbgumae3jfP8g0SiP_wOaxskuGnUZZMoApdJywcmZRy1xp5CPkJoqppWrRDWjBZsHnGMYenb82"/>
 </section>
 
 <section class="slide">
-  <h2>Chrome 46 (Mobile)</h2>
-  <p><a href="https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web">Mobile Push Notifications</a> (full implementation)</p>
-  <img src="https://developers.google.com/web/updates/images/2015-03-04-push-on-the-open-web/push-message.gif"/>
+  <h2>Chrome Userland</h2>
+  <a href="https://chrome.google.com/webstore/detail/devtools-author/egfhcfdfnajldliefpdoaojgahefjhhi?hl=en-US">Devtools Author Themes (25 Themes)</a><br/><br/>
+  <img src="./images/themes.png"/>
 </section>
 
 <section class="slide">
-  <h2>Firefox 41</h2>
-  Security fixes on 41.0.1.
+  <h2>Firefox 44</h2>
+  <p><a href="https://www.mozilla.org/en-US/firefox/44.0/releasenotes/">Release Notes</a>
+  <ul>
+    <li>Obey <pre><code class="language-markup">&lt;link rel="prefetch" crossorigin/&gt;</code></pre></li>
+    <li>ES2015 Symbol prototype additions.</li>
+    <li>"let" &amp; "const" now comply with ES2015 semantics. (breaking changes)</li>
+    <li>The events mouseover, mouseout, mouseenter, mouseleave, pointermove, pointerover, pointerout, pointerenter and pointerleave are now triggered for disabled form elements.</li>
+    <li>CSS Writing Modes</li>
+    <li>position: fixed; now always creates a new stacking context (bugfix)</li>
+    <li>Service Worker API updates</li>
+    <li>Enable H.264 if system decoder is available</li>
+    <li>Enable WebM/VP9 video support on systems that don't support MP4/H.264</li>
+    <li>Improved warning pages for certificate errors and untrusted connections</li>
+    <li>Support the brotli compression format via HTTPS content-encoding</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox Service Worker &amp; Push Notifications</h2>
+  <img src="images/firefoxpushnotifications.png"/>
+  <img src="images/firefoxperms.png"/>
+  <pre><code class="language-javascript">self.addEventListener('push', function(event) {
+  event.waitUntil(
+    self.registration.showNotification('Example Notification', {
+      body: 'Hello, world!',
+    })
+  );
+})</code></pre>
+  <p>*Partial support in Chrome</p>
+</section>
+
+<section class="slide">
+  <h2>Aside: brotli compression</h2>
+  <p>What is it? Brotli is a compression algorithm from Google.</p>
+  <ul>
+    <li>Brotli outperforms gzip for typical web assets (e.g. css, html, js) by 17–25%.</li>
+    <li>Brotli -11 density compared to gzip -9:</li>
+    <li>html (multi-language corpus): 25% savings</li>
+    <li>js (alexa top 10k): 17% savings</li>
+    <li>minified js (alexa top 10k): 17% savings</li>
+    <li>css (alexa top 10k): 20% savings</li>
+  </ul>
 </section>
 
 <section class="slide">
   <h2>Opera 33</h2>
-  <h3><a href="https://dev.opera.com/blog/opera-33/">Release notes</a></h3>
+  <h3><a href="https://dev.opera.com/blog/opera-34/">Release notes</a></h3>
   <ul>
-    <li>Based on Chromium 46</li>
-    <li>Added preconnect, new.target, spread operator, etc.</li>
+    <li>Based on Chromium 47</li>
   </ul>
 </section>
 
-<section class="slide cover" style="background-image:url(https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?dpr=2&fit=crop&fm=jpg&h=1175&q=50&w=1875)">
-  <div class="content">
-    <h1 style="font-size:3em;">Safari 9: Prepare for amazement.<br/><span style="opacity: .5;">Is that WebRTC I see?</span></h1>
-  </div>
-  <div class="shim" style="opacity:.6;"></div>
-</section>
-
-<section class="slide cover" style="background-image:url(./images/disappointed.jpg)">
-  <div class="content">
-    <h1 style="font-size:3em;">Nope. No WebRTC.</h1>
-  </div>
-  <div class="shim" style="opacity:.6;"></div>
-</section>
-
 <section class="slide apple">
-  <h2>Safari 9</h2>
-  <p><a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Release Notes</a></p>
-  <b>Impressions</b>
-  <ol>
-    <li>Meh.</li>
-    <li>Hoped for WebRTC.</li>
-  </ol>
-</section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <img src="https://developer.apple.com/safari/images/tools-hero_2x.jpg"/>
-</section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <img src="https://developer.apple.com/safari/images/6_Storage_2x.jpg"/>
-</section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <img src="https://developer.apple.com/safari/images/responsive-mode_2x.jpg"/>
-</section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <p><a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_7_0.html#//apple_ref/doc/uid/TP40014305-CH5-SW7">AirPlay API</a></p>
-  <p><pre><code>if (window.WebKitPlaybackTargetAvailabilityEvent) {
-  video.addEventListener('webkitplaybacktargetavailabilitychanged', function(event) {
-    switch (event.availability) {
-      case "available": /* turn stuff on */
-      break;
-      case "not-available": /* turn AirPlay button off */
-      break;
-    }
-  })
-}
-</code></pre></p>
-</section>
-
-  <section class="slide">
-  <h2 style="color: orange !important; font-family: Arial; background-color: #232323; padding: 18px; text-align: center; position: absolute; top: 0; left: 0; right: 0; margin: 0 !important;z-index: 10;border-bottom: 0 !important;">webkitplaybacktargetavailabilitychanged = 39 characters!</h2>
-  <img src="https://indypopcon.com/wp-content/uploads/2015/03/Element-of-Surprise.jpg" style="z-index: 5; margin: auto; width: 40%; margin-top: 150px"/>
-  </section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <p><a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9.html">Picture in Picture</a></p>
-  <p><pre><code>if (video.webkitSupportsPresentationMode && typeof video.webkitSetPresentationMode === "function") {
-  // Toggle PiP when the user clicks the button.
-  pipButtonElement.addEventListener("click", function(event) {
-    video.webkitSetPresentationMode(video.webkitPresentationMode === "picture-in-picture" ? "inline" : "picture-in-picture");
-  });
-} else {
-  pipButtonElement.disabled = true;
-}</code></pre></p>
-</section>
-
-<section class="slide apple">
-  <h2>Safari 9</h2>
-  <p>ECMAScript 6 Enhancements</p>
-  <ul>
-    <li>Classes</li>
-    <li>Computed Properties</li>
-    <li>Weak Set</li>
-    <li>Number Object</li>
-    <li>Octal and Binary Literals</li>
-    <li>Symbol Objects</li>
-    <li>Template Literals</li>
-  </ul>
+  <h2>Safari 9.1</h2>
+  <p><a href="https://developer.apple.com/library/prerelease/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">Release Notes</a></p>
+  <h3>Picture Element Support</h3>
+  <pre><code class="language-markup">&lt;picture&gt;
+  &lt;source media="(min-width: 1000px)" srcset="picture_large.jpg"&gt;
+  &lt;source media="(min-width: 500px)" srcset="picture_small.jpg"&gt;
+  &lt;img src="picture_default.jpg"&gt;
+&lt;/picture&gt;</code></pre>
+  <h3>Better web inspector response times</h3>
+  <h3>WebGL rendering exposed to detect hardware capabilities.</h3>
 </section>
 
 <section class="slide">
-  <h2>Edge 13</h2>
-  <p><a href="https://dev.modern.ie/platform/changelog/desktop/10565/">Build 10565 Changelog</a></p>
-  <b><i>Mostly</i> consumer features:</b>
-  <li>Tab Preview (preview contents of a tab on hover)</li>
-  <li>Syncing Favorites and Reading list items</li>
-  <li>Drag and drop for file upload is now supported</li>
-  <li>"Save target as" is now supported from the right-click context menu</li>
-  <hr/>
-  <li>Initial support for docked F12 Developer Tools</li>
-  <li>CSS <a href="https://dev.modern.ie/platform/status/cssinitialvalue/">initial</a> support<br/><font style="font-size: smaller; opacity: .5;">(If the cascaded value of a property is the initial keyword, the property’s specified value is its initial value.)</font></li>
-  <li>CSS <a href="https://dev.modern.ie/platform/status/cssunsetvalue/">unset</a> support<br/><font style="font-size: smaller; opacity: .5;">(Treat as inherit or initial)</font></li>
+  <h2>Edge 10586</h2>
+  <li>Bug fixes.</li>
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -508,40 +323,37 @@ redButton.addEventListener('click', function(event) {
 <section class="slide">
   <h2>Notable Releases</h2>
   <ul>
-    <li><a href="https://nodejs.org/en/blog/release/v4.2.1/">Node 4.2.1</a> (Last month Node 4.0.0 was released)</li>
-    <li><a href="http://semantic-ui.com/">Semantic UI 2.1 (>20K Github Stars)</a> (Sep 13)</li>
+    <li><a href="https://nodejs.org/en/blog/release/v4.2.6/">Node 4.2.6 (LTS)</a> (Last time Node 4.2.1 was released)</li>
+    <li><a href="https://nodejs.org/en/blog/release/v5.5.0/">Node 5.5.0 (Stable)</a></li>
+    <li><a href="http://foundation.zurb.com/">Foundation 6</a></li>
+    <li><a href="http://blog.jquery.com/2016/01/14/jquery-3-0-beta-released">jQuery 3.0 Beta</a></li>
+    <li>Microsoft ChakraCore open sourced (Node)</li>
   </ul>
 </section>
 
+<section class="slide cover">
+  <h1 style="color: #111111">Another new browser?</h1>
+  <img src="images/bravebrowser.png" style="margin-top: 25vh;"/>
+</section>
+
 <section class="slide">
-  <h2>Node.js</h2>
+  <h2>Brave</h2>
+  <p>The new Brave browser blocks all the greed and ugliness on
+the Web that slows you down and invades your privacy. Then
+we put clean ads back, to fund website owners and Brave
+users alike. Users can spend their funds to go ad-free
+on their favorite sites.</p>
+  <blockquote>It's amazing how fast a page loads when you strip away
+everything but the real content.</blockquote>
+  <img src="images/pageload_graph.png"/>
   <ul>
-    <li>The Node 5.0.0 <a href="https://github.com/nodejs/node/pull/3466">release proposal</a> has been issued.</li>
-    <li>Node is considering an iteration on the official logo. <a href="https://github.com/nodejs/evangelism/issues/179">Submit your ideas</a>!</li>
+    <li>Led by Brendan Eich (Inventor of JavaScript)</li>
+    <li>Brave blocks harmful advertising</li>
+    <li>Brave redirects sites to HTTPS</li>
+    <li>Brave blocks Tracking Pixels and Tracking Cookies</li>
+    <li>Open Source (github.com/brave)</li>
   </ul>
 </section>
-
-<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
-
-<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
-  <div class="content">
-    <h1>And now for something completely different...</h1>
-  </div>
-  <div class="shim" style="background-color:#555;opacity:.7;"></div>
-</section>
-
-<section class="slide" style="background-color:#2B2E2F;">
-  <h2><a href="https://github.com/blog/2079-managing-large-files-with-git-lfs">Git LFS (Large File Storage)</a></h2>
-  <img src="https://cloud.githubusercontent.com/assets/3477155/10468085/592587d2-71ba-11e5-9bf3-e76bd8e81980.png"/>
-  <img src="https://cloud.githubusercontent.com/assets/3477155/10477627/84994564-720c-11e5-882f-da94958d887e.png"/>
-</section>
-
-<section class="slide">
-  <h2>Around the Community</h2>
-  <li><a href="http://dailyjs.com">The Return of @DailyJS?</a></li>
-</section>
-
-<!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
 
 <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
   <div class="content">
@@ -551,41 +363,12 @@ redButton.addEventListener('click', function(event) {
 </section>
 
 <section class="slide">
-  <h2>APIStrat</h2>
-  <p>Signup at <a href="http://austin2015.apistrat.com">austin2015.apistrat.com</a></p>
-  <ul>
-    <li>November 18-20, 2015</li>
-    <li>Sheraton Austin Hotel At The Capitol (E 11th)</li>
-    <li>$399 by Nov.5, $499 after.</li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Hacktoberfest</h2>
-  <img src="https://cloud.githubusercontent.com/assets/123345/10177312/d13f20be-66f9-11e5-8478-992126efc469.png"/>
-  <b>Get a free T-shirt.</b>
-  <ol>
-    <li>Sign up on the <a href="https://hacktoberfest.digitalocean.com/">Hacktoberfest</a> website right away.</li>
-    <li>Open at least four pull requests on any GitHub-hosted open source project(s) by October 31st, 2015</li>
-    <li>After the month is over, DigitalOcean will collect your shipping details and mail your shirt</li>
-  </ol>
-</section>
-
-<section class="slide">
-  <h2>Node.js Interactive</h2>
-  <li>December 8-9</li>
-  <li>Hilton - Portland, OR</li>
-  <li>Super Early Bird: $200 (SOLD OUT)</li>
-  <li>Early Bird: $325 (Expired 10/23)</li>
-  <li>Standard: $425 (Ends 11/21)</li>
-  <li>Late/Onsite: $525</li>
-  <a href="http://events.linuxfoundation.org/events/node-interactive">events.linuxfoundation.org/events/node-interactive</a>
-</section>
-
-<section class="slide">
-  <h2>Node Knockout</h2>
-  <li>Nov 7-8</li>
-  <li>Currently Full, but more spots will open soon on <a href="http://www.nodeknockout.com/">nodeknockout.com</a>.</li>
+  <h2>Local</h2>
+  <li><a href="http://www.meetup.com/Open-Austin/events/227920809/">Open Austin Civic Hack Night (2/2/16 @WeWork on Congress 6:30pm)</a></li>
+  <li><a href="http://bit.ly/1RZS7b8.">MakerPrep (2/1 - 2/27, $750)*</a></li>
+  <br/>
+  <h3>*FULL DISCLOSURE</h3>
+  <p>Bleeding Edge Web gets $50 towards the meetup for each person who uses this link to sign up.</p>
 </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
