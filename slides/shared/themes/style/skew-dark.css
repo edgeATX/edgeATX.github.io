@@ -19,11 +19,11 @@
       letter-spacing: -.05em; }
     /* line 22, skew-dark.scss */
     .deck-container .slide h3 {
-      color: #888888;
+      color: #cccccc;
       margin-bottom: .7em; }
     /* line 26, skew-dark.scss */
     .deck-container .slide h4 {
-      color: #888888; }
+      color: #cccccc; }
     /* line 31, skew-dark.scss */
     .deck-container .slide pre code {
       overflow: hidden;

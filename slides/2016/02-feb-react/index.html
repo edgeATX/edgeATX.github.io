@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: October 2015</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism.css">
+
+  <style>
+    .apple {
+      background: #ffffff !important;
+      color: #111111 !important;
+    }
+    .apple h2 {
+      color: #121212 !important;
+      border-bottom: 1px solid #000000 !important;
+    }
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+    #firstScissorHalf {
+      motion-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
+    }
+
+    #secondScissorHalf {
+      motion-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!--
+
+ Ideas:
+ upcoming stackoverflow docs
+
+
+-->
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">React.js Conf 2016 Recap</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;">Watch the videos (soon):<br>
+    <a href="http://conf.reactjs.com/">http://conf.reactjs.com/</a></h1>
+  </div>
+  <div class="shim" style="opacity:.5;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">React.js Conf 2016 Recap</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">Or...</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">React.js Conf 2016:<br>The Good Parts</h1>
+    <img src="./images/crockford.gif" style="position:absolute;bottom:0;left:40%;">
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<!-- - - - - - - - - - -  New Stuff  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <div class="content">
+    <h1>New Stuff</h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2015 - Quick Review</h2>
+  <h3><a href="https://facebook.github.io/react-native/">React Native</a></h3>
+  <p>New paradigm for mobile web app development</p>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2015 - Quick Review</h2>
+  <h3><a href="https://facebook.github.io/react-native/">React Native</a></h3>
+  <p>New paradigm for mobile web app development</p>
+  <h3><a href="https://facebook.github.io/relay/">Relay</a></h3>
+  <p>New framework for simplifying client-server data management</p>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2015 - Quick Review</h2>
+  <h3><a href="https://facebook.github.io/react-native/">React Native</a></h3>
+  <p>New paradigm for mobile web app development</p>
+  <h3><a href="https://facebook.github.io/relay/">Relay</a></h3>
+  <p>New framework for simplifying client-server data management</p>
+  <h3><a href="https://facebook.github.io/graphql/">GraphQL</a></h3>
+  <p>New query language designed for graph data, optimized for Relay</p>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/learn-all-the-things.png)"></section>
+
+<section class="slide title title-magenta">
+  <div class="content">
+    <h1>Developers, the next morning...</h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/zeppelin.png)"></section>
+
+<section class="slide title title-cyan">
+  <div class="content">
+    <h1>New Stuff<br>for 2016</h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2016 - New Stuff</h2>
+  <h3><a href="https://facebook.github.io/react-native/">React Native</a></h3>
+  <p>New paradigm for mobile web app development</p>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2016 - New Stuff</h2>
+  <h3><a href="https://facebook.github.io/react-native/">React Native</a></h3>
+  <p>OK, not really. That's just what it felt like :)</p>
+  <blockquote>We're investing heavily in React Native</blockquote>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2016 - New Stuff</h2>
+  <h3>React 15.0.0</h3>
+  <p>Release candidate shipping next week</p>
+  <p>No more React ids in the DOM, 10% faster
+  <p>Wondering about the <a
+  href="https://facebook.github.io/react/blog/2016/02/19/new-versioning-scheme.html">jump from v0.14</a>?
+</section>
+
+<section class="slide">
+  <h2>React Conf 2016 - New Stuff</h2>
+  <h3><a href="http://facebook.github.io/draft-js/">Draft.js</a></h3>
+  <blockquote>A framework for building rich text editors in React, powered by an immutable model</blockquote>
+  <p>Powers the richt text inputs on Facebook.com</p>
+  <img src="./images/draft.js.png">
+</section>
+
+<!-- - - - - - - - - - -  Top 5 Presos  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Rich Text Editing with React</h2>
+  ContentEditable - the good parts
+  Open sourced as Draft.js (http://facebook.github.io/draft-js/)
+</section>
+
+<section class="slide">
+  <h2>Web-like Release Agility</h2>
+  Side-loading app updates
+  CodePush (by MS) - cloud app deployment service
+  VisualStudio Code with React(Native) extensions (auto-complete for JS, JSX, build/breakpoints)
+
+  Future:
+  Update flighting/rollouts
+  Targeted releases
+  HockeyApp integration (http://hockeyapp.net/)
+
+  VS Team Services (VSTS)
+
+  https://microsoft.github.io/code-push/
+  https://code.visualstudio.com/
+  https://github.com/Microsoft/vscode-react-native
+</section>
+
+<section class="slide">
+  <h2>Rethinking All Practices: Building Applications in Elm</h2>
+  Let's not use "isomorphic applications" mmkay?
+  Elm - transpiles to JS
+  Reporting vs preventing errors
+  Flow - gradual typing - "code that is hard to type will not be typed"
+  Elm has static types (no runtime errors, no null type)
+  Enforces pure functions (no side effects)
+  Uses immutable data
+  Guides you to writing better programs
+</section>
+
+<section class="slide">
+  <h2>Speeding up Startup for Large React Apps</h2>
+  Packaging code modules
+  Move branching code to server so only one branch gets downloaded
+  Inline requires (lazy init)
+  No actual code, but good ideas that can be adapted
+</section>
+
+<section class="slide">
+  <h2>Universal GL Effects for Web and Native</h2>
+  gl-react (https://projectseptemberinc.gitbooks.io/gl-react/content/)
+  https://www.shadertoy.com/view/ld3Gz2
+  https://github.com/ProjectSeptemberInc
+  https://github.com/gre/gl-react-inspector
+</section>
+
+
+<!-- - - - - - - - - - -  The Rest  - - - - - - - - - - -->
+
+
+<section class="slide">
+  <h2>Keynote</h2>
+  3 priorities for 2016: execution, execution, execution
+  Mobile Ad Mgr - 80-90% code reuse, feels native, single team for iOS + Android
+  FB investing heavily in React Native - more consumer-facing apps on it
+  "Learn once, write anywhere" -> Horizontal platform
+</section>
+
+<section class="slide">
+  <h2>React: What Lies Ahead</h2>
+  UX:
+  1. Animations (mainly web)
+  2. Mobile gestures (simple API, pure JS)
+  3. Make lists fast - windowing, chunking, avoid reflows - "what if layout done in React"
+  D(eveloper)X:
+  1. New project standup
+     vim app.js
+     react run --platform=web app.js
+  2. Dev tools
+     react-devtools
+     react-transform-hmr
+     nuclide, deco
+  3. Data management - combine best of setState, reduc, relay
+  React 15.0 RC next week - no more react ids, 10% faster
+</section>
+
+
+<section class="slide">
+  <h2>A Cartoon Guide to the Wilds of Data Handling</h2>
+  High-level visual overview of Flux, Redux and Relay
+  https://code-cartoons.com/
+</section>
+
+<section class="slide">
+  <h2>Demystifying Tech Recruiting</h2>
+  Meh.
+</section>
+
+
+
+<section class="slide">
+  <h2>React, Meet Virtual Reality</h2>
+  Why VR? Creative tools, educational experience, togetherness
+  VR is hard - 8ms latency max, 60 fps (mobile) 90fps (web) min, separate rendering per eye
+  A-Frame (https://aframe.io/examples/showcase/anime-UI/)
+</section>
+
+<section class="slide">
+  <h2>Building a Progressive Web App</h2>
+  Flipkart - transitioned from web to app-only
+  India market - mostly 2G mobile connections
+  App Shell architecture - static UI shells generated at build time
+  Offline first - service workers
+  Reuse store data
+  Push notifications (via web workers) https://developers.google.com/web/fundamentals/getting-started/push-notifications/
+</section>
+
+<section class="slide">
+  <h2>How To Use React In A Wedding Gift Without Being A Bad Friend</h2>
+  Jeoparty
+  Hardware answer buttons + Raspberry Pi + Arduino + Johnny-Five + React + jService.io
+  Voice recognition for answering
+</section>
+
+<section class="slide">
+  <h2>Lightning Talks</h2>
+  Oy - Email templating with React (https://github.com/revivek/oy)
+  Gatsby - React static site generator from Markdown (https://github.com/gatsbyjs/gatsby)
+  NavigationExperimental - New React native component for navigation state management
+  Nuclide - Atom package for React native development, debugger, inspector, Flow support (http://nuclide.io/)
+  Fuse - Declarative UX framework (https://www.fusetools.com/)
+  Realm - Mobile DB for React native (https://realm.io/) - fast, async, object-based
+</section>
+
+====== DAY 2 ======
+
+<section class="slide">
+  <h2>Team × Technology</h2>
+  Exponent (https://exponentjs.com/)
+  Distribution for ReactNative mobile apps
+  Demos of mobile app performance
+  Team qualities for RN - open to new stuff, unafraid to look under the hood, mobile background
+  "Success comes from a hustler mindset, not experience with React"
+  "Experience with mobile more important than web experience"
+  "Draw lines of ownership between features rather than technologies"
+</section>
+
+
+
+<section class="slide">
+  <h2>Redux, Re-frame, Relay, Om/next, oh my!</h2>
+  State mgmt options:
+  PORC - Plain Old React Component
+  - Root component holds state
+  - easy to use, hard to manage
+  Redux
+  - declarative, immutable, encapsulated mutation logic, testable
+  - boilerplate - new action creation requires editing 3 files
+  Re-frame (closurescript, similar to Redux) - https://github.com/Day8/re-frame
+  - Subscription-based state change
+  Relay
+  - Server-defined GraphQL queries
+  - tight integration
+  - very high setup cost and complexity
+  Om/next - like Relay in ClosureScript
+  - Removes GraphQL server dependency
+  - Support for static and client-only state
+  Recommendations:
+  - Have conventions
+  - Use pure components
+</section>
+
+<section class="slide">
+  <h2>Lightning Talks</h2>
+  - Contribute to OSS
+  - ReactNative is awesome, but has issues
+  - Concept for streaming GraphQL
+  - ReactNative for Web - https://github.com/necolas/react-native-web
+  - "Learning" other languages improves your JS
+</section>
+
+<section class="slide">
+  <h2>Performance Without Compromise</h2>
+  How Netflix renders at 60fps in under 100ms on stick 465x slower than typical laptop
+  react-gibbon
+  Composition over inheritance
+  Higher-order components over mixins
+</section>
+
+<section class="slide">
+  <h2>A GraphQL Framework in Non-JS Servers</h2>
+  Overview of Falcor vs GraphQL
+  Graphene - Python implementation of GraphQL (http://graphene-python.org/)
+  Easier to maintain than REST
+  GraphiQL (docs)
+  Resolver = Parse + Firebase + Graphene (open source) - http://resolver.cloud/
+</section>
+
+<section class="slide">
+  <h2>Optimising React Native: Tools and Tips</h2>
+  Perf monitor
+  - Provides realtime RAM, view counts, UI/JS fps graphs on device
+  Systrace
+  - Default markers on boundary operations, native modules, React lifecycle methods
+  - Custom marker methods
+  CPU profiler
+  - Identify CPU heavy methods
+</section>
+
+<section class="slide">
+  <h2>Back to React</h2>
+  Cycle (http://cycle.js.org/)
+  Elm architecture
+</section>
+
+<section class="slide">
+  <h2>Lightning Talks</h2>
+  - react-armor (https://github.com/elierotenberg/react-armor)
+    Protect DOM from tampering using crypto transforms (ads, UA- scripts, etc)
+    obfuscate class name, tag name, DOM tree structure
+  - Enzyme (https://github.com/airbnb/enzyme)
+    Testing utils for React and RN
+    Find DOM nodes with $ like syntax, helpful for unit testing
+    react-native-mock (https://github.com/lelandrichardson/react-native-mock) - Mocks of the entire RN API
+  - Calypso (https://github.com/Automattic/wp-calypso) - open source of WordPress.com
+    Showcase of a large (100MM users) SPA
+  - RxJS (http://reactivex.io/) - "Observable done right"
+  - Scratch (https://scratch.mit.edu/)
+    Screact - prototype of Scratch outputting to RN on mobile
+</section>
+
+<section class="slide">
+  <h2>How To Use React In A Wedding Gift Without Being A Bad Friend</h2>
+  Jeoparty
+  Hardware answer buttons + Raspberry Pi + Arduino + Johnny-Five + React + jService.io
+  Voice recognition for answering
+</section>
+
+<!-- - - - - - - - - - -  Last but not least  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <div class="content">
+    <h1>Last But<br>Not Least</h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+<h2>React Project</h2>
+<p>By Ryan Florence of React Router fame</p>
+<blockquote>A dependency--not a boilerplate--to make your React project a delight to develop</blockquote>
+<img src="./images/react-project.png">
+</section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+
+    var firstScissorHalf = document.querySelector('#firstScissorHalf');
+    var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+    var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+    var positionTiming = {duration: 12000, iterations: Infinity};
+    firstScissorHalf.animate(positionKeyframes, positionTiming);
+    secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+    var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+    var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+    var rotationTiming = {duration: 1000, iterations: Infinity};
+    firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+    secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+  });
+</script>
+</body>
+</html>
