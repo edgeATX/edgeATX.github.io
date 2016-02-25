@@ -87,7 +87,7 @@
 <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
   <div class="content">
     <h1 style="font-size:3em;">Watch the videos (soon):<br>
-    <a href="http://conf.reactjs.com/">http://conf.reactjs.com/</a></h1>
+    <span style="font-size:70%;"><a href="http://conf.reactjs.com/">http://conf.reactjs.com/</a></span></h1>
   </div>
   <div class="shim" style="opacity:.5;"></div>
 </section>
@@ -121,6 +121,11 @@
     <h1>New Stuff</h1>
   </div>
   <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>React Conf 2015 - Quick Review</h2>
+  <p>First, a quick reminder of what we got in 2015...</p>
 </section>
 
 <section class="slide">
@@ -303,6 +308,12 @@
   fatigue</a>" it's probably OK to slow down a little</p>
 </section>
 
+<section class="slide">
+  <h2>React Conf 2016 - New Stuff</h2>
+  <h3>The community is cranking out plenty of "new stuff"</h3>
+  <p>React Router, Redux...</p>
+</section>
+
 <!-- - - - - - - - - - -  Top 5 Presos  - - - - - - - - - - -->
 
 <section class="slide title title-cyan">
@@ -310,6 +321,14 @@
     <h1>ICYMI: Top<br>5 Talks</h1>
   </div>
   <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Top 5 Talks</h2>
+  <h3>If you only have a couple of hours...</h3>
+  <p>There were 18 presentations and 20+ lightning talks</p>
+  <p>Over 11 hours of content</p>
+  <p>These are my top 5 picks...</p>
 </section>
 
 <section class="slide">
@@ -353,207 +372,103 @@
     <li>Systrace: markers for boundary operations, native modules, lifecycle methods</li>
     <li>CPU profiler: Debug CPU bottlenecks</li>
   </ul>
+  <img src="./images/react-perf.png">
 </section>
 
 <section class="slide">
   <h2>Universal GL Effects for Web and Native</h2>
   <h3>Most impressive</h3>
-  gl-react (https://projectseptemberinc.gitbooks.io/gl-react/content/)
-  https://www.shadertoy.com/view/ld3Gz2
-  https://github.com/ProjectSeptemberInc
-  https://github.com/gre/gl-react-inspector
+  <p>Really amazing demos and libraries for React</p>
+  <ul>
+    <li><a href="https://projectseptemberinc.gitbooks.io/gl-react/content/">gl-react</a></li>
+    <li><a href="https://github.com/ProjectSeptemberInc/gl-react-native">gl-react-native</a></li>
+    <li><a href="https://github.com/gre/gl-react-inspector">gl-react-inspector</a></li>
+  </ul>
+  <img src="./images/gl-react.gif">
 </section>
 
 <section class="slide">
   <h2>Rethinking All Practices: Building Applications in Elm</h2>
   <h3>Most entertaining</h3>
-
-  Let's not use "isomorphic applications" mmkay?
-  Elm - transpiles to JS
-  Reporting vs preventing errors
-  Flow - gradual typing - "code that is hard to type will not be typed"
-  Elm has static types (no runtime errors, no null type)
-  Enforces pure functions (no side effects)
-  Uses immutable data
-  Guides you to writing better programs
+  <p>Overview of <a href="http://elm-lang.org/">Elm</a> and why React devs will like it</p>
+  <ul>
+    <li>Transpiles to JS</li>
+    <li>Pure functions, immutable data</li>
+    <li>"No runtime exceptions"</li>
+  </ul>
+  <img src="./images/elm.png" style="width:70%;">
 </section>
 
 <!-- - - - - - - - - - -  The Rest  - - - - - - - - - - -->
 
-
-<section class="slide">
-  <h2>Keynote</h2>
-  3 priorities for 2016: execution, execution, execution
-  Mobile Ad Mgr - 80-90% code reuse, feels native, single team for iOS + Android
-  FB investing heavily in React Native - more consumer-facing apps on it
-  "Learn once, write anywhere" -> Horizontal platform
+<section class="slide title title-cyan">
+  <div class="content">
+    <h1>Other Highlights<br><span style="font-size:50%;">(Not exhaustive)</span></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
 </section>
 
 <section class="slide">
   <h2>React: What Lies Ahead</h2>
-  UX:
-  1. Animations (mainly web)
-  2. Mobile gestures (simple API, pure JS)
-  3. Make lists fast - windowing, chunking, avoid reflows - "what if layout done in React"
-  D(eveloper)X:
-  1. New project standup
-     vim app.js
-     react run --platform=web app.js
-  2. Dev tools
-     react-devtools
-     react-transform-hmr
-     nuclide, deco
-  3. Data management - combine best of setState, reduc, relay
-  React 15.0 RC next week - no more react ids, 10% faster
+  <p>Insights into what the FB team are looking at</p>
+  <p>Mobile stuff, easier onboarding, data management</p>
+  <p>Theme: "please help us" :)</p>
 </section>
-
 
 <section class="slide">
   <h2>A Cartoon Guide to the Wilds of Data Handling</h2>
-  High-level visual overview of Flux, Redux and Relay
-  https://code-cartoons.com/
+  <h3><a href="https://code-cartoons.com/">Code Cartoons</a></h3>
+  <p>High-level visual overview of Flux, Redux and Relay</p>
+  <img src="./images/code-cartoons.png" style="width:60%;">
 </section>
-
-<section class="slide">
-  <h2>Demystifying Tech Recruiting</h2>
-  Meh.
-</section>
-
-
 
 <section class="slide">
   <h2>React, Meet Virtual Reality</h2>
-  Why VR? Creative tools, educational experience, togetherness
-  VR is hard - 8ms latency max, 60 fps (mobile) 90fps (web) min, separate rendering per eye
-  A-Frame (https://aframe.io/examples/showcase/anime-UI/)
-</section>
-
-<section class="slide">
-  <h2>Building a Progressive Web App</h2>
-  Flipkart - transitioned from web to app-only
-  India market - mostly 2G mobile connections
-  App Shell architecture - static UI shells generated at build time
-  Offline first - service workers
-  Reuse store data
-  Push notifications (via web workers) https://developers.google.com/web/fundamentals/getting-started/push-notifications/
+  <p>Because VR is always awesome :)</p>
+  <img src="./images/vr.png" style="width:80%;">
 </section>
 
 <section class="slide">
   <h2>How To Use React In A Wedding Gift Without Being A Bad Friend</h2>
-  Jeoparty
-  Hardware answer buttons + Raspberry Pi + Arduino + Johnny-Five + React + jService.io
-  Voice recognition for answering
+  <h3>Jeoparty</h3>
+  <p>Hardware buttons + Raspberry Pi + Arduino + Johnny-Five + React + jService.io</p>
+  <img src="./images/jeoparty.png">
 </section>
 
 <section class="slide">
-  <h2>Lightning Talks</h2>
-  Oy - Email templating with React (https://github.com/revivek/oy)
-  Gatsby - React static site generator from Markdown (https://github.com/gatsbyjs/gatsby)
-  NavigationExperimental - New React native component for navigation state management
-  Nuclide - Atom package for React native development, debugger, inspector, Flow support (http://nuclide.io/)
-  Fuse - Declarative UX framework (https://www.fusetools.com/)
-  Realm - Mobile DB for React native (https://realm.io/) - fast, async, object-based
+  <h2>Interesting Lightning Talks</h2>
+  <ul>
+    <li><a href="https://github.com/revivek/oy">Oy</a>: Email templating with React</li>
+    <li><a href="https://github.com/gatsbyjs/gatsby">Gatsby</a>: React static site generator from Markdown</li>
+    <li><a href="http://nuclide.io/">Nuclide</a>: Atom package for React native development, debugger, inspector, Flow support</li>
+    <li><a href="https://www.fusetools.com/">Fuse</a>: Declarative UX framework</li>
+    <li><a href="https://realm.io/">Realm</a>: Mobile DB for React native</li>
+    <li><a href="https://github.com/necolas/react-native-web/">React Native for Web</a>: React Native components and APIs for the Web</li>
 </section>
-
-====== DAY 2 ======
-
-<section class="slide">
-  <h2>Team × Technology</h2>
-  Exponent (https://exponentjs.com/)
-  Distribution for ReactNative mobile apps
-  Demos of mobile app performance
-  Team qualities for RN - open to new stuff, unafraid to look under the hood, mobile background
-  "Success comes from a hustler mindset, not experience with React"
-  "Experience with mobile more important than web experience"
-  "Draw lines of ownership between features rather than technologies"
-</section>
-
-
 
 <section class="slide">
   <h2>Redux, Re-frame, Relay, Om/next, oh my!</h2>
-  State mgmt options:
-  PORC - Plain Old React Component
-  - Root component holds state
-  - easy to use, hard to manage
-  Redux
-  - declarative, immutable, encapsulated mutation logic, testable
-  - boilerplate - new action creation requires editing 3 files
-  Re-frame (closurescript, similar to Redux) - https://github.com/Day8/re-frame
-  - Subscription-based state change
-  Relay
-  - Server-defined GraphQL queries
-  - tight integration
-  - very high setup cost and complexity
-  Om/next - like Relay in ClosureScript
-  - Removes GraphQL server dependency
-  - Support for static and client-only state
-  Recommendations:
-  - Have conventions
-  - Use pure components
-</section>
-
-<section class="slide">
-  <h2>Lightning Talks</h2>
-  - Contribute to OSS
-  - ReactNative is awesome, but has issues
-  - Concept for streaming GraphQL
-  - ReactNative for Web - https://github.com/necolas/react-native-web
-  - "Learning" other languages improves your JS
+  <p>Good overview of app state management options</p>
+  <p><a href="https://github.com/Day8/re-frame">Re-frame</a>: ClosureScript, similar to Redux
 </section>
 
 <section class="slide">
   <h2>Performance Without Compromise</h2>
-  How Netflix renders at 60fps in under 100ms on stick 465x slower than typical laptop
-  react-gibbon
-  Composition over inheritance
-  Higher-order components over mixins
+  <p>How Netflix renders at 60fps in under 100ms on tv stick 465x slower than a laptop</p>
+  <img src="./images/netflix.jpg">
 </section>
 
 <section class="slide">
   <h2>A GraphQL Framework in Non-JS Servers</h2>
-  Overview of Falcor vs GraphQL
-  Graphene - Python implementation of GraphQL (http://graphene-python.org/)
-  Easier to maintain than REST
-  GraphiQL (docs)
-  Resolver = Parse + Firebase + Graphene (open source) - http://resolver.cloud/
+  <p>Overview of Falcor vs GraphQL</p>
+  <p><a href="http://graphene-python.org/">Graphene</a>: Python implementation of GraphQL
+  <p><a href="http://resolver.cloud/">Resolver</a> = Parse + Firebase + Graphene (open source)
 </section>
 
 <section class="slide">
   <h2>Speeding up Startup for Large React Apps</h2>
-  Packaging code modules
-  Move branching code to server so only one branch gets downloaded
-  Inline requires (lazy init)
-  No actual code, but good ideas that can be adapted
-</section>
-
-<section class="slide">
-  <h2>Back to React</h2>
-  Cycle (http://cycle.js.org/)
-  Elm architecture
-</section>
-
-<section class="slide">
-  <h2>Lightning Talks</h2>
-  - react-armor (https://github.com/elierotenberg/react-armor)
-    Protect DOM from tampering using crypto transforms (ads, UA- scripts, etc)
-    obfuscate class name, tag name, DOM tree structure
-  - Enzyme (https://github.com/airbnb/enzyme)
-    Testing utils for React and RN
-    Find DOM nodes with $ like syntax, helpful for unit testing
-    react-native-mock (https://github.com/lelandrichardson/react-native-mock) - Mocks of the entire RN API
-  - Calypso (https://github.com/Automattic/wp-calypso) - open source of WordPress.com
-    Showcase of a large (100MM users) SPA
-  - RxJS (http://reactivex.io/) - "Observable done right"
-  - Scratch (https://scratch.mit.edu/)
-    Screact - prototype of Scratch outputting to RN on mobile
-</section>
-
-<section class="slide">
-  <h2>How To Use React In A Wedding Gift Without Being A Bad Friend</h2>
-  Jeoparty
-  Hardware answer buttons + Raspberry Pi + Arduino + Johnny-Five + React + jService.io
-  Voice recognition for answering
+  <p>Great ideas for app loading / performance</p>
+  <p>No libraries, just good coding patterns</p>
 </section>
 
 <!-- - - - - - - - - - -  Last but not least  - - - - - - - - - - -->
@@ -566,10 +481,38 @@
 </section>
 
 <section class="slide">
-<h2>React Project</h2>
-<p>By Ryan Florence of React Router fame</p>
-<blockquote>A dependency--not a boilerplate--to make your React project a delight to develop</blockquote>
-<img src="./images/react-project.png">
+  <h2>React Project</h2>
+  <p>By Ryan Florence of React Router fame</p>
+  <blockquote>A dependency--not a boilerplate--to make your React project a delight to develop</blockquote>
+  <img src="./images/react-project.png">
+</section>
+
+<section class="slide title title-cyan">
+  <div class="content">
+    <h1>In Summary</h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">React ecosystem is rocking!</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">Use React Native!</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/react-logo.png)">
+  <div class="content">
+    <h1 style="font-size:3em;">Contribute to the community!</h1>
+  </div>
+  <div class="shim" style="opacity:.3;"></div>
 </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
