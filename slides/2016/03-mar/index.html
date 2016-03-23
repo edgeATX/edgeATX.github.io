@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: March 2016</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme -- include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    .browsers td {
+      text-align: center;
+    }
+    .browsers .ver {
+      font-size: 2.5em;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+<!--
+
+ Ideas:
+ upcoming stackoverflow docs
+
+
+-->
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/slack.png)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="mailto:bleedingedgeatx@gmail.com">edgeatx.slack.com<br/>bleedingedgeatx@gmail.com</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Bleeding Edge Web: March 2016</h2>
+
+  <h3>Announcements</h3>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau  (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Go: A Practical Start Guide</h3>
+  <p>&mdash; Jud White  (<a href="https://twitter.com/judson_white">@judson_white</a>) - <a
+    a href="http://go-talks.appspot.com/github.com/judwhite/talks-edgeatx/talk.slide">slides</a> /
+    <a href="https://github.com/judwhite/talks-edgeatx">code</a></p>
+
+  <h3>Lightning Talks</h3>
+  <ul>
+    <li>My Experience Building <a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a> in Go
+      &mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</li>
+    <li>Building a Go Imaging Server &mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</li>
+  </ul>
+</section>
+
+<!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+<section class="slide" style="background:#4598e9;color:#fff;">
+  <p>Thanks to our venue sponsor:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><img src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></p>
+  </div>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/hired.png); color:#ffffff;">
+  <p>Thanks (again) to our beverage sponsor:</p>
+</section>
+
+<section class="slide" style="background:#363A44;color:#ffffff;">
+  <p>Thanks to our food sponsor:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://vestu.com/"><img src="./images/vestu.png" alt="VestU.com"></a></p>
+  </div>
+</section>
+
+<!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; February 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">48</td>
+      <td class="ver">44</td>
+      <td class="ver">35</td>
+      <td class="ver">14</td>
+      <td class="ver">9</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of March 23, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver"><span class="strike dim">48</span><br><strong style="color:#1CA727">49</strong></td>
+      <td class="ver"><span class="strike dim">35</span><br><strong style="color:#1CA727">36</strong></td>
+      <td class="ver"><span class="strike dim">44</span><br><strong style="color:#1CA727">45</strong></td>
+      <td class="ver">14</td>
+      <td class="ver"><span class="strike dim">9</span><br><strong style="color:#1CA727">9.1 (!)</strong></td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36</h2>
+  <p><a href="https://dev.opera.com/blog/opera-36/">Release Notes</a>
+  <ul>
+    <li>Both based on Chromium 49</li>
+    <li>Lots of new ES2015 and CSS features</li>
+    <li>Enhanced Web Audio support</li>
+    <li>Lots of other stuff!</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 default function param values</h3>
+  <pre><code>function foo (msg = 'hello') {
+  console.log(msg);
+}
+foo(); // 'hello'</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 <a href="https://googlechrome.github.io/samples/destructuring-es6/">destructuring</a> syntax</h3>
+  <pre><code>let a, b, rest;
+[a, b] = [1, 2];
+// → a = 1; b = 2
+
+[a, b, ...rest] = [1, 2, 3, 4, 5];
+// → a = 1; b = 2; rest = [3, 4, 5]
+
+{a, b} = { a: 1, b: 2 };
+// → a = 1; b = 2</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 Proxies / Reflection</h3>
+  <blockquote>Proxies enable us to trap or intercept all of the operations on a target object and
+    modify how this target operates.</blockquote>
+  <p>Example <a href="https://developers.google.com/web/updates/2016/02/es2015-proxies">use cases</a>:</p>
+  <ul>
+    <li>Modifying object instance behavior</li>
+    <li>API enforcement &amp; validation</li>
+    <li>Profiling, logging, access control</li>
+    <li>Middleware-style AOP programming</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 Proxies / Reflection</h3>
+  <pre><code>var birthDateValidator = {
+  set: function(obj, prop, value) {
+    if (prop === 'birthDate' &amp;&amp; value &lt; 21) {
+      throw new RangeError('Under age!');
+    }
+    obj[prop] = value;
+  }
+};
+
+var person = new Proxy({}, birthDateValidator);
+
+person.birthDate = 1980;
+console.log(person.birthDate); // 1980
+person.yearOfBirth = 2001; // Throws exception</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>CSS Custom Properties (aka <a
+    href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care">CSS Variables</a>)</h3>
+  <ul>
+    <li>Enables dynamic property values at runtime</li>
+    <li>Reduces clutter and code duplication</li>
+    <li>Similar to SASS / LESS variables</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>CSS Custom Properties (aka <a
+    href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care">CSS Variables</a>)</h3>
+  <pre><code class="language-css">:root {
+  --primary-color: blue;
+  --spacing: 10;
+}
+.heading {
+  color: var(--primary-color);
+  margin-top: calc(var(--spacing) * 1px);
+  margin-bottom: calc(var(--spacing) * 2px);
+}</code></pre>
+<p>Check out <a href="https://googlechrome.github.io/samples/css-custom-properties/">this demo</a></p>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <ul>
+    <li>Audio Output Devices API support</li>
+    <li><code>Event.timeStamp</code> now has <em>5 microsecond</em> resolution</li>
+    <li>Native <a href="https://developers.google.com/web/updates/2016/02/smooth-scrolling-in-chrome-49">smooth scrolling</a></li>
+    <li>Note: the Geolocation API now requires HTTPS</li>
+    <li><a href="https://dev.opera.com/blog/opera-36/">Lots of other stuff</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox 45</h2>
+  <p><a href="https://developer.mozilla.org/en-US/Firefox/Releases/45">Release Notes</a>
+  <ul>
+    <li>Developer tools improvements</li>
+    <li>CSS Grid enhancements, no longer "experimental"</li>
+    <li>ES2015 Class syntax now enabled by default</li>
+    <li>WebGL and Service Worker improvements</li>
+    <li>Support for the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis">text-emphasis</a> CSS property</li>
+    <li><a href="https://developer.mozilla.org/en-US/Firefox/Releases/45">Lots of other stuff</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Edge 14</h2>
+  <p><a href="https://dev.windows.com/en-us/microsoft-edge/platform/changelog/desktop/14291/">Build 14291 Release Notes</a>
+  <p>Added preview support for the <a href="https://en.wikipedia.org/wiki/VP9">VP9 video format</a></p>
+  <ul>
+    <li>Open, royalty-free video codec (developed by Google)</li>
+    <li>Offers reduced bitrate and better compression</li>
+    <li>Supported in Chromium and Firefox</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <h3>Holy crap, a non-trivial minor version bump!</h3>
+  <p><a href="https://developer.apple.com/library/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">Release Notes</a></p>
+  <ul>
+    <li>Support for HTML5 <code>&lt;picture&gt;</code></li>
+    <li>CSS Variable support added (as in Chromium)</li>
+    <li>Gesture event (pinch, rotation) support on OSX</li>
+    <li>Lots of web inspector improvements</li>
+    <li><a href="https://developer.apple.com/library/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">A few other things</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <h3>Fast-Tap on iOS</h3>
+  <p><em>No more 350ms tap delay in mobile Safari!</em></p>
+  <ul>
+    <li>Automatic on any page with<br><code>width=device-width</code> or <code>user-scalable=no</code></li>
+    <li>Opt-in per element via CSS <code>touch-action</code> property</li>
+    <li>Mobile Chrome has supported this since version 32!</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>Safari's standards support has been... unimpressive</p>
+  <p>According to the Kangax <a href="http://kangax.github.io/compat-table/es6/">ES2015 compatibility table</a>:</li>
+  <ul>
+    <li>Safari 7 (Oct 2013): <a href="http://kangax.github.io/compat-table/es6/#safari7">10%</a></li>
+    <li>Safari 8 (Oct 2014): <a href="http://kangax.github.io/compat-table/es6/#safari71_8">21%</a></li>
+    <li>Safari 9 (Oct 2015): <a href="http://kangax.github.io/compat-table/es6/#safari9">53%</a></li>
+  </ul>
+  <img src="./images/kangax-desktop.png">
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>However, if you look at the latest WebKit...</p>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <img src="./images/kangax-webkit.png">
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>WebKit nightlies now support <span style="font-size:2em;color:green;">98%</span> of ES2015! What?!</p>
+  <p>So, here's my (hopeful) prediction...</p>
+</section>
+
+<section class="slide">
+  <h2>Safari 10</h2>
+  <ul>
+    <li>Coming in October 2016</li>
+    <li>Will become the most standards-compliant browser available</li>
+  </ul>
+  <p style="font-size:2em;text-align:center;">Developers will rejoice!</p>
+</section>
+
+<section class="slide">
+  <h3>Well, until we start looking at ESNext...</h3>
+  <img src="./images/kangax-esnext.png">
+</section>
+
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://facebook.github.io/react/blog/2016/03/07/react-v15-rc1.html">React 15.0 (RC)</a></h3>
+  <ul>
+    <li>Released March 7</li>
+    <li>Version jumped from 0.14 &rarr; 15.0</li>
+    <li>Major internal changes, some breaking</li>
+    <li>Dropped IE8 support</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://github.com/expressjs/express">Express</a> 5.0</h3>
+  <p>Initial <a href="https://github.com/expressjs/express/pull/2237">tracking issue</a> opened July 14, 2014</p>
+  <p>Lots of steady activity, and then a few weeks ago...</p>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://github.com/expressjs/express">Express</a> 5.0</h3>
+  <p><a href="https://github.com/expressjs/express/pull/2237#issuecomment-189510525">This</a> happened:</p>
+  <img src="./images/closing-express.png">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://github.com/expressjs/express">Express</a> 5.0</h3>
+  <p>Doug Wilson, repo maintainer, just quit. D'oh.</p>
+  <p>Full back story <a
+    href="https://www.reddit.com/r/javascript/comments/47s9o8/im_closing_down_express_50/d0fpm6g">here</a>
+  <p>Future unclear...</p>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>An open source project by a guy named <a href="https://github.com/azer">Azer</a></p>
+  <p>Here's the entire code:</p>
+  <pre><code>function leftpad (str, len, ch) {
+  str = String(str);
+  var i = -1;
+
+  if (!ch &amp;&amp; ch !== 0) ch = ' ';
+  len = len - str.length;
+
+  while (++i &lt; len) {
+    str = ch + str;
+  }
+  return str;
+}</code></pre>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>So why is that interesting?</p>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>So why is that interesting?</p>
+  <ul>
+    <li>Azer wrote a separate library called <a href="https://github.com/starters/kik">kik</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>So why is that interesting?</p>
+  <ul>
+    <li>Azer wrote a separate library called <a href="https://github.com/starters/kik">kik</a></li>
+    <li>On Tuesday someone from <a href="http://www.kik.com/">Kik.com</a> threatened him to get the name</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>So why is that interesting?</p>
+  <ul>
+    <li>Azer wrote a separate library called <a href="https://github.com/starters/kik">kik</a></li>
+    <li>On Tuesday someone from <a href="http://www.kik.com/">Kik.com</a> threatened him to get the name</li>
+    <li>npm Inc. sided with Kik.com and transferred ownership to them</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>In response, Azer decided to unpublish kik from npm.</p>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>In response, Azer decided to unpublish kik from npm.</p>
+  <p style="font-size:1.3em;color:#ff3333;">Plus all 250+ of his other projects, including left-pad.</p>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>left-pad was fetched from npm <span style="font-size:1.3em">2.5 million</span> times last month</p>
+  <p>It's a dependency of Node, Babel and thousands of other key projects</p>
+  <p><img src="./images/left-pad-npm.png">
+</section>
+
+<section class="slide cover" style="background-image:url(./images/nuclear.jpg)">
+  <h1>Stuff started<br>breaking</h1>
+  <div class="shim" style="background-color:#333333;opacity:.5;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/azer/left-pad">left-pad</a></h2>
+  <p>Overview of the saga <a href="http://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/">here</a></p>
+  <p><a href="https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c#.b2jkunwly">Azer's
+    explanation</a> and <a href="https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.jegel154x">Kik.com's take</a>
+  <p>It was fixed quickly (npm restored left-pad manually)</p>
+  <p>But lots of things left to think about...</p>
+</section>
+
+<section class="slide title title-cyan">
+  <h1>Wow, that<br>was kind of<br>depressing</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(./images/cute.jpg)">
+  <h1>Cute Break</h1>
+  <div class="shim" style="background-color:#333333;opacity:.4;"></div>
+</section>
+
+<!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+  <div class="content">
+    <h1>In Case You<br>Missed It</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://zachholman.com/posts/deploying-software">How to Deploy Software</a></h2>
+  <p>By <a href="https://twitter.com/holman">Zach Holman</a> of Github fame</p>
+  <p>Comprehensive overview of the deployment landscape</p>
+  <p>Required reading if you deploy software!</p>
+  <img src="./images/how-to-deploy.png">
+</section>
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://www.twilio.com/docs/tutorials">Twilio Tutorial Site</a></h2>
+  <p>Unique annotated code walkthroughs</p>
+  <p>Specific to Twilio's libraries, but great inspiration anyway</p>
+  <img src="./images/twilio.png">
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/JonathanUsername/nplaym">NPlayM</a></h2>
+  <blockquote>Play a Space-Invaders-like game while you're installing your node_modules!</blockquote>
+  <img src="./images/nplaym.png" style="border:2px solid #444;">
+  <p>Because... space invaders</p>
+</section>
+
+<!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+  <div class="content">
+    <h1>Upcoming<br>Events</h1>
+  </div>
+  <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.meetup.com/austinwordpress/events/228432694/">do_action: WP Charity Hackathon</a></h2>
+  <blockquote>Spend one day building WordPress sites for 10 deserving non-profits</blockquote>
+  <ul>
+    <li>Free to attend</li>
+    <li>Audience: WP developerss / designers</li>
+    <li>Fri, April 8, 8am - evening</li>
+    <li>At Vuka in South Austin</li>
+</section>
+
+<section class="slide">
+  <h2><a href="https://www.eventbrite.com/e/angelhack-austin-2016-tickets-22754375951">AngelHack Austin 2016</a></h2>
+  <blockquote>Build a technology that will have a positive impact on the world, people, or environment</blockquote>
+  <ul>
+    <li>$10 to attend, prizes for winners</li>
+    <li>Audience: developers, designers and entrepreneurs</li>
+    <li>Sat, April 9, 9am - Sun, April 10, 5pm</li>
+    <li>At MakerSquare in downtown Austin</li>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.meetup.com/Austin-TechBreakfast/events/226656332/">Austin TechBreakfast</a></h2>
+  <blockquote>At this monthly breakfast get-together techies, developers, designers, and entrepreneurs
+    learn from their peers through show &amp; tell style presentations</blockquote>
+  <ul>
+    <li>Free to attend</li>
+    <li>Audience: developers, designers and entrepreneurs</li>
+    <li>Thu, April 14, 8am - 9:30am</li>
+    <li>At Capital Factory</li>
+</section>
+
+<section class="slide">
+  <h2><a href="http://conferences.oreilly.com/oscon/open-source-us">OSCON 2016</a></h2>
+  <blockquote>Explore what's new in open source languages, tools, and techniques</blockquote>
+  <ul>
+    <li>$$$ to attend</li>
+    <li>Audience: developers</li>
+    <li>May 16-17 (tutorials) &amp; 18-19 (conference)</li>
+    <li>At Austin Convention Center</li>
+    <li><a href="http://conferences.oreilly.com/oscon/open-source-us/public/schedule/detail/50403">OSCON
+      Kids Day</a> on Sunday, May 15</li>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.mvpmix.com/">MVP MIX</a></h2>
+  <blockquote>It's a 2-day training in .Net, HTML5, JavaScript, EcmaScript, Web API and REST, Sharepoint, and other awesome technologies</blockquote>
+  <ul>
+    <li>$75+ to attend (<a href="https://www.eventbrite.com/e/mvp-mix-dallas-2016-tickets-21238317379?discount=Meetup">$20 discount</a> with code "Meetup")</li>
+    <li>Audience: .NET developers</li>
+    <li>May 27-28</li>
+    <li>At Addison Convention Center (Dallas)</li>
+</section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs
+    $('a').attr('target', '_blank');
+
+    var firstScissorHalf = document.querySelector('#firstScissorHalf');
+    var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+    var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+    var positionTiming = {duration: 12000, iterations: Infinity};
+    // firstScissorHalf.animate(positionKeyframes, positionTiming);
+    // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+    var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+    var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+    var rotationTiming = {duration: 1000, iterations: Infinity};
+    // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+    // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+  });
+</script>
+</body>
+</html>
