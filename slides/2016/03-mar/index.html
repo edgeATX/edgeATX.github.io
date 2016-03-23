@@ -22,9 +22,6 @@
   <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
   <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
 
-  <!-- Style theme. More available in /themes/style/ or create your own. -->
-  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
-
   <!-- Transition theme. More available in /themes/transition/ or create your own. -->
   <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
 
@@ -32,8 +29,11 @@
   <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
 
   <!-- Preety print -->
-  <script src="../../shared/prism/prism.js"></script>
-  <link rel="stylesheet" href="../../shared/prism/prism.css">
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme -- include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
 
   <style>
     .title-cyan {
@@ -173,12 +173,12 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; February 2016:</p>
+  <p>Last version check &mdash; February 24, 2016:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
-      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
       <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
       <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
@@ -186,8 +186,8 @@
       <td class="ver">48</td>
       <td class="ver">44</td>
       <td class="ver">35</td>
-      <td class="ver">10586</td>
-      <td class="ver">9.0.1</td>
+      <td class="ver">14</td>
+      <td class="ver">9</td>
     </tr>
   </table>
 </section>
@@ -198,61 +198,214 @@
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
-      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
       <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
       <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver"><span class="strike dim">48</span><br><strong style="color:#F75A5A">49</strong></td>
-      <td class="ver"><span class="strike dim">44</span><br><strong style="color:#F75A5A">45</strong></td>
-      <td class="ver"><span class="strike dim">35</span><br><strong style="color:#F75A5A">36</strong></td>
-      <td class="ver">10586</td>
-      <td class="ver">9.0.1</td>
+      <td class="ver"><span class="strike dim">48</span><br><strong style="color:#1CA727">49</strong></td>
+      <td class="ver"><span class="strike dim">35</span><br><strong style="color:#1CA727">36</strong></td>
+      <td class="ver"><span class="strike dim">44</span><br><strong style="color:#1CA727">45</strong></td>
+      <td class="ver">14</td>
+      <td class="ver"><span class="strike dim">9</span><br><strong style="color:#1CA727">9.1 (!)</strong></td>
     </tr>
   </table>
 </section>
 
 <section class="slide">
-  <h2>Chrome 49</h2>
-  <p><a href="">Release Notes</a>
-  <p>Huge release!</p>
-  <ul>
-    <li></li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Firefox 44</h2>
-  <p><a href="https://www.mozilla.org/en-US/firefox/44.0/releasenotes/">Release Notes</a>
-  <ul>
-    <li></li>
-  </ul>
-</section>
-
-<section class="slide">
-  <h2>Opera 36</h2>
+  <h2>Chrome 49 / Opera 36</h2>
   <p><a href="https://dev.opera.com/blog/opera-36/">Release Notes</a>
-  <p>Based on Chromium 49</p>
   <ul>
-    <li></li>
+    <li>Both based on Chromium 49</li>
+    <li>Lots of new ES2015 and CSS features</li>
+    <li>Enhanced Web Audio support</li>
+    <li>Lots of other stuff!</li>
   </ul>
 </section>
 
 <section class="slide">
-  <h2>Edge ...</h2>
-  <p><a href="">Release Notes</a>
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 default function param values</h3>
+  <pre><code>function foo (msg = 'hello') {
+  console.log(msg);
+}
+foo(); // 'hello'</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 <a href="https://googlechrome.github.io/samples/destructuring-es6/">destructuring</a> syntax</h3>
+  <pre><code>let a, b, rest;
+[a, b] = [1, 2];
+// → a = 1; b = 2
+
+[a, b, ...rest] = [1, 2, 3, 4, 5];
+// → a = 1; b = 2; rest = [3, 4, 5]
+
+{a, b} = { a: 1, b: 2 };
+// → a = 1; b = 2</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 Proxies / Reflection</h3>
+  <blockquote>Proxies enable us to trap or intercept all of the operations on a target object and
+    modify how this target operates.</blockquote>
+  <p>Example <a href="https://developers.google.com/web/updates/2016/02/es2015-proxies">use cases</a>:</p>
   <ul>
-    <li></li>
+    <li>Modifying object instance behavior</li>
+    <li>API enforcement &amp; validation</li>
+    <li>Profiling, logging, access control</li>
+    <li>Middleware-style AOP programming</li>
   </ul>
 </section>
 
 <section class="slide">
-  <h2>Safari 9.0.1</h2>
-  <p><a href="">Release Notes</a>
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>ES2015 Proxies / Reflection</h3>
+  <pre><code>var birthDateValidator = {
+  set: function(obj, prop, value) {
+    if (prop === 'birthDate' &amp;&amp; value &lt; 21) {
+      throw new RangeError('Under age!');
+    }
+    obj[prop] = value;
+  }
+};
+
+var person = new Proxy({}, birthDateValidator);
+
+person.birthDate = 1980;
+console.log(person.birthDate); // 1980
+person.yearOfBirth = 2001; // Throws exception</code></pre>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>CSS Custom Properties (aka <a
+    href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care">CSS Variables</a>)</h3>
   <ul>
-    <li></li>
+    <li>Enables dynamic property values at runtime</li>
+    <li>Reduces clutter and code duplication</li>
+    <li>Similar to SASS / LESS variables</li>
   </ul>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <h3>CSS Custom Properties (aka <a
+    href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care">CSS Variables</a>)</h3>
+  <pre><code class="language-css">:root {
+  --primary-color: blue;
+  --spacing: 10;
+}
+.heading {
+  color: var(--primary-color);
+  margin-top: calc(var(--spacing) * 1px);
+  margin-bottom: calc(var(--spacing) * 2px);
+}</code></pre>
+<p>Check out <a href="https://googlechrome.github.io/samples/css-custom-properties/">this demo</a></p>
+</section>
+
+<section class="slide">
+  <h2>Chrome 49 / Opera 36: Highlights</h2>
+  <ul>
+    <li>Audio Output Devices API support</li>
+    <li><code>Event.timeStamp</code> now has <em>5 microsecond</em> resolution</li>
+    <li>Native <a href="https://developers.google.com/web/updates/2016/02/smooth-scrolling-in-chrome-49">smooth scrolling</a></li>
+    <li>Note: the Geolocation API now requires HTTPS</li>
+    <li><a href="https://dev.opera.com/blog/opera-36/">Lots of other stuff</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox 45</h2>
+  <p><a href="https://developer.mozilla.org/en-US/Firefox/Releases/45">Release Notes</a>
+  <ul>
+    <li>Developer tools improvements</li>
+    <li>CSS Grid enhancements, no longer "experimental"</li>
+    <li>ES2015 Class syntax now enabled by default</li>
+    <li>WebGL and Service Worker improvements</li>
+    <li>Support for the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-emphasis">text-emphasis</a> CSS property</li>
+    <li><a href="https://developer.mozilla.org/en-US/Firefox/Releases/45">Lots of other stuff</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Edge 14</h2>
+  <p><a href="https://dev.windows.com/en-us/microsoft-edge/platform/changelog/desktop/14291/">Build 14291 Release Notes</a>
+  <p>Added preview support for the <a href="https://en.wikipedia.org/wiki/VP9">VP9 video format</a></p>
+  <ul>
+    <li>Open, royalty-free video codec (developed by Google)</li>
+    <li>Offers reduced bitrate and better compression</li>
+    <li>Supported in Chromium and Firefox</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <h3>Holy crap, a non-trivial minor version bump!</h3>
+  <p><a href="https://developer.apple.com/library/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">Release Notes</a></p>
+  <ul>
+    <li>Support for HTML5 <code>&lt;picture&gt;</code></li>
+    <li>CSS Variable support added (as in Chromium)</li>
+    <li>Gesture event (pinch, rotation) support on OSX</li>
+    <li>Lots of web inspector improvements</li>
+    <li><a href="https://developer.apple.com/library/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">A few other things</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <h3>Fast-Tap on iOS</h3>
+  <p><em>No more 350ms tap delay in mobile Safari!</em></p>
+  <ul>
+    <li>Automatic on any page with<br><code>width=device-width</code> or <code>user-scalable=no</code></li>
+    <li>Opt-in per element via CSS <code>touch-action</code> property</li>
+    <li>Mobile Chrome has supported this since version 32!</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>Safari's standards support has been... unimpressive</p>
+  <p>According to the Kangax <a href="http://kangax.github.io/compat-table/es6/">ES2015 compatibility table</a>:</li>
+  <ul>
+    <li>Safari 7 (Oct 2013): <a href="http://kangax.github.io/compat-table/es6/#safari7">10%</a></li>
+    <li>Safari 8 (Oct 2014): <a href="http://kangax.github.io/compat-table/es6/#safari71_8">21%</a></li>
+    <li>Safari 9 (Oct 2015): <a href="http://kangax.github.io/compat-table/es6/#safari9">53%</a></li>
+  </ul>
+  <img src="./images/kangax-desktop.png">
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>However, if you look at the latest WebKit...</p>
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <img src="./images/kangax-webkit.png">
+</section>
+
+<section class="slide">
+  <h2>Safari 9.1</h2>
+  <p>WebKit nightlies now support <span style="font-size:2em;color:green;">98%</span> of ES2015! What?!</p>
+  <p>So, here's my (hopeful) prediction...</p>
+</section>
+
+<section class="slide">
+  <h2>Safari 10</h2>
+  <ul>
+    <li>Coming in October 2016</li>
+    <li>Will become the most standards-compliant browser available</li>
+  </ul>
+  <p style="font-size:2em;text-align:center;">Developers will rejoice!</p>
+</section>
+
+<section class="slide">
+  <h3>Well, until we start looking at ESNext...</h3>
+  <img src="./images/kangax-esnext.png">
 </section>
 
 <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -288,7 +441,7 @@
 
 <section class="slide">
   <h2><a href="https://github.com/JonathanUsername/nplaym">NPlayM</a></h2>
-  <blockquote>A silly wrapper for npm. Play a Space-Invaders-like game while you're installing your node_modules!</blockquote>
+  <blockquote>Play a Space-Invaders-like game while you're installing your node_modules!</blockquote>
   <img src="./images/nplaym.png" style="border:2px solid #444;">
   <p>Because... space invaders</p>
 </section>
@@ -343,6 +496,16 @@
     <li>At Austin Convention Center</li>
     <li><a href="http://conferences.oreilly.com/oscon/open-source-us/public/schedule/detail/50403">OSCON
       Kids Day</a> on Sunday, May 15</li>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.mvpmix.com/">MVP MIX</a></h2>
+  <blockquote>It's a 2-day training in .Net, HTML5, JavaScript, EcmaScript, Web API and REST, Sharepoint, and other awesome technologies</blockquote>
+  <ul>
+    <li>$75+ to attend (<a href="https://www.eventbrite.com/e/mvp-mix-dallas-2016-tickets-21238317379?discount=Meetup">$20 discount</a> with code "Meetup")</li>
+    <li>Audience: .NET developers</li>
+    <li>May 27-28</li>
+    <li>At Addison Convention Center (Dallas)</li>
 </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
@@ -407,14 +570,14 @@
 
     var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
     var positionTiming = {duration: 12000, iterations: Infinity};
-    firstScissorHalf.animate(positionKeyframes, positionTiming);
-    secondScissorHalf.animate(positionKeyframes, positionTiming);
+    // firstScissorHalf.animate(positionKeyframes, positionTiming);
+    // secondScissorHalf.animate(positionKeyframes, positionTiming);
 
     var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
     var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
     var rotationTiming = {duration: 1000, iterations: Infinity};
-    firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
-    secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+    // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+    // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
   });
 </script>
 </body>
