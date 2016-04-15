@@ -52,6 +52,10 @@
         font-weight: bold;
         color: #cccccc;
       }
+
+      strong {
+        font-weight: bold;
+      }
     }
 
     table.table td {
@@ -233,9 +237,10 @@
 
 // Prism (code formatting) overrides
 :not(pre) > code[class*="language-"] {
-  background: #2C2C2C;
+  background: #222222;
   padding: .1em .3em;
   border-radius: .2em;
+  border: 2px solid #444444;
 }
 pre[class*="language-"] {
   background: #1F1F1F;
