@@ -52,6 +52,10 @@
         font-weight: bold;
         color: #cccccc;
       }
+
+      strong {
+        font-weight: bold;
+      }
     }
 
     table.table td {
@@ -152,6 +156,7 @@
     h1 {
       color: #fff;
       @include text-shadow(0 5px 10px rgba(0,0,0,.7));
+      line-height: 1em;
     }
     h2 {
       color: #fff;
@@ -208,6 +213,9 @@
     h1, h2, h3 {
       color: #fff;
     }
+    h1 {
+      line-height: 1em;
+    }
   }
 
   .home {
@@ -233,13 +241,26 @@
 
 // Prism (code formatting) overrides
 :not(pre) > code[class*="language-"] {
-  background: #2C2C2C;
+  background: #222222;
   padding: .1em .3em;
   border-radius: .2em;
+  border: 2px solid #444444;
 }
 pre[class*="language-"] {
   background: #1F1F1F;
   border: 2px solid #333333;
   border-radius: .2em;
   padding: .3em .6em;
+}
+
+.browsers {
+  td {
+    text-align: center;
+  }
+  .ver {
+    font-size: 2.5em;
+  }
+  .build {
+    font-size: 50%;
+  }
 }
