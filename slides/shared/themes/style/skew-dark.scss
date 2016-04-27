@@ -156,6 +156,7 @@
     h1 {
       color: #fff;
       @include text-shadow(0 5px 10px rgba(0,0,0,.7));
+      line-height: 1em;
     }
     h2 {
       color: #fff;
@@ -211,6 +212,9 @@
 
     h1, h2, h3 {
       color: #fff;
+    }
+    h1 {
+      line-height: 1em;
     }
   }
 

@@ -210,7 +210,8 @@
   <p><a href="http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html">Release Notes</a></p>
   <p>Released April 13</p>
   <ul>
-    <li>Improved <a href="https://w3c.github.io/push-api/">push notification</a> support</li>
+    <li>Improved <a href="https://w3c.github.io/push-api/">push notifications</a> (including <a
+      href="https://developers.google.com/web/updates/2016/03/web-push-encryption?hl=en">payload support</a>)</li>
     <li>Declarative <a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">preloading</a>
       via <code>&lt;link rel='preload'&gt;</code></li>
     <li>Minor audio, video, canvas and animation improvments</li>
@@ -229,82 +230,11 @@
   </ul>
 </section>
 
-<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
-
-<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
-  <h1>Libraries &amp;<br>Frameworks</h1>
-  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
-</section>
-
-<section class="slide">
-  <h2>Notable Releases</h2>
-  <h3><a href="http://gruntjs.com/blog/2016-04-04-grunt-1.0.0-released">Grunt 1.0.0</a> &ndash; April 4th</h3>
-  <ul>
-    <li>New <a href="https://github.com/gruntjs/rfcs">RFCs repo</a> (inspired by <a
-      href="https://github.com/emberjs/rfcs">Ember RFCs</a>)</li>
-    <li><code>grunt-cli</code> now bundled locally by default</li>
-    <li>Potentially breaking <a
-      href="http://gruntjs.com/blog/2016-02-11-grunt-1.0.0-rc1-released#api-changes">API changes</a></li>
-    <li>No longer supports Node 0.8</li>
-  </ul>
-  <img src="./images/grunt.png">
-</section>
-
-<section class="slide">
-  <h2>Notable Releases</h2>
-  <h3><a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html">React 15.0.0</a> &ndash; April 7th</h3>
-  <ul>
-    <li>Uses <code>document.createElement</code> instead of <code>innerHTML</code></li>
-    <li>Improved SVG support</li>
-    <li>Includes some <a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html#breaking-changes">breaking changes</a></li>
-  </ul>
-  <p>They also plan to add an RFC process "inspired by <a href="https://github.com/emberjs/rfcs">Ember RFCs</a>"</p>
-  <img src="./images/reactjs.svg">
-</section>
-
-<section class="slide">
-  <h2>Notable Releases</h2>
-  <h3><a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html">Node 6.0.0</a> &ndash; April 26th</h3>
-  <ul>
-    <li>Ships with v5.0 of Chrome's V8 engine</li>
-    <li><a href="http://node.green/">93% API support for ES2015</a></li>
-    <li>Huge performance and memory improvements</li>
-    <li>Will become the official LTS version in October</li>
-  </ul>
-  <img src="./images/nodejs.png">
-</section>
-
-<!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
-
-<section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+<section class="slide cover" style="background-image:url(./images/webrtc.jpg)">
   <div class="content">
-    <h1>In Case You<br>Missed It</h1>
+    <h1>WebRTC<br>Update</h1>
   </div>
-  <div class="shim" style="background-color:#555;opacity:.7;"></div>
-</section>
-
-<section class="slide">
-  <h2><a href="https://zeit.co/now">now</a></h2>
-  <blockquote>Realtime node.js deployments</blockquote>
-  <ul>
-    <li>Any folder with a <code>package.json</code> becomes a deployable service</li>
-    <li>Get a unique url for every deploy</li>
-    <li>"a CDN for dynamic code"</li>
-    <li>"Free forever" open source plan</li>
-  </ul>
-  <img src="./images/now.png">
-</section>
-
-<section class="slide">
-  <h2>React Native on UWP</h2>
-  <blockquote>Extends the reach of React Native apps to a new market of 270 million active Windows 10 devices</blockquote>
-  <p>UWP = Universal Windows Platform</p>
-  <p>Read the <a href="https://blogs.windows.com/buildingapps/2016/04/13/react-native-on-the-universal-windows-platform/">announcement</a></p>
-  <ul>
-    <li>Developed by Microsoft</li>
-    <li>React JS code transpiled to native C#</li>
-    <li>Source is available <a href="https://github.com/ReactWindows/react-native">on Github</a></li>
-  </ul>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
 </section>
 
 <section class="slide">
@@ -351,6 +281,130 @@
   <p><a href="http://www.nojitter.com/post/240171589/apple-jumps-on-the-webrtc-bandwagon">Read more</a></p>
 </section>
 
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://github.com/blog/2131-git-2-8-has-been-released">Git 2.8</a> &ndash; March 28th</h3>
+  <ul>
+    <li>Parallel fetch of submodules</li>
+    <li>Convergence with Git for Windows (ongoing)</li>
+    <li>Fixes for fairly <a href="https://about.gitlab.com/2016/03/18/what-git-vulnerabilities-cve-2016-2324-and-2315-mean-for-gitlab-and-you/">serious
+      security issues</a><br>(recommended: 2.4.11+, 2.5.5+, 2.6.6+, 2.7.4+, or 2.8.0+)</li>
+    <li>Lots more, see the <a href="https://github.com/git/git/blob/v2.8.0/Documentation/RelNotes/2.8.0.txt">full release notes</a></li>
+  </ul>
+  <img src="./images/git.png" style="max-width:400px;">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="http://gruntjs.com/blog/2016-04-04-grunt-1.0.0-released">Grunt 1.0.0</a> &ndash; April 4th</h3>
+  <ul>
+    <li>New <a href="https://github.com/gruntjs/rfcs">RFCs repo</a> (inspired by <a
+      href="https://github.com/emberjs/rfcs">Ember RFCs</a> &amp; <a
+      href="https://github.com/rust-lang/rfcs">Rust RFCs</a>)</li>
+    <li><code>grunt-cli</code> now bundled locally by default</li>
+    <li>Potentially breaking <a
+      href="http://gruntjs.com/blog/2016-02-11-grunt-1.0.0-rc1-released#api-changes">API changes</a></li>
+    <li>No longer supports Node 0.8</li>
+  </ul>
+  <img src="./images/grunt.png">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html">React 15.0.0</a> &ndash; April 7th</h3>
+  <ul>
+    <li>Uses <code>document.createElement</code> instead of <code>innerHTML</code></li>
+    <li>Improved SVG support</li>
+    <li>Includes some <a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html#breaking-changes">breaking changes</a></li>
+  </ul>
+  <p>They also plan to add an RFC process (also inspired by <a href="https://github.com/emberjs/rfcs">Ember RFCs</a>)</p>
+  <img src="./images/reactjs.svg" style="max-width:300px;">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://facebook.github.io/react/blog/2016/04/07/react-v15.html">Node 6.0.0</a> &ndash; April 26th</h3>
+  <ul>
+    <li>Ships with v5.0 of Chrome's V8 engine</li>
+    <li><a href="http://node.green/">93% ES2015 API support</a></li>
+    <li>Huge performance and memory improvements</li>
+    <li>Will become the official LTS version in October</li>
+  </ul>
+  <img src="./images/nodejs.png" style="max-width:300px;">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://jenkins.io/blog/2016/04/26/jenkins-20-is-here/">Jenkins 2.0</a> &ndash; April 26th</h3>
+  <p>Open source CI / deployment automation</p>
+  <ul>
+    <li>New sophisticated <a href="https://jenkins.io/doc/pipeline/">pipeline support</a></li>
+    <li>"More sensible out of the box experience"</li>
+    <li>UX improvements to the web app</li>
+  </ul>
+  <p>Attend the <a href="http://www.meetup.com/Jenkins-online-meetup/events/230154841/">virtual
+    launch party</a> on May 4th</p>
+  <img src="./images/jenkins.png" style="max-width:300px;">
+</section>
+
+<!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+  <div class="content">
+    <h1>In Case You<br>Missed It</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://zeit.co/now">now</a></h2>
+  <blockquote>Realtime node.js deployments</blockquote>
+  <ul>
+    <li>Any folder with a <code>package.json</code> becomes a deployable service</li>
+    <li>"a CDN for dynamic code" &ndash; unique url for every deploy</li>
+    <li>"Free forever" open source plan</li>
+  </ul>
+  <img src="./images/now.png">
+</section>
+
+<section class="slide">
+  <h2>React Native + UWP</h2>
+  <blockquote>Extends the reach of React Native apps to a new market of 270 million active Windows 10 devices</blockquote>
+  <p>UWP = Universal Windows Platform</p>
+  <p><a href="https://blogs.windows.com/buildingapps/2016/04/13/react-native-on-the-universal-windows-platform/">Announced</a>
+    April 13th at the F8 conference</p>
+  <ul>
+    <li>Developed by Microsoft</li>
+    <li>React JS code transpiled to native C#</li>
+    <li>Source is available <a href="https://github.com/ReactWindows/react-native">on Github</a></li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>React Native + Angular (?)</h2>
+  <p>Strange, <a href="http://angularjs.blogspot.com/2016/04/angular-2-react-native.html">but true</a>!</p>
+  <p>Angular 2 core + <a href="https://github.com/angular/react-native-renderer">react-native-renderer</a></p>
+  <img src="./images/angular-react-native.png">
+</section>
+
+<section class="slide">
+  <h2>Stack Overflow Documentation</h2>
+  <p><a href="http://docs-beta.stackexchange.com/">docs-beta.stackexchange.com</a> (currently requires beta access)</p>
+  <ul>
+    <li>Collaborative general reference docs (not Q&amp;A)</li>
+    <li>Organized by subject / framework / language</li>
+    <li>Versioning, inline examples, reputation and more</li>
+  </ul>
+  <img src="./images/stackoverflow-docs.png">
+</section>
+
 <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
 
 <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
@@ -361,8 +415,22 @@
 </section>
 
 <section class="slide">
-  <h2>Stack Overflow Documentation</h2>
-  <p></p>
+  <h2><a href="http://www.shadyurl.com/">ShadyURL</a></h2>
+  <blockquote>Don't just shorten your URL, make it suspicious and frightening</blockquote>
+  <p>For example:</p>
+  <p style="font-size:1.5em;"><a href="http://www.5z8.info/hot-older-goats.mov_n2x0pm_cats-being-dropped-into-the-sea">http://www.5z8.info/hot-older-goats.mov_n2x0pm
+    <br>_cats-being-dropped-into-the-sea</a>
+</section>
+
+<section class="slide">
+  <h2><a href="https://www.smore.com/clippy-js">ClippyJS</a></h2>
+  <blockquote>People love two things: failed Microsoft technologies and obscure Javascript
+    libraries. Naturally, we decided to combine the two.</blockquote>
+  <ul>
+    <li>Full JS implementation of MS Agent (aka Clippy &amp; friends)</li>
+    <li>What are you waiting for? <a href="https://www.smore.com/clippy-js">Try it now!</a></li>
+  </ul>
+  <img src="./images/clippy.png">
 </section>
 
 <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
@@ -372,6 +440,17 @@
     <h1>Upcoming<br>Events</h1>
   </div>
   <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.devopsdaysaustin.com/">DevOpsDays Austin 2016</a></h2>
+  <blockquote>All things DevOps related</blockquote>
+  <ul>
+    <li>$210 to attend (almost sold out!)</li>
+    <li>Audience: developers and devops engineers</li>
+    <li>May 2-3</li>
+    <li>At UT's Royal stadium</li>
+  </ul>
 </section>
 
 <section class="slide">

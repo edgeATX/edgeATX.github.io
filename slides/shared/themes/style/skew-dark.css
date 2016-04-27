@@ -131,21 +131,22 @@
     /* line 156, skew-dark.scss */
     .deck-container .cover h1, .deck-container .cover-light h1 {
       color: #fff;
-      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); }
-    /* line 160, skew-dark.scss */
+      text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+      line-height: 1em; }
+    /* line 161, skew-dark.scss */
     .deck-container .cover h2, .deck-container .cover-light h2 {
       color: #fff;
       border-bottom: none; }
-    /* line 164, skew-dark.scss */
+    /* line 165, skew-dark.scss */
     .deck-container .cover a, .deck-container .cover-light a, .deck-container .cover a:visited, .deck-container .cover-light a:visited {
       color: #fff !important; }
-    /* line 167, skew-dark.scss */
+    /* line 168, skew-dark.scss */
     .deck-container .cover p, .deck-container .cover-light p, .deck-container .cover li, .deck-container .cover-light li {
       color: #eee; }
-    /* line 170, skew-dark.scss */
+    /* line 171, skew-dark.scss */
     .deck-container .cover .content, .deck-container .cover-light .content {
       z-index: 99; }
-    /* line 173, skew-dark.scss */
+    /* line 174, skew-dark.scss */
     .deck-container .cover .shim, .deck-container .cover-light .shim {
       z-index: -99;
       background: #000;
@@ -155,68 +156,71 @@
       bottom: 0;
       right: 0;
       opacity: .6; }
-  /* line 187, skew-dark.scss */
+  /* line 188, skew-dark.scss */
   .deck-container .cover-light .shim {
     background: #fff;
     opacity: .7; }
-  /* line 191, skew-dark.scss */
+  /* line 192, skew-dark.scss */
   .deck-container .cover-light h1 {
     color: #000; }
-  /* line 194, skew-dark.scss */
+  /* line 195, skew-dark.scss */
   .deck-container .cover-light h2 {
     color: #1f4c7f; }
-  /* line 197, skew-dark.scss */
+  /* line 198, skew-dark.scss */
   .deck-container .cover-light h3 {
     color: #444; }
-  /* line 200, skew-dark.scss */
+  /* line 201, skew-dark.scss */
   .deck-container .cover-light h1, .deck-container .cover-light h2, .deck-container .cover-light h3 {
     text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7); }
-  /* line 203, skew-dark.scss */
+  /* line 204, skew-dark.scss */
   .deck-container .cover-light a, .deck-container .cover-light a:visited, .deck-container .cover-light p, .deck-container .cover-light li {
     color: #333;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); }
-  /* line 209, skew-dark.scss */
+  /* line 210, skew-dark.scss */
   .deck-container .title {
     background-color: #0F91DA; }
-    /* line 212, skew-dark.scss */
+    /* line 213, skew-dark.scss */
     .deck-container .title h1, .deck-container .title h2, .deck-container .title h3 {
       color: #fff; }
-  /* line 217, skew-dark.scss */
+    /* line 216, skew-dark.scss */
+    .deck-container .title h1 {
+      line-height: 1em; }
+  /* line 221, skew-dark.scss */
   .deck-container .home {
     background-image: url(../../resources/images/bleeding-edge.jpg); }
-  /* line 222, skew-dark.scss */
+  /* line 226, skew-dark.scss */
   .deck-container .browser-table td {
     text-align: center;
     width: 20%; }
-    /* line 226, skew-dark.scss */
+    /* line 230, skew-dark.scss */
     .deck-container .browser-table td img {
       height: 7em;
       margin-bottom: 0; }
-    /* line 230, skew-dark.scss */
+    /* line 234, skew-dark.scss */
     .deck-container .browser-table td p {
       margin-top: 15px;
       font-size: 2em; }
 
-/* line 239, skew-dark.scss */
+/* line 243, skew-dark.scss */
 :not(pre) > code[class*="language-"] {
   background: #222222;
   padding: .1em .3em;
   border-radius: .2em;
   border: 2px solid #444444; }
 
-/* line 245, skew-dark.scss */
+/* line 249, skew-dark.scss */
 pre[class*="language-"] {
   background: #1F1F1F;
   border: 2px solid #333333;
   border-radius: .2em;
   padding: .3em .6em; }
 
-/* line 253, skew-dark.scss */
+/* line 257, skew-dark.scss */
 .browsers td {
   text-align: center; }
-/* line 256, skew-dark.scss */
+/* line 260, skew-dark.scss */
 .browsers .ver {
   font-size: 2.5em; }
-/* line 259, skew-dark.scss */
+/* line 263, skew-dark.scss */
 .browsers .build {
   font-size: 50%; }
