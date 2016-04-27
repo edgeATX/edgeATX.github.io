@@ -248,3 +248,15 @@ pre[class*="language-"] {
   border-radius: .2em;
   padding: .3em .6em;
 }
+
+.browsers {
+  td {
+    text-align: center;
+  }
+  .ver {
+    font-size: 2.5em;
+  }
+  .build {
+    font-size: 50%;
+  }
+}

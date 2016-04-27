@@ -210,3 +210,13 @@ pre[class*="language-"] {
   border: 2px solid #333333;
   border-radius: .2em;
   padding: .3em .6em; }
+
+/* line 253, skew-dark.scss */
+.browsers td {
+  text-align: center; }
+/* line 256, skew-dark.scss */
+.browsers .ver {
+  font-size: 2.5em; }
+/* line 259, skew-dark.scss */
+.browsers .build {
+  font-size: 50%; }
