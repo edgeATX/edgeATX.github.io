@@ -70,7 +70,7 @@
       font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
       font-weight: 400;
       margin: 0;
-      color: #EC557B;
+      color: #cccccc;
       border: 1px solid #777777;
       background-color: #222222;
       border-radius: 3px;
@@ -80,7 +80,7 @@
     ::-moz-selection{ background:#c00; color:#fff; }
     ::selection { background:#c00; color:#fff; }
 
-    a {
+    a,  {
       color: #75B1F5 !important;
       border-bottom: 2px dotted #333B46;
 
@@ -91,6 +91,11 @@
 
       &:hover, &:focus {
         border-bottom: 1px solid #1c68be;
+      }
+
+      span.code {
+        color: #75B1F5 !important;
+        border-bottom: 2px dotted #333B46;
       }
     }
 

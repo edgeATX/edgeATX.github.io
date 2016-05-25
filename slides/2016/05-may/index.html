@@ -166,7 +166,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>Last version check &mdash; March 23, 2016:</p>
+  <p>Last version check &mdash; April 27, 2016:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -187,7 +187,7 @@
 
 <section class="slide">
   <h2>Browser Pop Quiz</h2>
-  <p>As of April 27, 2016:</p>
+  <p>As of May 25, 2016:</p>
   <table class="browsers">
     <tr>
       <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -197,31 +197,45 @@
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver"><span class="strike dim">49</span><br><strong style="color:#1CA727">50</strong></td>
-      <td class="ver">36</td>
-      <td class="ver"><span class="strike dim">45</span><br><strong style="color:#1CA727">46</strong></td>
-      <td class="ver">14<div class="build">14291</div></td>
+      <td class="ver">50</td>
+      <td class="ver"><span class="strike dim">36</span><br><strong style="color:#1CA727">37</strong></td>
+      <td class="ver">46</td>
+      <td class="ver">14<div class="build"><span class="strike dim">14291</span><br><strong style="color:#1CA727">14342</strong></div></td>
       <td class="ver">9.1</td>
     </tr>
   </table>
 </section>
 
 <section class="slide">
-  <h2>Chrome 50</h2>
-  <p><a href="http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html">Release Notes</a></p>
-  <p>Released April 13</p>
+  <h2>Opera 37</h2>
+  <p><a href="http://www.opera.com/docs/changelogs/unified/3700/">Release Notes</a></p>
+  <p>Released May 4</p>
   <ul>
-    <li></li>
+    <li>Added support for Chromium version 50</li>
+    <li>Added built-in ad blocker</li>
   </ul>
 </section>
 
 <section class="slide">
-  <h2>Firefox 46</h2>
-  <p><a href="https://developer.mozilla.org/en-US/Firefox/Releases/45">Release Notes</a></p>
-  <p>Released April 26</p>
+  <h2>Edge 14 (14342)</h2>
+  <p><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14342/?compareWith=14291">Release Notes</a></p>
   <ul>
-    <li></li>
+    <li>New APIs: <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/webnotifications">Web
+      Notifications</a>, <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/beacon">Beacon</a>,
+      <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/fetchapi">Fetch</a></li>
+    <li>ES2015: default params, async/await, modules (behind flag)</li>
+    <li>ES2016/17: Object.values/entries, Array.includes, String.padStart/padEnd</li>
+    <li>New elements: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"><span
+      class="code">&lt;time&gt;</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data"><span
+      class="code">&lt;data&gt;</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output"><span
+      class="code">&lt;output&gt;</span></a>
+    <li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">A lot more!</a></li>
   </ul>
+</section>
+
+<section class="slide">
+  <h2>Bonus WebKit Update</h2>
+  <img src="./images/webkit-es6.png" style="min-width:60%">
 </section>
 
 
@@ -230,6 +244,46 @@
 <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
   <h1>Libraries &amp;<br>Frameworks</h1>
   <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://github.com/babel/babel/blob/v6.9.0/CHANGELOG.md#680-2016-05-02">Babel 6.8</a> &ndash; May 2</h3>
+  <ul>
+    <li>Babel is now compiled with Babel 6</li>
+    <li>Fixes a major npm deduping issue with Babel 5 dependencies</li>
+  </ul>
+  <h3><a href="https://github.com/babel/babel/blob/v6.9.0/CHANGELOG.md#690-2016-05-16">Babel 6.9</a> &ndash; May 16</h3>
+  <ul>
+    <li>Upgraded <a href="https://github.com/zloirock/core-js">core-js</a> and <a
+      href="https://lodash.com/">lodash</a></li>
+    <li>A few important bug fixes</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="http://electron.atom.io/blog/2016/05/11/electron-1-0">Electron 1.0</a> &ndash; May 11</h3>
+  <ul>
+    <li>Build native desktop apps with HTML, CSS and JS</li>
+    <li>New <a href="https://github.com/electron/electron-api-demos">Electron API Demos</a> app</li>
+    <li>New Chrome extension <a href="http://electron.atom.io/devtron">Devtron</a> for debugging</li>
+    <li>New 3.0 version of <a href="http://electron.atom.io/spectron">Spectron</a> for integration testing</li>
+  </ul>
+  <img src="./images/electron.png">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://blog.jquery.com/2016/05/20/jquery-3-0-release-candidate-released/">jQuery 3.0 (RC)</a> &ndash; May 20</h3>
+  <ul>
+    <li>Final version barring major bugs</li>
+    <li>IE 9+ only (stick to 2.x for IE 6-8)</li>
+    <li><span class="code">jQuery.Deferred</span> now Promises/A+ compatible</li>
+    <li>Animations now use <span class="code">requestAnimationFrame</span></li>
+    <li><a href="https://jquery.com/upgrade-guide/3.0/">Upgrade guide</a> available</li>
+  </ul>
+  <img src="./images/jquery.png">
 </section>
 
 <section class="slide">
@@ -251,12 +305,43 @@
 </section>
 
 <section class="slide">
-  <h2><a href=""></a></h2>
-  <blockquote></blockquote>
+  <h2><a href="https://github.com/nlp-compromise/nlp_compromise">nlp_compromise</a></h2>
+  <blockquote>A cool way to use natural language in JavaScript</blockquote>
   <ul>
-    <li></li>
+    <li>100k, no dependencies, IE9+</li>
+    <li>Aims for 80-20 rule in accuracy / complexity</li>
   </ul>
-  <img src="./images/.png">
+  <pre><code>nlp.statement('She sells seashells').negate().text()
+// She doesn't sell seashells
+
+nlp.person("Tony Hawk").pronoun();
+// "he"
+
+nlp.value("five hundred and sixty").number;
+// 560
+</code></pre>
+</section>
+
+<section class="slide">
+  <h2><a href="https://facebook.github.io/reason">Reason</a></h2>
+  <blockquote>A new developer experience for rapidly building fast, safe systems</blockquote>
+  <ul>
+    <li>Developed by Facebook</li>
+    <li>A new interface to <a href="https://ocaml.org/">OCaml</a></li>
+    <li>"Resembles a typed subset of modern JavaScript (the good parts)"</li>
+    <li><a href="https://facebook.github.io/reason/javaScriptCompared.html">Compare to JS</a></li>
+  </ul>
+  <img src="./images/reason.png">
+</section>
+
+<section class="slide">
+  <h2>Node v8_inspector support</h2>
+  <blockquote>Node.js can now be debugged and profiled via Chrome DevTools</blockquote>
+  <ul>
+    <li>Currently an <a href="https://github.com/nodejs/node/pull/6792">open PR</a> in the Node github repo</li>
+    <li>Breakpoints, stepping, source maps, live editing, etc.</li>
+    <li>Console with ES6 support</li>
+  </ul>
 </section>
 
 <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
@@ -296,6 +381,18 @@
     <li>June 3-5 at St. Edwards University</li>
   </ul>
   <img src="./images/atx-hack-for-change.png">
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.eventbrite.com/e/makerprep-atx-june-6-july-2-learn-to-code-part-time-intro-to-web-development-programming-tickets-24969744177?aff=bleedingedgeweb&afu=5464520745">MakerPrep: Learn to Code Part-time</a></h2>
+  <blockquote>Learn HTML, CSS and basic JS skills over 4 weeks in June</blockquote>
+  <ul>
+    <li>Perfect for non-techies who want exposure to new tech skills</li>
+    <li>$750 per student &mdash; <a href="http://www.eventbrite.com/e/makerprep-atx-june-6-july-2-learn-to-code-part-time-intro-to-web-development-programming-tickets-24969744177?aff=bleedingedgeweb&afu=5464520745">more
+      info and sign up</a></li>
+    <li>Hosted at MakerSquare in downtown Austin</li>
+  </ul>
+  <img src="./images/makersquare.png">
 </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
