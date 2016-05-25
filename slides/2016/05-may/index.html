@@ -122,8 +122,9 @@
   <h3>News from the Bleeding Edge</h3>
   <p>&mdash; Brian Moeskau  (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
 
-  <h3>All About Node 6 (<a
-    href="">slides</a> &mdash; <a href="https://twitter.com/evanhlucas">Evan Lucas</a>)</h3>
+  <h3>All About Node 6 <span style="font-size:.7em;">(<a
+    href="http://evanlucas.com/slides/all_about_node_6.html">slides</a>)</span></h3>
+  <p>&mdash; Evan Lucas (<a href="https://twitter.com/evanhlucas">@evanhlucas</a>)
 
   <h3>Lightning Talks</h3>
   <ul>
@@ -197,7 +198,7 @@
       <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
     </tr>
     <tr>
-      <td class="ver">50</td>
+      <td class="ver"><span class="strike dim">50</span><br><strong style="color:#1CA727">51</strong></td>
       <td class="ver"><span class="strike dim">36</span><br><strong style="color:#1CA727">37</strong></td>
       <td class="ver">46</td>
       <td class="ver">14<div class="build"><span class="strike dim">14291</span><br><strong style="color:#1CA727">14342</strong></div></td>
@@ -207,12 +208,26 @@
 </section>
 
 <section class="slide">
+  <h2>Chrome 51</h2>
+  <p>Released May 25 (today!) &mdash; <a href="http://blog.chromium.org/2016/04/chrome-51-beta-credential-management.html">Release Notes</a></p>
+  <ul>
+    <li><a href="http://w3c.github.io/webappsec-credential-management/">Credential Management API</a>
+      integration (one-tap sign in)</li>
+    <li>Skip rendering / <span class="code">requestAnimationFrame</span> for x-origin, offscreen frames</li>
+    <li><a href="https://developers.google.com/web/updates/2016/04/intersectionobserver">Intersection Observer API</a> support</li>
+    <li><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md">Passive event listeners</a> for improved scroll performance</li>
+    <li><a href="http://blog.chromium.org/2016/04/chrome-51-beta-credential-management.html">Lots</a> of other stuff</li>
+  </ul>
+  <img src="./images/chrome-51.png" style="min-width:60%">
+</section>
+
+<section class="slide">
   <h2>Opera 37</h2>
-  <p><a href="http://www.opera.com/docs/changelogs/unified/3700/">Release Notes</a></p>
-  <p>Released May 4</p>
+  <p>Released May 4 &mdash; <a href="http://www.opera.com/docs/changelogs/unified/3700/">Release Notes</a></p>
   <ul>
     <li>Added support for Chromium version 50</li>
     <li>Added built-in ad blocker</li>
+    <li>Opera 38 currently <a href="http://www.opera.com/blogs/desktop/2016/05/first-opera-38-beta/">in beta</a></li>
   </ul>
 </section>
 
@@ -220,15 +235,16 @@
   <h2>Edge 14 (14342)</h2>
   <p><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14342/?compareWith=14291">Release Notes</a></p>
   <ul>
-    <li>New APIs: <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/webnotifications">Web
-      Notifications</a>, <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/beacon">Beacon</a>,
-      <a hre="https://developer.microsoft.com/microsoft-edge/platform/status/fetchapi">Fetch</a></li>
+    <li>New APIs: <a href="https://developer.microsoft.com/microsoft-edge/platform/status/webnotifications">Web
+      Notifications</a>, <a href="https://developer.microsoft.com/microsoft-edge/platform/status/beacon">Beacon</a>,
+      <a href="https://developer.microsoft.com/microsoft-edge/platform/status/fetchapi">Fetch</a></li>
     <li>ES2015: default params, async/await, modules (behind flag)</li>
     <li>ES2016/17: Object.values/entries, Array.includes, String.padStart/padEnd</li>
     <li>New elements: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"><span
       class="code">&lt;time&gt;</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/data"><span
       class="code">&lt;data&gt;</span></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/output"><span
       class="code">&lt;output&gt;</span></a>
+    <li>Support for <a href="https://blogs.windows.com/msedgedev/2016/05/03/woff2-fonts-in-microsoft-edge/">WOFF 2.0</a></li>
     <li><a href="https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/">A lot more!</a></li>
   </ul>
 </section>
@@ -263,6 +279,30 @@
 
 <section class="slide">
   <h2>Notable Releases</h2>
+  <h3><a href="https://angular.io/">Angular 2.0 (RC)</a> &ndash; May 2</h3>
+  <ul>
+    <li>Completely redesigned from Angular 1</li>
+    <li>Heavily focused on TypeScript integration</li>
+    <li>Tons of <a href="https://github.com/angular/angular/blob/master/CHANGELOG.md">new features and breaking changes</a></li>
+  </ul>
+  <img src="./images/angular.png">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
+  <h3><a href="https://www.nativescript.org/blog/nativescript-2.0---the-best-way-to-build-cross-platform-native-mobile-apps">NativeScript
+    2.0</a> &ndash; May 4</h3>
+  <ul>
+    <li>JS-based mobile apps with native UI bindings</li>
+    <li>Supports TypeScript and Angular 2.0</li>
+    <li><a href="https://github.com/NativeScript/NativeScript">Open source</a></li>
+    <li>Backed by Telerik, paid support options</li>
+  </ul>
+  <img src="./images/nativescript.png">
+</section>
+
+<section class="slide">
+  <h2>Notable Releases</h2>
   <h3><a href="http://electron.atom.io/blog/2016/05/11/electron-1-0">Electron 1.0</a> &ndash; May 11</h3>
   <ul>
     <li>Build native desktop apps with HTML, CSS and JS</li>
@@ -286,15 +326,6 @@
   <img src="./images/jquery.png">
 </section>
 
-<section class="slide">
-  <h2>Notable Releases</h2>
-  <h3><a href=""></a> &ndash; March 28th</h3>
-  <ul>
-    <li></li>
-  </ul>
-  <img src="./images/.png" style="max-width:400px;">
-</section>
-
 <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
 <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
@@ -302,24 +333,6 @@
     <h1>In Case You<br>Missed It</h1>
   </div>
   <div class="shim" style="background-color:#555;opacity:.7;"></div>
-</section>
-
-<section class="slide">
-  <h2><a href="https://github.com/nlp-compromise/nlp_compromise">nlp_compromise</a></h2>
-  <blockquote>A cool way to use natural language in JavaScript</blockquote>
-  <ul>
-    <li>100k, no dependencies, IE9+</li>
-    <li>Aims for 80-20 rule in accuracy / complexity</li>
-  </ul>
-  <pre><code>nlp.statement('She sells seashells').negate().text()
-// She doesn't sell seashells
-
-nlp.person("Tony Hawk").pronoun();
-// "he"
-
-nlp.value("five hundred and sixty").number;
-// 560
-</code></pre>
 </section>
 
 <section class="slide">
@@ -344,6 +357,24 @@ nlp.value("five hundred and sixty").number;
   </ul>
 </section>
 
+<section class="slide">
+  <h2><a href="https://github.com/nlp-compromise/nlp_compromise">nlp_compromise</a></h2>
+  <blockquote>A cool way to use natural language in JavaScript</blockquote>
+  <ul>
+    <li>100k, no dependencies, IE9+</li>
+    <li>Aims for 80-20 rule in accuracy / complexity</li>
+  </ul>
+  <pre><code>nlp.statement('She sells seashells').negate().text()
+// She doesn't sell seashells
+
+nlp.person("Tony Hawk").pronoun();
+// "he"
+
+nlp.value("five hundred and sixty").number;
+// 560
+</code></pre>
+</section>
+
 <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
 
 <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
@@ -354,12 +385,9 @@ nlp.value("five hundred and sixty").number;
 </section>
 
 <section class="slide">
-  <h2><a href=""></a></h2>
-  <blockquote></blockquote>
-  <ul>
-    <li></li>
-  </ul>
-  <img src="./images/.png">
+  <h2><a href="http://polarnotion.github.io/starwarsintro/">StarWarsIntro.css</a></h2>
+  <blockquote>A small CSS library to build your own Star Wars-esque intro crawl</blockquote>
+  <img src="./images/starwarsintro.png" style="width:80%">
 </section>
 
 <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
