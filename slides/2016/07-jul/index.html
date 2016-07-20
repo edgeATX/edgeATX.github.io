@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bleeding Edge Web: July 2016</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/ngnjs/chassis-components/master/dist/chassis-cycle.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/ngnjs/cdn/master/chassis-lib/chassis.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/ngnjs/cdn/master/chassis-x/chassis.x.min.js"></script>
+  </head>
+  <body class="ngn chassis hidden">
+    <chassis-cycle restart="true">
+      <section class="bleedingedge_slide cover" selected="true"></section>
+      <section class="welcome_slide cover"></section>
+      <section class="slack_slide cover"></section>
+      <section class="agenda_slide">
+        <ol>
+          <li>Announcements</li>
+          <li>News from the Bleeding Edge:<br/><span class="author">Corey Butler <a href="https://twitter.com/goldglovecb">@goldglovecb</a></span></li>
+          <li>Painless Server-Side Rendering with React and ClojureScript:<br/><span class="author">Allen Rohner <a href="https://twitter.com/arohner">@arohner</a></span></li>
+        </ol>
+      </section>
+      <section class="capitalfactory_slide sponsor"></section>
+      <section class="sponsor light">
+        <img src="./assets/images/help.com.png"/>
+      </section>
+      <section class="bleedingedgenews cover"></section>
+      <section class="browserupdate_slide cover"></section>
+      <section>
+        <h1>Browser Pop Quiz</h1>
+        <p>Last version check &mdash; June 22, 2016:</p>
+        <div class="browser_list">
+          <div class="chrome browser">
+            <span>51</span>
+            <span></span>
+          </div>
+          <div class="opera browser">
+            <span>38</span>
+            <span></span>
+          </div>
+          <div class="firefox browser">
+            <span>47</span>
+            <span></span>
+          </div>
+          <div class="edge browser">
+            <span>14342</span>
+            <span></span>
+          </div>
+          <div class="safari browser">
+            <span>9.1</span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Browser Pop Quiz</h1>
+        <p>Last version check &mdash; June 22, 2016:</p>
+        <div class="browser_list">
+          <div class="chrome browser">
+            <span class="old">51</span>
+            <span class="new">52</span>
+          </div>
+          <div class="opera browser">
+            <span>38</span>
+            <span></span>
+          </div>
+          <div class="firefox browser">
+            <span>47</span>
+            <span></span>
+          </div>
+          <div class="edge browser">
+            <span class="old">14342</span>
+            <span class="new">14372</span>
+          </div>
+          <div class="safari browser">
+            <span>9.1</span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Chrome 52</h1>
+        <p>Mostly the same as <a href="http://edgeatx.github.io/slides/2016/06-jun/#slide-10">last month</a>:</p>
+        <ul>
+          <li>CSS Containment</li>
+          <li>PerformanceObserver API</li>
+          <li>Service Worker Request Streaming</li>
+          <li>VAPID Support</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Chrome 52 continued...</h1>
+        <ul>
+          <li>Fetch API: Response Construction via ReadableStream</li>
+          <li>Pointer Events: Unified Input API</li>
+          <li>Async/await functions</li>
+          <li>Shadow DOM v1 Editors Draft Implementation</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Edge 14372</h1>
+        <ul>
+          <li>Swipe Navigation: Forward/Backward</li>
+          <li>H264/AVC Decoding via ORTC API</li>
+          <li>Web Notifications API Enabled by Default</li>
+          <li>Beacon Interface Enabled by Default</li>
+          <li>Fetch API Enabled by Default</li>
+        </ul>
+      </section>
+      <section class="libraries_slide cover"></section>
+      <section>
+        <h1>Notable Releases</h1>
+        <p>D3 v4.0</p>
+        <ul>
+          <li>4,838 commits</li>
+          <li>Better opacity support (colors)</li>
+          <li>Shapes & Layouts rendering to canvas</li>
+          <li>Lots of <a href="https://github.com/d3/d3/releases/v4.0.0">new stuff</a>.</li>
+        </ul>
+      </section>
+      <section class="trending_slide cover"></section>
+      <section>
+        <h1>Progressive Web Apps</h1>
+        <p>What are PWA's?</p>
+        <blockquote>A Progressive Web App uses modern web capabilities to deliver an app-like user experience.</blockquote>
+        <ul>
+          <li>From Web -&raquo; Native App (App Shell)</li>
+          <li>No Installation (Automatic)</li>
+          <li>Dependent on Service Workers</li>
+        </ul>
+      </section>
+      <section class="light">
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/pwa.gif"/></div>
+      </section>
+      <section>
+        <h1>Network Management</h1>
+        <p>Powerful new browser capabilities shift network/traffic control to the frontend developer.</p>
+        <ol>
+          <li>Power API's</li>
+          <li>SSL Requirements</li>
+          <li>Service Workers</li>
+          <li>WebRTC</li>
+          <li>Preconnect, Predns, Preload, etc.</li>
+          <li>
+            <span style="border-bottom: 1px solid #efefef; min-width: 5vw;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-First
+            (Mobile, Offline, API, etc)
+          </li>
+          <li>Protocol Overload: SPDY -&raquo; HTTP2 -&raquo; QUIC</li>
+        </ol>
+        <p>and many, many more...</p>
+      </section>
+      <section class="missed_slide cover"></section>
+      <section>
+        <h1>ECOMP</h1>
+        <p>AT&T contributed ECOMP to the Linux Foundation (8.5M LOC).</p>
+        <ul>
+          <li>The de-facto standard for SDN?</li>
+          <li>Bypass traditional networking hardware.</li>
+          <li>Big Biz Strategy? Cisco just bought Tail-f for $175M.</li>
+        </ul>
+        <p>Tail-f = 1 of 6 AT&T Domain 2.0 vendors</p>
+        <p>SDN = Software Defined Network</p>
+        <p>SDN's separate traffic flow (control plane) from the underlying system (data plane).</p>
+      </section>
+      <section>
+        <h1>New Dreamweaver</h1>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/dreamweaver.png"/></div>
+        <p>Side Note: Brackets is not dead.</p>
+      </section>
+      <section>
+        <h1>Alfred + npm</h1>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/alfrednpm.png"/></div>
+        <p><a href="https://github.com/sindresorhus/alfred-npms">https://github.com/sindresorhus/alfred-npms</a></p>
+      </section>
+      <section>
+        <h1>Git Ordered</h1>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/reorder.gif"/></div>
+      </section>
+      <section>
+        <h1>Git Detailed</h1>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/details.png" style="max-height: 70vh;"/></div>
+      </section>
+      <section>
+        <h1>Stack Overflow</h1>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/so.png" style="max-height: 60vh;"/></div>
+        <p>Documentation beta is going public (any minute now)</p>
+      </section>
+      <section class="completelydifferent_slide cover"></section>
+      <section>
+        <h1>GIF Pronounced "JIF"</h1>
+        <p>Creator of the .gif format, Steve White, says it's pronounced "Jif".</p>
+        <p>He's also annoyed people have been saying it wrong.</p>
+        <div style="display: flex; flex: 1 1 auto; align-items: center; justify-content: center;"><img src="./assets/images/stevewhite.jpg" style="max-height: 60vh;"/></div>
+      </section>
+      <section>
+        <h1>Thanks!</h1>
+        <li><a href="http://www.meetup.com/bleeding-edge-web/" target="_blank">http://www.meetup.com/bleeding-edge-web/</a></li>
+        <li><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></li>
+        <li>Corey Butler — <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></li>
+        <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+      </section>
+    </chassis-cycle>
+    <script type="text/javascript" src="assets/lib/app.js"></script>
+  </body>
+</html>
