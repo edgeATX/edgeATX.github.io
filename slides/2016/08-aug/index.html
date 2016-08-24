@@ -207,7 +207,7 @@
     <li>See <a href="http://edgeatx.github.io/slides/2016/07-jul/#11">last month's slides</a> for details</li>
     <li><a href="http://blog.chromium.org/2016/08/chrome-53-beta-shadow-dom.html">Chrome 53</a>
       currently slated for first week of September</li>
-    <li>Coming: <a href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a> v1, <span
+    <li>Coming: <a href="https://developers.google.com/web/fundamentals/primers/shadowdom/">Shadow DOM</a> v1, <span
       class="code"><a href="https://www.w3.org/TR/payment-request/#paymentrequest-interface">PaymentRequest</a></span> API and more...</li>
   </ul>
 </section>
@@ -255,11 +255,18 @@
   <h2>Edge 14 (14393)</h2>
   <p><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14393/?compareWith=14372">Release Notes</a></p>
   <ul>
-    <li>Official release of <a href="https://blogs.windows.com/msedgedev/2016/08/04/introducing-edgehtml-14/">EdgeHTML 14</a>!</li>
+    <li><a href="https://blogs.windows.com/msedgedev/2016/08/04/introducing-edgehtml-14/">EdgeHTML 14</a> released with Windows 10 Anniversary Update</li>
     <li><a href="http://kangax.github.io/compat-table/es6/#edge14">95%</a> ES2015 compatibility</li>
     <li><a href="http://html5accessibility.com/">100%</a> HTML5 accessibility support</li>
-    <li>Rolled out to 350 million Windows 10 devices this month</li>
+    <li>Rollout to 350 million Win 10 devices began Aug 2</li>
   </ul>
+</section>
+
+<section class="slide">
+  <h2>Edge 14 (14393)</h2>
+  <p>This is a definitive nail in IE's coffin.</p>
+  <p>ES2015 compatibility:</p>
+  <img src="./images/ie-edge-kangax.png" style="width:60%;">
 </section>
 
 <section class="slide">
@@ -270,6 +277,7 @@
 <section class="slide">
   <h2>Opera</h2>
   <ul>
+    <li>Opera 39 (Chromium 52) was <a href="https://dev.opera.com/blog/opera-39/">released</a> August 2nd</li>
     <li>Based on Chromium since <a href="http://www.opera.com/docs/changelogs/unified/1500/">Opera 15</a> (July 2013)</li>
     <li>&lt; 2% global usage, even less in N. America</li>
   </ul>
@@ -281,12 +289,53 @@
   <ul>
     <li>Most interesting releases are user-facing UI features</li>
     <li>Dev features simply track Chromium</li>
-    <li>So....</li>
   </ul>
+  <br>
+  <p style="padding-left:50px;">So... I think it's time we make it official...</p>
 </section>
 
 <section class="slide">
-  <h2>Opera</h2>
+  <h2>Browser Pop Quiz</h2>
+  <p>As of August 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver">48</td>
+      <td class="ver">14<div class="build" style="color:#999999;">14393</div></td>
+      <td class="ver">39</td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of August 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver">48</td>
+      <td class="ver">14<div class="build" style="color:#999999;">14393</div></td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Farewell Opera!</h2>
   <img src="./images/opera-retirement.jpg" style="width:80%;">
 </section>
 
@@ -310,16 +359,6 @@
 </section>
 
 <section class="slide">
-  <h2>Meteor 1.4</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/">Meteor</a> is a full-stack JS (Node) framework</li>
-    <li>Integrates with React, Angular, MongoDB and more</li>
-    <li><a href="<a href="http://info.meteor.com/blog/announcing-meteor-1.4">1.4 released</a> July 25th: updated to Node 4.x &amp; Mongo 3.x</li>
-  </ul>
-  <img src="./images/meteor-logo.png">
-</section>
-
-<section class="slide">
   <h2>Aurelia 1.0</h2>
   <ul>
     <li><a href="http://aurelia.io/">Aurelia</a> is a JS framework on par with Angular, Ember, etc.</li>
@@ -339,6 +378,17 @@
     <li>Lots of form improvements</li>
   </ul>
   <img src="./images/bootstrap-logo.png">
+</section>
+
+<section class="slide">
+  <h2>Docker 1.12</h2>
+  <ul>
+    <li><a href="https://blog.docker.com/2016/07/docker-for-mac-and-windows-production-ready/">Released July 28th</a></li>
+    <li>Docker for Mac &amp; Windows are officially production-ready</li>
+    <li>"The easiest way to use Docker on your dev machine"</li>
+    <li><a href="https://www.docker.com/products/docker">Download now</a> and try it out</li>
+  </ul>
+  <img src="./images/docker-logo.png">
 </section>
 
 <section class="slide">
@@ -385,13 +435,44 @@
 </section>
 
 <section class="slide">
-  <h2><a href="https://a-k-apart.com/">10k Apart</a></h2>
-  <blockquote>Build a compelling web experience that can be delivered in 10kb and works without JavaScript</blockquote>
+  <h2>Fuchsia</h2>
   <ul>
-    <li>Over $10k in prizes</li>
-    <li>Due date Sept. 30th</li>
-    <li>Got what it takes? <a href="https://a-k-apart.com/enter">Enter now</a>!
+    <li>A new <a href="https://github.com/fuchsia-mirror">open source</a> OS by Google</li>
+    <li>Runs on <a href="https://github.com/fuchsia-mirror/magenta">Magenta</a> instead of Linux kernel</li>
+    <li><a href="http://www.eweek.com/enterprise-apps/google-begins-development-of-fuchsia-open-source-os.html">Targeted</a>
+      at high end mobile and IoT devices (?)</li>
   </ul>
+  <div style="margin:0 auto;width:200px;height:200px;background-color:#ff0080;">&nbsp;</div>
+</section>
+
+<section class="slide">
+  <h2>Fuchsia</h2>
+  <ul>
+    <li>Built on <a href="https://www.dartlang.org/">Dart</a> language</li>
+    <li>Uses <a href="https://flutter.io/faq/#what-does-flutter-do">Flutter</a> for the UI</li>
+  </ul>
+  <img src="./images/dart+flutter.png">
+</section>
+
+<section class="slide">
+  <h2>Wait, Dart is Still a Thing?</h2>
+  <p>Apparently so!</p>
+  <img src="./images/dart-libs.png" style="width:80%;">
+</section>
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://codepen.io/adultswim/">Adult Swim's CodePen</a></h2>
+  <p>Learn to code from juvenile web experiments</p>
+  <a href="http://codepen.io/adultswim/pen/WxQwoN"><img src="./images/toe-licker.jpg" style="width:50%"></a>
 </section>
 
 <!-- - - - - - - - - - -  Beyond the Web  - - - - - - - - - - -->
