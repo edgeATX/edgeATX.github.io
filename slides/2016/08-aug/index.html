@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: August 2016</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme -- include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+
+<!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+<section class="slide cover home">
+  <h1>Bleeding Edge Web</h1>
+</section>
+
+<!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/slack.png)">
+  <div class="content">
+    <h1 style="font-size:3em;"><a href="mailto:bleedingedgeatx@gmail.com">edgeatx.slack.com<br/>bleedingedgeatx@gmail.com</a></h1>
+  </div>
+  <div class="shim" style="opacity:.6;"></div>
+</section>
+
+<section class="slide">
+  <h2>Bleeding Edge Web: August 2016</h2>
+
+  <h3>Announcements</h3>
+
+  <h3>News from the Bleeding Edge</h3>
+  <p>&mdash; Brian Moeskau  (<a href="https://twitter.com/bmoeskau/">@bmoeskau</a>)</p>
+
+  <h3>Test Automation Best Practices<br>
+    <span style="font-size:.7em;"><em>Begin with the End in Mind</em> (<a
+    href="https://saucelabs.com/resources/webinars/automation-best-practices">slides</a>)</span></h3>
+  <p>&mdash; Leo Laskin (<a href="https://twitter.com/leolaskin">@leolaskin</a>)
+</section>
+
+<!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+<section class="slide" style="background:#4598e9;">
+  <p>Thanks to our venue sponsor:</p>
+  <div style="text-align:center;padding-top:100px;font-size:200%;">
+    <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+      src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+  </div>
+</section>
+
+<section class="slide" style="background:#ffffff;">
+  <p style="color:#555555;">Thanks to our food sponsor:</p>
+  <div style="text-align:center;font-size:200%;">
+    <p><a href="https://saucelabs.com/"><img src="./images/sauce-labs-logo.png"
+      alt="Sauce Labs" style="max-height:800px;"></a></p>
+  </div>
+</section>
+
+<!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+<section class="slide title title-cyan">
+  <h1>News from the<br>Bleeding Edge</h1>
+</section>
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+  <div class="content">
+    <h1>Browser<br>Update</h1>
+  </div>
+  <div class="shim" style="background-color:#369;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>Last version check &mdash; July 20, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver">47</td>
+      <td class="ver">14<div class="build">14372</div></td>
+      <td class="ver">39</td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of August 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver"><span class="strike dim">47</span><br><strong style="color:#1CA727">48</strong></td>
+      <td class="ver">14<div class="build"><span class="strike dim">14372</span><br><strong style="color:#1CA727">14393</strong></div></td>
+      <td class="ver"><span class="strike dim">39</span><br><strong style="color:#c50a0a">X</strong></td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Chrome 52</h2>
+  <ul>
+    <li>See <a href="http://edgeatx.github.io/slides/2016/07-jul/#11">last month's slides</a> for details</li>
+    <li><a href="http://blog.chromium.org/2016/08/chrome-53-beta-shadow-dom.html">Chrome 53</a>
+      currently slated for first week of September</li>
+    <li>Coming: <a href="https://developers.google.com/web/fundamentals/primers/shadowdom/">Shadow DOM</a> v1, <span
+      class="code"><a href="https://www.w3.org/TR/payment-request/#paymentrequest-interface">PaymentRequest</a></span> API and more...</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox 48</h2>
+  <p>Released August 2 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/48">Release Notes</a></p>
+  <ul>
+    <li>Improved CSS grid support, <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1230207">now works</a> in <span class="code">fieldset</span></li>
+    <li>New ES2015 methods: <span class="code"><a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values">Array.prototype.values</a></span>,
+      <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart">String.prototype.padStart</a> /
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd">padEnd</a></span> and more</li>
+    <li><span class="code">String.prototype.contains</span> <a
+      href="https://www.fxsitecompat.com/en-CA/docs/2015/string-prototype-contains-has-been-renamed-to-includes/">replaced</a> with
+      <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes">String.prototype.includes</a></span></li>
+    <li>Minor improvements to Web Workers, WebRTC, Dev Tools</li>
+    <li><a href="https://developer.mozilla.org/en-US/Firefox/Releases/48">Lots more</a> minor HTML, CSS and JS improvements</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Firefox 48</h2>
+  <p>Last but not least... <a href="https://blog.mozilla.org/futurereleases/2016/08/02/whats-next-for-multi-process-firefox/">multi-process support</a>!</p>
+  <ul>
+    <li>Phase 1: split between UI process and content process</li>
+    <li>Add-on support slated for versions 49 &amp; 50</li>
+    <li>Touchscreen, accessibility and RTL support in 51</li>
+  </ul>
+  <img src="./images/firefox-multiprocess-phase1.png">
+</section>
+
+<section class="slide">
+  <h2>Firefox 48</h2>
+  <p>Last but not least... <a href="https://blog.mozilla.org/futurereleases/2016/08/02/whats-next-for-multi-process-firefox/">multi-process support</a>!</p>
+  <ul>
+    <li>Phase 2: support multiple content processes</li>
+    <li>Targeting "first half of 2017"</li>
+    <li>Out of process add-ons to follow after that</li>
+  </ul>
+  <img src="./images/firefox-multiprocess-phase2.png">
+</section>
+
+<section class="slide">
+  <h2>Edge 14 (14393)</h2>
+  <p><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/14393/?compareWith=14372">Release Notes</a></p>
+  <ul>
+    <li><a href="https://blogs.windows.com/msedgedev/2016/08/04/introducing-edgehtml-14/">EdgeHTML 14</a> released with Windows 10 Anniversary Update</li>
+    <li><a href="http://kangax.github.io/compat-table/es6/#edge14">95%</a> ES2015 compatibility</li>
+    <li><a href="http://html5accessibility.com/">100%</a> HTML5 accessibility support</li>
+    <li>Rollout to 350 million Win 10 devices began Aug 2</li>
+  </ul>
+</section>
+
+<section class="slide">
+  <h2>Edge 14 (14393)</h2>
+  <p>This is a definitive nail in IE's coffin.</p>
+  <p>ES2015 compatibility:</p>
+  <img src="./images/ie-edge-kangax.png" style="width:60%;">
+</section>
+
+<section class="slide">
+  <h2>Edge 14 (14393)</h2>
+  <img src="./images/happy-dance.gif" style="width:80%;">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <ul>
+    <li>Opera 39 (Chromium 52) was <a href="https://dev.opera.com/blog/opera-39/">released</a> August 2nd</li>
+    <li>Based on Chromium since <a href="http://www.opera.com/docs/changelogs/unified/1500/">Opera 15</a> (July 2013)</li>
+    <li>&lt; 2% global usage, even less in N. America</li>
+  </ul>
+  <img src="./images/browser-trends-july-2016.png">
+</section>
+
+<section class="slide">
+  <h2>Opera</h2>
+  <ul>
+    <li>Most interesting releases are user-facing UI features</li>
+    <li>Dev features simply track Chromium</li>
+  </ul>
+  <br>
+  <p style="padding-left:50px;">So... I think it's time we make it official...</p>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of August 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/opera.png" width="60%" alt="Opera"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver">48</td>
+      <td class="ver">14<div class="build" style="color:#999999;">14393</div></td>
+      <td class="ver">39</td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Browser Pop Quiz</h2>
+  <p>As of August 24, 2016:</p>
+  <table class="browsers">
+    <tr>
+      <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="70%" alt="Firefox"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="60%" alt="Edge"></td>
+      <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+    </tr>
+    <tr>
+      <td class="ver">52</td>
+      <td class="ver">48</td>
+      <td class="ver">14<div class="build" style="color:#999999;">14393</div></td>
+      <td class="ver">9.1</td>
+    </tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>Farewell Opera!</h2>
+  <img src="./images/opera-retirement.jpg" style="width:80%;">
+</section>
+
+<section class="slide">
+  <h2>Bonus: Safari Technology Preview 11</h2>
+  <p>Released August 17 &mdash; <a href="https://webkit.org/blog/6883/release-notes-for-safari-technology-preview-release-11/">Release Notes</a></p>
+  <ul>
+    <li>11th preview release since March</li>
+    <li>Minor fixes and improvements (polishing stage)</li>
+    <li>Already at <a href="http://kangax.github.io/compat-table/es6/#safaritp">100% ES2015 compatibility</a>!</li>
+    <li><a href="https://webkit.org/downloads/">Download</a> to preview Safari 10</li>
+  </ul>
+  <img src="./images/safari-tech-preview.png">
+</section>
+
+<!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+  <h1>Libraries &amp;<br>Frameworks</h1>
+  <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+</section>
+
+<section class="slide">
+  <h2>Aurelia 1.0</h2>
+  <ul>
+    <li><a href="http://aurelia.io/">Aurelia</a> is a JS framework on par with Angular, Ember, etc.</li>
+    <li>All the stuff you expect (data binding, routing, components, etc.)</li>
+    <li><a href="http://blog.durandal.io/2016/07/27/aurelia-1-0-is-here/">1.0 released July 27th</a> after years in development</li>
+    <li>Supported by <a href="http://durandal.io/">Durandal</a>, large dedicated <a href="http://aurelia.io/team.html">team</a></li>
+  </ul>
+  <img src="./images/aurelia-logo.png">
+</section>
+
+<section class="slide">
+  <h2>Bootstrap 4 alpha 3</h2>
+  <ul>
+    <li><a href="https://blog.getbootstrap.com/2016/07/27/bootstrap-4-alpha-3/">Released July 27th</a> &mdash; over 1,200 commits</li>
+    <li>Alpha 2 was released December 8th, 2015. Hmmm.</li>
+    <li>Overhauled grid system and flexbox support</li>
+    <li>Lots of form improvements</li>
+  </ul>
+  <img src="./images/bootstrap-logo.png">
+</section>
+
+<section class="slide">
+  <h2>Docker 1.12</h2>
+  <ul>
+    <li><a href="https://blog.docker.com/2016/07/docker-for-mac-and-windows-production-ready/">Released July 28th</a></li>
+    <li>Docker for Mac &amp; Windows are officially production-ready</li>
+    <li>"The easiest way to use Docker on your dev machine"</li>
+    <li><a href="https://www.docker.com/products/docker">Download now</a> and try it out</li>
+  </ul>
+  <img src="./images/docker-logo.png">
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/FormidableLabs/webpack-dashboard">webpack-dashboard</a></h2>
+  <p>Webpack by default:</p>
+  <img src="./images/webpack-default.png" style="min-width:50%;">
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/FormidableLabs/webpack-dashboard">webpack-dashboard</a></h2>
+  <p>After running <span class="code">npm install webpack-dashboard</span>:</p>
+  <img src="./images/webpack-dashboard.png">
+</section>
+
+<!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+  <div class="content">
+    <h1>In Case You<br>Missed It</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="https://github.com/Microsoft/ChakraCore">ChakraCore</a> on Linux &amp; OSX</h2>
+  <ul>
+    <li>The core of the Chakra JS engine in Edge</li>
+    <li>Linux / OSX support announced at NodeSummit on July 27th</li>
+    <li>Why is this awesome? <a href="https://www.christianheilmann.com/2016/07/27/why-chakracore-matters/">Choice of Node VMs</a> (in theory)</li>
+  </ul>
+  <img src="./images/chakra.jpg">
+</section>
+
+<section class="slide">
+  <h2>Laravel + Vue.js</h2>
+  <ul>
+    <li><a href="http://vuejs.org/">Vue.js</a> was the topic of <a
+      href="http://www.meetup.com/bleeding-edge-web/events/231693454/">our June meetup</a></li>
+    <li><a href="https://laravel.com/">Laravel</a> is a popular PHP framework</li>
+    <li>Laravel 5.3 now <a href="http://react-etc.net/entry/php-framework-laravel-selects-vue-js-as-default-javascript-framework">bundles
+      Vue.js</a> by default as of July 27th</li>
+  </ul>
+  <img src="./images/laravel+vue.png">
+</section>
+
+<section class="slide">
+  <h2>Fuchsia</h2>
+  <ul>
+    <li>A new <a href="https://github.com/fuchsia-mirror">open source</a> OS by Google</li>
+    <li>Runs on <a href="https://github.com/fuchsia-mirror/magenta">Magenta</a> instead of Linux kernel</li>
+    <li><a href="http://www.eweek.com/enterprise-apps/google-begins-development-of-fuchsia-open-source-os.html">Targeted</a>
+      at high end mobile and IoT devices (?)</li>
+  </ul>
+  <div style="margin:0 auto;width:200px;height:200px;background-color:#ff0080;">&nbsp;</div>
+</section>
+
+<section class="slide">
+  <h2>Fuchsia</h2>
+  <ul>
+    <li>Built on <a href="https://www.dartlang.org/">Dart</a> language</li>
+    <li>Uses <a href="https://flutter.io/faq/#what-does-flutter-do">Flutter</a> for the UI</li>
+  </ul>
+  <img src="./images/dart+flutter.png">
+</section>
+
+<section class="slide">
+  <h2>Wait, Dart is Still a Thing?</h2>
+  <p>Apparently so!</p>
+  <img src="./images/dart-libs.png" style="width:80%;">
+</section>
+
+<!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <div class="content">
+    <h1>And now for something completely different...</h1>
+  </div>
+  <div class="shim" style="background-color:#555;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://codepen.io/adultswim/">Adult Swim's CodePen</a></h2>
+  <p>Learn to code from juvenile web experiments</p>
+  <a href="http://codepen.io/adultswim/pen/WxQwoN"><img src="./images/toe-licker.jpg" style="width:50%"></a>
+</section>
+
+<!-- - - - - - - - - - -  Beyond the Web  - - - - - - - - - - -->
+
+<section class="slide cover" style="background-image:url(../../shared/resources/images/double-rainbow.jpg)">
+  <div class="content">
+    <h1>Beyond the Web</h1>
+  </div>
+  <div class="shim" style="background-color:#2a052c;opacity:.7;"></div>
+</section>
+
+<section class="slide">
+  <h2><a href="http://www.vox.com/2016/6/23/11998908/ultra-thin-solar-cells">1μm Solar Panels</a></h2>
+  <blockquote>These tiny solar cells won’t produce much power individually, but what they lack in
+    energy density, they will make up for in ubiquity. They will be everywhere.</blockquote>
+  <ul>
+    <li>Photovoltaic cells 1 micrometre thick</li>
+    <li>Created by scientists in South Korea</li>
+    <li>Can wrap around a 1.4 millimeter radius</li>
+  </ul>
+  <img src="./images/pv-cells.jpg">
+</section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+<section class="slide">
+  <h2>Thanks!</h2>
+  <h3><a href="http://www.meetup.com/bleeding-edge-web/">http://www.meetup.com/bleeding-edge-web/</a></h3>
+  <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+  <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau">@bmoeskau</a></h3>
+  <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web">
+</section>
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+  <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+<script src="../../shared/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="../../shared/core/deck.core.js"></script>
+<script src="../../shared/extensions/hash/deck.hash.js"></script>
+<script src="../../shared/extensions/menu/deck.menu.js"></script>
+<script src="../../shared/extensions/goto/deck.goto.js"></script>
+<script src="../../shared/extensions/status/deck.status.js"></script>
+<script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+<script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    // Init slides
+    $.deck('.slide');
+    // Find all links and make them launch new tabs in separate processes
+    $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+    var firstScissorHalf = document.querySelector('#firstScissorHalf');
+    var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+    var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+    var positionTiming = {duration: 12000, iterations: Infinity};
+    // firstScissorHalf.animate(positionKeyframes, positionTiming);
+    // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+    var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+    var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+    var rotationTiming = {duration: 1000, iterations: Infinity};
+    // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+    // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+  });
+</script>
+</body>
+</html>
