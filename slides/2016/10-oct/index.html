@@ -1,217 +1,457 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bleeding Edge Web: October 2016</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=1024, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
-    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
-    <script type="text/javascript" src="https://cdn.author.io/chassis/components/0.0.46/chassis-cycle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.author.io/ngn/1.0.142/chassis.min.js"></script>
-    <script type="text/javascript" src="https://cdn.author.io/ngnx/1.0.50/chassis.x.min.js"></script>
-    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
-  </head>
-  <body class="ngn chassis hidden">
-    <chassis-cycle restart="true">
-      <section class="bleedingedge_slide cover" selected="true"></section>
-      <!-- <section class="welcome_slide cover"></section>
-      <section class="slack_slide cover"></section> -->
-      <section class="agenda_slide">
-        <ol>
-          <li>Announcements</li>
-          <li>News from the Bleeding Edge:<br/><span class="author">Corey Butler <a href="https://twitter.com/goldglovecb">@goldglovecb</a></span></li>
-          <li>Pragmatic React + Redux: Lessons From the Trenches<br/><span class="author"><a href="http://www.vicesoftware.com/contact/">Ryan Vice</a></span></li>
-        </ol>
-      </section>
-      <section class="capitalfactory_slide sponsor"></section>
-      <section class="sponsor light">
-        <img src="./assets/images/paypal.png"/>
-      </section>
-      <section class="bleedingedgenews cover"></section>
-      <section class="browserupdate_slide cover"></section>
-      <section>
-        <h1>Browser Pop Quiz</h1>
-        <p>Last version check &mdash; September 28, 2016:</p>
-        <div class="browser_list">
-          <div class="chrome browser">
-            <span>53</span>
-            <span></span>
-          </div>
-          <div class="firefox browser">
-            <span>49</span>
-            <span></span>
-          </div>
-          <div class="edge browser">
-            <span>14931</span>
-            <span></span>
-          </div>
-          <div class="safari browser">
-            <span>10</span>
-            <span></span>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h1>Browser Pop Quiz</h1>
-        <p>As of October 26, 2016:</p>
-        <div class="browser_list">
-          <div class="chrome browser">
-            <span class="old">53</span>
-            <span class="new">54</span>
-          </div>
-          <div class="firefox browser">
-            <span class="old">49</span>
-            <span class="new">49.0.2</span>
-          </div>
-          <div class="edge browser">
-            <span class="old">14931</span>
-            <span class="new">14936</span>
-          </div>
-          <div class="safari browser">
-            <span class="old">10</span>
-            <span class="new">10.0.1</span>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h1>Chrome 54</h1>
-        <p>Mostly the same as <a href="http://edgeatx.github.io/slides/2016/09-sep/#slide-10">last month</a>:</p>
-        <ul>
-          <a href="https://developers.google.com/web/updates/2016/09/broadcastchannel?hl=en" target="_blank">BroadcastChannel API</a>: Message Bus for Tabs
-          <div class="microlight">// Connect to the channel named "my_bus".
-  const channel = new BroadcastChannel('my_bus');
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
 
-  // Send a message on "my_bus".
-  channel.postMessage('This is a test message.');
+  <title>Bleeding Edge Web: September 2016</title>
 
-  // Listen for messages on "my_bus".
-  channel.onmessage = function(e) {
-    console.log('Received', e.data);
-  };
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
 
-  // Close the channel when you're done.
-  channel.close();</div>
-        </ul>
-      </section>
-      <section>
-        <h1>Chrome 54 continued...</h1>
-        <ul>
-          <li>CSS text-size-adjust: disable text autosizing on mobile</li>
-          <li>Passive Touch Event Listeners During Fling Intervention</li>
-          <li>imageSmoothingQuality attribute for CanvasRenderingContext2D (quality/performance tradeoff control)</li>
-          <li>Performance/Security Improvements</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Firefox 49.0.2</h1>
-        <ul>
-          <li>Minor Updates</li>
-          <li>Firefox 50 slated for November release</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Edge 14936</h1>
-        <ul>
-          <li>Nothing Notable</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Safari 10.0.1</h1>
-        <ul>
-          <li>Nothing Notable</li>
-        </ul>
-      </section>
-      <section class="libraries_slide cover"></section>
-      <section>
-        <h1>Notable Releases</h1>
-        <ul>
-          <li>Node 6.9.X (Boron), Promoted to LTS</li>
-          <li>Ember 2.8-LTS, 2.9, 2.10 Beta</li>
-          <li>YouTube being rebuilt with web components & Polymer</li>
-          <li>PubSubHubbub => PubSub => W3C Adoption</li>
-        </ul>
-      </section>
-      <section class="missed_slide cover"></section>
-      <section>
-        <h1>DynDNS DDOS Attack</h1>
-        <ul>
-          <li><a href="http://thenextweb.com/insider/2016/10/21/massive-ddos-attack-dyn-dns-causing-havoc-online" target="_blank">Massive CyberAttack</a></li>
-          <li>Outages: Github, Twitter, Spotify, Etsy, Amazon</li>
-        </ul>
-        <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./assets/images/attack.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
-      </section>
-      <section>
-        <h1>Mozilla Ditching StartSSL/StartCom/WoSign</h1>
-        <ul>
-          <li>Unacceptable WoSign breaches (Chinese Root CA)</li>
-          <li>Mozilla lost trust in WoSign</li>
-          <li>Mozilla lost trust in StartSSL/StartCom by association</li>
-          <li>No green bar + warning</li>
-        </ul>
-        <p><em>StartSSL/StartCom provides some of the cheapest SSL certificates, used for many websites and apps (popular amongst Electron developers).</em></p>
-      </section>
-      <section>
-        <h1>JS Foundation</h1>
-        <ul>
-          <li><a href="https://js.foundation">https://js.foundation</a></li>
-          <li>Open, Accesible, & Sustainable Standards</li>
-          <li>Drive broad adoption and ongoing development of key JS solutions.</li>
-          <li>Handful of Projects</li>
-          <li>Platinum Sponsors: IBM, Samsung.</li>
-        </ul>
-      </section>
-      <section>
-        <h1>The State of JS (Sacha Greif)</h1>
-        <ul>
-          <li><a href="http://stateofjs.com/2016">http://stateofjs.com/2016</a></li>
-          <li>Lots of interest in React & Vue (usage = so-so)</li>
-          <li>Coffeescript on it's way out.</li>
-          <li>Still very murky with testing, Redux, & GraphQL (and how they play with API's)</li>
-        </ul>
-      </section>
-      <section>
-        <h1>Yarn: An npm alternative.</h1>
-        <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./assets/images/yarn.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
-        <ul>
-          <li>Prevent version mismatch (yarn.lock)</li>
-          <li>Speed: npm = 9s, yarn = 1.37s (installing express)</li>
-          <li>14K Github Stars in 2 days</li>
-          <li>NPM, Inc encouraging it's development</li>
-          <li>Has limitations with version managers</li>
-        </ul>
-      </section>
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
 
-      <section>
-        <h1>Goodbye, Google Hangouts... sorta.</h1>
-        <ul>
-          <li><a href="https://www.yahoo.com/tech/google-hangouts-being-demoted-optional-192831182.html" target="_blank">Yahoo Article</a></li>
-          <li>Mobile developers no longer need to bundle Hangouts</li>
-          <li>Not preinstalled on Android anymore (but still available)</li>
-        </ul>
-      </section>
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
 
-      <section class="events_slide cover"></section>
-      <section>
-        <h1>Upcoming Events</h1>
-        <ul>
-          <li><a href="https://developer.chrome.com/devsummit" target="_blank">Chrome Dev Summit</a> Nov 10-11 (San Francisco)</li>
-          <li>Node Interactive: Nov 29-Dec 2 (JW Marriott)</li>
-          <li><a href="https://ti.to/cognitect/clojure-conj-2016/discount/Austinites" target="_blank">Clojure Conf</a> Dec 1-3 ($50 Off)</li>
-          <li>DockerCon: April 17-20 (2017)</li>
-        </ul>
-      </section>
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
 
-      <section>
-        <h1>Thanks!</h1>
-        <li><a href="http://www.meetup.com/bleeding-edge-web/" target="_blank">http://www.meetup.com/bleeding-edge-web/</a></li>
-        <li><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></li>
-        <li>Corey Butler — <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></li>
-        <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
-      </section>
-    </chassis-cycle>
-    <script type="text/javascript" src="assets/lib/app.js"></script>
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme -- include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:3em;"><a href="http://edgeATX.github.io/slides/">edgeATX.github.io/slides</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/slack.png)">
+    <div class="content">
+      <h1 style="font-size:2.5em;"><a href="https://edgeatx-invite.herokuapp.com/">edgeatx-invite.herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: October 2016</h2>
+
+    <h3>Announcements</h3>
+
+    <h3>News from the Bleeding Edge</h3>
+    <p>&mdash; Corey Butler  (<a href="https://twitter.com/goldglovecb/">@goldglovecb</a>)</p>
+
+    <h3>Pragmatic React + Redux: Lessons From the Trenches</h3>
+    <p>&mdash; <a href="http://www.vicesoftware.com/contact/">Ryan Vice</a></p>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#4598e9;">
+    <p>Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#000000;">
+    <p style="color:#ffffff;">Thanks to our sponsor:</p>
+    <div style="text-align:center;font-size:200%;margin-top:100px;">
+      <p><a href="http://paypal.com/"><img src="./images/paypal.png"
+        alt="Paypal" style="width:80%;"></a></p>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide title title-cyan">
+    <h1>News from the<br>Bleeding Edge</h1>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <p>Last version check &mdash; September 28, 2016:</p>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">53</td>
+        <td class="ver">49</td>
+        <td class="ver">14<div class="build">14931</div></td>
+        <td class="ver">10</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <p>As of October 26, 2016:</p>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">53</span><br><strong style="color:#1CA727">54</strong></td>
+        <td class="ver"><span class="strike dim">49</span><br><strong style="color:#1CA727">49.0.2</strong></td>
+        <td class="ver">14<div class="build"><span class="strike dim">14931</span><br><strong style="color:#1CA727">14936</strong></div></td>
+        <td class="ver"><span class="strike dim">9.1</span><br><strong style="color:#1CA727">10.0.1</strong></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 54</h2>
+    <p>Mostly the same as <a href="http://edgeatx.github.io/slides/2016/09-sep/#slide-10">last month</a>:</p>
+    <ul>
+      <a href="https://developers.google.com/web/updates/2016/09/broadcastchannel?hl=en" target="_blank">BroadcastChannel API</a>: Message Bus for Tabs
+      <div class="microlight">// Connect to the channel named "my_bus".
+const channel = new BroadcastChannel('my_bus');
+
+// Send a message on "my_bus".
+channel.postMessage('This is a test message.');
+
+// Listen for messages on "my_bus".
+channel.onmessage = function(e) {
+  console.log('Received', e.data);
+};
+
+// Close the channel when you're done.
+channel.close();</div>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 54 continued...</h2>
+    <ul>
+      <li>CSS text-size-adjust: disable text autosizing on mobile</li>
+      <li>Passive Touch Event Listeners During Fling Intervention</li>
+      <li>imageSmoothingQuality attribute for CanvasRenderingContext2D (quality/performance tradeoff control)</li>
+      <li>Performance/Security Improvements</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 49.0.2</h2>
+    <ul>
+      <li>Minor Updates</li>
+      <li>Firefox 50 slated for November release</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Edge 14936</h2>
+    <ul>
+      <li>Nothing Notable</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Safari 10.0.1</h2>
+    <ul>
+      <li>Nothing Notable</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Notable Releases</h2>
+    <ul>
+      <li>Node 6.9.X (Boron), Promoted to LTS</li>
+      <li>Node 7.0.0 &mdash; 98% ES2015 Support</li>
+      <li>Electron 1.4.4</li>
+      <li>Ember 2.8-LTS, 2.9, 2.10 Beta</li>
+      <li>YouTube being rebuilt with web components & Polymer</li>
+      <li>PubSubHubbub => PubSub => W3C Adoption</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Next.js - by zeit.co</h2>
+    <p>A small framework for server-rendered universal JavaScript webapps, built on top of React, Webpack and Babel.</p>
+    <img src="./images/next.gif"/>
+  </section>
+
+  <section class="slide">
+    <h2>electrode.io</h2>
+    <p>UNIVERSAL REACT/NODE APPLICATION PLATFORM</p>
+    <ul>
+      <li>Standardized Structure</li>
+      <li>Best Practices</li>
+      <li>Modern Technologies</li>
+      <li>Performance, Reusability, Simple multi-cloud deployment</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>DynDNS DDOS Attack</h2>
+    <ul>
+      <li><a href="http://thenextweb.com/insider/2016/10/21/massive-ddos-attack-dyn-dns-causing-havoc-online" target="_blank">Massive CyberAttack</a></li>
+      <li>Outages: Github, Twitter, Spotify, Etsy, Amazon</li>
+    </ul>
+    <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./images/attack.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
+  </section>
+  <section class="slide">
+    <h2>Mozilla Ditching StartSSL/StartCom/WoSign</h2>
+    <ul>
+      <li>Unacceptable WoSign breaches (Chinese Root CA)</li>
+      <li>Mozilla lost trust in WoSign</li>
+      <li>Mozilla lost trust in StartSSL/StartCom by association</li>
+      <li>No green bar + warning</li>
+    </ul>
+    <p><em>StartSSL/StartCom provides some of the cheapest SSL certificates, used for many websites and apps (popular amongst Electron developers).</em></p>
+  </section>
+  <section class="slide">
+    <h2>JS Foundation</h2>
+    <ul>
+      <li><a href="https://js.foundation">https://js.foundation</a></li>
+      <li>Open, Accesible, & Sustainable Standards</li>
+      <li>Drive broad adoption and ongoing development of key JS solutions.</li>
+      <li>Handful of Projects</li>
+      <li>Platinum Sponsors: IBM, Samsung.</li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>The State of JS (Sacha Greif)</h2>
+    <ul>
+      <li><a href="http://stateofjs.com/2016">http://stateofjs.com/2016</a></li>
+      <li>Lots of interest in React & Vue (usage = so-so)</li>
+      <li>Coffeescript on it's way out.</li>
+      <li>Still very murky with testing, Redux, & GraphQL (and how they play with API's)</li>
+    </ul>
+  </section>
+  <section class="slide">
+    <h2>Yarn: An npm alternative.</h2>
+    <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./images/yarn.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
+    <ul>
+      <li>Prevent version mismatch (yarn.lock)</li>
+      <li>Speed: npm = 9s, yarn = 1.37s (installing express)</li>
+      <li>14K Github Stars in 2 days</li>
+      <li>NPM, Inc encouraging it's development</li>
+      <li>Has limitations with version managers</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Goodbye, Google Hangouts... sorta.</h2>
+    <ul>
+      <li><a href="https://www.yahoo.com/tech/google-hangouts-being-demoted-optional-192831182.html" target="_blank">Yahoo Article</a></li>
+      <li>Mobile developers no longer need to bundle Hangouts</li>
+      <li>Not preinstalled on Android anymore (but still available)</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li><a href="https://developer.chrome.com/devsummit" target="_blank">Chrome Dev Summit</a> Nov 10-11 (San Francisco)</li>
+      <li>Node Interactive: Nov 29-Dec 2 (JW Marriott)</li>
+      <li><a href="https://ti.to/cognitect/clojure-conj-2016/discount/Austinites" target="_blank">Clojure Conf</a> Dec 1-3 ($50 Off)</li>
+      <li>DockerCon: April 17-20 (2017)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://www.meetup.com/bleeding-edge-web/" target="_blank">http://www.meetup.com/bleeding-edge-web/</a></h3>
+    <h3><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></h3>
+    <h3>Corey Butler — <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></h3>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
   </body>
 </html>
