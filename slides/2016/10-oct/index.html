@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bleeding Edge Web: October 2016</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="assets/css/base.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+    <script type="text/javascript" src="https://cdn.author.io/chassis/components/0.0.46/chassis-cycle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.author.io/ngn/1.0.142/chassis.min.js"></script>
+    <script type="text/javascript" src="https://cdn.author.io/ngnx/1.0.50/chassis.x.min.js"></script>
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="ngn chassis hidden">
+    <chassis-cycle restart="true">
+      <section class="bleedingedge_slide cover" selected="true"></section>
+      <!-- <section class="welcome_slide cover"></section>
+      <section class="slack_slide cover"></section> -->
+      <section class="agenda_slide">
+        <ol>
+          <li>Announcements</li>
+          <li>News from the Bleeding Edge:<br/><span class="author">Corey Butler <a href="https://twitter.com/goldglovecb">@goldglovecb</a></span></li>
+          <li>Pragmatic React + Redux: Lessons From the Trenches<br/><span class="author"><a href="http://www.vicesoftware.com/contact/">Ryan Vice</a></span></li>
+        </ol>
+      </section>
+      <section class="capitalfactory_slide sponsor"></section>
+      <section class="sponsor light">
+        <img src="./assets/images/paypal.png"/>
+      </section>
+      <section class="bleedingedgenews cover"></section>
+      <section class="browserupdate_slide cover"></section>
+      <section>
+        <h1>Browser Pop Quiz</h1>
+        <p>Last version check &mdash; September 28, 2016:</p>
+        <div class="browser_list">
+          <div class="chrome browser">
+            <span>53</span>
+            <span></span>
+          </div>
+          <div class="firefox browser">
+            <span>49</span>
+            <span></span>
+          </div>
+          <div class="edge browser">
+            <span>14931</span>
+            <span></span>
+          </div>
+          <div class="safari browser">
+            <span>10</span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Browser Pop Quiz</h1>
+        <p>As of October 26, 2016:</p>
+        <div class="browser_list">
+          <div class="chrome browser">
+            <span class="old">53</span>
+            <span class="new">54</span>
+          </div>
+          <div class="firefox browser">
+            <span class="old">49</span>
+            <span class="new">49.0.2</span>
+          </div>
+          <div class="edge browser">
+            <span class="old">14931</span>
+            <span class="new">14936</span>
+          </div>
+          <div class="safari browser">
+            <span class="old">10</span>
+            <span class="new">10.0.1</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h1>Chrome 54</h1>
+        <p>Mostly the same as <a href="http://edgeatx.github.io/slides/2016/09-sep/#slide-10">last month</a>:</p>
+        <ul>
+          <a href="https://developers.google.com/web/updates/2016/09/broadcastchannel?hl=en" target="_blank">BroadcastChannel API</a>: Message Bus for Tabs
+          <div class="microlight">// Connect to the channel named "my_bus".
+  const channel = new BroadcastChannel('my_bus');
+
+  // Send a message on "my_bus".
+  channel.postMessage('This is a test message.');
+
+  // Listen for messages on "my_bus".
+  channel.onmessage = function(e) {
+    console.log('Received', e.data);
+  };
+
+  // Close the channel when you're done.
+  channel.close();</div>
+        </ul>
+      </section>
+      <section>
+        <h1>Chrome 54 continued...</h1>
+        <ul>
+          <li>CSS text-size-adjust: disable text autosizing on mobile</li>
+          <li>Passive Touch Event Listeners During Fling Intervention</li>
+          <li>imageSmoothingQuality attribute for CanvasRenderingContext2D (quality/performance tradeoff control)</li>
+          <li>Performance/Security Improvements</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Firefox 49.0.2</h1>
+        <ul>
+          <li>Minor Updates</li>
+          <li>Firefox 50 slated for November release</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Edge 14936</h1>
+        <ul>
+          <li>Nothing Notable</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Safari 10.0.1</h1>
+        <ul>
+          <li>Nothing Notable</li>
+        </ul>
+      </section>
+      <section class="libraries_slide cover"></section>
+      <section>
+        <h1>Notable Releases</h1>
+        <ul>
+          <li>Node 6.9.X (Boron), Promoted to LTS</li>
+          <li>Ember 2.8-LTS, 2.9, 2.10 Beta</li>
+          <li>YouTube being rebuilt with web components & Polymer</li>
+          <li>PubSubHubbub => PubSub => W3C Adoption</li>
+        </ul>
+      </section>
+      <section class="missed_slide cover"></section>
+      <section>
+        <h1>DynDNS DDOS Attack</h1>
+        <ul>
+          <li><a href="http://thenextweb.com/insider/2016/10/21/massive-ddos-attack-dyn-dns-causing-havoc-online" target="_blank">Massive CyberAttack</a></li>
+          <li>Outages: Github, Twitter, Spotify, Etsy, Amazon</li>
+        </ul>
+        <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./assets/images/attack.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
+      </section>
+      <section>
+        <h1>Mozilla Ditching StartSSL/StartCom/WoSign</h1>
+        <ul>
+          <li>Unacceptable WoSign breaches (Chinese Root CA)</li>
+          <li>Mozilla lost trust in WoSign</li>
+          <li>Mozilla lost trust in StartSSL/StartCom by association</li>
+          <li>No green bar + warning</li>
+        </ul>
+        <p><em>StartSSL/StartCom provides some of the cheapest SSL certificates, used for many websites and apps (popular amongst Electron developers).</em></p>
+      </section>
+      <section>
+        <h1>JS Foundation</h1>
+        <ul>
+          <li><a href="https://js.foundation">https://js.foundation</a></li>
+          <li>Open, Accesible, & Sustainable Standards</li>
+          <li>Drive broad adoption and ongoing development of key JS solutions.</li>
+          <li>Handful of Projects</li>
+          <li>Platinum Sponsors: IBM, Samsung.</li>
+        </ul>
+      </section>
+      <section>
+        <h1>The State of JS (Sacha Greif)</h1>
+        <ul>
+          <li><a href="http://stateofjs.com/2016">http://stateofjs.com/2016</a></li>
+          <li>Lots of interest in React & Vue (usage = so-so)</li>
+          <li>Coffeescript on it's way out.</li>
+          <li>Still very murky with testing, Redux, & GraphQL (and how they play with API's)</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Yarn: An npm alternative.</h1>
+        <p style="margin: 0 !important; padding: 0 !important; text-align: center; max-height: 450px;"><img src="./assets/images/yarn.png" class="margin: 0; padding: 0; max-width: 400px;"/></p>
+        <ul>
+          <li>Prevent version mismatch (yarn.lock)</li>
+          <li>Speed: npm = 9s, yarn = 1.37s (installing express)</li>
+          <li>14K Github Stars in 2 days</li>
+          <li>NPM, Inc encouraging it's development</li>
+          <li>Has limitations with version managers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>Goodbye, Google Hangouts... sorta.</h1>
+        <ul>
+          <li><a href="https://www.yahoo.com/tech/google-hangouts-being-demoted-optional-192831182.html" target="_blank">Yahoo Article</a></li>
+          <li>Mobile developers no longer need to bundle Hangouts</li>
+          <li>Not preinstalled on Android anymore (but still available)</li>
+        </ul>
+      </section>
+
+      <section class="events_slide cover"></section>
+      <section>
+        <h1>Upcoming Events</h1>
+        <ul>
+          <li><a href="https://developer.chrome.com/devsummit" target="_blank">Chrome Dev Summit</a> Nov 10-11 (San Francisco)</li>
+          <li>Node Interactive: Nov 29-Dec 2 (JW Marriott)</li>
+          <li><a href="https://ti.to/cognitect/clojure-conj-2016/discount/Austinites" target="_blank">Clojure Conf</a> Dec 1-3 ($50 Off)</li>
+          <li>DockerCon: April 17-20 (2017)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>Thanks!</h1>
+        <li><a href="http://www.meetup.com/bleeding-edge-web/" target="_blank">http://www.meetup.com/bleeding-edge-web/</a></li>
+        <li><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></li>
+        <li>Corey Butler — <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></li>
+        <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+      </section>
+    </chassis-cycle>
+    <script type="text/javascript" src="assets/lib/app.js"></script>
+  </body>
+</html>
