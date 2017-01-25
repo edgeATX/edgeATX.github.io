@@ -3,3 +3,7 @@
 .DS_Store
 edgeatx.sublime-project
 edgeatx.sublime-workspace
+node_modules
+gulpfile.js
+package.json
+sass
