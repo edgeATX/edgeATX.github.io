@@ -229,3 +229,10 @@ pre[class*="language-"] {
 /* line 269, skew-dark.scss */
 .browsers .build {
   font-size: 50%; }
+
+/* line 274, skew-dark.scss */
+.feature-prefix:after {
+  content: '\2606';
+  /* &star; */
+  color: #E91E63;
+  padding-right: 15px; }

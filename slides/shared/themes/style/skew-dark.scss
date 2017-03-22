@@ -270,3 +270,9 @@ pre[class*="language-"] {
     font-size: 50%;
   }
 }
+
+.feature-prefix:after {
+  content: '\2606'; /* &star; */
+  color: #E91E63;
+  padding-right: 15px;
+}
