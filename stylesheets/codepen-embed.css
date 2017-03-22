@@ -1,3 +1,6 @@
 #output pre code {
   font-size: 2em;
 }
+#result-box {
+  border-left: 1px solid #555;
+}
