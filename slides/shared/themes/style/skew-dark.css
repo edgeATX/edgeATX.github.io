@@ -249,8 +249,12 @@ pre[class*="language-"] {
 /* line 290, skew-dark.scss */
 .browsers .build {
   font-size: 50%; }
+/* line 293, skew-dark.scss */
+.browsers .pct {
+  font-size: .8em;
+  padding-left: 15px; }
 
-/* line 295, skew-dark.scss */
+/* line 299, skew-dark.scss */
 .star:before {
   content: '\2606';
   /* &star; */
