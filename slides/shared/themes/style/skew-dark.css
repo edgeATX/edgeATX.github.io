@@ -14,22 +14,21 @@
       letter-spacing: -.05em; }
     /* line 17, skew-dark.scss */
     .deck-container .slide h2 {
-      color: #D6B70A;
-      border-bottom: 1px solid #D6B70A;
-      letter-spacing: -.05em; }
-    /* line 22, skew-dark.scss */
+      color: #E91E63;
+      border-bottom: 0;
+      padding: 40px 0;
+      letter-spacing: -.05em;
+      font-size: 2.4em;
+      margin-bottom: 20px; }
+    /* line 25, skew-dark.scss */
     .deck-container .slide h3 {
-      color: #cccccc;
       margin-bottom: .7em; }
-    /* line 26, skew-dark.scss */
-    .deck-container .slide h4 {
-      color: #cccccc; }
-    /* line 31, skew-dark.scss */
+    /* line 30, skew-dark.scss */
     .deck-container .slide pre code {
       overflow: hidden;
       font-size: .9em;
       letter-spacing: 1.5px; }
-    /* line 37, skew-dark.scss */
+    /* line 36, skew-dark.scss */
     .deck-container .slide blockquote {
       font-size: .9em;
       font-style: italic;
@@ -37,26 +36,26 @@
       color: #cccccc;
       background: #1f1f1f;
       border-left: 5px solid #666666; }
-      /* line 45, skew-dark.scss */
+      /* line 44, skew-dark.scss */
       .deck-container .slide blockquote p {
         margin: 0; }
-      /* line 49, skew-dark.scss */
+      /* line 48, skew-dark.scss */
       .deck-container .slide blockquote cite {
         font-size: .5em;
         font-style: normal;
         font-weight: bold;
         color: #cccccc; }
-      /* line 56, skew-dark.scss */
+      /* line 55, skew-dark.scss */
       .deck-container .slide blockquote strong {
         font-weight: bold; }
-    /* line 61, skew-dark.scss */
+    /* line 60, skew-dark.scss */
     .deck-container .slide table.table td {
       border: 1px solid #ccc;
       padding: 5px; }
-    /* line 65, skew-dark.scss */
+    /* line 64, skew-dark.scss */
     .deck-container .slide thead td {
       font-weight: 800; }
-    /* line 69, skew-dark.scss */
+    /* line 68, skew-dark.scss */
     .deck-container .slide span.code {
       font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
       font-weight: 400;
@@ -65,93 +64,106 @@
       border: 1px solid #777777;
       background-color: #222222;
       border-radius: 3px;
-      padding: 1px 8px;
+      padding: 1px 8px 2px;
       white-space: nowrap; }
-    /* line 81, skew-dark.scss */
+    /* line 80, skew-dark.scss */
     .deck-container .slide ::-moz-selection {
       background: #c00;
       color: #fff; }
-    /* line 82, skew-dark.scss */
+    /* line 81, skew-dark.scss */
     .deck-container .slide ::selection {
       background: #c00;
       color: #fff; }
-    /* line 84, skew-dark.scss */
+    /* line 83, skew-dark.scss */
     .deck-container .slide a {
       color: #75B1F5 !important;
       border-bottom: 2px dotted #333B46; }
-      /* line 88, skew-dark.scss */
+      /* line 87, skew-dark.scss */
       .deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited {
         color: #c00;
         text-decoration: none; }
-      /* line 93, skew-dark.scss */
+      /* line 92, skew-dark.scss */
       .deck-container .slide a:hover, .deck-container .slide a:focus {
         border-bottom: 1px solid #1c68be; }
-      /* line 97, skew-dark.scss */
+      /* line 96, skew-dark.scss */
       .deck-container .slide a span.code {
         color: #75B1F5 !important;
         border-bottom: 2px dotted #333B46; }
-    /* line 103, skew-dark.scss */
+    /* line 102, skew-dark.scss */
+    .deck-container .slide ul {
+      margin-left: .5em; }
+    /* line 105, skew-dark.scss */
     .deck-container .slide li {
-      line-height: 1.5em; }
-    /* line 107, skew-dark.scss */
+      line-height: 1.5em;
+      list-style: none;
+      padding: .15em 0; }
+    /* line 110, skew-dark.scss */
+    .deck-container .slide li:before {
+      content: '\029BF';
+      /* &ofcir; */
+      color: #E91E63;
+      padding-right: 20px; }
+    /* line 116, skew-dark.scss */
+    .deck-container .slide small {
+      font-size: 75%; }
+    /* line 120, skew-dark.scss */
     .deck-container .slide .strike {
       text-decoration: line-through; }
-    /* line 110, skew-dark.scss */
+    /* line 123, skew-dark.scss */
     .deck-container .slide .dim {
       opacity: .4; }
-  /* line 116, skew-dark.scss */
+    /* line 126, skew-dark.scss */
+    .deck-container .slide .indent {
+      margin-left: 2em; }
+  /* line 132, skew-dark.scss */
   .deck-container > .slide .deck-before, .deck-container > .slide .deck-previous {
     opacity: 0.4; }
-    /* line 120, skew-dark.scss */
+    /* line 136, skew-dark.scss */
     .deck-container > .slide .deck-before:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-before:not(.deck-child-current) .deck-previous, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-before, .deck-container > .slide .deck-previous:not(.deck-child-current) .deck-previous {
       opacity: 1; }
-  /* line 126, skew-dark.scss */
+  /* line 142, skew-dark.scss */
   .deck-container > .slide .deck-child-current {
     opacity: 1; }
-  /* line 131, skew-dark.scss */
+  /* line 147, skew-dark.scss */
   .deck-container .deck-prev-link, .deck-container .deck-next-link {
     background: #222222 !important;
     color: #999999 !important;
     font-family: serif; }
-  /* line 137, skew-dark.scss */
+  /* line 153, skew-dark.scss */
   .deck-container .deck-status {
     font-size: 0.6666em;
     right: 15px;
     color: #555555; }
-  /* line 144, skew-dark.scss */
+  /* line 160, skew-dark.scss */
   .deck-container.deck-menu .slide {
     background: #eee; }
-  /* line 148, skew-dark.scss */
+  /* line 164, skew-dark.scss */
   .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
     background: #ddf; }
-  /* line 153, skew-dark.scss */
+  /* line 169, skew-dark.scss */
   .deck-container .cover, .deck-container .cover-light {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover; }
-    /* line 162, skew-dark.scss */
+    /* line 177, skew-dark.scss */
     .deck-container .cover h1, .deck-container .cover-light h1 {
       color: #fff;
       text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
       line-height: 1em; }
-    /* line 167, skew-dark.scss */
+    /* line 182, skew-dark.scss */
     .deck-container .cover h2, .deck-container .cover-light h2 {
       color: #fff;
       border-bottom: none; }
-    /* line 171, skew-dark.scss */
+    /* line 186, skew-dark.scss */
     .deck-container .cover a, .deck-container .cover-light a, .deck-container .cover a:visited, .deck-container .cover-light a:visited {
       color: #fff !important; }
-    /* line 174, skew-dark.scss */
-    .deck-container .cover p, .deck-container .cover-light p, .deck-container .cover li, .deck-container .cover-light li {
-      color: #eee; }
-    /* line 177, skew-dark.scss */
+    /* line 189, skew-dark.scss */
     .deck-container .cover .content, .deck-container .cover-light .content {
       z-index: 99; }
-    /* line 180, skew-dark.scss */
+    /* line 192, skew-dark.scss */
     .deck-container .cover .shim, .deck-container .cover-light .shim {
       z-index: -99;
       background: #000;
@@ -161,78 +173,86 @@
       bottom: 0;
       right: 0;
       opacity: .6; }
-  /* line 194, skew-dark.scss */
+  /* line 206, skew-dark.scss */
   .deck-container .cover-light .shim {
     background: #fff;
     opacity: .7; }
-  /* line 198, skew-dark.scss */
+  /* line 210, skew-dark.scss */
   .deck-container .cover-light h1 {
     color: #000; }
-  /* line 201, skew-dark.scss */
+  /* line 213, skew-dark.scss */
   .deck-container .cover-light h2 {
     color: #1f4c7f; }
-  /* line 204, skew-dark.scss */
+  /* line 216, skew-dark.scss */
   .deck-container .cover-light h3 {
     color: #444; }
-  /* line 207, skew-dark.scss */
+  /* line 219, skew-dark.scss */
   .deck-container .cover-light h1, .deck-container .cover-light h2, .deck-container .cover-light h3 {
     text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7); }
-  /* line 210, skew-dark.scss */
+  /* line 222, skew-dark.scss */
   .deck-container .cover-light a, .deck-container .cover-light a:visited, .deck-container .cover-light p, .deck-container .cover-light li {
     color: #333;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); }
-  /* line 216, skew-dark.scss */
+  /* line 228, skew-dark.scss */
   .deck-container .title {
     background-color: #0F91DA; }
-    /* line 219, skew-dark.scss */
+    /* line 231, skew-dark.scss */
     .deck-container .title h1, .deck-container .title h2, .deck-container .title h3 {
       color: #fff; }
-    /* line 222, skew-dark.scss */
+    /* line 234, skew-dark.scss */
     .deck-container .title h1 {
       line-height: 1em; }
-  /* line 227, skew-dark.scss */
+  /* line 239, skew-dark.scss */
   .deck-container .home {
     background-image: url(../../resources/images/bleeding-edge.jpg); }
-  /* line 232, skew-dark.scss */
+  /* line 244, skew-dark.scss */
   .deck-container .browser-table td {
     text-align: center;
     width: 20%; }
-    /* line 236, skew-dark.scss */
+    /* line 248, skew-dark.scss */
     .deck-container .browser-table td img {
       height: 7em;
       margin-bottom: 0; }
-    /* line 240, skew-dark.scss */
+    /* line 252, skew-dark.scss */
     .deck-container .browser-table td p {
       margin-top: 15px;
       font-size: 2em; }
+  /* line 259, skew-dark.scss */
+  .deck-container .cols-2 {
+    column-count: 2;
+    column-gap: 30px; }
+  /* line 263, skew-dark.scss */
+  .deck-container .cols-3 {
+    column-count: 3;
+    column-gap: 30px; }
 
-/* line 249, skew-dark.scss */
+/* line 270, skew-dark.scss */
 :not(pre) > code[class*="language-"] {
   background: #222222;
   padding: .1em .3em;
   border-radius: .2em;
   border: 2px solid #444444; }
 
-/* line 255, skew-dark.scss */
+/* line 276, skew-dark.scss */
 pre[class*="language-"] {
   background: #1F1F1F;
   border: 2px solid #333333;
   border-radius: .2em;
   padding: .3em .6em; }
 
-/* line 263, skew-dark.scss */
+/* line 284, skew-dark.scss */
 .browsers td {
   text-align: center; }
-/* line 266, skew-dark.scss */
+/* line 287, skew-dark.scss */
 .browsers .ver {
   font-size: 2.5em; }
-/* line 269, skew-dark.scss */
+/* line 290, skew-dark.scss */
 .browsers .build {
   font-size: 50%; }
 
-/* line 274, skew-dark.scss */
-.feature-prefix:after {
+/* line 295, skew-dark.scss */
+.star:before {
   content: '\2606';
   /* &star; */
   color: #E91E63;
-  padding-right: 15px; }
+  padding-right: 20px; }
