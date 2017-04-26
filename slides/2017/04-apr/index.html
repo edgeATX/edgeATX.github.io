@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: April 2017</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.github.io/slides/">edgeATX.<wbr>github.io/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: April 2017</h2>
+    <h3 class="star">Announcements</h3>
+
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star">Web Performance Deep Dive</h3>
+    <p class="indent">&mdash; Chander Dhall (<a href="https://twitter.com/csdhall">@csdhall</a>)</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#4598e9;">
+    <p>Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#f7941d;">
+    <p>Thanks to our sponsor:</p>
+    <div style="text-align:center;padding-top:200px;font-size:200%;">
+      <p><a href="https://www.teksystems.com/"><img style="min-width:40%"
+        src="images/teksystems-logo.jpg" alt="TEKsystems"></a></p>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; March 22, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">57</td>
+        <td class="ver">52</td>
+        <td class="ver">14<div class="build">15060</div></td>
+        <td class="ver">10.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of April 25, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">57</span><br><strong style="color:#1CA727">58</strong></td>
+        <td class="ver"><span class="strike dim">52</span><br><strong style="color:#1CA727">53</strong></td>
+        <td class="ver"><span class="strike dim">14</span><strong style="color:#1CA727">15</span><br><div class="build"><span class="strike dim">15060</span><strong style="color:#1CA727">16179</strong></div></td>
+        <td class="ver">10.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 58</h2>
+    <h3>Released April 19</h3>
+    <h3><a href="https://developers.google.com/web/updates/2017/04/nic58">Release Notes</a></h3>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 58</h2>
+    <h3 class="star">Full <a
+      href="https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/">IndexedDB 2.0</a> support</h3>
+    <p class="indent">In-browser key/value database with:</p>
+    <ul class="indent cols-2">
+      <li>Indexes (duh)</li>
+      <li>Object storage</li>
+      <li>Queries &amp; Cursors</li>
+      <li>Transactions</li>
+      <li>Events</li>
+      <li>Multi-client support</li>
+    </ul>
+    <p class="indent">(And a teaser of <a href="https://www.chromestatus.com/features/5678767817097216">headless Chrome</a> coming soon)</p>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 58</h2>
+    <h3 class="star">Full-screen <a
+      href="https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/">Progressive Web Apps</a> (Android)</h3>
+    <img src="./images/pwa.png">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 53</h2>
+    <p>Released April 19 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/53">Release Notes</a></p>
+    <p>Nothing major, lots of minor improvements.</p>
+    <ul>
+      <li>CSS <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color">caret-color</a></span></li>
+      <li>CSS <span class="code"><a href="https://helloanselm.com/2017/flow-root-supports/">display: flow-root</a></span> (basically native "clearfix")</li>
+      <li>Added "<a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly">C:\fakepath</a>" support for upload inputs</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Edge 15 <small>(16179)</small></h2>
+    <p>Released April 11</p>
+    <h3 class="star">EdgeHTML 15 public release</h3>
+    <p class="indent">Part of <a
+      href="https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/#brfwpuPFWhq3KWvX.97">Windows 10 Creators Update</a></p>
+    <p class="indent">(Basically a <a
+      href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/16179/?compareWith=14393">rollup
+      of stuff</a> we've been talking about for a while)</p>
+  </section>
+
+  <section class="slide">
+    <h2>Safari 10.1 <small>(reminder)</small></h2>
+    <p>Widely released March 27 &mdash; <a
+      href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html">Release Notes</a></p>
+    <ul>
+      <li>Fetch, IndexDB 2.0, Web Components</li>
+      <li>Full ES2016/17 support</li>
+      <li><a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a></li>
+      <li>Lots more (here's <a href="https://webkit.org/blog/7477/new-web-features-in-safari-10-1/">a great overview</a>)
+    </ul>
+    <p>Basically brought it to parity with Chrome and FF</p>
+  </section>
+
+  <section class="slide">
+    <h2>Speaking of Browsers...</h2>
+    <h3 class="star">Pop Quiz:</h3>
+    <blockquote style="font-size:1.5em;">Which are the top 5 browsers, worldwide, across all platforms?</blockquote>
+  </section>
+
+  <section class="slide">
+    <h2>Speaking of Browsers...</h2>
+    <h3 class="star"><a href="http://gs.statcounter.com/browser-market-share">Top 5</a> worldwide, all platforms:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="20%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="20%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        <td width="20%"><img src="./images/uc-browser.png" width="70%" alt="UC Browser"></td>
+        <td width="20%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="20%"><img src="../../shared/resources/images/ie.png" width="70%" alt="Edge"></td>
+      </tr>
+      <tr>
+        <td class="ver">52<span class="pct">%</span></td>
+        <td class="ver">14<span class="pct">%</span></td>
+        <td class="ver">9<span class="pct">%</span></td>
+        <td class="ver">7<span class="pct">%</span></td>
+        <td class="ver">4<span class="pct">%</span></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Speaking of Browsers...</h2>
+    <h3><a href="https://en.wikipedia.org/wiki/UC_Browser">UC Browser</a></h3>
+    <p><img style="margin:0 0;" src="./images/uc-browser.png" width="150px" alt="UC Browser"></p>
+    <ul>
+      <li>Owned by Alibaba, been around since 2004</li>
+      <li>17% worldwide when measuring mobile-only!</li>
+    </ul>
+    <p><a href="https://medium.com/samsung-internet-dev/think-you-know-the-top-web-browsers-458a0a070175">Learn more</a>
+      and know your audience!</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Libraries, Tools &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Framework News</h2>
+    <ul>
+      <li><a href="https://blog.jquery.com/2017/03/16/jquery-3-2-0-is-out/">jQuery 3.2.0</a> (actually <a
+        href="http://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/">3.2.1</a>) &mdash; <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">CSS custom property</a> support</li>
+      <li><a href="http://angularjs.blogspot.com/2017/03/angular-400-now-available.html">Angular 4.0.0</a> (<a
+        href="http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html">huh?</a>)</li>
+      <li><a href="https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html">React 15.5</a> (mostly prep for 16.0)</li>
+      <li><a href="http://jlongster.com/prettier-1.0">Prettier 1.0</a></li>
+      <li><a href="https://microsoft.github.io/reactxp/">ReactXP 0.1.0</a> (cross-platform app library)</li>
+      <li><a href="https://zeit.co/blog/next2">Next.js 2.0</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Sidebar: CSS Custom Properties</h2>
+    <h3>They are awesome &mdash; and <a
+      href="https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/">ready for prime time</a></h3>
+    <p>Compared to pre-processors (SASS, LESS):</p>
+    <ul>
+      <li>Variables can change on the fly</li>
+      <li>Aware of DOM structure</li>
+      <li>Can be read/updated from JS</li>
+      <li>Sometimes SASS/LESS would just be overkill</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Sidebar: CSS Custom Properties</h2>
+    <h3>They are awesome &mdash; and <a
+      href="https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/">ready for prime time</a> *</h3>
+    <img src="./images/css-vars.png">
+    <p>* You don't need to support IE, right?</p>
+  </section>
+
+  <section class="slide">
+    <h2>New: React VR</h2>
+    <blockquote>Build VR websites and interactive 360 experiences with React</blockquote>
+    <p><a href="https://code.facebook.com/posts/215238872297197/building-virtual-reality-experiences-on-the-web-with-react-vr/">Released</a>
+      April 18 (<a href="https://facebook.github.io/react-vr/">Github</a>)</P>
+    <img src="./images/react-vr.png">
+  </section>
+
+  <section class="slide">
+    <h2>PostgreSQL 10</h2>
+    <p>Coming later this year (Fall 2017)</P>
+    <ul class="cols-2">
+      <li>Declarative partitioning</li>
+      <li>Logical replication</li>
+      <li>Improved parallel query</li>
+      <li>SCRAM authentication</li>
+      <li>Executor speedups</li>
+      <li>Durable hash indexes</li>
+    </ul>
+    <p>And <a href="https://rhaas.blogspot.de/2017/04/new-features-coming-in-postgresql-10.html">a whole lot more</a>!</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+
+    <section class="slide">
+      <h2>Mandatory CAA Checking</h2>
+      <h3>What's a CAA?</h3>
+      <ul>
+        <li>"Certification Authority Authorization"</li>
+        <li>A new-ish DNS <a href="https://tools.ietf.org/html/rfc6844">resource record type</a></li>
+        <li>Heard of <span class="code">A</span>, <span class="code">CNAME</span> and <span class="code">TXT</span>
+          records? Now there's <span class="code">CAA</span> too</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Mandatory CAA Checking</h2>
+      <h3>The purpose is basically 2 things:</h3>
+      <ul>
+        <li>Restrict which CA's can issue certificates for your domain</li>
+        <li>Define who gets notified if this is violated</li>
+      </ul>
+      <p><a href="https://www.ssl.com/article/certification-authority-authorization-caa/">Find out more.</a> Here's an example:</p>
+      <pre><code>example.com.  CAA 0 issue "letsencrypt.org"
+example.com.  CAA 0 iodef "mailto:example@example.com"</code></pre>
+    </section>
+
+    <section class="slide">
+      <h2>Mandatory CAA Checking</h2>
+      <h3>Cool! Why should I care?</h3>
+      <ul>
+        <li>Helps prevent hackers from exploiting your site</li>
+        <li>It's free and trivial to set up</li>
+        <li>In March the CA/Browser Forum made checking <em>mandatory</em> for CA's</li>
+      </ul>
+      <blockquote>Bottom line: If you manage DNS, start using this!</blockquote>
+    </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Avoid JS Dialogs</h2>
+    <blockquote>The Chromium team highly recommends that you not use JavaScript dialogs.</blockquote>
+    <p>Includes <span class="code">alert()</span>, <span class="code">confirm()</span>, and
+      <span class="code">prompt()</span></p>
+    <p class="star">They <a href="https://developers.google.com/web/updates/2017/03/dialogs-policy">recommend</a> instead using...</p>
+    <ul>
+      <li>HTML5 <span class="code"><a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">&lt;dialog&gt;</a></span> (or similar) for user input</span></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> for alerts</li>
+      <li><a href="https://w3c.github.io/page-visibility/#introduction">Page Visibility API</a> insted of
+        <span class="code">unbeforeunload</span></li>
+    </section>
+
+  <section class="slide">
+    <h2><a href="https://stackoverflow.com/insights/survey/2017/">StackOverflow 2017 Dev Survey</a></h2>
+    <blockquote>This year, over 64,000 developers told us how they learn and level up, which tools they’re using, and what they want.</blockquote>
+    <img src="./images/so-popular-tech.png" style="min-width:60%;">
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://stackoverflow.com/insights/survey/2017/">StackOverflow 2017 Dev Survey</a></h2>
+    <blockquote>This year, over 64,000 developers told us how they learn and level up, which tools they’re using, and what they want.</blockquote>
+    <img src="./images/so-gif.png" style="min-width:70%;">
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="http://atxhackforchange.org/">ATX Hack for Change 2017</a></h2>
+    <blockquote>A civic hackathon where we hack solutions to our community problems.</blockquote>
+    <ul>
+      <li>Free to attend! Check out the <a href="http://atxhackforchange.org/projects">project initiatives</a></li>
+      <li>June 2-4 at St. Edwards University</li>
+      <li><a href="http://atxhackforchange.org/attend">Sign up</a> now</li>
+    </ul>
+    <img src="./images/atx-hack-for-change.png">
+  </section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></h3>
+    <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a></h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
