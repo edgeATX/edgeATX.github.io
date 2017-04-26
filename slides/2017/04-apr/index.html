@@ -252,6 +252,19 @@
       of stuff</a> we've been talking about for a while)</p>
   </section>
 
+  <section class="slide">
+    <h2>Safari 10.1 <small>(reminder)</small></h2>
+    <p>Widely released March 27 &mdash; <a
+      href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_1.html">Release Notes</a></p>
+    <ul>
+      <li>Fetch, IndexDB 2.0, Web Components</li>
+      <li>Full ES2016/17 support</li>
+      <li><a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a></li>
+      <li>Lots more (here's <a href="https://webkit.org/blog/7477/new-web-features-in-safari-10-1/">a great overview</a>)
+    </ul>
+    <p>Basically brought it to parity with Chrome and FF</p>
+  </section>
+
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
@@ -262,12 +275,10 @@
   <section class="slide">
     <h2>Framework News</h2>
     <ul>
-      <!-- <li><a href="https://github.com/coffeescript6/discuss/issues/71">CoffeeScript 2.0.0-alpha1</a> (still a thing?)</li>
-      <li><a href="https://www.polymer-project.org/blog/2017-03-08-2-0-rc">Polymer 2.0 RC</a></li>
-      <li><a href="https://github.com/marcuswestin/store.js">Store.js 2.0</a> (x-browser local storage)</li>
-      <li><a href="https://github.com/yarnpkg/yarn">Yarn 0.22.0</a> (better npm)</li>
-      <li><a href="https://about.gitlab.com/2017/03/22/gitlab-9-0-released/">GitLab 9.0</a></li>
-      <li><a href="https://medium.com/@mlrawlings/marko-4-0-is-here-837884c5f60d#.89ja9b7lq">Marko 4.0</a> (eBay's UI lib)</li> -->
+      <li><a href="https://blog.jquery.com/2017/03/16/jquery-3-2-0-is-out/">jQuery 3.2.0</a> (actually <a
+        href="http://blog.jquery.com/2017/03/20/jquery-3-2-1-now-available/">3.2.1</a>)</li>
+      <li><a href="http://angularjs.blogspot.com/2017/03/angular-400-now-available.html">Angular 4.0.0</a> (<a
+        href="http://angularjs.blogspot.com/2016/12/ok-let-me-explain-its-going-to-be.html">huh?</a>)
     </ul>
   </section>
 
@@ -281,9 +292,29 @@
   </section>
 
   <section class="slide">
-    <h2></h2>
-    <blockquote></blockquote>
-    <img src="./images/.png" style="min-width:60%;">
+    <h2>Changing JS Dialog Habits</h2>
+    <blockquote>The Chromium team highly recommends that you not use JavaScript dialogs.</blockquote>
+    <p>Includes <span class="code">alert()</span>, <span class="code">confirm()</span>, and
+      <span class="code">prompt()</span></p>
+    <p class="star">They <a href="https://developers.google.com/web/updates/2017/03/dialogs-policy">recommend</a> instead using...</p>
+    <ul>
+      <li>HTML5 <span class="code"><a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog">&lt;dialog&gt;</a></span> for user input</span></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API">Notifications API</a> for alerts</li>
+      <li><a href="https://w3c.github.io/page-visibility/#introduction">Page Visibility API</a> insted of
+        <span class="code">unbeforeunload</span></li>
+    </section>
+
+  <section class="slide">
+    <h2><a href="https://stackoverflow.com/insights/survey/2017/">StackOverflow 2017 Dev Survey</a></h2>
+    <blockquote>This year, over 64,000 developers told us how they learn and level up, which tools they’re using, and what they want.</blockquote>
+    <img src="./images/so-popular-tech.png" style="min-width:60%;">
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://stackoverflow.com/insights/survey/2017/">StackOverflow 2017 Dev Survey</a></h2>
+    <blockquote>This year, over 64,000 developers told us how they learn and level up, which tools they’re using, and what they want.</blockquote>
+    <img src="./images/so-gif.png" style="min-width:70%;">
   </section>
 
   <!-- - - - - - - - - - -  Other  - - - - - - - - - - -->
