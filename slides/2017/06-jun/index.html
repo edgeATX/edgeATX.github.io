@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: June 2017</title>
+
+  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.github.io/slides/">edgeATX.<wbr>github.io/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: June 2017</h2>
+    <h3 class="star">Housekeeping</h3>
+
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldgloveb">@goldglovecb</a>)</p>
+
+    <h3 class="star">Node &amp; Arduino: A fun Introduction</h3>
+    <p class="indent">&mdash; Noah Glaser <!--(<a href="https://twitter.com/">@</a>)--></p>
+
+    <h3 class="star">Additional Announcements</h3>
+  </section>
+
+  <section class="slide">
+    <h2>Housekeeping</h2>
+    <h3 class="star">Parking Validation ($5 instead of $30)</h3>
+    <h3 class="star">Buffalo Billiards After-Meetup</h3>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#4598e9;">
+    <p>Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#ffffff;">
+    <p style="color: #313131;">Thanks to our food &amp; drink sponsor:</p>
+    <div style="text-align:center;padding-top:200px;font-size:200%;">
+      <p><a href="http://www.flosports.tv/"><img style="min-width:40%"
+        src="images/flosports.jpeg" alt="FLOSPORTS"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#111111;">
+    <p style="color: #313131;">Thanks to our sponsor:</p>
+    <div style="text-align:center;padding-top:200px;font-size:200%;">
+      <p>#ExpeditionHacks</p>
+      <a href="http://expeditionhacks.com/austin" target="_blank">http://expeditionhacks.com/austin</a>
+      <br/>
+      <a style="font-size: small;" href="https://talky.io/bleeding-edge-web" target="_blank">talky.io/bleeding-edge-web</a>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; May 24, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">58</td>
+        <td class="ver">53</td>
+        <td class="ver"><span>15</span><br><div class="build">16188</div></td>
+        <td class="ver">10.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of June 28, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="16.667%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="16.667%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">58</span><br><strong style="color:#1CA727">59</strong></td>
+        <td class="ver"><span class="strike dim">53</span><br><strong style="color:#1CA727">54</strong></td>
+        <td class="ver"><span>15</span><br><div class="build"><span class="strike dim">16188</span><strong style="color:#1CA727">16215</strong></div></td>
+        <td class="ver">10.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 59</h2>
+    <h3>Released June 20 </h3>
+    <ul class="indent">
+      <li>Animated PNG Support (APNG)</li>
+      <li>Streams API Improvements: Piping</li>
+      <li>Headless Chrome</li>
+      <li><a href="http://edgeatx.github.io/slides/2017/05-may/#slide-11" target="_blank">Native Notifications (macOS)</a></li>
+      <li><a href="https://developers.google.com/web/updates/2016/12/imagecapture" target="_blaank">Image Capture API</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 59 Devtools: Code Coverage</h2>
+    <img src="images/devtoolscodecoverage.png"/>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 59 Devtools: Screenshots</h2>
+    <iframe width="865" height="486" src="https://www.youtube.com/embed/r_6_9eFPhxI" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 59 Devtools: Blocking</h2>
+    <img src="images/devtoolsblocking.png"/>
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 54</h2>
+    <p>Released June 13</p>
+    <ul class="indent">
+      <li>Date.UTC() conforms to ES 2017</li>
+      <li>WebRTC TCP ICE candidate support enabled by default.</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 54 Devtools: Requests</h2>
+    <ul class="indent">
+      <li>Now includes data transfer size</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Edge 15 <small>(16215)</small></h2>
+    <ul class="indent">
+      <li><code>once</code> and <code>passive</code> Event Listener support</li>
+      <li><code>position: sticky;</code> support!</li>
+      <li class="star">ES2017 Shared Memory & Atomics support</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Libraries, Tools &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Framework News</h2>
+    <ul>
+      <li>V8 6.0 (rest/spread properties on objects)</li>
+      <li>N-API for Node (experimental)</li>
+      <li>npm 5</li>
+      <li>ES Lint v4</li>
+      <li>Heads Up: Angular 5 due Sept 19, 2017</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Perspective</h2>
+    <ul class="indent">
+      <li>Node.js reaches 8M users. Mikeal Rogers stepping down.</li>
+      <li>Fusebox: A Faster, Simpler Webpack Alternative? (Name Recycling)</li>
+      <li><a href="http://jsfiddle.net/ondras/o3tzx1px/" target="blank">Spreadsheet in 25 LOC</a></li>
+      <li><a href="https://meiert.com/en/blog/70-percent-css-repetition/" target="_blank">70% of CSS is Repetitive</a></li>
+      <li>Use of Bootstrap/Foundation is <a href="https://www.sitepoint.com/results-ultimate-css-survey-2017/">declining slightly</a> (Sitepoint CSS Survey of 1600 Devs)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>More Perspective</h2>
+    <img src="images/parsetimes.jpg"/>
+    <p>Parse Times: 1MB of JS (courtesy FluentConf)</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="">Angelhack 2017</a></h2>
+    <ul>
+      <li>First Prize: Invitation to HACKcelerator</li>
+      <li>July 8-9 at Galvanize</li>
+      <li><a href="http://angelhack.com/angelhack-global-hackathon-series-austin" target="_blank">Get a FREE ticket (code: Free4BEW).</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2><a href="">Mobility X</a></h2>
+    <p>Pitch competition for AI, ML, Comp Vision, AR/VR.</p>
+    <ul>
+      <li>First Prize: $10K ($5K and $2500 prizes too)</li>
+      <li>Application Deadline: June 30th (Midnight)</li>
+      <li>Detail @<a href="http://info.capitalfactory.com/mobilityxcompetition" target="_blank">http://info.capitalfactory.com/mobilityxcompetition</a></li>
+    </ul>
+  </section>
+
+  <!-- Completely Different -->
+
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section> -->
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></h3>
+    <h3>Corey Butler &mdash; <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
