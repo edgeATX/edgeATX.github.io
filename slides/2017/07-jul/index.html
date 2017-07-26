@@ -124,10 +124,11 @@
 
   <section class="slide">
     <h2>Bleeding Edge Web: July 2017</h2>
-    <h3 class="star">Announcements</h3>
-
     <h3 class="star">News From the Bleeding Edge</h3>
     <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star">Lightning Talk: Async Components with VueJS</h3>
+    <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
 
     <h3 class="star">The Peer-to-peer Web</h3>
     <p class="indent">&mdash; Paul Frazee (<a href="https://twitter.com/pfrazee">@pfrazee</a>) and
@@ -137,7 +138,8 @@
   <section class="slide">
     <h2>Housekeeping</h2>
     <h3 class="star">Parking Validation ($5 instead of $30)</h3>
-    <h3 class="star">Buffalo Billiards After-Meetup</h3>
+    <h3 class="star">Buffalo Billiards after-meetup</h3>
+    <h3 class="star">Announcements?</h3>
   </section>
 
   <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
@@ -202,7 +204,7 @@
         <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
       </tr>
       <tr>
-        <td class="ver">59</td>
+        <td class="ver"><span class="strike dim">59</span><br><strong style="color:#1CA727">60</strong></td>
         <td class="ver">54</td>
         <td class="ver">15<br><div class="build"><span class="strike dim">16215</span><strong style="color:#1CA727">16241</strong></div></td>
         <td class="ver">10.1</td>
@@ -211,17 +213,17 @@
   </section>
 
   <section class="slide">
-    <h2>Chrome 60 (beta)</h2>
-    <p>Coming in ~2 weeks</p>
+    <h2>Chrome 60</h2>
+    <p>Shipped July 25 (yesterday)</p>
     <ul class="indent">
-      <li>New <a href="https://developers.google.com/web/updates/2017/07/devtools-release-notes">DevTools features</a></li>
+      <li>New <a href="https://developers.google.com/web/updates/2017/05/devtools-release-notes">DevTools features</a></li>
       <li>Minor <a href="https://developers.google.com/web/updates/2017/06/chrome-60-deprecations">deprecations &amp; removals</a></li>
       <li>New <a href="https://developers.google.com/web/updates/2017/06/budget-api">Budget API</a></li>
     </ul>
   </section>
 
   <section class="slide">
-    <h2>Chrome 60 (beta)</h2>
+    <h2>Chrome 60</h2>
     <h3>Web Budget API</h3>
     <ul class="indent">
       <li>Reserve resources for background processing</li>
@@ -230,6 +232,15 @@
       <li>So take it with a grain of salt!</li>
     </ul>
   </section>
+
+  <section class="slide">
+    <h2>Chrome Platform Status Page</h2>
+    <p><a href="https://www.chromestatus.com/features/schedule">Release schedule</a> and
+      <a href="https://www.chromestatus.com/features">features by release</a></p>
+    <p>Maybe inspired by <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/">this</a>?</p>
+    <img src="./images/chrome-platform.png" style="width:60%;">
+  </section>
+
 
   <section class="slide">
     <h2>Firefox 55 (beta)</h2>
@@ -389,10 +400,12 @@ console.log('2');
   <section class="slide">
     <h2>Interesting Releases</h2>
     <ul>
-      <li><a href="https://github.com/prettier/prettier/releases/tag/1.5.0">Prettier 1.5</a> &mdash; GraphQL, CSS-in-JS &amp; JSON support</li>
-      <li><a href="https://github.com/chalk/chalk/releases/tag/v2.0.0">Chalk 2.0</a> &mdash; True color support</li>
-      <li><a href="https://groups.google.com/forum/#!msg/redis-db/5Kh3viziYGQ/58TKLwX0AAAJ">Redis 4.0</a></li>
-      <li><a href="http://sass.logdown.com/posts/2026639-sass-35-is-released">SASS 3.5</a></li>
+      <li><a href="https://github.com/prettier/prettier/releases/tag/1.5.0">Prettier 1.5</a> &mdash;
+        GraphQL, CSS-in-JS &amp; JSON added</li>
+      <li><a href="https://groups.google.com/forum/#!msg/redis-db/5Kh3viziYGQ/58TKLwX0AAAJ">Redis 4.0</a> &mdash;
+        Improved replication &amp; clustering, modules, more</li>
+      <li><a href="http://sass.logdown.com/posts/2026639-sass-35-is-released">SASS 3.5</a> &mdash;
+        CSS custom properties, first-class functions, more</li>
       <li><a href="https://dev-blog.apollodata.com/apollo-server-1-0-a-graphql-server-for-all-node-js-frameworks-2b37d3342f7c">Apollo
         Server 1.0</a> &mdash; Open source GraphQL server for Node
     </ul>
@@ -438,6 +451,18 @@ console.log('2');
     <img src="images/dead-flash.jpg" style="width:50%;"/>
   </section>
 
+  <!-- Completely Different -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section>
+
+  <section class="slide">
+    <h2>PHP7 to ES7 syntax translator</h2>
+    <img src="./images/php-to-es2017.png">
+    <p><a href="https://gitlab.com/kornelski/babel-preset-php#php7-to-es7-syntax-translator">Get the code</a></p>
+  </section>
+
   <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
@@ -448,9 +473,9 @@ console.log('2');
   </section>
 
   <section class="slide">
-    <h2><a href="https://www.voicehacks.com/tour/austin">Alexa Skills Tour</a></h2>
+    <h2>Alexa Skills Tour</h2>
     <ul>
-      <li>Two days of hands-on training on building for voice with Alexa</li>
+      <li>Two days of <a href="https://www.voicehacks.com/tour/austin">hands-on training</a> building for voice with Alexa</li>
       <li>August 14-15 at Capital Factory</li>
       <li>FREE for the first 100 registrants ($150 after that)</li>
     </ul>
@@ -461,7 +486,7 @@ console.log('2');
 
   <section class="slide">
     <h2>Thanks!</h2>
-    <h3><a href="http://edgeATX.github.io/slides/" target="_blank">http://edgeATX.github.io/slides</a></h3>
+    <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
     <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a></h3>
     <br>
     <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
