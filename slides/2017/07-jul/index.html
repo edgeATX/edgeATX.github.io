@@ -271,14 +271,130 @@
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
-    <h1>Libraries, Tools &amp;<br>Frameworks</h1>
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
     <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
   </section>
 
   <section class="slide">
-    <h2>Framework News</h2>
+    <h2>ES2017 / ES8 Spec Released</h2>
     <ul>
+      <li>AKA "Standard ECMA-262, 8th Edition"</li>
+      <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">Published</a> on June 28th</li>
+      <li><a href="https://hackernoon.com/es8-was-released-and-here-are-its-main-new-features-ee9c394adf66">Overview</a> of the main features</li>
+    </ul>
+  </section>
 
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">String.padStart / padEnd</h3>
+    <pre><code>'edge'.padStart(2);              // 'edge'
+'edge'.padStart(8);              // '    edge'
+'edge'.padStart(8, 'bleeding');  // 'bleeedge'
+
+'edge'.padEnd(8);         // 'edge    '
+'edge'.padEnd(8, 'web');  // 'edgewebw'
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Object.values</h3>
+    <pre><code>let meetup = { x: 'bleeding', y: 'edge' };
+Object.values(meetup);
+// ['bleeding', 'edge']
+
+Object.values('edge');
+// ['e', 'd', 'g', 'e']
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Object.entries</h3>
+    <pre><code>let meetup = { x: 'bleeding', y: 'edge' };
+Object.entries(meetup);
+// [['x', 'bleeding'], ['y', 'edge']]
+
+Object.entries('edge');
+// [['0', 'e'], ['1', 'd'], ['2', 'g'], ['3', 'e']]
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Object.getOwnPropertyDescriptors</h3>
+    <pre><code>const meetup = {
+  get desc() { return 'BEW'; }
+};
+
+Object.getOwnPropertyDescriptors(meetup);
+// { desc: {
+//     configurable: true,
+//     enumerable: true,
+//     get: function desc(){},
+//     set: undefined
+// }}
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Trailing commas in function calls</h3>
+    <pre><code>function meetup(bleeding, edge, web,) { // OK!
+  // ...
+}
+meetup('this', 'is', 'neat',) // Also OK!
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Async functions</h3>
+    <pre><code>function meetupPromise() {
+  return new Promise(resolve => {
+    setTimeout(() => { resolve('BEW'); }, 2000);
+  });
+}
+async function getMeetup() {
+  const meetup = await meetupPromise();
+  console.log(meetup); // 'BEW'
+}
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Async functions</h3>
+    <pre><code>console.log('1');
+getMeetup();
+console.log('2');
+
+> 1   // immediately
+> 2   // immediately
+> BEW // after 2 seconds
+</code></pre>
+  </section>
+
+  <section class="slide">
+    <h2>ES2017 / ES8 Highlight</h2>
+    <h3 class="star">Shared memory and atomics</h3>
+    <blockquote>Enables sharing data between multiple workers and the core thread</blockquote>
+    <ul class="indent">
+      <li>Predictable read / write / order</li>
+      <li>Operations are uninterruptible</li>
+    </ul>
+    <p><a href="https://github.com/tc39/ecmascript_sharedmem">Find out more</a></p>
+  </section>
+
+  <section class="slide">
+    <h2>Interesting Releases</h2>
+    <ul>
+      <li><a href="https://github.com/prettier/prettier/releases/tag/1.5.0">Prettier 1.5</a> &mdash; GraphQL, CSS-in-JS &amp; JSON support</li>
+      <li><a href="https://github.com/chalk/chalk/releases/tag/v2.0.0">Chalk 2.0</a> &mdash; True color support</li>
+      <li><a href="https://groups.google.com/forum/#!msg/redis-db/5Kh3viziYGQ/58TKLwX0AAAJ">Redis 4.0</a></li>
+      <li><a href="http://sass.logdown.com/posts/2026639-sass-35-is-released">SASS 3.5</a></li>
+      <li><a href="https://dev-blog.apollodata.com/apollo-server-1-0-a-graphql-server-for-all-node-js-frameworks-2b37d3342f7c">Apollo
+        Server 1.0</a> &mdash; Open source GraphQL server for Node
     </ul>
   </section>
 
@@ -291,6 +407,17 @@
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
     </section>
 
+    <section class="slide">
+      <h2>Let's Encrypt</h2>
+      <blockquote>A free, automated, and open Certificate Authority</blockquote>
+      <ul class="indent">
+        <li>Will offer <a href="https://letsencrypt.org/2017/07/06/wildcard-certificates-coming-jan-2018.html">free
+          wildcard certs</a> starting January 2018!</li>
+        <li><a href="https://letsencrypt.org/donate/">Donate</a> if this sounds useful!</li>
+      </ul>
+      <img src="images/lets-encrypt-logo.png"/>
+    </section>
+
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
@@ -300,6 +427,17 @@
     <div class="shim" style="background-color:#555;opacity:.7;"></div>
   </section>
 
+  <section class="slide">
+    <h2>Flash is Officially Dead</h2>
+    <ul>
+      <li>Adobe <a href="https://blogs.adobe.com/conversations/2017/07/adobe-flash-update.html">announced</a>
+        end of life yesterday</li>
+      <li>No more updates or downloads after 2020</li>
+      <li>A kind <a href="http://www.brucelawson.co.uk/2017/eulogy-for-flash/">eulogy</a> if you are feeling sentimental</li>
+    </ul>
+    <img src="images/dead-flash.jpg" style="width:50%;"/>
+  </section>
+
   <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
@@ -307,6 +445,16 @@
       <h1>Upcoming<br>Events</h1>
     </div>
     <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://www.voicehacks.com/tour/austin">Alexa Skills Tour</a></h2>
+    <ul>
+      <li>Two days of hands-on training on building for voice with Alexa</li>
+      <li>August 14-15 at Capital Factory</li>
+      <li>FREE for the first 100 registrants ($150 after that)</li>
+    </ul>
+    <img src="images/voice-hacks.png">
   </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
