@@ -8,9 +8,6 @@
 
   <title>Bleeding Edge Web: September 2017</title>
 
-  <!--link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'-->
-  <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-
   <!-- Required stylesheet -->
   <link rel="stylesheet" href="../../shared/core/deck.core.css">
 
@@ -185,8 +182,8 @@
       </tr>
       <tr>
         <td class="ver">60</td>
-        <td class="ver">54</td>
-        <td class="ver">15<div class="build">16241</div></td>
+        <td class="ver">55</td>
+        <td class="ver">15<div class="build">b16251</div></td>
         <td class="ver">10.1</td>
       </tr>
     </table>
@@ -203,83 +200,80 @@
         <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
       </tr>
       <tr>
-        <td class="ver">60</td>
-        <td class="ver"><span class="strike dim">54</span><br/><strong style="color:#1CA727">55</strong></td>
-        <td class="ver">15<br><div class="build"><span class="strike dim">16241</span><strong style="color:#1CA727">16251</strong></div></td>
-        <td class="ver">10.1</td>
+        <td class="ver"><span class="strike dim">60</span><br/><strong style="color:#1CA727">61</strong></td>
+        <td class="ver"><span class="strike dim">55</span><br/><strong style="color:#1CA727">56</strong></td>
+        <td class="ver">15<br><div class="build"><span class="strike dim">b16251</span><br><strong style="color:#1CA727">b16275</strong></div></td>
+        <td class="ver"><span class="strike dim">10.1</span><br/><strong style="color:#1CA727">11</strong></td>
       </tr>
     </table>
   </section>
 
   <section class="slide">
-    <h2>Chrome</h2>
-    <img src="images/whatsnew.png"/>
+    <h2>Chrome 61</h2>
+    <p>Shipped Sept 5 &mdash; <a href="https://developers.google.com/web/updates/2017/09/nic61">Release Notes</a></p>
+    <h3 class="star">ES6 Modules</h3>
+    <pre><code>&lt;script type="module">
+  import {addText} from './utils.js';
+  addText('Modules are pretty cool.');
+&lt;/script></code></pre>
+    <p>Check out <a href="https://ponyfoo.com/articles/es6-modules-in-depth">ES6 Modules in Depth</a> for details</p>
   </section>
 
   <section class="slide">
-    <h2>Firefox 55</h2>
-    <p>Shipped Aug 8 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/55">Release Notes</a></p>
+    <h2>Chrome 61</h2>
+    <h3 class="star">WebUSB API</h3>
+    <p>Access USB devices from your web app</p>
+    <p>Check out <a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web">Access
+      USB Devices on the Web</a> for details</p>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <h3 class="star">Web Share API (Android)</h3>
+    <pre><code>navigator.share({
+  title: document.title,
+  text: 'Hello',
+  url: window.location.href
+});</code></pre>
+    <p>Check out <a href="https://developers.google.com/web/updates/2016/10/navigator-share">Introducing
+      the Web Share API</a> for details</p>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <ul>
+      <li><span class="code">#RRGGBBAA</span> and <span class="code">#RGBA</span> color <a
+        href="https://drafts.csswg.org/css-color/#hex-notation">hex codes</a> with alpha</li>
+      <li>New <a href="http://wicg.github.io/netinfo/">Network Information</a> &amp;
+        <a href="https://w3c.github.io/device-memory/">Device RAM</a> APIs</li>
+      <li><a href="https://www.w3.org/TR/clear-site-data/">Clear Site Data API</a></li>
+      <li>Max value of <span class="code">colSpan</span> has been decreased from 8190 to 1000</li>
+    </ul>
+    <p>Check out the <a href="https://blog.chromium.org/2017/08/chrome-61-beta-javascript-modules.html">full list of changes</a></p>
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 56</h2>
+    <p>Shipped Sept 26 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/56">Release Notes</a></p>
     <ul class="indent">
-      <li>ES2017 <span class="code">SharedArrayBuffer</span> &amp; <span class="code">Atomics</span> <a
-        href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">enabled by default</a></li>
-      <li>Rest operator support for object destructuring.</li>
-      <li>Spread operator support in object literals.</li>
-      <li>Async generator methods now available.</li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API" target="_blank">Cooperative Scheduling of Background Tasks API</a></li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">Intersection Observer API</a></li>
-      <li>WebVR 1.1</li>
+      <li>Resource preloading via <span class="code">&lt;link rel="preload"></span></li>
+      <li>The <span class="code">&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet">applet</a>&gt;</span> tag has been removed!</li>
+      <li>A bunch of other minor stuff</li>
     </ul>
-  </section>
-
-  <!-- - - - - - - - - - -  Emerging Trends & Predictions  - - - - - - - - - - -->
-  <section class="slide cover" style="background-image:url(../../shared/resources/images/nostradamus.jpg)">
-    <h1>Trends &amp; Predictions</h1>
-    <div class="shim" style="background-color:#1e801c;opacity:.8;"></div>
+    <p>Check out the <a href="">full list of changes</a></p>
   </section>
 
   <section class="slide">
-    <h2>Trend: Parallel/Delegated Processing</h2>
-    <ul>
-      <li>WebRTC</li>
-      <li>Shared Memory &amp; Atomics</li>
-      <li>Web Workers/Service Workers</li>
-      <li>Cooperative Scheduling of Background Tasks API (Queues)</li>
-      <li>Budget API</li>
-      <li>Network/Bandwidth Controls</li>
-    </ul>
-  </section>
-
-  <section class="slide">
-    <h2>Prediction: Fat Clients &amp; Servers</h2>
-    <ul>
-      <li>Hardware is on steroids.</li>
-      <li>Software is on steroids.</li>
-      <li>Instant gratification is a norm.</li>
-    </ul>
-    <p>
-      Computing has historically oscillated between thin client/fat server and
-      fat client/thin server models. Hardware and software have piggybacked off
-      each other to create this effect. Both continue evolving their power,
-      creating a fat client/fat server model.
-    </p>
-  </section>
-
-  <section class="slide">
-    <h2>Prediction: Labor Split | Confusion</h2>
-    <ul>
-      <li>UI Designers</li>
-      <li>UX Researchers</li>
-      <li>UX Developers</li>
-      <li>UI Developers</li>
-      <li>UI Engineers</li>
-    </ul>
-    <p>
-      Traditonal "computer science", "networking", and "data management"
-      continue to breach the "great frontend barrier".
-      Greater knowledge will be necessary to <i>adequately</i> use new features,
-      ultimately leading to mental overload. To compensate, the market will
-      split job duties by vertical knowledge silos within organizations.
-    </p>
+    <h2>Safari 11</h2>
+    <p>Shipped with iOS 11 / OSX High Sierra &mdash; <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Safari_11_0/Safari_11_0.html">Release Notes</a></p>
+    <ul class="indent">
+      <li><a href="https://www.w3.org/TR/webrtc/">WebRTC</a></li>
+      <li><a href="http://webassembly.org/">WebAssembly</a></li>
+      <li><a href="https://www.w3.org/TR/WebCryptoAPI/">WebCrypto API</a></li>
+      <li><a href="https://www.w3.org/TR/resource-timing-2/">Resource timing</a></li>
+      <li><a href="https://w3c.github.io/mediacapture-main/getusermedia.html">Media Capture API</a></li>
+      <li><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/SafariJSProgTopics/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH">iOS drag/drop events</a></li>
+      <li>And more!</li>
   </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -292,11 +286,12 @@
   <section class="slide">
     <h2>Releases</h2>
     <ul>
-      <li>Bootstrap 4 Beta</li>
-      <li><a href="https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/?utm_source=frontendfocus&utm_medium=email" target="blank">Stylo</a> (Super Fast CSS)</li>
-      <li>TypeScript 2.5RC</li>
-      <li>npx (npm 5.3+)</li>
-      <li>Ayo</li>
+      <li><a href="https://facebook.github.io/react/blog/2017/09/26/react-v16.0.html">React 16.0</a> (now MIT!)</li>
+      <li><a href="http://coffeescript.org/announcing-coffeescript-2/">CoffeeScript 2.0</a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
+      <li><a href=""></a></li>
     </ul>
   </section>
 
@@ -319,17 +314,24 @@
   </section>
 
   <section class="slide">
-    <h2>HTML 5.2 W3C Candidate Recommendation</h2>
-    <ul>
-      <li>Drop <code>&lt;menu&gt;</code> and <code>&lt;dialog&gt;</code></li>
-    </ul>
+    <h2>Encrypted Media Extensions (EME)</h2>
+    <blockquote>An API that allows plugin-free playback of protected (encrypted) content in Web browsers</blockquote>
+    <p><a href="https://www.w3.org/2017/09/pressrelease-eme-recommendation.html.en">Published</a> as W3C Recommendation on September 18</p>
   </section>
 
   <!-- Completely Different -->
 
-  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
     <h1>And now for something completely different...</h1>
-  </section> -->
+  </section>
+
+  <section class="slide">
+    <h2>Winamp2-js</h2>
+    <blockquote>A reimplementation of Winamp 2.9 in HTML5 and Javascript</blockquote>
+    <p><a href="https://github.com/captbaritone/winamp2-js">Open source</a> on Github
+      (<a href="https://jordaneldredge.com/projects/winamp2-js/">demo</a>)</p>
+    <img src="./images/winamp.png">
+  </section>
 
   <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
 
@@ -364,7 +366,7 @@
   <section class="slide">
     <h2>Thanks!</h2>
     <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
-    <h3>Corey Butler &mdash; <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></h3>
+    <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a></h3>
     <br>
     <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
   </section>
