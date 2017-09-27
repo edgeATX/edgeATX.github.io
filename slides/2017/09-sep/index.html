@@ -127,7 +127,7 @@
     <h3 class="star">Lightning Talk: VestU Overview</h3>
     <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
 
-    <h3 class="star"><a href="https://drive.google.com/file/d/0ByfYIhtzqBvPZ2pIMnFDWjcxUTQ/view?usp=sharing">Live 
+    <h3 class="star"><a href="https://drive.google.com/file/d/0ByfYIhtzqBvPZ2pIMnFDWjcxUTQ/view?usp=sharing">Live
       to Code, Don't Code to Live</a></h3>
     <p class="indent">&mdash; Sean Merron (<a href="https://twitter.com/seanmerron">@seanmerron</a>)</p>
   </section>
@@ -217,7 +217,8 @@
   import {addText} from './utils.js';
   addText('Modules are pretty cool.');
 &lt;/script></code></pre>
-    <p>Check out <a href="https://ponyfoo.com/articles/es6-modules-in-depth">ES6 Modules in Depth</a> for details</p>
+    <p>Check out <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">ES6 Modules in Browsers</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
@@ -226,6 +227,7 @@
     <p>Access USB devices from your web app</p>
     <p>Check out <a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web">Access
       USB Devices on the Web</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
@@ -238,6 +240,7 @@
 });</code></pre>
     <p>Check out <a href="https://developers.google.com/web/updates/2016/10/navigator-share">Introducing
       the Web Share API</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
@@ -251,29 +254,45 @@
       <li>Max value of <span class="code">colSpan</span> has been decreased from 8190 to 1000</li>
     </ul>
     <p>Check out the <a href="https://blog.chromium.org/2017/08/chrome-61-beta-javascript-modules.html">full list of changes</a></p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
     <h2>Firefox 56</h2>
     <p>Shipped Sept 26 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/56">Release Notes</a></p>
-    <ul class="indent">
+    <ul>
       <li>Resource preloading via <span class="code">&lt;link rel="preload"></span></li>
       <li>The <span class="code">&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet">applet</a>&gt;</span> tag has been removed!</li>
       <li>A bunch of other minor stuff</li>
     </ul>
     <p>Check out the <a href="">full list of changes</a></p>
+    <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
   </section>
 
   <section class="slide">
     <h2>Firefox "Quantum" (beta)</h2>
     <p>Launches Nov 14 &mdash; <a href="https://www.mozilla.org/en-US/firefox/quantum/">More info</a></p>
-    <ul class="indent">
+    <ul>
       <li><a href="https://blog.mozilla.org/firefox/quantum-performance-test/">2x speed increase</a> over 56</li>
       <li>Uses <a href="https://blog.mozilla.org/firefox/quantum-performance-test/">30% less memory</a> than Chrome</li>
       <li>Complete UI redesign ("Photon")</li>
     </ul>
     <p>Read the <a href="https://blog.mozilla.org/blog/2017/09/26/firefox-quantum-beta-developer-edition/">blog post</a></p>
-    <img src="./images/ff-nightly.png" class="corner-image" style="width: 250px;">
+    <img src="./images/ff-nightly.png" class="corner-image" width="200px" alt="Firefox Nightly">
+  </section>
+
+  <section class="slide">
+    <h2>Edge 16</h2>
+    <p>Coming in October &mdash; <a href="https://aka.ms/devguide_edgehtml_16">More info</a></p>
+    <ul>
+      <li><a href="http://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api">Payment Request API</a></li>
+      <li><a href="http://www.w3.org/TR/service-workers-1/">Service Workers</a></li>
+      <li><a href="https://developer.microsoft.com/windows/mixed-reality/motion_controllers">Motion controller support</a> for WebVR</li>
+      <li>Major F12 dev tools upgrade</li>
+      <li>Tons of new APIs</li>
+    </ul>
+    <img src="../../shared/resources/images/edge.png" class="corner-image" width="200px" alt="MS Edge">
   </section>
 
   <section class="slide">
@@ -286,7 +305,9 @@
       <li><a href="https://www.w3.org/TR/resource-timing-2/">Resource timing</a></li>
       <li><a href="https://w3c.github.io/mediacapture-main/getusermedia.html">Media Capture API</a></li>
       <li><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/SafariJSProgTopics/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH">iOS drag/drop events</a></li>
-      <li>And more!</li>
+    </ul>
+    <p>...and more! Read the <a href="https://webkit.org/blog/7956/new-webkit-features-in-safari-11/">blog post</a></p>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
   </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -297,25 +318,39 @@
   </section>
 
   <section class="slide">
-    <h2>Releases</h2>
+    <h2>Interesting Releases</h2>
     <ul>
       <li><a href="https://facebook.github.io/react/blog/2017/09/26/react-v16.0.html">React 16.0</a> (now MIT!)</li>
-      <li><a href="http://coffeescript.org/announcing-coffeescript-2/">CoffeeScript 2.0</a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
-      <li><a href=""></a></li>
+      <li><a href="http://coffeescript.org/announcing-coffeescript-2/">CoffeeScript 2.0</a> (anyone?)</li>
+      <li><a href="https://babeljs.io/blog/2017/09/12/planning-for-7.0">Babel 7.0</a> (coming soon)</li>
+      <li><a href="https://code.facebook.com/posts/274518539716230">Yarn 1.0</a></li>
+      <li><a href="https://blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/">TypeScript 2.5</a></li>
+      <li><a href="https://www.polymer-project.org/blog/2017-08-22-npm-modules">Polymer 3.0</a> (preview)</li>
+      <li><a href="https://www.sublimetext.com/3">Sublime 3.0</a> (yay!)</li>
     </ul>
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
 
-    <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
         <h1>Security</h1>
       </div>
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
-    </section> -->
+    </section>
+
+  <section class="slide">
+    <h2>Farewell Symantec SSL Certs</h2>
+    <p>Google <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">will distrust</a>
+      Symantec-issued certificates next year</p>
+    <ul>
+      <li>Symantec has had several documented <a
+        href="https://groups.google.com/forum/#!msg/mozilla.dev.security.policy/fyJ3EK2YOP8/yvjS5leYCAAJ">security lapses</a></li>
+      <li>Support will drop in Chrome 66 (~April 2018)</li>
+      <li>Symantec certs older than June 2016 will break</li>
+    </ul>
+    <p>Make sure you know where your cert came from!</p>
+  </section>
 
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
@@ -327,9 +362,25 @@
   </section>
 
   <section class="slide">
+    <h2><a href="https://javascript.studio/">JavaScript Studio</a></h2>
+    <blockquote>The ground-breaking new way to find JS runtime errors</blockquote>
+    <ul>
+      <li>Cloud-based dynamic source code analyzer</li>
+      <li>Free tier + $10 paid plan</li>
+    </ul>
+    <img src="./images/js-studio.png" style="max-width: 50%;">
+  </section>
+
+  <section class="slide">
     <h2>Encrypted Media Extensions (EME)</h2>
     <blockquote>An API that allows plugin-free playback of protected (encrypted) content in Web browsers</blockquote>
-    <p><a href="https://www.w3.org/2017/09/pressrelease-eme-recommendation.html.en">Published</a> as W3C Recommendation on September 18</p>
+    <p><a href="https://www.w3.org/2017/09/pressrelease-eme-recommendation.html.en">Published</a> as W3C Recommendation on Sept 18</p>
+    <ul>
+      <li>6-year process of debate and technical work</li>
+      <li>Vote: 108 yays, 57 nays, 20 abstained (58% approval)</li>
+      <li>Basically "Big Media" vs "Free Internet"</li>
+      <li><a href="https://www.eff.org/">EFF</a> appealed, and ultimately
+        <a href="https://boingboing.net/2017/09/18/antifeatures-for-all.html">resigned from the W3C</a></li>
   </section>
 
   <!-- Completely Different -->
@@ -356,22 +407,39 @@
   </section>
 
   <section class="slide">
+    <h2>LASCON 2017</h2>
+    <blockquote>The Lonestar Application Security Conference (LASCON) is an OWASP conference held annually in Austin</blockquote>
+    <ul>
+      <li><a href="https://www.eventbrite.com/e/lascon-2017-tickets-29135150018">Eventbrite</a></li>
+      <li>Application security ("AppSec") workshops + conference</li>
+      <li>October 24 at Norris Conference Center</li>
+      <li>$349-550</li>
+    </ul>
+    <img src="./images/lascon.jpg" alt="LASCON" style="max-width:30%;">
+  </section>
+
+  <section class="slide">
     <h2>DeveloperWeek Austin 2017</h2>
+    <blockquote>Join 3,000+ developers, tech executives, and entrepreneurs. Discover the latest in App
+      Development, VR Dev, FinTech Dev, and Machine Learning.</blockquote>
     <ul>
       <li><a href="https://www.eventbrite.com/e/developerweek-austin-2017-tickets-35922755930?aff=ehomecard">3K+ Developer Expo</a> (Largest in Austin)</li>
       <li>November 8-9 at Palmer Events Center</li>
       <li>Hiring Mixer on Nov 7 (free)</li>
       <li>$30-750</li>
     </ul>
+    <img src="./images/dev-week.png" alt="DeveloperWeek" style="max-width:50%;">
   </section>
 
   <section class="slide">
     <h2>DevOps &amp; Jenkins Summit</h2>
+    <blockquote>Continuous Integration (CI) and Continuous Delivery (CD) as the fundamental best practice for enterprise software delivery.</blockquote>
     <ul>
       <li><a href="https://www.eventbrite.com/e/devops-jenkins-summit-tickets-35411047396?aff=es2">Eventbrite</a></li>
       <li>November 17 at Austin Convention Center</li>
       <li>$99</li>
     </ul>
+    <img src="./images/docker-jenkins.png" alt="Docker + Jenkins" style="max-width:25%;">
   </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->

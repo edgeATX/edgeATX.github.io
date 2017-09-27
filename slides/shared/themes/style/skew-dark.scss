@@ -258,8 +258,9 @@
 
   .corner-image {
     position: absolute;
-    top: 20;
-    right: 20;
+    top: 20px;
+    right: 20px;
+    z-index: -999;
   }
 
   .cols-2 {
