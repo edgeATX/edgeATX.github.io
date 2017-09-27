@@ -256,6 +256,12 @@
     }
   }
 
+  .corner-image {
+    position: absolute;
+    top: 20;
+    right: 20;
+  }
+
   .cols-2 {
     column-count: 2;
     column-gap: 30px;
