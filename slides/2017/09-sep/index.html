@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: September 2017</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.github.io/slides/">edgeATX.<wbr>github.io/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: September 2017</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star">Lightning Talk: VestU Overview</h3>
+    <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+
+    <h3 class="star"><a href="https://drive.google.com/file/d/0ByfYIhtzqBvPZ2pIMnFDWjcxUTQ/view?usp=sharing">Live
+      to Code, Don't Code to Live</a></h3>
+    <p class="indent">&mdash; Sean Merron (<a href="https://twitter.com/seanmerron">@seanmerron</a>)</p>
+  </section>
+
+  <section class="slide">
+    <h2>Housekeeping</h2>
+    <h3 class="star">Parking Validation ($5 instead of $30)</h3>
+    <h3 class="star">Buffalo Billiards after-meetup</h3>
+    <h3 class="star">Announcements</h3>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#4598e9;">
+    <p>Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#fff;">
+    <p style="color:#555;">Thanks to our sponsor:</p>
+    <div style="text-align:center;font-size:200%;">
+      <p><a href="https://www.paypal.com/home"><img style="max-width:70%"
+        src="images/paypal.png" alt="Paypal"></a></p>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; July 25, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">60</td>
+        <td class="ver">55</td>
+        <td class="ver">15<div class="build">b16251</div></td>
+        <td class="ver">10.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of September 26, 2017:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">60</span><br/><strong style="color:#1CA727">61</strong></td>
+        <td class="ver"><span class="strike dim">55</span><br/><strong style="color:#1CA727">56</strong></td>
+        <td class="ver">15<br><div class="build"><span class="strike dim">16251</span><br><strong style="color:#1CA727">16275</strong></div></td>
+        <td class="ver"><span class="strike dim">10.1</span><br/><strong style="color:#1CA727">11</strong></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <p>Shipped Sept 5 &mdash; <a href="https://developers.google.com/web/updates/2017/09/nic61">Release Notes</a></p>
+    <h3 class="star">ES6 Modules</h3>
+    <pre><code>&lt;script type="module">
+  import {addText} from './utils.js';
+  addText('Modules are pretty cool.');
+&lt;/script></code></pre>
+    <p>Check out <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">ES6 Modules in Browsers</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <h3 class="star">WebUSB API</h3>
+    <p>Access USB devices from your web app</p>
+    <p>Check out <a href="https://developers.google.com/web/updates/2016/03/access-usb-devices-on-the-web">Access
+      USB Devices on the Web</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <h3 class="star">Web Share API (Android)</h3>
+    <pre><code>navigator.share({
+  title: document.title,
+  text: 'Hello',
+  url: window.location.href
+});</code></pre>
+    <p>Check out <a href="https://developers.google.com/web/updates/2016/10/navigator-share">Introducing
+      the Web Share API</a> for details</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <ul>
+      <li><span class="code">#RRGGBBAA</span> and <span class="code">#RGBA</span> color <a
+        href="https://drafts.csswg.org/css-color/#hex-notation">hex codes</a> with alpha</li>
+      <li>New <a href="http://wicg.github.io/netinfo/">Network Information</a> &amp;
+        <a href="https://w3c.github.io/device-memory/">Device RAM</a> APIs</li>
+      <li><a href="https://www.w3.org/TR/clear-site-data/">Clear Site Data API</a></li>
+      <li>Max value of <span class="code">colSpan</span> has been decreased from 8190 to 1000</li>
+    </ul>
+    <p>Check out the <a href="https://blog.chromium.org/2017/08/chrome-61-beta-javascript-modules.html">full list of changes</a></p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 56</h2>
+    <p>Shipped Sept 26 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/56">Release Notes</a></p>
+    <ul>
+      <li>Resource preloading via <span class="code">&lt;link rel="preload"></span></li>
+      <li>The <span class="code">&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet">applet</a>&gt;</span> tag has been removed!</li>
+      <li>A bunch of other minor stuff</li>
+    </ul>
+    <p>Check out the <a href="">full list of changes</a></p>
+    <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox "Quantum" (beta)</h2>
+    <p>Launches Nov 14 &mdash; <a href="https://www.mozilla.org/en-US/firefox/quantum/">More info</a></p>
+    <ul>
+      <li><a href="https://blog.mozilla.org/firefox/quantum-performance-test/">2x speed increase</a> over 56</li>
+      <li>Uses <a href="https://blog.mozilla.org/firefox/quantum-performance-test/">30% less memory</a> than Chrome</li>
+      <li>Complete UI redesign ("Photon")</li>
+    </ul>
+    <p>Read the <a href="https://blog.mozilla.org/blog/2017/09/26/firefox-quantum-beta-developer-edition/">blog post</a></p>
+    <img src="./images/ff-nightly.png" class="corner-image" width="200px" alt="Firefox Nightly">
+  </section>
+
+  <section class="slide">
+    <h2>Edge 16</h2>
+    <p>Coming in October &mdash; <a href="https://aka.ms/devguide_edgehtml_16">More info</a></p>
+    <ul>
+      <li><a href="http://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a></li>
+      <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api">Payment Request API</a></li>
+      <li><a href="http://www.w3.org/TR/service-workers-1/">Service Workers</a></li>
+      <li><a href="https://developer.microsoft.com/windows/mixed-reality/motion_controllers">Motion controller support</a> for WebVR</li>
+      <li>Major F12 dev tools upgrade</li>
+      <li>Tons of new APIs</li>
+    </ul>
+    <img src="../../shared/resources/images/edge.png" class="corner-image" width="200px" alt="MS Edge">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11</h2>
+    <p>Shipped with iOS 11 / OSX High Sierra &mdash; <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Safari_11_0/Safari_11_0.html">Release Notes</a></p>
+    <ul class="indent">
+      <li><a href="https://www.w3.org/TR/webrtc/">WebRTC</a></li>
+      <li><a href="http://webassembly.org/">WebAssembly</a></li>
+      <li><a href="https://www.w3.org/TR/WebCryptoAPI/">WebCrypto API</a></li>
+      <li><a href="https://www.w3.org/TR/resource-timing-2/">Resource timing</a></li>
+      <li><a href="https://w3c.github.io/mediacapture-main/getusermedia.html">Media Capture API</a></li>
+      <li><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/SafariJSProgTopics/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH">iOS drag/drop events</a></li>
+    </ul>
+    <p>...and more! Read the <a href="https://webkit.org/blog/7956/new-webkit-features-in-safari-11/">blog post</a></p>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Interesting Releases</h2>
+    <ul>
+      <li><a href="https://facebook.github.io/react/blog/2017/09/26/react-v16.0.html">React 16.0</a> (now MIT!)</li>
+      <li><a href="http://coffeescript.org/announcing-coffeescript-2/">CoffeeScript 2.0</a> (anyone?)</li>
+      <li><a href="https://babeljs.io/blog/2017/09/12/planning-for-7.0">Babel 7.0</a> (coming soon)</li>
+      <li><a href="https://code.facebook.com/posts/274518539716230">Yarn 1.0</a></li>
+      <li><a href="https://blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/">TypeScript 2.5</a></li>
+      <li><a href="https://www.polymer-project.org/blog/2017-08-22-npm-modules">Polymer 3.0</a> (preview)</li>
+      <li><a href="https://www.sublimetext.com/3">Sublime 3.0</a> (yay!)</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+
+  <section class="slide">
+    <h2>Farewell Symantec SSL Certs</h2>
+    <p>Google <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">will distrust</a>
+      Symantec-issued certificates next year</p>
+    <ul>
+      <li>Symantec has had several documented <a
+        href="https://groups.google.com/forum/#!msg/mozilla.dev.security.policy/fyJ3EK2YOP8/yvjS5leYCAAJ">security lapses</a></li>
+      <li>Support will drop in Chrome 66 (~April 2018)</li>
+      <li>Symantec certs older than June 2016 will break</li>
+    </ul>
+    <p>Make sure you know where your cert came from!</p>
+  </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://javascript.studio/">JavaScript Studio</a></h2>
+    <blockquote>The ground-breaking new way to find JS runtime errors</blockquote>
+    <ul>
+      <li>Cloud-based dynamic source code analyzer</li>
+      <li>Free tier + $10 paid plan</li>
+    </ul>
+    <img src="./images/js-studio.png" style="max-width: 50%;">
+  </section>
+
+  <section class="slide">
+    <h2>Encrypted Media Extensions (EME)</h2>
+    <blockquote>An API that allows plugin-free playback of protected (encrypted) content in Web browsers</blockquote>
+    <p><a href="https://www.w3.org/2017/09/pressrelease-eme-recommendation.html.en">Published</a> as W3C Recommendation on Sept 18</p>
+    <ul>
+      <li>6-year process of debate and technical work</li>
+      <li>Vote: 108 yays, 57 nays, 20 abstained (58% approval)</li>
+      <li>Basically "Big Media" vs "Free Internet"</li>
+      <li><a href="https://www.eff.org/">EFF</a> appealed, and ultimately
+        <a href="https://boingboing.net/2017/09/18/antifeatures-for-all.html">resigned from the W3C</a></li>
+  </section>
+
+  <!-- Completely Different -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section>
+
+  <section class="slide">
+    <h2>Winamp2-js</h2>
+    <blockquote>A reimplementation of Winamp 2.9 in HTML5 and Javascript</blockquote>
+    <p><a href="https://github.com/captbaritone/winamp2-js">Open source</a> on Github
+      (<a href="https://jordaneldredge.com/projects/winamp2-js/">demo</a>)</p>
+    <img src="./images/winamp.png">
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>LASCON 2017</h2>
+    <blockquote>The Lonestar Application Security Conference (LASCON) is an OWASP conference held annually in Austin</blockquote>
+    <ul>
+      <li><a href="https://www.eventbrite.com/e/lascon-2017-tickets-29135150018">Eventbrite</a></li>
+      <li>Application security ("AppSec") workshops + conference</li>
+      <li>October 24 at Norris Conference Center</li>
+      <li>$349-550</li>
+    </ul>
+    <img src="./images/lascon.jpg" alt="LASCON" style="max-width:30%;">
+  </section>
+
+  <section class="slide">
+    <h2>DeveloperWeek Austin 2017</h2>
+    <blockquote>Join 3,000+ developers, tech executives, and entrepreneurs. Discover the latest in App
+      Development, VR Dev, FinTech Dev, and Machine Learning.</blockquote>
+    <ul>
+      <li><a href="https://www.eventbrite.com/e/developerweek-austin-2017-tickets-35922755930?aff=ehomecard">3K+ Developer Expo</a> (Largest in Austin)</li>
+      <li>November 8-9 at Palmer Events Center</li>
+      <li>Hiring Mixer on Nov 7 (free)</li>
+      <li>$30-750</li>
+    </ul>
+    <img src="./images/dev-week.png" alt="DeveloperWeek" style="max-width:50%;">
+  </section>
+
+  <section class="slide">
+    <h2>DevOps &amp; Jenkins Summit</h2>
+    <blockquote>Continuous Integration (CI) and Continuous Delivery (CD) as the fundamental best practice for enterprise software delivery.</blockquote>
+    <ul>
+      <li><a href="https://www.eventbrite.com/e/devops-jenkins-summit-tickets-35411047396?aff=es2">Eventbrite</a></li>
+      <li>November 17 at Austin Convention Center</li>
+      <li>$99</li>
+    </ul>
+    <img src="./images/docker-jenkins.png" alt="Docker + Jenkins" style="max-width:25%;">
+  </section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+    <h3>Brian Moeskau &mdash; <a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a></h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 /* line 3, skew-dark.scss */
 .deck-container {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 3em;
   font-weight: 600;
   background: #000000;
@@ -16,7 +16,7 @@
     .deck-container .slide h2 {
       color: #E91E63;
       border-bottom: 0;
-      padding: 40px 0;
+      padding: 20px 0 10px 0;
       letter-spacing: -.05em;
       font-size: 2.4em;
       margin-bottom: 20px; }
@@ -218,43 +218,49 @@
       margin-top: 15px;
       font-size: 2em; }
   /* line 259, skew-dark.scss */
+  .deck-container .corner-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: -999; }
+  /* line 266, skew-dark.scss */
   .deck-container .cols-2 {
     column-count: 2;
     column-gap: 30px; }
-  /* line 263, skew-dark.scss */
+  /* line 270, skew-dark.scss */
   .deck-container .cols-3 {
     column-count: 3;
     column-gap: 30px; }
 
-/* line 270, skew-dark.scss */
+/* line 277, skew-dark.scss */
 :not(pre) > code[class*="language-"] {
   background: #222222;
   padding: .1em .3em;
   border-radius: .2em;
   border: 2px solid #444444; }
 
-/* line 276, skew-dark.scss */
+/* line 283, skew-dark.scss */
 pre[class*="language-"] {
   background: #1F1F1F;
   border: 2px solid #333333;
   border-radius: .2em;
   padding: .3em .6em; }
 
-/* line 284, skew-dark.scss */
+/* line 291, skew-dark.scss */
 .browsers td {
   text-align: center; }
-/* line 287, skew-dark.scss */
+/* line 294, skew-dark.scss */
 .browsers .ver {
   font-size: 2.5em; }
-/* line 290, skew-dark.scss */
+/* line 297, skew-dark.scss */
 .browsers .build {
   font-size: 50%; }
-/* line 293, skew-dark.scss */
+/* line 300, skew-dark.scss */
 .browsers .pct {
   font-size: .8em;
   padding-left: 15px; }
 
-/* line 299, skew-dark.scss */
+/* line 306, skew-dark.scss */
 .star:before {
   content: '\2606';
   /* &star; */
