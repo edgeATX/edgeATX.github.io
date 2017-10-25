@@ -124,7 +124,9 @@
     <h3 class="star">News From the Bleeding Edge</h3>
     <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
 
-    <h3 class="star"><a href="">An Introduction To Alexa and Alexa Skills</a></h3>
+    <h3 class="star"><a
+      href="https://docs.google.com/presentation/d/1SZ_DSWphXBksHrylrSPKSVcfLN-O1Ba_BD9ONGDpuVY/edit?usp=sharing">An
+      Introduction To Alexa and Alexa Skills</a></h3>
     <p class="indent">&mdash; John Kelvie (<a href="https://twitter.com/jpkbst">@jpkbst</a>)</p>
   </section>
 
@@ -197,65 +199,92 @@
         <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
       </tr>
       <tr>
-        <td class="ver"><span class="strike dim">61</span><br/><strong style="color:#1CA727"></strong></td>
-        <td class="ver"><span class="strike dim">56</span><br/><strong style="color:#1CA727"></strong></td>
-        <td class="ver">15<br><div class="build"><span class="strike dim">16275</span><br><strong style="color:#1CA727"></strong></div></td>
-        <td class="ver"><span class="strike dim">11</span><br/><strong style="color:#1CA727"></strong></td>
+        <td class="ver"><span class="strike dim">61</span><br/><strong style="color:#1CA727">62</strong></td>
+        <td class="ver">56</td>
+        <td class="ver"><span class="strike dim">15</span><br><strong style="color:#1CA727">16</strong></div></td>
+        <td class="ver">11</td>
       </tr>
     </table>
   </section>
 
   <section class="slide">
     <h2>Chrome 61</h2>
-    <p>Shipped Sept 5 &mdash; <a href="https://developers.google.com/web/updates/2017/09/nic61">Release Notes</a></p>
-    <h3 class="star">ES6 Modules</h3>
-    <pre><code>&lt;script type="module">
-  import {addText} from './utils.js';
-  addText('Modules are pretty cool.');
-&lt;/script></code></pre>
-    <p>Check out <a href="https://jakearchibald.com/2017/es-modules-in-browsers/">ES6 Modules in Browsers</a> for details</p>
+    <p>Released Oct 17 &mdash; <a href="https://developers.google.com/web/updates/2017/10/nic62">Release Notes</a></p>
+    <h3 class="star">Network Quality Indicator</h3>
+    <p>Improved on the existing <a href="https://wicg.github.io/netinfo/">Network Information API</a></p>
+    <pre><code>var conn = navigator.connection
+console.log('effective type:  ' + conn.effectiveType)
+console.log('avg bandwidth:   ' + conn.downlink + ' Mb/s')
+console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
-    <h2>Firefox 56</h2>
-    <p>Shipped Sept 26 &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/56">Release Notes</a></p>
+    <h2>Chrome 61</h2>
+    <h3 class="star">OpenType Variable Fonts</h3>
+    <p>Suport for <a href="https://drafts.csswg.org/css-fonts-4/#font-variation-settings-def"><span
+      class="code">font-variation-settings</span></a> (<a
+      href="https://medium.com/@tiro/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369">overview</a>)</p>
+    <pre><code>.heading {
+  font-family: "Avenir Next Variable";
+  font-size: 48px;
+  font-variation-settings: 'wght' 700, 'wdth' 75;
+}</code></pre>
+    <img src="./images/variable-fonts.gif">
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <h3 class="star">Enhanced HTTP Security</h3>
     <ul>
-      <li>Resource preloading via <span class="code">&lt;link rel="preload"></span></li>
-      <li>The <span class="code">&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/applet">applet</a>&gt;</span> tag has been removed!</li>
-      <li>A bunch of other minor stuff</li>
+      <li>Warning on HTTP pages while "in cognito"</li>
+      <li>Warning when entering <em>any</em> data on HTTP pages</li>
     </ul>
-    <p>Check out the <a href="">full list of changes</a></p>
-    <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
+    <img src="./images/http-secure.gif">
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 61</h2>
+    <h3 class="star">Other Enhancements</h3>
+    <ul>
+      <li>Live <a href="https://w3c.github.io/mediacapture-fromelement/#html-media-element-media-capture-extensions">capture</a>
+        audio/video via <span class="code">MediaStream</span> and <span class="code">HTMLMediaElement</span></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> available on Chrome for iOS</li>
+      <li>RGBA hex codes (<span class="code">#RRGGBBAA</span>) supported in CSS</li>
+      <li>35 security fixes</li>
+    </ul>
+    <p><a href="https://venturebeat.com/2017/10/17/chrome-62-arrives-with-opentype-variable-fonts-and-warning-about-http-sites-in-incognito-mode/">More details</a></p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 57 "Quantum" (beta)</h2>
+    <p>Launches Nov 14 &mdash; <a href="https://www.mozilla.org/en-US/firefox/quantum/">More info</a></p>
+    <ul>
+      <li><a href="https://blog.mozilla.org/firefox/quantum-performance-test/">2x speed increase</a> over 56</li>
+      <li>Uses <a href="https://blog.mozilla.org/firefox/quantum-performance-test/">30% less memory</a> than Chrome</li>
+      <li>Complete UI redesign ("Photon")</li>
+    </ul>
+    <p>Read the <a href="https://blog.mozilla.org/blog/2017/09/26/firefox-quantum-beta-developer-edition/">blog post</a></p>
+    <img src="./images/ff-nightly.png" class="corner-image" width="200px" alt="Firefox Nightly">
   </section>
 
   <section class="slide">
     <h2>Edge 16</h2>
-    <p>Coming in October &mdash; <a href="https://aka.ms/devguide_edgehtml_16">More info</a></p>
+    <p>Released Oct 17 &mdash; <a href="https://aka.ms/devguide_edgehtml_16">More info</a></p>
+    <p>Included in the <a
+      href="https://blogs.windows.com/windowsexperience/2017/10/17/whats-new-windows-10-fall-creators-update/">Windows 10 Fall Creators Update</a>
     <ul>
       <li><a href="http://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a></li>
       <li><a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide/device/payment-request-api">Payment Request API</a></li>
       <li><a href="http://www.w3.org/TR/service-workers-1/">Service Workers</a></li>
       <li><a href="https://developer.microsoft.com/windows/mixed-reality/motion_controllers">Motion controller support</a> for WebVR</li>
-      <li>Major F12 dev tools upgrade</li>
-      <li>Tons of new APIs</li>
+      <li>Major <a href="https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide/whats-new">F12 dev tools</a> upgrade</li>
+      <li>Tons of <a href="https://docs.microsoft.com/en-us/microsoft-edge/dev-guide#new-apis-in-edgehtml-16">new APIs</a></li>
     </ul>
     <img src="../../shared/resources/images/edge.png" class="corner-image" width="200px" alt="MS Edge">
-  </section>
-
-  <section class="slide">
-    <h2>Safari 11</h2>
-    <p>Shipped with iOS 11 / OSX High Sierra &mdash; <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Safari_11_0/Safari_11_0.html">Release Notes</a></p>
-    <ul class="indent">
-      <li><a href="https://www.w3.org/TR/webrtc/">WebRTC</a></li>
-      <li><a href="http://webassembly.org/">WebAssembly</a></li>
-      <li><a href="https://www.w3.org/TR/WebCryptoAPI/">WebCrypto API</a></li>
-      <li><a href="https://www.w3.org/TR/resource-timing-2/">Resource timing</a></li>
-      <li><a href="https://w3c.github.io/mediacapture-main/getusermedia.html">Media Capture API</a></li>
-      <li><a href="https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/SafariJSProgTopics/DragAndDrop.html#//apple_ref/doc/uid/30001233-BAJGJJAH">iOS drag/drop events</a></li>
-    </ul>
-    <p>...and more! Read the <a href="https://webkit.org/blog/7956/new-webkit-features-in-safari-11/">blog post</a></p>
-    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
   </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
@@ -268,13 +297,8 @@
   <section class="slide">
     <h2>Interesting Releases</h2>
     <ul>
-      <li><a href="https://facebook.github.io/react/blog/2017/09/26/react-v16.0.html">React 16.0</a> (now MIT!)</li>
-      <li><a href="http://coffeescript.org/announcing-coffeescript-2/">CoffeeScript 2.0</a> (anyone?)</li>
-      <li><a href="https://babeljs.io/blog/2017/09/12/planning-for-7.0">Babel 7.0</a> (coming soon)</li>
-      <li><a href="https://code.facebook.com/posts/274518539716230">Yarn 1.0</a></li>
-      <li><a href="https://blogs.msdn.microsoft.com/typescript/2017/08/31/announcing-typescript-2-5/">TypeScript 2.5</a></li>
-      <li><a href="https://www.polymer-project.org/blog/2017-08-22-npm-modules">Polymer 3.0</a> (preview)</li>
-      <li><a href="https://www.sublimetext.com/3">Sublime 3.0</a> (yay!)</li>
+      <li><a href="https://medium.com/the-vue-point/vue-2-5-released-14bd65bf030b">Vue 2.5</a></li>
+      <li><a href="https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/">CKEditor 5</a></li>
     </ul>
   </section>
 
