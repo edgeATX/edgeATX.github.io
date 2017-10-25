@@ -230,7 +230,7 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
   font-size: 48px;
   font-variation-settings: 'wght' 700, 'wdth' 75;
 }</code></pre>
-    <img src="./images/variable-fonts.gif">
+    <img src="./images/variable-fonts.gif" style="max-width:500px;">
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
@@ -241,7 +241,7 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
       <li>Warning on HTTP pages while "in cognito"</li>
       <li>Warning when entering <em>any</em> data on HTTP pages</li>
     </ul>
-    <img src="./images/http-secure.gif">
+    <img src="./images/http-secure.gif" style="max-width:600px;">
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
@@ -272,6 +272,16 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
   </section>
 
   <section class="slide">
+    <h2>Firefox 57 "Quantum" (beta)</h2>
+    <ul>
+      <li>Firebug will be <a href="https://hacks.mozilla.org/2017/10/saying-goodbye-to-firebug/">officially removed</a> in FF 57!</li>
+      <li>Did you know that <a href="https://en.wikipedia.org/wiki/Pyrrhocoris_apterus">firebugs</a> (Pyrrhocoris apterus) are a real thing?</li>
+    </ul>
+    <img src="./images/firebugs.jpg">
+    <img src="./images/firebug.png" class="corner-image" width="200px" alt="Firefox Nightly">
+  </section>
+
+  <section class="slide">
     <h2>Edge 16</h2>
     <p>Released Oct 17 &mdash; <a href="https://aka.ms/devguide_edgehtml_16">More info</a></p>
     <p>Included in the <a
@@ -287,6 +297,21 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
     <img src="../../shared/resources/images/edge.png" class="corner-image" width="200px" alt="MS Edge">
   </section>
 
+  <section class="slide">
+    <h2>Edge for iOS + Android (preview)</h2>
+    <p>Announced Oct 5 &mdash; <a href="https://blogs.windows.com/windowsexperience/2017/10/05/announcing-microsoft-edge-for-ios-and-android-microsoft-launcher/#Bp8Ku8UTh5cxAeLZ.97">More info</a></p>
+    <p>Still in beta (<a href="https://www.microsoft.com/en-us/windows/microsoft-edge-mobile">request access</a>)</p>
+    <img src="./images/edge-mobile.png">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11</h2>
+    <p>Safari 11 shipped last month, but they are still busy.</p>
+    <p><a href="https://webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/">Technology Preview 42</a> shipped Oct 18</p>
+    <p>Mostly minor, but <a href="https://webkit.org/blog/8001/release-notes-for-safari-technology-preview-42/">lots of stuff</a>!</p>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
@@ -299,30 +324,21 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
     <ul>
       <li><a href="https://medium.com/the-vue-point/vue-2-5-released-14bd65bf030b">Vue 2.5</a></li>
       <li><a href="https://ckeditor.com/blog/CKEditor-5-A-new-era-for-rich-text-editing/">CKEditor 5</a></li>
+      <li><a href="https://zeit.co/blog/next4">Next.js 4</a></li>
+      <li><a href="http://netflix.github.io/falcor/">Falcor 1.0</a></li>
+      <li><a href="https://www.postgresql.org/about/news/1786/">PostgreSQL 10</a></li>
+      <li><a href="https://github.com/nodejs/node/milestone/25">Node 9.0</a> (due Oct 31)</li>
     </ul>
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
 
-    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+    <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
         <h1>Security</h1>
       </div>
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
-    </section>
-
-  <section class="slide">
-    <h2>Farewell Symantec SSL Certs</h2>
-    <p>Google <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">will distrust</a>
-      Symantec-issued certificates next year</p>
-    <ul>
-      <li>Symantec has had several documented <a
-        href="https://groups.google.com/forum/#!msg/mozilla.dev.security.policy/fyJ3EK2YOP8/yvjS5leYCAAJ">security lapses</a></li>
-      <li>Support will drop in Chrome 66 (~April 2018)</li>
-      <li>Symantec certs older than June 2016 will break</li>
-    </ul>
-    <p>Make sure you know where your cert came from!</p>
-  </section>
+    </section> -->
 
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
@@ -334,28 +350,22 @@ console.log('round-trip time: ' + conn.rtt + ' ms')</code></pre>
   </section>
 
   <section class="slide">
-    <h2><a href="https://javascript.studio/">JavaScript Studio</a></h2>
-    <blockquote>The ground-breaking new way to find JS runtime errors</blockquote>
+    <h2>The Great VS Code Icon Controversy</h2>
     <ul>
-      <li>Cloud-based dynamic source code analyzer</li>
-      <li>Free tier + $10 paid plan</li>
+      <li>Last month they changed the icon color. <a
+        href="https://github.com/Microsoft/vscode/issues/35783">Rage ensued</a>.</li>
+      <li>Someone even created <a href="https://github.com/badass-icon">this</a> Github account</li>
+      <li>TL;DR: They <a
+        href="https://code.visualstudio.com/blogs/2017/10/24/theicon">apologized</a> and changed it back</li>
     </ul>
-    <img src="./images/js-studio.png" style="max-width: 50%;">
+    <img src="./images/vscode-icons.png" style="max-width:1000px;">
   </section>
 
   <!-- Completely Different -->
 
-  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
     <h1>And now for something completely different...</h1>
-  </section>
-
-  <section class="slide">
-    <h2>Winamp2-js</h2>
-    <blockquote>A reimplementation of Winamp 2.9 in HTML5 and Javascript</blockquote>
-    <p><a href="https://github.com/captbaritone/winamp2-js">Open source</a> on Github
-      (<a href="https://jordaneldredge.com/projects/winamp2-js/">demo</a>)</p>
-    <img src="./images/winamp.png">
-  </section>
+  </section> -->
 
   <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
 
