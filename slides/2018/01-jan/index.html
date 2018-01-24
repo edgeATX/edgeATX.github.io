@@ -99,7 +99,7 @@
 
     img[alt=""],
     img:not([alt]) {
-      border: 5px dashed #c00;
+      border: 10px dashed #c00;
     }
   </style>
 
@@ -285,6 +285,17 @@ for await (const item of asyncThing) {
       <blockquote>This changes the cost of loading WebAssembly to be more like decoding an image than loading JavaScript.</blockquote>
     </section>
 
+    <section class="slide">
+      <h2>Firefox 58</h2>
+      <h3 class="star">Off-Main-Thread Painting</h3>
+      <p>Huge <a href="https://mozillagfx.wordpress.com/2017/12/05/off-main-thread-painting/">performance boost</a> to UI rendering</p>
+      <ul>
+        <li>Added a paint-specific thread to parallelize rastering</li>
+        <li>Improves FPS by up to 30%</li>
+      </ul>
+      <img src="./images/omtp.png" alt="OMTP" width="60%" />
+    </section>
+
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
@@ -316,15 +327,17 @@ for await (const item of asyncThing) {
   </section>
 
   <section class="slide">
-    <h2>Other Interesting Releases</h2>
-    <ul>
-      <li><a href="https://javascriptweekly.us1.list-manage.com/track/click?u=0618f6a79d6bb9675f313ceb2&id=ebc0d4aa31&e=f6f41f835e" target="_blank">V8 6.3</a> (Oct 27)</li>
-      <li><a href="https://nodejs.org">Node 9.0</a> (Oct 31)</li>
-      <li><a href="http://docs.webplatform.org/wiki/apis/webrtc">W3C Designates WebRTC 1.0 Spec "Feature Complete"</a></li>
-      <li><a href="https://www.w3.org/blog/news/archives/6610?utm_source=frontendfocus&utm_medium=email">HTML 5.2 Proposed Recommendation (W3C)</a></li>
-      <li><a href="https://angularjs.org/">AngularJS 5</a></li>
-    </ul>
-  </section>
+      <h2>Stimulus</h2>
+      <blockquote>A modest JavaScript framework for the HTML you already have</blockquote>
+      <ul>
+        <li>By the Basecamp folks</li>
+        <li>Simple "HTML augmentation" library, no DOM creation</li>
+        <li>Add DOM attributes and simple controller functions</li>
+        <li>Sort of like nicely-structured jQuery</li>
+      </ul>
+      <p><a href="https://github.com/stimulusjs/stimulus/blob/master/ORIGIN.md">Find out more</a> or 
+        walk through some <a href="https://github.com/stimulusjs/stimulus/blob/master/handbook/README.md">examples</a>.</p>
+    </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
 
@@ -338,7 +351,10 @@ for await (const item of asyncThing) {
     <section class="slide">
       <h2>Spectre + Meltdown</h2>
       <blockquote>They exploit critical vulnerabilities in modern processors to leak passwords and sensitive data.</blockquote>
-      <p>They affect virtually all modern computing devices.</p>
+      <ul>
+        <li>They affect virtually all modern computing devices</li>
+        <li>The WebKit team wrote up a <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">useful explainer</a></li>
+      </ul>
       <img src="images/meltdown.png" alt="Meltdown + Spectre" />
     </section>
 
@@ -379,31 +395,22 @@ for await (const item of asyncThing) {
 
   <section class="slide">
     <h2>A11y Validation Hack</h2>
-    <a href="https://twitter.com/AllThingsSmitty/status/930617039085035520"><img src="images/alt-hack.png" alt="Alt hack" style="width:60%;" /></a>
+    <a href="https://twitter.com/AllThingsSmitty/status/930617039085035520"><img src="./images/alt-hack.png" alt="Alt hack" style="width:60%;" /></a>
   </section>
 
   <section class="slide">
     <h2>Touch Bar Sudo Hack</h2>
-    <a href="https://twitter.com/cabel/status/931292107372838912"><img src="images/sudo-hack.png" alt="Sudo hack" style="width:60%;" /></a>
-  </section>
-
-  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
-
-  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
-    <div class="content">
-      <h1>Upcoming<br>Events</h1>
-    </div>
-    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+    <a href="https://twitter.com/cabel/status/931292107372838912"><img src="./images/sudo-hack.png" alt="Sudo hack" style="width:60%;" /></a>
   </section>
 
   <section class="slide">
-    <h2>DevOps &amp; Jenkins Summit</h2>
-    <blockquote>Continuous Integration (CI) and Continuous Delivery (CD) as the fundamental best practice for enterprise software delivery.</blockquote>
+    <h2>Carbon</h2>
+    <blockquote>Create and share beautiful images of your source code</blockquote>
     <ul>
-      <li><a href="https://www.eventbrite.com/e/devops-jenkins-summit-tickets-35411047396?aff=es2">Eventbrite</a></li>
-      <li>November 17 at Austin Convention Center</li>
-      <li>$99</li>
+      <li>Type (or drop a file) into the <a href="https://carbon.now.sh">online editor</a></li>
+      <li>Configure the look and feel, then download your image</li>
     </ul>
+    <a href="https://carbon.now.sh/?bg=rgba(202,210,217,1)&t=seti&l=javascript&ds=true&wc=true&wa=true&pv=19px&ph=20px&ln=false&code=var%20meetup%20=%20%22Bleeding%20Edge%20Web%22;%0Aalert(%22Hello,%20%22%20+%20meetup);"><img src="./images/carbon.png" alt="Carbon" /></a>
   </section>
 
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
@@ -413,9 +420,19 @@ for await (const item of asyncThing) {
   </section>
 
   <section class="slide">
+    <h2>Thanks a Million, Jon Skeet!</h2>
+    <ul>
+      <li>First <a href="https://stackoverflow.com/users/22656/jon-skeet">person</a> to hit 1,000,000 reputation on Stack Overflow</li>
+      <li>Answered over 34,000 questions since 2008</li>
+      <li>SO marked the milestone with a nice <a href="https://stackoverflow.blog/2018/01/15/thanks-million-jon-skeet/">blog post</a></li>
+    </ul>
+    <img src="images/skeet.jpg" alt="Jon Skeet" />
+  </section>
+  
+  <section class="slide">
     <h2>WebGL Elastic Man</h2>
-    <p>You can always count on Adult Swim to bring it:</p>
-    <a href="http://www.adultswim.com/etcetera/elastic-man/"><img src="images/elastic-man.jpg" alt="Elastic man" style="width:60%;" /></a>
+    <p>You can always count on Adult Swim to entertain</p>
+    <a href="http://www.adultswim.com/etcetera/elastic-man/"><img src="images/elastic-man.jpg" alt="Elastic man" style="max-width:40%;" /></a>
   </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
@@ -423,7 +440,7 @@ for await (const item of asyncThing) {
   <section class="slide">
     <h2>Thanks!</h2>
     <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
-    <h3>Corey Butler &mdash; <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></h3>
+    <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3>
     <br>
     <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
   </section>
