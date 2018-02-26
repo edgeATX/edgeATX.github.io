@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=1024, user-scalable=no">
   <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
 
-  <title>Bleeding Edge Web: November 2017</title>
+  <title>Bleeding Edge Web: February 2018</title>
 
   <!-- Required stylesheet -->
   <link rel="stylesheet" href="../../shared/core/deck.core.css">
@@ -96,6 +96,11 @@
       background-color: rgba(255,255,255,.08);
       border-radius: 3px;
     }
+
+    img[alt=""],
+    img:not([alt]) {
+      border: 10px dashed #c00;
+    }
   </style>
 
 </head>
@@ -120,12 +125,12 @@
   </section>
 
   <section class="slide">
-    <h2>Bleeding Edge Web: November 2017</h2>
+    <h2>Bleeding Edge Web: February 2018</h2>
     <h3 class="star">News From the Bleeding Edge</h3>
-    <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+    <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
 
-    <h3 class="star">OAuth 2.0 and OpenID Connect in plain English</h3>
-    <p class="indent">&mdash; Nathanael Barbettini (<a href="https://twitter.com/nbarbettini">@nbarbettini</a>)</p>
+    <h3 class="star">A Brief Introduction to Web RTC</h3>
+    <p class="indent">&mdash; Sherwin Sim</p>
   </section>
 
   <section class="slide">
@@ -146,8 +151,8 @@
   <section class="slide" style="background:#ffffff;">
     <p style="color: #2d70b8;">Thanks to our sponsor:</p>
     <div style="text-align:center;padding-top:100px;font-size:200%;">
-      <p><a href="https://homeaway.com/"><img style="min-width:40%"
-        src="images/homeaway.png" alt="HomeAway"></a></p>
+      <p><a href="https://temasys.io/"><img style="min-width:40%"
+        src="images/temasys.png" alt="Temasys"></a></p>
     </div>
   </section>
 
@@ -167,7 +172,7 @@
 
   <section class="slide">
     <h2>Browser Pop Quiz</h2>
-    <h3>Last check &mdash; October 25, 2017:</h3>
+    <h3>Last check &mdash; January 24, 2018:</h3>
     <table class="browsers">
       <tr>
         <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -176,8 +181,8 @@
         <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
       </tr>
       <tr>
-        <td class="ver">62</td>
-        <td class="ver">56</td>
+        <td class="ver">63</td>
+        <td class="ver">58</td>
         <td class="ver">16</td>
         <td class="ver">11</td>
       </tr>
@@ -186,7 +191,7 @@
 
   <section class="slide">
     <h2>Browser Pop Quiz</h2>
-    <h3>As of November 14, 2017:</h3>
+    <h3>As of February 27, 2018:</h3>
     <table class="browsers">
       <tr>
         <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -195,8 +200,8 @@
         <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
       </tr>
       <tr>
-        <td class="ver">62</td>
-        <td class="ver"><span class="strike dim">56</span><br><strong style="color:#1CA727">57</strong></div></td>
+        <td class="ver"><span class="strike dim">63</span><br><strong style="color:#1CA727">64</strong></td>
+        <td class="ver">58</td>
         <td class="ver">16</td>
         <td class="ver">11</td>
       </tr>
@@ -204,113 +209,12 @@
   </section>
 
   <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3 class="star">New Look! (Photon)</h3>
-    <img src="images/firefox.png"/>
+    <h2>Chrome 64</h2>
+    <p>Released Jan 25 &mdash; <a href="https://developers.google.com/web/updates/2018/01/nic64">Release Notes</a></p>
+    <h3 class="star"><a href=""></a></h3>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <p>Released Nov 14 &mdash; <a href="https://www.mozilla.org/en-US/firefox/">Release Notes</a></p>
-    <h3 class="star">Performance (2x Faster)</h3>
-    <ul>
-      <li>New Responsive Browser Engine</li>
-      <li>Memory Optimization</li>
-    </ul>
-    <br/>
-    <blockquote style="width: 60%;">
-      Faster and even more minimalist, Firefox Quantum makes Chrome look old.”<br/><br/>
-      <div style="text-align: right;">
-        &mdash; Digital Trends
-      </div>
-    </blockquote>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3 class="star">Browser Engine: System Tax Reduction</h3>
-    <ul>
-      <li>30% less memory consumption.</li>
-      <li>Electrolysis: Multi-process architecture (Goldilocks principle).</li>
-      <li>Quantum: Leverage hardware for content/DOM/CSS (Rust)</li>
-      <li>Servo: Adopted by Quantum</li>
-    </ul>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3 class="star">Goldilocks</h3>
-    <img src="images/justright.png"/>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3 class="star">Private Browsing</h3>
-    <ul>
-      <li>Blocks online trackers while you browse and won’t remember your history after you’re done.</li>
-      <li>Tracking protection (prevents hidden ad trackers).</li>
-      <li>Faster page loading (Up to 44% faster w/o ads)</li>
-    </ul>
-    <blockquote>
-      Will this kill the Brave browser?
-    </blockquote>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3 class="star">Usability Features</h3>
-    <ul>
-      <li>Screenshots</li>
-      <li>Pocket</li>
-      <li>Gaming & VR</li>
-      <li>Device Sync</li>
-    </ul>
-    <a href="https://www.mozilla.org/en-US/firefox//#video-screenshots" target="_blank">Videos</a>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <ul>
-      <li>Firebug has been <a href="https://hacks.mozilla.org/2017/10/saying-goodbye-to-firebug/">officially removed</a>!</li>
-      <li>Did you know that <a href="https://en.wikipedia.org/wiki/Pyrrhocoris_apterus">firebugs</a> (Pyrrhocoris apterus) are a real thing?</li>
-    </ul>
-    <img src="./images/firebugs.jpg">
-    <img src="./images/firebug.png" class="corner-image" width="200px" alt="Firefox Nightly">
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3>Minor Coding Changes: <a href="https://developer.mozilla.org/en-US/Firefox/Releases/57" target="_blank">Release Notes</a></h3>
-    <ul>
-      <li>JS deprecations of non-standard things (ex: `for each...in`).</li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceObserver" target="_blank">PerformanceObserver API</a> enabled by default.</li>
-      <li>Added <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController" target="_blank">AbortController</a> & <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal" target="_blank">AbortSignal</a></li>
-      <pre><code>var controller = new AbortController()
-var signal = controller.signal
-
-downloadBtn.addEventListener('click', fetchVideo)
-
-abortBtn.addEventListener('click', function() {
-  controller.abort()
-  console.log('Download aborted')
-})
-
-function fetchVideo() {
-  ...
-  fetch(url, {signal}).then(function(response) {...}).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message
-  })
-}</code></pre>
-    </ul>
-  </section>
-
-  <section class="slide">
-    <h2>Firefox 57 "Quantum"</h2>
-    <h3>Minor Coding Changes (cont...)</h3>
-    <ul>
-      <li>Preload removed, but will return in Firefox 58.</li>
-    </ul>
-  </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
@@ -320,57 +224,48 @@ function fetchVideo() {
   </section>
 
   <section class="slide">
-    <h2>Interesting Releases</h2>
+    <h2>Parcel</h2>
+    <blockquote>Blazing fast, zero configuration web application bundler</blockquote>
     <ul>
-      <li><a href="https://javascriptweekly.us1.list-manage.com/track/click?u=0618f6a79d6bb9675f313ceb2&id=ebc0d4aa31&e=f6f41f835e" target="_blank">V8 6.3</a> (Oct 27)</li>
-      <li><a href="https://nodejs.org">Node 9.0</a> (Oct 31)</li>
-      <li><a href="http://docs.webplatform.org/wiki/apis/webrtc">W3C Designates WebRTC 1.0 Spec "Feature Complete"</a></li>
-      <li><a href="https://www.w3.org/blog/news/archives/6610?utm_source=frontendfocus&utm_medium=email">HTML 5.2 Proposed Recommendation (W3C)</a></li>
-      <li><a href="https://angularjs.org/">AngularJS 5</a></li>
+      <li>Fast, multicore <a href="https://medium.com/@devongovett/announcing-parcel-a-blazing-fast-zero-configuration-web-application-bundler-feac43aac0f1">webpack alternative</a></li>
+      <li>HTML / JS / CSS / static file batteries included</li>
+      <li>Auto-transforms via Babel, PostCSS, etc</li>
+      <li>Auto-code splitting via dynamic <span class="code">import()</span> syntax</li>
     </ul>
+    <img src="./images/parcel.png" alt="Parcel" style="max-width:300px;" />
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
 
-    <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
         <h1>Security</h1>
       </div>
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
-    </section> -->
+    </section>
+
+    <section class="slide">
+      <h2>Symantec Certs Untrusted</h2>
+      <p class="star">Chrome 65 will <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">no
+        longer trust</a> Symantec-issed SSL certificates older than June 1, 2016</p>
+      <blockquote>Symantec had entrusted several organizations with the ability to issue certificates without the appropriate 
+        or necessary oversight, and had been aware of security deficiencies at these organizations for some time.</blockquote>
+      <img src="images/symantec.gif" alt="Symantec" />
+    </section>
 
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
-  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
     <div class="content">
       <h1>In Case You<br>Missed It</h1>
     </div>
     <div class="shim" style="background-color:#555;opacity:.7;"></div>
-  </section> -->
-
-  <!-- Completely Different -->
-
-  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
-    <h1>And now for something completely different...</h1>
-  </section> -->
-
-  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
-
-  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
-    <div class="content">
-      <h1>Upcoming<br>Events</h1>
-    </div>
-    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
   </section>
 
-  <section class="slide">
-    <h2>DevOps &amp; Jenkins Summit</h2>
-    <blockquote>Continuous Integration (CI) and Continuous Delivery (CD) as the fundamental best practice for enterprise software delivery.</blockquote>
-    <ul>
-      <li><a href="https://www.eventbrite.com/e/devops-jenkins-summit-tickets-35411047396?aff=es2">Eventbrite</a></li>
-      <li>November 17 at Austin Convention Center</li>
-      <li>$99</li>
-    </ul>
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
   </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
@@ -378,7 +273,7 @@ function fetchVideo() {
   <section class="slide">
     <h2>Thanks!</h2>
     <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
-    <h3>Corey Butler &mdash; <a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a></h3>
+    <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3>
     <br>
     <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
   </section>
