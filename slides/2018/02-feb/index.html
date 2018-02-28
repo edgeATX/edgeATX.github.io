@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="http://edgeatx.github.io/favicon.ico" />
+
+  <title>Bleeding Edge Web: February 2018</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+
+    img[alt=""],
+    img:not([alt]) {
+      border: 10px dashed #c00;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.github.io/slides/">edgeATX.<wbr>github.io/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: February 2018</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star">A Brief Introduction to Web RTC</h3>
+    <p class="indent">&mdash; Sherwin Sim</p>
+  </section>
+
+  <section class="slide">
+    <h2>Housekeeping</h2>
+    <h3 class="star">Announcements</h3>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#ffffff;">
+    <p style="color: #2d70b8;">Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://homeaway.com/"><img style="min-width:40%"
+        src="images/homeaway.png" alt="HomeAway"></a></p>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#ffffff;">
+    <p style="color: #2d70b8;">Thanks to our sponsor:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://temasys.io/"><img style="min-width:40%"
+        src="images/temasys.png" alt="Temasys"></a></p>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; January 24, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">63</td>
+        <td class="ver">58</td>
+        <td class="ver">16</td>
+        <td class="ver">11</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of February 28, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">63</span><br><strong style="color:#1CA727">64</strong></td>
+        <td class="ver">58</td>
+        <td class="ver">16</td>
+        <td class="ver"><span class="strike dim">11</span><br><strong style="color:#1CA727">11.1</strong></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 64</h2>
+    <p>Released Jan 25 &mdash; <a href="https://developers.google.com/web/updates/2018/01/nic64">Release Notes</a></p>
+    <ul>
+      <li>Improved popup blocking and <span class="code">window.alert()</span> behavior</li>
+      <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/cache"><span class="code">Request.cache</span></a></li>
+      <li>Avoid scrolling on focus via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"><span 
+        class="code">preventScroll</span></a></li>
+      <li><span class="code">preload</span> for <span class="code">&lt;audio&gt;</span> and <span class="code">&lt;video&gt;</span>
+        now defaults to "metadata"</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+  
+  <section class="slide">
+    <h2>Chrome 64</h2>
+    <p>Released Jan 25 &mdash; <a href="https://developers.google.com/web/updates/2018/01/nic64">Release Notes</a></p>
+    <p>TC39 proposals implemented:</p>
+    <ul>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures">named 
+        captures</a> (ES2018)</li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes">Unicode 
+        property escapes</a> (ES2018)</li>
+      <li>Support for <span class="code"><a href="https://github.com/tc39/proposal-import-meta">import.meta</a></span></span> (ES2019!)</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+    
+  <section class="slide">
+    <h2>Chrome 64</h2>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2016/10/resizeobserver">ResizeObserver</a></h3>
+    <ul>
+      <li>Get notified when any content rectangle changes size</li>
+      <li>Unfortunately only supported by Chrome (<a href="https://github.com/WICG/ResizeObserver/issues/3">polyfill options</a>)</li>
+      <li>Check out the <a href="https://googlechrome.github.io/samples/resizeobserver/">example</a> below</li>
+    </ul>
+    <pre><code>const ro = new ResizeObserver(item => {
+item.target.style.borderRadius =
+  Math.max(0, 250 - item.contentRect.width) + 'px';
+});
+ro.observe(document.querySelector('.some-item'));</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <p>Released Jan 24 &mdash; <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_11_1.html">Release Notes</a></p>
+    <h3 class="star">Web APIs</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> (<a 
+        href="https://9to5mac.com/2016/10/05/how-to-use-apple-pay-web-safari/">how it works in Safari</a>)</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">Beacon API</a> (<a href="https://caniuse.com/#search=beacon">well-supported</a>)</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
+      <li><a href="https://webkit.org/blog/8124/introducing-storage-access-api">Storage Access API</a> (cross-domain first-party cookie access)</li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <h3 class="star">ES2018 Features</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameters</a> and <a 
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a></li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures">named captures</a></li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes">Unicode property escapes</a></li>
+      <li>Regex <a href="https://github.com/tc39/proposal-regexp-dotall-flag">dotAll flag</a></li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <h3 class="star">Other Interesting Highlights</h3>
+    <ul>
+      <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a></li>
+      <li>Added <span class="code">Coordinates.floorLevel</span> to geolocation</li>
+      <li>Canvas debugging in Web Inspector</li>
+      <li>And a lot <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_11_1.html">more</a>!</li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Exploring ES2018 and ES2019</h2>
+    <p>Free e-book (or <a href="https://payhip.com/b/JrTz">support it</a>) by <a href="http://dr-axel.de/">Dr. Axel Rauschmayer</a></p>
+    <ul>
+      <li><a href="http://exploringjs.com/es2018-es2019/pt_es2018.html">ES2018</a> has been finalized</li>
+      <li>ES2019 is a <a href="http://2ality.com/2018/02/ecmascript-2019.html">work-in-progress</a></li>
+      <li>Also check out <a href="http://exploringjs.com/es2016-es2017.html">Exploring ES2016 and ES2017</a></li>
+    </ul>
+    <img src="./images/es2018.jpg" alt="ES2018" />
+  </section>
+
+  <section class="slide">
+    <h2>Next.js 5</h2>
+    <p><a href="https://zeit.co/blog/next5">Released</a> February 5th</p>
+    <blockquote>A toolkit for universal, server-rendered React applications</blockquote>
+    <ul>
+        <li>Universal (client + server) Webpack</li>
+        <li>TypeScript, LESS, SASS support</li>
+        <li>Composable applications via Zones</li>
+        <li>And more!</li>
+    </ul>
+    <img src="./images/nextjs.jpg" alt="Next.js" class="corner-image" />
+  </section>
+  
+  <section class="slide">
+    <h2>Ember 3.0</h2>
+    <p><a href="https://emberjs.com/blog/2018/02/14/ember-3-0-released.html">Released</a> February 14th</p>
+    <h3 class="star">No new features!</h3>
+    <ul>
+        <li>Dropped IE 9 &amp; 10 and PhantomJS</li>
+        <li>Removing <span class="code">&lt;script&gt;</span>-driven development support</li>
+        <li>Lots of deprecated APIs dropped</li>
+    </ul>
+    <img src="./images/ember.png" alt="Ember" class="corner-image" />
+  </section>
+
+  <section class="slide">
+    <h2>Electron 2.0.0 (beta)</h2>
+    <p><a href="https://electronjs.org/releases#2.0.0-beta.1">Released</a> February 21st</p>
+    <blockquote>Build cross platform desktop apps with JavaScript, HTML, and CSS</blockquote>
+    <ul>
+      <li>Upgrades to Chrome (61), Node (8.9) and v8 (6.1)</li>
+      <li>A few minor breaking changes</li>
+      <li>Lots of fixes and minor features</li>
+    </ul>
+    <img src="./images/electron.jpg" alt="Electron" class="corner-image" />
+  </section>
+
+  <section class="slide">
+    <h2>Webpack 4.0.0</h2>
+    <p><a href="https://medium.com/webpack/webpack-4-released-today-6cdb994702d4">Released</a> February 24th</p>
+    <ul>
+      <li>"Up to 98% faster"</li>
+      <li>Sensible defaults via <span class="code">mode</span></li>
+      <li>WebAssembly support</li>
+      <li>Module types (JS, ES, JSON, wasm)</li>
+      <li>Way more + breaking changes&mdash;check out the <a 
+        href="https://github.com/webpack/webpack/releases/tag/v4.0.0">release notes</a>!</li>
+    </ul>
+    <img src="./images/webpack.png" alt="Webpack" class="corner-image" style="max-width:250px;" />
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://pressurejs.com/">Pressure.js</a></h2>
+    <blockquote>A JS library for handling Force Touch, 3D Touch, and Pointer Pressure on the web</blockquote>
+    <ul>
+      <li>Simple API that works across all devices</li>
+      <li>Device support detection (with polyfill fallback)</li>
+      <li>Multitouch / variable force support</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+
+    <section class="slide">
+      <h2>Symantec Certs Untrusted</h2>
+      <p class="star">Chrome 65 will <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">no
+        longer trust</a> Symantec-issed SSL certificates older than June 1, 2016</p>
+      <blockquote>Symantec had entrusted several organizations with the ability to issue certificates without the appropriate 
+        or necessary oversight, and had been aware of security deficiencies at these organizations for some time.</blockquote>
+      <img src="images/symantec.gif" alt="Symantec" />
+    </section>
+
+    <section class="slide">
+      <h2>Pwned Passwords V2</h2>
+      <blockquote>A free database of 501,636,842 known compromised passwords</blockquote>
+      <ul>
+        <li>Try the <a href="https://haveibeenpwned.com/Passwords">online password checker</a></li>
+        <li>Also available as a file download or via an API</li>
+        <li>Read the <a href="https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/">blog post</a> for complete details</li>
+      </ul>
+    </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>State of JS Frameworks &amp; Libraries</h2>
+    <p class="star">Mega interview (2.5 hours!) with framework all-stars</p>
+    <p>Updates on latest framework features</p>
+    <div style="float:left;display:flex;width:48%;">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=195s">Franziska Hinkelmann</a> (Node)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=930s">Michael Jackson</a> (React)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=1770s">Evan You</a> (Vue.js)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=2596s">Ben Lesh</a> (RxJS)</li>
+      </ul>
+    </div>
+    <div style="float:right;display:flex;width:48%;">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=3990s">Igor Minar</a> (Angular)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=5550s">Ricardo Mendes</a> (Ember)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=7610s">Justin Fagnani</a> (Polymer)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Flashback!  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(./images/will-smith.jpg)">
+    <div class="content">
+      <h1>Bleeding Edge<br>~ 90's edition ~</h1>
+    </div>
+    <div class="shim" style="background-color:rgb(166, 175, 117);opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/joshwcomeau/react-retro-hit-counter">React Retro Hit Counter</a></h2>
+    <blockquote>Easily the best React counter you'll find anywhere on Altavista.</blockquote>
+    <pre><code>import RetroHitCounter from 'react-retro-hit-counter';
+const counter = () => (
+  &lt;RetroHitCounter hits={1337} /&gt;
+);</code></pre>
+    <img src="images/hit-counter.png" alt="Hit counter" />
+    <p>Make sure you check out the <a href="https://joshwcomeau.github.io/react-retro-hit-counter/">demo page</a></p>
+  </section>
+  
+  <section class="slide">
+    <h2><a href="https://github.com/rage8885/OpenSC2K">OpenSC2K</a></h2>
+    <blockquote>An open source remake of SimCity 2000 written in JS using HTML5 Canvas, SQLite and built on Electron.</blockquote>
+    <img src="images/opensc2k.jpg" alt="SimCity 2000" />
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/bfirsh/jsnes">JSNES</a></h2>
+    <blockquote>An JavaScript NES emulator for the browser and Node.</blockquote>
+    <p>Play the <a href="https://jsnes.fir.sh/">online demos</a></p>
+    <img src="images/jsnes.jpg" alt="JSNES" />
+  </section>
+
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section> -->
+
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeATX.github.io/slides/">http://edgeATX.github.io/slides</a></h3>
+    <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
