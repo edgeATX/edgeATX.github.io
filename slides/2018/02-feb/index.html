@@ -191,7 +191,7 @@
 
   <section class="slide">
     <h2>Browser Pop Quiz</h2>
-    <h3>As of February 27, 2018:</h3>
+    <h3>As of February 28, 2018:</h3>
     <table class="browsers">
       <tr>
         <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -211,10 +211,46 @@
   <section class="slide">
     <h2>Chrome 64</h2>
     <p>Released Jan 25 &mdash; <a href="https://developers.google.com/web/updates/2018/01/nic64">Release Notes</a></p>
-    <h3 class="star"><a href=""></a></h3>
+    <ul>
+      <li>Improved popup blocking and <span class="code">window.alert()</span> behavior</li>
+      <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request/cache"><span class="code">Request.cache</span></a></li>
+      <li>Avoid scrolling on focus via <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus"><span 
+        class="code">preventScroll</span></a></li>
+      <li><span class="code">preload</span> for <span class="code">&lt;audio&gt;</span> and <span class="code">&lt;video&gt;</span>
+        now defaults to "metadata"</li>
+    </ul>
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
-
+  
+  <section class="slide">
+    <h2>Chrome 64</h2>
+    <p>Released Jan 25 &mdash; <a href="https://developers.google.com/web/updates/2018/01/nic64">Release Notes</a></p>
+    <p>TC39 proposals implemented:</p>
+    <ul>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures">named 
+        captures</a> (ES2018)</li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes">Unicode 
+        property escapes</a> (ES2018)</li>
+      <li>Support for <span class="code"><a href="https://github.com/tc39/proposal-import-meta">import.meta</a></span></span> (ES2019!)</li>
+      </ul>
+      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+    </section>
+    
+    <section class="slide">
+        <h2>Chrome 64</h2>
+        <h3 class="star"><a href="https://developers.google.com/web/updates/2016/10/resizeobserver">ResizeObserver</a></h3>
+        <ul>
+          <li>Get notified when any content rectangle changes size</li>
+          <li>Unfortunately only supported by Chrome (<a href="https://github.com/WICG/ResizeObserver/issues/3">polyfill options</a>)</li>
+          <li>Check out the <a href="https://googlechrome.github.io/samples/resizeobserver/">example</a> below</li>
+        </ul>
+        <pre><code>const ro = new ResizeObserver(item => {
+    item.target.style.borderRadius =
+      Math.max(0, 250 - item.contentRect.width) + 'px';
+  });
+  ro.observe(document.querySelector('.some-item'));</code></pre>
+        <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+      </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
@@ -224,15 +260,63 @@
   </section>
 
   <section class="slide">
-    <h2>Parcel</h2>
-    <blockquote>Blazing fast, zero configuration web application bundler</blockquote>
+    <h2>Exploring ES2018 and ES2019</h2>
+    <p>Free e-book (or <a href="https://payhip.com/b/JrTz">support it</a>) by <a href="http://dr-axel.de/">Dr. Axel Rauschmayer</a></p>
     <ul>
-      <li>Fast, multicore <a href="https://medium.com/@devongovett/announcing-parcel-a-blazing-fast-zero-configuration-web-application-bundler-feac43aac0f1">webpack alternative</a></li>
-      <li>HTML / JS / CSS / static file batteries included</li>
-      <li>Auto-transforms via Babel, PostCSS, etc</li>
-      <li>Auto-code splitting via dynamic <span class="code">import()</span> syntax</li>
+      <li><a href="http://exploringjs.com/es2018-es2019/pt_es2018.html">ES2018</a> has been finalized</li>
+      <li>ES2019 is a <a href="http://2ality.com/2018/02/ecmascript-2019.html">work-in-progress</a></li>
+      <li>Also check out <a href="http://exploringjs.com/es2016-es2017.html">Exploring ES2016 and ES2017</a></li>
     </ul>
-    <img src="./images/parcel.png" alt="Parcel" style="max-width:300px;" />
+    <img src="./images/es2018.jpg" alt="ES2018" />
+  </section>
+  
+  <section class="slide">
+    <h2>Next.js 5</h2>
+    <p><a href="https://zeit.co/blog/next5">Released</a> February 5th</p>
+    <blockquote>A toolkit for universal, server-rendered React applications</blockquote>
+    <ul>
+      <li>Universal (client + server) Webpack</li>
+      <li>TypeScript, LESS, SASS support</li>
+      <li>Composable applications via Zones</li>
+      <li>And more!</li>
+    </ul>
+    <img src="./images/nextjs.jpg" alt="Next.js" class="corner-image" />
+  </section>
+  
+  <section class="slide">
+    <h2>Electron 2.0.0 (beta)</h2>
+    <p><a href="https://electronjs.org/releases#2.0.0-beta.1">Released</a> February 21st</p>
+    <blockquote>Build cross platform desktop apps with JavaScript, HTML, and CSS</blockquote>
+    <ul>
+      <li>Upgrades to Chrome (61), Node (8.9) and v8 (6.1)</li>
+      <li>A few minor breaking changes</li>
+      <li>Lots of fixes and minor features</li>
+    </ul>
+    <img src="./images/electron.jpg" alt="Electron" class="corner-image" />
+  </section>
+
+  <section class="slide">
+    <h2>Webpack 4.0.0</h2>
+    <p><a href="https://medium.com/webpack/webpack-4-released-today-6cdb994702d4">Released</a> February 24th</p>
+    <ul>
+      <li>"Up to 98% faster"</li>
+      <li>Sensible defaults via <span class="code">mode</span></li>
+      <li>WebAssembly support</li>
+      <li>Module types (JS, ES, JSON, wasm)</li>
+      <li>Way more + breaking changes&mdash;check out the <a 
+        href="https://github.com/webpack/webpack/releases/tag/v4.0.0">release notes</a>!</li>
+    </ul>
+    <img src="./images/webpack.png" alt="Webpack" class="corner-image" style="max-width:250px;" />
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://pressurejs.com/">Pressure.js</a></h2>
+    <blockquote>A JS library for handling Force Touch, 3D Touch, and Pointer Pressure on the web</blockquote>
+    <ul>
+      <li>Simple API that works across all devices</li>
+      <li>Device support detection (with polyfill fallback)</li>
+      <li>Multitouch / variable force support</li>
+    </ul>
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
@@ -253,6 +337,16 @@
       <img src="images/symantec.gif" alt="Symantec" />
     </section>
 
+    <section class="slide">
+      <h2>Pwned Passwords V2</h2>
+      <blockquote>A free database of 501,636,842 known compromised passwords</blockquote>
+      <ul>
+        <li>Try the <a href="https://haveibeenpwned.com/Passwords">online password checker</a></li>
+        <li>Also available as a file download or via an API</li>
+        <li>Read the <a href="https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/">blog post</a> for complete details</li>
+      </ul>
+    </section>
+
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
@@ -262,11 +356,66 @@
     <div class="shim" style="background-color:#555;opacity:.7;"></div>
   </section>
 
+  <section class="slide">
+    <h2>State of JS Frameworks &amp; Libraries</h2>
+    <p class="star">Mega interview (2.5 hours!) with framework all-stars</p>
+    <p>Updates on latest framework features</p>
+    <div style="float:left;display:flex;width:48%;">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=195s">Franziska Hinkelmann</a> (Node)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=930s">Michael Jackson</a> (React)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=1770s">Evan You</a> (Vue.js)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=2596s">Ben Lesh</a> (RxJS)</li>
+      </ul>
+    </div>
+    <div style="float:right;display:flex;width:48%;">
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=3990s">Igor Minar</a> (Angular)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=5550s">Ricardo Mendes</a> (Ember)</li>
+        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=7610s">Justin Fagnani</a> (Polymer)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- - - - - - - - - - -  Flashback!  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(./images/will-smith.jpg)">
+    <div class="content">
+      <h1>Bleeding Edge<br>90's edition</h1>
+    </div>
+    <div class="shim" style="background-color:rgb(166, 175, 117);opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/rage8885/OpenSC2K">OpenSC2K</a></h2>
+    <blockquote>An open source remake of SimCity 2000 written in JS using HTML5 Canvas, SQLite and built on Electron.</blockquote>
+    <img src="images/opensc2k.jpg" alt="SimCity 2000" />
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/bfirsh/jsnes">JSNES</a></h2>
+    <blockquote>An JavaScript NES emulator for the browser and Node.</blockquote>
+    <p>Play the <a href="https://jsnes.fir.sh/">online demos</a></p>
+    <img src="images/jsnes.jpg" alt="JSNES" />
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/joshwcomeau/react-retro-hit-counter">React Retro Hit Counter</a></h2>
+    <blockquote>Easily the best React counter you'll find anywhere on Altavista.</blockquote>
+    <pre><code>import RetroHitCounter from 'react-retro-hit-counter';
+const counter = () => (
+  &lt;RetroHitCounter hits={1337} /&gt;
+);</code></pre>
+    <img src="images/hit-counter.png" alt="Hit counter" />
+    <p>Make sure you check out the <a href="https://joshwcomeau.github.io/react-retro-hit-counter/">demo page</a></p>
+  </section>
+
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
 
   <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
     <h1>And now for something completely different...</h1>
   </section>
+
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
 
