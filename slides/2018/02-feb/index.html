@@ -203,7 +203,7 @@
         <td class="ver"><span class="strike dim">63</span><br><strong style="color:#1CA727">64</strong></td>
         <td class="ver">58</td>
         <td class="ver">16</td>
-        <td class="ver">11</td>
+        <td class="ver"><span class="strike dim">11</span><br><strong style="color:#1CA727">11.1</strong></td>
       </tr>
     </table>
   </section>
@@ -232,25 +232,65 @@
       <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes">Unicode 
         property escapes</a> (ES2018)</li>
       <li>Support for <span class="code"><a href="https://github.com/tc39/proposal-import-meta">import.meta</a></span></span> (ES2019!)</li>
-      </ul>
-      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
-    </section>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
     
-    <section class="slide">
-        <h2>Chrome 64</h2>
-        <h3 class="star"><a href="https://developers.google.com/web/updates/2016/10/resizeobserver">ResizeObserver</a></h3>
-        <ul>
-          <li>Get notified when any content rectangle changes size</li>
-          <li>Unfortunately only supported by Chrome (<a href="https://github.com/WICG/ResizeObserver/issues/3">polyfill options</a>)</li>
-          <li>Check out the <a href="https://googlechrome.github.io/samples/resizeobserver/">example</a> below</li>
-        </ul>
-        <pre><code>const ro = new ResizeObserver(item => {
-    item.target.style.borderRadius =
-      Math.max(0, 250 - item.contentRect.width) + 'px';
-  });
-  ro.observe(document.querySelector('.some-item'));</code></pre>
-        <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
-      </section>
+  <section class="slide">
+    <h2>Chrome 64</h2>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2016/10/resizeobserver">ResizeObserver</a></h3>
+    <ul>
+      <li>Get notified when any content rectangle changes size</li>
+      <li>Unfortunately only supported by Chrome (<a href="https://github.com/WICG/ResizeObserver/issues/3">polyfill options</a>)</li>
+      <li>Check out the <a href="https://googlechrome.github.io/samples/resizeobserver/">example</a> below</li>
+    </ul>
+    <pre><code>const ro = new ResizeObserver(item => {
+item.target.style.borderRadius =
+  Math.max(0, 250 - item.contentRect.width) + 'px';
+});
+ro.observe(document.querySelector('.some-item'));</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <p>Released Jan 24 &mdash; <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_11_1.html">Release Notes</a></p>
+    <h3 class="star">Web APIs</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API">Payment Request API</a> (<a 
+        href="https://9to5mac.com/2016/10/05/how-to-use-apple-pay-web-safari/">how it works in Safari</a>)</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Beacon_API">Beacon API</a> (<a href="https://caniuse.com/#search=beacon">well-supported</a>)</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/File_and_Directory_Entries_API">File and Directory Entries API</a></li>
+      <li><a href="https://webkit.org/blog/8124/introducing-storage-access-api">Storage Access API</a> (cross-domain first-party cookie access)</li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <h3 class="star">ES2018 Features</h3>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameters</a> and <a 
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">spread syntax</a></li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#named_captures">named captures</a></li>
+      <li>Regex <a href="https://developers.google.com/web/updates/2017/07/upcoming-regexp-features#unicode_property_escapes">Unicode property escapes</a></li>
+      <li>Regex <a href="https://github.com/tc39/proposal-regexp-dotall-flag">dotAll flag</a></li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 11.1</h2>
+    <h3 class="star">Other Interesting Highlights</h3>
+    <ul>
+      <li>Support for <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a></li>
+      <li>Added <span class="code">Coordinates.floorLevel</span> to geolocation</li>
+      <li>Canvas debugging in Web Inspector</li>
+      <li>And a lot <a href="https://developer.apple.com/library/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_11_1.html">more</a>!</li>
+    </ul>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Safari">
+  </section>
 
   <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
 
@@ -269,20 +309,32 @@
     </ul>
     <img src="./images/es2018.jpg" alt="ES2018" />
   </section>
-  
+
   <section class="slide">
     <h2>Next.js 5</h2>
     <p><a href="https://zeit.co/blog/next5">Released</a> February 5th</p>
     <blockquote>A toolkit for universal, server-rendered React applications</blockquote>
     <ul>
-      <li>Universal (client + server) Webpack</li>
-      <li>TypeScript, LESS, SASS support</li>
-      <li>Composable applications via Zones</li>
-      <li>And more!</li>
+        <li>Universal (client + server) Webpack</li>
+        <li>TypeScript, LESS, SASS support</li>
+        <li>Composable applications via Zones</li>
+        <li>And more!</li>
     </ul>
     <img src="./images/nextjs.jpg" alt="Next.js" class="corner-image" />
   </section>
   
+  <section class="slide">
+    <h2>Ember 3.0</h2>
+    <p><a href="https://emberjs.com/blog/2018/02/14/ember-3-0-released.html">Released</a> February 14th</p>
+    <h3 class="star">No new features!</h3>
+    <ul>
+        <li>Dropped IE 9 &amp; 10 and PhantomJS</li>
+        <li>Removing <span class="code">&lt;script&gt;</span>-driven development support</li>
+        <li>Lots of deprecated APIs dropped</li>
+    </ul>
+    <img src="./images/ember.png" alt="Ember" class="corner-image" />
+  </section>
+
   <section class="slide">
     <h2>Electron 2.0.0 (beta)</h2>
     <p><a href="https://electronjs.org/releases#2.0.0-beta.1">Released</a> February 21st</p>
@@ -381,11 +433,22 @@
 
   <section class="slide cover" style="background-image:url(./images/will-smith.jpg)">
     <div class="content">
-      <h1>Bleeding Edge<br>90's edition</h1>
+      <h1>Bleeding Edge<br>~ 90's edition ~</h1>
     </div>
     <div class="shim" style="background-color:rgb(166, 175, 117);opacity:.7;"></div>
   </section>
 
+  <section class="slide">
+    <h2><a href="https://github.com/joshwcomeau/react-retro-hit-counter">React Retro Hit Counter</a></h2>
+    <blockquote>Easily the best React counter you'll find anywhere on Altavista.</blockquote>
+    <pre><code>import RetroHitCounter from 'react-retro-hit-counter';
+const counter = () => (
+  &lt;RetroHitCounter hits={1337} /&gt;
+);</code></pre>
+    <img src="images/hit-counter.png" alt="Hit counter" />
+    <p>Make sure you check out the <a href="https://joshwcomeau.github.io/react-retro-hit-counter/">demo page</a></p>
+  </section>
+  
   <section class="slide">
     <h2><a href="https://github.com/rage8885/OpenSC2K">OpenSC2K</a></h2>
     <blockquote>An open source remake of SimCity 2000 written in JS using HTML5 Canvas, SQLite and built on Electron.</blockquote>
@@ -399,22 +462,11 @@
     <img src="images/jsnes.jpg" alt="JSNES" />
   </section>
 
-  <section class="slide">
-    <h2><a href="https://github.com/joshwcomeau/react-retro-hit-counter">React Retro Hit Counter</a></h2>
-    <blockquote>Easily the best React counter you'll find anywhere on Altavista.</blockquote>
-    <pre><code>import RetroHitCounter from 'react-retro-hit-counter';
-const counter = () => (
-  &lt;RetroHitCounter hits={1337} /&gt;
-);</code></pre>
-    <img src="images/hit-counter.png" alt="Hit counter" />
-    <p>Make sure you check out the <a href="https://joshwcomeau.github.io/react-retro-hit-counter/">demo page</a></p>
-  </section>
-
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
 
-  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
     <h1>And now for something completely different...</h1>
-  </section>
+  </section> -->
 
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
