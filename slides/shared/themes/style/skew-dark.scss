@@ -85,12 +85,12 @@
       border-bottom: 2px dotted #333B46;
 
       &, &:hover, &:focus, &:active, &:visited {
-        color: #c00;
+        color: #E91E63;
         text-decoration: none;
       }
 
       &:hover, &:focus {
-        border-bottom: 1px solid #1c68be;
+        border-bottom: 1px solid #E91E63;
       }
 
       span.code {
@@ -307,4 +307,9 @@ pre[class*="language-"] {
   content: '\2606'; /* &star; */
   color: #E91E63;
   padding-right: 20px;
+}
+
+img[alt=""],
+img:not([alt]) {
+  border: 10px dashed #c00;
 }
