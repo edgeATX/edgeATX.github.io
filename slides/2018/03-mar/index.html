@@ -115,7 +115,8 @@
     <h3 class="star">News From the Bleeding Edge</h3>
     <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
 
-    <h3 class="star">Practical Patterns for Maintainable React Redux Architecture</h3>
+    <h3 class="star"><a href="https://www.vicesoftware.com/bleeding-edge-react-testing-talk/">Practical 
+      Patterns for Maintainable React Redux Architecture</a></h3>
     <p class="indent">&mdash; Ryan Vice</p>
   </section>
 
@@ -131,11 +132,15 @@
   </section>
 
   <section class="slide cover" style="background:#fff;">
-    <p style="color: #555;">Thanks to our primary sponsor:</p>
+    <p style="color: #555;">Thanks to our premiere sponsor:</p>
     <div style="text-align:center;padding-top:150px;font-size:200%;">
       <p><a href="https://www.teksystems.com/"><img style="min-width:70%"
         src="./images/teksystems-logo.png" alt="TEKsystems"></a></p>
     </div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(./images/cloudflare-stickers.jpg)">
+    <p style="color: #fff;">Thanks to our sponsor:</p>
   </section>
 
   <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
@@ -193,7 +198,20 @@
   <section class="slide">
     <h2>Chrome 65</h2>
     <p>Released March 6th &mdash; <a href="https://developers.google.com/web/updates/2018/03/nic65">Release Notes</a></p>
-    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/paintapi">CSS Paint API</a></h3>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/devtools">DevTools</a></h3>
+    <ul>
+      <li>Local overrides with change tracking!</li>
+      <li>New accessibility panel: color contrast checking, a11y audit</li>
+      <li>New SEO audit panel</li>
+      <li>New performance audit rules</li>
+      <li>Improved debugging of worker/async code</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/paintapi">CSS Paint API</a> (aka "Houdini")</h3>
     <blockquote>Programmatically generate an image whenever a CSS property expects an image.</blockquote>
     <pre><code>class CustomPainter {
   paint(ctx, geom, properties) {
@@ -218,6 +236,7 @@ registerPaint('my_painter', CustomPainter);</code></pre>
 &lt;script>
   CSS.paintWorklet.addModule('my_painter.js');
 &lt;/script></code></pre>
+      <p>Here's a good <a href="https://codersblock.com/blog/say-hello-to-houdini-and-the-css-paint-api/">background primer</a> for more info</p>
       <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
     </section>
 
@@ -234,19 +253,9 @@ registerPaint('my_painter', CustomPainter);</code></pre>
   </section>
 
   <section class="slide">
-      <h2>Chrome 65</h2>
-      <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
-      <img src="./images/server-timing.png" alt="Server timing" style="width:70%" />
-      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
-    </section>
-
-  <section class="slide">
     <h2>Chrome 65</h2>
-    <ul>
-      <li><a href="https://developers.google.com/web/updates/2018/03/nic65#display-contents"><span 
-        class="code">display: contents</span></a> CSS property</li>
-      <li><a href="https://developers.google.com/web/updates/2018/01/devtools">Dev tools enhancements</a> (local overrides!)</li>
-    </ul>
+    <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
+    <img src="./images/server-timing.png" alt="Server timing" style="width:70%" />
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
@@ -257,8 +266,9 @@ registerPaint('my_painter', CustomPainter);</code></pre>
       <li>No JavaScript changes (!)</li>
       <li>Added the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events">PointerEvents</a> API</li>
       <li><span class="code">textarea</span> autocomplete implemented</li>
-      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"><span 
-        class="code">overscroll-behavior</span></a> CSS property implemented</li>
+      <li>CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"><span 
+        class="code">overscroll-behavior</span></a> property implemented</li>
+      <li>CSS <span class="code">calc()</span> function implemented</li>
       <li>Enhancements to service workers, WebRTC, dev tools and more</li>
     </ul>
     <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
@@ -287,6 +297,16 @@ registerPaint('my_painter', CustomPainter);</code></pre>
     <img src="./images/flutter-logo.png" class="corner-image" width="150px" alt="Flutter">
   </section>
 
+  <section class="slide">
+    <h2>Rough.js</h2>
+    <blockquote>A lightweight (~8k), Canvas-based library that lets you draw in a sketchy, hand-drawn-like style.</blockquote>
+    <ul>
+      <li></li>
+    </ul>
+   
+    <img src="./images/roughjs.png" class="corner-image" width="150px" alt="Rough.js">
+  </section>
+
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
 
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
@@ -298,11 +318,22 @@ registerPaint('my_painter', CustomPainter);</code></pre>
 
     <section class="slide">
       <h2>Symantec Certs Untrusted</h2>
-      <p class="star">Chrome 65 will <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">no
-        longer trust</a> Symantec-issed SSL certificates older than June 1, 2016</p>
+      <p class="star">Chrome 65 <strike>will <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">no
+        longer trust</a></strike> HAS distrusted Symantec-issed SSL certificates older than June 1, 2016</p>
       <blockquote>Symantec had entrusted several organizations with the ability to issue certificates without the appropriate 
         or necessary oversight, and had been aware of security deficiencies at these organizations for some time.</blockquote>
-      <img src="images/symantec.gif" alt="Symantec" />
+        <img src="images/symantec.gif" alt="Symantec" />
+    </section>
+        
+    <section class="slide">
+      <h2>Let's Encrypt</h2>
+      <h3 class="star">Wildcard Certificates <a 
+        href="https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579">are live</a>!</h3>
+      <ul>
+        <li>Secure all your subdomains with SSL&mdash;for FREE!</li>
+        <li>Not using Let's Encrypt yet? <a href="https://letsencrypt.org/getting-started/">Do it now!</a></li>
+      </ul>
+      <img src="./images/lets-encrypt-logo.png" alt="Let's Encrypt" />
     </section>
 
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
@@ -342,6 +373,26 @@ registerPaint('my_painter', CustomPainter);</code></pre>
       <li>Vastly improved compatibility tables:</li>
     </ul>
     <img src="./images/mdn.png" alt="MDN" width="80%" />
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Austin CTO Summit</h2>
+    <blockquote>A single track summit where you'll learn the latest tricks other companies are using to 
+      successfully build and run engineering teams</blockquote>
+    <ul>
+      <li><a href="http://www.ticketbase.com/events/2018-austin-cto-summit">Get tickets</a></li>
+      <li>April 10th, all day at Capital Factory</li>
+      <li>$795 early bird&mdash;ends tomorrow!</li>
+    </ul>
   </section>
 
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
