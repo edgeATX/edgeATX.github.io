@@ -193,27 +193,59 @@
   <section class="slide">
     <h2>Chrome 65</h2>
     <p>Released March 6th &mdash; <a href="https://developers.google.com/web/updates/2018/03/nic65">Release Notes</a></p>
-    <h3 class="star"><a href="">CSS Paint API</a></h3>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/paintapi">CSS Paint API</a></h3>
+    <blockquote>Programmatically generate an image whenever a CSS property expects an image.</blockquote>
+    <pre><code>class CustomPainter {
+  paint(ctx, geom, properties) {
+    ctx.fillStyle = 'red';
+    ctx.rect(10, 10, 10, 10);
+    ctx.fill();
+  }
+}
+registerPaint('my_painter', CustomPainter);</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+      <h2>Chrome 65</h2>
+      <h3 class="star"><a href="">CSS Paint API</a></h3>
+      <pre><code>&lt;style>
+  textarea {
+    background-image: paint(my_painter);
+  }
+&lt;/style>
+&lt;textarea>&lt;/textarea>
+&lt;script>
+  CSS.paintWorklet.addModule('my_painter.js');
+&lt;/script></code></pre>
+      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+    </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
+    <blockquote>Allows your server to pass timing information to the browser, giving you a better picture of your overall performance.</blockquote>
     <ul>
-      <li></li>
+      <li>Track any custom performance metrics</li>
+      <li>Return responses with a header like: <span class="code">'Server-Timing': 'init=42;"Init",db-read=142;"DB Read"'</span></li>
+      <li>Response timing details will show in dev tools</li>
     </ul>
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
 
   <section class="slide">
-    <h2>Chrome 65</h2>
-    <h3 class="star"><a href="">Server Timing API</a></h3>
-    <ul>
-      <li></li>
-    </ul>
-    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
-  </section>
+      <h2>Chrome 65</h2>
+      <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
+      <img src="./images/server-timing.png" alt="Server timing" style="width:70%" />
+      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+    </section>
 
   <section class="slide">
     <h2>Chrome 65</h2>
-    <h3 class="star"><a href=""><span class="code">display: contents</span></a></h3>
     <ul>
-      <li></li>
+      <li><a href="https://developers.google.com/web/updates/2018/03/nic65#display-contents"><span 
+        class="code">display: contents</span></a> CSS property</li>
+      <li><a href="https://developers.google.com/web/updates/2018/01/devtools">Dev tools enhancements</a> (local overrides!)</li>
     </ul>
     <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
   </section>
@@ -221,9 +253,13 @@
   <section class="slide">
     <h2>Firefox 59</h2>
     <p>Released March 13th &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/59">Release Notes</a></p>
-    <h3 class="star"></h3>
     <ul>
-      <li></li>
+      <li>No JavaScript changes (!)</li>
+      <li>Added the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events">PointerEvents</a> API</li>
+      <li><span class="code">textarea</span> autocomplete implemented</li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"><span 
+        class="code">overscroll-behavior</span></a> CSS property implemented</li>
+      <li>Enhancements to service workers, WebRTC, dev tools and more</li>
     </ul>
     <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
   </section>
@@ -236,14 +272,19 @@
   </section>
 
   <section class="slide">
-    <h2>Exploring ES2018 and ES2019</h2>
-    <p>Free e-book (or <a href="https://payhip.com/b/JrTz">support it</a>) by <a href="http://dr-axel.de/">Dr. Axel Rauschmayer</a></p>
+    <h2>Flutter (beta 1)</h2>
+    <blockquote>Google’s mobile UI framework for crafting high-quality native interfaces on iOS and Android in record time.</blockquote>
     <ul>
-      <li><a href="http://exploringjs.com/es2018-es2019/pt_es2018.html">ES2018</a> has been finalized</li>
-      <li>ES2019 is a <a href="http://2ality.com/2018/02/ecmascript-2019.html">work-in-progress</a></li>
-      <li>Also check out <a href="http://exploringjs.com/es2016-es2017.html">Exploring ES2016 and ES2017</a></li>
+      <li>Great developer experience (stateful hot reload)</li>
+      <li>Modern, reactive framework (provides widgets, layouts, gestures)</li>
+      <li>Expressive UI (natural scrolling, motion APIs, iOS and Android)</li>
+      <li>Native performance (compiles to ARM, GPU-accelerated, no JS bridge!)</li>
     </ul>
-    <img src="./images/es2018.jpg" alt="ES2018" />
+    <p>Read the <a href="https://medium.com/flutter-io/announcing-flutter-beta-1-build-beautiful-native-apps-dc142aea74c0">announcement</a>
+      or <a href="https://flutter.io/">try it out</a> (or learn some <a 
+      href="https://hackernoon.com/whats-revolutionary-about-flutter-946915b09514?imm_mid=0fbccb">history</a>).</p>
+    <p>This 30-minute <a href="https://www.youtube.com/watch?v=w2TcYP8qiRI">live coding demo</a> is pretty sweet too.</p>
+    <img src="./images/flutter-logo.png" class="corner-image" width="150px" alt="Flutter">
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
@@ -292,6 +333,15 @@
         <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=7610s">Justin Fagnani</a> (Polymer)</li>
       </ul>
     </div>
+  </section>
+
+  <section class="slide">
+    <h2>MDN Docs Refresh</h2>
+    <ul>
+      <li>Overall UI update&mdash;<a href="https://developer.mozilla.org/en-US/">check it out</a></li>
+      <li>Vastly improved compatibility tables:</li>
+    </ul>
+    <img src="./images/mdn.png" alt="MDN" width="80%" />
   </section>
 
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->

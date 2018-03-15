@@ -102,7 +102,7 @@
 
 .deck-container .browser-table td p { margin-top: 15px; font-size: 2em; }
 
-.deck-container .corner-image { position: absolute; top: 20px; right: 20px; z-index: -999; }
+.deck-container .corner-image { position: absolute; top: 20px; right: 20px; z-index: 9999; }
 
 .deck-container .cols-2 { column-count: 2; column-gap: 30px; }
 
