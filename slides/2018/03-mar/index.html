@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="https://edgeatx.org/favicon.ico" />
+
+  <title>Bleeding Edge Web: March 2018</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+    p {
+      color: #ffffff;
+    }
+
+    .bugs > tbody > tr > th {
+      background-color: rgba(255,255,255,.15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+    .bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255,255,255,.15) !important;
+    }
+    .bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3),
+    .bugs > tbody > tr > th:nth-of-type(2),
+    .bugs > tbody > tr > th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+    .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+    /* enable historical forms */
+    .hist { font-feature-settings: "hist"; }
+
+    /* disable common ligatures, usually on by default */
+    .noligs { font-feature-settings: "liga" 0; }
+
+    /* enable tabular (monospaced) figures */
+    td.tabular { font-feature-settings: "tnum"; }
+
+    /* enable automatic fractions */
+    .fractions { font-feature-settings: "frac"; }
+
+    /* use the second available swash character */
+    .swash { font-feature-settings: "swsh" 2; }
+
+    /* enable stylistic set 7 */
+    .fancystyle {
+      font-family: Gabriola; /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255,255,255,.08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+    <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+    <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: March 2018</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star"><a href="https://www.vicesoftware.com/bleeding-edge-react-testing-talk/">Practical 
+      Patterns for Maintainable React Redux Architecture</a></h3>
+    <p class="indent">&mdash; Ryan Vice (<a href="https://twitter.com/ryanvice1">@ryanvice1</a></p>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+    <p style="color: #fff;">Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://www.capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.5;"></div>
+  </section>
+
+  <section class="slide cover" style="background:#fff;">
+    <p style="color: #555;">Thanks to our premiere sponsor:</p>
+    <div style="text-align:center;padding-top:150px;font-size:200%;">
+      <p><a href="https://www.teksystems.com/"><img style="min-width:70%"
+        src="./images/teksystems-logo.png" alt="TEKsystems"></a></p>
+    </div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(./images/cloudflare-stickers.jpg)">
+    <p style="color: #fff;">Thanks to our sponsor:</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; February 28, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">64</td>
+        <td class="ver">58</td>
+        <td class="ver">16</td>
+        <td class="ver">11.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of March 15, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">64</span><br><strong style="color:#1CA727">65</strong></td>
+        <td class="ver"><span class="strike dim">58</span><br><strong style="color:#1CA727">59</strong></td>
+        <td class="ver">16</td>
+        <td class="ver">11.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <p>Released March 6th &mdash; <a href="https://developers.google.com/web/updates/2018/03/nic65">Release Notes</a></p>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/devtools">DevTools</a></h3>
+    <ul>
+      <li>Local overrides with change tracking!</li>
+      <li>New accessibility panel: color contrast checking, a11y audit</li>
+      <li>New SEO audit panel</li>
+      <li>New performance audit rules</li>
+      <li>Improved debugging of worker/async code</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <h3 class="star"><a href="https://developers.google.com/web/updates/2018/01/paintapi">CSS Paint API</a> (aka "Houdini")</h3>
+    <blockquote>Programmatically generate an image whenever a CSS property expects an image.</blockquote>
+    <pre><code>class CustomPainter {
+  paint(ctx, geom, properties) {
+    ctx.fillStyle = 'red';
+    ctx.rect(10, 10, 10, 10);
+    ctx.fill();
+  }
+}
+registerPaint('my_painter', CustomPainter);</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+      <h2>Chrome 65</h2>
+      <h3 class="star"><a href="">CSS Paint API</a></h3>
+      <pre><code>&lt;style>
+  textarea {
+    background-image: paint(my_painter);
+  }
+&lt;/style>
+&lt;textarea>&lt;/textarea>
+&lt;script>
+  CSS.paintWorklet.addModule('my_painter.js');
+&lt;/script></code></pre>
+      <p>Here's a good <a href="https://codersblock.com/blog/say-hello-to-houdini-and-the-css-paint-api/">background primer</a> for more info</p>
+      <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+    </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
+    <blockquote>Allows your server to pass timing information to the browser, giving you a better picture of your overall performance.</blockquote>
+    <ul>
+      <li>Track any custom performance metrics</li>
+      <li>Return responses with a header like: <span class="code">'Server-Timing': 'init=42;"Init",db-read=142;"DB Read"'</span></li>
+      <li>Response timing details will show in dev tools</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 65</h2>
+    <h3 class="star"><a href="https://w3c.github.io/server-timing/">Server Timing API</a></h3>
+    <img src="./images/server-timing.png" alt="Server timing" style="width:70%" />
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 59</h2>
+    <p>Released March 13th &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/59">Release Notes</a></p>
+    <ul>
+      <li>No JavaScript changes (!)</li>
+      <li>Added the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Pointer_events">PointerEvents</a> API</li>
+      <li><span class="code">textarea</span> autocomplete implemented</li>
+      <li>CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"><span 
+        class="code">overscroll-behavior</span></a> property implemented</li>
+      <li>Support for color and media query values in CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc"><span class="code">calc()</span></a></li>
+      <li>Enhancements to service workers, WebRTC, dev tools and more</li>
+    </ul>
+    <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Flutter (beta 1)</h2>
+    <blockquote>Google’s mobile UI framework for crafting high-quality native interfaces on iOS and Android in record time.</blockquote>
+    <ul>
+      <li>Great developer experience (stateful hot reload)</li>
+      <li>Modern, reactive framework (provides widgets, layouts, gestures)</li>
+      <li>Expressive UI (natural scrolling, motion APIs, iOS and Android)</li>
+      <li>Native performance (compiles to ARM, GPU-accelerated, no JS bridge!)</li>
+    </ul>
+    <p>Read the <a href="https://medium.com/flutter-io/announcing-flutter-beta-1-build-beautiful-native-apps-dc142aea74c0">announcement</a>
+      or <a href="https://flutter.io/">try it out</a> (or learn some <a 
+      href="https://hackernoon.com/whats-revolutionary-about-flutter-946915b09514?imm_mid=0fbccb">history</a>).</p>
+    <p>This 30-minute <a href="https://www.youtube.com/watch?v=w2TcYP8qiRI">live coding demo</a> is pretty sweet too.</p>
+    <img src="./images/flutter-logo.png" class="corner-image" width="150px" alt="Flutter">
+  </section>
+
+  <section class="slide">
+    <h2>Rough.js</h2>
+    <blockquote>A lightweight (~8k), Canvas-based library that lets you draw in a sketchy, hand-drawn-like style.</blockquote>
+    <ul>
+      <li>Supports SVG primitives and custom paths</li>
+      <li>Supports processing in a <a href="https://github.com/pshihn/rough/wiki/RoughJS-in-a-web-worker">web worker thread</a></li>
+      <li><a href="https://roughjs.com/">Examples and download</a></li>
+    </ul>
+    <img src="./images/roughjs.png" alt="Rough.js">
+  </section>
+
+  <section class="slide">
+    <h2>Delighters.js</h2>
+    <blockquote>Add CSS animations to delight users as they scroll down.</blockquote>
+    <ul>
+      <li>Simply add a <span class="code">data-delighter</span> attribute to any element</li>
+      <li>Write your own CSS rules to be triggered on scroll</li>
+      <li>That's it! Easy to use and customize</li>
+      <li>This one is easiest <a href="https://q42.github.io/delighters/">just to show</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Sketch 49</h2>
+    <p><a href="https://sketchapp.com/">Sketch</a> is a UI and UX design tool.</p>
+    <ul>
+      <li>Version 49 includes interactive <a href="https://blog.sketchapp.com/an-in-depth-look-at-prototyping-in-sketch-942394341f3c">prototyping</a></li>
+      <li>Plus cloud sharing and an official iOS UI kit</li>
+      <li>This might help: <a href="https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886">7 
+        Practical Tips for Cheating at Design</a></li>
+    </ul>
+    <img src="./images/sketchapp.gif" alt="Sketch" />
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+
+    <section class="slide">
+      <h2>Symantec Certs Untrusted</h2>
+      <p class="star">Chrome 65 <strike>will <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">no
+        longer trust</a></strike> HAS distrusted Symantec-issed SSL certificates older than June 1, 2016</p>
+      <blockquote>Symantec had entrusted several organizations with the ability to issue certificates without the appropriate 
+        or necessary oversight, and had been aware of security deficiencies at these organizations for some time.</blockquote>
+        <img src="images/symantec.gif" alt="Symantec" />
+    </section>
+        
+    <section class="slide">
+      <h2>Let's Encrypt</h2>
+      <h3 class="star">Wildcard Certificates <a 
+        href="https://community.letsencrypt.org/t/acme-v2-and-wildcard-certificate-support-is-live/55579">are live</a>!</h3>
+      <ul>
+        <li>Secure all your subdomains with SSL&mdash;for FREE!</li>
+        <li>Not using Let's Encrypt yet? <a href="https://letsencrypt.org/getting-started/">Do it now!</a></li>
+      </ul>
+      <img src="./images/lets-encrypt-logo.png" alt="Let's Encrypt" />
+    </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>2018 StackOverflow Survey</h2>
+    <p>View the <a href="https://insights.stackoverflow.com/survey/2018/">survey results</a></p>
+    <ul>
+      <li>Most popular? JS, Node, Angular, React</li>
+      <li>Most "loved" language? <a href="https://www.rust-lang.org/en-US/">Rust</a></li>
+      <li>Highest salary language? <a href="http://fsharp.org/">F#</a> (global) and <a 
+        href="https://www.erlang.org/">Erlang</a> (US)</li>
+    </ul>
+    <img src="./images/so-survey.png" alt="StackOverflow Survey" />
+  </section>
+
+  <section class="slide">
+    <h2>Github DDOS</h2>
+    <ul>
+      <li>On Feb 28th at 12:15 EST, Github was DDOS'ed</li>
+      <li>1.35 terabits/second of traffic hit them</li>
+      <li>It was mitigated within 10 minutes and they stayed up</li>
+      <li>Read more about it&mdash;<a href="https://www.wired.com/story/github-ddos-memcached/">it's super interesting</a>!</li>
+    </ul>
+    <img src="./images/github-ddos.jpg" alt="DDOS" width="50%" />
+  </section>
+  
+  <section class="slide">
+    <h2>MDN Docs Refresh</h2>
+    <ul>
+      <li>Overall UI update&mdash;<a href="https://developer.mozilla.org/en-US/">check it out</a></li>
+      <li>Vastly improved compatibility tables:</li>
+    </ul>
+    <img src="./images/mdn.png" alt="MDN" width="80%" />
+  </section>
+
+  <section class="slide">
+    <h2>The Great "Smoosh" Controversy</h2>
+    <ul>
+      <li>A TC39 committer <a href="https://github.com/tc39/proposal-flatMap/pull/56">renamed</a> 
+        <span class="code">Array.flatten</span> to <span class="code">Array.smoosh</span></li>
+      <li>This was done to avoid conflict with MooTools (!)</li>
+      <li>The internet was <a href="https://twitter.com/search?q=smoosh&src=typd">not impressed</a></li>
+      <li>This also led an <a href="https://github.com/staltz/prevent-smoosh">amazing new library</a></li>
+    </ul>
+    <img src="./images/smoosh.gif" alt="Smoosh" />
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming<br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Austin CTO Summit</h2>
+    <blockquote>A single track summit where you'll learn the latest tricks other companies are using to 
+      successfully build and run engineering teams</blockquote>
+    <ul>
+      <li><a href="http://www.ticketbase.com/events/2018-austin-cto-summit">Get tickets</a></li>
+      <li>April 10th, all day at Capital Factory</li>
+      <li>$795 early bird&mdash;ends tomorrow!</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section>
+
+  <section class="slide">
+    <h2>Whoa.css</h2>
+    <blockquote>Animations for eccentric developers</blockquote>
+    <ul>
+      <li>When none of the "normal" animations will do</li>
+      <li>Just <a href="http://www.joerezendes.com/projects/Woah.css/">see for yourself</a></li>
+    </ul>
+    <img src="./images/whoa.css.png" alt="Whoah.css" />
+  </section>
+
+  <section class="slide">
+    <img src="./images/so-keyboard.png" alt="StackOverflow keyboard" />
+  </section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a></h3>
+    <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
