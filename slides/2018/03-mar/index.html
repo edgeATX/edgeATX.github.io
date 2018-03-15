@@ -117,7 +117,7 @@
 
     <h3 class="star"><a href="https://www.vicesoftware.com/bleeding-edge-react-testing-talk/">Practical 
       Patterns for Maintainable React Redux Architecture</a></h3>
-    <p class="indent">&mdash; Ryan Vice</p>
+    <p class="indent">&mdash; Ryan Vice (<a href="https://twitter.com/ryanvice1">@ryanvice1</a></p>
   </section>
 
   <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
@@ -268,7 +268,7 @@ registerPaint('my_painter', CustomPainter);</code></pre>
       <li><span class="code">textarea</span> autocomplete implemented</li>
       <li>CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"><span 
         class="code">overscroll-behavior</span></a> property implemented</li>
-      <li>CSS <span class="code">calc()</span> function implemented</li>
+      <li>Support for color and media query values in CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc"><span class="code">calc()</span></a></li>
       <li>Enhancements to service workers, WebRTC, dev tools and more</li>
     </ul>
     <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
@@ -301,10 +301,34 @@ registerPaint('my_painter', CustomPainter);</code></pre>
     <h2>Rough.js</h2>
     <blockquote>A lightweight (~8k), Canvas-based library that lets you draw in a sketchy, hand-drawn-like style.</blockquote>
     <ul>
-      <li></li>
+      <li>Supports SVG primitives and custom paths</li>
+      <li>Supports processing in a <a href="https://github.com/pshihn/rough/wiki/RoughJS-in-a-web-worker">web worker thread</a></li>
+      <li><a href="https://roughjs.com/">Examples and download</a></li>
     </ul>
-   
-    <img src="./images/roughjs.png" class="corner-image" width="150px" alt="Rough.js">
+    <img src="./images/roughjs.png" alt="Rough.js">
+  </section>
+
+  <section class="slide">
+    <h2>Delighters.js</h2>
+    <blockquote>Add CSS animations to delight users as they scroll down.</blockquote>
+    <ul>
+      <li>Simply add a <span class="code">data-delighter</span> attribute to any element</li>
+      <li>Write your own CSS rules to be triggered on scroll</li>
+      <li>That's it! Easy to use and customize</li>
+      <li>This one is easiest <a href="https://q42.github.io/delighters/">just to show</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Sketch 49</h2>
+    <p><a href="https://sketchapp.com/">Sketch</a> is a UI and UX design tool.</p>
+    <ul>
+      <li>Version 49 includes interactive <a href="https://blog.sketchapp.com/an-in-depth-look-at-prototyping-in-sketch-942394341f3c">prototyping</a></li>
+      <li>Plus cloud sharing and an official iOS UI kit</li>
+      <li>This might help: <a href="https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886">7 
+        Practical Tips for Cheating at Design</a></li>
+    </ul>
+    <img src="./images/sketchapp.gif" alt="Sketch" />
   </section>
 
   <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
@@ -346,26 +370,28 @@ registerPaint('my_painter', CustomPainter);</code></pre>
   </section>
 
   <section class="slide">
-    <h2>State of JS Frameworks &amp; Libraries</h2>
-    <p class="star">Mega interview (2.5 hours!) with framework all-stars</p>
-    <p>Updates on latest framework features</p>
-    <div style="float:left;display:flex;width:48%;">
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=195s">Franziska Hinkelmann</a> (Node)</li>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=930s">Michael Jackson</a> (React)</li>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=1770s">Evan You</a> (Vue.js)</li>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=2596s">Ben Lesh</a> (RxJS)</li>
-      </ul>
-    </div>
-    <div style="float:right;display:flex;width:48%;">
-      <ul>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=3990s">Igor Minar</a> (Angular)</li>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=5550s">Ricardo Mendes</a> (Ember)</li>
-        <li><a href="https://www.youtube.com/watch?v=edXRi6z7zrE&t=7610s">Justin Fagnani</a> (Polymer)</li>
-      </ul>
-    </div>
+    <h2>2018 StackOverflow Survey</h2>
+    <p>View the <a href="https://insights.stackoverflow.com/survey/2018/">survey results</a></p>
+    <ul>
+      <li>Most popular? JS, Node, Angular, React</li>
+      <li>Most "loved" language? <a href="https://www.rust-lang.org/en-US/">Rust</a></li>
+      <li>Highest salary language? <a href="http://fsharp.org/">F#</a> (global) and <a 
+        href="https://www.erlang.org/">Erlang</a> (US)</li>
+    </ul>
+    <img src="./images/so-survey.png" alt="StackOverflow Survey" />
   </section>
 
+  <section class="slide">
+    <h2>Github DDOS</h2>
+    <ul>
+      <li>On Feb 28th at 12:15 EST, Github was DDOS'ed</li>
+      <li>1.35 terabits/second of traffic hit them</li>
+      <li>It was mitigated within 10 minutes and they stayed up</li>
+      <li>Read more about it&mdash;<a href="https://www.wired.com/story/github-ddos-memcached/">it's super interesting</a>!</li>
+    </ul>
+    <img src="./images/github-ddos.jpg" alt="DDOS" width="50%" />
+  </section>
+  
   <section class="slide">
     <h2>MDN Docs Refresh</h2>
     <ul>
@@ -373,6 +399,18 @@ registerPaint('my_painter', CustomPainter);</code></pre>
       <li>Vastly improved compatibility tables:</li>
     </ul>
     <img src="./images/mdn.png" alt="MDN" width="80%" />
+  </section>
+
+  <section class="slide">
+    <h2>The Great "Smoosh" Controversy</h2>
+    <ul>
+      <li>A TC39 committer <a href="https://github.com/tc39/proposal-flatMap/pull/56">renamed</a> 
+        <span class="code">Array.flatten</span> to <span class="code">Array.smoosh</span></li>
+      <li>This was done to avoid conflict with MooTools (!)</li>
+      <li>The internet was <a href="https://twitter.com/search?q=smoosh&src=typd">not impressed</a></li>
+      <li>This also led an <a href="https://github.com/staltz/prevent-smoosh">amazing new library</a></li>
+    </ul>
+    <img src="./images/smoosh.gif" alt="Smoosh" />
   </section>
 
   <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
@@ -397,10 +435,23 @@ registerPaint('my_painter', CustomPainter);</code></pre>
 
   <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
 
-  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
     <h1>And now for something completely different...</h1>
-  </section> -->
+  </section>
 
+  <section class="slide">
+    <h2>Whoa.css</h2>
+    <blockquote>Animations for eccentric developers</blockquote>
+    <ul>
+      <li>When none of the "normal" animations will do</li>
+      <li>Just <a href="http://www.joerezendes.com/projects/Woah.css/">see for yourself</a></li>
+    </ul>
+    <img src="./images/whoa.css.png" alt="Whoah.css" />
+  </section>
+
+  <section class="slide">
+    <img src="./images/so-keyboard.png" alt="StackOverflow keyboard" />
+  </section>
 
 <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
 
