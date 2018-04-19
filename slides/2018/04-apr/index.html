@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="https://edgeatx.org/favicon.ico" />
+
+  <title>Bleeding Edge Web: April 2018</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+
+  <style>
+    .title-cyan {
+      background: #d15dd1 !important;
+    }
+
+    p {
+      color: #ffffff;
+    }
+
+    .bugs>tbody>tr>th {
+      background-color: rgba(255, 255, 255, .15) !important;
+      color: gold !important;
+      text-align: left !important;
+    }
+
+    .bugs>tbody>tr>th,
+    .bugs>tbody>tr>td,
+    .bugs>tbody {
+      padding: 10px !important;
+      border: 2px solid rgba(255, 255, 255, .15) !important;
+    }
+
+    .bugs>tbody>tr>td:nth-of-type(2),
+    .bugs>tbody>tr>td:nth-of-type(3),
+    .bugs>tbody>tr>th:nth-of-type(2),
+    .bugs>tbody>tr>th:nth-of-type(3) {
+      text-align: center !important;
+    }
+
+    /* use small-cap alternate glyphs */
+
+    .smallcaps {
+      font-feature-settings: "smcp" on;
+    }
+
+    /* convert both upper and lowercase to small caps (affects punctuation also) */
+
+    .allsmallcaps {
+      font-feature-settings: "c2sc", "smcp";
+    }
+
+    /* enable historical forms */
+
+    .hist {
+      font-feature-settings: "hist";
+    }
+
+    /* disable common ligatures, usually on by default */
+
+    .noligs {
+      font-feature-settings: "liga" 0;
+    }
+
+    /* enable tabular (monospaced) figures */
+
+    td.tabular {
+      font-feature-settings: "tnum";
+    }
+
+    /* enable automatic fractions */
+
+    .fractions {
+      font-feature-settings: "frac";
+    }
+
+    /* use the second available swash character */
+
+    .swash {
+      font-feature-settings: "swsh" 2;
+    }
+
+    /* enable stylistic set 7 */
+
+    .fancystyle {
+      font-family: Gabriola;
+      /* available on Windows 7, and on Mac OS */
+      font-feature-settings: "ss07";
+    }
+
+    .microlight {
+      font-family: monospace;
+      white-space: pre;
+      background-color: transparent;
+      color: #C4E4E8;
+      font-size: 3vh;
+      padding: 20px !important;
+      margin: 40px 0 !important;
+      background-color: rgba(255, 255, 255, .08);
+      border-radius: 3px;
+    }
+  </style>
+
+</head>
+
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+    <h1 style="font-size:2.5em;top:65%;">
+      <a href="https://twitter.com/edgeatx">@edgeATX</a>
+    </h1>
+    <h1 style="font-size:2.5em;top:80%;">
+      <a href="https://www.edgeatx.org/">edgeATX.org</a>
+    </h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: April 2018</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Brian Moeskau (
+      <a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+
+    <h3 class="star">
+      &lt;component&gt; Architectures with VueJS</a>
+    </h3>
+    <p class="indent">&mdash; Ted Patrick (
+      <a href="https://twitter.com/__ted__">@__ted__</a>)
+    </p>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+    <p style="color: #fff;">Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p>
+        <a href="https://www.capitalfactory.com/">
+          <img style="min-width:40%" src="../../shared/resources/images/capitalfactory-logo2.png" alt="Capital Factory">
+        </a>
+      </p>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.5;"></div>
+  </section>
+
+  <section class="slide cover" style="background:#fff;">
+    <p style="color: #555;">Thanks to our premiere sponsor:</p>
+    <div style="text-align:center;padding-top:150px;font-size:200%;">
+      <p>
+        <a href="https://light.ly/">
+          <img style="min-width:70%" src="./images/lightly.jpg" alt="Light.ly">
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(./images/cloudflare-stickers.jpg)">
+    <p style="color: #fff;">Thanks to our sponsor:</p>
+  </section>
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the
+      <br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser
+        <br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; March 15, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%">
+          <img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome">
+        </td>
+        <td width="25%">
+          <img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox">
+        </td>
+        <td width="25%">
+          <img src="../../shared/resources/images/edge.png" width="70%" alt="Edge">
+        </td>
+        <td width="25%">
+          <img src="../../shared/resources/images/safari.png" width="70%" alt="Safari">
+        </td>
+      </tr>
+      <tr>
+        <td class="ver">65</td>
+        <td class="ver">59</td>
+        <td class="ver">16</td>
+        <td class="ver">11.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of April 19, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">65</span><br><strong style="color:#1CA727">66</strong></td>
+        <td class="ver">59</td>
+        <td class="ver">16</td>
+        <td class="ver">11.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <p>Released April 17th &mdash;
+      <a href="https://developers.google.com/web/updates/2018/04/nic66">Release Notes</a>
+    </p>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2018/03/cssom">CSS Typed Object Model</a>
+    </h3>
+
+    <p>The old way:</p>
+    <pre><code>el.style.padding = 42;
+console.log(el.style.padding); // '42' (string)</code></pre>
+    
+    <p>The new way:</p>
+    <pre><code>el.attributeStyleMap.set('padding', CSS.px(42));
+const padding = el.attributeStyleMap.get('padding');
+console.log(padding.value, padding.unit); // 42, 'px'</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2018/04/nic66#cssom">CSS Typed Object Model</a>
+    </h3>
+    <ul>
+      <li>Typed values === no type conversion bugs</li>
+      <li>Arithmetic operations on styles are much easier</li>
+      <li><span class="code">StylePropertyMap</span> has a map-like API (get/set/keys/values)</li>
+      <li>Up to ~30% faster performance (no string serialization)</li>
+    </ul>
+    <p><strong>Note</strong>: Firefox support in progress, Edge is considering</p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2018/03/clipboardapi">Async Clipboard API</a>
+    </h3>
+
+    <p>The old way:</p>
+    <pre><code>var success = document.execCommand('copy');</code></pre>
+
+    <p>The new way:</p>
+    <pre><code>navigator.clipboard.writeText('Some text')
+  .then(() => {
+    console.log('Success');
+  })</code></pre>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+  
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2018/03/clipboardapi">Async Clipboard API</a>
+    </h3>
+    <ul>
+      <li>Does not block the page</li>
+      <li>Has a well-defined permissions model</li>
+      <li>Note: Only supported on pages served via HTTPS</li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes">Media Autoplay Changes</a>
+    </h3>
+    <ul>
+      <li>Muted autoplay is always allowed</li>
+      <li>Autoplay with sound is only allowed based on defined rules *</li>
+      <li>Top frames can delegate autoplay permissions to iframes</li>
+    </ul>
+    <p>* Largely goverened by the <a href="https://developers.google.com/web/updates/2017/09/autoplay-policy-changes#mei">Media Engagement Index</a></p>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 66</h2>
+    <h3 class="star">
+      <a href="https://developers.google.com/web/updates/2018/04/nic66">And More...</a>
+    </h3>
+    <ul>
+      <li>CSS Paint API (efficient image rendering to canvas)</li>
+      <li><span class="code">autocomplete</span> supported on TextAreas and Selects</li>
+      <li>String <span class="code">trimStart</span> and <span class="code">trimEnd</span> available</li>
+      <li>And some handy <a href="https://developers.google.com/web/updates/2018/02/devtools">DevTools updates</a></li>
+    </ul>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://angular.io/">Angular 6.0</a></h2>
+    <h3 class="star">Released... this week?</h3>
+    <ul>
+      <li>TypeScript 2.7+</li>
+      <li>Web Component support</li>
+      <li>Material UI</li>
+      <li>New compiler and rendering engine</li>
+      <li><a href="https://walkingtree.tech/whats-new-angular-6/">And more...</a></li>
+    </ul>
+    <img src="./images/angular-logo.png" class="corner-image" width="200px" alt="Angular">
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://reactjs.org/">React 16.3</a></h2>
+    <h3 class="star"><a href="https://reactjs.org/blog/2018/03/29/react-v-16-3.html">Released</a> March 29th</h3>
+    <ul>
+      <li>New <a href="https://reactjs.org/docs/context.html">Context API</a></li>
+      <li>Component <a href="https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html">lifecycle changes</a></li>
+      <li>New methods for managing refs</li>
+      <li>New <a href="https://reactjs.org/docs/strict-mode.html">StrictMode</a> component for development</li>
+    </ul>
+    <img src="./images/reactjs.svg" class="corner-image" width="200px" alt="React">
+  </section>
+
+  <section class="slide">
+    <h2><a href="http://aurelia.io/home">Aurelia</a></h2>
+    <h3 class="star"><a href="http://aurelia.io/blog/2018/04/02/aurelia-2018-q1-report/">2018 Q1 Report</a></h3>
+    <ul>
+      <li>Server-side rendering support</li>
+      <li>Aurelia UX improvements</li>
+      <li>Web Component export support</li>
+      <li>Native state management (ala redux)</li>
+      <li>Lots of integrated tooling</li>
+    </ul>
+    <p>Looking for a new framework? You might check it out.</p>
+    <img src="./images/aurelia-logo.png" class="corner-image" width="200px" alt="Aurelia">
+  </section>
+
+  <section class="slide">
+    <h2>Other Interesting Releases</h2>
+    <ul>
+      <li><a href="https://github.com/d3/d3/blob/master/CHANGES.md#changes-in-d3-50">D3 5.0</a> (March 22)</li>
+      <li><a href="https://sailsjs.com/documentation/upgrading/to-v-1-0">Sails 1.0</a> (March 28)</li>
+      <li><a href="https://blog.getbootstrap.com/2018/04/09/bootstrap-4-1/">Bootstrap 4.1</a> (April 9)</li>
+      <li><a href="https://github.com/webpack/webpack/releases/tag/v4.6.0">Webpack 4.6</a> (April 17)</li>
+      <li><a href="https://github.com/reactjs/redux/releases/tag/v4.0.0">Redux 4.0</a> (April 17)</li>
+    </ul>
+  </section>
+  
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+    <div class="content">
+      <h1>Security</h1>
+    </div>
+    <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Facebook Container</h2>
+    <blockquote>Contain your Facebook session&mdash;and identity&mdash;so it's harder for Facebook to track you around the web.</blockquote>
+    <p>An official Firefox <a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-container/">extension</a> available now</p>
+    <ul>
+      <li>Deletes your FB cookies and logs you out</li>
+      <li>Next visit to FB loads it into a special blue tab</li>
+      <li>Sandboxes your FB activity to the container to limit tracking</li>
+      <li>Note: FB buttons and sharing may not work in other tabs</li>
+    </ul>
+    <img src="./images/fb-container.png" class="corner-image" width="200px" alt="Facebook container">
+  </section>
+
+  <section class="slide">
+    <h2>1.1.1.1</h2>
+    <blockquote>The fastest, privacy-first consumer DNS service</blockquote>
+    <p><a href="https://blog.cloudflare.com/announcing-1111/">Announced</a> on April 1st by Cloudflare</p>
+    <ul>
+      <li>It's free and private (no hosting or gov't interest)</li>
+      <li>Supports both DNS-over-TLS and DNS-over-HTTPS</li>
+      <li>It's <a href="https://www.dnsperf.com/#!dns-resolvers">really fast</a></li>
+    </ul>
+    <p><a href="https://1.1.1.1/">Install it</a> today in 2 minutes</p>
+    <img src="./images/1111.gif" style="max-width: 600px;" alt="1.1.1.1">
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://www.w3.org/TR/2018/CR-webauthn-20180320/">Web Authentication API</a></h2>
+    <p>Aka "WebAuthn"&mdash;Moving toward a future without password strings!</p>
+    <ul>
+      <li>Enable external devices to pass credentials via USB, Bluetooth or NFC</li>
+      <li>Biometric inputs also supported</li>
+      <li>Much easier, phishing-resistant authentication</li>
+      <li>As of April 10th it is a WC3 <a 
+        href="https://fidoalliance.org/fido-alliance-and-w3c-achieve-major-standards-milestone-in-global-effort-towards-simpler-stronger-authentication-on-the-web/">candidate recommendation</a></li>
+      <li>Supported in latest FF, coming soon in Chrome and Edge.</li>
+    </ul>
+    <p>Check out the <a href="https://fidoalliance.org/participate/developers/">developer resources</a>.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Upgrade from Node 4.x</h2>
+    <p>Just a little PSA&mdash;Node v4.x <a 
+      href="https://github.com/nodejs/Release/blob/643af71ee8365efbdccaa134690425ea05931279/README.md#release-schedule">End-of-life</a> is April 30th!</p>
+    <ul>
+      <li>Current LTS version is 8.x</li>
+      <li>No more updates, including security!</li>
+      <li>It's a lot slower!</li>
+      <li>You're missing lots of <a href="https://nodesource.com/blog/five-fantastic-features-shipping-with-node-js-8-lts-carbon/">nice features</a></li>
+    </ul>
+    <img src="./images/node-4.0.0.png" style="max-width: 800px;" alt="Node 4.0.0">
+    <img src="./images/nodejs.png" class="corner-image" width="200px" alt="Node logo">
+  </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You
+        <br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>PWAs on iOS 11.3</h2>
+    <p>As of last month Progressive Web Apps are supported on iOS</p>
+    <ol>
+      <li>Install native-ish apps directly (no app store)</li>
+      <li>Access camera, geolocation, sensors, and other native APIs</li>
+      <li>Lots of drawbacks too, but great for some use cases</li>
+    </ol>
+    <p>Here's a <a href="https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7">comprehensive overview</a></p>
+  </section>
+  
+  <section class="slide">
+    <h2><a href="https://frontendmasters.com/books/front-end-handbook/2018/">Front-End Dev Handbook 2018</a></h2>
+    <blockquote>Outlines and discusses the practice of front-end engineering: how to learn it and what tools are 
+      used when practicing it in 2018.</blockquote>
+    <p>Great survey of the current state-of-the-art in front-end web dev:</p>
+    <ol>
+      <li>I. The Front-End Practice</li>
+      <li>II. Learning Front-End Development</li>
+      <li>III. Front-End Development Tools</li>
+    </ol>
+    <p>Also available as a <a href="https://www.gitbook.com/book/frontendmasters/front-end-developer-handbook-2018/details">downloadable e-book</a></p>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://httparchive.org/reports">HTTP Archive Update</a></h2>
+    <blockquote>Making it easy for anyone to explore the health of the web as a whole</blockquote>
+    <p>On March 27th they pushed out an <a href="https://discuss.httparchive.org/t/announcing-the-new-http-archive/1294">updated, responsive design</a>.</p>
+    <ul>
+      <li><a href="https://httparchive.org/reports/state-of-the-web">State of the Web</a></li>
+      <li><a href="https://httparchive.org/reports/state-of-the-web">State of JavaScript</a></li>
+      <li><a href="https://httparchive.org/reports/state-of-images">State of Images</a></li>
+      <li>And <a href="https://httparchive.org/reports">more...</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Refactoring, 2nd Edition</h2>
+    <p><a href="https://martinfowler.com/">Martin Fowler</a> is <a href="https://martinfowler.com/articles/201803-refactoring-2nd-ed.html">rewriting</a> 
+      his seminal book after 20 years!</p>
+    <ul>
+      <li>Same basic topics: principles, "code smells", testing, etc.</li>
+      <li>Switching examples from Java to JavaScript</li>
+      <li>Publishing it "web-first" targeting Fall 2018</li>
+    </ul>
+    <img src="./images/refactoring.jpg" class="xcorner-image" width="300px" alt="Refactoring">
+  </section>
+
+  <!-- - - - - - - - - - -  Upcoming Events  - - - - - - - - - - -->
+
+  <!--section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <div class="content">
+      <h1>Upcoming
+        <br>Events</h1>
+    </div>
+    <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+  </section-->
+
+
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://github.com/tehnokv/picojs">Pico.js</a></h2>
+    <blockquote>Face detection in 200 lines of JavaScript</blockquote>
+    <p>All processing is client-side, without sending images to a server (<a href="https://tkv.io/posts/picojs-intro/demo/">demo</a>).</p>
+    <p>Check out the <a href="https://tkv.io/posts/picojs-intro/">science behind it</a> if you're interested.</p>
+    <img src="./images/pico.jpg" alt="Face detection" style="min-width: 600px;">
+  </section>
+  
+  <!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3>
+      <a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a>
+    </h3>
+    <h3>Brian Moeskau (
+      <a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"
+    />
+  </section>
+
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> /
+    <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function () {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{ motionOffset: '0%' }, { motionOffset: '100%' }];
+      var positionTiming = { duration: 12000, iterations: Infinity };
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{ motionRotation: 'auto 0deg' }, { motionRotation: 'auto -45deg' }, { motionRotation: 'auto 0deg' }];
+      var secondRotationKeyframes = [{ motionRotation: 'auto 0deg' }, { motionRotation: 'auto 45deg' }, { motionRotation: 'auto 0deg' }];
+      var rotationTiming = { duration: 1000, iterations: Infinity };
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+</body>
+
+</html>
