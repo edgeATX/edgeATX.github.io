@@ -150,7 +150,7 @@
       <a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
 
     <h3 class="star">
-      <a href="https://www.vicesoftware.com/bleeding-edge-react-testing-talk/">&lt;component&gt; Architectures with VueJS</a>
+      &lt;component&gt; Architectures with VueJS</a>
     </h3>
     <p class="indent">&mdash; Ted Patrick (
       <a href="https://twitter.com/__ted__">@__ted__</a>)
@@ -394,6 +394,7 @@ console.log(padding.value, padding.unit); // 42, 'px'</code></pre>
       <li><a href="https://sailsjs.com/documentation/upgrading/to-v-1-0">Sails 1.0</a> (March 28)</li>
       <li><a href="https://blog.getbootstrap.com/2018/04/09/bootstrap-4-1/">Bootstrap 4.1</a> (April 9)</li>
       <li><a href="https://github.com/webpack/webpack/releases/tag/v4.6.0">Webpack 4.6</a> (April 17)</li>
+      <li><a href="https://github.com/reactjs/redux/releases/tag/v4.0.0">Redux 4.0</a> (April 17)</li>
     </ul>
   </section>
   
@@ -420,8 +421,21 @@ console.log(padding.value, padding.unit); // 42, 'px'</code></pre>
   </section>
 
   <section class="slide">
-    <h2><a href="https://www.w3.org/TR/2018/CR-webauthn-20180320/">Web Authentication API</a> (WebAuthn)</h2>
-    <p>Moving toward a future without password strings!</p>
+    <h2>1.1.1.1</h2>
+    <blockquote>The fastest, privacy-first consumer DNS service</blockquote>
+    <p><a href="https://blog.cloudflare.com/announcing-1111/">Announced</a> on April 1st by Cloudflare</p>
+    <ul>
+      <li>It's free and private (no hosting or gov't interest)</li>
+      <li>Supports both DNS-over-TLS and DNS-over-HTTPS</li>
+      <li>It's <a href="https://www.dnsperf.com/#!dns-resolvers">really fast</a></li>
+    </ul>
+    <p><a href="https://1.1.1.1/">Install it</a> today in 2 minutes</p>
+    <img src="./images/1111.gif" style="max-width: 600px;" alt="1.1.1.1">
+  </section>
+
+  <section class="slide">
+    <h2><a href="https://www.w3.org/TR/2018/CR-webauthn-20180320/">Web Authentication API</a></h2>
+    <p>Aka "WebAuthn"&mdash;Moving toward a future without password strings!</p>
     <ul>
       <li>Enable external devices to pass credentials via USB, Bluetooth or NFC</li>
       <li>Biometric inputs also supported</li>
@@ -431,6 +445,20 @@ console.log(padding.value, padding.unit); // 42, 'px'</code></pre>
       <li>Supported in latest FF, coming soon in Chrome and Edge.</li>
     </ul>
     <p>Check out the <a href="https://fidoalliance.org/participate/developers/">developer resources</a>.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Upgrade from Node 4.x</h2>
+    <p>Just a little PSA&mdash;Node v4.x <a 
+      href="https://github.com/nodejs/Release/blob/643af71ee8365efbdccaa134690425ea05931279/README.md#release-schedule">End-of-life</a> is April 30th!</p>
+    <ul>
+      <li>Current LTS version is 8.x</li>
+      <li>No more updates, including security!</li>
+      <li>It's a lot slower!</li>
+      <li>You're missing lots of <a href="https://nodesource.com/blog/five-fantastic-features-shipping-with-node-js-8-lts-carbon/">nice features</a></li>
+    </ul>
+    <img src="./images/node-4.0.0.png" style="max-width: 800px;" alt="Node 4.0.0">
+    <img src="./images/nodejs.png" class="corner-image" width="200px" alt="Node logo">
   </section>
 
   <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
@@ -443,6 +471,17 @@ console.log(padding.value, padding.unit); // 42, 'px'</code></pre>
     <div class="shim" style="background-color:#555;opacity:.7;"></div>
   </section>
 
+  <section class="slide">
+    <h2>PWAs on iOS 11.3</h2>
+    <p>As of last month Progressive Web Apps are supported on iOS</p>
+    <ol>
+      <li>Install native-ish apps directly (no app store)</li>
+      <li>Access camera, geolocation, sensors, and other native APIs</li>
+      <li>Lots of drawbacks too, but great for some use cases</li>
+    </ol>
+    <p>Here's a <a href="https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7">comprehensive overview</a></p>
+  </section>
+  
   <section class="slide">
     <h2><a href="https://frontendmasters.com/books/front-end-handbook/2018/">Front-End Dev Handbook 2018</a></h2>
     <blockquote>Outlines and discusses the practice of front-end engineering: how to learn it and what tools are 
