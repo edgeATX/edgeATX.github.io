@@ -1,0 +1,283 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: April 2018
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //====================  Intro  ====================
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: April 2018
+      h3.star News From the Bleeding Edge
+      p.indent
+        | — Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+      h3.star
+        a(href='https://docs.google.com/presentation/d/1DKROirA9eV8O8_2QzxLu_wplHT8gNl0fvz4oAwwuIME/edit#slide=id.p') <component> Architectures with VueJS
+      p.indent
+        | — Ted Patrick (
+        a(href='https://twitter.com/__ted__') @__ted__
+        | )
+    
+
+    //====================  Sponsors  ====================
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background:#fff;')
+      p(style='color: #555;') Thanks to our premiere sponsor:
+      div(style='text-align:center;padding-top:150px;font-size:200%;')
+        p
+          a(href='https://light.ly/')
+            img(style='min-width:70%', src='./images/lightly.jpg', alt='Light.ly')
+    
+    section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+      p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //====================  Begin slides  ====================
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check — April 19, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 65
+          td.ver 59
+          td.ver 16
+          td.ver 11.1
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of May 17, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 66
+          td.ver
+            span.strike.dim 59
+            br
+            strong(style='color:#1CA727') 60
+          td.ver 16
+          td.ver 11.1  
+
+    section.slide
+      h2 Firefox 60
+      p
+        | Released May 9th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
+      h3.star
+
+
+    //====================  Libs & Frameworks  ====================
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+    
+    section.slide
+      h2
+        a(href='https://developers.google.com/web/updates/2018/05/lighthouse3') Lighthouse 3.0
+      blockquote An open-source, automated tool for improving the quality of web pages.
+        
+      
+      img.corner-image(src='./images/lighthouse.png', width='200px', alt='Lighthouse')
+      img(src='./images/lighthouse-preview.png', alt='Lighthouse Preview')
+
+    section.slide
+      h2
+        a(href='https://github.com/guess-js/guess') Guess.js
+      blockquote Libraries and tools for enabling data-driven user-experiences on the web.
+      ul
+        li Uses predictive algorithms to optimize application code
+        li Analyzes linked Google Analytics traffic at build time
+        li Bundle splitting via webpack plugin
+        li Generated content prefetch links
+        li
+          a(href='https://blog.mgechev.com/2018/05/09/introducing-guess-js-data-driven-user-experiences-web/') Read the intro blog post
+      img(src='./images/guess-js.png', width='200px', alt='Guess.js')
+    
+
+    //====================  Security  ====================
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+    
+    section.slide
+      h2 Auditing via npm
+      blockquote Perform a moment-in-time security review of your project’s dependency tree.
+      ul
+        li New in npm v5.10+ and v6+
+        li
+          | Check out the 
+          a(href='https://blog.npmjs.org/post/173719309445/npm-audit-identify-and-fix-insecure') release announcement
+        li
+          | Just run 
+          span.code npm audit
+          |  to get something like...
+      img(src='./images/npm-audit.png', alt='npm audit', style='width:50%')
+
+    
+    //====================  ICYMI  ====================
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+    
+
+    //====================  Upcoming Events  ====================
+    //
+      section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+      <div class="content">
+      <h1>Upcoming
+      <br>Events</h1>
+      </div>
+      <div class="shim" style="background-color:#1D3A52;opacity:.7;"></div>
+      </section
+    
+
+    //====================  Something Completely Different  ====================
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+    
+    section.slide
+      h2 Real-time Pose Estimation in JS
+      ol
+        li 
+          | Uses 
+          a(href='https://js.tensorflow.org/') TensorFlow.js 
+          | (machine learning lib)
+        li 
+          | Pose detection via 
+          a(href='https://github.com/tensorflow/tfjs-models/tree/master/posenet') PoseNet Model 
+        li
+          | Check out the live 
+          a(href='https://storage.googleapis.com/tfjs-models/demos/posenet/camera.html') demo
+      img(src='./images/posenet.gif', alt='PoseNet demo')
+
+    
+    //====================  Fin  ====================
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //====================  Slide stuff  ====================
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
