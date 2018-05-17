@@ -69,12 +69,12 @@ html
             img(style='min-width:40%', src='../../shared/resources/images/capitalfactory-logo2.png', alt='Capital Factory')
       .shim(style='background-color:#555;opacity:.5;')
     
-    section.slide.cover(style='background:#fff;')
-      p(style='color: #555;') Thanks to our premiere sponsor:
-      div(style='text-align:center;padding-top:150px;font-size:200%;')
-        p
-          a(href='https://light.ly/')
-            img(style='min-width:70%', src='./images/lightly.jpg', alt='Light.ly')
+    //- section.slide.cover(style='background:#fff;')
+    //-   p(style='color: #555;') Thanks to our premiere sponsor:
+    //-   div(style='text-align:center;padding-top:150px;font-size:200%;')
+    //-     p
+    //-       a(href='https://#')
+    //-         img(style='min-width:70%', src='./images/lightly.jpg', alt='')
     
     section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
       p(style='color: #fff;') Thanks to our sponsor:
@@ -105,7 +105,7 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 65
+          td.ver 66
           td.ver 59
           td.ver 16
           td.ver 11.1
@@ -137,8 +137,13 @@ html
       p
         | Released May 9th —
         a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
-      h3.star
-
+      h3.star New APIs Enabled
+      ul
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API 
+          | (aka WebAuthn)
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API') Web VR
 
     //====================  Libs & Frameworks  ====================
     
@@ -147,11 +152,30 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
     
     section.slide
+      h2 
+        a(href='https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/') Dojo 2.0
+      p Released May 2nd (
+        a(href='https://dojo.github.io/examples/') examples
+        |)
+      ul
+        li Rewritten in TypeScript
+        li Web Component support
+        li Built-in redux-like state container
+        li Modern CLI tooling (
+          span.code dojo create app
+          | ) and test harness
+      img(src='./images/dojo2.jpg', width='600px', alt='Dojo 2.0')
+
+    section.slide
       h2
         a(href='https://developers.google.com/web/updates/2018/05/lighthouse3') Lighthouse 3.0
       blockquote An open-source, automated tool for improving the quality of web pages.
-        
-      
+      p Released May 14th
+      ul
+        li Faster audits with less variance between runs
+        li Brand new report UI
+        li Improvements to CSV and JSON output formats
+
       img.corner-image(src='./images/lighthouse.png', width='200px', alt='Lighthouse')
       img(src='./images/lighthouse-preview.png', alt='Lighthouse Preview')
 
