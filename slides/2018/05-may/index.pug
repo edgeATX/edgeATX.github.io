@@ -48,15 +48,16 @@ html
       h2 Bleeding Edge Web: April 2018
       h3.star News From the Bleeding Edge
       p.indent
-        | — Brian Moeskau (
+        | &mdash; Brian Moeskau (
         a(href='https://twitter.com/bmoeskau') @bmoeskau
         | )
+      h3.star Lightning Talks
+      p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
+      p.indent &mdash; Using a Screen Reader to Test (Robert DeLuca)
       h3.star
-        a(href='https://docs.google.com/presentation/d/1DKROirA9eV8O8_2QzxLu_wplHT8gNl0fvz4oAwwuIME/edit#slide=id.p') <component> Architectures with VueJS
+        a(href='https://slides.victoriabernard.com/#/') Putting Service Workers to Work
       p.indent
-        | — Ted Patrick (
-        a(href='https://twitter.com/__ted__') @__ted__
-        | )
+        | &mdash; Victoria Bernard
     
 
     //====================  Sponsors  ====================
@@ -129,21 +130,64 @@ html
             span.strike.dim 59
             br
             strong(style='color:#1CA727') 60
-          td.ver 16
+          td.ver
+            span.strike.dim 16
+            br
+            strong(style='color:#1CA727') 17
           td.ver 11.1  
 
     section.slide
       h2 Firefox 60
-      p
-        | Released May 9th —
+      p Released May 9th —
         a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
-      h3.star New APIs Enabled
+      h3.star New APIs
       ul
         li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API 
-          | (aka WebAuthn)
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API
+          |  (aka WebAuthn)
         li
           a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API') Web VR
+        li
+          a(href='https://hacks.mozilla.org/2015/08/es6-in-depth-modules/') ES2015 Modules
+          |  (
+          span.code import
+          |  and 
+          span.code export
+          |)
+
+    section.slide
+      h2 Edge 17
+      p Released May 8th —
+        a(href='https://aka.ms/devguide_edgehtml_17') Release Notes
+      h3.star New APIs
+      ul
+        li 
+          a(href='https://developer.mozilla.org/docs/Web/CSS/CSS_Masking') CSS Masking 
+          | (experimental)
+        li 
+          a(href='https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/notifications') Notifications API 
+        li 
+          a(href='https://w3c.github.io/mediacapture-screen-share/') Media Capture API 
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity') Subresource Integrity (SRI)
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings') Variable Fonts 
+        li 
+          a(href='https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/#fH9xg437YOV1YBpZ.97') Service Workers 
+          | (enabled by default)
+
+    section.slide
+      h2 Edge 17
+      h3.star Interesting Consumer Features
+      ul
+        li Reading tools (annotations, grammar tools)
+        li "Clutter free" print option
+        li Background tab suspension
+        li Plus 
+          a(href='https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/#BmJPg3BFQZeWJTpr.97') a lot more
+      
+      p Most importantly...
+      blockquote Dramatically reduced the power efficiency impact of rendering animated GIFs
 
     //====================  Libs & Frameworks  ====================
     
