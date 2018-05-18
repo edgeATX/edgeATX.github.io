@@ -123,3 +123,31 @@ pre[class*="language-"] { background: #1F1F1F; border: 2px solid #333333; border
 .star:before { content: '\2606'; /* &star; */ color: #E91E63; padding-right: 20px; }
 
 img[alt=""], img:not([alt]) { border: 10px dashed #c00; }
+
+.title-cyan { background: #d15dd1 !important; }
+
+p { color: #ffffff; }
+
+.bugs > tbody > tr > th { background-color: rgba(255, 255, 255, 0.15) !important; color: gold !important; text-align: left !important; }
+
+.bugs > tbody > tr > th, .bugs > tbody > tr > td, .bugs > tbody { padding: 10px !important; border: 2px solid rgba(255, 255, 255, 0.15) !important; }
+
+.bugs > tbody > tr > td:nth-of-type(2), .bugs > tbody > tr > td:nth-of-type(3), .bugs > tbody > tr > th:nth-of-type(2), .bugs > tbody > tr > th:nth-of-type(3) { text-align: center !important; }
+
+.smallcaps { font-feature-settings: "smcp" on; }
+
+.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+
+.hist { font-feature-settings: "hist"; }
+
+.noligs { font-feature-settings: "liga" 0; }
+
+td.tabular { font-feature-settings: "tnum"; }
+
+.fractions { font-feature-settings: "frac"; }
+
+.swash { font-feature-settings: "swsh" 2; }
+
+.fancystyle { font-family: Gabriola; /* available on Windows 7, and on Mac OS */ font-feature-settings: "ss07"; }
+
+.microlight { font-family: monospace; white-space: pre; background-color: transparent; color: #C4E4E8; font-size: 3vh; padding: 20px !important; margin: 40px 0 !important; background-color: rgba(255, 255, 255, 0.08); border-radius: 3px; }
