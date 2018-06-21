@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>Bleeding Edge Web: June 2018</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.org/slides/"><wbr>edgeatx.org/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: January 2018</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+
+    <h3 class="star">Lightning Talks</h3>
+    <p class="indent">&mdash; PWA on Netlify: Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+
+    <h3 class="star">A Deep Dive into Spectre</h3>
+    <p class="indent">&mdash; Jesse Kipp (CloudFlare)</p>
+  </section>
+
+  <section class="slide">
+    <h2>Housekeeping</h2>
+    <h3 class="star">Announcements</h3>
+    <ul>
+      <li>Speakers and sponsors always wanted (<a href="https://www.edgeatx.org">edgeatx.org</a>)</li>
+      <li>$5 Parking validation</li>
+      <li>Omni hotel bar (downstairs) after meetup</li>
+      <li>Anyone hiring / looking?</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide" style="background:#4598e9;">
+    <p>Thanks to our venue:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href="https://capitalfactory.com/"><img style="min-width:40%"
+        src="../../shared/resources/images/capitalfactorylogo.png" alt="Capital Factory"></a></p>
+    </div>
+  </section>
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/cloudflare-stickers.jpg)">
+    <p style="color: #fff;">Thanks to our sponsor: <a href="https://docs.google.com/presentation/d/1afluXpf2eYeQ7SkmV2ONrojeZwosMTNifhnZR1chNTw/edit?usp=sharing" target="_blank">CloudFlare</a></p>
+  </section>
+
+  <!-- <section class="slide" style="background:#ffffff;">
+    <p style="color: #2d70b8;">Thanks to our sponsor:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href=""><img style="min-width:40%"
+        src="images/_.png" alt=""></a></p>
+    </div>
+  </section> -->
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section> -->
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last check &mdash; May 17, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">66</td>
+        <td class="ver">60</td>
+        <td class="ver">17</td>
+        <td class="ver">11.1</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of June 21, 2018:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">66</span><br><strong style="color:#1CA727">67</strong></td>
+        <td class="ver"><span class="strike dim">60</span><br><strong style="color:#1CA727">61</strong></div></td>
+        <td class="ver">17</td>
+        <td class="ver"><span class="strike dim">11.1</span><br><strong style="color:#1CA727">12</strong></div></td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 67</h2>
+    <p>Released May 29</p>
+    <h3 class="star">Desktop PWA's</h3>
+    <h3 class="star">Motion sensors APIs based on Generic Sensor API</h3>
+    <h3 class="star"><code>&lt;foreignObject&gt;</code> will be a stacking context (SVG)</h3>
+    <h3 class="star">Cross-Origin Read Blocking (CORB)</h3>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 67</h2>
+    <p>(Continued)</p>
+    <h3 class="star">Customize built-in elements (WC)</h3>
+    <h3 class="star"><a href="https://www.chromestatus.com/feature/5743296429162496"><code>&lt;slot&gt;</code> in flat tree</a> (WC)</h3>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 61</h2>
+    <p>Released June 26 (next Tuesday) &mdash; <a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">Release Notes</a></p>
+    <h3 class="star"><code>:host</code> now supported!</h3>
+    <h3 class="star"><code>PerformanceServerTiming</code> implemented. Supports <code>Server-Timing</code> header.</h3>
+    <h3 class="star"><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API" target="_blank">WebVR API</a> enabled by default.</h3>
+    <h3 class="star"><code>ftp://</code> no longer available for subresources.</h3>
+    <img src="../../shared/resources/images/firefox.png" class="corner-image" width="200px" alt="Firefox">
+  </section>
+
+  <section class="slide">
+    <h2>Safari 12</h2>
+    <p>iOS 12, macOS 10.14 &mdash; <a href="https://developer.apple.com/safari/whats-new/">Release Notes</a></p>
+    <h3 class="star">3D & AR Model Viewer (iOS).</h3>
+    <h3 class="star">Fullscreen API for iOS (iPad).</h3>
+    <h3 class="star">OpenType SVG font support.</h3>
+    <img src="../../shared/resources/images/safari.png" class="corner-image" width="200px" alt="Firefox">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>WebDriver</h2>
+    <blockquote>Remotely control browser behavior.</blockquote>
+    <ul>
+      <li>Official W3C recommendation as of June 5, 2018.</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Releases</h2>
+    <h3 class="star">Node 10.5 (multi-threading)</h3>
+    <h3 class="star">Electron 3.0.0 Beta</h3>
+    <img src="../../shared/resources/images/node.png" class="corner-image" width="200px" alt="Node.js">
+  </section>
+
+  <section class="slide">
+    <h2>LayerJS</h2>
+    <blockquote>UI composition & animation in pure HTML</blockquote>
+    <a href="https://layerjs.org/"><img src="./images/layers.png" alt="LayerJS" /></a>
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+
+    <section class="slide">
+      <h2>BEW ARCHIVE: Spectre + Meltdown</h2>
+      <blockquote>They exploit critical vulnerabilities in modern processors to leak passwords and sensitive data.</blockquote>
+      <ul>
+        <li>They affect virtually all modern computing devices</li>
+        <li>The WebKit team wrote up a <a href="https://webkit.org/blog/8048/what-spectre-and-meltdown-mean-for-webkit/">useful explainer</a></li>
+      </ul>
+      <img src="images/meltdown.png" alt="Meltdown + Spectre" />
+    </section>
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Microsoft Acquires Github</h2>
+    <div class="star">$7.5B Acquisition, Closing Late 2018.</div>
+    <img src="./images/msgit.jpg"/>
+  </section>
+
+  <section class="slide">
+    <h2>EU Copyright Law</h2>
+    <div class="star">Mandated ability for artists to negotiate royalties through content filtering.</div>
+    <div class="star">Github: "Automated upload filtering of code would require entirely new technology"</div>
+    <div class="star">Fails to differentiate between multimedia and code (creative class).</div>
+    <br/>
+    <blockquote>The fear is a government mandate for content filtering could put a potentially crippling damper on the world's most effective means for maintaining the currency and integrity of open source applications -- all in the name of protecting people who weren't being threatened by it anyway.</blockquote>
+  </section>
+
+  <section class="slide">
+    <h2>Microsoft: All things JavaScript</h2>
+    <blockquote>Several apps/tools have been rewritten in JavaScript.</blockquote>
+    <div class="star">Office 365</div>
+    <div class="star">Skype</div>
+    <div class="star">MS Edge Debug Protocol</div>
+  </section>
+
+  <section class="slide">
+    <h2>Vue Native</h2>
+    <div class="star"><a href="https://vue-native.io" target="_blank">https://vue-native.io</a></div>
+    <div class="star">Wraps React Native</div>
+  </section>
+
+  <section class="slide">
+    <h2>Vue Popularity</h2>
+    <img src="./images/vue.jpg"/>
+  </section>
+
+  <section class="slide">
+    <h2>ImpactJS</h2>
+    <div class="star"><a href="http://imapctjs.com" target="_blank">impactjs.com</a></div>
+    <div class="star">Originally commercial, now MIT licensed.</div>
+    <img src="./images/impactjs.jpg"/>
+  </section>
+
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <h1>Upcoming Events...</h1>
+  </section>
+
+  <section class="slide">
+    <h2>Angelhack 2018 Austin</h2>
+    <blockquote>Free Entry: Free4BleedingEdge</blockquote>
+    <div class="star">July 14 9am to July 15 5pm @Capital Factory</div>
+    <div class="star">Register at <a href="https://angelhack-austin-2018.eventbrite.com/">https://angelhack-austin-2018.eventbrite.com/</a></div>
+    <ol>
+      <li>Virtual: At the end of the AngelHack Global Series, a First and Second Place team will be announced.</li>
+      <li>First Place: $7500 USD to be split amongst the winning team.</li>
+      <li>Second Place: $2500 USD to be split amongst the winning team.</li>
+      <li>Each submission receives 1000 cloud credits on IBM Cloud</li>
+      <li>$100 AWS credits to all attendees</li>
+    </ol>
+    <img src="images/ahaustin.jpg" alt="Angelhack" />
+  </section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeatx.org/slides/">http://edgeatx.org/slides</a></h3>
+    <h3>Corey Butler (<a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a>)</h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
