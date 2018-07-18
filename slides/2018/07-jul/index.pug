@@ -1,0 +1,276 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: July 2018
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: July 2018
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+      //- h3.star Lightning Talks
+      //- p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
+      h3.star
+        a(href='') Symmetric and Asymmetric Cryptography and RSA Deep Dive
+      p.indent
+        | &mdash; Cullen Tsering
+    
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    //- section.slide.cover(style='background:#fff;')
+    //-   p(style='color: #555;') Thanks to our premiere sponsor:
+    //-   div(style='text-align:center;padding-top:150px;font-size:200%;')
+    //-     p
+    //-       a(href='https://#')
+    //-         img(style='min-width:70%', src='./images/lightly.jpg', alt='')
+    
+    section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+      p(style='color: #fff;') Thanks to our sponsor:
+    
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors always wanted (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Parking has changed!
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check — June 21, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 67
+          td.ver 61
+          td.ver 17
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of July 19, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 66
+          td.ver
+            span.strike.dim 59
+            br
+            strong(style='color:#1CA727') 60
+          td.ver
+            span.strike.dim 16
+            br
+            strong(style='color:#1CA727') 17
+          td.ver 11.1  
+
+    section.slide
+      h2 Firefox 60
+      p Released May 9th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
+      h3.star New APIs
+      ul
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API
+          |  (aka WebAuthn)
+        li
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API') Web VR
+        li
+          a(href='https://hacks.mozilla.org/2015/08/es6-in-depth-modules/') ES2015 Modules
+          |  (
+          span.code import
+          |  and 
+          span.code export
+          |)
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+    
+    section.slide
+      h2 
+        a(href='https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/') Dojo 2.0
+      p Released May 2nd (
+        a(href='https://dojo.github.io/examples/') examples
+        |)
+      ul
+        li Rewritten in TypeScript
+        li Web Component support
+        li Built-in redux-like state container
+        li Modern CLI tooling (
+          span.code dojo create app
+          | ) and test harness
+      img(src='./images/dojo2.jpg', width='600px', alt='Dojo 2.0')
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+    
+    section.slide
+      h2 Compromised Npm Package
+      ul
+        li Someone compromised an ESLint maintainer's npm account
+        li They published malicious versions of several packages
+        li Read the 
+          a(href='https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of') details 
+          |  on npm's blog or ESLint's 
+          a(href='https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes') postmortem
+        li TL;DR: don't reuse passwords, and enable 2FA!
+        li (Also use a lock file to prevent package auto-updates)
+      img(src='./images/npm-security.png', width='50%', alt='GDPR')
+
+    
+    //----------------------  ICYMI  ----------------------
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+  
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    
+    //----------------------  Fin  ----------------------
+    
+    se
+    ction.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

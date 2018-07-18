@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: July 2018</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: July 2018</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star"><a href="">Symmetric and Asymmetric Cryptography and RSA Deep Dive</a></h3>
+      <p class="indent">&mdash; Cullen Tsering</p>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <p style="color: #fff;">Thanks to our venue:</p>
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/"><img style="min-width:40%" src="../../shared/resources/images/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(./images/cloudflare-stickers.jpg)">
+      <p style="color: #fff;">Thanks to our sponsor:</p>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors always wanted (<a href="https://www.edgeatx.org">edgeatx.org</a>)</li>
+        <li>Parking has changed!</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+        <li>Anyone hiring / looking?</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check — June 21, 2018:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">67</td>
+          <td class="ver">61</td>
+          <td class="ver">17</td>
+          <td class="ver">12</td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of July 19, 2018:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">66</td>
+          <td class="ver"><span class="strike dim">59</span><br><strong style="color:#1CA727">60</strong></td>
+          <td class="ver"><span class="strike dim">16</span><br><strong style="color:#1CA727">17</strong></td>
+          <td class="ver">11.1  </td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Firefox 60</h2>
+      <p>Released May 9th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/60">Release Notes</a></p>
+      <h3 class="star">New APIs</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> (aka WebAuthn)</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">Web VR</a></li>
+        <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 Modules</a> (<span class="code">import</span> and <span class="code">export</span>)</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2> <a href="https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/">Dojo 2.0</a></h2>
+      <p>Released May 2nd (<a href="https://dojo.github.io/examples/">examples</a>)</p>
+      <ul>
+        <li>Rewritten in TypeScript</li>
+        <li>Web Component support</li>
+        <li>Built-in redux-like state container</li>
+        <li>Modern CLI tooling (<span class="code">dojo create app</span>) and test harness</li>
+      </ul><img src="./images/dojo2.jpg" width="600px" alt="Dojo 2.0">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Compromised Npm Package</h2>
+      <ul>
+        <li>Someone compromised an ESLint maintainer's npm account</li>
+        <li>They published malicious versions of several packages</li>
+        <li>Read the <a href="https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of">details </a> on npm's blog or ESLint's <a href="https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes">postmortem</a></li>
+        <li>TL;DR: don't reuse passwords, and enable 2FA!</li>
+        <li>(Also use a lock file to prevent package auto-updates)</li>
+      </ul><img src="./images/npm-security.png" width="50%" alt="GDPR">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+      <h1>And now for something completely different...</h1>
+    </section>
+    <se></se>
+    <ction class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a></h3>
+      <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </ction>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>
