@@ -5,7 +5,7 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='viewport', content='width=1024, user-scalable=no')
     link(rel='icon', type='image/x-icon', href='/favicon.ico')
-    title Bleeding Edge Web: May 2018
+    title Bleeding Edge Web: July 2018
 
     // Required stylesheet
     link(rel='stylesheet', href='../../shared/core/deck.core.css')
@@ -45,19 +45,18 @@ html
       .shim(style='opacity:.5;')
     
     section.slide
-      h2 Bleeding Edge Web: May 2018
+      h2 Bleeding Edge Web: July 2018
       h3.star News From the Bleeding Edge
       p.indent
         | &mdash; Brian Moeskau (
         a(href='https://twitter.com/bmoeskau') @bmoeskau
         | )
-      h3.star Lightning Talks
-      p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
-      p.indent &mdash; Using a Screen Reader to Test (Robert DeLuca)
+      //- h3.star Lightning Talks
+      //- p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
       h3.star
-        a(href='https://slides.victoriabernard.com/#/') Putting Workers to Work
+        a(href='https://docs.google.com/presentation/d/1c5wU3whpGbhvpKdW-PPDazolUeKjI5Idnc1xFJwv3jc/edit?usp=sharing') Symmetric and Asymmetric Cryptography and RSA Deep Dive
       p.indent
-        | &mdash; Victoria Bernard
+        | &mdash; Cullen Tsering
     
 
     //----------------------  Sponsors  ----------------------
@@ -80,6 +79,7 @@ html
     section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
       p(style='color: #fff;') Thanks to our sponsor:
     
+
     //----------------------  Housekeeping  ----------------------
 
     section.slide
@@ -88,9 +88,10 @@ html
         li Speakers and sponsors always wanted (
           a(href='https://www.edgeatx.org') edgeatx.org
           | )
-        li $5 Parking validation
+        li Parking has changed!
         li Omni hotel bar (downstairs) after meetup
         li Anyone hiring / looking?
+
 
     //----------------------  Begin slides  ----------------------
     
@@ -105,7 +106,7 @@ html
     
     section.slide
       h2 Browser Pop Quiz
-      h3 Last check — April 19, 2018:
+      h3 Last check — June 21, 2018:
       table.browsers
         tr
           td(width='25%')
@@ -117,14 +118,14 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 66
-          td.ver 59
-          td.ver 16
-          td.ver 11.1
+          td.ver 67
+          td.ver 60
+          td.ver 17
+          td.ver 12
     
     section.slide
       h2 Browser Pop Quiz
-      h3 As of May 17, 2018:
+      h3 As of July 19, 2018:
       table.browsers
         tr
           td(width='25%')
@@ -136,72 +137,67 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 66
+          td.ver 67
           td.ver
-            span.strike.dim 59
+            span.strike.dim 60
             br
-            strong(style='color:#1CA727') 60
-          td.ver
-            span.strike.dim 16
-            br
-            strong(style='color:#1CA727') 17
-          td.ver 11.1  
+            strong(style='color:#1CA727') 61
+          td.ver 17
+          td.ver 12
 
     section.slide
-      h2 Firefox 60
+      h2 Firefox 61
       img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
-      p Released May 9th —
-        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
+      p Released June 26th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/61') Release Notes
       h3.star New APIs
       ul
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API
-          |  (aka WebAuthn)
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API') Web VR
-        li
-          a(href='https://hacks.mozilla.org/2015/08/es6-in-depth-modules/') ES2015 Modules
-          |  (
-          span.code import
+        li 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming') PerformanceServerTiming
+        li String.prototype 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart') trimStart
           |  and 
-          span.code export
-          |)
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd') trimEnd
+        li Lots of new CSS properties and other minor APIs
 
     section.slide
-      h2 Edge 17
-      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
-      p Released May 8th —
-        a(href='https://aka.ms/devguide_edgehtml_17') Release Notes
-      h3.star New APIs
+      h2 Firefox 61
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Developer Tools
       ul
-        li 
-          a(href='https://developer.mozilla.org/docs/Web/CSS/CSS_Masking') CSS Masking 
-          | (experimental)
-        li 
-          a(href='https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/notifications') Notifications API 
-        li 
-          a(href='https://w3c.github.io/mediacapture-screen-share/') Media Capture API 
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity') Subresource Integrity (SRI)
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings') Variable Fonts 
-        li 
-          a(href='https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/#fH9xg437YOV1YBpZ.97') Service Workers 
-          | (enabled by default)
-
+        li New 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector') Accessibility inspector
+        li CSS variable 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion') autocompletion
+        li New 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Cache') Cache tab
+        li And more
+        
+        
     section.slide
-      h2 Edge 17
-      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
-      h3.star Interesting Consumer Features
+      h2 Firefox 61
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Performance
       ul
-        li Reading tools (annotations, grammar tools)
-        li "Clutter free" print option
-        li Background tab suspension
-        li Plus 
-          a(href='https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/#BmJPg3BFQZeWJTpr.97') a lot more
-      
-      p Most importantly...
-      blockquote Dramatically reduced the power efficiency impact of rendering animated GIFs
+        li Parallelized CSS parsing
+        li 
+          a(href='https://hacks.mozilla.org/2018/06/retained-display-lists/') Retained display lists
+      p Check out the full 
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/61') release notes
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Coming soon (next week)
+      h3.star HTTP condemned
+      ul
+        li Any sites still using HTTP will be 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') marked as insecure
+        li This is your final warning!
+        
 
     //----------------------  Libs & Frameworks  ----------------------
     
@@ -210,53 +206,55 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
     
     section.slide
-      h2 
-        a(href='https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/') Dojo 2.0
-      p Released May 2nd (
-        a(href='https://dojo.github.io/examples/') examples
-        |)
+      h2 ESLint v5.0.0
+      blockquote The pluggable linting utility for JavaScript and JSX
+      p View the 
+        a(href='https://eslint.org/blog/2018/06/eslint-v5.0.0-released') release notes
       ul
-        li Rewritten in TypeScript
-        li Web Component support
-        li Built-in redux-like state container
-        li Modern CLI tooling (
-          span.code dojo create app
-          | ) and test harness
-      img(src='./images/dojo2.jpg', width='600px', alt='Dojo 2.0')
-
-    section.slide
-      h2
-        a(href='https://developers.google.com/web/updates/2018/05/lighthouse3') Lighthouse 3.0
-      blockquote An open-source, automated tool for improving the quality of web pages.
-      p Released May 14th
-      ul
-        li Faster audits with less variance between runs
-        li Brand new report UI
-        li Improvements to CSV and JSON output formats
-
-      img.corner-image(src='./images/lighthouse.png', width='200px', alt='Lighthouse')
-      img(src='./images/lighthouse-preview.png', alt='Lighthouse Preview')
-
-    section.slide
-      h2
-        a(href='https://github.com/guess-js/guess') Guess.js
-      blockquote Libraries and tools for enabling data-driven user-experiences on the web.
-      ul
-        li Uses predictive algorithms to optimize application code
-        li Analyzes linked Google Analytics traffic at build time
-        li Bundle splitting via webpack plugin
-        li Generated content prefetch links
-        li
-          a(href='https://blog.mgechev.com/2018/05/09/introducing-guess-js-data-driven-user-experiences-web/') Read the intro blog post
-      img(src='./images/guess-js.png', width='200px', alt='Guess.js')
+        li New rules:
+          ul
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/prefer-object-spread') prefer-object-spread
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/max-classes-per-file') max-classes-per-file 
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/max-lines-per-function') max-lines-per-function
+        li New options on some existing rules
+        li A few 
+          a(href='https://eslint.org/docs/user-guide/migrating-to-5.0.0') breaking changes 
+          | to be aware of
     
     section.slide
-      h2 "Release Radar"
+      h2 Greenkeeper 3
+      blockquote Bot for automated dependency management
+      p 
+        a(href='https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998') Released
+        |  June 14
+      p Monitors package deps and PRs tested updates
       ul
-        li A roundup of some interesting releases from April
-        li Courtesy of Github's blog
-        li Hyper, NetHack, Flask, Nerd Fonts, Monica, and 
-          a(href='https://blog.github.com/2018-05-09-release-radar-april-2018/') lots more
+        li v3 supports monorepos
+        li New greenkeeper config file
+        li Custom commit messages
+      img(src='./images/greenkeeper3.jpg', width='600px', alt='Greenkeeper 3')
+
+    section.slide
+      h2 v8n
+      blockquote JavaScript fluent validation library
+      p New &mdash; 
+        a(href='https://github.com/imbrn/v8n') Released
+        |  July 14
+      pre
+        code
+          | v8n()
+          |   .number()
+          |   .between(0, 100)
+          |   .even()
+          |   .not.equal(32)
+          |   .test(74); // true
+
 
     //----------------------  Security  ----------------------
     
@@ -266,85 +264,72 @@ html
       .shim(style='background-color:#c11;opacity:.7;')
     
     section.slide
-      h2 GDPR Checklist
+      h2 Compromised Npm Package
       ul
-        li The 
-          a(href='https://advisera.com/eugdpracademy/gdpr/') articles of the GDPR 
-          |  are *really* involved
-        li Basically, if you could do anything in the EU, it applies to you
-        li It goes into effect May 25th!
-        li This 
-          a(href='https://gdprchecklist.io/') checklist
-          |  is a great TL;DR version
-      img(src='./images/gdpr.png', width='70%', alt='GDPR')
-
-    section.slide
-      h2 Auditing via npm
-      blockquote Perform a moment-in-time security review of your project’s dependency tree.
-      ul
-        li New in npm v5.10+ and v6+
-        li
-          | Check out the 
-          a(href='https://blog.npmjs.org/post/173719309445/npm-audit-identify-and-fix-insecure') release announcement
-        li
-          | Just run 
-          span.code npm audit
-          |  to get something like...
-      img(src='./images/npm-audit.png', alt='npm audit', style='width:50%')
+        li On July 12, an 
+          a(href='https://eslint.org/') ESLint 
+          |  maintainer's npm account was hacked
+        li They published malicious versions of several packages
+        li Read the 
+          a(href='https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of') details 
+          |  on npm's blog or ESLint's 
+          a(href='https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes') postmortem
+        li TL;DR: don't reuse passwords, and enable 
+          a(href='https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages') 2FA
+          |  on packages
+      img(src='./images/npm-security.png', width='50%', alt='GDPR')
 
     
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 EU Fines Google $5.1B
+      ul
+        li For 
+          a(href='https://www.nytimes.com/2018/07/18/technology/google-eu-android-fine.html') anti-competitive promotion of Android
+        li They must change bundling practices within 90 days
+        li Trend: increasing EU curtailment of US tech companies
+      img(src='./images/money.jpg', alt='Money', width='600px')
+
+
     //----------------------  ICYMI  ----------------------
+
     section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
       .content
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
-    
-    section.slide
-      h2 Is ServiceWorker Ready?
-      p
-        a(href='https://jakearchibald.github.io/isserviceworkerready/') Yes.
 
     section.slide
-      h2 StackOverflow for Teams
-      blockquote A private, secure home for your team’s questions and answers.
+      h2 ECMAScript 2018 / 2019
       ul
-        li Basically a private label version of SO
-        li $10/month for now
-      img(src='./images/so.png', alt='StackOverflow for Teams')
+        li The ES2018 spec was finalized in January, but   
+          a(href='https://www.ecma-international.org/ecma-262/9.0/') published
+          |  in June
+        li Also, the ES2019 spec was 
+          a(href='https://tc39.github.io/ecma262/') published
+          |  a few weeks ago
+        li Need a refresher? Read 
+          a(href='http://exploringjs.com/es2018-es2019/toc.html') Exploring ES2018 and ES2019
+      img(src='./images/ecma-logo.png', width='40%', alt='ECMA International')
 
-    section.slide
-      h2 Pure CSS Francine
-      blockquote An ongoing series in which I create art using only CSS and HTML.
-      p
-        a(href='http://diana-adrianne.com/purecss-francine/') Check it out!
-      p
-        | Also see 
-        a(href='http://diana-adrianne.com/purecss-vignes/') Vignes
-        |  and 
-        a(href='http://diana-adrianne.com/purecss-zigario/') Zigario
-      img(src='./images/francine.png', alt='Francine')
 
     //----------------------  Something Completely Different  ----------------------
     
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
       h1 And now for something completely different...
-    
-    section.slide
-      h2 Real-time Pose Estimation in JS
-      ol
-        li 
-          | Uses 
-          a(href='https://js.tensorflow.org/') TensorFlow.js 
-          | (machine learning lib)
-        li 
-          | Pose detection via 
-          a(href='https://github.com/tensorflow/tfjs-models/tree/master/posenet') PoseNet Model 
-        li
-          | Check out the live 
-          a(href='https://storage.googleapis.com/tfjs-models/demos/posenet/camera.html') demo
-      img(src='./images/posenet.gif', alt='PoseNet demo')
 
+    section.slide
+      h2 
+        a(href='https://github.com/Athari/CssGitHubWindows') GitHub Windows 95 Edition
+      blockquote User style transforming GitHub into Windows 9x
+      img(src='./images/github-95.png', alt='GitHub 95!')
     
+
     //----------------------  Fin  ----------------------
     
     se

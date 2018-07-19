@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Bleeding Edge Web: May 2018</title>
+    <title>Bleeding Edge Web: July 2018</title>
     <!-- Required stylesheet-->
     <link rel="stylesheet" href="../../shared/core/deck.core.css">
     <!-- Extension CSS files go here. Remove or add as needed.-->
@@ -34,14 +34,11 @@
       <div class="shim" style="opacity:.5;"></div>
     </section>
     <section class="slide">
-      <h2>Bleeding Edge Web: May 2018</h2>
+      <h2>Bleeding Edge Web: July 2018</h2>
       <h3 class="star">News From the Bleeding Edge</h3>
       <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
-      <h3 class="star">Lightning Talks</h3>
-      <p class="indent">&mdash; Intro to Elasticsearch (Hugo Martinez)</p>
-      <p class="indent">&mdash; Using a Screen Reader to Test (Robert DeLuca)</p>
-      <h3 class="star"><a href="https://slides.victoriabernard.com/#/">Putting Workers to Work</a></h3>
-      <p class="indent">&mdash; Victoria Bernard</p>
+      <h3 class="star"><a href="https://docs.google.com/presentation/d/1c5wU3whpGbhvpKdW-PPDazolUeKjI5Idnc1xFJwv3jc/edit?usp=sharing">Symmetric and Asymmetric Cryptography and RSA Deep Dive</a></h3>
+      <p class="indent">&mdash; Cullen Tsering</p>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
       <p style="color: #fff;">Thanks to our venue:</p>
@@ -57,7 +54,7 @@
       <h2>Housekeeping</h2>
       <ul>
         <li>Speakers and sponsors always wanted (<a href="https://www.edgeatx.org">edgeatx.org</a>)</li>
-        <li>$5 Parking validation</li>
+        <li>Parking has changed!</li>
         <li>Omni hotel bar (downstairs) after meetup</li>
         <li>Anyone hiring / looking?</li>
       </ul>
@@ -74,7 +71,7 @@
     </section>
     <section class="slide">
       <h2>Browser Pop Quiz</h2>
-      <h3>Last check — April 19, 2018:</h3>
+      <h3>Last check — June 21, 2018:</h3>
       <table class="browsers">
         <tr>
           <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -83,16 +80,16 @@
           <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
         </tr>
         <tr>
-          <td class="ver">66</td>
-          <td class="ver">59</td>
-          <td class="ver">16</td>
-          <td class="ver">11.1</td>
+          <td class="ver">67</td>
+          <td class="ver">60</td>
+          <td class="ver">17</td>
+          <td class="ver">12</td>
         </tr>
       </table>
     </section>
     <section class="slide">
       <h2>Browser Pop Quiz</h2>
-      <h3>As of May 17, 2018:</h3>
+      <h3>As of July 19, 2018:</h3>
       <table class="browsers">
         <tr>
           <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -101,90 +98,92 @@
           <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
         </tr>
         <tr>
-          <td class="ver">66</td>
-          <td class="ver"><span class="strike dim">59</span><br><strong style="color:#1CA727">60</strong></td>
-          <td class="ver"><span class="strike dim">16</span><br><strong style="color:#1CA727">17</strong></td>
-          <td class="ver">11.1  </td>
+          <td class="ver">67</td>
+          <td class="ver"><span class="strike dim">60</span><br><strong style="color:#1CA727">61</strong></td>
+          <td class="ver">17</td>
+          <td class="ver">12</td>
         </tr>
       </table>
     </section>
     <section class="slide">
-      <h2>Firefox 60</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
-      <p>Released May 9th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/60">Release Notes</a></p>
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <p>Released June 26th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">Release Notes</a></p>
       <h3 class="star">New APIs</h3>
       <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> (aka WebAuthn)</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">Web VR</a></li>
-        <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 Modules</a> (<span class="code">import</span> and <span class="code">export</span>)</li>
+        <li> <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming">PerformanceServerTiming</a></span></li>
+        <li>String.prototype <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">trimStart</a></span> and <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">trimEnd</a></span></li>
+        <li>Lots of new CSS properties and other minor APIs</li>
       </ul>
     </section>
     <section class="slide">
-      <h2>Edge 17</h2><img class="corner-image" src="../../shared/resources/images/edge.png" width="200px" alt="Edge">
-      <p>Released May 8th —<a href="https://aka.ms/devguide_edgehtml_17">Release Notes</a></p>
-      <h3 class="star">New APIs</h3>
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Developer Tools</h3>
       <ul>
-        <li> <a href="https://developer.mozilla.org/docs/Web/CSS/CSS_Masking">CSS Masking </a>(experimental)</li>
-        <li> <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/notifications">Notifications API </a></li>
-        <li> <a href="https://w3c.github.io/mediacapture-screen-share/">Media Capture API </a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity (SRI)</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variation-settings">Variable Fonts </a></li>
-        <li> <a href="https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/#fH9xg437YOV1YBpZ.97">Service Workers </a>(enabled by default)</li>
+        <li>New <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a></li>
+        <li>CSS variable <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion">autocompletion</a></li>
+        <li>New <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Cache">Cache tab</a></li>
+        <li>And more</li>
       </ul>
     </section>
     <section class="slide">
-      <h2>Edge 17</h2><img class="corner-image" src="../../shared/resources/images/edge.png" width="200px" alt="Edge">
-      <h3 class="star">Interesting Consumer Features</h3>
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Performance</h3>
       <ul>
-        <li>Reading tools (annotations, grammar tools)</li>
-        <li>"Clutter free" print option</li>
-        <li>Background tab suspension</li>
-        <li>Plus <a href="https://blogs.windows.com/msedgedev/2018/04/30/edgehtml-17-april-2018-update/#BmJPg3BFQZeWJTpr.97">a lot more</a></li>
+        <li>Parallelized CSS parsing</li>
+        <li> <a href="https://hacks.mozilla.org/2018/06/retained-display-lists/">Retained display lists</a></li>
       </ul>
-      <p>Most importantly...</p>
-      <blockquote>Dramatically reduced the power efficiency impact of rendering animated GIFs</blockquote>
+      <p>Check out the full <a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">release notes</a></p>
+    </section>
+    <section class="slide">
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Coming soon (next week)</p>
+      <h3 class="star">HTTP condemned</h3>
+      <ul>
+        <li>Any sites still using HTTP will be <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">marked as insecure</a></li>
+        <li>This is your final warning!</li>
+      </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
       <h1>Languages, Libraries &amp;<br>Frameworks</h1>
       <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
     </section>
     <section class="slide">
-      <h2> <a href="https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/">Dojo 2.0</a></h2>
-      <p>Released May 2nd (<a href="https://dojo.github.io/examples/">examples</a>)</p>
+      <h2>ESLint v5.0.0</h2>
+      <blockquote>The pluggable linting utility for JavaScript and JSX</blockquote>
+      <p>View the <a href="https://eslint.org/blog/2018/06/eslint-v5.0.0-released">release notes</a></p>
       <ul>
-        <li>Rewritten in TypeScript</li>
-        <li>Web Component support</li>
-        <li>Built-in redux-like state container</li>
-        <li>Modern CLI tooling (<span class="code">dojo create app</span>) and test harness</li>
-      </ul><img src="./images/dojo2.jpg" width="600px" alt="Dojo 2.0">
-    </section>
-    <section class="slide">
-      <h2><a href="https://developers.google.com/web/updates/2018/05/lighthouse3">Lighthouse 3.0</a></h2>
-      <blockquote>An open-source, automated tool for improving the quality of web pages.</blockquote>
-      <p>Released May 14th</p>
-      <ul>
-        <li>Faster audits with less variance between runs</li>
-        <li>Brand new report UI</li>
-        <li>Improvements to CSV and JSON output formats</li>
-      </ul><img class="corner-image" src="./images/lighthouse.png" width="200px" alt="Lighthouse"><img src="./images/lighthouse-preview.png" alt="Lighthouse Preview">
-    </section>
-    <section class="slide">
-      <h2><a href="https://github.com/guess-js/guess">Guess.js</a></h2>
-      <blockquote>Libraries and tools for enabling data-driven user-experiences on the web.</blockquote>
-      <ul>
-        <li>Uses predictive algorithms to optimize application code</li>
-        <li>Analyzes linked Google Analytics traffic at build time</li>
-        <li>Bundle splitting via webpack plugin</li>
-        <li>Generated content prefetch links</li>
-        <li><a href="https://blog.mgechev.com/2018/05/09/introducing-guess-js-data-driven-user-experiences-web/">Read the intro blog post</a></li>
-      </ul><img src="./images/guess-js.png" width="200px" alt="Guess.js">
-    </section>
-    <section class="slide">
-      <h2>"Release Radar"</h2>
-      <ul>
-        <li>A roundup of some interesting releases from April</li>
-        <li>Courtesy of Github's blog</li>
-        <li>Hyper, NetHack, Flask, Nerd Fonts, Monica, and <a href="https://blog.github.com/2018-05-09-release-radar-april-2018/">lots more</a></li>
+        <li>New rules:
+          <ul>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/prefer-object-spread">prefer-object-spread</a></span></li>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/max-classes-per-file">max-classes-per-file </a></span></li>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/max-lines-per-function">max-lines-per-function</a></span></li>
+          </ul>
+        </li>
+        <li>New options on some existing rules</li>
+        <li>A few <a href="https://eslint.org/docs/user-guide/migrating-to-5.0.0">breaking changes </a>to be aware of</li>
       </ul>
+    </section>
+    <section class="slide">
+      <h2>Greenkeeper 3</h2>
+      <blockquote>Bot for automated dependency management</blockquote>
+      <p> <a href="https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998">Released</a> June 14</p>
+      <p>Monitors package deps and PRs tested updates</p>
+      <ul>
+        <li>v3 supports monorepos</li>
+        <li>New greenkeeper config file</li>
+        <li>Custom commit messages</li>
+      </ul><img src="./images/greenkeeper3.jpg" width="600px" alt="Greenkeeper 3">
+    </section>
+    <section class="slide">
+      <h2>v8n</h2>
+      <blockquote>JavaScript fluent validation library</blockquote>
+      <p>New &mdash; <a href="https://github.com/imbrn/v8n">Released</a> July 14</p>
+      <pre><code>v8n()
+  .number()
+  .between(0, 100)
+  .even()
+  .not.equal(32)
+  .test(74); // true</code></pre>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
@@ -193,22 +192,27 @@
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>GDPR Checklist</h2>
+      <h2>Compromised Npm Package</h2>
       <ul>
-        <li>The <a href="https://advisera.com/eugdpracademy/gdpr/">articles of the GDPR </a> are *really* involved</li>
-        <li>Basically, if you could do anything in the EU, it applies to you</li>
-        <li>It goes into effect May 25th!</li>
-        <li>This <a href="https://gdprchecklist.io/">checklist</a> is a great TL;DR version</li>
-      </ul><img src="./images/gdpr.png" width="70%" alt="GDPR">
+        <li>On July 12, an <a href="https://eslint.org/">ESLint </a> maintainer's npm account was hacked</li>
+        <li>They published malicious versions of several packages</li>
+        <li>Read the <a href="https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of">details </a> on npm's blog or ESLint's <a href="https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes">postmortem</a></li>
+        <li>TL;DR: don't reuse passwords, and enable <a href="https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages">2FA</a> on packages</li>
+      </ul><img src="./images/npm-security.png" width="50%" alt="GDPR">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
+      <div class="content">
+        <h1>Industry<br>Headlines</h1>
+      </div>
+      <div class="shim" style="background-color:#393;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>Auditing via npm</h2>
-      <blockquote>Perform a moment-in-time security review of your project’s dependency tree.</blockquote>
+      <h2>EU Fines Google $5.1B</h2>
       <ul>
-        <li>New in npm v5.10+ and v6+</li>
-        <li>Check out the <a href="https://blog.npmjs.org/post/173719309445/npm-audit-identify-and-fix-insecure">release announcement</a></li>
-        <li>Just run <span class="code">npm audit</span> to get something like...</li>
-      </ul><img src="./images/npm-audit.png" alt="npm audit" style="width:50%">
+        <li>For <a href="https://www.nytimes.com/2018/07/18/technology/google-eu-android-fine.html">anti-competitive promotion of Android</a></li>
+        <li>They must change bundling practices within 90 days</li>
+        <li>Trend: increasing EU curtailment of US tech companies</li>
+      </ul><img src="./images/money.jpg" alt="Money" width="600px">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
       <div class="content">
@@ -217,35 +221,19 @@
       <div class="shim" style="background-color:#555;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>Is ServiceWorker Ready?</h2>
-      <p><a href="https://jakearchibald.github.io/isserviceworkerready/">Yes.</a></p>
-    </section>
-    <section class="slide">
-      <h2>StackOverflow for Teams</h2>
-      <blockquote>A private, secure home for your team’s questions and answers.</blockquote>
+      <h2>ECMAScript 2018 / 2019</h2>
       <ul>
-        <li>Basically a private label version of SO</li>
-        <li>$10/month for now</li>
-      </ul><img src="./images/so.png" alt="StackOverflow for Teams">
-    </section>
-    <section class="slide">
-      <h2>Pure CSS Francine</h2>
-      <blockquote>An ongoing series in which I create art using only CSS and HTML.</blockquote>
-      <p><a href="http://diana-adrianne.com/purecss-francine/">Check it out!</a></p>
-      <p>Also see <a href="http://diana-adrianne.com/purecss-vignes/">Vignes</a> and <a href="http://diana-adrianne.com/purecss-zigario/">Zigario</a></p><img src="./images/francine.png" alt="Francine">
+        <li>The ES2018 spec was finalized in January, but   <a href="https://www.ecma-international.org/ecma-262/9.0/">published</a> in June</li>
+        <li>Also, the ES2019 spec was <a href="https://tc39.github.io/ecma262/">published</a> a few weeks ago</li>
+        <li>Need a refresher? Read <a href="http://exploringjs.com/es2018-es2019/toc.html">Exploring ES2018 and ES2019</a></li>
+      </ul><img src="./images/ecma-logo.png" width="40%" alt="ECMA International">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
     </section>
     <section class="slide">
-      <h2>Real-time Pose Estimation in JS</h2>
-      <ol>
-        <li>
-           Uses <a href="https://js.tensorflow.org/">TensorFlow.js </a>(machine learning lib)</li>
-        <li>
-           Pose detection via <a href="https://github.com/tensorflow/tfjs-models/tree/master/posenet">PoseNet Model </a></li>
-        <li>Check out the live <a href="https://storage.googleapis.com/tfjs-models/demos/posenet/camera.html">demo</a></li>
-      </ol><img src="./images/posenet.gif" alt="PoseNet demo">
+      <h2> <a href="https://github.com/Athari/CssGitHubWindows">GitHub Windows 95 Edition</a></h2>
+      <blockquote>User style transforming GitHub into Windows 9x</blockquote><img src="./images/github-95.png" alt="GitHub 95!">
     </section>
     <se></se>
     <ction class="slide">
