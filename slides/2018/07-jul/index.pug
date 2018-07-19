@@ -79,6 +79,7 @@ html
     section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
       p(style='color: #fff;') Thanks to our sponsor:
     
+
     //----------------------  Housekeeping  ----------------------
 
     section.slide
@@ -90,6 +91,7 @@ html
         li Parking has changed!
         li Omni hotel bar (downstairs) after meetup
         li Anyone hiring / looking?
+
 
     //----------------------  Begin slides  ----------------------
     
@@ -253,6 +255,7 @@ html
           |   .not.equal(32)
           |   .test(74); // true
 
+
     //----------------------  Security  ----------------------
     
     section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
@@ -263,7 +266,9 @@ html
     section.slide
       h2 Compromised Npm Package
       ul
-        li On July 12, someone compromised an ESLint maintainer's npm account
+        li On July 12, an 
+          a(href='https://eslint.org/') ESLint 
+          |  maintainer's npm account was hacked
         li They published malicious versions of several packages
         li Read the 
           a(href='https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of') details 
@@ -272,10 +277,26 @@ html
         li TL;DR: don't reuse passwords, and enable 
           a(href='https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages') 2FA
           |  on packages
-        li (Also use a lock file to prevent package auto-updates)
       img(src='./images/npm-security.png', width='50%', alt='GDPR')
 
     
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 EU Fines Google $5.1B
+      ul
+        li For 
+          a(href='https://www.nytimes.com/2018/07/18/technology/google-eu-android-fine.html') anti-competitive promotion of Android
+        li They must change bundling practices within 90 days
+        li Trend: increasing EU curtailment of US tech companies
+      img(src='./images/money.jpg', alt='Money', width='600px')
+
+
     //----------------------  ICYMI  ----------------------
 
     section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
@@ -296,6 +317,7 @@ html
           a(href='http://exploringjs.com/es2018-es2019/toc.html') Exploring ES2018 and ES2019
       img(src='./images/ecma-logo.png', width='40%', alt='ECMA International')
 
+
     //----------------------  Something Completely Different  ----------------------
     
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
@@ -307,6 +329,7 @@ html
       blockquote User style transforming GitHub into Windows 9x
       img(src='./images/github-95.png', alt='GitHub 95!')
     
+
     //----------------------  Fin  ----------------------
     
     se
