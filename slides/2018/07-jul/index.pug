@@ -117,7 +117,7 @@ html
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
           td.ver 67
-          td.ver 61
+          td.ver 60
           td.ver 17
           td.ver 12
     
@@ -135,36 +135,67 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 66
+          td.ver 67
           td.ver
-            span.strike.dim 59
+            span.strike.dim 60
             br
-            strong(style='color:#1CA727') 60
-          td.ver
-            span.strike.dim 16
-            br
-            strong(style='color:#1CA727') 17
-          td.ver 11.1  
+            strong(style='color:#1CA727') 61
+          td.ver 17
+          td.ver 12
 
     section.slide
-      h2 Firefox 60
-      p Released May 9th —
-        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/60') Release Notes
+      h2 Firefox 61
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released June 26th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/61') Release Notes
       h3.star New APIs
       ul
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') Web Authentication API
-          |  (aka WebAuthn)
-        li
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API') Web VR
-        li
-          a(href='https://hacks.mozilla.org/2015/08/es6-in-depth-modules/') ES2015 Modules
-          |  (
-          span.code import
+        li 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming') PerformanceServerTiming
+        li String.prototype 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart') trimStart
           |  and 
-          span.code export
-          |)
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd') trimEnd
+        li Lots of new CSS properties and other minor APIs
 
+    section.slide
+      h2 Firefox 61
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Developer Tools
+      ul
+        li New 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector') Accessibility inspector
+        li CSS variable 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion') autocompletion
+        li New 
+          a(href='https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Cache') Cache tab
+        li And more
+        
+        
+    section.slide
+      h2 Firefox 61
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Performance
+      ul
+        li Parallelized CSS parsing
+        li 
+          a(href='https://hacks.mozilla.org/2018/06/retained-display-lists/') Retained display lists
+      p Check out the full 
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/61') release notes
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Coming soon (next week)
+      h3.star HTTP condemned
+      ul
+        li Any sites still using HTTP will be 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') marked as insecure
+        li This is your final warning!
+        
 
     //----------------------  Libs & Frameworks  ----------------------
     
@@ -173,19 +204,38 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
     
     section.slide
-      h2 
-        a(href='https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/') Dojo 2.0
-      p Released May 2nd (
-        a(href='https://dojo.github.io/examples/') examples
-        |)
+      h2 ESLint v5.0.0
+      blockquote The pluggable linting utility for JavaScript and JSX
+      p View the 
+        a(href='https://eslint.org/blog/2018/06/eslint-v5.0.0-released') release notes
       ul
-        li Rewritten in TypeScript
-        li Web Component support
-        li Built-in redux-like state container
-        li Modern CLI tooling (
-          span.code dojo create app
-          | ) and test harness
-      img(src='./images/dojo2.jpg', width='600px', alt='Dojo 2.0')
+        li New rules:
+          ul
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/prefer-object-spread') prefer-object-spread
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/max-classes-per-file') max-classes-per-file 
+            li
+              span.code
+                a(href='https://eslint.org/docs/rules/max-lines-per-function') max-lines-per-function
+        li New options on some existing rules
+        li A few 
+          a(href='https://eslint.org/docs/user-guide/migrating-to-5.0.0') breaking changes 
+          | to be aware of
+    
+    section.slide
+      h2 
+        a(href='https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998') Greenkeeper 3
+      blockquote Bot for automated dependency management
+      p Released June 14
+      p Monitors package deps and PRs tested updates
+      ul
+        li v3 supports monorepos
+        li New greenkeeper config file
+        li Custom commit messages
+      img(src='./images/greenkeeper3.jpg', width='600px', alt='Greenkeeper 3')
 
 
     //----------------------  Security  ----------------------
@@ -198,7 +248,7 @@ html
     section.slide
       h2 Compromised Npm Package
       ul
-        li Someone compromised an ESLint maintainer's npm account
+        li On July 12, someone compromised an ESLint maintainer's npm account
         li They published malicious versions of several packages
         li Read the 
           a(href='https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of') details 
@@ -210,10 +260,10 @@ html
 
     
     //----------------------  ICYMI  ----------------------
-    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
-      .content
-        h1 In Case You<br>Missed It
-      .shim(style='background-color:#555;opacity:.7;')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+    //-   .content
+    //-     h1 In Case You<br>Missed It
+    //-   .shim(style='background-color:#555;opacity:.7;')
   
 
     //----------------------  Something Completely Different  ----------------------
@@ -221,6 +271,11 @@ html
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
       h1 And now for something completely different...
 
+    section.slide
+      h2 
+        a(href='https://github.com/Athari/CssGitHubWindows') GitHub Windows 95 Edition
+      blockquote User style transforming GitHub into Windows 9x
+      img(src='./images/github-95.png', alt='GitHub 95!')
     
     //----------------------  Fin  ----------------------
     

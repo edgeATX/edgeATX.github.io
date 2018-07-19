@@ -40,7 +40,13 @@
 
 .deck-container .slide li { line-height: 1.5em; list-style: none; padding: .15em 0; }
 
-.deck-container .slide li:before { content: '\029BF'; /* &ofcir; */ color: #E91E63; padding-right: 20px; }
+.deck-container .slide li:before { content: '\029BF'; color: #E91E63; padding-right: 20px; }
+
+.deck-container .slide ul ul { margin-bottom: 0; }
+
+.deck-container .slide li li { padding-left: .6em; }
+
+.deck-container .slide li li:before { content: '\2192'; color: #E91E63; padding-right: 20px; }
 
 .deck-container .slide small { font-size: 75%; }
 

@@ -99,6 +99,7 @@
       }
     }
 
+    // top-level lists:
     ul {
       margin-left: .5em;
     }
@@ -108,7 +109,20 @@
       padding: .15em 0;
     }
     li:before {
-      content: '\029BF'; /* &ofcir; */
+      content: '\029BF'; // &ofcir;
+      color: #E91E63;
+      padding-right: 20px;
+    }
+    
+    // second-level lists:
+    ul ul {
+      margin-bottom: 0;
+    }
+    li li {
+      padding-left: .6em;
+    }
+    li li:before {
+      content: '\2192'; // &rarr;
       color: #E91E63;
       padding-right: 20px;
     }

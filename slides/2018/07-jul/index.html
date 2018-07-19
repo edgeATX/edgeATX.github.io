@@ -81,7 +81,7 @@
         </tr>
         <tr>
           <td class="ver">67</td>
-          <td class="ver">61</td>
+          <td class="ver">60</td>
           <td class="ver">17</td>
           <td class="ver">12</td>
         </tr>
@@ -98,21 +98,49 @@
           <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
         </tr>
         <tr>
-          <td class="ver">66</td>
-          <td class="ver"><span class="strike dim">59</span><br><strong style="color:#1CA727">60</strong></td>
-          <td class="ver"><span class="strike dim">16</span><br><strong style="color:#1CA727">17</strong></td>
-          <td class="ver">11.1  </td>
+          <td class="ver">67</td>
+          <td class="ver"><span class="strike dim">60</span><br><strong style="color:#1CA727">61</strong></td>
+          <td class="ver">17</td>
+          <td class="ver">12</td>
         </tr>
       </table>
     </section>
     <section class="slide">
-      <h2>Firefox 60</h2>
-      <p>Released May 9th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/60">Release Notes</a></p>
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <p>Released June 26th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">Release Notes</a></p>
       <h3 class="star">New APIs</h3>
       <ul>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a> (aka WebAuthn)</li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API">Web VR</a></li>
-        <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 Modules</a> (<span class="code">import</span> and <span class="code">export</span>)</li>
+        <li> <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming">PerformanceServerTiming</a></span></li>
+        <li>String.prototype <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">trimStart</a></span> and <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">trimEnd</a></span></li>
+        <li>Lots of new CSS properties and other minor APIs</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Developer Tools</h3>
+      <ul>
+        <li>New <a href="https://developer.mozilla.org/en-US/docs/Tools/Accessibility_inspector">Accessibility inspector</a></li>
+        <li>CSS variable <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS#CSS_variable_autocompletion">autocompletion</a></li>
+        <li>New <a href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Cache">Cache tab</a></li>
+        <li>And more</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Performance</h3>
+      <ul>
+        <li>Parallelized CSS parsing</li>
+        <li> <a href="https://hacks.mozilla.org/2018/06/retained-display-lists/">Retained display lists</a></li>
+      </ul>
+      <p>Check out the full <a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">release notes</a></p>
+    </section>
+    <section class="slide">
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Coming soon (next week)</p>
+      <h3 class="star">HTTP condemned</h3>
+      <ul>
+        <li>Any sites still using HTTP will be <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">marked as insecure</a></li>
+        <li>This is your final warning!</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
@@ -120,14 +148,31 @@
       <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
     </section>
     <section class="slide">
-      <h2> <a href="https://dojo.io/blog/2018/05/02/2018-05-02-Dojo2-0-0-release/">Dojo 2.0</a></h2>
-      <p>Released May 2nd (<a href="https://dojo.github.io/examples/">examples</a>)</p>
+      <h2>ESLint v5.0.0</h2>
+      <blockquote>The pluggable linting utility for JavaScript and JSX</blockquote>
+      <p>View the <a href="https://eslint.org/blog/2018/06/eslint-v5.0.0-released">release notes</a></p>
       <ul>
-        <li>Rewritten in TypeScript</li>
-        <li>Web Component support</li>
-        <li>Built-in redux-like state container</li>
-        <li>Modern CLI tooling (<span class="code">dojo create app</span>) and test harness</li>
-      </ul><img src="./images/dojo2.jpg" width="600px" alt="Dojo 2.0">
+        <li>New rules:
+          <ul>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/prefer-object-spread">prefer-object-spread</a></span></li>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/max-classes-per-file">max-classes-per-file </a></span></li>
+            <li><span class="code"><a href="https://eslint.org/docs/rules/max-lines-per-function">max-lines-per-function</a></span></li>
+          </ul>
+        </li>
+        <li>New options on some existing rules</li>
+        <li>A few <a href="https://eslint.org/docs/user-guide/migrating-to-5.0.0">breaking changes </a>to be aware of</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2> <a href="https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998">Greenkeeper 3</a></h2>
+      <blockquote>Bot for automated dependency management</blockquote>
+      <p>Released June 14</p>
+      <p>Monitors package deps and PRs tested updates</p>
+      <ul>
+        <li>v3 supports monorepos</li>
+        <li>New greenkeeper config file</li>
+        <li>Custom commit messages</li>
+      </ul><img src="./images/greenkeeper3.jpg" width="600px" alt="Greenkeeper 3">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
@@ -138,21 +183,19 @@
     <section class="slide">
       <h2>Compromised Npm Package</h2>
       <ul>
-        <li>Someone compromised an ESLint maintainer's npm account</li>
+        <li>On July 12, someone compromised an ESLint maintainer's npm account</li>
         <li>They published malicious versions of several packages</li>
         <li>Read the <a href="https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of">details </a> on npm's blog or ESLint's <a href="https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes">postmortem</a></li>
         <li>TL;DR: don't reuse passwords, and enable 2FA!</li>
         <li>(Also use a lock file to prevent package auto-updates)</li>
       </ul><img src="./images/npm-security.png" width="50%" alt="GDPR">
     </section>
-    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
-      <div class="content">
-        <h1>In Case You<br>Missed It</h1>
-      </div>
-      <div class="shim" style="background-color:#555;opacity:.7;"></div>
-    </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
+    </section>
+    <section class="slide">
+      <h2> <a href="https://github.com/Athari/CssGitHubWindows">GitHub Windows 95 Edition</a></h2>
+      <blockquote>User style transforming GitHub into Windows 9x</blockquote><img src="./images/github-95.png" alt="GitHub 95!">
     </section>
     <se></se>
     <ction class="slide">
