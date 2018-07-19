@@ -226,10 +226,11 @@ html
           | to be aware of
     
     section.slide
-      h2 
-        a(href='https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998') Greenkeeper 3
+      h2 Greenkeeper 3
       blockquote Bot for automated dependency management
-      p Released June 14
+      p 
+        a(href='https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998') Released
+        |  June 14
       p Monitors package deps and PRs tested updates
       ul
         li v3 supports monorepos
@@ -237,6 +238,20 @@ html
         li Custom commit messages
       img(src='./images/greenkeeper3.jpg', width='600px', alt='Greenkeeper 3')
 
+    section.slide
+      h2 v8n
+      blockquote JavaScript fluent validation library
+      p New &mdash; 
+        a(href='https://github.com/imbrn/v8n') Released
+        |  July 14
+      pre
+        code
+          | v8n()
+          |   .number()
+          |   .between(0, 100)
+          |   .even()
+          |   .not.equal(32)
+          |   .test(74); // true
 
     //----------------------  Security  ----------------------
     
@@ -254,17 +269,32 @@ html
           a(href='https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of') details 
           |  on npm's blog or ESLint's 
           a(href='https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes') postmortem
-        li TL;DR: don't reuse passwords, and enable 2FA!
+        li TL;DR: don't reuse passwords, and enable 
+          a(href='https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages') 2FA
+          |  on packages
         li (Also use a lock file to prevent package auto-updates)
       img(src='./images/npm-security.png', width='50%', alt='GDPR')
 
     
     //----------------------  ICYMI  ----------------------
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
-    //-   .content
-    //-     h1 In Case You<br>Missed It
-    //-   .shim(style='background-color:#555;opacity:.7;')
-  
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 ECMAScript 2018 / 2019
+      ul
+        li The ES2018 spec was finalized in January, but   
+          a(href='https://www.ecma-international.org/ecma-262/9.0/') published
+          |  in June
+        li Also, the ES2019 spec was 
+          a(href='https://tc39.github.io/ecma262/') published
+          |  a few weeks ago
+        li Need a refresher? Read 
+          a(href='http://exploringjs.com/es2018-es2019/toc.html') Exploring ES2018 and ES2019
+      img(src='./images/ecma-logo.png', width='40%', alt='ECMA International')
 
     //----------------------  Something Completely Different  ----------------------
     

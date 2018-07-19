@@ -164,15 +164,26 @@
       </ul>
     </section>
     <section class="slide">
-      <h2> <a href="https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998">Greenkeeper 3</a></h2>
+      <h2>Greenkeeper 3</h2>
       <blockquote>Bot for automated dependency management</blockquote>
-      <p>Released June 14</p>
+      <p> <a href="https://blog.greenkeeper.io/announcing-greenkeeper-3-1504f5113998">Released</a> June 14</p>
       <p>Monitors package deps and PRs tested updates</p>
       <ul>
         <li>v3 supports monorepos</li>
         <li>New greenkeeper config file</li>
         <li>Custom commit messages</li>
       </ul><img src="./images/greenkeeper3.jpg" width="600px" alt="Greenkeeper 3">
+    </section>
+    <section class="slide">
+      <h2>v8n</h2>
+      <blockquote>JavaScript fluent validation library</blockquote>
+      <p>New &mdash; <a href="https://github.com/imbrn/v8n">Released</a> July 14</p>
+      <pre><code>v8n()
+  .number()
+  .between(0, 100)
+  .even()
+  .not.equal(32)
+  .test(74); // true</code></pre>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
@@ -186,9 +197,23 @@
         <li>On July 12, someone compromised an ESLint maintainer's npm account</li>
         <li>They published malicious versions of several packages</li>
         <li>Read the <a href="https://blog.npmjs.org/post/175824896885/incident-report-npm-inc-operations-incident-of">details </a> on npm's blog or ESLint's <a href="https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes">postmortem</a></li>
-        <li>TL;DR: don't reuse passwords, and enable 2FA!</li>
+        <li>TL;DR: don't reuse passwords, and enable <a href="https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages">2FA</a> on packages</li>
         <li>(Also use a lock file to prevent package auto-updates)</li>
       </ul><img src="./images/npm-security.png" width="50%" alt="GDPR">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>ECMAScript 2018 / 2019</h2>
+      <ul>
+        <li>The ES2018 spec was finalized in January, but   <a href="https://www.ecma-international.org/ecma-262/9.0/">published</a> in June</li>
+        <li>Also, the ES2019 spec was <a href="https://tc39.github.io/ecma262/">published</a> a few weeks ago</li>
+        <li>Need a refresher? Read <a href="http://exploringjs.com/es2018-es2019/toc.html">Exploring ES2018 and ES2019</a></li>
+      </ul><img src="./images/ecma-logo.png" width="40%" alt="ECMA International">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
