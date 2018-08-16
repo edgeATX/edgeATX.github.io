@@ -2,8 +2,8 @@
 
 .deck-container {
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 3em;
-  font-weight: 600;
+  font-size: 3.2em;
+  font-weight: 400;
   background: #000000;
   color: #ffffff;
 
@@ -24,6 +24,12 @@
     }
     h3 {
       margin-bottom: .7em;
+      font-weight: 500;
+    }
+
+    strong {
+      font-weight: 800;
+      color: #E91E63;
     }
 
     pre {
@@ -50,10 +56,6 @@
         font-style: normal;
         font-weight: bold;
         color: #cccccc;
-      }
-
-      strong {
-        font-weight: bold;
       }
     }
 
@@ -307,6 +309,7 @@ pre[class*="language-"] {
   }
   .ver {
     font-size: 2.5em;
+    font-weight: 600;
   }
   .build {
     font-size: 50%;

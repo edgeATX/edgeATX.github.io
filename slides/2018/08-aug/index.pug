@@ -1,0 +1,431 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: August 2018
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: August 2018
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+      //- h3.star Lightning Talks
+      //- p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
+      h3.star Lambda, SQS &amp; API Gateway… for Fun and Profit
+      p.indent
+        | &mdash; Ted Patrick (
+        a(href='https://twitter.com/__ted__') @__ted__
+        | )
+      h3.star Open Source Node Dev Tools
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+    
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    //- section.slide.cover(style='background:#fff;')
+    //-   p(style='color: #555;') Thanks to our premiere sponsor:
+    //-   div(style='text-align:center;padding-top:150px;font-size:200%;')
+    //-     p
+    //-       a(href='https://#')
+    //-         img(style='min-width:70%', src='./images/lightly.jpg', alt='')
+    
+    section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+      p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors always wanted (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Parking has changed!
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check — July 19, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 67
+          td.ver 61
+          td.ver 17
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of August 16, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 67
+            br
+            strong(style='color:#1CA727') 68
+          td.ver 61
+          td.ver 17
+          td.ver 12
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released July 25th —
+        a(href='https://developers.google.com/web/updates/2018/07/nic68') Release Notes
+      h3.star HTTP is out!
+      ul
+        li Any sites still using HTTP will be 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') marked as insecure
+        li Make sure to switch to 
+          strong HTTPS
+
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/07/page-lifecycle-api') Page LifeCycle API
+      ul
+        li Applies to background tabs
+        pre
+          code
+            | const prepareForFreeze = () => {
+            |   // stop timers, close DB connections, etc.
+            | };
+            | const reInitializeApp = () => {
+            |   // restart stopped processes
+            | };
+            | document.addEventListener('freeze', prepareForFreeze);
+            | document.addEventListener('resume', reInitializeApp);
+
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/06/payment-handler-api') Payment Request API
+      ul
+        li Web standards-based method for accepting payments
+        li Easily plug in your own custom payment UI
+        pre
+          code
+            | const request = new PaymentRequest([{
+            |   supportedMethods: 'https://mysite.org/pay'
+            | }], {
+            |   total: {
+            |     amount: { value: '10', currency: 'USD' }
+            |   }
+            | });
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star Other features
+      ul
+        li Lots of 
+          a(href='https://developers.google.com/web/updates/2018/05/devtools') DevTools improvements
+        li Improved "
+          a(href='https://developers.google.com/web/updates/2018/07/nic68#a2hs') Add to Home Screen
+          | " behavior on Android
+        li Improved 
+          a(href='https://developers.google.com/web/updates/2018/06/fresher-sw') cache handling
+          |  for service workers
+        li And finally... unprefixed 
+          a(href='https://www.chromestatus.com/feature/5575087101050880') "grab" and "grabbing"
+          |  cursor CSS values
+        
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+  
+    section.slide
+      h2 TypeScript 3.0
+      img(src='../../shared/resources/images/typescript-logo.jpg', class='corner-image', width='200px', alt='TypeScript')
+      p
+        a(href='https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/') Released 
+        |  July 20th
+      ul
+        li Project references and new 
+          span.code --build
+          |  mode
+        li Richer tuple support
+        li Support for JSX 
+          span.code defaultProps
+        li Improved error handling &amp; editor features
+        li 
+          strong NOTE:
+          |   There are a few 
+          a(href='https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/#breaking-changes') breaking changes
+
+    section.slide
+      h2 Fusion.js
+      blockquote An open source boilerplate to build a modern, non-trivial web app
+      p 
+        a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') Announced 
+        |  August 1st
+      ul
+        li Maintained by the Uber Engineering team
+        li Built for React/Redux, with plugin-based extensibility
+        li Presets for HMR, SSR, bundle-splitting, etc.
+        li Support for typed dependency injection
+      p Learn more 
+        a(href='https://fusionjs.com/') on Github
+
+    section.slide
+      h2 Dart 2
+      img(src='../../shared/resources/images/dart-logo.png', class='corner-image', width='200px', alt='Dart')
+      p 
+        a(href='https://medium.com/dartlang/dart-2-stable-and-the-dart-web-platform-3775d5f8eac7') Released 
+        |  August 7th
+      ul
+        li "The rebirth of Dart as a mainstream programming language"
+        li Foundation for 
+          a(href='https://flutter.io/') Flutter
+          |  (beta mobile framework)
+        li 
+          a(href='https://www.dartlang.org/guides/language/sound-dart') Statically typed
+          |  (but with type inference and generics)
+        li Compiles to JS (web) or native ARM/x86 (mobile)
+        li 
+          a(href='https://webdev.dartlang.org/angular') AngularDart
+          | : "Angular-inspired" web UI framework
+        li Library of 
+          a(href='https://dart-lang.github.io/angular_components_example/') Material UI components
+
+    section.slide
+      h2 Vue CLI 3.0
+      img(src='../../shared/resources/images/vue-logo.png', class='corner-image', width='200px', alt='Vue')
+      p 
+        a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') Released 
+        |  August 10th
+      ul
+        li Pre-configured (+configurable) webpack 4 build system
+        li ES2017+ support
+        li PostCSS + autoprefixer enabled
+        li
+          a(href='https://cli.vuejs.org/guide/build-targets.html#app') Build targets
+        li
+          a(href='https://cli.vuejs.org/guide/browser-compatibility.html#usebuiltins-usage') "Modern Mode"
+        li Plugins for Vuex, TypeScript, PWA, Jest, Prettier, etc.
+        li 
+          a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') And lots more!
+        
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 23+ Node.js Security Best Practices
+      p Just for Node.js night at BEW :)
+      ul
+        li It's a subset of 
+          a(href='https://github.com/i0natan/nodebestpractices') this list
+          |  of 80+ general Node best practices
+        li Covers OWASP top 10, plus 40 general tips
+        li Too much to list here&mdash;
+          a(href='https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d') go read it
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+    //-   .content
+    //-     h1 Industry<br>Headlines
+    //-   .shim(style='background-color:#393;opacity:.7;')
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 The Cost of JavaScript
+      blockquote Overview of current JS performance recommendations
+      ul
+        li Audit and trim JS bundles, including imported libs
+        li Focus on "time-to-interactive"
+        li Keep total JS budget per page 
+          a(href='https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/') &lt;170K minified/compressed
+      p Read 
+        a(href='https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4') the full report
+        |  for more tips and tricks
+
+    section.slide
+      h2 JS13K is Back
+      img(src='./images/js13k.png', class='corner-image', width='200px', alt='JS13K')
+      blockquote HTML5 and JavaScript game development competition in just 13K of code
+      ul
+        li Zipped code must be &lt;= 13,312 bytes (self-contained)
+        li Categories: desktop, mobile, server &amp; VR
+        li Deadline is 
+          strong September 13th
+          | &mdash;win prizes!
+      p 
+        a(href='https://blog.github.com/2018-08-09-create-a-13kb-javascript-game-in-30-days-with-js13kgames/') Find out more
+        | , or play last year's 
+        a(href='http://js13kgames.com/games/greeble/index.html') winning game
+      
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2 Read Minds Using JS
+      ul
+        li First, buy a 
+          a(href='http://www.choosemuse.com/') Muse headband
+          |  or an 
+          a(href='https://www.emotiv.com/') Emotiv EEG headset
+        li Then choose a   
+          a(href='https://blog.bitsrc.io/7-javascript-eeg-mind-reading-libraries-for-2018-9a8e28544cd7') JavaScript lib
+          |  that can talk to it
+        br
+        img(src='./images/muse-js.gif', alt='Muse-js')
+
+    //----------------------  Fin  ----------------------
+    
+    se
+    ction.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
