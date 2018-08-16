@@ -73,7 +73,7 @@
     </section>
     <section class="slide">
       <h2>Browser Pop Quiz</h2>
-      <h3>Last check — June 21, 2018:</h3>
+      <h3>Last check — July 19, 2018:</h3>
       <table class="browsers">
         <tr>
           <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -91,7 +91,7 @@
     </section>
     <section class="slide">
       <h2>Browser Pop Quiz</h2>
-      <h3>As of July 19, 2018:</h3>
+      <h3>As of August 16, 2018:</h3>
       <table class="browsers">
         <tr>
           <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
@@ -100,21 +100,60 @@
           <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
         </tr>
         <tr>
-          <td class="ver">67</td>
-          <td class="ver"><span class="strike dim">60</span><br><strong style="color:#1CA727">61</strong></td>
+          <td class="ver"> <span class="strike dim">67</span><br><strong style="color:#1CA727">68</strong></td>
+          <td class="ver">61</td>
           <td class="ver">17</td>
           <td class="ver">12</td>
         </tr>
       </table>
     </section>
     <section class="slide">
-      <h2>Firefox 61</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
-      <p>Released June 26th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/61">Release Notes</a></p>
-      <h3 class="star">New APIs</h3>
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Released July 25th —<a href="https://developers.google.com/web/updates/2018/07/nic68">Release Notes</a></p>
+      <h3 class="star">HTTP is out!</h3>
       <ul>
-        <li> <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming">PerformanceServerTiming</a></span></li>
-        <li>String.prototype <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart">trimStart</a></span> and <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd">trimEnd</a></span></li>
-        <li>Lots of new CSS properties and other minor APIs</li>
+        <li>Any sites still using HTTP will be <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">marked as insecure</a></li>
+        <li>Make sure to switch to <strong>HTTPS</strong></li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star"> <a href="https://developers.google.com/web/updates/2018/07/page-lifecycle-api">Page LifeCycle API</a></h3>
+      <ul>
+        <li>Applies to background tabs</li>
+        <pre><code>const prepareForFreeze = () => {
+  // stop timers, close DB connections, etc.
+};
+const reInitializeApp = () => {
+  // restart stopped processes
+};
+document.addEventListener('freeze', prepareForFreeze);
+document.addEventListener('resume', reInitializeApp);</code></pre>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star"> <a href="https://developers.google.com/web/updates/2018/06/payment-handler-api">Payment Request API</a></h3>
+      <ul>
+        <li>Web standards-based method for accepting payments</li>
+        <li>Easily plug in your own custom payment UI</li>
+        <pre><code>const request = new PaymentRequest([{
+  supportedMethods: 'https://mysite.org/pay'
+}], {
+  total: {
+    amount: { value: '10', currency: 'USD' }
+  }
+});</code></pre>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 68</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star">Other features</h3>
+      <ul>
+        <li>Lots of <a href="https://developers.google.com/web/updates/2018/05/devtools">DevTools improvements</a></li>
+        <li>Improved "<a href="https://developers.google.com/web/updates/2018/07/nic68#a2hs">Add to Home Screen</a>" behavior on Android</li>
+        <li>Improved <a href="https://developers.google.com/web/updates/2018/06/fresher-sw">cache handling</a> for service workers</li>
+        <li>And finally... unprefixed <a href="https://www.chromestatus.com/feature/5575087101050880">"grab" and "grabbing"</a> cursor CSS values</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
@@ -123,7 +162,7 @@
     </section>
     <section class="slide">
       <h2>TypeScript 3.0</h2><img class="corner-image" src="../../shared/resources/images/typescript-logo.jpg" width="200px" alt="TypeScript">
-      <p><a href="https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/">Released </a>July 20th</p>
+      <p><a href="https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/">Released </a> July 20th</p>
       <ul>
         <li>Project references and new <span class="code">--build</span> mode</li>
         <li>Richer tuple support</li>
@@ -133,8 +172,32 @@
       </ul>
     </section>
     <section class="slide">
+      <h2>Fusion.js</h2>
+      <blockquote>An open source boilerplate to build a modern, non-trivial web app</blockquote>
+      <p> <a href="https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb">Announced </a> August 1st</p>
+      <ul>
+        <li>Maintained by the Uber Engineering team</li>
+        <li>Built for React/Redux, with plugin-based extensibility</li>
+        <li>Presets for HMR, SSR, bundle-splitting, etc.</li>
+        <li>Support for typed dependency injection</li>
+      </ul>
+      <p>Learn more <a href="https://fusionjs.com/">on Github</a></p>
+    </section>
+    <section class="slide">
+      <h2>Dart 2</h2><img class="corner-image" src="../../shared/resources/images/dart-logo.png" width="200px" alt="Dart">
+      <p> <a href="https://medium.com/dartlang/dart-2-stable-and-the-dart-web-platform-3775d5f8eac7">Released </a> August 7th</p>
+      <ul>
+        <li>"The rebirth of Dart as a mainstream programming language"</li>
+        <li>Foundation for <a href="https://flutter.io/">Flutter</a> (beta mobile framework)</li>
+        <li> <a href="https://www.dartlang.org/guides/language/sound-dart">Statically typed</a> (but with type inference and generics)</li>
+        <li>Compiles to JS (web) or native ARM/x86 (mobile)</li>
+        <li> <a href="https://webdev.dartlang.org/angular">AngularDart</a>: "Angular-inspired" web UI framework</li>
+        <li>Library of <a href="https://dart-lang.github.io/angular_components_example/">Material UI components</a></li>
+      </ul>
+    </section>
+    <section class="slide">
       <h2>Vue CLI 3.0</h2><img class="corner-image" src="../../shared/resources/images/vue-logo.png" width="200px" alt="Vue">
-      <p> <a href="https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb">Released </a>August 10th</p>
+      <p> <a href="https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb">Released </a> August 10th</p>
       <ul>
         <li>Pre-configured (+configurable) webpack 4 build system</li>
         <li>ES2017+ support</li>
@@ -151,11 +214,14 @@
       </div>
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
     </section>
-    <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
-      <div class="content">
-        <h1>Industry<br>Headlines</h1>
-      </div>
-      <div class="shim" style="background-color:#393;opacity:.7;"></div>
+    <section class="slide">
+      <h2>23+ Node.js Security Best Practices</h2>
+      <p>Just for Node.js night at BEW :)</p>
+      <ul>
+        <li>It's a subset of <a href="https://github.com/i0natan/nodebestpractices">this list</a> of 80+ general Node best practices</li>
+        <li>Covers OWASP top 10, plus 40 general tips</li>
+        <li>Too much to list here&mdash;<a href="https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d">go read it</a></li>
+      </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
       <div class="content">
@@ -163,8 +229,35 @@
       </div>
       <div class="shim" style="background-color:#555;opacity:.7;"></div>
     </section>
+    <section class="slide">
+      <h2>The Cost of JavaScript</h2>
+      <blockquote>Overview of current JS performance recommendations</blockquote>
+      <ul>
+        <li>Audit and trim JS bundles, including imported libs</li>
+        <li>Focus on "time-to-interactive"</li>
+        <li>Keep total JS budget per page <a href="https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/">&lt;170K minified/compressed</a></li>
+      </ul>
+      <p>Read <a href="https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4">the full report</a> for more tips and tricks</p>
+    </section>
+    <section class="slide">
+      <h2>JS13K is Back</h2><img class="corner-image" src="./images/js13k.png" width="200px" alt="JS13K">
+      <blockquote>HTML5 and JavaScript game development competition in just 13K of code</blockquote>
+      <ul>
+        <li>Zipped code must be &lt;= 13,312 bytes (self-contained)</li>
+        <li>Categories: desktop, mobile, server &amp; VR</li>
+        <li>Deadline is <strong>September 13th</strong>&mdash;win prizes!</li>
+      </ul>
+      <p> <a href="https://blog.github.com/2018-08-09-create-a-13kb-javascript-game-in-30-days-with-js13kgames/">Find out more</a>, or play last year's <a href="http://js13kgames.com/games/greeble/index.html">winning game</a></p>
+    </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
+    </section>
+    <section class="slide">
+      <h2>Read Minds Using JS</h2>
+      <ul>
+        <li>First, buy a <a href="http://www.choosemuse.com/">Muse headband</a> or an <a href="https://www.emotiv.com/">Emotiv EEG headset</a></li>
+        <li>Then choose a   <a href="https://blog.bitsrc.io/7-javascript-eeg-mind-reading-libraries-for-2018-9a8e28544cd7">JavaScript lib</a> that can talk to it</li><br><img src="./images/muse-js.gif" alt="Muse-js">
+      </ul>
     </section>
     <se></se>
     <ction class="slide">

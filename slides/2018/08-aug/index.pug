@@ -112,7 +112,7 @@ html
     
     section.slide
       h2 Browser Pop Quiz
-      h3 Last check — June 21, 2018:
+      h3 Last check — July 19, 2018:
       table.browsers
         tr
           td(width='25%')
@@ -131,7 +131,7 @@ html
     
     section.slide
       h2 Browser Pop Quiz
-      h3 As of July 19, 2018:
+      h3 As of August 16, 2018:
       table.browsers
         tr
           td(width='25%')
@@ -143,32 +143,78 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 67
-          td.ver
-            span.strike.dim 60
+          td.ver 
+            span.strike.dim 67
             br
-            strong(style='color:#1CA727') 61
+            strong(style='color:#1CA727') 68
+          td.ver 61
           td.ver 17
           td.ver 12
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released July 25th —
+        a(href='https://developers.google.com/web/updates/2018/07/nic68') Release Notes
+      h3.star HTTP is out!
+      ul
+        li Any sites still using HTTP will be 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') marked as insecure
+        li Make sure to switch to 
+          strong HTTPS
 
     section.slide
-      h2 Firefox 61
-      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
-      p Released June 26th —
-        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/61') Release Notes
-      h3.star New APIs
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/07/page-lifecycle-api') Page LifeCycle API
       ul
-        li 
-          span.code
-            a(href='https://developer.mozilla.org/en-US/docs/Web/API/PerformanceServerTiming') PerformanceServerTiming
-        li String.prototype 
-          span.code
-            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart') trimStart
-          |  and 
-          span.code
-            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd') trimEnd
-        li Lots of new CSS properties and other minor APIs
+        li Applies to background tabs
+        pre
+          code
+            | const prepareForFreeze = () => {
+            |   // stop timers, close DB connections, etc.
+            | };
+            | const reInitializeApp = () => {
+            |   // restart stopped processes
+            | };
+            | document.addEventListener('freeze', prepareForFreeze);
+            | document.addEventListener('resume', reInitializeApp);
 
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/06/payment-handler-api') Payment Request API
+      ul
+        li Web standards-based method for accepting payments
+        li Easily plug in your own custom payment UI
+        pre
+          code
+            | const request = new PaymentRequest([{
+            |   supportedMethods: 'https://mysite.org/pay'
+            | }], {
+            |   total: {
+            |     amount: { value: '10', currency: 'USD' }
+            |   }
+            | });
+    
+    section.slide
+      h2 Chrome 68
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star Other features
+      ul
+        li Lots of 
+          a(href='https://developers.google.com/web/updates/2018/05/devtools') DevTools improvements
+        li Improved "
+          a(href='https://developers.google.com/web/updates/2018/07/nic68#a2hs') Add to Home Screen
+          | " behavior on Android
+        li Improved 
+          a(href='https://developers.google.com/web/updates/2018/06/fresher-sw') cache handling
+          |  for service workers
+        li And finally... unprefixed 
+          a(href='https://www.chromestatus.com/feature/5575087101050880') "grab" and "grabbing"
+          |  cursor CSS values
         
 
     //----------------------  Libs & Frameworks  ----------------------
@@ -181,8 +227,8 @@ html
       h2 TypeScript 3.0
       img(src='../../shared/resources/images/typescript-logo.jpg', class='corner-image', width='200px', alt='TypeScript')
       p
-        a(href="https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/") Released 
-        | July 20th
+        a(href='https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/') Released 
+        |  July 20th
       ul
         li Project references and new 
           span.code --build
@@ -194,26 +240,61 @@ html
         li 
           strong NOTE:
           |   There are a few 
-          a(href="https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/#breaking-changes") breaking changes
+          a(href='https://blogs.msdn.microsoft.com/typescript/2018/07/30/announcing-typescript-3-0/#breaking-changes') breaking changes
+
+    section.slide
+      h2 Fusion.js
+      blockquote An open source boilerplate to build a modern, non-trivial web app
+      p 
+        a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') Announced 
+        |  August 1st
+      ul
+        li Maintained by the Uber Engineering team
+        li Built for React/Redux, with plugin-based extensibility
+        li Presets for HMR, SSR, bundle-splitting, etc.
+        li Support for typed dependency injection
+      p Learn more 
+        a(href='https://fusionjs.com/') on Github
+
+    section.slide
+      h2 Dart 2
+      img(src='../../shared/resources/images/dart-logo.png', class='corner-image', width='200px', alt='Dart')
+      p 
+        a(href='https://medium.com/dartlang/dart-2-stable-and-the-dart-web-platform-3775d5f8eac7') Released 
+        |  August 7th
+      ul
+        li "The rebirth of Dart as a mainstream programming language"
+        li Foundation for 
+          a(href='https://flutter.io/') Flutter
+          |  (beta mobile framework)
+        li 
+          a(href='https://www.dartlang.org/guides/language/sound-dart') Statically typed
+          |  (but with type inference and generics)
+        li Compiles to JS (web) or native ARM/x86 (mobile)
+        li 
+          a(href='https://webdev.dartlang.org/angular') AngularDart
+          | : "Angular-inspired" web UI framework
+        li Library of 
+          a(href='https://dart-lang.github.io/angular_components_example/') Material UI components
 
     section.slide
       h2 Vue CLI 3.0
       img(src='../../shared/resources/images/vue-logo.png', class='corner-image', width='200px', alt='Vue')
       p 
-        a(href="https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb") Released 
-        | August 10th
+        a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') Released 
+        |  August 10th
       ul
         li Pre-configured (+configurable) webpack 4 build system
         li ES2017+ support
         li PostCSS + autoprefixer enabled
         li
-          a(href="https://cli.vuejs.org/guide/build-targets.html#app") Build targets
+          a(href='https://cli.vuejs.org/guide/build-targets.html#app') Build targets
         li
-          a(href="https://cli.vuejs.org/guide/browser-compatibility.html#usebuiltins-usage") "Modern Mode"
+          a(href='https://cli.vuejs.org/guide/browser-compatibility.html#usebuiltins-usage') "Modern Mode"
         li Plugins for Vuex, TypeScript, PWA, Jest, Prettier, etc.
         li 
-          a(href="https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb") And lots more!
-
+          a(href='https://medium.com/the-vue-point/vue-cli-3-0-is-here-c42bebe28fbb') And lots more!
+        
 
     //----------------------  Security  ----------------------
     
@@ -222,15 +303,24 @@ html
         h1 Security
       .shim(style='background-color:#c11;opacity:.7;')
   
+    section.slide
+      h2 23+ Node.js Security Best Practices
+      p Just for Node.js night at BEW :)
+      ul
+        li It's a subset of 
+          a(href='https://github.com/i0natan/nodebestpractices') this list
+          |  of 80+ general Node best practices
+        li Covers OWASP top 10, plus 40 general tips
+        li Too much to list here&mdash;
+          a(href='https://medium.com/@nodepractices/were-under-attack-23-node-js-security-best-practices-e33c146cb87d') go read it
 
     
     //----------------------  Industry Headlines  ----------------------
 
-    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
-      .content
-        h1 Industry<br>Headlines
-      .shim(style='background-color:#393;opacity:.7;')
-
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+    //-   .content
+    //-     h1 Industry<br>Headlines
+    //-   .shim(style='background-color:#393;opacity:.7;')
 
 
     //----------------------  ICYMI  ----------------------
@@ -240,6 +330,33 @@ html
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
 
+    section.slide
+      h2 The Cost of JavaScript
+      blockquote Overview of current JS performance recommendations
+      ul
+        li Audit and trim JS bundles, including imported libs
+        li Focus on "time-to-interactive"
+        li Keep total JS budget per page 
+          a(href='https://infrequently.org/2017/10/can-you-afford-it-real-world-web-performance-budgets/') &lt;170K minified/compressed
+      p Read 
+        a(href='https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4') the full report
+        |  for more tips and tricks
+
+    section.slide
+      h2 JS13K is Back
+      img(src='./images/js13k.png', class='corner-image', width='200px', alt='JS13K')
+      blockquote HTML5 and JavaScript game development competition in just 13K of code
+      ul
+        li Zipped code must be &lt;= 13,312 bytes (self-contained)
+        li Categories: desktop, mobile, server &amp; VR
+        li Deadline is 
+          strong September 13th
+          | &mdash;win prizes!
+      p 
+        a(href='https://blog.github.com/2018-08-09-create-a-13kb-javascript-game-in-30-days-with-js13kgames/') Find out more
+        | , or play last year's 
+        a(href='http://js13kgames.com/games/greeble/index.html') winning game
+      
 
 
     //----------------------  Something Completely Different  ----------------------
@@ -247,7 +364,18 @@ html
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
       h1 And now for something completely different...
 
-    
+    section.slide
+      h2 Read Minds Using JS
+      ul
+        li First, buy a 
+          a(href='http://www.choosemuse.com/') Muse headband
+          |  or an 
+          a(href='https://www.emotiv.com/') Emotiv EEG headset
+        li Then choose a   
+          a(href='https://blog.bitsrc.io/7-javascript-eeg-mind-reading-libraries-for-2018-9a8e28544cd7') JavaScript lib
+          |  that can talk to it
+        br
+        img(src='./images/muse-js.gif', alt='Muse-js')
 
     //----------------------  Fin  ----------------------
     
