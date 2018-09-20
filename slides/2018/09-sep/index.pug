@@ -126,7 +126,7 @@ html
     
     section.slide
       h2 Browser Pop Quiz
-      h3 As of August 16, 2018:
+      h3 As of September 20, 2018:
       table.browsers
         tr
           td(width='25%')
@@ -139,25 +139,116 @@ html
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
           td.ver 
-            span.strike.dim 67
+            span.strike.dim 68
             br
-            strong(style='color:#1CA727') 68
-          td.ver 61
+            strong(style='color:#1CA727') 69
+          td.ver
+            span.strike.dim 61
+            br
+            strong(style='color:#1CA727') 62
           td.ver 17
           td.ver 12
     
     section.slide
-      h2 Chrome 68
+      h2 Chrome 69
       img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
-      p Released July 25th —
+      p Released September 5th —
         a(href='https://developers.google.com/web/updates/2018/07/nic68') Release Notes
-      h3.star HTTP is out!
+      h3.star UI Refresh
       ul
-        li Any sites still using HTTP will be 
-          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') marked as insecure
-        li Make sure to switch to 
-          strong HTTPS
-        
+        li Optimized for mobile and Material UI
+        li The jury is still out...
+      img(src='./images/chrome-new-ui.png', alt='Chrome 69 UI')
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/07/css-scroll-snap') CSS Scroll Snap
+      ul
+        li Provides optimized scroll element positioning
+        li Silky smooth carousel transitions
+      pre
+        code.language-css
+          | #gallery {
+          |   scroll-snap-type: x mandatory;
+          |   overflow-x: scroll;
+          | }
+          | #gallery img {
+          |   scroll-snap-align: center;
+          | }
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#notch') Display Cutout (aka "notch") Support
+      ul
+        li Browsers reserve "safe area" margins by default
+        li Use entire UI with 
+          span.code viewport-fit=cover
+          |  + 
+          span.code safe-area-inset-*
+      pre
+        code.language-css
+          | .content {
+          |   padding: 16px;
+          |   padding-left: env(safe-area-inset-left);
+          |   padding-right: env(safe-area-inset-right);
+          | }
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#web-locks') Web Locks API
+      ul
+        li Used to coordinate access to shared resources
+        li Subsequent requests are blocked/queued
+      pre
+        code.language-javascript
+          | navigator.locks.request('db_sync_lock', async lock => {
+          |   // The lock has been acquired.
+          |   await do_something();
+          |   await do_something_else();
+          |   // Now the lock will be released.
+          | });
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#more') Minor Features
+      ul
+        li Render CSS4 
+          a(href='https://www.w3.org/TR/css-images-4/#gradients') conic gradients
+        li Support for  
+          span.code toggleAttribute()
+        li Added 
+          span.code Array.flat
+          |  &amp; 
+          span.code Array.flatMap
+          | &mdash;NOT 
+          span.code 
+            a(href='https://developers.google.com/web/updates/2018/03/smooshgate') Array.smoosh
+  
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 New<br>Browsers
+      .shim(style='background-color:#369;opacity:.8;')
+
+    section.slide
+      h2 Firefox Reality 1.0
+      img(src='./images/ff-reality.png', class='corner-image', width='200px', alt='Firefox Reality')
+      p
+        a(href='https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/') Released
+        |  September 18th 
+      ul
+        li Designed ground-up for "mixed reality"
+        li Voice search, private browsing, 
+          a(href='https://github.com/MozillaReality/FirefoxReality') open source
+        li Available now for Vive, Oculus and Daydream
+      img(src='./images/ff-reality-preview.gif', width='600px', alt='Firefox Reality Preview')
 
     //----------------------  Libs & Frameworks  ----------------------
     
@@ -165,6 +256,30 @@ html
       h1 Languages, Libraries &amp;<br>Frameworks
       .shim(style='background-color:#AD7909;opacity:.8;')
   
+    section.slide
+      h2 Babel 7.0
+      img(src='../../shared/resources/images/babel-logo.svg', class='corner-image', width='200px', alt='Babel')
+      p
+        a(href='https://babeljs.io/blog/2018/08/27/7.0.0') Released 
+        |  August 27th
+      ul
+        li Almost 3 years and 4k commits
+        li See the 
+          a(href='http://babeljs.io/docs/en/next/v7-migration') upgrade guide
+          |  and 
+          span.code 
+            a(href='https://github.com/babel/babel-upgrade') babel-upgrade
+        li TC39 proposal support (
+          a(href='https://babeljs.io/blog/2018/07/27/removing-babels-stage-presets') instead of stage presets
+          | )
+        li Support for TypeScript &amp; JSX fragments
+        li Experimental auto-polyfilling
+        li Fixed support for 
+          a(href='https://github.com/babel/babel/issues/4480') extending built-in classes
+        li And lots, lots 
+          a(href='https://babeljs.io/blog/2018/08/27/7.0.0') more
+          | !
+
 
     //----------------------  Security  ----------------------
     
@@ -189,6 +304,17 @@ html
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
 
+    section.slide
+      h2 Look Who's Turning 10
+      p Chrome and V8 launched on Sept 2, 2008
+      ul
+        li Here's the 
+          a(href='https://chromium.googlesource.com/v8/v8/+/43d26ecc3563a46f62a0224030667c8f8f3f6ceb') initial commit
+          |  from July 3, 2008
+        li This 
+          a(href='https://blog.chromium.org/2008/09/welcome-to-chromium_02.html') blog post
+          |  gives a nice history
+      img(src='./images/10-cake.jpg', width='600px', alt='Cake')
 
     //----------------------  Something Completely Different  ----------------------
     
@@ -198,8 +324,7 @@ html
 
     //----------------------  Fin  ----------------------
     
-    se
-    ction.slide
+    section.slide
       h2 Thanks!
       h3
         a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
