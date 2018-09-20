@@ -280,6 +280,31 @@ html
           a(href='https://babeljs.io/blog/2018/08/27/7.0.0') more
           | !
 
+    section.slide
+      h2 Gatsby 2.0
+      img(src='./images/gatsby-logo.png', class='corner-image', width='200px', alt='Gatsby')
+      blockquote Build blazing fast, modern websites with React
+      p
+        a(href='https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/') Released 
+        |  September 17th
+      ul
+        li Data source + React / CSS + static hosting
+        li Faster builds, 31% smaller runtime
+        li React 16, webpack 4, Babel 7
+        li GraphQL, "ludicrous mode" hot reloading
+        li And more, 
+          a(href='https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/') check it out
+
+    section.slide
+      h2 Electron 3.0
+      img(src='../../shared/resources/images/electron-logo.jpg', class='corner-image', width='200px', alt='Electron')
+      p
+        a(href='https://electronjs.org/blog/electron-3-0') Released 
+        |  September 18th
+      ul
+        li Updated with Chrome 66, Node 10.2, V8 6.6
+        li Lots of new features and fixes
+        li Note the breaking API changes!
 
     //----------------------  Security  ----------------------
     
@@ -321,6 +346,24 @@ html
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
       h1 And now for something completely different...
 
+    section.slide
+      h2 WWWBasic
+      blockquote BASIC designed to be easy to run on the Web
+      p Written by Google ¯\_(ツ)_/¯ (
+        a(href='https://google.github.io/wwwbasic/examples/donkey.html') demo
+        |   | 
+        a(href='https://raw.githubusercontent.com/coding-horror/donkey.bas/master/donkey.bas') source
+        | )
+      pre
+        code.language-javascript
+          | var basic = require('wwwbasic'); // from NPM
+          | basic.Basic(
+          | `
+          | PRINT "Hello Bleeding Edge!"
+          | FOR i = 1 to 10
+          |   PRINT "I can count to "; i
+          | NEXT i
+          | `);
 
     //----------------------  Fin  ----------------------
     
