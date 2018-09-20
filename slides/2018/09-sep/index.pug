@@ -223,15 +223,52 @@ html
         li Render CSS4 
           a(href='https://www.w3.org/TR/css-images-4/#gradients') conic gradients
         li Support for  
-          span.code toggleAttribute()
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute') toggleAttribute()
         li Added 
-          span.code Array.flat
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat') Array.flat
           |  &amp; 
-          span.code Array.flatMap
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap') Array.flatMap
           | &mdash;NOT 
           span.code 
             a(href='https://developers.google.com/web/updates/2018/03/smooshgate') Array.smoosh
   
+    section.slide
+      h2 Firefox 62
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released September 5th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/62') Release Notes
+      h3.star New JS APIs
+      ul
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat') Array.flat
+          |  &amp; 
+          span.code 
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap') Array.flatMap
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global') WebAssembly.Global
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta') import.meta
+        pre
+          code.language-javascript
+            | console.log(import.meta);
+            | // { url: "file:///home/user/my-module.js" }
+
+    section.slide
+      h2 Firefox 62
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Lots of Minor Updates
+      ul
+        li DOM, CSS, devtools additions
+        li Check the 
+          a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/62') release notes
+          |  for details
+
     section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
       .content
         h1 New<br>Browsers
@@ -256,6 +293,25 @@ html
       h1 Languages, Libraries &amp;<br>Frameworks
       .shim(style='background-color:#AD7909;opacity:.8;')
   
+    section.slide
+      h2 Johnny-Five 1.0
+      img(src='./images/johnny-five-logo.png', class='corner-image', width='200px', alt='Johnny-Five')
+      blockquote The JavaScript Robotics Programming Framework
+      p
+        a(href='http://johnny-five.io/news/v1_0/') Released 
+        |  August 23rd
+      ul
+        li Control anything from Arduino to XBox
+      pre
+        code.language-javascript
+          | var five = require("johnny-five");
+          | var board = new five.Board();
+          | 
+          | board.on("ready", function() {
+          |   var led = new five.Led(13); // pin 13
+          |   led.blink(500);
+          | });
+
     section.slide
       h2 Babel 7.0
       img(src='../../shared/resources/images/babel-logo.svg', class='corner-image', width='200px', alt='Babel')
@@ -306,20 +362,48 @@ html
         li Lots of new features and fixes
         li Note the breaking API changes!
 
+    section.slide
+      h2 Ky
+      img(src='./images/ky-logo.png', class='corner-image', width='200px', alt='Ky')
+      blockquote Tiny and elegant HTTP client based on the browser Fetch API
+      p
+        a(href='https://github.com/sindresorhus/ky') Released 
+        |  September 4th
+      ul
+        li Written by 
+          a(href='https://github.com/sindresorhus') Sindre Sorhus
+        li Simpler than 
+          span.code fetch
+          |  with helpful defaults
+        li Timeout, retry support
+        li JSON, hooks, HTTP method shortcuts
+
+
     //----------------------  Security  ----------------------
     
-    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
-      .content
-        h1 Security
-      .shim(style='background-color:#c11;opacity:.7;')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+    //-   .content
+    //-     h1 Security
+    //-   .shim(style='background-color:#c11;opacity:.7;')
   
     
     //----------------------  Industry Headlines  ----------------------
 
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
-    //-   .content
-    //-     h1 Industry<br>Headlines
-    //-   .shim(style='background-color:#393;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 Azure Outage Sept. 4th
+      blockquote It was the longest outage for customers in our 7-year history
+      ul
+        li Everything, including the statue page, was down for ~21 hours
+        li Cascading failures, due to electrical storms in Texas
+        li Read the full 
+          a(href='https://blogs.msdn.microsoft.com/vsoservice/?p=17485') post-morten
+      img(src='./images/azure-status.png', width='700px', alt='Azure Status')
+
 
 
     //----------------------  ICYMI  ----------------------
@@ -328,6 +412,17 @@ html
       .content
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 State of JS 2018 Survey
+      blockquote Annual state of the JavaScript ecosystem, by developers
+      ul
+        li Check out 
+          a(href='http://2017.stateofjs.com/') last year's results
+        li
+          a(href='https://stateofjs.com/') Take the current survey
+        li We'll review the results later!
+      img(src='./images/state-of-js.png', width='600px', alt='State of JS')
 
     section.slide
       h2 Look Who's Turning 10
