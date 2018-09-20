@@ -1,0 +1,513 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: September 2018
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: September 2018
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+      //- h3.star Lightning Talks
+      //- p.indent &mdash; Intro to Elasticsearch (Hugo Martinez)
+      h3.star Testing Big in JavaScript
+      p.indent
+        | &mdash; Robert DeLuca (
+        a(href='https://twitter.com/robdel12') @robdel12
+        | )
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    //- section.slide.cover(style='background:#fff;')
+    //-   p(style='color: #555;') Thanks to our premiere sponsor:
+    //-   div(style='text-align:center;padding-top:150px;font-size:200%;')
+    //-     p
+    //-       a(href='https://#')
+    //-         img(style='min-width:70%', src='./images/lightly.jpg', alt='')
+    
+    section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+      p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors always wanted (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Parking has changed... again!
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: August 16, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 68
+          td.ver 61
+          td.ver 17
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of September 20, 2018:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 68
+            br
+            strong(style='color:#1CA727') 69
+          td.ver
+            span.strike.dim 61
+            br
+            strong(style='color:#1CA727') 62
+          td.ver 17
+          td.ver 12
+    
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released September 5th —
+        a(href='https://developers.google.com/web/updates/2018/07/nic68') Release Notes
+      h3.star UI Refresh
+      ul
+        li Optimized for mobile and Material UI
+        li The jury is still out...
+      img(src='./images/chrome-new-ui.png', alt='Chrome 69 UI')
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/07/css-scroll-snap') CSS Scroll Snap
+      ul
+        li Provides optimized scroll element positioning
+        li Silky smooth carousel transitions
+      pre
+        code.language-css
+          | #gallery {
+          |   scroll-snap-type: x mandatory;
+          |   overflow-x: scroll;
+          | }
+          | #gallery img {
+          |   scroll-snap-align: center;
+          | }
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#notch') Display Cutout (aka "notch") Support
+      ul
+        li Browsers reserve "safe area" margins by default
+        li Use entire UI with 
+          span.code viewport-fit=cover
+          |  + 
+          span.code safe-area-inset-*
+      pre
+        code.language-css
+          | .content {
+          |   padding: 16px;
+          |   padding-left: env(safe-area-inset-left);
+          |   padding-right: env(safe-area-inset-right);
+          | }
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#web-locks') Web Locks API
+      ul
+        li Used to coordinate access to shared resources
+        li Subsequent requests are blocked/queued
+      pre
+        code.language-javascript
+          | navigator.locks.request('db_sync_lock', async lock => {
+          |   // The lock has been acquired.
+          |   await do_something();
+          |   await do_something_else();
+          |   // Now the lock will be released.
+          | });
+
+    section.slide
+      h2 Chrome 69
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/09/nic69#more') Minor Features
+      ul
+        li Render CSS4 
+          a(href='https://www.w3.org/TR/css-images-4/#gradients') conic gradients
+        li Support for  
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute') toggleAttribute()
+        li Added 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat') Array.flat
+          |  &amp; 
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap') Array.flatMap
+          | &mdash;NOT 
+          span.code 
+            a(href='https://developers.google.com/web/updates/2018/03/smooshgate') Array.smoosh
+  
+    section.slide
+      h2 Firefox 62
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released September 5th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/62') Release Notes
+      h3.star New JS APIs
+      ul
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat') Array.flat
+          |  &amp; 
+          span.code 
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap') Array.flatMap
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global') WebAssembly.Global
+        li
+          span.code
+            a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta') import.meta
+        pre
+          code.language-javascript
+            | console.log(import.meta);
+            | // { url: "file:///home/user/my-module.js" }
+
+    section.slide
+      h2 Firefox 62
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Lots of Minor Updates
+      ul
+        li DOM, CSS, devtools additions
+        li Check the 
+          a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/62') release notes
+          |  for details
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 New<br>Browsers
+      .shim(style='background-color:#369;opacity:.8;')
+
+    section.slide
+      h2 Firefox Reality 1.0
+      img(src='./images/ff-reality.png', class='corner-image', width='200px', alt='Firefox Reality')
+      p
+        a(href='https://blog.mozilla.org/blog/2018/09/18/firefox-reality-now-available/') Released
+        |  September 18th 
+      ul
+        li Designed ground-up for "mixed reality"
+        li Voice search, private browsing, 
+          a(href='https://github.com/MozillaReality/FirefoxReality') open source
+        li Available now for Vive, Oculus and Daydream
+      img(src='./images/ff-reality-preview.gif', width='600px', alt='Firefox Reality Preview')
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+  
+    section.slide
+      h2 Johnny-Five 1.0
+      img(src='./images/johnny-five-logo.png', class='corner-image', width='200px', alt='Johnny-Five')
+      blockquote The JavaScript Robotics Programming Framework
+      p
+        a(href='http://johnny-five.io/news/v1_0/') Released 
+        |  August 23rd
+      ul
+        li Control anything from Arduino to XBox
+      pre
+        code.language-javascript
+          | var five = require("johnny-five");
+          | var board = new five.Board();
+          | 
+          | board.on("ready", function() {
+          |   var led = new five.Led(13); // pin 13
+          |   led.blink(500);
+          | });
+
+    section.slide
+      h2 Babel 7.0
+      img(src='../../shared/resources/images/babel-logo.svg', class='corner-image', width='200px', alt='Babel')
+      p
+        a(href='https://babeljs.io/blog/2018/08/27/7.0.0') Released 
+        |  August 27th
+      ul
+        li Almost 3 years and 4k commits
+        li See the 
+          a(href='http://babeljs.io/docs/en/next/v7-migration') upgrade guide
+          |  and 
+          span.code 
+            a(href='https://github.com/babel/babel-upgrade') babel-upgrade
+        li TC39 proposal support (
+          a(href='https://babeljs.io/blog/2018/07/27/removing-babels-stage-presets') instead of stage presets
+          | )
+        li Support for TypeScript &amp; JSX fragments
+        li Experimental auto-polyfilling
+        li Fixed support for 
+          a(href='https://github.com/babel/babel/issues/4480') extending built-in classes
+        li And lots, lots 
+          a(href='https://babeljs.io/blog/2018/08/27/7.0.0') more
+          | !
+
+    section.slide
+      h2 Gatsby 2.0
+      img(src='./images/gatsby-logo.png', class='corner-image', width='200px', alt='Gatsby')
+      blockquote Build blazing fast, modern websites with React
+      p
+        a(href='https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/') Released 
+        |  September 17th
+      ul
+        li Data source + React / CSS + static hosting
+        li Faster builds, 31% smaller runtime
+        li React 16, webpack 4, Babel 7
+        li GraphQL, "ludicrous mode" hot reloading
+        li And more, 
+          a(href='https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/') check it out
+
+    section.slide
+      h2 Electron 3.0
+      img(src='../../shared/resources/images/electron-logo.jpg', class='corner-image', width='200px', alt='Electron')
+      p
+        a(href='https://electronjs.org/blog/electron-3-0') Released 
+        |  September 18th
+      ul
+        li Updated with Chrome 66, Node 10.2, V8 6.6
+        li Lots of new features and fixes
+        li Note the breaking API changes!
+
+    section.slide
+      h2 Ky
+      img(src='./images/ky-logo.png', class='corner-image', width='200px', alt='Ky')
+      blockquote Tiny and elegant HTTP client based on the browser Fetch API
+      p
+        a(href='https://github.com/sindresorhus/ky') Released 
+        |  September 4th
+      ul
+        li Written by 
+          a(href='https://github.com/sindresorhus') Sindre Sorhus
+        li Simpler than 
+          span.code fetch
+          |  with helpful defaults
+        li Timeout, retry support
+        li JSON, hooks, HTTP method shortcuts
+
+
+    //----------------------  Security  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+    //-   .content
+    //-     h1 Security
+    //-   .shim(style='background-color:#c11;opacity:.7;')
+  
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 Azure Outage Sept. 4th
+      blockquote It was the longest outage for customers in our 7-year history
+      ul
+        li Everything, including the statue page, was down for ~21 hours
+        li Cascading failures, due to electrical storms in Texas
+        li Read the full 
+          a(href='https://blogs.msdn.microsoft.com/vsoservice/?p=17485') post-morten
+      img(src='./images/azure-status.png', width='700px', alt='Azure Status')
+
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 State of JS 2018 Survey
+      blockquote Annual state of the JavaScript ecosystem, by developers
+      ul
+        li Check out 
+          a(href='http://2017.stateofjs.com/') last year's results
+        li
+          a(href='https://stateofjs.com/') Take the current survey
+        li We'll review the results later!
+      img(src='./images/state-of-js.png', width='600px', alt='State of JS')
+
+    section.slide
+      h2 Look Who's Turning 10
+      p Chrome and V8 launched on Sept 2, 2008
+      ul
+        li Here's the 
+          a(href='https://chromium.googlesource.com/v8/v8/+/43d26ecc3563a46f62a0224030667c8f8f3f6ceb') initial commit
+          |  from July 3, 2008
+        li This 
+          a(href='https://blog.chromium.org/2008/09/welcome-to-chromium_02.html') blog post
+          |  gives a nice history
+      img(src='./images/10-cake.jpg', width='600px', alt='Cake')
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2 WWWBasic
+      blockquote BASIC designed to be easy to run on the Web
+      p Written by Google ¯\_(ツ)_/¯ (
+        a(href='https://google.github.io/wwwbasic/examples/donkey.html') demo
+        |   | 
+        a(href='https://raw.githubusercontent.com/coding-horror/donkey.bas/master/donkey.bas') source
+        | )
+      pre
+        code.language-javascript
+          | var basic = require('wwwbasic'); // from NPM
+          | basic.Basic(
+          | `
+          | PRINT "Hello Bleeding Edge!"
+          | FOR i = 1 to 10
+          |   PRINT "I can count to "; i
+          | NEXT i
+          | `);
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
