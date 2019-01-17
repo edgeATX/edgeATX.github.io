@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>Bleeding Edge Web: January 2019</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" href="../../shared/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+  <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+  <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+
+  <!-- Required Modernizr file -->
+  <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+
+  <!-- Preety print -->
+  <script src="../../shared/prism/prism-okaidia.js"></script>
+  <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+
+  <!-- Custom theme, include last to allow easy overriding -->
+  <link rel="stylesheet" href="../../shared/themes/style/skew-dark.css">
+  <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  <style>
+    .highlightatx {
+      position: relative !important;
+    }
+
+    .highlightatx:after {
+      position: absolute !important;
+      top: 90px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 30px;
+      content: ' ';
+      border: 5px solid blue !important;
+    }
+  </style>
+</head>
+<body class="deck-container language-javascript">
+
+  <!-- - - - - - - - - - -  Main title  - - - - - - - - - - -->
+
+  <section class="slide cover home">
+    <h1>Bleeding Edge Web</h1>
+    <div class="shim" style="opacity:.5;"></div>
+  </section>
+
+  <!-- - - - - - - - - - -  Intro  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/popcorn.jpg)">
+    <div class="content">
+      <h1 style="font-size:2.5em;top:30%;"><a href="https://twitter.com/edgeatx">@EdgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:50%;"><a href="http://edgeatx.org/slides/"><wbr>edgeatx.org/<wbr>slides</a></h1>
+      <h1 style="font-size:2.5em;top:70%;"><a href="https://edgeatx-invite.herokuapp.com/">edgeATX-invite.<wbr>herokuapp.com</a></h1>
+    </div>
+    <div class="shim" style="opacity:.6;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Bleeding Edge Web: January 2019</h2>
+    <h3 class="star">News From the Bleeding Edge</h3>
+    <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+
+    <h3 class="star">Lightning Talks</h3>
+    <p class="indent">&mdash; Async/Await; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+
+    <h3 class="star">Progressive Web Applications</h3>
+    <p class="indent">&mdash; Jud White (<a href="https://github.com/judwhite">@judwhite</a>)</p>
+  </section>
+
+  <section class="slide">
+    <h2>Housekeeping</h2>
+    <h3 class="star">Announcements</h3>
+    <ul>
+      <li>Speakers and sponsors always wanted (<a href="https://www.edgeatx.org">edgeatx.org</a>)</li>
+      <li>$7 Parking validation</li>
+      <li>Omni hotel bar (downstairs) after meetup</li>
+      <li>Anyone hiring / looking?</li>
+    </ul>
+  </section>
+
+  <!-- - - - - - - - - - -  Sponsors  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+    <h1 style="color: #fff;"><a href="https://capitalfactory.com" target="_blank">Capital Factory</a></h1>
+  </section>
+
+  <section class="slide cover" style="background-color: #ffffff;">
+    <p style="color: #999;">Thanks to our sponsor: <a href="https://www.dell.com" target="_blank"><img src="../../shared/resources/images/dell.png"/></a></p>
+  </section>
+
+  <!-- <section class="slide" style="background:#ffffff;">
+    <p style="color: #2d70b8;">Thanks to our sponsor:</p>
+    <div style="text-align:center;padding-top:100px;font-size:200%;">
+      <p><a href=""><img style="min-width:40%"
+        src="images/_.png" alt=""></a></p>
+    </div>
+  </section> -->
+
+  <!-- - - - - - - - - - -  Begin slides  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+    <h1>News from the<br>Bleeding Edge</h1>
+    <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+  </section>
+
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+    <div class="content">
+      <h1>Browser<br>Update</h1>
+    </div>
+    <div class="shim" style="background-color:#369;opacity:.8;"></div>
+  </section> -->
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>Last Check &mdash; Oct 17, 2018</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">70</td>
+        <td class="ver">62</td>
+        <td class="ver">18</td>
+        <td class="ver">12</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz</h2>
+    <h3>As of Jan 17, 2019:</h3>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver"><span class="strike dim">70</span><br><strong>71</strong></td>
+        <td class="ver"><span class="strike dim">62</span><br><strong>64</strong></td>
+        <td class="ver">18*</td>
+        <td class="ver">12</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Chrome 71</h2>
+    <p>Released Dec 4</p>
+    <h3 class="star"><a href="https://www.chromestatus.com/feature/5712608971718656" target="_blank">Background Fetch API</a></h3>
+    <h3 class="star"><a href="https://www.chromestatus.com/feature/5177305701810176" target="_blank">:host, :host-context, and ::slotted specificity</a></h3>
+    <h3 class="star">globalThis</h3>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox 64</h2>
+    <p>Released Dec 11/Jan 9</p>
+    <h3 class="star">Task Manager</h3>
+    <img src="./images/ff_tasks.PNG"/>
+    <h3 class="star"><a href="https://www.chromestatus.com/feature/5177305701810176" target="_blank">:host, :host-context, and ::slotted specificity</a></h3>
+    <h3 class="star">Standardized JSON.stringify()</h3>
+    <h3 class="star"><a href="https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion" target="_blank">"Symantec Distrust"</a> implemented</h3>
+    <img src="../../shared/resources/images/chrome.png" class="corner-image" width="200px" alt="Chrome">
+  </section>
+
+  <section class="slide">
+    <h2>Firefox Symantec Distrust</h2>
+    <ul>
+      <li>GeoTrust Primary Certification Authority </li>
+      <li>GeoTrust Universal CA </li>
+      <li>GeoTrust Universal CA 2 </li>
+      <li>Symantec Class 1 Public Primary Certification Authority - G4 </li>
+      <li>Symantec Class 1 Public Primary Certification Authority - G6 </li>
+      <li>Symantec Class 2 Public Primary Certification Authority - G4 </li>
+      <li>Symantec Class 2 Public Primary Certification Authority - G6 </li>
+      <li>thawte Primary Root CA </li>
+      <li>thawte Primary Root CA - G2 </li>
+      <li>thawte Primary Root CA - G3 </li>
+      <li>VeriSign Class 1 Public PCA - G3 </li>
+      <li>VeriSign Class 2 Public PCA - G3 </li>
+      <li>VeriSign Class 3 Public Primary Certification Authority - G3 </li>
+      <li>VeriSign Class 3 Public Primary Certification Authority - G4 </li>
+      <li>VeriSign Class 3 Public Primary Certification Authority - G5 </li>
+      <li>VeriSign Universal Root Certification Authority </li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Edge?</h2>
+    <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+  </section>
+
+  <section class="slide">
+    <h2>Browser Pop Quiz?</h2>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">--</td>
+        <td class="ver">--</td>
+        <td class="ver">--</td>
+        <td class="ver">--</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>And then there were three?</h2>
+    <table class="browsers">
+      <tr>
+        <td width="25%"><img src="../../shared/resources/images/Chrome_King.png" width="70%" alt="Chrome"></td>
+        <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+        <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+      </tr>
+      <tr>
+        <td class="ver">--</td>
+        <td class="ver">--</td>
+        <td class="ver">--</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Edge 18</h2>
+    <p>Released Oct 2</p>
+    <h3 class="star">Goodbye EdgeHTML, Hello Chromium/V8</h3>
+    <ul>
+      <li>Rendering Engine Only! Or is it?</li>
+      <li>ChakraCore development continues.</li>
+      <li>Intent to Contribute: <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/UIA/explainer.md" target="_blank">UI Automation Provider Mappings</a></li>
+    </ul>
+    <img src="../../shared/resources/images/edge.png" class="corner-image" width="200px" alt="Firefox">
+  </section>
+
+  <!-- - - - - - - - - - -  Libs & Frameworks  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+    <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+    <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Releases</h2>
+    <h3 class="star">HAProxy 1.9</h3>
+    <h3 class="star">Node 11.6.0</h3>
+    <h3 class="star">npm 6.6.0-next.1 (massive refactor)</h3>
+    <h3 class="star">DoneJS 3 | CanJS 5</h3>
+    <h3 class="star">Electron 4</h3>
+    <h3 class="star">AVA 1.0</h3>
+    <h3 class="star">RollupJS 1.0</h3>
+  </section>
+
+  <!-- - - - - - - - - - -  Security  - - - - - - - - - - -->
+
+    <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section> -->
+
+  <!-- - - - - - - - - - -  ICYMI  - - - - - - - - - - -->
+
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+    <div class="content">
+      <h1>In Case You<br>Missed It</h1>
+    </div>
+    <div class="shim" style="background-color:#555;opacity:.7;"></div>
+  </section>
+
+  <section class="slide">
+    <h2>Industry News</h2>
+    <div class="star"><a href="https://blog.github.com/2019-01-07-new-year-new-github/" target="_blank">Github Free Private Repos</a></div>
+    <div class="star"><a href="https://blog.npmjs.org/post/181872197694/npm-inc-has-a-new-ceo-bryan-bogensberger" target="_blank">npm names Bryan Bogensberger CEO</a></div>
+  </section>
+
+  <section class="slide">
+    <h2>Articles</h2>
+    <ul>
+      <li><a href="https://www.sitepen.com/blog/compiling-go-to-webassembly/" target="_blank">Compiling Go to WebAssembly</a> (Go 1.11+)</li>
+      <code><pre>GOOS=js GOARCH=wasm go build -o main.wasm</pre></code>
+      <li><a href="https://medium.com/@rachelmanning/dissecting-front-end-job-titles-7f72a0ef0bc5" target="_blank">Dissecting Front-end Job Titles</a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Big List of Naughty Strings</h2>
+    <img src="./images/naughtystrings.gif"/>
+    <a href="https://github.com/minimaxir/big-list-of-naughty-strings/blob/master/blns.base64.txt" target="_blank">Examples</a>
+  </section>
+
+  <!-- - - - - - - - - - -  Events  - - - - - - - - - - -->
+  <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+    <h1>Upcoming Events</h1>
+  </section>
+
+  <section class="slide">
+    <h2>General</h2>
+    <h3 class="star"><a href="http://vueconf.us/" target="blank">VueConf US</a> (Tampa) - Mar 25-27</h3>
+    <h3 class="star"><a href="https://conferences.oreilly.com/oscon/oscon-or" target="_blank">OSCON 2019</a> (Portland) - Jul 15-18</h3>
+  </section>
+
+  <!-- - - - - - - - - - -  Something Completely Different  - - - - - - - - - - -->
+
+  <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+    <h1>And now for something completely different...</h1>
+  </section> -->
+
+
+  <section class="slide cover" style="background-image:url(./images/bueller.jpeg)">
+    <h1>Bueller?</h1>
+  </section>
+
+<!-- - - - - - - - - - -  Fin  - - - - - - - - - - -->
+
+  <section class="slide">
+    <h2>Thanks!</h2>
+    <h3><a href="http://edgeatx.org/slides/">http://edgeatx.org/slides</a></h3>
+    <h3>Corey Butler (<a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a>)</h3>
+    <br>
+    <img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;"/>
+  </section>
+
+  <!-- Begin extension snippets. Add or remove as needed. -->
+
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+    <span class="deck-status-current"></span> / <span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+  <!-- End extension snippets. -->
+
+
+  <!-- Required JS files. -->
+  <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+  <script src="../../shared/core/deck.core.js"></script>
+
+  <!-- Extension JS files. Add or remove as needed. -->
+  <script src="../../shared/core/deck.core.js"></script>
+  <script src="../../shared/extensions/hash/deck.hash.js"></script>
+  <script src="../../shared/extensions/menu/deck.menu.js"></script>
+  <script src="../../shared/extensions/goto/deck.goto.js"></script>
+  <script src="../../shared/extensions/status/deck.status.js"></script>
+  <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+  <script src="../../shared/extensions/scale/deck.scale.js"></script>
+  <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+  <!-- Initialize the deck. You can put this in an external file if desired. -->
+  <script>
+    $(function() {
+      // Init slides
+      $.deck('.slide');
+      // Find all links and make them launch new tabs in separate processes
+      $('a').attr('target', '_blank').attr('rel', 'noopener');
+
+      var firstScissorHalf = document.querySelector('#firstScissorHalf');
+      var secondScissorHalf = document.querySelector('#secondScissorHalf');
+
+      var positionKeyframes = [{motionOffset: '0%'}, {motionOffset: '100%'}];
+      var positionTiming = {duration: 12000, iterations: Infinity};
+      // firstScissorHalf.animate(positionKeyframes, positionTiming);
+      // secondScissorHalf.animate(positionKeyframes, positionTiming);
+
+      var firstRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto -45deg'}, {motionRotation: 'auto 0deg'}];
+      var secondRotationKeyframes = [{motionRotation: 'auto 0deg'}, {motionRotation: 'auto 45deg'}, {motionRotation: 'auto 0deg'}];
+      var rotationTiming = {duration: 1000, iterations: Infinity};
+      // firstScissorHalf.animate(firstRotationKeyframes, rotationTiming);
+      // secondScissorHalf.animate(secondRotationKeyframes, rotationTiming);
+
+      microlight.reset()
+    });
+  </script>
+  </body>
+</html>
