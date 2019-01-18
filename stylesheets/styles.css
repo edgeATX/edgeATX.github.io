@@ -144,6 +144,11 @@ strong {
   font-weight:600;
 }
 
+.resources ul li {
+  marign-bottom: 30px;
+  line-height: 35px;
+}
+
 header ul li + li {
   width:88px;
   border-left:1px solid #fff;
@@ -182,6 +187,28 @@ footer {
   float:left;
   position:fixed;
   bottom:50px;
+}
+
+.resources .youtube img {
+  max-width: 100px;
+  width: 2vw;
+  vertical-align: middle;
+}
+
+.disabled.youtube {
+  position: reltaive;
+  filter: grayscale(1);
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.disabled.youtube:after {
+  content: 'Video\00a0Unvailable';
+  font-size: 50%;
+  color: #000;
+  position: absolute;
+  left: -20px;
+  bottom: -27px;
 }
 
 @media print, screen and (max-width: 960px) {
