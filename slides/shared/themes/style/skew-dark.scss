@@ -325,6 +325,10 @@ pre[class*="language-"] {
   color: #E91E63;
   padding-right: 20px;
 }
+.lightning:before {
+  content: '\26A1';
+  padding-right: 20px;
+}
 
 img[alt=""],
 img:not([alt]) {
