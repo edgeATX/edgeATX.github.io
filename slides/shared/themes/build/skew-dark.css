@@ -44,9 +44,9 @@
 
 .deck-container .slide ul ul { margin-bottom: 0; }
 
-.deck-container .slide li li { padding-left: .6em; }
+.deck-container .slide ul ul li { padding-left: .6em; }
 
-.deck-container .slide li li:before { content: '\2192'; color: #E91E63; padding-right: 20px; }
+.deck-container .slide ul ul li:before { content: '\2192'; color: #E91E63; padding-right: 20px; }
 
 .deck-container .slide small { font-size: 75%; }
 

@@ -250,6 +250,15 @@ html
           |  and more
       img(src='./images/chrome-perf-events.jpg', alt='Chrome performance metrics')
 
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://blog.chromium.org/2019/02/introducing-trusted-web-activity-for.html') TWAs for Android
+      ul 
+        li Enabled Trusted Web App support (app-embedded Chrome)
+        li Can be released via Google Play
+        li Sort of like inverse PWAs
 
     section.slide
       h2 Firefox 65
@@ -354,6 +363,32 @@ html
         li Dropped OSX Mountain Lion (10.8) and below
 
     section.slide
+      h2 Vue 2.6
+      img(src='./images/vue-logo.png', class='corner-image', width='200px', alt='Vue')
+      p
+        a(href='https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e') Released 
+        |  February 4
+      ul
+        li New slots syntax and perf improvements
+        li Async error handling
+        li Server-side data pre-fetching
+        li And more!
+    
+    section.slide
+      h2 React 16.8
+      img(src='./images/react-logo.svg', class='corner-image', width='200px', alt='React')
+      p
+        a(href='https://reactjs.org/blog/2019/02/06/react-v16.8.0.html') Released 
+        |  February 6
+      ul
+        li "The one with 
+          a(href='https://reactjs.org/docs/hooks-intro.html') hooks
+          | "
+        li Hooks: functions that let you “hook into” state and lifecycle events
+        li Basically, composable behavior reuse
+        li Backwards-compatible
+    
+    section.slide
       h2 HTML5 Boilerplate 7.0
       img(src='./images/h5bp-logo.png', class='corner-image', width='200px', alt='HTML5 Boilerplate')
       blockquote The web’s most popular front-end template
@@ -366,31 +401,89 @@ html
         li Improved Webmanifest
         li Other smaller improvements
 
+    section.slide
+      h2 Next.js 8.0
+      img(src='./images/nextjs-logo.jpg', class='corner-image', width='300px', alt='Next.js')
+      blockquote Server-side React framework for apps, sites and more
+      p
+        a(href='https://nextjs.org/blog/next-8/') Released 
+        |  February 11
+      ul
+        li 
+          a(href='https://nextjs.org/blog/next-8/#serverless-nextjs') Serverless deployments
+        li "Massive" build-time memory reduction
+        li Lots of performance improvements
+        li And more
+
+    section.slide
+      h2 Bootstrap 4.3
+      img(src='./images/bootstrap-logo.png', class='corner-image', width='200px', alt='Bootstrap')
+      blockquote Server-side React framework for apps, sites and more
+      p
+        a(href='https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/') Released 
+        |  February 11
+      ul
+        li New 
+          a(href='https://github.com/twbs/rfs') project 
+          |  to automate responsive font sizes
+        li Other mostly small improvements
+        li Moving toward v5:
+        ul
+          li Switching docs from Jekyll to 
+            a(href='https://gohugo.io/') Hugo
+          li Dropping jQuery for vanilla JS
+
 
     //----------------------  Security  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
-    //-   .content
-    //-     h1 Security
-    //-   .shim(style='background-color:#c11;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
   
+    section.slide
+      h2 Don't Use "Do Not Track"
+      ul 
+        li Did you know there is a 
+          a(href='https://www.w3.org/TR/tracking-dnt/') web standard
+          |  for it?
+        li Most browsers support it, but most sites 
+          a(href='https://spreadprivacy.com/do-not-track/') ignore it
+        li Safari 12.1 quietly 
+          a(href='Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.') removed it:
+        ul
+          li They call it an "expired standard"
+          li It's a potential user fingerprinting variable
+
     
     //----------------------  Industry Headlines  ----------------------
 
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
-    //-   .content
-    //-     h1 Industry<br>Headlines
-    //-   .shim(style='background-color:#393;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
 
-    //- section.slide
-    //-   h2 Azure Outage Sept. 4th
-    //-   blockquote It was the longest outage for customers in our 7-year history
-    //-   ul
-    //-     li Everything, including the statue page, was down for ~21 hours
-    //-     li Cascading failures, due to electrical storms in Texas
-    //-     li Read the full 
-    //-       a(href='https://blogs.msdn.microsoft.com/vsoservice/?p=17485') post-morten
-    //-   img(src='./images/azure-status.png', width='700px', alt='Azure Status')
+    section.slide
+      h2 Facebook Sponsors LetsEncrypt
+      ul  
+        li 3-year renewal 
+          a(href='https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html') announced 
+          |  February 12th
+        li Platinum 
+          a(href='https://letsencrypt.org/become-a-sponsor/') sponsorship
+          |   == $300k / year!
+        li FB reports that 38% of HTTPS domains they see use LetsEncrypt
+        li Everyone should use it!
+
+    section.slide
+      h2 Galaxy Fold
+      ul
+        li 
+          a(href='https://www.theverge.com/2019/2/20/18231249/samsung-galaxy-fold-folding-phone-features-screen-photos-size-announcement') Launches 
+          |  April 26th for $1,980
+        li 4.6-inch phone &rarr; 7.3-inch tablet
+        li Rated for 200k folds
+      img(src='./images/galaxy-fold.gif', style='min-width:50%', alt='Galaxy Fold')
 
 
 
@@ -417,6 +510,16 @@ html
       h2 Pure CSS Still Life
       a(href='https://codepen.io/ivorjetski/pen/xMJoYO')
         img(src='./images/css-still-life.png', alt='CSS Still Life')
+
+    section.slide
+      h2 NationalPark Typeface
+      blockquote A typeface designed to mimic the National Park Service signs that are carved using a router bit
+      ul
+        li It's 
+          a(href='https://nationalparktypeface.com/') open source 
+          |  and comes in four weights
+        li Designed from physical park sign imprints
+      img(src='./images/bew-park.png', alt='BEW')
 
 
 
