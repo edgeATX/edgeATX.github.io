@@ -53,15 +53,15 @@ html
         a(href='https://twitter.com/bmoeskau') @bmoeskau
         | )
 
-      h3.lightning Percy.io Demo
-      p.indent
-        | &mdash; Robert DeLuca (
-        a(href='https://twitter.com/robdel12') @robdel12
-        | )
+      //- h3.lightning Percy.io Demo
+      //- p.indent
+      //-   | &mdash; Robert DeLuca (
+      //-   a(href='https://twitter.com/robdel12') @robdel12
+      //-   | )
 
       h3.star HomeAway's Multi-Cloud Traffic Director
       p.indent
-        | &mdash; Andrew
+        | &mdash; Andrew Hodges &amp; Alex Mays
 
 
     //----------------------  Sponsors  ----------------------
@@ -126,6 +126,7 @@ html
           td.ver 71
           td.ver 64
           td.ver 18
+            span(style='color:red') *
           td.ver 12
     
     section.slide
@@ -151,42 +152,185 @@ html
             br
             strong(style='color:#1CA727') 65
           td.ver 18
+            span(style='color:red') *
           td.ver 12
     
-    //- section.slide
-    //-   h2 Chrome 72
-    //-   img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
-    //-   p Released September 5th —
-    //-     a(href='https://developers.google.com/web/updates/2018/07/nic68') Release Notes
-    //-   h3.star UI Refresh
-    //-   ul
-    //-     li Optimized for mobile and Material UI
-    //-     li The jury is still out...
-    //-   img(src='./images/chrome-new-ui.png', alt='Chrome 69 UI')
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released January 29th —
+        a(href='https://developers.google.com/web/updates/2019/01/nic72') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=coh1k7TY1P0') video
+        | )
+      h3.star Public 
+        a(href='https://developers.google.com/web/updates/2018/12/class-fields') class fields
+        |  (TC39 
+        a(href='https://github.com/tc39/proposal-class-fields') stage 3
+        | )
+      pre
+        code.language-javascript
+          | class Counter {
+          |   _value = 0;  // <-- public field
+          |   get value() {
+          |     return this._value;
+          |   }
+          |   increment() {
+          |     this._value++;
+          |   }
+          | }
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p
+        strong NOTE:
+        |  Private class fields "in the works"
+      pre
+        code.language-javascript
+          | class Counter {
+          |   #value = 0;  // <-- *private* field
+          |   get value() {
+          |     return this.#value;
+          |   }
+          |   increment() {
+          |     this.#value++;
+          |   }
+          | }
   
-    //- section.slide
-    //-   h2 Firefox 65
-    //-   img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
-    //-   p Released September 5th —
-    //-     a(href='https://developer.mozilla.org/en-US/Firefox/Releases/62') Release Notes
-    //-   h3.star New JS APIs
-    //-   ul
-    //-     li
-    //-       span.code
-    //-         a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat') Array.flat
-    //-       |  &amp; 
-    //-       span.code 
-    //-         a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap') Array.flatMap
-    //-     li
-    //-       span.code
-    //-         a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global') WebAssembly.Global
-    //-     li
-    //-       span.code
-    //-         a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import.meta') import.meta
-    //-     pre
-    //-       code.language-javascript
-    //-         | console.log(import.meta);
-    //-         | // { url: "file:///home/user/my-module.js" }
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2019/01/user-activation') User Activation v2
+      ul 
+        li Reference implementation of the 
+          a(href='https://whatpr.org/html/3851/interaction.html#tracking-user-activation') new spec
+        li Fixes Chrome bugs related to 
+          span.code setTimeout
+          | , 
+          span.code postMessage
+          | , etc.
+      pre
+        code.language-javascript
+          | console.log(navigator.userActivation)
+          | UserActivation {
+          |   hasBeenActive: true
+          |   isActive: false
+          | }
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/12/intl-listformat') Intl.ListFormat API
+      ul 
+        li Simple internationalization of list data
+        li No need to bundle the 
+          a(href='http://cldr.unicode.org/translation/lists') Unicode CLDR
+          |  in JavaScript
+      pre
+        code.language-javascript
+          | const lf = new Intl.ListFormat('en', { type: 'disjunction' });
+          | lf.format(['Frank', 'Christine', 'Flora']);
+          | // 'Frank, Christine, or Flora'
+          |
+          | const lf2 = new Intl.ListFormat('zh');
+          | lf2.format(['永鋒', '新宇', '芳遠', '澤遠']);
+          | // '永鋒、新宇、芳遠和澤遠'
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/11/devtools#metrics') Visual performance metrics
+      ul 
+        li See first meaningful paint (FMP), 
+          span.code DOMContentLoaded
+          |  and more
+      img(src='./images/chrome-perf-events.jpg', alt='Chrome performance metrics')
+
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released January 29th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/65') Release Notes
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts') CSS Flexbox Inspector
+      img(src='./images/ff-flex.png', alt='Flexbox inspector', style='min-width:40%')
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API') Storage Access API
+      ul
+        li Currently a 
+          a(href='https://github.com/whatwg/html/issues/3338') WHATWG proposal
+          |  from WebKit (in Safari 11.1)
+        li Cross-origin content can request access to first-party storage
+        li E.g. cross-domain cookie access for federated login
+        li 
+          span.code 
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess') Document.requestStorageAccess
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API') ReadableStream API
+      ul
+        li Process streaming data in JS
+        li Learn about 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts') streaming concepts
+          |  in the 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Streams_API') Streams API
+      pre
+        code.language-javascript
+          | fetch('https://someExpensiveResource')
+          | .then(response => {
+          |   const reader = response.body.getReader();
+          |   // read each chunk and do something
+          | })
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Other 
+        a(href='https://hacks.mozilla.org/2019/01/new-in-firefox-devtools-65/') DevTools Improvements
+      ul 
+        li Collapsed framework stack traces
+        li Pause on XHR/Fetch breakpoints
+
+
+    section.slide
+      h2 Edge 18
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      h3.star Switching to Chromium/V8 !!
+      ul 
+        li
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') Announced 
+          |  on December 6
+        li Goal is to improve compatibility + release cadence
+        li They still plan to 
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') support ChakraCore
+          |  (for now?)
+        li Yet another sign of the increasing Microsoft 
+          a(href='https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/') OSS focus
+
+
+    section.slide
+      h2 Bonus: IE
+      img(src='../../shared/resources/images/ie.png', class='corner-image', width='200px', alt='IE')
+      h3.star Remember IE?
+      ul 
+        li It is now 
+          strong officially 
+          a(href='https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-perils-of-using-Internet-Explorer-as-your-default-browser/ba-p/331732') not a browser
+      blockquote Enough is enough... Internet Explorer is a compatibility solution.
+        | <br><br>&mdash;Chris Jackson, Microsoft Cybersecurity Lead
+
 
 
     //----------------------  Libs & Frameworks  ----------------------
