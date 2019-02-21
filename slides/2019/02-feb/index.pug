@@ -339,24 +339,32 @@ html
       h1 Languages, Libraries &amp;<br>Frameworks
       .shim(style='background-color:#AD7909;opacity:.8;')
   
-    //- section.slide
-    //-   h2 Johnny-Five 1.0
-    //-   img(src='./images/johnny-five-logo.png', class='corner-image', width='200px', alt='Johnny-Five')
-    //-   blockquote The JavaScript Robotics Programming Framework
-    //-   p
-    //-     a(href='http://johnny-five.io/news/v1_0/') Released 
-    //-     |  August 23rd
-    //-   ul
-    //-     li Control anything from Arduino to XBox
-    //-   pre
-    //-     code.language-javascript
-    //-       | var five = require("johnny-five");
-    //-       | var board = new five.Board();
-    //-       | 
-    //-       | board.on("ready", function() {
-    //-       |   var led = new five.Led(13); // pin 13
-    //-       |   led.blink(500);
-    //-       | });
+    section.slide
+      h2 Homebrew 2.0
+      img(src='./images/homebrew-logo.png', class='corner-image', width='200px', alt='Homebrew')
+      blockquote The missing package manager for macOS
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
+        |  February 2
+      ul
+        li Now supports Linux and Windows 10!
+        li Automatic 
+          span.code brew cleanup
+        li Improved option parsing, performance, linking and more
+        li Dropped OSX Mountain Lion (10.8) and below
+
+    section.slide
+      h2 HTML5 Boilerplate 7.0
+      img(src='./images/h5bp-logo.png', class='corner-image', width='200px', alt='HTML5 Boilerplate')
+      blockquote The web’s most popular front-end template
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
+        |  February 8
+      ul
+        li Dropped IE 9/10 support
+        li Documentation revamp
+        li Improved Webmanifest
+        li Other smaller improvements
 
 
     //----------------------  Security  ----------------------
@@ -388,46 +396,54 @@ html
 
     //----------------------  ICYMI  ----------------------
 
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
-    //-   .content
-    //-     h1 In Case You<br>Missed It
-    //-   .shim(style='background-color:#555;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
 
-    //- section.slide
-    //-   h2 State of JS 2018 Survey
-    //-   blockquote Annual state of the JavaScript ecosystem, by developers
-    //-   ul
-    //-     li Check out 
-    //-       a(href='http://2017.stateofjs.com/') last year's results
-    //-     li
-    //-       a(href='https://stateofjs.com/') Take the current survey
-    //-     li We'll review the results later!
-    //-   img(src='./images/state-of-js.png', width='600px', alt='State of JS')
+    section.slide
+      h2 .dev Domains Available
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Announced 
+        |  February 19
+      ul
+        li Owned by Google (along with .app, .page and others)
+        li All .dev domains require HTTPS
+        li Might be a little 
+          a(href='https://www.name.com/domain/search/awesome.dev') pricey
+          |  at the moment
+
+    section.slide
+      h2 Pure CSS Still Life
+      a(href='https://codepen.io/ivorjetski/pen/xMJoYO')
+        img(src='./images/css-still-life.png', alt='CSS Still Life')
+
 
 
     //----------------------  Something Completely Different  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
-    //-   h1 And now for something completely different...
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
 
-    //- section.slide
-    //-   h2 WWWBasic
-    //-   blockquote BASIC designed to be easy to run on the Web
-    //-   p Written by Google ¯\_(ツ)_/¯ (
-    //-     a(href='https://google.github.io/wwwbasic/examples/donkey.html') demo
-    //-     |   | 
-    //-     a(href='https://raw.githubusercontent.com/coding-horror/donkey.bas/master/donkey.bas') source
-    //-     | )
-    //-   pre
-    //-     code.language-javascript
-    //-       | var basic = require('wwwbasic'); // from NPM
-    //-       | basic.Basic(
-    //-       | `
-    //-       | PRINT "Hello Bleeding Edge!"
-    //-       | FOR i = 1 to 10
-    //-       |   PRINT "I can count to "; i
-    //-       | NEXT i
-    //-       | `);
+    section.slide
+      h2(style='display:none') The Periodic Table of AWS
+      a(href='https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/')
+        img(src='./images/periodic-aws.png', alt='Periodic AWS', style='margin:50px auto; width:80%')
+
+    section.slide
+      h2 Animated Emoji URLs
+      p Animate graphical unicode chars in the url bar (
+        a(href='http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/') examples
+        | )
+      pre
+        code.language-javascript
+          | var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+          | 
+          | function loop() {
+          |     location.hash = f[Math.floor((Date.now()/100)%f.length)];
+          |     setTimeout(loop, 50);
+          | }
+          | loop();
 
 
     //----------------------  Fin  ----------------------
