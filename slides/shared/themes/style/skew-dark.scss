@@ -120,10 +120,10 @@
     ul ul {
       margin-bottom: 0;
     }
-    li li {
+    ul ul li {
       padding-left: .6em;
     }
-    li li:before {
+    ul ul li:before {
       content: '\2192'; // &rarr;
       color: #E91E63;
       padding-right: 20px;
@@ -323,6 +323,10 @@ pre[class*="language-"] {
 .star:before {
   content: '\2606'; /* &star; */
   color: #E91E63;
+  padding-right: 20px;
+}
+.lightning:before {
+  content: '\26A1';
   padding-right: 20px;
 }
 

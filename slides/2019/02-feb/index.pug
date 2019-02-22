@@ -1,0 +1,616 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: February 2019
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: Feb 2019
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      //- h3.lightning Percy.io Demo
+      //- p.indent
+      //-   | &mdash; Robert DeLuca (
+      //-   a(href='https://twitter.com/robdel12') @robdel12
+      //-   | )
+
+      h3.star HomeAway's Multi-Cloud Traffic Director
+      p.indent
+        | &mdash; Andrew Hodges &amp; Alex Mays
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/sponsors/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background:#fff;')
+      p(style='color: #555;') Thanks to our premiere sponsor:
+      div(style='text-align:center;padding-top:150px;font-size:200%;')
+        p
+          a(href='https://homeaway.com')
+            img(style='min-width:70%', src='../../shared/resources/images/sponsors/homeaway.png', alt='HomeAway')
+    
+    section.slide
+      h2 Swag by Linkerd
+      blockquote A service mesh for Kubernetes and beyond
+      ul
+        li Find Linkerd on 
+          a(href='https://github.com/linkerd') GitHub
+        li Join the 
+          a(href='https://slack.linkerd.io/') Linkerd Slack 
+          |  (2500+ users)
+        li Join the 
+          a(href='https://lists.cncf.io/g/cncf-linkerd-users') mailing list
+      img(src='./images/linkerd-logo.png', style='min-width:400px', alt='Linkerd')
+
+
+    //- section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+    //-   p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors always wanted (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Don't forget your parking validation
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: January 17, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 71
+          td.ver 64
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of February 21, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 71
+            br
+            strong(style='color:#1CA727') 72
+          td.ver
+            span.strike.dim 64
+            br
+            strong(style='color:#1CA727') 65
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released January 29th —
+        a(href='https://developers.google.com/web/updates/2019/01/nic72') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=coh1k7TY1P0') video
+        | )
+      h3.star Public 
+        a(href='https://developers.google.com/web/updates/2018/12/class-fields') class fields
+        |  (TC39 
+        a(href='https://github.com/tc39/proposal-class-fields') stage 3
+        | )
+      pre
+        code.language-javascript
+          | class Counter {
+          |   _value = 0;  // <-- public field
+          |   get value() {
+          |     return this._value;
+          |   }
+          |   increment() {
+          |     this._value++;
+          |   }
+          | }
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p
+        strong NOTE:
+        |  Private class fields "in the works"
+      pre
+        code.language-javascript
+          | class Counter {
+          |   #value = 0;  // <-- *private* field
+          |   get value() {
+          |     return this.#value;
+          |   }
+          |   increment() {
+          |     this.#value++;
+          |   }
+          | }
+  
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2019/01/user-activation') User Activation v2
+      ul 
+        li Reference implementation of the 
+          a(href='https://whatpr.org/html/3851/interaction.html#tracking-user-activation') new spec
+        li Fixes Chrome bugs related to 
+          span.code setTimeout
+          | , 
+          span.code postMessage
+          | , etc.
+      pre
+        code.language-javascript
+          | console.log(navigator.userActivation)
+          | UserActivation {
+          |   hasBeenActive: true
+          |   isActive: false
+          | }
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/12/intl-listformat') Intl.ListFormat API
+      ul 
+        li Simple internationalization of list data
+        li No need to bundle the 
+          a(href='http://cldr.unicode.org/translation/lists') Unicode CLDR
+          |  in JavaScript
+      pre
+        code.language-javascript
+          | const lf = new Intl.ListFormat('en', { type: 'disjunction' });
+          | lf.format(['Frank', 'Christine', 'Flora']);
+          | // 'Frank, Christine, or Flora'
+          |
+          | const lf2 = new Intl.ListFormat('zh');
+          | lf2.format(['永鋒', '新宇', '芳遠', '澤遠']);
+          | // '永鋒、新宇、芳遠和澤遠'
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://developers.google.com/web/updates/2018/11/devtools#metrics') Visual performance metrics
+      ul 
+        li See first meaningful paint (FMP), 
+          span.code DOMContentLoaded
+          |  and more
+      img(src='./images/chrome-perf-events.jpg', alt='Chrome performance metrics')
+
+    section.slide
+      h2 Chrome 72
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star 
+        a(href='https://blog.chromium.org/2019/02/introducing-trusted-web-activity-for.html') TWAs for Android
+      ul 
+        li Enabled Trusted Web App support (app-embedded Chrome)
+        li Can be released via Google Play
+        li Sort of like inverse PWAs
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released January 29th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/65') Release Notes
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts') CSS Flexbox Inspector
+      img(src='./images/ff-flex.png', alt='Flexbox inspector', style='min-width:40%')
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API') Storage Access API
+      ul
+        li Currently a 
+          a(href='https://github.com/whatwg/html/issues/3338') WHATWG proposal
+          |  from WebKit (in Safari 11.1)
+        li Cross-origin content can request access to first-party storage
+        li E.g. cross-domain cookie access for federated login
+        li 
+          span.code 
+            a(href='https://developer.mozilla.org/en-US/docs/Web/API/Document/requestStorageAccess') Document.requestStorageAccess
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API') ReadableStream API
+      ul
+        li Process streaming data in JS
+        li Learn about 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Concepts') streaming concepts
+          |  in the 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Streams_API') Streams API
+      pre
+        code.language-javascript
+          | fetch('https://someExpensiveResource')
+          | .then(response => {
+          |   const reader = response.body.getReader();
+          |   // read each chunk and do something
+          | })
+
+    section.slide
+      h2 Firefox 65
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star Other 
+        a(href='https://hacks.mozilla.org/2019/01/new-in-firefox-devtools-65/') DevTools Improvements
+      ul 
+        li Collapsed framework stack traces
+        li Pause on XHR/Fetch breakpoints
+
+
+    section.slide
+      h2 Edge 18
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      h3.star Switching to Chromium/V8 !!
+      ul 
+        li
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') Announced 
+          |  on December 6
+        li Goal is to improve compatibility + release cadence
+        li They still plan to 
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') support ChakraCore
+          |  (for now?)
+        li Yet another sign of the increasing Microsoft 
+          a(href='https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/') OSS focus
+
+
+    section.slide
+      h2 Bonus: IE
+      img(src='../../shared/resources/images/ie.png', class='corner-image', width='200px', alt='IE')
+      h3.star Remember IE?
+      ul 
+        li It is now 
+          strong officially 
+          a(href='https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-perils-of-using-Internet-Explorer-as-your-default-browser/ba-p/331732') not a browser
+      blockquote Enough is enough... Internet Explorer is a compatibility solution.
+        | <br><br>&mdash;Chris Jackson, Microsoft Cybersecurity Lead
+
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+  
+    section.slide
+      h2 Homebrew 2.0
+      img(src='./images/homebrew-logo.png', class='corner-image', width='200px', alt='Homebrew')
+      blockquote The missing package manager for macOS
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
+        |  February 2
+      ul
+        li Now supports Linux and Windows 10!
+        li Automatic 
+          span.code brew cleanup
+        li Improved option parsing, performance, linking and more
+        li Dropped OSX Mountain Lion (10.8) and below
+
+    section.slide
+      h2 Vue 2.6
+      img(src='./images/vue-logo.png', class='corner-image', width='200px', alt='Vue')
+      p
+        a(href='https://medium.com/the-vue-point/vue-2-6-released-66aa6c8e785e') Released 
+        |  February 4
+      ul
+        li New slots syntax and perf improvements
+        li Async error handling
+        li Server-side data pre-fetching
+        li And more!
+    
+    section.slide
+      h2 React 16.8
+      img(src='./images/react-logo.svg', class='corner-image', width='200px', alt='React')
+      p
+        a(href='https://reactjs.org/blog/2019/02/06/react-v16.8.0.html') Released 
+        |  February 6
+      ul
+        li "The one with 
+          a(href='https://reactjs.org/docs/hooks-intro.html') hooks
+          | "
+        li Hooks: functions that let you “hook into” state and lifecycle events
+        li Basically, composable behavior reuse
+        li Backwards-compatible
+    
+    section.slide
+      h2 HTML5 Boilerplate 7.0
+      img(src='./images/h5bp-logo.png', class='corner-image', width='200px', alt='HTML5 Boilerplate')
+      blockquote The web’s most popular front-end template
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
+        |  February 8
+      ul
+        li Dropped IE 9/10 support
+        li Documentation revamp
+        li Improved Webmanifest
+        li Other smaller improvements
+
+    section.slide
+      h2 Next.js 8.0
+      img(src='./images/nextjs-logo.jpg', class='corner-image', width='300px', alt='Next.js')
+      blockquote Server-side React framework for apps, sites and more
+      p
+        a(href='https://nextjs.org/blog/next-8/') Released 
+        |  February 11
+      ul
+        li 
+          a(href='https://nextjs.org/blog/next-8/#serverless-nextjs') Serverless deployments
+        li "Massive" build-time memory reduction
+        li Lots of performance improvements
+        li And more
+
+    section.slide
+      h2 Bootstrap 4.3
+      img(src='./images/bootstrap-logo.png', class='corner-image', width='200px', alt='Bootstrap')
+      blockquote Server-side React framework for apps, sites and more
+      p
+        a(href='https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/') Released 
+        |  February 11
+      ul
+        li New 
+          a(href='https://github.com/twbs/rfs') project 
+          |  to automate responsive font sizes
+        li Other mostly small improvements
+        li Moving toward v5:
+        ul
+          li Switching docs from Jekyll to 
+            a(href='https://gohugo.io/') Hugo
+          li Dropping jQuery for vanilla JS
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 Don't Use "Do Not Track"
+      ul 
+        li Did you know there is a 
+          a(href='https://www.w3.org/TR/tracking-dnt/') web standard
+          |  for it?
+        li Most browsers support it, but most sites 
+          a(href='https://spreadprivacy.com/do-not-track/') ignore it
+        li Safari 12.1 quietly 
+          a(href='Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.') removed it:
+        ul
+          li They call it an "expired standard"
+          li It's a potential user fingerprinting variable
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 Facebook Sponsors LetsEncrypt
+      ul  
+        li 3-year renewal 
+          a(href='https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html') announced 
+          |  February 12th
+        li Platinum 
+          a(href='https://letsencrypt.org/become-a-sponsor/') sponsorship
+          |   == $300k / year!
+        li FB reports that 38% of HTTPS domains they see use LetsEncrypt
+        li Everyone should use it!
+
+    section.slide
+      h2 Galaxy Fold
+      ul
+        li 
+          a(href='https://www.theverge.com/2019/2/20/18231249/samsung-galaxy-fold-folding-phone-features-screen-photos-size-announcement') Launches 
+          |  April 26th for $1,980
+        li 4.6-inch phone &rarr; 7.3-inch tablet
+        li Rated for 200k folds
+      img(src='./images/galaxy-fold.gif', style='min-width:50%', alt='Galaxy Fold')
+
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 .dev Domains Available
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Announced 
+        |  February 19
+      ul
+        li Owned by Google (along with .app, .page and others)
+        li All .dev domains require HTTPS
+        li Might be a little 
+          a(href='https://www.name.com/domain/search/awesome.dev') pricey
+          |  at the moment
+
+    section.slide
+      h2 Pure CSS Still Life
+      a(href='https://codepen.io/ivorjetski/pen/xMJoYO')
+        img(src='./images/css-still-life.png', alt='CSS Still Life')
+
+    section.slide
+      h2 NationalPark Typeface
+      blockquote A typeface designed to mimic the National Park Service signs that are carved using a router bit
+      ul
+        li It's 
+          a(href='https://nationalparktypeface.com/') open source 
+          |  and comes in four weights
+        li Designed from physical park sign imprints
+      img(src='./images/bew-park.png', alt='BEW')
+
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2(style='display:none') The Periodic Table of AWS
+      a(href='https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/')
+        img(src='./images/periodic-aws.png', alt='Periodic AWS', style='margin:50px auto; width:80%')
+
+    section.slide
+      h2 Animated Emoji URLs
+      p Animate graphical unicode chars in the url bar (
+        a(href='http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/') examples
+        | )
+      pre
+        code.language-javascript
+          | var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+          | 
+          | function loop() {
+          |     location.hash = f[Math.floor((Date.now()/100)%f.length)];
+          |     setTimeout(loop, 50);
+          | }
+          | loop();
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
