@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: February 2019</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: March 2019</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="lightning">Visual Regression Testing with Percy.io</h3>
+      <p class="indent">&mdash; Robert DeLuca (<a href="https://twitter.com/robdel12">@robdel12</a>)</p>
+      <h3 class="lightning">Level Up with Redis + Node</h3>
+      <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="lightning">EnableDB: An Experiment with DB Gateways</h3>
+      <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <p style="color: #fff;">Thanks to our venue:</p>
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/"><img style="min-width:40%" src="../../shared/resources/images/sponsors/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background:#fff;">
+      <p style="color: #555;">Thanks to our premiere sponsor:</p>
+      <div style="text-align:center;padding-top:150px;font-size:200%;">
+        <p><a href="https://grnh.se/27cc659b1"><img style="min-width:50%" src="../../shared/resources/images/sponsors/duo-logo.png" alt="Duo Security"></a></p>
+      </div>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors <strong>always wanted</strong> (<a href="https://www.edgeatx.org">edgeatx.org</a>)</li>
+        <li>Don't forget your parking validation</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+        <li>Anyone hiring / looking?</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check: February 21, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">72</td>
+          <td class="ver">65</td>
+          <td class="ver">18<span style="color:red">*</span></td>
+          <td class="ver">12</td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of March 21, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver"> <span class="strike dim">72</span><br><strong style="color:#1CA727">73</strong></td>
+          <td class="ver"><span class="strike dim">65</span><br><strong style="color:#1CA727">66</strong></td>
+          <td class="ver">18<span style="color:red">*</span></td>
+          <td class="ver">12</td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Chrome 73</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Released January 29th —<a href="https://developers.google.com/web/updates/2019/01/nic72">Release Notes</a> (<a href="https://www.youtube.com/watch?v=coh1k7TY1P0">video</a>)</p>
+      <h3 class="star">Public <a href="https://developers.google.com/web/updates/2018/12/class-fields">class fields</a> (TC39 <a href="https://github.com/tc39/proposal-class-fields">stage 3</a>)</h3>
+      <pre><code class="language-javascript">class Counter {
+  _value = 0;  // <-- public field
+  get value() {
+    return this._value;
+  }
+  increment() {
+    this._value++;
+  }
+}</code></pre>
+    </section>
+    <section class="slide">
+      <h2>Firefox 66</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <p>Released January 29th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/65">Release Notes</a></p>
+      <h3 class="star"> <a href="https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">CSS Flexbox Inspector</a></h3><img src="./images/ff-flex.png" alt="Flexbox inspector" style="min-width:40%">
+    </section>
+    <section class="slide">
+      <h2>Edge 18</h2><img class="corner-image" src="../../shared/resources/images/edge.png" width="200px" alt="Edge">
+      <h3 class="star">Switching to Chromium/V8 !!</h3>
+      <ul> 
+        <li><a href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97">Announced </a> on December 6</li>
+        <li>Goal is to improve compatibility + release cadence</li>
+        <li>They still plan to <a href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97">support ChakraCore</a> (for now?)</li>
+        <li>Yet another sign of the increasing Microsoft <a href="https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/">OSS focus</a></li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Homebrew 2.0</h2><img class="corner-image" src="./images/homebrew-logo.png" width="200px" alt="Homebrew">
+      <blockquote>The missing package manager for macOS</blockquote>
+      <p><a href="https://brew.sh/2019/02/02/homebrew-2.0.0/">Released </a> February 2</p>
+      <ul>
+        <li>Now supports Linux and Windows 10!</li>
+        <li>Automatic <span class="code">brew cleanup</span></li>
+        <li>Improved option parsing, performance, linking and more</li>
+        <li>Dropped OSX Mountain Lion (10.8) and below</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Don't Use "Do Not Track"</h2>
+      <ul> 
+        <li>Did you know there is a <a href="https://www.w3.org/TR/tracking-dnt/">web standard</a> for it?</li>
+        <li>Most browsers support it, but most sites <a href="https://spreadprivacy.com/do-not-track/">ignore it</a></li>
+        <li>Safari 12.1 quietly <a href="Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.">removed it:</a></li>
+        <ul>
+          <li>They call it an "expired standard"</li>
+          <li>It's a potential user fingerprinting variable</li>
+        </ul>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
+      <div class="content">
+        <h1>Industry<br>Headlines</h1>
+      </div>
+      <div class="shim" style="background-color:#393;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Facebook Sponsors LetsEncrypt</h2>
+      <ul> 
+        <li>3-year renewal <a href="https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html">announced </a> February 12th</li>
+        <li>Platinum <a href="https://letsencrypt.org/become-a-sponsor/">sponsorship</a>  == $300k / year!</li>
+        <li>FB reports that 38% of HTTPS domains they see use LetsEncrypt</li>
+        <li>Everyone should use it!</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>.dev Domains Available</h2>
+      <p><a href="https://brew.sh/2019/02/02/homebrew-2.0.0/">Announced </a> February 19</p>
+      <ul>
+        <li>Owned by Google (along with .app, .page and others)</li>
+        <li>All .dev domains require HTTPS</li>
+        <li>Might be a little <a href="https://www.name.com/domain/search/awesome.dev">pricey</a> at the moment</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+      <h1>And now for something completely different...</h1>
+    </section>
+    <section class="slide">
+      <h2 style="display:none">The Periodic Table of AWS</h2><a href="https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/"><img src="./images/periodic-aws.png" alt="Periodic AWS" style="margin:50px auto; width:80%"></a>
+    </section>
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a></h3>
+      <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </section>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>

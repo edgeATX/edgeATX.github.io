@@ -1,0 +1,367 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: February 2019
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: March 2019
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.lightning Visual Regression Testing with Percy.io
+      p.indent
+        | &mdash; Robert DeLuca (
+        a(href='https://twitter.com/robdel12') @robdel12
+        | )
+
+      h3.lightning Level Up with Redis + Node
+      p.indent
+        | &mdash; Ted Patrick (
+        a(href='https://twitter.com/__ted__') @__ted__
+        | )
+
+      h3.lightning EnableDB: An Experiment with DB Gateways
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+
+      //- h3.star Main talk
+      //- p.indent
+      //-   | &mdash; Name
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/sponsors/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background:#fff;')
+      p(style='color: #555;') Thanks to our premiere sponsor:
+      div(style='text-align:center;padding-top:150px;font-size:200%;')
+        p
+          a(href='https://grnh.se/27cc659b1')
+            img(style='min-width:50%', src='../../shared/resources/images/sponsors/duo-logo.png', alt='Duo Security')
+
+
+    //- section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+    //-   p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong> (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Don't forget your parking validation
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: February 21, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 72
+          td.ver 65
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of March 21, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 72
+            br
+            strong(style='color:#1CA727') 73
+          td.ver
+            span.strike.dim 65
+            br
+            strong(style='color:#1CA727') 66
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released January 29th —
+        a(href='https://developers.google.com/web/updates/2019/01/nic72') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=coh1k7TY1P0') video
+        | )
+      h3.star Public 
+        a(href='https://developers.google.com/web/updates/2018/12/class-fields') class fields
+        |  (TC39 
+        a(href='https://github.com/tc39/proposal-class-fields') stage 3
+        | )
+      pre
+        code.language-javascript
+          | class Counter {
+          |   _value = 0;  // <-- public field
+          |   get value() {
+          |     return this._value;
+          |   }
+          |   increment() {
+          |     this._value++;
+          |   }
+          | }
+
+ 
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released January 29th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/65') Release Notes
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts') CSS Flexbox Inspector
+      img(src='./images/ff-flex.png', alt='Flexbox inspector', style='min-width:40%')
+
+
+    section.slide
+      h2 Edge 18
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      h3.star Switching to Chromium/V8 !!
+      ul 
+        li
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') Announced 
+          |  on December 6
+        li Goal is to improve compatibility + release cadence
+        li They still plan to 
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') support ChakraCore
+          |  (for now?)
+        li Yet another sign of the increasing Microsoft 
+          a(href='https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/') OSS focus
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+  
+    section.slide
+      h2 Homebrew 2.0
+      img(src='./images/homebrew-logo.png', class='corner-image', width='200px', alt='Homebrew')
+      blockquote The missing package manager for macOS
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
+        |  February 2
+      ul
+        li Now supports Linux and Windows 10!
+        li Automatic 
+          span.code brew cleanup
+        li Improved option parsing, performance, linking and more
+        li Dropped OSX Mountain Lion (10.8) and below
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 Don't Use "Do Not Track"
+      ul 
+        li Did you know there is a 
+          a(href='https://www.w3.org/TR/tracking-dnt/') web standard
+          |  for it?
+        li Most browsers support it, but most sites 
+          a(href='https://spreadprivacy.com/do-not-track/') ignore it
+        li Safari 12.1 quietly 
+          a(href='Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.') removed it:
+        ul
+          li They call it an "expired standard"
+          li It's a potential user fingerprinting variable
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 Facebook Sponsors LetsEncrypt
+      ul  
+        li 3-year renewal 
+          a(href='https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html') announced 
+          |  February 12th
+        li Platinum 
+          a(href='https://letsencrypt.org/become-a-sponsor/') sponsorship
+          |   == $300k / year!
+        li FB reports that 38% of HTTPS domains they see use LetsEncrypt
+        li Everyone should use it!
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 .dev Domains Available
+      p
+        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Announced 
+        |  February 19
+      ul
+        li Owned by Google (along with .app, .page and others)
+        li All .dev domains require HTTPS
+        li Might be a little 
+          a(href='https://www.name.com/domain/search/awesome.dev') pricey
+          |  at the moment
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2(style='display:none') The Periodic Table of AWS
+      a(href='https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/')
+        img(src='./images/periodic-aws.png', alt='Periodic AWS', style='margin:50px auto; width:80%')
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
