@@ -171,39 +171,108 @@ html
     section.slide
       h2 Chrome 73
       img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
-      p Released January 29th —
-        a(href='https://developers.google.com/web/updates/2019/01/nic72') Release Notes
+      p Released March 12th —
+        a(href='https://developers.google.com/web/updates/2019/03/nic73') Release Notes
         |  (
-        a(href='https://www.youtube.com/watch?v=coh1k7TY1P0') video
+        a(href='https://www.youtube.com/watch?v=ksWDVurubwE') video
         | )
-      h3.star Public 
-        a(href='https://developers.google.com/web/updates/2018/12/class-fields') class fields
-        |  (TC39 
-        a(href='https://github.com/tc39/proposal-class-fields') stage 3
-        | )
+      h3.star
+        a(href='https://developers.google.com/web/progressive-web-apps/desktop') Desktop PWAs for macOS
+      ul
+        li Websites can be installed like native apps
+        li Add a manifest, icons, and boilerplate service worker
+        li Now supported on all mobile + desktop platforms
+
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2018/11/signed-exchanges') Signed HTTP Exchanges (SXG)
+      ul
+        li Safely share content x-origin, retaining integrity + attribution
+        li Subset of the emerging 
+          a(href='https://github.com/WICG/webpackage') Web Packaging
+          |  standards
+        li Uses the new X.509 extension 
+          a(href='https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#cross-origin-cert-req') CanSignHttpExchanges
+      img(src='./images/sxg.png', alt='SXG', style='min-width:40%')
+    
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2019/02/constructable-stylesheets') Constructable Stylesheets
+      ul
+        li Create seamless reusable styles via the 
+          a(hre='https://developers.google.com/web/fundamentals/web-components/shadowdom') Shadow DOM
+        li Avoid duplication, FOUC, and other issues with manual creation
+        li Leverages the existing 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model') CSSOM
       pre
         code.language-javascript
-          | class Counter {
-          |   _value = 0;  // <-- public field
-          |   get value() {
-          |     return this._value;
-          |   }
-          |   increment() {
-          |     this._value++;
-          |   }
-          | }
-
+          | const sheet = new CSSStyleSheet();
+          | sheet.replaceSync('a { color: red; }');
+          | document.adoptedStyleSheets = [sheet];
  
     section.slide
       h2 Firefox 66
       img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
-      p Released January 29th —
-        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/65') Release Notes
+      p Released March 19th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
       h3.star 
-        a(href='https://developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts') CSS Flexbox Inspector
-      img(src='./images/ff-flex.png', alt='Flexbox inspector', style='min-width:40%')
+        a(href='https://drafts.csswg.org/css-logical/') CSS Logical Properties &amp; Values
+      ul
+        li Layout via logical, rather than physical, direction
+        li E.g. 
+          span.code padding-block
+          |  and 
+          span.code padding-inline
+      img(src='./images/css-logical.png', alt='CSS Logical Properties', style='min-width:50%')
+    
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia') Screen Capture API
+      ul
+        li Prompt the user to allow capturing a screen area
+        li Use the 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia')
+            span.code MediaDevices.getDisplayMedia()
+          |  method
+        li Also supports screen sharing via WebRTC!
+      img(src='./images/ff-media-capture.png', alt='Screen Capture API', style='min-width:40%')
 
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/') Audio Auto-blocking
+      ul
+        li Audibile audio and video blocked by default
+        li Muted autoplay is still allowed
+        li 
+          span.code HTMLMediaElement.play()
+          |  returns 
+          span.code NotAllowedError
+      img(src='./images/ff-autoblock.png', alt='Audio autoblocking', style='min-width:30%')
 
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://blog.mozilla.org/security/2019/03/19/passwordless-web-authentication-support-via-windows-hello/') Passwordless Login on Windows 10
+      ul
+        li Supports 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') WebAuthn
+          |  via 
+          a(href='https://www.computerworld.com/article/3244347/what-is-windows-hello-microsofts-biometrics-security-system-explained.html') Windows Hello
+        li Can use fingerprint, iris scan or facial recognition
+        li Also supports 
+          a(href='https://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-client-to-authenticator-protocol-v2.0-rd-20170927.html') CTAP
+          |  (e.g. Google Authenticator)
+      img(src='./images/win-hello.png', alt='Windows Hello', style='width:30%')
+    
     section.slide
       h2 Edge 18
       img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
@@ -211,7 +280,7 @@ html
       ul 
         li
           a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') Announced 
-          |  on December 6
+          |  on December 6 &mdash; last reminder :)
         li Goal is to improve compatibility + release cadence
         li They still plan to 
           a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') support ChakraCore
