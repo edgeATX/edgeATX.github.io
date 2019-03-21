@@ -144,6 +144,18 @@ sheet.replaceSync('a { color: red; }');
 document.adoptedStyleSheets = [sheet];</code></pre>
     </section>
     <section class="slide">
+      <h2>Chrome: Bonus</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star"><a href="https://developers.google.com/web/updates/2019/03/kv-storage">KV Storage</a></h3>
+      <ul>
+        <li>Async key-value replacement for localStorage (Chrome 74)</li>
+        <li>First JavaScript standard  <a href="https://github.com/tc39/proposal-javascript-standard-library">built-in module</a></li>
+        <li>Import JS from the browser &mdash; no download required!</li>
+        <li>Similar to web APIs, but only importable (not global)</li>
+      </ul>
+      <pre><code>import {storage} from 'std:kv-storage';
+storage.get('preferences');</code></pre>
+    </section>
+    <section class="slide">
       <h2>Firefox 66</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
       <p>Released March 19th —<a href="https://developer.mozilla.org/en-US/Firefox/Releases/66">Release Notes</a></p>
       <h3 class="star"> <a href="https://drafts.csswg.org/css-logical/">CSS Logical Properties &amp; Values</a></h3>
@@ -203,6 +215,20 @@ document.adoptedStyleSheets = [sheet];</code></pre>
         <li>Focus on hybrid mobile + desktop + PWA (not native)</li>
       </ul>
     </section>
+    <section class="slide">
+      <h2>Ink 2.0</h2>
+      <blockquote>React for CLIs</blockquote>
+      <p><a href="https://github.com/vadimdemedes/ink">Announced </a> March 6</p>
+      <ul>
+        <li>Build and test your CLI output using React-style components</li>
+        <li>Build flexbox layouts in the terminal!</li>
+      </ul>
+      <pre><code>import React from 'react';
+import {render, Box} from 'ink';
+ 
+const Demo = () => (&lt;Box>Hello World&lt;/Box>);
+render(&lt;Demo/>);</code></pre>
+    </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
       <div class="content">
         <h1>Security</h1>
@@ -218,6 +244,15 @@ document.adoptedStyleSheets = [sheet];</code></pre>
         <li>The days of typed passwords are numbered...</li>
       </ul>
     </section>
+    <section class="slide">
+      <h2>1M+ Invalid SSL Certs Issued</h2>
+      <ul>
+        <li>A misconfiguration of <a href="https://www.ejbca.org/">EJBCA</a> certificate authority package</li>
+        <li>Apple and Google <a href="https://arstechnica.com/information-technology/2019/03/godaddy-apple-and-google-goof-results-in-1-million-misissued-certificates/">issued</a> 63 bit certs</li>
+        <li>The difference between 2^63 and 2^64 is &rangle; 9 quintillion</li>
+        <li>They are currently revoking and reissuing affected certs</li>
+      </ul>
+    </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
       <div class="content">
         <h1>Industry<br>Headlines</h1>
@@ -225,12 +260,30 @@ document.adoptedStyleSheets = [sheet];</code></pre>
       <div class="shim" style="background-color:#393;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>Redis Turns 10</h2>
+      <h2>The Web Turns 30!</h2>
+      <ul>
+        <li>Sir Time Berners-Lee wrote <a href="https://cds.cern.ch/record/369245/files/dd-89-001.pdf">a proposal</a> in March 1989</li>
+        <li>By 1991, we had the Web! (though he seems <a href="https://webfoundation.org/2019/03/web-birthday-30/">irked</a> now)</li>
+        <li>CERN <a href="https://web30.web.cern.ch/">celebrated</a> on March 12th</li>
+        <li>Some devs recreated the <a href="https://home.cern/news/news/computing/developers-revive-first-web-browser-week-long-hackathon">WorldWideWeb browser</a> for fun</li>
+      </ul><img src="./images/web30.png" alt="Web Turns 30" style="width:25%">
+    </section>
+    <section class="slide">
+      <h2><a href="https://redis.io/">Redis</a> Turns 10</h2>
       <ul>
         <li>Redislabs posted a <a href="https://redislabs.com/blog/redis-turns-10/">short history</a></li>
         <li>It all started with a <a href="https://news.ycombinator.com/item?id=494649">link on Hacker News</a></li>
         <li>It only got 5 comments!</li>
-      </ul>
+      </ul><br><img src="./images/redis.png" alt="Redis" style="width:40%">
+    </section>
+    <section class="slide">
+      <h2>MySpace Snafu</h2>
+      <ul>
+        <li>Wait, MySapce is still a thing?!</li>
+        <li>They <a href="https://pitchfork.com/thepitch/history-disappeared-when-myspace-lost-12-years-of-music-and-it-will-happen-again/">lost all media files</a> uploaded between 2003 and 2015</li>
+        <li>An estimated <strong>53 million files</strong></li>
+        <li>Due to a "server migration project" with no backups</li>
+      </ul><img src="./images/myspace.png" alt="MySpace" style="width:60%">
     </section>
     <section class="slide">
       <h2><a href="https://voice.mozilla.org/en">Common Voice</a></h2>
@@ -245,6 +298,15 @@ document.adoptedStyleSheets = [sheet];</code></pre>
         <h1>In Case You<br>Missed It</h1>
       </div>
       <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>New Pi Record</h2>
+      <ul>
+        <li>On March 14th Google <a href="https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud">computed</a> pi to <strong>31.4 trillion</strong> decimals</li>
+        <li>31,415,926,535,897 to be exact (π x 10^13)</li>
+        <li>Used <a href="http://www.numberworld.org/y-cruncher/">y-cruncher</a> running on Google Cloud</li>
+        <li>New Guiness World Record (by 9 trillion digits)</li>
+      </ul><img src="./images/pi-day.png" alt="Pi Day Record" style="min-width:50%">
     </section>
     <section class="slide">
       <h2><a href="https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1">NSFW JS</a></h2>

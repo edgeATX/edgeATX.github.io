@@ -215,6 +215,22 @@ html
           | document.adoptedStyleSheets = [sheet];
  
     section.slide
+      h2 Chrome: Bonus
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2019/03/kv-storage') KV Storage
+      ul
+        li Async key-value replacement for localStorage (Chrome 74)
+        li First JavaScript standard  
+          a(href='https://github.com/tc39/proposal-javascript-standard-library') built-in module
+        li Import JS from the browser &mdash; no download required!
+        li Similar to web APIs, but only importable (not global)
+      pre
+        code
+          | import {storage} from 'std:kv-storage';
+          | storage.get('preferences');
+
+    section.slide
       h2 Firefox 66
       img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
       p Released March 19th —
@@ -307,6 +323,23 @@ html
         li Currently ships with 70 components
         li Focus on hybrid mobile + desktop + PWA (not native)
 
+    section.slide
+      h2 Ink 2.0
+      blockquote React for CLIs
+      p
+        a(href='https://github.com/vadimdemedes/ink') Announced 
+        |  March 6
+      ul
+        li Build and test your CLI output using React-style components
+        li Build flexbox layouts in the terminal!
+      pre
+        code
+          | import React from 'react';
+          | import {render, Box} from 'ink';
+          | 
+          | const Demo = () => (&lt;Box>Hello World&lt;/Box>);
+          | render(&lt;Demo/>);
+
 
     //----------------------  Security  ----------------------
     
@@ -325,6 +358,18 @@ html
         li Supported in Safari Previews since December
         li The days of typed passwords are numbered...
 
+    section.slide
+      h2 1M+ Invalid SSL Certs Issued
+      ul
+        li A misconfiguration of 
+          a(href='https://www.ejbca.org/') EJBCA
+          |  certificate authority package
+        li Apple and Google 
+          a(href='https://arstechnica.com/information-technology/2019/03/godaddy-apple-and-google-goof-results-in-1-million-misissued-certificates/') issued
+          |  63 bit certs
+        li The difference between 2^63 and 2^64 is &rangle; 9 quintillion
+        li They are currently revoking and reissuing affected certs
+      
     
     //----------------------  Industry Headlines  ----------------------
 
@@ -334,13 +379,46 @@ html
       .shim(style='background-color:#393;opacity:.7;')
 
     section.slide
-      h2 Redis Turns 10
+      h2 The Web Turns 30!
+      ul
+        li Sir Time Berners-Lee wrote 
+          a(href='https://cds.cern.ch/record/369245/files/dd-89-001.pdf') a proposal
+          |  in March 1989
+        li By 1991, we had the Web! (though he seems 
+          a(href='https://webfoundation.org/2019/03/web-birthday-30/') irked
+          |  now)
+        li CERN 
+          a(href='https://web30.web.cern.ch/') celebrated
+          |  on March 12th
+        li Some devs recreated the 
+          a(href='https://home.cern/news/news/computing/developers-revive-first-web-browser-week-long-hackathon') WorldWideWeb browser
+          |  for fun
+      img(src='./images/web30.png', alt='Web Turns 30', style='width:25%')
+    
+    section.slide
+      h2
+        a(href='https://redis.io/') Redis
+        |  Turns 10
       ul
         li Redislabs posted a 
           a(href='https://redislabs.com/blog/redis-turns-10/') short history
         li It all started with a 
           a(href='https://news.ycombinator.com/item?id=494649') link on Hacker News
         li It only got 5 comments!
+      br
+      img(src='./images/redis.png', alt='Redis', style='width:40%')
+
+    section.slide
+      h2 MySpace Snafu
+      ul
+        li Wait, MySapce is still a thing?!
+        li They 
+          a(href='https://pitchfork.com/thepitch/history-disappeared-when-myspace-lost-12-years-of-music-and-it-will-happen-again/') lost all media files
+          |  uploaded between 2003 and 2015
+        li An estimated 
+          strong 53 million files
+        li Due to a "server migration project" with no backups
+      img(src='./images/myspace.png', alt='MySpace', style='width:60%')
 
     section.slide
       h2
@@ -359,6 +437,21 @@ html
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
 
+    section.slide
+      h2 New Pi Record
+      ul
+        li On March 14th Google 
+          a(href='https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud') computed
+          |  pi to 
+          strong 31.4 trillion
+          |  decimals
+        li 31,415,926,535,897 to be exact (π x 10^13)
+        li Used 
+          a(href='http://www.numberworld.org/y-cruncher/') y-cruncher
+          |  running on Google Cloud
+        li New Guiness World Record (by 9 trillion digits)
+      img(src='./images/pi-day.png', alt='Pi Day Record', style='min-width:50%')
+    
     section.slide
       h2
         a(href='https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1') NSFW JS
