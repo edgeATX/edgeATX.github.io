@@ -194,14 +194,13 @@ document.adoptedStyleSheets = [sheet];</code></pre>
       <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
     </section>
     <section class="slide">
-      <h2>Homebrew 2.0</h2><img class="corner-image" src="./images/homebrew-logo.png" width="200px" alt="Homebrew">
-      <blockquote>The missing package manager for macOS</blockquote>
-      <p><a href="https://brew.sh/2019/02/02/homebrew-2.0.0/">Released </a> February 2</p>
+      <h2>Ionic 4: React Beta</h2><img class="corner-image" src="./images/ionic-logo.jpg" width="200px" alt="Ionic">
+      <blockquote>Helps developers build and ship beautiful cross-platform hybrid apps</blockquote>
+      <p><a href="https://blog.ionicframework.com/announcing-the-ionic-react-beta/">Announced </a> February 21</p>
       <ul>
-        <li>Now supports Linux and Windows 10!</li>
-        <li>Automatic <span class="code">brew cleanup</span></li>
-        <li>Improved option parsing, performance, linking and more</li>
-        <li>Dropped OSX Mountain Lion (10.8) and below</li>
+        <li>Started in 2013 on Angular 1</li>
+        <li>Currently ships with 70 components</li>
+        <li>Focus on hybrid mobile + desktop + PWA (not native)</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
@@ -211,15 +210,12 @@ document.adoptedStyleSheets = [sheet];</code></pre>
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>Don't Use "Do Not Track"</h2>
-      <ul> 
-        <li>Did you know there is a <a href="https://www.w3.org/TR/tracking-dnt/">web standard</a> for it?</li>
-        <li>Most browsers support it, but most sites <a href="https://spreadprivacy.com/do-not-track/">ignore it</a></li>
-        <li>Safari 12.1 quietly <a href="Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.">removed it:</a></li>
-        <ul>
-          <li>They call it an "expired standard"</li>
-          <li>It's a potential user fingerprinting variable</li>
-        </ul>
+      <h2>WebAuthn Finalized</h2>
+      <ul>
+        <li>The W3C <a href="https://venturebeat.com/2019/03/04/w3c-approves-webauthn-as-the-web-standard-for-password-free-logins/">declared it</a> an official web standard on March 4th</li>
+        <li>Supported by Chrome, FF and Edge (and now Win 10 :)</li>
+        <li>Supported in Safari Previews since December</li>
+        <li>The days of typed passwords are numbered...</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
@@ -229,13 +225,20 @@ document.adoptedStyleSheets = [sheet];</code></pre>
       <div class="shim" style="background-color:#393;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>Facebook Sponsors LetsEncrypt</h2>
-      <ul> 
-        <li>3-year renewal <a href="https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html">announced </a> February 12th</li>
-        <li>Platinum <a href="https://letsencrypt.org/become-a-sponsor/">sponsorship</a>  == $300k / year!</li>
-        <li>FB reports that 38% of HTTPS domains they see use LetsEncrypt</li>
-        <li>Everyone should use it!</li>
+      <h2>Redis Turns 10</h2>
+      <ul>
+        <li>Redislabs posted a <a href="https://redislabs.com/blog/redis-turns-10/">short history</a></li>
+        <li>It all started with a <a href="https://news.ycombinator.com/item?id=494649">link on Hacker News</a></li>
+        <li>It only got 5 comments!</li>
       </ul>
+    </section>
+    <section class="slide">
+      <h2><a href="https://voice.mozilla.org/en">Common Voice</a></h2>
+      <blockquote>Mozilla's initiative to help teach machines how real people speak</blockquote>
+      <ul>
+        <li>Record and review open source human voices</li>
+        <li>High-quality, public, cross-language voice dataset</li>
+      </ul><img src="./images/common-voice.png" alt="Common Voice" style="min-width:50%">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
       <div class="content">
@@ -244,19 +247,36 @@ document.adoptedStyleSheets = [sheet];</code></pre>
       <div class="shim" style="background-color:#555;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>.dev Domains Available</h2>
-      <p><a href="https://brew.sh/2019/02/02/homebrew-2.0.0/">Announced </a> February 19</p>
+      <h2><a href="https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1">NSFW JS</a></h2>
       <ul>
-        <li>Owned by Google (along with .app, .page and others)</li>
-        <li>All .dev domains require HTTPS</li>
-        <li>Might be a little <a href="https://www.name.com/domain/search/awesome.dev">pricey</a> at the moment</li>
+        <li>Client-side indecent image checking</li>
+        <li>Powered by <a href="https://www.tensorflow.org/">TensorFlow</a></li>
+        <li>Try the <a href="https://nsfwjs.com/">demo</a> or check out the <a href="https://github.com/infinitered/nsfwjs">code</a></li>
       </ul>
+      <pre><code>const model = await nsfwjs.load('/model/')
+const img = document.getElementById('questionable_img')
+const predictions = await model.classify(img)
+console.log('Predictions: ', predictions)</code></pre>
+    </section>
+    <section class="slide">
+      <h2><a href="https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1">NSFW JS</a></h2>
+      <ul>
+        <li>Has strong opinions about <a href="https://shift.infinite.red/machine-learning-has-opinions-about-jeff-goldblum-strong-opinions-5438447ead35">Jeff Goldblum</a></li>
+      </ul><img src="./images/jeff-goldblum.png" alt="Jeff Goldblum" style="width:60%">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
     </section>
     <section class="slide">
-      <h2 style="display:none">The Periodic Table of AWS</h2><a href="https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/"><img src="./images/periodic-aws.png" alt="Periodic AWS" style="margin:50px auto; width:80%"></a>
+      <h2><a href="https://kanye.rest/">Kanye.rest</a></h2>
+      <blockquote>A free JSON API for random Kanye West quotes</blockquote>
+      <ul>
+        <li>Try it: <a href="https://api.kanye.rest/">https://api.kanye.rest/</a></li>
+      </ul>
+      <pre><code class="language-javascript">{
+   "quote": "I feel like I'm too busy writing history to read it.",
+   "id": "TTCFIlI8gbn7c9YzCRAz"
+}</code></pre><img src="./images/kanye.png" alt="Kanye.rest" style="width:20%">
     </section>
     <section class="slide">
       <h2>Thanks!</h2>

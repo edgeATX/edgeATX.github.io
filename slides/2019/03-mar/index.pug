@@ -294,20 +294,18 @@ html
     section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
       h1 Languages, Libraries &amp;<br>Frameworks
       .shim(style='background-color:#AD7909;opacity:.8;')
-  
+
     section.slide
-      h2 Homebrew 2.0
-      img(src='./images/homebrew-logo.png', class='corner-image', width='200px', alt='Homebrew')
-      blockquote The missing package manager for macOS
+      h2 Ionic 4: React Beta
+      img(src='./images/ionic-logo.jpg', class='corner-image', width='200px', alt='Ionic')
+      blockquote Helps developers build and ship beautiful cross-platform hybrid apps
       p
-        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Released 
-        |  February 2
+        a(href='https://blog.ionicframework.com/announcing-the-ionic-react-beta/') Announced 
+        |  February 21
       ul
-        li Now supports Linux and Windows 10!
-        li Automatic 
-          span.code brew cleanup
-        li Improved option parsing, performance, linking and more
-        li Dropped OSX Mountain Lion (10.8) and below
+        li Started in 2013 on Angular 1
+        li Currently ships with 70 components
+        li Focus on hybrid mobile + desktop + PWA (not native)
 
 
     //----------------------  Security  ----------------------
@@ -318,18 +316,14 @@ html
       .shim(style='background-color:#c11;opacity:.7;')
   
     section.slide
-      h2 Don't Use "Do Not Track"
-      ul 
-        li Did you know there is a 
-          a(href='https://www.w3.org/TR/tracking-dnt/') web standard
-          |  for it?
-        li Most browsers support it, but most sites 
-          a(href='https://spreadprivacy.com/do-not-track/') ignore it
-        li Safari 12.1 quietly 
-          a(href='Removed support for the expired Do Not Track standard to prevent potential use as a fingerprinting variable.') removed it:
-        ul
-          li They call it an "expired standard"
-          li It's a potential user fingerprinting variable
+      h2 WebAuthn Finalized
+      ul
+        li The W3C 
+          a(href='https://venturebeat.com/2019/03/04/w3c-approves-webauthn-as-the-web-standard-for-password-free-logins/') declared it
+          |  an official web standard on March 4th
+        li Supported by Chrome, FF and Edge (and now Win 10 :)
+        li Supported in Safari Previews since December
+        li The days of typed passwords are numbered...
 
     
     //----------------------  Industry Headlines  ----------------------
@@ -340,16 +334,22 @@ html
       .shim(style='background-color:#393;opacity:.7;')
 
     section.slide
-      h2 Facebook Sponsors LetsEncrypt
-      ul  
-        li 3-year renewal 
-          a(href='https://letsencrypt.org/2019/02/12/facebook-expands-support-for-letsencrypt.html') announced 
-          |  February 12th
-        li Platinum 
-          a(href='https://letsencrypt.org/become-a-sponsor/') sponsorship
-          |   == $300k / year!
-        li FB reports that 38% of HTTPS domains they see use LetsEncrypt
-        li Everyone should use it!
+      h2 Redis Turns 10
+      ul
+        li Redislabs posted a 
+          a(href='https://redislabs.com/blog/redis-turns-10/') short history
+        li It all started with a 
+          a(href='https://news.ycombinator.com/item?id=494649') link on Hacker News
+        li It only got 5 comments!
+
+    section.slide
+      h2
+        a(href='https://voice.mozilla.org/en') Common Voice
+      blockquote Mozilla's initiative to help teach machines how real people speak
+      ul
+        li Record and review open source human voices
+        li High-quality, public, cross-language voice dataset
+      img(src='./images/common-voice.png', alt='Common Voice', style='min-width:50%')
 
 
     //----------------------  ICYMI  ----------------------
@@ -360,16 +360,30 @@ html
       .shim(style='background-color:#555;opacity:.7;')
 
     section.slide
-      h2 .dev Domains Available
-      p
-        a(href='https://brew.sh/2019/02/02/homebrew-2.0.0/') Announced 
-        |  February 19
+      h2
+        a(href='https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1') NSFW JS
       ul
-        li Owned by Google (along with .app, .page and others)
-        li All .dev domains require HTTPS
-        li Might be a little 
-          a(href='https://www.name.com/domain/search/awesome.dev') pricey
-          |  at the moment
+        li Client-side indecent image checking
+        li Powered by 
+          a(href='https://www.tensorflow.org/') TensorFlow
+        li Try the 
+          a(href='https://nsfwjs.com/') demo
+          |  or check out the 
+          a(href='https://github.com/infinitered/nsfwjs') code
+      pre
+        code
+          | const model = await nsfwjs.load('/model/')
+          | const img = document.getElementById('questionable_img')
+          | const predictions = await model.classify(img)
+          | console.log('Predictions: ', predictions)
+
+    section.slide
+      h2
+        a(href='https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1') NSFW JS
+      ul
+        li Has strong opinions about 
+          a(href='https://shift.infinite.red/machine-learning-has-opinions-about-jeff-goldblum-strong-opinions-5438447ead35') Jeff Goldblum
+      img(src='./images/jeff-goldblum.png', alt='Jeff Goldblum', style='width:60%')
 
 
     //----------------------  Something Completely Different  ----------------------
@@ -378,9 +392,19 @@ html
       h1 And now for something completely different...
 
     section.slide
-      h2(style='display:none') The Periodic Table of AWS
-      a(href='https://www.awsgeek.com/posts/Periodic-Table-of-Amazon-Web-Services/')
-        img(src='./images/periodic-aws.png', alt='Periodic AWS', style='margin:50px auto; width:80%')
+      h2
+        a(href='https://kanye.rest/') Kanye.rest
+      blockquote A free JSON API for random Kanye West quotes
+      ul
+        li Try it: 
+          a(href='https://api.kanye.rest/') https://api.kanye.rest/
+      pre
+        code.language-javascript
+          | {
+          |    "quote": "I feel like I'm too busy writing history to read it.",
+          |    "id": "TTCFIlI8gbn7c9YzCRAz"
+          | }
+      img(src='./images/kanye.png', alt='Kanye.rest', style='width:20%')
 
 
     //----------------------  Fin  ----------------------
