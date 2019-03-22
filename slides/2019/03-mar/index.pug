@@ -1,0 +1,553 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: February 2019
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: March 2019
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.lightning Visual Regression Testing with Percy.io
+      p.indent
+        | &mdash; Robert DeLuca (
+        a(href='https://twitter.com/robdel12') @robdel12
+        | )
+
+      h3.lightning Level Up with Redis + Node
+      p.indent
+        | &mdash; Ted Patrick (
+        a(href='https://twitter.com/__ted__') @__ted__
+        | )
+
+      h3.lightning EnableDB: An Experiment with DB Gateways
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+
+      //- h3.star Main talk
+      //- p.indent
+      //-   | &mdash; Name
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      p(style='color: #fff;') Thanks to our venue:
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/')
+            img(style='min-width:40%', src='../../shared/resources/images/sponsors/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background:#fff;')
+      p(style='color: #555;') Thanks to our premiere sponsor:
+      div(style='text-align:center;padding-top:150px;font-size:200%;')
+        p
+          a(href='https://grnh.se/27cc659b1')
+            img(style='min-width:50%', src='../../shared/resources/images/sponsors/duo-logo.png', alt='Duo Security')
+
+
+    //- section.slide.cover(style='background-image:url(./images/cloudflare-stickers.jpg)')
+    //-   p(style='color: #fff;') Thanks to our sponsor:
+    
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong> (
+          a(href='https://www.edgeatx.org') edgeatx.org
+          | )
+        li Don't forget your parking validation
+        li Omni hotel bar (downstairs) after meetup
+        li Anyone hiring / looking?
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: February 21, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 72
+          td.ver 65
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of March 21, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 72
+            br
+            strong(style='color:#1CA727') 73
+          td.ver
+            span.strike.dim 65
+            br
+            strong(style='color:#1CA727') 66
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12
+    
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released March 12th —
+        a(href='https://developers.google.com/web/updates/2019/03/nic73') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=ksWDVurubwE') video
+        | )
+      h3.star
+        a(href='https://developers.google.com/web/progressive-web-apps/desktop') Desktop PWAs for macOS
+      ul
+        li Websites can be installed like native apps
+        li Add a manifest, icons, and boilerplate service worker
+        li Now supported on all mobile + desktop platforms
+
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2018/11/signed-exchanges') Signed HTTP Exchanges (SXG)
+      ul
+        li Safely share content x-origin, retaining integrity + attribution
+        li Subset of the emerging 
+          a(href='https://github.com/WICG/webpackage') Web Packaging
+          |  standards
+        li Uses the new X.509 extension 
+          a(href='https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#cross-origin-cert-req') CanSignHttpExchanges
+      img(src='./images/sxg.png', alt='SXG', style='min-width:40%')
+    
+    section.slide
+      h2 Chrome 73
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2019/02/constructable-stylesheets') Constructable Stylesheets
+      ul
+        li Create seamless reusable styles via the 
+          a(hre='https://developers.google.com/web/fundamentals/web-components/shadowdom') Shadow DOM
+        li Avoid duplication, FOUC, and other issues with manual creation
+        li Leverages the existing 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model') CSSOM
+      pre
+        code.language-javascript
+          | const sheet = new CSSStyleSheet();
+          | sheet.replaceSync('a { color: red; }');
+          | document.adoptedStyleSheets = [sheet];
+ 
+    section.slide
+      h2 Chrome: Bonus
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star
+        a(href='https://developers.google.com/web/updates/2019/03/kv-storage') KV Storage
+      ul
+        li Async key-value replacement for localStorage (Chrome 74)
+        li First JavaScript standard  
+          a(href='https://github.com/tc39/proposal-javascript-standard-library') built-in module
+        li Import JS from the browser &mdash; no download required!
+        li Similar to web APIs, but only importable (not global)
+      pre
+        code
+          | import {storage} from 'std:kv-storage';
+          | storage.get('preferences');
+
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released March 19th —
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
+      h3.star 
+        a(href='https://drafts.csswg.org/css-logical/') CSS Logical Properties &amp; Values
+      ul
+        li Layout via logical, rather than physical, direction
+        li E.g. 
+          span.code padding-block
+          |  and 
+          span.code padding-inline
+      img(src='./images/css-logical.png', alt='CSS Logical Properties', style='min-width:50%')
+    
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getDisplayMedia') Screen Capture API
+      ul
+        li Prompt the user to allow capturing a screen area
+        li Use the 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia')
+            span.code MediaDevices.getDisplayMedia()
+          |  method
+        li Also supports screen sharing via WebRTC!
+      img(src='./images/ff-media-capture.png', alt='Screen Capture API', style='min-width:40%')
+
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://hacks.mozilla.org/2019/02/firefox-66-to-block-automatically-playing-audible-video-and-audio/') Audio Auto-blocking
+      ul
+        li Audibile audio and video blocked by default
+        li Muted autoplay is still allowed
+        li 
+          span.code HTMLMediaElement.play()
+          |  returns 
+          span.code NotAllowedError
+      img(src='./images/ff-autoblock.png', alt='Audio autoblocking', style='min-width:30%')
+
+    section.slide
+      h2 Firefox 66
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      h3.star 
+        a(href='https://blog.mozilla.org/security/2019/03/19/passwordless-web-authentication-support-via-windows-hello/') Passwordless Login on Windows 10
+      ul
+        li Supports 
+          a(href='https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API') WebAuthn
+          |  via 
+          a(href='https://www.computerworld.com/article/3244347/what-is-windows-hello-microsofts-biometrics-security-system-explained.html') Windows Hello
+        li Can use fingerprint, iris scan or facial recognition
+        li Also supports 
+          a(href='https://fidoalliance.org/specs/fido-v2.0-rd-20170927/fido-client-to-authenticator-protocol-v2.0-rd-20170927.html') CTAP
+          |  (e.g. Google Authenticator)
+      img(src='./images/win-hello.png', alt='Windows Hello', style='width:30%')
+    
+    section.slide
+      h2 Edge 18
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      h3.star Switching to Chromium/V8 !!
+      ul 
+        li
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') Announced 
+          |  on December 6 &mdash; last reminder :)
+        li Goal is to improve compatibility + release cadence
+        li They still plan to 
+          a(href='https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/#GmSJg4uFjBM5y8Hz.97') support ChakraCore
+          |  (for now?)
+        li Yet another sign of the increasing Microsoft 
+          a(href='https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/') OSS focus
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+
+    section.slide
+      h2 Ionic 4: React Beta
+      img(src='./images/ionic-logo.jpg', class='corner-image', width='200px', alt='Ionic')
+      blockquote Helps developers build and ship beautiful cross-platform hybrid apps
+      p
+        a(href='https://blog.ionicframework.com/announcing-the-ionic-react-beta/') Announced 
+        |  February 21
+      ul
+        li Started in 2013 on Angular 1
+        li Currently ships with 70 components
+        li Focus on hybrid mobile + desktop + PWA (not native)
+
+    section.slide
+      h2 Ink 2.0
+      blockquote React for CLIs
+      p
+        a(href='https://github.com/vadimdemedes/ink') Announced 
+        |  March 6
+      ul
+        li Build and test your CLI output using React-style components
+        li Build flexbox layouts in the terminal!
+      pre
+        code
+          | import React from 'react';
+          | import {render, Box} from 'ink';
+          | 
+          | const Demo = () => (&lt;Box>Hello World&lt;/Box>);
+          | render(&lt;Demo/>);
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 WebAuthn Finalized
+      ul
+        li The W3C 
+          a(href='https://venturebeat.com/2019/03/04/w3c-approves-webauthn-as-the-web-standard-for-password-free-logins/') declared it
+          |  an official web standard on March 4th
+        li Supported by Chrome, FF and Edge (and now Win 10 :)
+        li Supported in Safari Previews since December
+        li The days of typed passwords are numbered...
+
+    section.slide
+      h2 1M+ Invalid SSL Certs Issued
+      ul
+        li A misconfiguration of 
+          a(href='https://www.ejbca.org/') EJBCA
+          |  certificate authority package
+        li Apple and Google 
+          a(href='https://arstechnica.com/information-technology/2019/03/godaddy-apple-and-google-goof-results-in-1-million-misissued-certificates/') issued
+          |  63 bit certs
+        li The difference between 2^63 and 2^64 is &rangle; 9 quintillion
+        li They are currently revoking and reissuing affected certs
+      
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 The Web Turns 30!
+      ul
+        li Sir Time Berners-Lee wrote 
+          a(href='https://cds.cern.ch/record/369245/files/dd-89-001.pdf') a proposal
+          |  in March 1989
+        li By 1991, we had the Web! (though he seems 
+          a(href='https://webfoundation.org/2019/03/web-birthday-30/') irked
+          |  now)
+        li CERN 
+          a(href='https://web30.web.cern.ch/') celebrated
+          |  on March 12th
+        li Some devs recreated the 
+          a(href='https://home.cern/news/news/computing/developers-revive-first-web-browser-week-long-hackathon') WorldWideWeb browser
+          |  for fun
+      img(src='./images/web30.png', alt='Web Turns 30', style='width:25%')
+    
+    section.slide
+      h2
+        a(href='https://redis.io/') Redis
+        |  Turns 10
+      ul
+        li Redislabs posted a 
+          a(href='https://redislabs.com/blog/redis-turns-10/') short history
+        li It all started with a 
+          a(href='https://news.ycombinator.com/item?id=494649') link on Hacker News
+        li It only got 5 comments!
+      br
+      img(src='./images/redis.png', alt='Redis', style='width:40%')
+
+    section.slide
+      h2 MySpace Snafu
+      ul
+        li Wait, MySapce is still a thing?!
+        li They 
+          a(href='https://pitchfork.com/thepitch/history-disappeared-when-myspace-lost-12-years-of-music-and-it-will-happen-again/') lost all media files
+          |  uploaded between 2003 and 2015
+        li An estimated 
+          strong 53 million files
+        li Due to a "server migration project" with no backups
+      img(src='./images/myspace.png', alt='MySpace', style='width:60%')
+
+    section.slide
+      h2
+        a(href='https://voice.mozilla.org/en') Common Voice
+      blockquote Mozilla's initiative to help teach machines how real people speak
+      ul
+        li Record and review open source human voices
+        li High-quality, public, cross-language voice dataset
+      img(src='./images/common-voice.png', alt='Common Voice', style='min-width:50%')
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 New Pi Record
+      ul
+        li On March 14th Google 
+          a(href='https://cloud.google.com/blog/products/compute/calculating-31-4-trillion-digits-of-archimedes-constant-on-google-cloud') computed
+          |  pi to 
+          strong 31.4 trillion
+          |  decimals
+        li 31,415,926,535,897 to be exact (π x 10^13)
+        li Used 
+          a(href='http://www.numberworld.org/y-cruncher/') y-cruncher
+          |  running on Google Cloud
+        li New Guiness World Record (by 9 trillion digits)
+      img(src='./images/pi-day.png', alt='Pi Day Record', style='min-width:50%')
+    
+    section.slide
+      h2
+        a(href='https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1') NSFW JS
+      ul
+        li Client-side indecent image checking
+        li Powered by 
+          a(href='https://www.tensorflow.org/') TensorFlow
+        li Try the 
+          a(href='https://nsfwjs.com/') demo
+          |  or check out the 
+          a(href='https://github.com/infinitered/nsfwjs') code
+      pre
+        code
+          | const model = await nsfwjs.load('/model/')
+          | const img = document.getElementById('questionable_img')
+          | const predictions = await model.classify(img)
+          | console.log('Predictions: ', predictions)
+
+    section.slide
+      h2
+        a(href='https://shift.infinite.red/avoid-nightmares-nsfw-js-ab7b176978b1') NSFW JS
+      ul
+        li Has strong opinions about 
+          a(href='https://shift.infinite.red/machine-learning-has-opinions-about-jeff-goldblum-strong-opinions-5438447ead35') Jeff Goldblum
+      img(src='./images/jeff-goldblum.png', alt='Jeff Goldblum', style='width:60%')
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2
+        a(href='https://kanye.rest/') Kanye.rest
+      blockquote A free JSON API for random Kanye West quotes
+      ul
+        li Try it: 
+          a(href='https://api.kanye.rest/') https://api.kanye.rest/
+      pre
+        code.language-javascript
+          | {
+          |    "quote": "I feel like I'm too busy writing history to read it.",
+          |    "id": "TTCFIlI8gbn7c9YzCRAz"
+          | }
+      img(src='./images/kanye.png', alt='Kanye.rest', style='width:20%')
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') https://edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
