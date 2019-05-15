@@ -28,13 +28,13 @@
 
 .deck-container .slide ::selection { background: #c00; color: #fff; }
 
-.deck-container .slide a { color: #75B1F5 !important; border-bottom: 2px dotted #333B46; }
+.deck-container .slide a, .deck-container .slide a:visited { color: #75B1F5 !important; border-bottom: 2px dotted #333B46; }
 
-.deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited { color: #E91E63; text-decoration: none; }
+.deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited, .deck-container .slide a:visited, .deck-container .slide a:visited:hover, .deck-container .slide a:visited:focus, .deck-container .slide a:visited:active, .deck-container .slide a:visited:visited { color: #E91E63; text-decoration: none; }
 
-.deck-container .slide a:hover, .deck-container .slide a:focus { border-bottom: 1px solid #E91E63; }
+.deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:visited:hover, .deck-container .slide a:visited:focus { border-bottom: 1px solid #E91E63; }
 
-.deck-container .slide a span.code { color: #75B1F5 !important; border-bottom: 2px dotted #333B46; }
+.deck-container .slide a span.code, .deck-container .slide a:visited span.code { color: #75B1F5 !important; border-bottom: 2px dotted #333B46; }
 
 .deck-container .slide ul { margin-left: .5em; }
 
@@ -48,7 +48,7 @@
 
 .deck-container .slide ul ul li:before { content: '\2192'; color: #E91E63; padding-right: 20px; }
 
-.deck-container .slide small { font-size: 75%; }
+.deck-container .slide .small { font-size: 75%; }
 
 .deck-container .slide .strike { text-decoration: line-through; }
 
@@ -72,7 +72,7 @@
 
 .deck-container .cover, .deck-container .cover-light { background-repeat: no-repeat; background-attachment: fixed; background-position: center; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover; }
 
-.deck-container .cover h1, .deck-container .cover-light h1 { color: #fff; text-shadow: compact(0 5px 10px rgba(0, 0, 0, 0.7), false, false, false, false, false, false, false, false, false); line-height: 1em; }
+.deck-container .cover h1, .deck-container .cover-light h1 { color: #fff; text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7); line-height: 1em; }
 
 .deck-container .cover h2, .deck-container .cover-light h2 { color: #fff; border-bottom: none; }
 
@@ -90,9 +90,9 @@
 
 .deck-container .cover-light h3 { color: #444; }
 
-.deck-container .cover-light h1, .deck-container .cover-light h2, .deck-container .cover-light h3 { text-shadow: compact(0 2px 0 rgba(255, 255, 255, 0.7), false, false, false, false, false, false, false, false, false); }
+.deck-container .cover-light h1, .deck-container .cover-light h2, .deck-container .cover-light h3 { text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7); }
 
-.deck-container .cover-light a, .deck-container .cover-light a:visited, .deck-container .cover-light p, .deck-container .cover-light li { color: #333; text-shadow: compact(0 1px 0 rgba(255, 255, 255, 0.7), false, false, false, false, false, false, false, false, false); }
+.deck-container .cover-light a, .deck-container .cover-light a:visited, .deck-container .cover-light p, .deck-container .cover-light li { color: #333; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7); }
 
 .deck-container .title { background-color: #0F91DA; }
 
