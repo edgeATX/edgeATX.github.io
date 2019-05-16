@@ -161,6 +161,17 @@ html
           a(href="https://developer.apple.com/documentation/safari_release_notes") September? 
           | 
           span.small ¯\_(ツ)_/¯
+    
+    section.slide
+      h2 Chromium Edge + IE
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      ul
+        li Edge will offer "IE Mode"
+        li Will use the IE rendering engine transparently
+        li Single UI, settings, history, etc.
+        li Will standalone IE finally go away for real?
+      img(src="./images/ie.gif", alt="IE", style="width:50%")
+
 
     //----------------------  Libs & Frameworks  ----------------------
     
@@ -175,7 +186,7 @@ html
       h3 React Boilerplate 4.0 
         span.small &mdash; 
           a(href="https://github.com/react-boilerplate/react-boilerplate/releases/tag/v4.0.0") Released 
-          | April 18
+          | April 18th
       ul
         li Hooks, 
           span.code Suspense
@@ -194,7 +205,7 @@ html
       h3 Create React App 3.0 
         span.small &mdash; 
           a(href="https://github.com/facebook/create-react-app") Released 
-          | April 22
+          | April 22th
       ul
         li Hooks, TypeScript linting
 
@@ -205,7 +216,7 @@ html
       ul
         li 
           a(href="https://svelte.dev/blog/svelte-3-rethinking-reactivity") Released
-          |  April 22
+          |  April 22nd
         li No virtual DOM &mdash; Compiles to vanilla JS
         li "Truly reactive" with no complex state management
         li Boilerplate-free components
@@ -219,7 +230,7 @@ html
       ul
         li
           a(href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f") Released
-          |  April 23
+          |  April 23rd
         li Upgraded to V8 7.4: perf boost, plus 
           a(href="https://docs.google.com/document/d/13Sy_kBIJGP0XT34V1CV3nkWya4TwYx9L3Yv45LdGB6Q/edit") async stack traces
         li TLS 1.3 by default (
@@ -227,8 +238,8 @@ html
           | )
         li Better ES6 module support
         li Improved native modules, worker threads, heap management
-        li A <em>lot</em> more &mdash; 
-          a(href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f") check it out!
+        li Still on Node 6? 
+          a(href="https://aws.amazon.com/blogs/developer/node-js-6-is-approaching-end-of-life-upgrade-your-aws-lambda-functions-to-the-node-js-10-lts/") Time to upgrade!
 
     section.slide
       h2 Electron 5.0
@@ -236,7 +247,7 @@ html
       ul
         li
           a(href="https://electronjs.org/blog/electron-5-0") Released
-          |  April 23
+          |  April 23rd
         li Progress toward 
           a(href="https://github.com/electron/electron/blob/5-0-x/docs/api/promisification.md") promisifcation
         li Multiple BrowserViews in a BrowserWindow
@@ -250,7 +261,7 @@ html
       ul
         li
           a(href="https://blogs.windows.com/buildingapps/2019/04/30/babylon-js-4-0-is-here/") Released
-          |  April 30
+          |  April 30th
         li WebGL-based graphics engine
         li Improved physics engine (
           a(href="https://playground.babylonjs.com/#3I55DK") cool demo
@@ -258,7 +269,18 @@ html
         li New visual scene inspector
         li Codebased moved to ES6 modules, up to 80% smaller payloads
 
+    section.slide
+      h2 .NET 5
+      img(src='../../shared/resources/images/dotnet-logo.png', class='corner-image', width='200px', alt='.NET')
+      ul
+        li
+          a(href="https://devblogs.microsoft.com/dotnet/introducing-net-5/") Announced 
+          | May 6th
+        li .NET Core 3.0 &rarr; .NET 5
+        li Targets: Win / Linux / OSX / iOS / Android / tvOS / WASM / more...
 
+      img(src="./images/dotnet5.png", alt=".NET 5", style="max-width:50%")
+      
     //----------------------  Tips & Tricks  ----------------------
     
     section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
@@ -352,6 +374,24 @@ html
           |  for a 2018 recap + 2019 preview
 
     section.slide
+      h2 Googlebot Goes Evergreen
+      img(src='../../shared/resources/images/googlebot.png', class='corner-image', width='200px', alt='Googlebot')
+      ul
+        li Googlebot is now 
+          a(href="https://webmasters.googleblog.com/2019/05/the-new-evergreen-googlebot.html") based on Chromium 74
+        li It supports 1000+ new features
+          ul
+            li ES6 syntax
+            li
+              a(href="https://developers.google.com/web/fundamentals/web-components/") WebComponent APIs
+              | 
+              span.small (Shadow DOM, custom elements)
+            li
+              a(href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/#lazy_loading_images") IntersectionObserver
+              |  
+              span.small (for image lazy-loading)
+
+    section.slide
       h2 
         a(href="https://github.com/features/package-registry") GitHub Package Registry
       blockquote Safely publish and consume packages within your organization or with the entire world
@@ -361,13 +401,38 @@ html
         li Supports npm, Docker, Maven, NuGet, RubyGems
         li Currently in beta and on a waitlist
 
-      
 
     //----------------------  Something Completely Different  ----------------------
     
-    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
-      h1 And now for something completely different...
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+    //-   h1 And now for something completely different...
 
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul
+    //-     li X
+
+
+    //----------------------  On the Lighter Side  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
+
+    section.slide
+      h2 JS + Web Audio Pedalboard
+      ul
+        li
+          a(href="https://pedalboard.netlify.com/") Interactive Demo
+          |  / 
+          a(href="https://www.youtube.com/watch?v=OJVmZ7hbVPQ") Video Demo
+        li 
+          a(href="https://www.trysmudford.com/blog/pedalboard/") Nice overview
+          |  of how the effects were built
+      img(src="./images/pedalboard.png" alt="JS Pedalboard", style="max-width:50%")
+    
     section.slide
       h2 React95
       blockquote Windows95 UI components for your modern React apps
