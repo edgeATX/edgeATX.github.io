@@ -169,10 +169,108 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
 
     section.slide
-      h2 X
-      ul
-        li X
+      h2 React libraries
+      img(src='../../shared/resources/images/react-logo.png', class='corner-image', width='200px', alt='React')
 
+      h3 React Boilerplate 4.0 
+        span.small &mdash; 
+          a(href="https://github.com/react-boilerplate/react-boilerplate/releases/tag/v4.0.0") Released 
+          | April 18
+      ul
+        li Hooks, 
+          span.code Suspense
+          |  (lazy loading)
+        li
+          span.code enzyme
+          |  &rarr; 
+          a(href="https://github.com/testing-library/react-testing-library")
+            span.code react-testing-library
+        li 
+          span.code Immutable
+          |  &rarr; 
+          a(href="https://www.netlify.com/blog/2018/09/12/the-rise-of-immer-in-react/")
+            span.code Immer
+
+      h3 Create React App 3.0 
+        span.small &mdash; 
+          a(href="https://github.com/facebook/create-react-app") Released 
+          | April 22
+      ul
+        li Hooks, TypeScript linting
+
+    section.slide
+      h2 Svelte 3
+      blockquote Cybernetically enhanced web apps
+      img(src='../../shared/resources/images/svelte-logo.png', class='corner-image', width='200px', alt='Svelte')
+      ul
+        li 
+          a(href="https://svelte.dev/blog/svelte-3-rethinking-reactivity") Released
+          |  April 22
+        li No virtual DOM &mdash; Compiles to vanilla JS
+        li "Truly reactive" with no complex state management
+        li Boilerplate-free components
+        li Learn more about the 
+          a(href="https://svelte.dev/blog/frameworks-without-the-framework") philosophy
+          |  behind it
+
+    section.slide
+      h2 Node.js 12
+      img(src='../../shared/resources/images/nodejs-logo.png', class='corner-image', width='200px', alt='Node.js')
+      ul
+        li
+          a(href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f") Released
+          |  April 23
+        li Upgraded to V8 7.4: perf boost, plus 
+          a(href="https://docs.google.com/document/d/13Sy_kBIJGP0XT34V1CV3nkWya4TwYx9L3Yv45LdGB6Q/edit") async stack traces
+        li TLS 1.3 by default (
+          a(href="https://www.cloudflare.com/learning-resources/tls-1-3/") faster and more secure
+          | )
+        li Better ES6 module support
+        li Improved native modules, worker threads, heap management
+        li A <em>lot</em> more &mdash; 
+          a(href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f") check it out!
+
+
+    //----------------------  Tips & Tricks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+      .content
+        h1 Tips &amp; Tricks
+      .shim(style='background-color:#6d0264;opacity:.7;')
+  
+    section.slide
+      h2 Designing for Dark Mode
+      blockquote Implementing dark mode is easy, but designing for it is less so.
+      ul 
+        li OSX is pushing dark mode with Mojave
+        li Here is a 
+          a(href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode") great overview
+          |  of things to consider
+        li Choosing your "dark" color, typography, consistency
+      img(src="./images/dark-mode.png", alt="Dark mode", style="max-width: 50%")
+
+    section.slide
+      h2 Designing for Dark Mode
+      p This is an emerging 
+        a(href="https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme") Level 5 Media Query
+        |  standard:
+      pre
+        code
+          | @media (prefers-color-scheme: dark) {
+          |   /* dark mode styles */
+          | }
+
+      ul
+        li Possible values: 
+          span.code light
+          | , 
+          span.code dark
+          | , or 
+          span.code no-preference
+        li Supported today in Safari 12.1
+        li 
+          a(href="https://techdows.com/2019/05/chrome-and-firefox-67-to-ship-css-prefers-color-scheme-media-feature.html") Slated
+          |  for Chrome 76 &amp; Firefox 67
 
     //----------------------  Security  ----------------------
     
@@ -182,9 +280,16 @@ html
       .shim(style='background-color:#c11;opacity:.7;')
   
     section.slide
-      h2 X
+      h2 Docker Hub Hacked
+      img(src='../../shared/resources/images/docker-logo.png', class='corner-image', width='200px', alt='Docker')
       ul
-        li X
+        li 
+          a(href="https://success.docker.com/article/docker-hub-user-notification") Occurred
+          |  on April 25th
+        li 5% of user accounts accessed (~190k)
+        li Leaked usernames, hashed passwords and source repo tokens
+        li If you were affected they should have contacted you
+        li Periodic reminder: <strong>Don't Reuse Passwords!</strong>
 
     
     //----------------------  Industry Headlines  ----------------------
@@ -209,14 +314,24 @@ html
 
     section.slide
       h2 Front-end Dev Handbook 2019
-      blockquote A guide that everyone can use to learn about the practice of front-end development.
+      blockquote A guide that everyone can use to learn about the practice of front-end development
       ul
         li Current / best-in-class tool recommendations
         li Read 
           a(href="https://frontendmasters.com/books/front-end-handbook/2019/#1") Chapter 0
           |  for a 2018 recap + 2019 preview
 
-    
+    section.slide
+      h2 
+        a(href="https://github.com/features/package-registry") GitHub Package Registry
+      blockquote Safely publish and consume packages within your organization or with the entire world
+      ul
+        li Publish private packages to use across your projects
+        li Global CDN, integrated auth, managed permissions
+        li Supports npm, Docker, Maven, NuGet, RubyGems
+        li Currently in beta and on a waitlist
+
+      
 
     //----------------------  Something Completely Different  ----------------------
     
@@ -224,9 +339,14 @@ html
       h1 And now for something completely different...
 
     section.slide
-      h2 X
+      h2 React95
+      blockquote Windows95 UI components for your modern React apps
       ul
-        li X
+        li
+          a(href="https://github.com/arturbien/React95") Github repo 
+          | / 
+          a(href="https://arturbien.github.io/React95/") Storybook
+      img(src="./images/react95.png" alt="React95 preview")
 
 
     //----------------------  Fin  ----------------------

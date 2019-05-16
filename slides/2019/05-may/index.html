@@ -123,9 +123,65 @@
       <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
     </section>
     <section class="slide">
-      <h2>X</h2>
+      <h2>React libraries</h2><img class="corner-image" src="../../shared/resources/images/react-logo.png" width="200px" alt="React">
+      <h3>React Boilerplate 4.0 <span class="small">&mdash; <a href="https://github.com/react-boilerplate/react-boilerplate/releases/tag/v4.0.0">Released </a>April 18</span></h3>
       <ul>
-        <li>X</li>
+        <li>Hooks, <span class="code">Suspense</span> (lazy loading)</li>
+        <li><span class="code">enzyme</span> &rarr; <a href="https://github.com/testing-library/react-testing-library"><span class="code">react-testing-library</span></a></li>
+        <li> <span class="code">Immutable</span> &rarr; <a href="https://www.netlify.com/blog/2018/09/12/the-rise-of-immer-in-react/"><span class="code">Immer</span></a></li>
+      </ul>
+      <h3>Create React App 3.0 <span class="small">&mdash; <a href="https://github.com/facebook/create-react-app">Released </a>April 22</span></h3>
+      <ul>
+        <li>Hooks, TypeScript linting</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Svelte 3</h2>
+      <blockquote>Cybernetically enhanced web apps</blockquote><img class="corner-image" src="../../shared/resources/images/svelte-logo.png" width="200px" alt="Svelte">
+      <ul>
+        <li> <a href="https://svelte.dev/blog/svelte-3-rethinking-reactivity">Released</a> April 22</li>
+        <li>No virtual DOM &mdash; Compiles to vanilla JS</li>
+        <li>"Truly reactive" with no complex state management</li>
+        <li>Boilerplate-free components</li>
+        <li>Learn more about the <a href="https://svelte.dev/blog/frameworks-without-the-framework">philosophy</a> behind it</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Node.js 12</h2><img class="corner-image" src="../../shared/resources/images/nodejs-logo.png" width="200px" alt="Node.js">
+      <ul>
+        <li><a href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f">Released</a> April 23</li>
+        <li>Upgraded to V8 7.4: perf boost, plus <a href="https://docs.google.com/document/d/13Sy_kBIJGP0XT34V1CV3nkWya4TwYx9L3Yv45LdGB6Q/edit">async stack traces</a></li>
+        <li>TLS 1.3 by default (<a href="https://www.cloudflare.com/learning-resources/tls-1-3/">faster and more secure</a>)</li>
+        <li>Better ES6 module support</li>
+        <li>Improved native modules, worker threads, heap management</li>
+        <li>A <em>lot</em> more &mdash; <a href="https://medium.com/@nodejs/introducing-node-js-12-76c41a1b3f3f">check it out!</a></li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/tips-tricks.jpg)">
+      <div class="content">
+        <h1>Tips &amp; Tricks</h1>
+      </div>
+      <div class="shim" style="background-color:#6d0264;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Designing for Dark Mode</h2>
+      <blockquote>Implementing dark mode is easy, but designing for it is less so.</blockquote>
+      <ul> 
+        <li>OSX is pushing dark mode with Mojave</li>
+        <li>Here is a <a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">great overview</a> of things to consider</li>
+        <li>Choosing your "dark" color, typography, consistency</li>
+      </ul><img src="./images/dark-mode.png" alt="Dark mode" style="max-width: 50%">
+    </section>
+    <section class="slide">
+      <h2>Designing for Dark Mode</h2>
+      <p>This is an emerging <a href="https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme">Level 5 Media Query</a> standard:</p>
+      <pre><code>@media (prefers-color-scheme: dark) {
+  /* dark mode styles */
+}</code></pre>
+      <ul>
+        <li>Possible values: <span class="code">light</span>, <span class="code">dark</span>, or <span class="code">no-preference</span></li>
+        <li>Supported today in Safari 12.1</li>
+        <li> <a href="https://techdows.com/2019/05/chrome-and-firefox-67-to-ship-css-prefers-color-scheme-media-feature.html">Slated</a> for Chrome 76 &amp; Firefox 67</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
@@ -135,9 +191,13 @@
       <div class="shim" style="background-color:#c11;opacity:.7;"></div>
     </section>
     <section class="slide">
-      <h2>X</h2>
+      <h2>Docker Hub Hacked</h2><img class="corner-image" src="../../shared/resources/images/docker-logo.png" width="200px" alt="Docker">
       <ul>
-        <li>X</li>
+        <li> <a href="https://success.docker.com/article/docker-hub-user-notification">Occurred</a> on April 25th</li>
+        <li>5% of user accounts accessed (~190k)</li>
+        <li>Leaked usernames, hashed passwords and source repo tokens</li>
+        <li>If you were affected they should have contacted you</li>
+        <li>Periodic reminder: <strong>Don't Reuse Passwords!</strong></li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
@@ -160,20 +220,31 @@
     </section>
     <section class="slide">
       <h2>Front-end Dev Handbook 2019</h2>
-      <blockquote>A guide that everyone can use to learn about the practice of front-end development.</blockquote>
+      <blockquote>A guide that everyone can use to learn about the practice of front-end development</blockquote>
       <ul>
         <li>Current / best-in-class tool recommendations</li>
         <li>Read <a href="https://frontendmasters.com/books/front-end-handbook/2019/#1">Chapter 0</a> for a 2018 recap + 2019 preview</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2> <a href="https://github.com/features/package-registry">GitHub Package Registry</a></h2>
+      <blockquote>Safely publish and consume packages within your organization or with the entire world</blockquote>
+      <ul>
+        <li>Publish private packages to use across your projects</li>
+        <li>Global CDN, integrated auth, managed permissions</li>
+        <li>Supports npm, Docker, Maven, NuGet, RubyGems</li>
+        <li>Currently in beta and on a waitlist</li>
       </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
     </section>
     <section class="slide">
-      <h2>X</h2>
+      <h2>React95</h2>
+      <blockquote>Windows95 UI components for your modern React apps</blockquote>
       <ul>
-        <li>X</li>
-      </ul>
+        <li><a href="https://github.com/arturbien/React95">Github repo </a>/ <a href="https://arturbien.github.io/React95/">Storybook</a></li>
+      </ul><img src="./images/react95.png" alt="React95 preview">
     </section>
     <section class="slide">
       <h2>Thanks!</h2>
