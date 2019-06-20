@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: May 2019</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: June 2019</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+      <h3 class="star">Real User Measurements and the Development Lifecycle</h3>
+      <p class="indent">&mdash; Ken Harker</p>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors <strong>always wanted</strong> (<a href="https://www.edgeatx.org">edgeATX.org</a> for details)</li>
+        <li>Don't forget your parking validation</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/nascar.jpg)">
+      <h1>Thanks to<br>Our Sponsors</h1>
+      <div class="shim" style="background-color:#432c9a;opacity:.8;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/" alt="Capital Factory website"><img style="min-width:40%" src="../../shared/resources/images/sponsors/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check: April 18, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">74</td>
+          <td class="ver">66</td>
+          <td class="ver">18</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of May 16, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver"><span class="strike dim">74</span><br><strong>75</strong></td>
+          <td class="ver"><span class="strike dim">66</span><br><strong>67</strong></td>
+          <td class="ver">18*</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Chrome 75</h2>
+      <ul>
+        <li><a href="https://www.chromestatus.com/feature/5050913014153216" target="_blank">stale-while-revalidate</a> - Removes stale assets from critical path.</li>
+        <li><a href="https://snap.glitch.me/carousel-with-snap-stop.html" target="_blank">Scroll Snap Stop</a></li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox 67</h2>
+      <ul>
+        <li>Suspends "unused" tabs</li>
+        <li>Lowered priority of <code>setTimeout</code></li>
+        <li>Block known cryptominers</li>
+        <li>Supports dynamic module imports <code>import()</code></li>
+        <li><code>String.matchAll()</code> support</li>
+        <li>Desktop notifications now restricted to TLS</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Edge (Dev Channel)</h2>
+      <ul>
+        <li>First to use Chromium</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>npm</h2>
+      <ul>
+        <li>CLI 6.9.1 - no commits in 3mos (<a href="https://www.theregister.co.uk/2019/04/01/npm_layoff_staff/" target="_blank">job cuts</a>)</li>
+        <li>npm <a href="https://blog.npmjs.org/post/185680936500/protecting-package-publishers-npm-token-security" target="_blank">token support</a> w/ Github (like Checksum)</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Releases</h2>
+      <ul>
+        <li>HAProxy 2.0</li>
+        <li>WSL 2 (Docker for Windows): Full Linux Kernel</li>
+        <li><a href="https://www.pika.dev/cdn" target="_blank">PIKA</a> CDN</li>
+        <li>Node 12.4.0 (w/ JSON Module support)</li>
+      </ul>
+    </section>
+    <!-- <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Docker Hub Hacked</h2><img class="corner-image" src="../../shared/resources/images/docker-logo.png" width="200px" alt="Docker">
+      <ul>
+        <li> <a href="https://success.docker.com/article/docker-hub-user-notification">Occurred</a> on April 25th</li>
+        <li>5% of user accounts accessed (~190k)</li>
+        <li>Leaked usernames, hashed passwords and source repo tokens</li>
+        <li>If you were affected they should have contacted you</li>
+        <li>Periodic reminder: <strong>Don't Reuse Passwords!</strong></li>
+      </ul>
+    </section> -->
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Industry</h2>
+      <ul>
+        <li>Github/Microsoft acquires <a href="https://pullpanda.com">Pull Panda</a> (Reminders, Analytics, & Assigners)</li>
+        <li>Facebook launches <a href="https://github.com/libra/libra" target="_blank">Libra Cryptocurrency</a></li>
+        <li>Mozilla Launching <a href="https://thenextweb.com/apps/2019/06/10/mozilla-will-reportedly-launch-a-paid-version-of-firefox-this-fall/">Paid Firefox</a> (w/ VPN)</li>
+        <li><a href="https://wptavern.com/former-npm-inc-cto-announces-entropic-a-decentralized-package-registry" target="_blank">Entropic</a>: Decentralized Package Registry</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2><a href="https://2019.stateofcss.com/" target="_blank">State of CSS 2019</a></h2>
+      <img src="./images/stateofcss.jpg" alt="State of CSS"/>
+    </section>
+    <section class="slide">
+      <h2>.io & .sh in jeopardy?</h2>
+      <ul>
+        <li><a href="http://domainincite.com/23957-un-ruling-may-put-io-domains-at-risk" target="_blank">UN Ruling May Put .io Domains at Risk</a></li>
+        <li>Dispute over the Chagos Archipelago (British or Mauritius)</li>
+        <li>Illegal decolonialization</li>
+        <li>Would make the registrar no longer part of the UK</li>
+        <li>Old news: but will the British accept the court ruling? Not yet.</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/lighter-side.jpg)">
+      <div class="content">
+        <h1>On the<br>Lighter Side</h1>
+      </div>
+    </section>
+    <section class="slide">
+      <h2><a href="https://shkspr.mobi/blog/2019/06/introducing-the-new-html-element-welcome/" target="_blank"><code>&lt;clippy&gt;</code></a></h2>
+      <img src="./images/clippy.gif" alt="Clippy"/>
+      <blockquote>
+      I've spoken to several people in Microsoft, and we all agree it is a good idea.
+
+We looked through a number of great software projects (mostly from Microsoft) and found lots of inconsistencies in the way Clippy is presented and invoked.
+
+...
+
+Because users keep buying and using our products, I'm going to assume they all love Clippy as much as I do.
+</blockquote>
+      <img src="./images/tweet.jpg" alt="clippy tweet"/>
+    </section>
+    <section class="slide">
+      <h2>Google.oops</h2>
+      <img src="./images/google_hsts.png" alt="google.oops"/>
+    </section>
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a></h3>
+      <h3>Corey Butler (<a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </section>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>
