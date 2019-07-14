@@ -8,6 +8,8 @@
 
 .deck-container .slide h3 { margin-bottom: .7em; font-weight: 500; }
 
+.deck-container .slide .subtitle { color: #bbbbbb; }
+
 .deck-container .slide strong { font-weight: 800; color: #E91E63; }
 
 .deck-container .slide pre code { overflow: hidden; font-size: .9em; letter-spacing: 1.5px; }
