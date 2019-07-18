@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: May 2019</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: July 2019</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+      <h3 class="star">Building Telecom Apps with Node.js</h3>
+      <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="star">Get Hired, Guaranteed</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors <strong>always wanted</strong> (<a href="https://www.edgeatx.org">edgeATX.org</a> for details)</li>
+        <li>Remember your parking validation</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+        <li>Who is Hiring? Who is Available?</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/nascar.jpg)">
+      <h1>Thanks to<br>Our Sponsors</h1>
+      <div class="shim" style="background-color:#432c9a;opacity:.8;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/" alt="Capital Factory website"><img style="min-width:40%" src="../../shared/resources/images/sponsors/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/sponsors/aunt-bertha-logo.jpg)">
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://company.auntbertha.com" alt="Aunt Bertha website" style="position:absolute;top:0;left:0;width:100%;height:100%;"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.1;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check: June 20, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">75</td>
+          <td class="ver">67</td>
+          <td class="ver">18*</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of July 18, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">75</td>
+          <td class="ver">67</span><br><strong>68</strong></td>
+          <td class="ver">18*</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Firefox 68</h2>
+      <ul>
+        <li>WebRender MVP (Windows): GPU-based Acceleration</li>
+        <li>Windows BITS: Update when FF is closed.</li>
+        <li>Attempt to auto-fix TLS (HTTPS) errors caused by Antivirus</li>
+        <li>Camera/Microphone support require TLS (HTTPS)</li>
+        <li><code>&lt;meta http-equiv="set-cookie"&gt;</code> no longer supported</li>
+        <li>CSS Scroll Snapping</li>
+      </ul>
+    </section>
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Raspberry Pi 4</h2>
+      <blockquote>Your tiny, dual-display, desktop computer</blockquote>
+      <img src="./images/raspberry-pi-logo.png" class="corner-image" style="width:200px;" alt='Raspberry Pi'/>
+      <ul>
+        <li><a href="https://www.raspberrypi.org/blog/raspberry-pi-4-on-sale-now-from-35/">Released</a> June 24th ($35-55)</li>
+        <li>3x performance, up to 4GB of RAM, dual 4K support</li>
+        <li>New OS (Debian 10) + Chromium 74 included</li>
+        <li>Completely backwards compatible</li>
+      </ul>
+      <img src="./images/raspberry-pi.png" alt="Raspberry Pi" style="max-width:400px;"/>
+    </section>
+
+    <section class="slide">
+      <h2>Releases</h2>
+      <ul>
+        <li>npm 6.10.1 (fixes many issues), 6.10.2 due next week</li>
+        <li>Node ES Module Support</li>
+        <li>Babel 7.5.0 (supports imports & F# style pipeline operator)</li>
+        <li>React Native 0.60</li>
+        <li><a href="https://bellard.org/quickjs/">QuickJS</a> - an embeddable JS engine in C (ES2019 Compliant)</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Track This</h2>
+      <ul>
+        <li>In June Firefox turned on <a href="https://blog.mozilla.org/blog/2019/06/04/firefox-now-available-with-enhanced-tracking-protection-by-default/"> enhanced tracking protection</a> by default</li>
+        <li>Previously they released the <a href="https://addons.mozilla.org/en-US/firefox/addon/facebook-container/"> Facebook Container</a> browser add-on</li>
+        <li>Now they created <a href="https://trackthis.link/"> Track This</a> to demo why these are important</li>
+      </ul>
+      <img src="./images/track-this.png" alt="Track This" style="max-width: 50%;"/>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
+      <div class="content">
+        <h1>Industry News</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.6;"></div>
+    </section>
+    <section class="slide">
+      <h2>Hedge Funds</h2>
+      <ui>
+        <li>Hedge funds are now <a href="https://www.bloomberg.com/news/articles/2019-07-02/hedge-funds-are-tracking-private-jets-to-find-the-next-megadeal">tracking private jets</a> to find the next megadeal</li>
+        <li>Corey is now offering a personal "Track This" service for hedge funds ;-)</li>
+      </ui>
+    </section>
+    <section class="slide">
+      <h2>Robots Exclusion Protocol</h2>
+      <img src="../../shared/resources/images/googlebot.png" class="corner-image" width="200px" alt="Googlebot"/>
+      <ul>
+        <li> First proposed in 1994 by Martijn Koster</li>
+        <li> De facto standard used by ~500,000,000 websites</li>
+        <li> Google officially <a href="https://webmasters.googleblog.com/2019/07/rep-id.html"> submitted it</a> to the IETF with improvements</li>
+        <li> They also <a href="https://github.com/google/robotstxt"> open sourced</a> Googlebot's robots.txt parser</li>
+      </ul>
+      <img src="./images/robots-txt.jpg" alt="Robots.txt" style="max-width:40%"/>
+    </section>
+    <section class="slide">
+      <h2>Cloudflare Outage</h2>
+      <img src="./images/cloudflare-logo.png" class="corner-image" width="200px" alt="Cloudflare"/>
+      <ul>
+        <li> All Cloudflare-proxied domains went down on July 2</li>
+        <li> Cause: bad deployment of a <strong>single firewall regex rule</strong></li>
+        <li> Resulted in 100% CPU spike across all proxy servers worldwide</li>
+        <li> Cloudflare's on-call support guy that day:</li>
+      </ul>
+      <img src="./images/dawson.gif" alt="Dawson"/>
+    </section>
+    <section class="slide">
+      <h2>MDN --> React</h2>
+      <ul>
+        <li>The <a href="https://beta.developer.mozilla.org/en-US/">beta version</a> of MDN uses React</li>
+      </ul>
+    </section>
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+
+    <section class="slide">
+      <h2>British &pound;50</h2>
+      <ul>
+        <li><a href="https://www.bbc.com/news/business-48962557">Announced</a> Alan Turing will be the face</li>
+      </ul>
+      <img src="./images/turingnote.jpg" alt="British 50"/>
+    </section>
+
+    <section class="slide">
+      <h2>Do you know npm?</h2>
+      <ul>
+        <li><a href="https://snyk.io/blog/how-much-do-we-really-know-about-how-packages-behave-on-the-npm-registry/?fbclid=IwAR10gcCe9Ef0RcMRicXGFIoWhS5Nk3yzvOVJhAsmf3xqNim16gfHiW2wIB8">This article</a> provides a stark look at npm</li>
+        <li>There are now 960K packages in npm</li>
+        <li>28% of npm modules are orphans <span style="font-size: 60%; color: #555;">but only 7% of respondents knew that</span></li>
+        <li>Avg package dependency chain: 4.39 deep</li>
+        <li>61% of packages haven't been updated in last 12 months</li>
+      </ul>
+      <img src="../../shared/resources/images/npm.png" alt="npm"/>
+    </section>
+
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
+      <h1>Upcoming Events...</h1>
+    </section>
+
+    <section class="slide">
+      <h2><a href="https://www.eventbrite.com/e/daimler-trucks-north-america-hackathon-tickets-63564983577">Daimler Trucks North America Hackathon</a></h2>
+      <ul>
+        <li>July 19-21</li>
+        <li>First Place: $10K</li>
+        <li>Travel Stipend for non-Austin residents</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2><a href="https://dbxbuildatx.splashthat.com/invite">Dropbox Developer Build Day</a></h2>
+      <ul>
+        <li>July 31 9am-7pm</li>
+        <li>Held at Dropbox Office on 501 Congress</li>
+        <li>Free breakfast, lunch, happy hour</li>
+        <li>Free sessions on Dropbox API's (like Dropbox, HelloSign, Moleskine)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">https://edgeATX.org/slides</a></h3>
+      <h3>Corey Butler (<a href="https://twitter.com/goldglovecb" target="_blank">@goldglovecb</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </section>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>
