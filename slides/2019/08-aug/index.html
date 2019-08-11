@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: August 2019</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: August 2019</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="lightning">Simplifying Security with IAM</h3>
+      <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+      <h3 class="star">Everyone Can Do Open Source</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors <strong>always wanted</strong> (<a href="https://www.edgeatx.org">edgeATX.org</a> for details)</li>
+        <li>Don't forget your parking validation</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/nascar.jpg)">
+      <h1>Thanks to<br>Our Sponsors</h1>
+      <div class="shim" style="background-color:#432c9a;opacity:.8;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/" alt="Capital Factory website"><img style="min-width:40%" src="../../shared/resources/images/sponsors/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/sponsors/aunt-bertha-logo.jpg)"><a href="https://company.auntbertha.com" alt="Aunt Bertha website">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%"></div></a></section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check: July 18, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">75</td>
+          <td class="ver">68</td>
+          <td class="ver">18</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of May 16, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">75</td>
+          <td class="ver">68</td>
+          <td class="ver">18</td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Chrome</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Released X 12th — <a href="https://developers.google.com/web/updates/2019/03/nic73">Release Notes</a></p>
+      <h3 class="star"><a href="#">Feature</a></h3>
+      <ul>
+        <li>X</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <p>Released X 19th — <a href="https://developer.mozilla.org/en-US/Firefox/Releases/66">Release Notes</a></p>
+      <h3 class="star"><a href="#">Feature</a></h3>
+      <ul>
+        <li>X</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Edge</h2><img class="corner-image" src="../../shared/resources/images/edge.png" width="200px" alt="Edge">
+      <p>Released X 19th — <a href="#">Release Notes</a></p>
+      <h3 class="star"><a href="#">Feature</a></h3>
+      <ul>
+        <li>X</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Safari</h2><img class="corner-image" src="../../shared/resources/images/safari.png" width="200px" alt="Safari">
+      <p>Released X 19th — <a href="#">Release Notes</a></p>
+      <h3 class="star"><a href="#">Feature</a></h3>
+      <ul>
+        <li>X</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>X</h2>
+      <blockquote>X</blockquote><img class="corner-image" src="../../shared/resources/images/X.png" width="200px" alt="X">
+      <ul>
+        <li> <a href="#">Released</a> X 22nd</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/tips-tricks.jpg)">
+      <div class="content">
+        <h1>Tips &amp; Tricks</h1>
+      </div>
+      <div class="shim" style="background-color:#6d0264;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>X</h2>
+      <blockquote>X</blockquote>
+      <ul> 
+        <li>X</li>
+      </ul><img src="./images/X.png" alt="X" style="max-width: 50%">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>X</h2>
+      <blockquote>X</blockquote>
+      <ul> 
+        <li>X</li>
+      </ul><img src="./images/X.png" alt="X" style="max-width: 50%">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>X</h2>
+      <blockquote>X</blockquote>
+      <ul> 
+        <li>X</li>
+      </ul><img src="./images/X.png" alt="X" style="max-width: 50%">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/lighter-side.jpg)">
+      <div class="content">
+        <h1>On the<br>Lighter Side</h1>
+      </div>
+      <div class="shim" style="background-color:#561d49;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>X</h2>
+      <blockquote>X</blockquote>
+      <ul> 
+        <li>X</li>
+      </ul><img src="./images/X.png" alt="X" style="max-width: 50%">
+    </section>
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">edgeATX.org/slides</a></h3>
+      <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </section>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>

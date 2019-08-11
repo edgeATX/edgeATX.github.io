@@ -1,0 +1,345 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: August 2019
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: August 2019
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.lightning Simplifying Security with IAM
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+  
+      h3.star Everyone Can Do Open Source
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong> (
+          a(href='https://www.edgeatx.org') edgeATX.org
+          |  for details)
+        li Don't forget your parking validation
+        li Omni hotel bar (downstairs) after meetup
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/nascar.jpg)')
+      h1 Thanks to<br>Our Sponsors
+      .shim(style='background-color:#432c9a;opacity:.8;')
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/' alt='Capital Factory website')
+            img(style='min-width:40%', src='../../shared/resources/images/sponsors/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/sponsors/aunt-bertha-logo.jpg)')
+      a(href='https://company.auntbertha.com' alt='Aunt Bertha website')
+        div(style='position:absolute;top:0;left:0;width:100%;height:100%')
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: July 18, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 75
+          td.ver 68
+          td.ver 18
+          td.ver 12.
+            span.small 1
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of May 16, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 75
+          td.ver 68
+          td.ver 18
+          td.ver 12.
+            span.small 1
+
+    section.slide
+      h2 Chrome
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released X 12th — 
+        a(href='https://developers.google.com/web/updates/2019/03/nic73') Release Notes
+      h3.star
+        a(href='#') Feature
+      ul
+        li X
+
+    section.slide
+      h2 Firefox
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released X 19th — 
+        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
+      h3.star
+        a(href='#') Feature
+      ul
+        li X
+
+    section.slide
+      h2 Edge
+      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+      p Released X 19th — 
+        a(href='#') Release Notes
+      h3.star
+        a(href='#') Feature
+      ul
+        li X
+
+    section.slide
+      h2 Safari
+      img(src='../../shared/resources/images/safari.png', class='corner-image', width='200px', alt='Safari')
+      p Released X 19th — 
+        a(href='#') Release Notes
+      h3.star
+        a(href='#') Feature
+      ul
+        li X
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+
+    section.slide
+      h2 X
+      blockquote X
+      img(src='../../shared/resources/images/X.png', class='corner-image', width='200px', alt='X')
+      ul
+        li 
+          a(href="#") Released
+          |  X 22nd
+
+      
+    //----------------------  Tips & Tricks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+      .content
+        h1 Tips &amp; Tricks
+      .shim(style='background-color:#6d0264;opacity:.7;')
+  
+    section.slide
+      h2 X
+      blockquote X
+      ul 
+        li X
+      img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 X
+      blockquote X
+      ul 
+        li X
+      img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+    //-   .content
+    //-     h1 Industry<br>Headlines
+    //-   .shim(style='background-color:#393;opacity:.7;')
+
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 X
+      blockquote X
+      ul 
+        li X
+      img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+    //-   h1 And now for something completely different...
+
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  On the Lighter Side  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
+
+    section.slide
+      h2 X
+      blockquote X
+      ul 
+        li X
+      img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
