@@ -117,13 +117,14 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
           td(width='25%')
-            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+            img(src='../../shared/resources/images/edge-dev.png', width='70%', alt='Edge')
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
           td.ver 75
           td.ver 68
           td.ver 18
+            span(style='color:red') *
           td.ver 12.
             span.small 1
     
@@ -137,55 +138,81 @@ html
           td(width='25%')
             img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
           td(width='25%')
-            img(src='../../shared/resources/images/edge.png', width='70%', alt='Edge')
+            img(src='../../shared/resources/images/edge-dev.png', width='70%', alt='Edge')
           td(width='25%')
             img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
         tr
-          td.ver 75
+          td.ver 
+            span.strike.dim 75
+            br
+            strong(style='color:#1CA727') 76
           td.ver 68
           td.ver 18
+            span(style='color:red') *
           td.ver 12.
             span.small 1
 
     section.slide
-      h2 Chrome
+      h2 Chrome 76
       img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
-      p Released X 12th — 
-        a(href='https://developers.google.com/web/updates/2019/03/nic73') Release Notes
-      h3.star
-        a(href='#') Feature
+      p Released July 30th — 
+        a(href='https://developers.google.com/web/updates/2019/07/nic76') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=I1nosVzVbB4') video
+        | )
+      h3.star PWA Improvements
       ul
-        li X
+        li Install directly 
+          a(href="https://developers.google.com/web/updates/2019/06/pwa-install-addressbar") from the address bar
+        li More control over the mobile install experience
+        li Daily 
+          a(href="https://developers.google.com/web/updates/2019/06/webapk-update-frequency") WebAPK updates
+          |  on Android
 
     section.slide
-      h2 Firefox
-      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
-      p Released X 19th — 
-        a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
-      h3.star
-        a(href='#') Feature
-      ul
-        li X
+      h2 Chrome 76
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star Dark Mode Support
+      pre
+        code.language-css
+          | @media (prefers-color-scheme: dark) {
+          |   body {
+          |     background-color: black;
+          |     color: white;
+          |   }
+          | }
+      a("https://web.dev/prefers-color-scheme/") Great overview of dark mode
+
+    //- section.slide
+    //-   h2 Firefox
+    //-   img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+    //-   p Released X Xth — 
+    //-     a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
+    //-   h3.star
+    //-     a(href='#') Feature
+    //-   ul
+    //-     li X
+
+    //- section.slide
+    //-   h2 Edge
+    //-   img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+    //-   p Released X Xth — 
+    //-     a(href='#') Release Notes
+    //-   h3.star
+    //-     a(href='#') Feature
+    //-   ul
+    //-     li X
 
     section.slide
-      h2 Edge
-      img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
-      p Released X 19th — 
-        a(href='#') Release Notes
-      h3.star
-        a(href='#') Feature
-      ul
-        li X
-
-    section.slide
-      h2 Safari
+      h2 Safari 13 
+        span.small (beta 3)
       img(src='../../shared/resources/images/safari.png', class='corner-image', width='200px', alt='Safari')
-      p Released X 19th — 
-        a(href='#') Release Notes
-      h3.star
-        a(href='#') Feature
+      p Released in July — 
+        a(href='https://developer.apple.com/documentation/safari_release_notes/safari_13_beta_3_release_notes') Release Notes
       ul
-        li X
+        li Coming with macOS Catalina / iOS 13
+        li Expected September 23
+      img(src="./images/catalina.jpg", alt="Catalina")
 
 
     //----------------------  Libs & Frameworks  ----------------------
