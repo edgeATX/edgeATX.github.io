@@ -7,3 +7,4 @@ node_modules
 gulpfile.js
 package.json
 sass
+.vscode
