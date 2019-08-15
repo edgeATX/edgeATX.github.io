@@ -2,9 +2,9 @@
 
 .deck-container .slide { background: #000000; }
 
-.deck-container .slide h1 { color: #888888; letter-spacing: -.05em; }
+.deck-container .slide h1 { color: #888888; letter-spacing: -.03em; }
 
-.deck-container .slide h2 { color: #E91E63; border-bottom: 0; padding: 20px 0 10px 0; letter-spacing: -.05em; font-size: 2.4em; margin-bottom: 20px; }
+.deck-container .slide h2 { color: #E91E63; border-bottom: 0; padding: 20px 0 10px 0; letter-spacing: -.03em; font-size: 2.4em; margin-bottom: 20px; }
 
 .deck-container .slide h3 { margin-bottom: .7em; font-weight: 500; }
 

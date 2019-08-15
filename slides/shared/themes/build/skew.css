@@ -2,9 +2,9 @@
 
 .deck-container .slide { background: #fff; }
 
-.deck-container .slide h1 { color: #000; letter-spacing: -.05em; }
+.deck-container .slide h1 { color: #000; letter-spacing: -.03em; }
 
-.deck-container .slide h2 { color: #1f4c7f; border-bottom-color: #ccc; letter-spacing: -.05em; }
+.deck-container .slide h2 { color: #1f4c7f; border-bottom-color: #ccc; letter-spacing: -.03em; }
 
 .deck-container .slide h3 { color: #444; margin-bottom: .7em; }
 
