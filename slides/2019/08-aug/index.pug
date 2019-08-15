@@ -222,58 +222,118 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
 
     section.slide
-      h2 X
-      blockquote X
-      img(src='../../shared/resources/images/X.png', class='corner-image', width='200px', alt='X')
+      h2 Mithril 2.0
+      blockquote Modern client-side JS framework for building Single Page Applications
+      img(src='./images/mithril-logo.png', class='corner-image', width='200px', alt='Mithril')
       ul
         li 
-          a(href="#") Released
-          |  X 22nd
+          a(href="https://mithril.js.org/change-log.html#v200") Released
+          |  July 24th
+        li 2.0 mostly formalizes minor breaking changes
+        li Lightweight (10kb) React/Vue alternative
+        li Plain ES5 syntax / KISS philosophy
 
+    section.slide
+      h2 Electron 6.0
+      img(src='../../shared/resources/images/electron-logo.jpg', class='corner-image', width='200px', alt='Electron')
+      ul
+        li
+          a(href="http://electronjs.org/blog/electron-6-0") Released
+          |  July 30th
+        li Updated to Chrome 76 + Node 12.4
+        li Lots of additional Promise support
+        li A few breaking changes
+
+    section.slide
+      h2 React 16.9
+      img(src='../../shared/resources/images/react-logo.png', class='corner-image', width='200px', alt='React')
+      ul
+        li
+          a(href="http://electronjs.org/blog/electron-6-0") Released
+          |  August 8th
+        li codemod: 
+          span.code componentWill*
+          |  → 
+          span.code UNSAFE_componentWill*
+        li Deprecating 
+          span.code javascript:
+          |  URLs and 
+          span.code FactoryComponent
+        li Measure performance with 
+          span.code &lt;React.Profiler&gt;
       
     //----------------------  Tips & Tricks  ----------------------
     
-    section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
-      .content
-        h1 Tips &amp; Tricks
-      .shim(style='background-color:#6d0264;opacity:.7;')
-  
-    section.slide
-      h2 X
-      blockquote X
-      ul 
-        li X
-      img(src="./images/X.png", alt="X", style="max-width: 50%")
-
-
-    //----------------------  Security  ----------------------
-    
-    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
-      .content
-        h1 Security
-      .shim(style='background-color:#c11;opacity:.7;')
-  
-    section.slide
-      h2 X
-      blockquote X
-      ul 
-        li X
-      img(src="./images/X.png", alt="X", style="max-width: 50%")
-
-    
-    //----------------------  Industry Headlines  ----------------------
-
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
     //-   .content
-    //-     h1 Industry<br>Headlines
-    //-   .shim(style='background-color:#393;opacity:.7;')
-
+    //-     h1 Tips &amp; Tricks
+    //-   .shim(style='background-color:#6d0264;opacity:.7;')
+  
     //- section.slide
     //-   h2 X
     //-   blockquote X
     //-   ul 
     //-     li X
     //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Security  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+    //-   .content
+    //-     h1 Security
+    //-   .shim(style='background-color:#c11;opacity:.7;')
+  
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 GitHub Supports CI/CD
+      ul 
+        li GitHub Actions now 
+          a(href="https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/") support CI/CD
+        li Reusable actions and workflows
+        li Integrates with the 
+          a(href="https://github.com/features/package-registry") GitHub Package Registry
+        li Free for public repos!
+    
+    section.slide
+      h2 WebKit Tracking Prevention
+      ul 
+        li New policy 
+          a(href="https://webkit.org/tracking-prevention-policy/") published 
+          | August 14th
+        li Inspired by 
+          a(href="https://wiki.mozilla.org/Security/Anti_tracking_policy") Mozilla's policy
+        li 
+          strong Goals:
+        ul
+          li Prevent all covert and cross-site tracking
+          li Prioritize user benefits over preserving current website practices
+          li Healthy web ecosystem, with privacy by design
+      img(src="./images/webkit-logo.png", alt="WebKit", style="max-width: 50%")
+
+    section.slide
+      h2 Domino's and a11y
+      ul 
+        li Domino's got sued for violating Title III of the ADA
+        li They are appealing 
+          a(href="https://www.theverge.com/2019/8/1/20750913/dominos-pizza-website-accessible-blind-supreme-court-lawsuit") to the Supreme Court
+        li Potential landmark case for disability rights on the web
+      
+      img(src="./images/pizza-tracker.png", alt="Pizza Tracker", style="max-width: 40%")
 
 
     //----------------------  ICYMI  ----------------------
@@ -284,24 +344,81 @@ html
       .shim(style='background-color:#555;opacity:.7;')
 
     section.slide
-      h2 X
-      blockquote X
+      h2 MS Code Samples Site
+      img(src='./images/microsoft-logo.png', class='corner-image', width='200px', alt='Microsoft')
       ul 
-        li X
-      img(src="./images/X.png", alt="X", style="max-width: 50%")
+        li 
+          a(href="https://docs.microsoft.com/samples") docs.microsoft.com/samples
+        li Linked to GitHub, download as zip
+        li Some support one-click deploy to Azure
+      img(src="./images/ms-samples.gif", alt="MS Samples", style="max-width: 40%")
+    
+    section.slide
+      h2 JS13K Has Begun
+      blockquote HTML5 and JavaScript Game Development Competition in just 13 kB
+      img(src='./images/js13k.png', class='corner-image', width='200px', alt='JS13K')
+      ul 
+        li Aug 13th &ndash; Sept 13th
+        li The 2019 theme is "back"
+        li
+          a(href="https://js13kgames.com") Enter, or learn more
+        li Check out 
+          a(href="https://js13kgames.com/entries/underrun") last year's winner
 
+    section.slide
+      h2 The Climate Fixathon
+      blockquote The world's first online hackathon to help fix the climate
+      img(src='./images/climate-fixathon.png', class='corner-image', width='200px', alt='Fixathon')
+      ul 
+        li Aug 2nd &ndash; Aug 30th
+        li Make a site or app to help restore a safe climate for our planet
+        li Prizes of $10k+
+        li 
+          a(href="https://fixathon.io/") Register or find out more
+      
+      p 
+        strong Side note:
+        |  July 29th was 
+        a(href="https://www.overshootday.org/") Earth Overshoot Day
+        |  :(
+
+
+    //----------------------  Events  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
+      .content
+        h1 Upcoming Events
+      .shim(style='background-color:#369;opacity:.6;')
+
+    section.slide
+      h2 VueConf US
+      blockquote ATX. Code. Vue.
+      ul
+        li March 2-4, 2020 &mdash; Austin Convention Center
+        li CFP opens Sept 1st
+        li 
+          a(href="http://vueconf.us/") More details
+          
+      img(src="./images/vueconf.png", alt="VueConf", style="max-width: 30%")
 
     //----------------------  Something Completely Different  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
-    //-   h1 And now for something completely different...
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 Apollo 11 is Open Source
+      blockquote Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules
+      ul
+        li The Assembly 
+          a(href="https://github.com/chrislgarry/Apollo-11") source code
+          |  is available on GitHub
+        li Check out some 
+          a(href="https://abcnews.go.com/Technology/apollo-11s-source-code-tons-easter-eggs-including/story?id=40515222") Easter eggs
+          |  or try the 
+          a(href="http://www.ibiblio.org/apollo/") online simulator
+
+      img(src="./images/apollo-11.jpg", alt="Apollo 11 computer", style="max-width: 50%")
 
 
     //----------------------  On the Lighter Side  ----------------------
@@ -312,11 +429,14 @@ html
       .shim(style='background-color:#561d49;opacity:.7;')
 
     section.slide
-      h2 X
-      blockquote X
-      ul 
-        li X
-      img(src="./images/X.png", alt="X", style="max-width: 50%")
+      h2 URL Bar Games
+      ul
+        li From the same dude who gave us 
+          a(href="https://www.edgeatx.org/slides/2019/02-feb/#slide-40") animated emoji URLs
+        li Next level: stacking multiple, coordinated popups
+        li It's hard to explain. Just 
+          a(href="http://matthewrayfield.com/articles/games-and-graphics-in-popup-url-bars/") try it yourself 😎
+      img(src="./images/donkey-kong.gif", alt="URL bar donkey kong", style="width: 25%")
 
 
     //----------------------  Fin  ----------------------
