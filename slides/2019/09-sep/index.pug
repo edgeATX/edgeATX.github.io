@@ -329,6 +329,20 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
 
     section.slide
+      h2 Dojo 6.0
+      img(src='../../shared/resources/images/dojo-logo.jpg', class='corner-image', width='200px', alt='Dojo')
+      blockquote A Progressive Framework for Modern Web Apps
+      ul
+        li
+          a(href="https://dojo.io/blog/version-6-dojo") Released
+          |  August 28th
+        li One of the O.G. JS frameworks, launched in 2004
+        li Function-based widgets
+        li Big on middleware pattern
+        li "Zero-config" custom elements
+        li Smarter BTR (build-time rendering)
+    
+    section.slide
       h2 Relay 6.0
       blockquote A JavaScript framework for building data-driven React applications
       ul
@@ -354,8 +368,8 @@ html
 
     section.slide
       h2 Dark
+      img(src='../../shared/resources/images/dark-logo.png', class='corner-image', width='200px', alt='Dark')
       blockquote A holistic programming language, editor, and infrastructure for building backends
-      img(src='./images/dark-logo.png', class='corner-image', width='200px', alt='Dark')
       ul
         li Emerged from private alpha 
           a(href='https://medium.com/darklang/unveiling-dark-e0be6f1e0b06') on Monday
@@ -411,7 +425,10 @@ html
       h2 Npm Bans Terminal Ads
       ul 
         li What? There are ads in the terminal? 
-          a(href='https://www.zdnet.com/article/npm-bans-terminal-ads/') Not anymore.
+          a(href='https://www.zdnet.com/article/npm-bans-terminal-ads/') Not anymore
+          |  (
+          a(href='https://blog.npmjs.org/post/187382017885/supporting-open-source-maintainers') postscript
+          | )
         li A maintainer of 
           a(href='https://standardjs.com/') StandardJS
           |  created 
@@ -466,6 +483,41 @@ html
       .shim(style='background-color:#555;opacity:.7;')
 
     section.slide
+      h2 New "nofollow" Options
+      p On Sept 10th, Google announced 
+        a(href='https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html') two new options
+      ul 
+        li 
+          span.code &lt;a href="#" rel="nofollow"&gt;foo&lt;/a&gt;
+          ul 
+            li Standard since 2005
+            li Tells Google to ignore links for content ranking purposes
+        li 
+          strong.small NEW  
+          span.code rel="sponsored"
+          |  for advertising / sponsored content
+        li 
+          strong.small NEW 
+          span.code rel="ugc"
+          |  "user generated content" for comments / forum posts
+
+    section.slide
+      h2 Web-based iTunes
+      ul 
+        li Shipped Sept 5th, notable for the 
+          a(href='https://dev.to/ionic/apple-just-shipped-web-components-to-production-and-you-probably-missed-it-57pf') underlying technologies
+          |  used:
+          ul 
+            li 
+              a(href='https://emberjs.com/') Ember.js
+            li More than 50 standard 
+              a(href='https://www.webcomponents.org/') web components
+            li Ionic's 
+              a(href='https://stenciljs.com/') Stencil
+              |  for UI bundles / polyfills
+      img(src="./images/itunes-web.jpg", alt="iTunes", style="max-width: 40%")
+        
+    section.slide
       h2 COBOL Turns 60!
       ul 
         li COmmon Business-Oriented Language was created in 
@@ -511,17 +563,22 @@ html
 
     //----------------------  On the Lighter Side  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
-    //-   .content
-    //-     h1 On the<br>Lighter Side
-    //-   .shim(style='background-color:#561d49;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 Chart.xkcd
+      blockquote xkcd styled chart lib
+      ul 
+        li You know 
+          a(href='https://xkcd.com/149/') xkcd
+          | , right?
+        li Now you can 
+          a(href='https://timqian.com/chart.xkcd/') draw charts
+          |  in that style!
+      img(src="./images/xkcd-charts.gif", alt="xkcd charts", style="max-width: 80%")
 
 
     //----------------------  Fin  ----------------------
