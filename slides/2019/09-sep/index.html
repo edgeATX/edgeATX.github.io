@@ -199,6 +199,7 @@ form.addEventListener('formdata', ({formData}) => {
       <ul>
         <li>Lots of other JS, CSS, DOM and other features</li>
         <li>Check the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69">release notes</a></li>
+        <li> <strong>Side note:</strong> They are moving to a  <a href="https://hacks.mozilla.org/2019/09/moving-firefox-to-a-faster-4-week-release-cycle/">4-week release cycle</a> in Q1 2020</li>
       </ul>
     </section>
     <section class="slide">
@@ -224,11 +225,88 @@ form.addEventListener('formdata', ({formData}) => {
       <h1>Languages, Libraries &amp;<br>Frameworks</h1>
       <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
     </section>
+    <section class="slide">
+      <h2>Relay 6.0</h2>
+      <blockquote>A JavaScript framework for building data-driven React applications</blockquote>
+      <ul>
+        <li><a href="https://github.com/facebook/relay/releases/tag/v6.0.0">Released</a> September 16th</li>
+        <li>Declarative, GraphQL-backed data layer</li>
+        <li>New experimental support for hooks and suspense</li>
+        <li>Several breaking changes for existing users</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Java 13</h2><img class="corner-image" src="./images/java-logo.jpg" width="200px" alt="Java">
+      <ul>
+        <li><a href="https://reactjs.org/blog/2019/08/08/react-v16.9.0.html">Released</a> September 17th</li>
+        <li>Technically JDK 13, the open source reference implementation</li>
+        <li>They have been on a 6-month release cycle since Java 9 in 2017</li>
+        <li>Five <a href="http://openjdk.java.net/projects/jdk/13/">primary features</a> (nothing exciting)</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Dark</h2>
+      <blockquote>A holistic programming language, editor, and infrastructure for building backends</blockquote><img class="corner-image" src="./images/dark-logo.png" width="200px" alt="Dark">
+      <ul>
+        <li>Emerged from private alpha <a href="https://medium.com/darklang/unveiling-dark-e0be6f1e0b06">on Monday</a></li>
+        <li>Frontend-agnostic, DBs and hosting are magically abstracted</li>
+        <li>Read the <a href="https://medium.com/darklang/building-an-office-sign-in-in-dark-c2d980560695">demo blog</a> post to learn more</li>
+        <li>They are now in beta, and hiring</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Sequelize SQL Injection Vulnerability</h2>
+      <ul> 
+        <li> <a href="https://sequelize.org/master/">Sequelize</a> is a popular open source ORM for Node.js</li>
+        <li>Snyk, an OSS security analysis company, <a href="https://snyk.io/blog/sequelize-orm-npm-library-found-vulnerable-to-sql-injection-attacks/">disclosed the issue</a> in June</li>
+        <li>Everyone should upgrade to v5.15.1+</li>
+      </ul>
+    </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
       <div class="content">
         <h1>Industry<br>Headlines</h1>
       </div>
       <div class="shim" style="background-color:#393;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Npm Bans Terminal Ads</h2>
+      <ul> 
+        <li>What? There are ads in the terminal? <a href="https://www.zdnet.com/article/npm-bans-terminal-ads/">Not anymore.</a></li>
+        <li>A maintainer of <a href="https://standardjs.com/">StandardJS</a> created <a href="https://github.com/feross/funding">funding</a> (as an "experiment")</li>
+        <li>They included it in the <a href="https://standardjs.com/changelog.html#1400---2019-08-19">StandardJS 14.0 release</a></li>
+        <li> <a href="https://github.com/standard/standard/issues/1381">Discussion ensued</a>, and they quickly ended the experiment</li>
+        <li>The <a href="https://feross.org/funding-experiment-recap/">author's recap</a> is worth a read</li>
+      </ul><img src="./images/npm-ad.png" width="70%" alt="npm ad">
+    </section>
+    <section class="slide">
+      <h2>GitLab Raises $268M Series E</h2>
+      <blockquote>New funding and our $2.75 billion valuation will allow us to enhance monitoring and security capabilities. </blockquote>
+      <ul> 
+        <li>Their valuation has <a href="https://about.gitlab.com/2018/09/19/announcing-100m-series-d-funding/">more than doubled</a> since $100M Series D a year ago</li>
+        <li>Remember how Github <a href="https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/">cashed out</a>?</li>
+        <li>Seems like a good time to be in git hosting!</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Graph Query Language</h2>
+      <ul> 
+        <li>New ISO standard, <a href="https://neo4j.com/blog/gql-standard-query-language-property-graphs/?ref=pr-">backed by Neo4j</a></li>
+        <li>GQL will be the first new ISO database standard since SQL</li>
+      </ul><img src="./images/gql-ecosystem.jpg" width="50%" alt="GQL Ecosystem">
+    </section>
+    <section class="slide">
+      <h2>How About Richard Stallman?</h2>
+      <ul> 
+        <li>Pioneered the free software movement with GNU and GPL</li>
+        <li>On Monday, got himself <a href="https://arstechnica.com/tech-policy/2019/09/richard-stallman-leaves-mit-after-controversial-remarks-on-rape/">fired</a> from MIT and FSF over Epstein comments</li>
+        <li>Apparently he's always been kind of a <a href="https://medium.com/@selamie/remove-richard-stallman-appendix-a-a7e41e784f88">misogynistic jerk</a></li>
+      </ul>
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
       <div class="content">
@@ -236,20 +314,25 @@ form.addEventListener('formdata', ({formData}) => {
       </div>
       <div class="shim" style="background-color:#555;opacity:.7;"></div>
     </section>
-    <section class="slide cover" style="background-image:url(../../shared/resources/images/events.jpg)">
-      <div class="content">
-        <h1>Upcoming Events</h1>
-      </div>
-      <div class="shim" style="background-color:#369;opacity:.6;"></div>
+    <section class="slide">
+      <h2>COBOL Turns 60!</h2>
+      <ul> 
+        <li>COmmon Business-Oriented Language was created in <strong>1959</strong></li>
+        <li> <a href="https://americanhistory.si.edu/cobol/proposing-cobol">Proposed by Mary Hawes</a> and promoted by Grace Hopper</li>
+        <li>It was designed to resemble ordinary English</li>
+        <li>Was the first vendor-neutral interoperable computer language</li>
+      </ul><img src="./images/univac.jpg" alt="Univac" style="max-width: 40%">
     </section>
     <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
       <h1>And now for something completely different...</h1>
     </section>
-    <section class="slide cover" style="background-image:url(../../shared/resources/images/lighter-side.jpg)">
-      <div class="content">
-        <h1>On the<br>Lighter Side</h1>
-      </div>
-      <div class="shim" style="background-color:#561d49;opacity:.7;"></div>
+    <section class="slide">
+      <h2>RetroSwiper</h2>
+      <blockquote>Load classic games from magnetic swipe cards</blockquote>
+      <ul> 
+        <li>Skip the system emulator software</li>
+        <li> <a href="https://github.com/tidwall/RetroSwiper">Written</a> in Rust</li>
+      </ul><img src="./images/retroswiper.gif" alt="RetroSwiper" style="width: 50%">
     </section>
     <section class="slide">
       <h2>Thanks!</h2>

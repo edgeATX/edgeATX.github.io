@@ -289,6 +289,11 @@ html
         li Lots of other JS, CSS, DOM and other features
         li Check the 
           a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69') release notes
+        li 
+          strong Side note:
+          |  They are moving to a  
+          a(href='https://hacks.mozilla.org/2019/09/moving-firefox-to-a-faster-4-week-release-cycle/') 4-week release cycle
+          |  in Q1 2020
 
     section.slide
       h2 Chromium Edge
@@ -323,13 +328,43 @@ html
       h1 Languages, Libraries &amp;<br>Frameworks
       .shim(style='background-color:#AD7909;opacity:.8;')
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   img(src='./images/X.png', class='corner-image', width='200px', alt='X')
-    //-   ul
-    //-     li 
-    
+    section.slide
+      h2 Relay 6.0
+      blockquote A JavaScript framework for building data-driven React applications
+      ul
+        li
+          a(href="https://github.com/facebook/relay/releases/tag/v6.0.0") Released
+          |  September 16th
+        li Declarative, GraphQL-backed data layer
+        li New experimental support for hooks and suspense
+        li Several breaking changes for existing users
+
+    section.slide
+      h2 Java 13
+      img(src='./images/java-logo.jpg', class='corner-image', width='200px', alt='Java')
+      ul
+        li
+          a(href="https://reactjs.org/blog/2019/08/08/react-v16.9.0.html") Released
+          |  September 17th
+        li Technically JDK 13, the open source reference implementation
+        li They have been on a 6-month release cycle since Java 9 in 2017
+        li Five 
+          a(href='http://openjdk.java.net/projects/jdk/13/') primary features
+          |  (nothing exciting)
+
+    section.slide
+      h2 Dark
+      blockquote A holistic programming language, editor, and infrastructure for building backends
+      img(src='./images/dark-logo.png', class='corner-image', width='200px', alt='Dark')
+      ul
+        li Emerged from private alpha 
+          a(href='https://medium.com/darklang/unveiling-dark-e0be6f1e0b06') on Monday
+        li Frontend-agnostic, DBs and hosting are magically abstracted
+        li Read the 
+          a(href='https://medium.com/darklang/building-an-office-sign-in-in-dark-c2d980560695') demo blog
+          |  post to learn more
+        li They are now in beta, and hiring
+
       
     //----------------------  Tips & Tricks  ----------------------
     
@@ -348,17 +383,21 @@ html
 
     //----------------------  Security  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
-    //-   .content
-    //-     h1 Security
-    //-   .shim(style='background-color:#c11;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
   
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 Sequelize SQL Injection Vulnerability
+      ul 
+        li 
+          a(href='https://sequelize.org/master/') Sequelize
+          |  is a popular open source ORM for Node.js
+        li Snyk, an OSS security analysis company, 
+          a(href='https://snyk.io/blog/sequelize-orm-npm-library-found-vulnerable-to-sql-injection-attacks/') disclosed the issue
+          |  in June
+        li Everyone should upgrade to v5.15.1+
 
     
     //----------------------  Industry Headlines  ----------------------
@@ -368,13 +407,56 @@ html
         h1 Industry<br>Headlines
       .shim(style='background-color:#393;opacity:.7;')
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 Npm Bans Terminal Ads
+      ul 
+        li What? There are ads in the terminal? 
+          a(href='https://www.zdnet.com/article/npm-bans-terminal-ads/') Not anymore.
+        li A maintainer of 
+          a(href='https://standardjs.com/') StandardJS
+          |  created 
+          a(href='https://github.com/feross/funding') funding
+          |  (as an "experiment")
+        li They included it in the 
+          a(href='https://standardjs.com/changelog.html#1400---2019-08-19') StandardJS 14.0 release
+        li 
+          a(href='https://github.com/standard/standard/issues/1381') Discussion ensued
+          | , and they quickly ended the experiment
+        li The 
+          a(href='https://feross.org/funding-experiment-recap/') author's recap
+          |  is worth a read
+      img(src='./images/npm-ad.png', width='70%', alt='npm ad')
 
+    section.slide
+      h2 GitLab Raises $268M Series E
+      blockquote New funding and our $2.75 billion valuation will allow us to enhance monitoring and security capabilities. 
+      ul 
+        li Their valuation has 
+          a(href='https://about.gitlab.com/2018/09/19/announcing-100m-series-d-funding/') more than doubled
+          |  since $100M Series D a year ago
+        li Remember how Github 
+          a(href='https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/') cashed out
+          | ?
+        li Seems like a good time to be in git hosting!
+
+    section.slide
+      h2 Graph Query Language
+      ul 
+        li New ISO standard, 
+          a(href='https://neo4j.com/blog/gql-standard-query-language-property-graphs/?ref=pr-') backed by Neo4j
+        li GQL will be the first new ISO database standard since SQL
+      img(src='./images/gql-ecosystem.jpg', width='50%', alt='GQL Ecosystem')
+
+    section.slide
+      h2 How About Richard Stallman?
+      ul 
+        li Pioneered the free software movement with GNU and GPL
+        li On Monday, got himself 
+          a(href='https://arstechnica.com/tech-policy/2019/09/richard-stallman-leaves-mit-after-controversial-remarks-on-rape/') fired
+          |  from MIT and FSF over Epstein comments
+        li Apparently he's always been kind of a 
+          a(href='https://medium.com/@selamie/remove-richard-stallman-appendix-a-a7e41e784f88') misogynistic jerk
+        
 
     //----------------------  ICYMI  ----------------------
 
@@ -383,20 +465,25 @@ html
         h1 In Case You<br>Missed It
       .shim(style='background-color:#555;opacity:.7;')
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 COBOL Turns 60!
+      ul 
+        li COmmon Business-Oriented Language was created in 
+          strong 1959
+        li 
+          a(href='https://americanhistory.si.edu/cobol/proposing-cobol') Proposed by Mary Hawes
+          |  and promoted by Grace Hopper
+        li It was designed to resemble ordinary English
+        li Was the first vendor-neutral interoperable computer language
+      img(src="./images/univac.jpg", alt="Univac", style="max-width: 40%")
 
 
     //----------------------  Events  ----------------------
 
-    section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
-      .content
-        h1 Upcoming Events
-      .shim(style='background-color:#369;opacity:.6;')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
+    //-   .content
+    //-     h1 Upcoming Events
+    //-   .shim(style='background-color:#369;opacity:.6;')
 
     //- section.slide
     //-   h2 X
@@ -411,20 +498,23 @@ html
     section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
       h1 And now for something completely different...
 
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 RetroSwiper
+      blockquote Load classic games from magnetic swipe cards
+      ul 
+        li Skip the system emulator software
+        li 
+          a(href='https://github.com/tidwall/RetroSwiper') Written
+          |  in Rust
+      img(src="./images/retroswiper.gif", alt="RetroSwiper", style="width: 50%")
 
 
     //----------------------  On the Lighter Side  ----------------------
     
-    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
-      .content
-        h1 On the<br>Lighter Side
-      .shim(style='background-color:#561d49;opacity:.7;')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+    //-   .content
+    //-     h1 On the<br>Lighter Side
+    //-   .shim(style='background-color:#561d49;opacity:.7;')
 
     //- section.slide
     //-   h2 X
