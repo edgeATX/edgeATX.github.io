@@ -343,6 +343,23 @@ html
         li Smarter BTR (build-time rendering)
     
     section.slide
+      h2 Rails 6.0
+      ul
+        li
+          a(href="https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/") Released
+          |  September 15th
+        li 
+          a(href='https://weblog.rubyonrails.org/2018/12/13/introducing-action-mailbox-for-rails-6/') Action Mailbox
+          | : Handling for inbound emails
+        li 
+          a(href='https://weblog.rubyonrails.org/2018/10/3/introducing-action-text-for-rails-6/') Action Text
+          | : Rich text editor
+        li
+          a(href='https://github.com/rails/rails/pull/34052') Multi-database support
+        li And lots more
+      img(src='../../shared/resources/images/rails-logo.jpg', class='corner-image', width='200px', alt='Rails')
+    
+    section.slide
       h2 Relay 6.0
       blockquote A JavaScript framework for building data-driven React applications
       ul
@@ -413,6 +430,24 @@ html
           |  in June
         li Everyone should upgrade to v5.15.1+
 
+    section.slide
+      h2 Ruby REST Gem Backdoored
+      ul 
+        li Ruby's  
+          a(href='https://rubydoc.info/github/rest-client/rest-client/master') REST client
+          |  package was 
+          a(href='https://github.com/rest-client/rest-client/issues/713') published maliciously
+          |  on Aug 14th
+        li A maintainer's account had been compromised
+        li The package phoned home to a Ukrainian URL
+        li Most likely for running a cryptominer
+        li Affected? Upgrade to 
+          strong 1.6.14+
+          |  ASAP
+        li 
+          strong.small REMINDER
+          |  Use good passwords! Use 2FA when available!
+
     
     //----------------------  Industry Headlines  ----------------------
 
@@ -461,13 +496,18 @@ html
       ul 
         li New ISO standard, 
           a(href='https://neo4j.com/blog/gql-standard-query-language-property-graphs/?ref=pr-') backed by Neo4j
-        li GQL will be the first new ISO database standard since SQL
+        li GQL is the first new ISO database standard since SQL (1987)
       img(src='./images/gql-ecosystem.jpg', width='50%', alt='GQL Ecosystem')
 
     section.slide
       h2 How About Richard Stallman?
       ul 
-        li Pioneered the free software movement with GNU and GPL
+        li Pioneered the 
+          a(href='https://en.wikipedia.org/wiki/Free_software_movement') free software movement
+          |  with 
+          a(href='https://en.wikipedia.org/wiki/GNU') GNU
+          |  and 
+          a(href='https://en.wikipedia.org/wiki/GNU_General_Public_License') GPL
         li On Monday, got himself 
           a(href='https://arstechnica.com/tech-policy/2019/09/richard-stallman-leaves-mit-after-controversial-remarks-on-rape/') fired
           |  from MIT and FSF over Epstein comments
