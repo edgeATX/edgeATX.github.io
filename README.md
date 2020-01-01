@@ -1,7 +1,7 @@
 # Bleeding Edge Web
 
-Register and RSVP [on our meetup page](http://www.meetup.com/bleeding-edge-web/).
+View past talks, and sign up to sponsor or speak: [edgeATX.org](https://www.edgeatx.org/)
 
-We meet at [Capital Factory](http://capitalfactory.com/) at 7pm on the 3rd Thursday of each month.
+RSVP for a meetup [on our meetup page](http://www.meetup.com/bleeding-edge-web/).
 
-Follow [@edgeATX](https://twitter.com/edgeatx) for the latest news.
+Follow [@edgeATX](https://twitter.com/edgeatx) for the latest news and updates.
