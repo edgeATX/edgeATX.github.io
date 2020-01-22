@@ -237,13 +237,16 @@ html
       p Released January 15th — 
         a(href='https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/') Release Notes
       ul
-        li First official Stable channel build!
+        li 
+          strong First official Stable channel build!
         li Built on 
           a(href="https://www.chromium.org/") Chromium
         li Automaic updates (well, 
           a(href="https://docs.microsoft.com/en-us/deployedge/microsoft-edge-blocker-toolkit") sort of
           | )
         li It's mostly Chrome (for now)
+        li Check out the 
+          a(href="https://docs.microsoft.com/en-us/microsoft-edge/") developer docs
 
     section.slide
       h2 Safari 13 
@@ -259,6 +262,19 @@ html
           li Native macOS keychain sign-in
         li Improvements for payments, media, web inspector and more
 
+    section.slide
+      h2 Bonus: Opera
+      img(src='../../shared/resources/images/opera.png', class='corner-image', width='200px', alt='Opera')
+      ul
+        li Opera was purchased by a Chinese investor group in 2018
+        li The company pivoted to selling 
+          strong predatory short-term loan apps
+        li These apps account for over 42% of revenue
+        li The CEO directed $30M toward a... 
+          a(href="https://play.google.com/store/apps/details?id=com.starmakerinteractive.starmaker&hl=en_US") karaoke app
+      
+      p All signs are pointing down the drain
+
 
     //----------------------  Libs & Frameworks  ----------------------
     
@@ -267,28 +283,56 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
 
     section.slide
-      h2 
-      img(src='../../shared/resources/images/dojo-logo.jpg', class='corner-image', width='200px', alt='Dojo')
-      blockquote A Progressive Framework for Modern Web Apps
+      h2 Lighthouse CI
+      blockquote Automate running Lighthouse for every commit, viewing the changes, and preventing regressions
       ul
         li
+          a(href="https://github.com/GoogleChrome/lighthouse-ci") Lighthouse
+          |  reports baked into every PR
+        li Enforce performance budgets
+        li Compare site versions
+      img(src="./images/lighthouse-ci.png" alt="Lighthouse CI" style="width:50%")
     
+    section.slide
+      h2 
+        a(href="https://httpie.org/") HTTPie 2.0
+      blockquote A CLI, cURL-like tool for humans
+      ul
+        li A command line tool, like cURL, but much nicer
+        li Simple, natural HTTP request syntax
+        li Colorized output
+      img(src="./images/httpie.gif", alt="HTTPie", style="width: 40%")
     
+    section.slide
+      h2 A-Frame 1.0.0
+      blockquote A web framework for building virtual reality experiences
+      p 
+        a(href="https://aframe.io/blog/aframe-v1.0.0/") Released Dec 16th
+      ul
+        li Started in Dec 2015
+        li Finally ready for primetime, along with the WebXR spec
+        li Easily build web-first VR experiences
+
 
       
     //----------------------  Tips & Tricks  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
-    //-   .content
-    //-     h1 Tips &amp; Tricks
-    //-   .shim(style='background-color:#6d0264;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+      .content
+        h1 Tips &amp; Tricks
+      .shim(style='background-color:#6d0264;opacity:.7;')
   
-    //- section.slide
-    //-   h2 X
-    //-   blockquote X
-    //-   ul 
-    //-     li X
-    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+    section.slide
+      h2 2020 Front-End Perf Checklist
+      blockquote Everything you need to know to create fast experiences on the web today. 
+      ul 
+        li An great overview of 
+          a(href="https://www.smashingmagazine.com/2020/01/front-end-performance-checklist-2020-pdf-pages/") modern performance strategies
+        li Updated every year since 2016
+        li It's long, but web devs 
+          strong really 
+          | should read it
+      img(src="./images/speed-calc.webp", alt="Speed Calculator", style="max-width: 40%")
 
 
     //----------------------  Security  ----------------------
@@ -299,16 +343,26 @@ html
       .shim(style='background-color:#c11;opacity:.7;')
   
     section.slide
-      h2 
-      ul 
-        li 
-          a(href='https://sequelize.org/master/') Sequelize
-          |  is a popular open source ORM for Node.js
-        li Snyk, an OSS security analysis company, 
-          a(href='https://snyk.io/blog/sequelize-orm-npm-library-found-vulnerable-to-sql-injection-attacks/') disclosed the issue
-          |  in June
-        li Everyone should upgrade to v5.15.1+
+      h2 Chrome Password Checker
+      p 
+        a(href="https://passwords.google.com/") https://passwords.google.com
+      ul
+        li If you manage passwords in Chrome you now can audit them
+        li It will also suggest strong passwords a la Safari
+      img(src="./images/passwords.google.com.png" alt="Google Password Checker" style="width:50%")
 
+    section.slide
+      h2 WeLeakInfo
+      p In 
+        strong totally unrelated 
+        |  news, weleakinfo.com was 
+        a(href="https://www.zdnet.com/article/fbi-seizes-weleakinfo-a-website-that-sold-access-breached-data/") seized by the FBI last week
+      ul
+        li 12 billion user records from 10,000+ data breaches
+        li Subscription access for $2/day
+        li Our regular PSA: 
+          strong don't reuse passwords!
+      img(src="./images/weleakinfo.jpg" alt="WeLeakInfo seized" style="width:40%")
 
 
     
@@ -320,28 +374,31 @@ html
       .shim(style='background-color:#393;opacity:.7;')
 
     section.slide
-      h2 
-      ul 
-        li What? There are ads in the terminal? 
-          a(href='https://www.zdnet.com/article/npm-bans-terminal-ads/') Not anymore
-          |  (
-          a(href='https://blog.npmjs.org/post/187382017885/supporting-open-source-maintainers') postscript
-          | )
-        li A maintainer of 
-          a(href='https://standardjs.com/') StandardJS
-          |  created 
-          a(href='https://github.com/feross/funding') funding
-          |  (as an "experiment")
-        li They included it in the 
-          a(href='https://standardjs.com/changelog.html#1400---2019-08-19') StandardJS 14.0 release
-        li 
-          a(href='https://github.com/standard/standard/issues/1381') Discussion ensued
-          | , and they quickly ended the experiment
-        li The 
-          a(href='https://feross.org/funding-experiment-recap/') author's recap
-          |  is worth a read
-      img(src='./images/npm-ad.png', width='70%', alt='npm ad')
-
+      h2 Chrome Phasing Out UA Strings
+      p User agent strings are a mess, and 
+        a(href="https://www.zdnet.com/article/google-to-phase-out-user-agent-strings-in-chrome/") Google wants to kill them
+      ul
+        li They are moving to 
+          a(href="https://wicg.github.io/ua-client-hints/") Client Hints
+        li
+          strong Chrome 81 
+          | (~March): Warnings in pages that read UA
+        li
+          strong Chrome 83 
+          |  (~June): Chrome will freeze its UA string
+        li
+          strong Chrome 85 
+          |  (~Sept): Switch to common desktop/mobile OS strings
+      
+    section.slide
+      h2 Chrome Phasing Out 3rd-Party Cookies
+      p They want to 
+        a(href="https://techcrunch.com/2020/01/14/google-wants-to-phase-out-support-for-third-party-cookies-in-chrome-within-two-years/") kill them 
+        |  "within 2 years"
+      ul
+        li Will make it very hard to track users across sites
+        li The web is turning toward privacy (see Firefox, Safari)
+        li Google sees the writing on the wall
 
         
 
@@ -354,22 +411,22 @@ html
 
     section.slide
       h2 
-      p On Sept 10th, Google announced 
-        a(href='https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html') two new options
+        a(href="https://free-for.dev/") free-for.dev
+      blockquote This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers.
       ul 
-        li 
-          span.code &lt;a href="#" rel="nofollow"&gt;foo&lt;/a&gt;
-          ul 
-            li Standard since 2005
-            li Tells Google to ignore links for content ranking purposes
-        li 
-          strong.small NEW  
-          span.code rel="sponsored"
-          |  for advertising / sponsored content
-        li 
-          strong.small NEW 
-          span.code rel="ugc"
-          |  "user generated content" for comments / forum posts
+        li Cloud providers, CDNs, APIs, testing, email, way more...
+        li It's an amazing amount of stuff &mdash; check it out!
+        li Add to the list 
+          a(href="https://github.com/ripienaar/free-for-dev") on GitHub
+
+    section.slide
+      h2 
+        a(href="https://tiny-helpers.dev/") Tiny Helpers
+      blockquote A collection of free single-purpose online tools for web developers
+      ul 
+        li Pretty much as it says on the tin
+        li Really handy stuff, be sure to take a look
+      img(src="./images/tiny-helpers.png", alt="Tiny Helpers", style="width: 40%")
 
 
 
@@ -394,34 +451,32 @@ html
       h1 And now for something completely different...
 
     section.slide
-      h2 
-      blockquote Load classic games from magnetic swipe cards
+      h2 CSS Diner
       ul 
-        li Skip the system emulator software
-        li 
-          a(href='https://github.com/tidwall/RetroSwiper') Written
-          |  in Rust
-      img(src="./images/retroswiper.gif", alt="RetroSwiper", style="width: 50%")
+        li Learn CSS with this 
+          a(href="http://flukeout.github.io/") simple browser selector game
+        li It's oddly satisfying
+      img(src="./images/css-diner.png", alt="CSS Diner", style="width: 50%")
 
 
     //----------------------  On the Lighter Side  ----------------------
     
-    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
-      .content
-        h1 On the<br>Lighter Side
-      .shim(style='background-color:#561d49;opacity:.7;')
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+    //-   .content
+    //-     h1 On the<br>Lighter Side
+    //-   .shim(style='background-color:#561d49;opacity:.7;')
 
-    section.slide
-      h2 
-      blockquote xkcd styled chart lib
-      ul 
-        li You know 
-          a(href='https://xkcd.com/149/') xkcd
-          | , right?
-        li Now you can 
-          a(href='https://timqian.com/chart.xkcd/') draw charts
-          |  in that style!
-      img(src="./images/xkcd-charts.gif", alt="xkcd charts", style="max-width: 80%")
+    //- section.slide
+    //-   h2 
+    //-   blockquote xkcd styled chart lib
+    //-   ul 
+    //-     li You know 
+    //-       a(href='https://xkcd.com/149/') xkcd
+    //-       | , right?
+    //-     li Now you can 
+    //-       a(href='https://timqian.com/chart.xkcd/') draw charts
+    //-       |  in that style!
+    //-   img(src="./images/xkcd-charts.gif", alt="xkcd charts", style="max-width: 80%")
 
 
     //----------------------  Fin  ----------------------
