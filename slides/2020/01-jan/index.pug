@@ -1,0 +1,477 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: January 2020
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: January 2020
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.star React Concurrent Mode
+      p.indent
+        | &mdash; Keith Murgic
+
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong>
+        ul
+          li
+            a(href='https://www.edgeatx.org') https://www.edgeatx.org/speak.html
+          li
+            a(href="https://www.edgeatx.org/sponsorship.html") https://www.edgeatx.org/sponsorship.html
+        li Join us on 
+          a(href="https://edgeatx-invite.herokuapp.com/") Slack
+      
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/nascar.jpg)')
+      h1 Thanks to<br>Our Sponsors
+      .shim(style='background-color:#432c9a;opacity:.8;')
+
+    section.slide.cover(style="background:#fff;")
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://company.auntbertha.com/' alt='Aunt Bertha website')
+            img(style='width:70%;padding-top:100px;', src='../../shared/resources/images/sponsors/aunt-bertha-logo.png', alt='Aunt Bertha website')
+    
+    section.slide.cover(style="background:#0a0a36;")
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.moove-it.com/' alt='Moove It website')
+            img(style='width:85%;padding-top:100px;', src='../../shared/resources/images/sponsors/mooveit-logo.png', alt='Moove It website')
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check September 18, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-dev.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 77
+          td.ver 69
+          td.ver Beta
+          td.ver 12.
+            span.small 1
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of January 21, 2020:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-final.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 77
+            br
+            strong(style='color:#1CA727') 79
+          td.ver 
+            span.strike.dim 69
+            br
+            strong(style='color:#1CA727') 72
+          td.ver
+            span.strike.dim Beta
+            br
+            strong(style='color:#1CA727') 79 🤯
+          td.ver 
+            span.strike.dim 12.
+              span.small 1
+            br
+            strong(style='color:#1CA727') 13
+    
+    section.slide
+      h2 Chrome 78
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released October 22nd — 
+        a(href='https://developers.google.com/web/updates/2019/10/nic78') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=Q81403HNZRc') video
+        | )
+      ul
+        li 
+          a(href='https://web.dev/css-props-and-vals/') CSS Properties and Values API
+        li
+          a(href='https://developers.google.com/web/updates/2019/09/fresher-sw') Fresher service workers
+
+      h3.star Origin Trials
+      p Allow users on your domain to 
+        a(href="https://googlechrome.github.io/OriginTrials/developer-guide.html") test new browser features
+      ul
+        li 
+          a(href="https://developers.chrome.com/origintrials/#/view_trial/3868592079911256065") Native file system
+          | : Read/write files to the local system
+        li
+          a(href="https://developers.chrome.com/origintrials/#/view_trial/607985949695016961") SMS Receiver API
+          | : Confirm OTP messages directly in your web app
+
+    section.slide
+      h2 Chrome 79
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released December 10th — 
+        a(href='https://developers.google.com/web/updates/2019/12/nic79') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=L0OB0_bO5I0') video
+        | )
+      h3.star
+        a(href='https://web.dev/wakelock/') Wake Lock API
+      
+      h3.star
+        a(href='https://web.dev/vr-comes-to-the-web/') WebXR Device API
+
+    section.slide
+      h2 Firefox 70
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released October 22nd — 
+        a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/70') Release Notes
+      ul
+        li Many debugger improvements
+        li Support for 
+          a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators") numeric separators 
+          | , e.g. 
+          span.code 1_000_000
+        li Lots 
+          a(href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/70") more
+
+    section.slide
+      h2 Firefox 71
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released December 3rd — 
+        a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/71') Release Notes
+      ul
+        li Even more debugger improvements
+        ul
+          li New 
+            a(href="https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor/Inspecting_web_sockets") web sockets inspector
+        li Support for 
+          span.code 
+            a(href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled") Promise.allSettled()
+
+    section.slide
+      h2 Firefox 72
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released January 7th — 
+        a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/72') Release Notes
+      ul
+        li Mostly an incremental release
+        li Lots of minor dev tools, JS and CSS updates
+
+    section.slide
+      h2 Microsoft Edge
+      img(src='../../shared/resources/images/edge-final.png', class='corner-image', width='200px', alt='Edge')
+      p Released January 15th — 
+        a(href='https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/') Release Notes
+      ul
+        li First official Stable channel build!
+        li Built on 
+          a(href="https://www.chromium.org/") Chromium
+        li Automaic updates (well, 
+          a(href="https://docs.microsoft.com/en-us/deployedge/microsoft-edge-blocker-toolkit") sort of
+          | )
+        li It's mostly Chrome (for now)
+
+    section.slide
+      h2 Safari 13 
+      img(src='../../shared/resources/images/safari.png', class='corner-image', width='200px', alt='Safari')
+      p Released in July — 
+        a(href='https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes') Release Notes
+      ul
+        li Lots of Apple-specific features
+        ul
+          li "Desktop-class" Safari for iPad
+          li Improved Mac and WKWebView security
+          li Faster rendering in iOS &amp; watchOS
+          li Native macOS keychain sign-in
+        li Improvements for payments, media, web inspector and more
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+
+    section.slide
+      h2 
+      img(src='../../shared/resources/images/dojo-logo.jpg', class='corner-image', width='200px', alt='Dojo')
+      blockquote A Progressive Framework for Modern Web Apps
+      ul
+        li
+    
+    
+
+      
+    //----------------------  Tips & Tricks  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+    //-   .content
+    //-     h1 Tips &amp; Tricks
+    //-   .shim(style='background-color:#6d0264;opacity:.7;')
+  
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Security  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+      .content
+        h1 Security
+      .shim(style='background-color:#c11;opacity:.7;')
+  
+    section.slide
+      h2 
+      ul 
+        li 
+          a(href='https://sequelize.org/master/') Sequelize
+          |  is a popular open source ORM for Node.js
+        li Snyk, an OSS security analysis company, 
+          a(href='https://snyk.io/blog/sequelize-orm-npm-library-found-vulnerable-to-sql-injection-attacks/') disclosed the issue
+          |  in June
+        li Everyone should upgrade to v5.15.1+
+
+
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 
+      ul 
+        li What? There are ads in the terminal? 
+          a(href='https://www.zdnet.com/article/npm-bans-terminal-ads/') Not anymore
+          |  (
+          a(href='https://blog.npmjs.org/post/187382017885/supporting-open-source-maintainers') postscript
+          | )
+        li A maintainer of 
+          a(href='https://standardjs.com/') StandardJS
+          |  created 
+          a(href='https://github.com/feross/funding') funding
+          |  (as an "experiment")
+        li They included it in the 
+          a(href='https://standardjs.com/changelog.html#1400---2019-08-19') StandardJS 14.0 release
+        li 
+          a(href='https://github.com/standard/standard/issues/1381') Discussion ensued
+          | , and they quickly ended the experiment
+        li The 
+          a(href='https://feross.org/funding-experiment-recap/') author's recap
+          |  is worth a read
+      img(src='./images/npm-ad.png', width='70%', alt='npm ad')
+
+
+        
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 
+      p On Sept 10th, Google announced 
+        a(href='https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html') two new options
+      ul 
+        li 
+          span.code &lt;a href="#" rel="nofollow"&gt;foo&lt;/a&gt;
+          ul 
+            li Standard since 2005
+            li Tells Google to ignore links for content ranking purposes
+        li 
+          strong.small NEW  
+          span.code rel="sponsored"
+          |  for advertising / sponsored content
+        li 
+          strong.small NEW 
+          span.code rel="ugc"
+          |  "user generated content" for comments / forum posts
+
+
+
+    //----------------------  Events  ----------------------
+
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
+    //-   .content
+    //-     h1 Upcoming Events
+    //-   .shim(style='background-color:#369;opacity:.6;')
+
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2 
+      blockquote Load classic games from magnetic swipe cards
+      ul 
+        li Skip the system emulator software
+        li 
+          a(href='https://github.com/tidwall/RetroSwiper') Written
+          |  in Rust
+      img(src="./images/retroswiper.gif", alt="RetroSwiper", style="width: 50%")
+
+
+    //----------------------  On the Lighter Side  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
+
+    section.slide
+      h2 
+      blockquote xkcd styled chart lib
+      ul 
+        li You know 
+          a(href='https://xkcd.com/149/') xkcd
+          | , right?
+        li Now you can 
+          a(href='https://timqian.com/chart.xkcd/') draw charts
+          |  in that style!
+      img(src="./images/xkcd-charts.gif", alt="xkcd charts", style="max-width: 80%")
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
