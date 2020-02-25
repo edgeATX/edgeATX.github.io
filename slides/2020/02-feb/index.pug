@@ -264,6 +264,17 @@ html
         li Component harnesses for testing components
         li TypeScript 3.7 support
 
+    section.slide
+      h2 
+        a(href="https://blitzjs.com/") Blitz.js
+      blockquote a Ruby on Rails equivalent for monolithic fullstack React apps
+      p Announced February 17th — 
+        a(href='https://twitter.com/flybayer/status/1229425878481793024') thread
+        |  (not public yet)
+      ul
+        li Claims to be "Rails good parts + React good parts"
+        li Eliminate all boilerplate and grunt work
+        li Still vaporware! But coming soon...
 
       
     //----------------------  Tips & Tricks  ----------------------
@@ -311,12 +322,16 @@ html
       .shim(style='background-color:#393;opacity:.7;')
 
     section.slide
-      h2 Chrome Phasing Out UA Strings
-      p User agent strings are a mess, and 
-        a(href="https://www.zdnet.com/article/google-to-phase-out-user-agent-strings-in-chrome/") Google wants to kill them
+      h2 Npm Outage Feb 17th
+      p Caused by a Cloudflare
+        a(href="https://github.com/npm/cli/issues/836#issuecomment-587019096") DDoS protection bug
       ul
-        li They are moving to 
-          a(href="https://wicg.github.io/ua-client-hints/") Client Hints
+        li Cloudflare tweaked HTTP header rules to identify bad traffic
+        li Npm uses a non-standard "install" referer
+        li Cloudflare started treating npm installs as DDoS attacks on npm!
+        li They reverted, but npm was basically down for 2 hours
+      p Great reminder to 
+        a(href="https://twitter.com/bitandbang/status/1229467759437910016") prepare for such things
         
 
     //----------------------  ICYMI  ----------------------
@@ -328,13 +343,12 @@ html
 
     section.slide
       h2 
-        a(href="https://free-for.dev/") free-for.dev
-      blockquote This is a list of software (SaaS, PaaS, IaaS, etc.) and other offerings that have free tiers for developers.
-      ul 
-        li Cloud providers, CDNs, APIs, testing, email, way more...
-        li It's an amazing amount of stuff &mdash; check it out!
-        li Add to the list 
-          a(href="https://github.com/ripienaar/free-for-dev") on GitHub
+        a(href="https://gitexplorer.com/") Git Command Explorer
+      blockquote Find the right commands you need without digging through the web.
+      ul
+        li Just tell it what you want to do!
+        li It will give you the exact CLI commands
+      img(src="./images/git-explorer.png", alt="Git command explorer")
 
 
     //----------------------  Events  ----------------------
