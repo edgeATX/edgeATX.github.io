@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Bleeding Edge Web: September 2019</title>
+    <!-- Required stylesheet-->
+    <link rel="stylesheet" href="../../shared/core/deck.core.css">
+    <!-- Extension CSS files go here. Remove or add as needed.-->
+    <link rel="stylesheet" href="../../shared/extensions/goto/deck.goto.css">
+    <link rel="stylesheet" href="../../shared/extensions/menu/deck.menu.css">
+    <link rel="stylesheet" href="../../shared/extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" href="../../shared/extensions/status/deck.status.css">
+    <link rel="stylesheet" href="../../shared/extensions/hash/deck.hash.css">
+    <link rel="stylesheet" href="../../shared/extensions/scale/deck.scale.css">
+    <!-- Transition theme. More available in /themes/transition/ or create your own.-->
+    <link rel="stylesheet" href="../../shared/themes/transition/fade.css">
+    <!-- Required Modernizr file-->
+    <script src="../../shared/resources/js/modernizr-2.8.3.js"></script>
+    <!-- Pretty print-->
+    <script src="../../shared/prism/prism-okaidia.js"></script>
+    <link rel="stylesheet" href="../../shared/prism/prism-okaidia.css">
+    <!-- Custom theme, include last to allow easy overriding-->
+    <link rel="stylesheet" href="../../shared/themes/build/skew-dark.css">
+    <script type="text/javascript" src="../../shared/resources/js/microlight.js"></script>
+  </head>
+  <body class="deck-container language-javascript">
+    <section class="slide cover home">
+      <h1 style="font-size:4em;top:30%;">Bleeding Edge Web</h1>
+      <h1 style="font-size:2.5em;top:65%;"><a href="https://twitter.com/edgeatx">@edgeATX</a></h1>
+      <h1 style="font-size:2.5em;top:80%;"><a href="https://www.edgeatx.org/">edgeATX.org</a></h1>
+      <div class="shim" style="opacity:.5;"></div>
+    </section>
+    <section class="slide">
+      <h2>Bleeding Edge Web: Sept 2019</h2>
+      <h3 class="star">News From the Bleeding Edge</h3>
+      <p class="indent">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="lightning">Writing a Github Action</h3>
+      <p class="indent">&mdash; Corey Butler (<a href="https://twitter.com/goldglovecb">@goldglovecb</a>)</p>
+      <h3 class="lightning">Azure Cosmos DB (SQL + JSON) with Node.js</h3>
+      <p class="indent">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="star">Analytics and Data for Developers</h3>
+      <p class="indent">&mdash; Lewis King (<a href="https://twitter.com/lew">@lew</a>)</p>
+    </section>
+    <section class="slide">
+      <h2>Housekeeping</h2>
+      <ul>
+        <li>Speakers and sponsors <strong>always wanted</strong> (<a href="https://www.edgeatx.org">edgeATX.org</a> for details)</li>
+        <li>Don't forget your parking validation</li>
+        <li>Omni hotel bar (downstairs) after meetup</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/nascar.jpg)">
+      <h1>Thanks to<br>Our Sponsors</h1>
+      <div class="shim" style="background-color:#432c9a;opacity:.8;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)">
+      <div style="text-align:center;padding-top:100px;font-size:200%;">
+        <p><a href="https://www.capitalfactory.com/" alt="Capital Factory website"><img style="min-width:40%" src="../../shared/resources/images/sponsors/capitalfactory-logo2.png" alt="Capital Factory"></a></p>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.5;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/sponsors/fauna-logo.jpg)"><a href="https://fauna.com/" alt="Fauna website">
+        <div style="position:absolute;top:0;left:0;width:100%;height:100%"></div></a></section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/newspaper.gif)">
+      <h1>News from the<br>Bleeding Edge</h1>
+      <div class="shim" style="background-color:#d15dd1;opacity:.9;"></div>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/browsers.jpg)">
+      <div class="content">
+        <h1>Browser<br>Update</h1>
+      </div>
+      <div class="shim" style="background-color:#369;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>Last check: August 15, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge-dev.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver">76</td>
+          <td class="ver">68</td>
+          <td class="ver">18<span style="color:red">*</span></td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Browser Pop Quiz</h2>
+      <h3>As of September 18, 2019:</h3>
+      <table class="browsers">
+        <tr>
+          <td width="25%"><img src="../../shared/resources/images/chrome.png" width="70%" alt="Chrome"></td>
+          <td width="25%"><img src="../../shared/resources/images/firefox57.png" width="75%" alt="Firefox"></td>
+          <td width="25%"><img src="../../shared/resources/images/edge-dev.png" width="70%" alt="Edge"></td>
+          <td width="25%"><img src="../../shared/resources/images/safari.png" width="70%" alt="Safari"></td>
+        </tr>
+        <tr>
+          <td class="ver"> <span class="strike dim">76</span><br><strong style="color:#1CA727">77</strong></td>
+          <td class="ver"> <span class="strike dim">68</span><br><strong style="color:#1CA727">69</strong></td>
+          <td class="ver"><span class="strike dim">18</span><br><strong style="color:#1CA727">Beta</strong></td>
+          <td class="ver">12.<span class="small">1</span></td>
+        </tr>
+      </table>
+    </section>
+    <section class="slide">
+      <h2>Chrome 77</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <p>Released September 17th — <a href="https://developers.google.com/web/updates/2019/09/nic77">Release Notes</a> (<a href="https://www.youtube.com/watch?v=S8aVB3IfOR4">video</a>)</p>
+      <h3 class="star">Largest Contentful Paint</h3>
+      <ul>
+        <li>Measure render time of the <a href="https://web.dev/largest-contentful-paint/">largest content element</a></li>
+        <li>Best real-world way to measure user-facing performance</li>
+        <li>Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"><span class="code">PerformanceEntry</span></a> event of type <span class="code">largest-contentful-paint</span></li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 77</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star">Easier Custom Form Components</h3>
+      <ul> 
+        <li>New <span class="code">formdata</span> event for appending custom data on submit</li>
+        <pre><code>const form = document.querySelector('form');
+form.addEventListener('formdata', ({formData}) => {
+  formData.append('my-input', myInputValue);
+});</code></pre>
+        <p><a href="https://web.dev/more-capable-form-controls/#event-based-api">Learn more</a></p>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 77</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star">Easier Custom Form Components</h3>
+      <ul> 
+        <li>New <span class="code">formAssociated</span> property links custom components to a form</li>
+        <li>You provide the field API like <span class="code">.name</span>, <span class="code">.value</span>, etc.</li>
+        <pre><code>class MyInput extends HTMLElement {
+  static formAssociated = true;
+  get value() { return this.value_; }
+  ...
+}</code></pre>
+        <p><a href="https://web.dev/more-capable-form-controls/#defining-a-form-associated-custom-element">Learn more</a></p>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chrome 77</h2><img class="corner-image" src="../../shared/resources/images/chrome.png" width="200px" alt="Chrome">
+      <h3 class="star">Copy Styles</h3>
+      <ul> 
+        <li>Right-click any DOM element and <span class="code">Copy &rarr; Copy styles</span></li>
+        <li>Copies complete DOM node CSS to the clipboard</li>
+        <li>Very convenient for quick style testing</li>
+      </ul>
+      <p>Check out lots of other <a href="https://developers.google.com/web/updates/2019/07/devtools">DevTools improvements</a></p>
+    </section>
+    <section class="slide">
+      <h2>Firefox 69</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <p>Released September 3rd — <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69">Release Notes</a></p>
+      <h3 class="star">Massive Privacy Release</h3>
+      <ul>
+        <li>Enhanced Tracking Protection (ETP)  <a href="https://blog.mozilla.org/blog/2019/09/03/todays-firefox-blocks-third-party-tracking-cookies-and-cryptomining-by-default/">enabled by default</a></li>
+        <li>Blocks all third-party tracking cookies and cryptominers</li>
+        <li> <a href="https://blog.mozilla.org/firefox/how-to-block-fingerprinting-with-firefox/">Fingerprinting scripts</a> can be blocked by enabling "Strict Mode"</li>
+        <li>New option to <a href="https://support.mozilla.org/en-US/kb/block-autoplay">block all autoplay media</a> by default</li>
+        <li>Flash is also now <a href="https://www.zdnet.com/article/mozilla-firefox-69-will-disable-adobe-flash-plugin-by-default/">disabled by default</a></li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox 69</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Console improvements</h3>
+      <ul>
+        <li>Because of ETP, lots of errors are really common now!</li>
+        <li>The console now groups tracking protection, CORS, and CSP errors</li>
+        <li>Blocked resources are also displayed in the Network panel</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Firefox 69</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Public class fields</h3>
+      <ul>
+        <li>Cleaner, self-documenting public fields enabled</li>
+        <li>No private fields yet though... boo!</li>
+      </ul>
+      <pre><code>class Rectangle {
+  height = 0;
+  width;
+  constructor(height, width) {    
+    this.height = height;
+    this.width = width;
+  }
+}</code></pre>
+    </section>
+    <section class="slide">
+      <h2>Firefox 69</h2><img class="corner-image" src="../../shared/resources/images/firefox.png" width="200px" alt="Firefox">
+      <h3 class="star">Lots more!</h3>
+      <ul>
+        <li>Lots of other JS, CSS, DOM and other features</li>
+        <li>Check the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/69">release notes</a></li>
+        <li> <strong>Side note:</strong> They are moving to a  <a href="https://hacks.mozilla.org/2019/09/moving-firefox-to-a-faster-4-week-release-cycle/">4-week release cycle</a> in Q1 2020</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Chromium Edge</h2><img class="corner-image" src="../../shared/resources/images/edge.png" width="200px" alt="Edge">
+      <p> <a href="https://www.theverge.com/2019/8/20/20813510/microsoft-chromium-edge-beta-download-release-macos-windows">Beta Released</a> August 20th</p>
+      <ul>
+        <li>First version touted as "ready for everyday use"</li>
+        <li>Available for both Windows and macOS</li>
+        <li>Major version updates expected ~every 6 weeks</li>
+        <li>Also announced a new <a href="https://msrc-blog.microsoft.com/2019/08/20/announcing-the-microsoft-edge-insider-channels-bounty/">bug bounty program</a> similar to Google's</li>
+        <li>Stable version probably still 2020 at the earliest</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Safari 13 <span class="small">(beta 3)</span></h2><img class="corner-image" src="../../shared/resources/images/safari.png" width="200px" alt="Safari">
+      <p>Released in July — <a href="https://developer.apple.com/documentation/safari_release_notes/safari_13_beta_3_release_notes">Release Notes</a></p>
+      <ul>
+        <li>Coming with macOS Catalina / iOS 13</li>
+        <li>Expected ~October 2019</li>
+      </ul><img src="./images/catalina.jpg" alt="Catalina">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/html-js-css.png)">
+      <h1>Languages, Libraries &amp;<br>Frameworks</h1>
+      <div class="shim" style="background-color:#AD7909;opacity:.8;"></div>
+    </section>
+    <section class="slide">
+      <h2>Dojo 6.0</h2><img class="corner-image" src="../../shared/resources/images/dojo-logo.jpg" width="200px" alt="Dojo">
+      <blockquote>A Progressive Framework for Modern Web Apps</blockquote>
+      <ul>
+        <li><a href="https://dojo.io/blog/version-6-dojo">Released</a> August 28th</li>
+        <li>One of the O.G. JS frameworks, launched in 2004</li>
+        <li>Function-based widgets</li>
+        <li>Big on middleware pattern</li>
+        <li>"Zero-config" custom elements</li>
+        <li>Smarter BTR (build-time rendering)</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Rails 6.0</h2>
+      <ul>
+        <li><a href="https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/">Released</a> September 15th</li>
+        <li> <a href="https://weblog.rubyonrails.org/2018/12/13/introducing-action-mailbox-for-rails-6/">Action Mailbox</a>: Handling for inbound emails</li>
+        <li> <a href="https://weblog.rubyonrails.org/2018/10/3/introducing-action-text-for-rails-6/">Action Text</a>: Rich text editor</li>
+        <li><a href="https://github.com/rails/rails/pull/34052">Multi-database support</a></li>
+        <li>And lots more</li>
+      </ul><img class="corner-image" src="../../shared/resources/images/rails-logo.jpg" width="200px" alt="Rails">
+    </section>
+    <section class="slide">
+      <h2>Relay 6.0</h2>
+      <blockquote>A JavaScript framework for building data-driven React applications</blockquote>
+      <ul>
+        <li><a href="https://github.com/facebook/relay/releases/tag/v6.0.0">Released</a> September 16th</li>
+        <li>Declarative, GraphQL-backed data layer</li>
+        <li>New experimental support for hooks and suspense</li>
+        <li>Several breaking changes for existing users</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Java 13</h2><img class="corner-image" src="./images/java-logo.jpg" width="200px" alt="Java">
+      <ul>
+        <li><a href="https://reactjs.org/blog/2019/08/08/react-v16.9.0.html">Released</a> September 17th</li>
+        <li>Technically JDK 13, the open source reference implementation</li>
+        <li>They have been on a 6-month release cycle since Java 9 in 2017</li>
+        <li>Five <a href="http://openjdk.java.net/projects/jdk/13/">primary features</a> (nothing exciting)</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Dark</h2><img class="corner-image" src="../../shared/resources/images/dark-logo.png" width="200px" alt="Dark">
+      <blockquote>A holistic programming language, editor, and infrastructure for building backends</blockquote>
+      <ul>
+        <li>Emerged from private alpha <a href="https://medium.com/darklang/unveiling-dark-e0be6f1e0b06">on Monday</a></li>
+        <li>Frontend-agnostic, DBs and hosting are magically abstracted</li>
+        <li>Read the <a href="https://medium.com/darklang/building-an-office-sign-in-in-dark-c2d980560695">demo blog</a> post to learn more</li>
+        <li>They are now in beta, and hiring</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/security.jpg)">
+      <div class="content">
+        <h1>Security</h1>
+      </div>
+      <div class="shim" style="background-color:#c11;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Sequelize SQL Injection Vulnerability</h2>
+      <ul> 
+        <li> <a href="https://sequelize.org/master/">Sequelize</a> is a popular open source ORM for Node.js</li>
+        <li>Snyk, an OSS security analysis company, <a href="https://snyk.io/blog/sequelize-orm-npm-library-found-vulnerable-to-sql-injection-attacks/">disclosed the issue</a> in June</li>
+        <li>Everyone should upgrade to v5.15.1+</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Ruby REST Gem Backdoored</h2>
+      <ul> 
+        <li>Ruby's  <a href="https://rubydoc.info/github/rest-client/rest-client/master">REST client</a> package was <a href="https://github.com/rest-client/rest-client/issues/713">published maliciously</a> on Aug 14th</li>
+        <li>A maintainer's account had been compromised</li>
+        <li>The package phoned home to a Ukrainian URL</li>
+        <li>Most likely for running a cryptominer</li>
+        <li>Affected? Upgrade to <strong>1.6.14+</strong> ASAP</li>
+        <li> <strong class="small">REMINDER</strong> Use good passwords! Use 2FA when available!</li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/industry.jpg)">
+      <div class="content">
+        <h1>Industry<br>Headlines</h1>
+      </div>
+      <div class="shim" style="background-color:#393;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Npm Bans Terminal Ads</h2>
+      <ul> 
+        <li>What? There are ads in the terminal? <a href="https://www.zdnet.com/article/npm-bans-terminal-ads/">Not anymore</a> (<a href="https://blog.npmjs.org/post/187382017885/supporting-open-source-maintainers">postscript</a>)</li>
+        <li>A maintainer of <a href="https://standardjs.com/">StandardJS</a> created <a href="https://github.com/feross/funding">funding</a> (as an "experiment")</li>
+        <li>They included it in the <a href="https://standardjs.com/changelog.html#1400---2019-08-19">StandardJS 14.0 release</a></li>
+        <li> <a href="https://github.com/standard/standard/issues/1381">Discussion ensued</a>, and they quickly ended the experiment</li>
+        <li>The <a href="https://feross.org/funding-experiment-recap/">author's recap</a> is worth a read</li>
+      </ul><img src="./images/npm-ad.png" width="70%" alt="npm ad">
+    </section>
+    <section class="slide">
+      <h2>GitLab Raises $268M Series E</h2>
+      <blockquote>New funding and our $2.75 billion valuation will allow us to enhance monitoring and security capabilities. </blockquote>
+      <ul> 
+        <li>Their valuation has <a href="https://about.gitlab.com/2018/09/19/announcing-100m-series-d-funding/">more than doubled</a> since $100M Series D a year ago</li>
+        <li>Remember how Github <a href="https://blogs.microsoft.com/blog/2018/06/04/microsoft-github-empowering-developers/">cashed out</a>?</li>
+        <li>Seems like a good time to be in git hosting!</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Graph Query Language</h2>
+      <ul> 
+        <li>New ISO standard, <a href="https://neo4j.com/blog/gql-standard-query-language-property-graphs/?ref=pr-">backed by Neo4j</a></li>
+        <li>GQL is the first new ISO database standard since SQL (1987)</li>
+      </ul><img src="./images/gql-ecosystem.jpg" width="50%" alt="GQL Ecosystem">
+    </section>
+    <section class="slide">
+      <h2>How About Richard Stallman?</h2>
+      <ul> 
+        <li>Pioneered the <a href="https://en.wikipedia.org/wiki/Free_software_movement">free software movement</a> with <a href="https://en.wikipedia.org/wiki/GNU">GNU</a> and <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">GPL</a></li>
+        <li>On Monday, got himself <a href="https://arstechnica.com/tech-policy/2019/09/richard-stallman-leaves-mit-after-controversial-remarks-on-rape/">fired</a> from MIT and FSF over Epstein comments</li>
+        <li>Apparently he's always been kind of a <a href="https://medium.com/@selamie/remove-richard-stallman-appendix-a-a7e41e784f88">misogynistic jerk</a></li>
+      </ul>
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/icymi.jpg)">
+      <div class="content">
+        <h1>In Case You<br>Missed It</h1>
+      </div>
+      <div class="shim" style="background-color:#555;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>New "nofollow" Options</h2>
+      <p>On Sept 10th, Google announced <a href="https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html">two new options</a></p>
+      <ul> 
+        <li> <span class="code">&lt;a href="#" rel="nofollow"&gt;foo&lt;/a&gt;</span>
+          <ul> 
+            <li>Standard since 2005</li>
+            <li>Tells Google to ignore links for content ranking purposes</li>
+          </ul>
+        </li>
+        <li> <strong class="small">NEW  </strong><span class="code">rel="sponsored"</span> for advertising / sponsored content</li>
+        <li> <strong class="small">NEW </strong><span class="code">rel="ugc"</span> "user generated content" for comments / forum posts</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Web-based iTunes</h2>
+      <ul> 
+        <li>Shipped Sept 5th, notable for the <a href="https://dev.to/ionic/apple-just-shipped-web-components-to-production-and-you-probably-missed-it-57pf">underlying technologies</a> used:
+          <ul> 
+            <li> <a href="https://emberjs.com/">Ember.js</a></li>
+            <li>More than 50 standard <a href="https://www.webcomponents.org/">web components</a></li>
+            <li>Ionic's <a href="https://stenciljs.com/">Stencil</a> for UI bundles / polyfills</li>
+          </ul>
+        </li>
+      </ul><img src="./images/itunes-web.jpg" alt="iTunes" style="max-width: 40%">
+    </section>
+    <section class="slide">
+      <h2>COBOL Turns 60!</h2>
+      <ul> 
+        <li>COmmon Business-Oriented Language was created in <strong>1959</strong></li>
+        <li> <a href="https://americanhistory.si.edu/cobol/proposing-cobol">Proposed by Mary Hawes</a> and promoted by Grace Hopper</li>
+        <li>It was designed to resemble ordinary English</li>
+        <li>Was the first vendor-neutral interoperable computer language</li>
+      </ul><img src="./images/univac.jpg" alt="Univac" style="max-width: 40%">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/anfscd.jpg)">
+      <h1>And now for something completely different...</h1>
+    </section>
+    <section class="slide">
+      <h2>RetroSwiper</h2>
+      <blockquote>Load classic games from magnetic swipe cards</blockquote>
+      <ul> 
+        <li>Skip the system emulator software</li>
+        <li> <a href="https://github.com/tidwall/RetroSwiper">Written</a> in Rust</li>
+      </ul><img src="./images/retroswiper.gif" alt="RetroSwiper" style="width: 50%">
+    </section>
+    <section class="slide cover" style="background-image:url(../../shared/resources/images/lighter-side.jpg)">
+      <div class="content">
+        <h1>On the<br>Lighter Side</h1>
+      </div>
+      <div class="shim" style="background-color:#561d49;opacity:.7;"></div>
+    </section>
+    <section class="slide">
+      <h2>Chart.xkcd</h2>
+      <blockquote>xkcd styled chart lib</blockquote>
+      <ul> 
+        <li>You know <a href="https://xkcd.com/149/">xkcd</a>, right?</li>
+        <li>Now you can <a href="https://timqian.com/chart.xkcd/">draw charts</a> in that style!</li>
+      </ul><img src="./images/xkcd-charts.gif" alt="xkcd charts" style="max-width: 80%">
+    </section>
+    <section class="slide">
+      <h2>Thanks!</h2>
+      <h3><a href="https://edgeatx.org/slides/">edgeATX.org/slides</a></h3>
+      <h3>Brian Moeskau (<a href="https://twitter.com/bmoeskau" target="_blank">@bmoeskau</a>)</h3><br><img src="../../shared/resources/images/bleeding-web.gif" alt="Bleeding Edge Web" style="display: block; max-width: 20vw;">
+    </section>
+    <!-- Begin extension snippets. Add or remove as needed.-->
+    <!-- deck.navigation snippet--><a class="deck-prev-link" href="#" title="Previous">←</a><a class="deck-next-link" href="#" title="Next">→</a>
+    <!-- deck.status snippet-->
+    <p class="deck-status"><span class="deck-status-current"></span> /<span class="deck-status-total"></span></p>
+    <!-- deck.goto snippet-->
+    <form class="goto-form" action="." method="get">
+      <label for="goto-slide">Go to slide:</label>
+      <input id="goto-slide" type="text" name="slidenum" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+    <!-- deck.hash snippet--><a class="deck-permalink" href="." title="Permalink to this slide">#</a>
+    <!-- Required JS files.-->
+    <script src="../../shared/resources/js/jquery-1.7.2.min.js"></script>
+    <script src="../../shared/core/deck.core.js"></script>
+    <!-- Extension JS files. Add or remove as needed.-->
+    <script src="../../shared/core/deck.core.js"></script>
+    <script src="../../shared/extensions/hash/deck.hash.js"></script>
+    <script src="../../shared/extensions/menu/deck.menu.js"></script>
+    <script src="../../shared/extensions/goto/deck.goto.js"></script>
+    <script src="../../shared/extensions/status/deck.status.js"></script>
+    <script src="../../shared/extensions/navigation/deck.navigation.js"></script>
+    <script src="../../shared/extensions/scale/deck.scale.js"></script>
+    <script src="../../shared/core/deck.init.js"></script>
+    <!-- <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>-->
+  </body>
+</html>

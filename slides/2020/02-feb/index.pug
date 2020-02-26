@@ -1,0 +1,547 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: February 2020
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: February 2020
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.lightning A CLI-First Approach to Web Development
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+      
+      h3.star TypeScript In-Depth
+      p.indent
+        | &mdash; Ted Patrick (
+        a(href='https://twitter.com/__ted__') @__ted__
+        | )
+
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong>
+        ul
+          li
+            a(href='https://www.edgeatx.org') edgeatx.org/speak.html
+          li
+            a(href="https://www.edgeatx.org/sponsorship.html") edgeatx.org/sponsorship.html
+        li Join us on 
+          a(href="https://edgeatx-invite.herokuapp.com/") Slack
+      
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/nascar.jpg)')
+      h1 Thanks to<br>Our Sponsors
+      .shim(style='background-color:#432c9a;opacity:.8;')
+
+    section.slide.cover(style="background:#fff;")
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://company.auntbertha.com/' alt='Aunt Bertha website')
+            img(style='width:70%;padding-top:100px;', src='../../shared/resources/images/sponsors/aunt-bertha-logo.png', alt='Aunt Bertha website')
+    
+    section.slide.cover(style="background:#1a73d9;")
+      div(style='text-align:center;padding-top:0;font-size:200%;')
+        p
+          a(href='https://events.indeed.com/hiringevents/' alt='Indeed Hiring website')
+            img(style='width:85%;padding-top:100px;', src='../../shared/resources/images/sponsors/indeed-hiring-logo.png', alt='Indeed Hiring website')
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check January 21, 2020:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-final.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 79
+          td.ver 79
+          td.ver 72
+          td.ver 13
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of February 25, 2020:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-final.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 79
+            br
+            strong(style='color:#1CA727') 80
+          td.ver
+            span.strike.dim 79
+            br
+            strong(style='color:#1CA727') 80
+          td.ver 
+            span.strike.dim 72
+            br
+            strong(style='color:#1CA727') 73
+          td.ver 13
+    
+    section.slide
+      h2 Chrome 80
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released February 4th — 
+        a(href='https://developers.google.com/web/updates/2020/02/nic80') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=lM0qZpxu0Fg') video
+        | )
+
+      h3.star
+        a(href="https://web.dev/contact-picker/") Contact Picker API
+      p Graduated from 
+        a(href="https://www.edgeatx.org/slides/2020/01-jan/#slide-10") origin trial
+        |  status
+
+      img(src='./images/contact-picker.jpg', alt='Contact picker', style='max-width:600px')
+
+    section.slide
+      h2 Chrome 80
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star PWA-related Origin Trial Graduates
+      p 
+        a(href="https://web.dev/periodic-background-sync/") Periodic Background Sync API
+      p Sync your web app's data in the background for a more native-like experience
+      p 
+        a(href="https://web.dev/get-installed-related-apps/")
+          span.code getInstalledRelatedApps()
+      p Allows your web app to check whether your native app is installed on a user's device, and vice versa.
+ 
+    section.slide
+      h2 Chrome 80
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star New Origin Trials
+      ul
+        li
+          a(href="https://web.dev/content-indexing-api/") Content Indexing API
+        li
+          a(href="https://web.dev/notification-triggers/") Notification Triggers
+        li and more
+      p Check out the complete list of 
+        a(href="https://developers.chrome.com/origintrials/#/trials/active") active origin trials
+
+    section.slide
+      h2 Chrome 80
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star JS Optional Chaining
+      p Old:
+      pre
+        code 
+          | let nameLength;
+          |  if (db && db.user && db.user.name)
+          |  nameLength = db.user.name.length;
+      p New:
+      pre
+        code 
+          | const nameLength = db?.user?.name?.length;
+
+    section.slide
+      h2 Chrome 80
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star Text Fragment Linking
+      p Chrome will scroll to and highlight the first instance of the fragment:
+      a(href="https://en.wikipedia.org/wiki/Rickrolling#:~:text=New%20York") https://en.wikipedia.org/wiki/Rickrolling#:~:text=New%20York
+
+
+    section.slide
+      h2 Edge 80
+      img(src='../../shared/resources/images/edge-final.png', class='corner-image', width='200px', alt='Edge')
+      p Released February 7th — 
+        a(href='https://docs.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-80036148-february-7') Release Notes
+      ul
+        li Updated to Chromium 80
+        li Various Windows-specific users features
+
+    
+    section.slide
+      h2 Firefox 73
+      img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+      p Released February 11th — 
+        a(href='https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/73') Release Notes
+      ul
+        li Pretty minor release, nothing too interesting
+        li 
+          strong v74 Note
+          | : TLS 1.0 &amp; 1.1 support will be removed (~March 10)
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+
+    section.slide
+      h2 
+        a(href="https://www.jetbrains.com/lp/mono/") JetBrains Mono
+      blockquote A typeface for developers
+      p Released January 15th
+      ul
+        li Another code-focused mono typeface (also see 
+          a(href="https://github.com/tonsky/FiraCode") FiraCode
+          | )
+        li Increased height, 138 code-specific ligatures
+      img(src="./images/jetbrains-mono.svg", alt="JetBrains Mono")
+
+    section.slide
+      h2 Angular 9
+      img(src='../../shared/resources/images/angular-logo.png', class='corner-image', width='200px', alt='Angular')
+      p Released February 6th &mdash; 
+        a(href='https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3') release notes
+      ul
+        li New 
+          a(href="https://angular.io/guide/ivy") Ivy Compiler
+          |  and runtime (huge bundle reductions)
+        li New YouTube and Google Maps components
+        li Component harnesses for testing components
+        li TypeScript 3.7 support
+    
+    section.slide
+      h2 Ionic 5
+      img(src='../../shared/resources/images/ionic-logo.png', class='corner-image', width='200px', alt='Ionic')
+      p Released February 11th &mdash; 
+        a(href="https://ionicframework.com/blog/announcing-ionic-5/") release notes
+      ul
+        li iOS 13 design updates
+        li Angular Ivy support (plus React and Vue)
+        li New starter pprojects, colors, icons and more
+      img(src="./images/ionic-components.png", alt="Ionic components", style="max-width:30%")
+
+    section.slide
+      h2 
+        a(href="https://blitzjs.com/") Blitz.js
+      blockquote a Ruby on Rails equivalent for monolithic fullstack React apps
+      p Announced February 17th — 
+        a(href='https://twitter.com/flybayer/status/1229425878481793024') thread
+        |  (not public yet)
+      ul
+        li Claims to be "Rails good parts + React good parts"
+        li Eliminate all boilerplate and grunt work
+        li Still vaporware! But coming soon...
+
+    section.slide
+      h2 GitHub CLI
+      blockquote Supercharge your command line GitHub experience
+      ul
+        li Beta 
+          a(href="https://github.blog/2020-02-12-supercharge-your-command-line-experience-github-cli-is-now-in-beta/") announced 
+          | February 12th
+        li Manage issues and PRs directly from the CLI
+        li Of course it's 
+          a(href="https://github.com/cli/cli") open source
+      img(src="./images/github-cli.webp", alt="GitHub CLI", style="max-width:60%")
+    
+    section.slide
+      h2 文言 wenyan-lang
+      blockquote A programming language for the ancient Chinese
+      ul
+        li World's first 
+          a(href="https://github.com/wenyan-lang/wenyan") classical Chinese programming language
+        li Created last year by a 
+          a(href="https://spectrum.ieee.org/tech-talk/computing/software/classical-chinese") recent CS grad
+        li Transpiles to JS, with Python, Ruby and more in the works
+      img(src="./images/wenyan-lang.jpg", alt="wenyan-lang", style="max-width:35%")
+
+
+      
+    //----------------------  Tips & Tricks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+      .content
+        h1 Tips &amp; Tricks
+      .shim(style='background-color:#6d0264;opacity:.7;')
+  
+    section.slide
+      h2 Git Command Explorer
+      blockquote Find the right commands you need without digging through the web.
+      ul
+        li Inspired by this 
+          a(href="https://arrayexplorer.netlify.com/") Array Explorer
+        li It's 
+          a(href="https://github.com/summitech/gitexplorer") open source
+          |  &mdash; 
+          a(href="https://gitexplorer.com/") try it out
+      img(src="./images/git-explorer.png", alt="Git command explorer", style="max-width:60%")
+
+
+    //----------------------  Security  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+    //-   .content
+    //-     h1 Security
+    //-   .shim(style='background-color:#c11;opacity:.7;')
+  
+
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 .org Registry Sale Paused
+      p The $1.1B sale to Ethos Capital was 
+        a(href="https://www.cnn.com/2019/11/27/tech/org-domain-sale/index.html") announced
+        |  last November
+      ul
+        li People are 
+          a(href="https://savedotorg.org/") not happy
+        li Internet Society advisory council is now 
+          a(href="https://www.theregister.co.uk/2020/02/19/dot_org_sale_isoc_advice/") reconsidering
+        li ICANN is reviewing the deal and could halt it
+
+    section.slide
+      h2 DNSSEC Key Signing Postponed
+      p One of two secure safes 
+        a(href="https://www.theregister.co.uk/2020/02/13/iana_dnssec_ksk_delay/") malfunctioned
+      ul
+        li It was resolved a few days later, but the process is 
+          strong fascinating
+        li 
+          a(href="https://www.cloudflare.com/dns/dnssec/root-signing-ceremony/") DNSSEC Root Signing Ceremony
+        li You can even watch the 
+          a(href="https://www.youtube.com/watch?v=erfsFJsapAs") livestream
+      img(src="./images/dnssec-key-signing.jpg", alt="Signing ceremony", style="max-width:30%")
+
+    section.slide
+      h2 Npm Outage Feb 17th
+      p Caused by a Cloudflare
+        a(href="https://github.com/npm/cli/issues/836#issuecomment-587019096") DDoS protection bug
+      ul
+        li Cloudflare tweaked HTTP header rules to identify bad traffic
+        li Npm uses a non-standard "install" referer
+        li Cloudflare started treating npm installs as DDoS attacks on npm!
+        li They reverted, but npm was basically down for 2 hours
+      p Great reminder to 
+        a(href="https://twitter.com/bitandbang/status/1229467759437910016") prepare for such things
+    
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 An Interesting Bug
+      ul
+        li In 2018, Docker and Razer Synapse 
+          a(href="https://twitter.com/foone/status/1229641258370355200") could not run together
+        li Each program intended to limit to one running copy of 
+          strong itself
+        li They both did something like this:
+      pre
+        code
+          | string.Format("Global\{0}", (object) Assembly.↵
+          |     GetExecutingAssembly().GetType().GUID);
+      strong Can you spot the bug?
+
+    section.slide
+      h2 An Interesting Bug
+      pre
+        code
+          | string.Format("Global\{0}", (object) Assembly.↵
+          |     GetExecutingAssembly().GetType().GUID);
+      br
+      p 
+        span.code .GetType()
+        |  returns .NET's 
+        span.code System.Reflection.RuntimeAssembly
+      ul
+        li So each app was sharing 
+          strong .NET's GUID
+        li Apparently this was from a flawed 
+          a(href="https://stackoverflow.com/questions/502303/how-do-i-programmatically-get-the-guid-of-an-application-in-net2-0/502323#502323") StackOverflow answer
+        li Beware the uncritical copy/paste!
+
+
+    //----------------------  Events  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
+      .content
+        h1 Upcoming Events
+      .shim(style='background-color:#369;opacity:.6;')
+
+    section.slide
+      h2 VueConf 2020
+      ul 
+        li 
+          a(href="http://vueconf.us") http://vueconf.us
+        li In Austin, March 2-4 (next week!)
+        li Very limited late tickets 
+          a(href="https://reg.connectevents.io/ConnectEvents/vueconfus2020/") still available
+      img(src="./images/vueconf.png", alt="VueConf", style="max-width: 40%")
+
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2 A 100% Solar-powered Website
+      ul
+        li Low-tech magazine  
+          a(href="https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html") rebuilt their blog 
+          | on solar power
+        li Goal was to be 100% sustainable and off-grid
+        li They recently wrote up an 
+          a(href="https://solar.lowtechmagazine.com/2020/01/how-sustainable-is-a-solar-powered-website.html") analysis 
+          | after 15 months of use
+        li Related: An analysis of 
+          a(href="https://dannyvankooten.com/website-carbon-emissions/") CO2 emissions on the web
+      img(src="./images/solar-website.png", alt="Solar website", style="max-width:50%")
+
+
+    //----------------------  On the Lighter Side  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
+
+    section.slide
+      h2 Responsive Pixel Art
+      ul 
+        li Responsive design via SVG
+        li Check out the 
+          a(href='https://essenmitsosse.de/pixel/?showcase=true&slide=3') demo
+      a(href='https://essenmitsosse.de/pixel/?showcase=true&slide=3')
+        img(src="./images/pixel-art.png", alt="Pixel art", style="max-width: 70%")
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

@@ -1,0 +1,494 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name='viewport', content='width=1024, user-scalable=no')
+    link(rel='icon', type='image/x-icon', href='/favicon.ico')
+    title Bleeding Edge Web: August 2019
+
+    // Required stylesheet
+    link(rel='stylesheet', href='../../shared/core/deck.core.css')
+    
+    // Extension CSS files go here. Remove or add as needed.
+    link(rel='stylesheet', href='../../shared/extensions/goto/deck.goto.css')
+    link(rel='stylesheet', href='../../shared/extensions/menu/deck.menu.css')
+    link(rel='stylesheet', href='../../shared/extensions/navigation/deck.navigation.css')
+    link(rel='stylesheet', href='../../shared/extensions/status/deck.status.css')
+    link(rel='stylesheet', href='../../shared/extensions/hash/deck.hash.css')
+    link(rel='stylesheet', href='../../shared/extensions/scale/deck.scale.css')
+    
+    // Transition theme. More available in /themes/transition/ or create your own.
+    link(rel='stylesheet', href='../../shared/themes/transition/fade.css')
+    
+    // Required Modernizr file
+    script(src='../../shared/resources/js/modernizr-2.8.3.js')
+    
+    // Pretty print
+    script(src='../../shared/prism/prism-okaidia.js')
+    link(rel='stylesheet', href='../../shared/prism/prism-okaidia.css')
+    
+    // Custom theme, include last to allow easy overriding
+    link(rel='stylesheet', href='../../shared/themes/build/skew-dark.css')
+    script(type='text/javascript', src='../../shared/resources/js/microlight.js')
+  
+  body.deck-container.language-javascript
+
+    //----------------------  Intro  ----------------------
+
+    section.slide.cover.home
+      h1(style='font-size:4em;top:30%;') Bleeding Edge Web
+      h1(style='font-size:2.5em;top:65%;')
+        a(href='https://twitter.com/edgeatx') @edgeATX
+      h1(style='font-size:2.5em;top:80%;')
+        a(href='https://www.edgeatx.org/') edgeATX.org
+      .shim(style='opacity:.5;')
+    
+    section.slide
+      h2 Bleeding Edge Web: Aug 2019
+
+      h3.star News From the Bleeding Edge
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+      h3.lightning Simplifying Security with IAM
+      p.indent
+        | &mdash; Corey Butler (
+        a(href='https://twitter.com/goldglovecb') @goldglovecb
+        | )
+  
+      h3.star Everyone Can Do Open Source
+      p.indent
+        | &mdash; Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau') @bmoeskau
+        | )
+
+
+    //----------------------  Housekeeping  ----------------------
+
+    section.slide
+      h2 Housekeeping
+      ul
+        li Speakers and sponsors <strong>always wanted</strong> (
+          a(href='https://www.edgeatx.org') edgeATX.org
+          |  for details)
+        li Don't forget your parking validation
+        li Omni hotel bar (downstairs) after meetup
+
+
+    //----------------------  Sponsors  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/nascar.jpg)')
+      h1 Thanks to<br>Our Sponsors
+      .shim(style='background-color:#432c9a;opacity:.8;')
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/capitalfactory-bg.jpg)')
+      div(style='text-align:center;padding-top:100px;font-size:200%;')
+        p
+          a(href='https://www.capitalfactory.com/' alt='Capital Factory website')
+            img(style='min-width:40%', src='../../shared/resources/images/sponsors/capitalfactory-logo2.png', alt='Capital Factory')
+      .shim(style='background-color:#555;opacity:.5;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/sponsors/aunt-bertha-logo.jpg)')
+      a(href='https://company.auntbertha.com' alt='Aunt Bertha website')
+        div(style='position:absolute;top:0;left:0;width:100%;height:100%')
+
+
+    //----------------------  Begin slides  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/newspaper.gif)')
+      h1 News from the<br>Bleeding Edge
+      .shim(style='background-color:#d15dd1;opacity:.9;')
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/browsers.jpg)')
+      .content
+        h1 Browser<br>Update
+      .shim(style='background-color:#369;opacity:.8;')
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 Last check: July 18, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-dev.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 75
+          td.ver 68
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12.
+            span.small 1
+    
+    section.slide
+      h2 Browser Pop Quiz
+      h3 As of May 16, 2019:
+      table.browsers
+        tr
+          td(width='25%')
+            img(src='../../shared/resources/images/chrome.png', width='70%', alt='Chrome')
+          td(width='25%')
+            img(src='../../shared/resources/images/firefox57.png', width='75%', alt='Firefox')
+          td(width='25%')
+            img(src='../../shared/resources/images/edge-dev.png', width='70%', alt='Edge')
+          td(width='25%')
+            img(src='../../shared/resources/images/safari.png', width='70%', alt='Safari')
+        tr
+          td.ver 
+            span.strike.dim 75
+            br
+            strong(style='color:#1CA727') 76
+          td.ver 68
+          td.ver 18
+            span(style='color:red') *
+          td.ver 12.
+            span.small 1
+
+    section.slide
+      h2 Chrome 76
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      p Released July 30th — 
+        a(href='https://developers.google.com/web/updates/2019/07/nic76') Release Notes
+        |  (
+        a(href='https://www.youtube.com/watch?v=I1nosVzVbB4') video
+        | )
+      h3.star PWA Improvements
+      ul
+        li Install directly 
+          a(href="https://developers.google.com/web/updates/2019/06/pwa-install-addressbar") from the address bar
+        li More control over the mobile install experience
+        li Daily 
+          a(href="https://developers.google.com/web/updates/2019/06/webapk-update-frequency") WebAPK updates
+          |  on Android
+
+    section.slide
+      h2 Chrome 76
+      img(src='../../shared/resources/images/chrome.png', class='corner-image', width='200px', alt='Chrome')
+      h3.star Dark Mode Support
+      pre
+        code.language-css
+          | @media (prefers-color-scheme: dark) {
+          |   body {
+          |     background-color: black;
+          |     color: white;
+          |   }
+          | }
+      a("https://web.dev/prefers-color-scheme/") Great overview of dark mode
+
+    //- section.slide
+    //-   h2 Firefox
+    //-   img(src='../../shared/resources/images/firefox.png', class='corner-image', width='200px', alt='Firefox')
+    //-   p Released X Xth — 
+    //-     a(href='https://developer.mozilla.org/en-US/Firefox/Releases/66') Release Notes
+    //-   h3.star
+    //-     a(href='#') Feature
+    //-   ul
+    //-     li X
+
+    //- section.slide
+    //-   h2 Edge
+    //-   img(src='../../shared/resources/images/edge.png', class='corner-image', width='200px', alt='Edge')
+    //-   p Released X Xth — 
+    //-     a(href='#') Release Notes
+    //-   h3.star
+    //-     a(href='#') Feature
+    //-   ul
+    //-     li X
+
+    section.slide
+      h2 Safari 13 
+        span.small (beta 3)
+      img(src='../../shared/resources/images/safari.png', class='corner-image', width='200px', alt='Safari')
+      p Released in July — 
+        a(href='https://developer.apple.com/documentation/safari_release_notes/safari_13_beta_3_release_notes') Release Notes
+      ul
+        li Coming with macOS Catalina / iOS 13
+        li Expected September 23
+      img(src="./images/catalina.jpg", alt="Catalina")
+
+
+    //----------------------  Libs & Frameworks  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/html-js-css.png)')
+      h1 Languages, Libraries &amp;<br>Frameworks
+      .shim(style='background-color:#AD7909;opacity:.8;')
+
+    section.slide
+      h2 Mithril 2.0
+      blockquote Modern client-side JS framework for building Single Page Applications
+      img(src='./images/mithril-logo.png', class='corner-image', width='200px', alt='Mithril')
+      ul
+        li 
+          a(href="https://mithril.js.org/change-log.html#v200") Released
+          |  July 24th
+        li 2.0 mostly formalizes minor breaking changes
+        li Lightweight (10kb) React/Vue alternative
+        li Plain ES5 syntax / KISS philosophy
+
+    section.slide
+      h2 Electron 6.0
+      img(src='../../shared/resources/images/electron-logo.jpg', class='corner-image', width='200px', alt='Electron')
+      ul
+        li
+          a(href="http://electronjs.org/blog/electron-6-0") Released
+          |  July 30th
+        li Updated to Chrome 76 + Node 12.4
+        li Lots of additional Promise support
+        li A few breaking changes
+
+    section.slide
+      h2 React 16.9
+      img(src='../../shared/resources/images/react-logo.png', class='corner-image', width='200px', alt='React')
+      ul
+        li
+          a(href="https://reactjs.org/blog/2019/08/08/react-v16.9.0.html") Released
+          |  August 8th
+        li codemod: 
+          span.code componentWill*
+          |  → 
+          span.code UNSAFE_componentWill*
+        li Deprecating 
+          span.code javascript:
+          |  URLs and 
+          span.code FactoryComponent
+        li Measure performance with 
+          span.code &lt;React.Profiler&gt;
+      
+    //----------------------  Tips & Tricks  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/tips-tricks.jpg)')
+    //-   .content
+    //-     h1 Tips &amp; Tricks
+    //-   .shim(style='background-color:#6d0264;opacity:.7;')
+  
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+
+    //----------------------  Security  ----------------------
+    
+    //- section.slide.cover(style='background-image:url(../../shared/resources/images/security.jpg)')
+    //-   .content
+    //-     h1 Security
+    //-   .shim(style='background-color:#c11;opacity:.7;')
+  
+    //- section.slide
+    //-   h2 X
+    //-   blockquote X
+    //-   ul 
+    //-     li X
+    //-   img(src="./images/X.png", alt="X", style="max-width: 50%")
+
+    
+    //----------------------  Industry Headlines  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/industry.jpg)')
+      .content
+        h1 Industry<br>Headlines
+      .shim(style='background-color:#393;opacity:.7;')
+
+    section.slide
+      h2 GitHub Supports CI/CD
+      ul 
+        li GitHub 
+          a(href="https://github.com/features/actions") Actions
+          |  now support 
+          a(href="https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/") continuous integration
+        li Reusable actions and workflows
+        li Integrates with the 
+          a(href="https://github.com/features/package-registry") GitHub Package Registry
+        li Free for public repos!
+    
+    section.slide
+      h2 WebKit Tracking Prevention
+      ul 
+        li New policy 
+          a(href="https://webkit.org/tracking-prevention-policy/") published 
+          | August 14th
+        li Inspired by 
+          a(href="https://wiki.mozilla.org/Security/Anti_tracking_policy") Mozilla's policy
+        li 
+          strong Goals:
+        ul
+          li Prevent all covert and cross-site tracking
+          li Prioritize user benefits over preserving current website practices
+          li Healthy web ecosystem, with privacy by design
+      img(src="./images/webkit-logo.png", alt="WebKit", style="max-width: 50%")
+
+    section.slide
+      h2 Domino's and a11y
+      ul 
+        li Domino's got sued for violating Title III of the ADA
+        li They are appealing 
+          a(href="https://www.theverge.com/2019/8/1/20750913/dominos-pizza-website-accessible-blind-supreme-court-lawsuit") to the Supreme Court
+        li Potential landmark case for disability rights on the web
+      
+      img(src="./images/pizza-tracker.png", alt="Pizza Tracker", style="max-width: 40%")
+
+
+    //----------------------  ICYMI  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/icymi.jpg)')
+      .content
+        h1 In Case You<br>Missed It
+      .shim(style='background-color:#555;opacity:.7;')
+
+    section.slide
+      h2 MS Code Samples Site
+      img(src='./images/microsoft-logo.png', class='corner-image', width='200px', alt='Microsoft')
+      ul 
+        li 
+          a(href="https://docs.microsoft.com/samples") docs.microsoft.com/samples
+        li Linked to GitHub, download as zip
+        li Some support one-click deploy to Azure
+      img(src="./images/ms-samples.gif", alt="MS Samples", style="max-width: 40%")
+    
+    section.slide
+      h2 JS13K Has Begun
+      blockquote HTML5 and JavaScript Game Development Competition in just 13 kB
+      img(src='./images/js13k.png', class='corner-image', width='200px', alt='JS13K')
+      ul 
+        li Aug 13th &ndash; Sept 13th
+        li The 2019 theme is "back"
+        li
+          a(href="https://js13kgames.com") Enter, or learn more
+        li Check out 
+          a(href="https://js13kgames.com/entries/underrun") last year's winner
+
+    section.slide
+      h2 The Climate Fixathon
+      blockquote The world's first online hackathon to help fix the climate
+      img(src='./images/climate-fixathon.png', class='corner-image', width='200px', alt='Fixathon')
+      ul 
+        li Aug 2nd &ndash; Aug 30th
+        li Make a site or app to help restore a safe climate for our planet
+        li Prizes of $10k+
+        li 
+          a(href="https://fixathon.io/") Register or find out more
+      
+      p 
+        strong Side note:
+        |  July 29th was 
+        a(href="https://www.overshootday.org/") Earth Overshoot Day
+        |  :(
+
+
+    //----------------------  Events  ----------------------
+
+    section.slide.cover(style='background-image:url(../../shared/resources/images/events.jpg)')
+      .content
+        h1 Upcoming Events
+      .shim(style='background-color:#369;opacity:.6;')
+
+    section.slide
+      h2 VueConf US
+      blockquote ATX. Code. Vue.
+      ul
+        li March 2-4, 2020 &mdash; Austin Convention Center
+        li CFP opens Sept 1st
+        li 
+          a(href="http://vueconf.us/") More details
+          
+      img(src="./images/vueconf.png", alt="VueConf", style="max-width: 30%")
+
+    //----------------------  Something Completely Different  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/anfscd.jpg)')
+      h1 And now for something completely different...
+
+    section.slide
+      h2 Apollo 11 is Open Source
+      blockquote Original Apollo 11 Guidance Computer (AGC) source code for the command and lunar modules
+      ul
+        li The Assembly 
+          a(href="https://github.com/chrislgarry/Apollo-11") source code
+          |  is available on GitHub
+        li Check out some 
+          a(href="https://abcnews.go.com/Technology/apollo-11s-source-code-tons-easter-eggs-including/story?id=40515222") Easter eggs
+          |  or try the 
+          a(href="http://www.ibiblio.org/apollo/") online simulator
+
+      img(src="./images/apollo-11.jpg", alt="Apollo 11 computer", style="max-width: 50%")
+
+
+    //----------------------  On the Lighter Side  ----------------------
+    
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
+
+    section.slide
+      h2 URL Bar Games
+      ul
+        li From the same dude who gave us 
+          a(href="https://www.edgeatx.org/slides/2019/02-feb/#slide-40") animated emoji URLs
+        li Next level: stacking multiple, coordinated popups
+        li It's hard to explain. Just 
+          a(href="http://matthewrayfield.com/articles/games-and-graphics-in-popup-url-bars/") try it yourself 😎
+      img(src="./images/donkey-kong.gif", alt="URL bar donkey kong", style="width: 25%")
+
+
+    //----------------------  Fin  ----------------------
+    
+    section.slide
+      h2 Thanks!
+      h3
+        a(href='https://edgeatx.org/slides/') edgeATX.org/slides
+      h3
+        | Brian Moeskau (
+        a(href='https://twitter.com/bmoeskau', target='_blank') @bmoeskau
+        | )
+      br
+      img(src='../../shared/resources/images/bleeding-web.gif', alt='Bleeding Edge Web', style='display: block; max-width: 20vw;')
+    
+
+    //----------------------  Slide stuff  ----------------------
+
+    // Begin extension snippets. Add or remove as needed.
+    // deck.navigation snippet
+    a.deck-prev-link(href='#', title='Previous') ←
+    a.deck-next-link(href='#', title='Next') →
+    
+    // deck.status snippet
+    p.deck-status
+      span.deck-status-current
+      |  /
+      span.deck-status-total
+    
+    // deck.goto snippet
+    form.goto-form(action='.', method='get')
+      label(for='goto-slide') Go to slide:
+      input#goto-slide(type='text', name='slidenum', list='goto-datalist')
+      datalist#goto-datalist
+      input(type='submit', value='Go')
+    
+    // deck.hash snippet
+    a.deck-permalink(href='.', title='Permalink to this slide') #
+
+    // Required JS files.
+    script(src='../../shared/resources/js/jquery-1.7.2.min.js')
+    script(src='../../shared/core/deck.core.js')
+    
+    // Extension JS files. Add or remove as needed.
+    script(src='../../shared/core/deck.core.js')
+    script(src='../../shared/extensions/hash/deck.hash.js')
+    script(src='../../shared/extensions/menu/deck.menu.js')
+    script(src='../../shared/extensions/goto/deck.goto.js')
+    script(src='../../shared/extensions/status/deck.status.js')
+    script(src='../../shared/extensions/navigation/deck.navigation.js')
+    script(src='../../shared/extensions/scale/deck.scale.js')
+    script(src='../../shared/core/deck.init.js')
+    // <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
