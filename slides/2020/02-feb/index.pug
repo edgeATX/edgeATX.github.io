@@ -252,6 +252,18 @@ html
       .shim(style='background-color:#AD7909;opacity:.8;')
 
     section.slide
+      h2 
+        a(href="https://www.jetbrains.com/lp/mono/") JetBrains Mono
+      blockquote A typeface for developers
+      p Released January 15th
+      ul
+        li Another code-focused mono typeface (also see 
+          a(href="https://github.com/tonsky/FiraCode") FiraCode
+          | )
+        li Increased height, 138 ligatures
+      img(src="./images/jetbrains-mono.svg", alt="JetBrains Mono")
+
+    section.slide
       h2 Angular 9
       img(src='../../shared/resources/images/angular-logo.png', class='corner-image', width='200px', alt='Angular')
       p Released February 6th — 
@@ -322,6 +334,30 @@ html
       .shim(style='background-color:#393;opacity:.7;')
 
     section.slide
+      h2 .org Registry Sale Halted
+      p The $1.1B sale to Ethos Capital was 
+        a(href="https://www.cnn.com/2019/11/27/tech/org-domain-sale/index.html") announced
+        |  last November
+      ul
+        li People are 
+          a(href="https://savedotorg.org/") not happy
+        li Internet Society advisory council is now 
+          a(href="https://www.theregister.co.uk/2020/02/19/dot_org_sale_isoc_advice/") halting the sale
+
+    section.slide
+      h2 DNSSEC Key Signing Postponed
+      p One of two secure safes 
+        a(href="https://www.theregister.co.uk/2020/02/13/iana_dnssec_ksk_delay/") malfunctioned
+      ul
+        li It was resolved a few days later, but the process is 
+          strong fascinating
+        li 
+          a(href="https://www.cloudflare.com/dns/dnssec/root-signing-ceremony/") DNSSEC Root Signing Ceremony
+        li You can even watch the 
+          a(href="https://www.youtube.com/watch?v=erfsFJsapAs") livestream
+      img(src="./images/dnssec-key-signing.jpg", alt="Signing ceremony", style="max-width:30%")
+
+    section.slide
       h2 Npm Outage Feb 17th
       p Caused by a Cloudflare
         a(href="https://github.com/npm/cli/issues/836#issuecomment-587019096") DDoS protection bug
@@ -332,7 +368,7 @@ html
         li They reverted, but npm was basically down for 2 hours
       p Great reminder to 
         a(href="https://twitter.com/bitandbang/status/1229467759437910016") prepare for such things
-        
+    
 
     //----------------------  ICYMI  ----------------------
 
@@ -372,32 +408,52 @@ html
       h1 And now for something completely different...
 
     section.slide
-      h2 CSS Diner
-      ul 
-        li Learn CSS with this 
-          a(href="http://flukeout.github.io/") simple browser selector game
-        li It's oddly satisfying
-      img(src="./images/css-diner.png", alt="CSS Diner", style="width: 50%")
-      
+      h2 An Interesting Bug
+      ul
+        li In 2018, Docker and Razer Synapse 
+          a(href="https://twitter.com/foone/status/1229641258370355200") could not run together
+        li Each program intended to limit to one running copy of 
+          strong itself
+        li They both did something like this:
+      pre
+        code
+          | string.Format("Global\{0}", (object) Assembly.↵
+          |     GetExecutingAssembly().GetType().GUID);
+      strong Can you spot the bug?
+
+    section.slide
+      h2 An Interesting Bug
+      pre
+        code
+          | string.Format("Global\{0}", (object) Assembly.↵
+          |     GetExecutingAssembly().GetType().GUID);
+      br
+      p 
+        span.code .GetType()
+        |  returns .NET's 
+        span.code System.Reflection.RuntimeAssembly
+      ul
+        li So each app was sharing 
+          strong .NET's GUID
+        li Apparently this was from a flawed 
+          a(href="https://stackoverflow.com/questions/502303/how-do-i-programmatically-get-the-guid-of-an-application-in-net2-0/502323#502323") StackOverflow answer
+        li Beware the uncritical copy/paste!
+
 
     //----------------------  On the Lighter Side  ----------------------
     
-    //- section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
-    //-   .content
-    //-     h1 On the<br>Lighter Side
-    //-   .shim(style='background-color:#561d49;opacity:.7;')
+    section.slide.cover(style='background-image:url(../../shared/resources/images/lighter-side.jpg)')
+      .content
+        h1 On the<br>Lighter Side
+      .shim(style='background-color:#561d49;opacity:.7;')
 
-    //- section.slide
-    //-   h2 
-    //-   blockquote xkcd styled chart lib
-    //-   ul 
-    //-     li You know 
-    //-       a(href='https://xkcd.com/149/') xkcd
-    //-       | , right?
-    //-     li Now you can 
-    //-       a(href='https://timqian.com/chart.xkcd/') draw charts
-    //-       |  in that style!
-    //-   img(src="./images/xkcd-charts.gif", alt="xkcd charts", style="max-width: 80%")
+    section.slide
+      h2 Responsive Pixel Art
+      ul 
+        li Responsive design via SVG
+        li Check out the 
+          a(href='https://essenmitsosse.de/pixel/?showcase=true&slide=3') demo
+      img(src="./images/pixel-art.png", alt="Pixel art", style="max-width: 70%")
 
 
     //----------------------  Fin  ----------------------
