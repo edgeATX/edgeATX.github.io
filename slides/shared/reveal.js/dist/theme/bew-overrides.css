@@ -1,0 +1,61 @@
+.reveal .slides {
+  text-align: initial;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: initial;
+}
+
+.reveal h1 {
+  color: #E91E63;
+  letter-spacing: -.03em;
+}
+.reveal h2 {
+  color: #E91E63;
+  /*border-bottom: 0;*/
+  /*padding: 20px 0 10px 0;*/
+  letter-spacing: -.03em;
+  /*font-size: 2.4em;*/
+  margin-bottom: 20px;
+}
+.reveal h3 {
+  /*margin-bottom: .7em;*/
+  /*font-weight: 500;*/
+}
+
+.reveal .center {
+  text-align: center;
+}
+.reveal .main-title {
+  font-size: 1.6em;
+}
+
+.star:before {
+  content: '\2606'; /* &star; */
+  color: #E91E63;
+  padding-right: 20px;
+}
+.lightning:before {
+  content: '\26A1';
+  padding-right: 20px;
+}
+
+img[alt=""],
+img:not([alt]) {
+  border: 10px dashed #c00;
+}
+
+.shim {
+  z-index: -99;
+  background: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .6;
+}
