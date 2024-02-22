@@ -13,6 +13,7 @@
 .reveal h1 {
   color: #E91E63;
   letter-spacing: -.03em;
+  text-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 .reveal h2 {
   color: #E91E63;
@@ -21,17 +22,22 @@
   letter-spacing: -.03em;
   /*font-size: 2.4em;*/
   margin-bottom: 20px;
+  text-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 .reveal h3 {
   /*margin-bottom: .7em;*/
   /*font-weight: 500;*/
 }
 
+.reveal .highlight {
+  color: #E91E63;
+}
+
 .reveal .center {
   text-align: center;
 }
 .reveal .main-title {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 .star:before {
@@ -58,4 +64,40 @@ img:not([alt]) {
   bottom: 0;
   right: 0;
   opacity: .6;
+}
+
+ul {
+  margin-left: .5em;
+}
+li {
+  line-height: 1.5em;
+  list-style: none;
+  padding: .15em 0;
+}
+li:before {
+  content: '\029BF'; // &ofcir;
+  color: #E91E63;
+  padding-right: 20px;
+}
+
+ul ul {
+  margin-bottom: 0;
+}
+ul ul li {
+  padding-left: .6em;
+}
+ul ul li:before {
+  content: '\2192'; // &rarr;
+  color: #E91E63;
+  padding-right: 20px;
+}
+
+.small {
+  font-size: 75%;
+}
+.strike {
+  text-decoration: line-through;
+}
+.dim {
+  opacity: .4;
 }
