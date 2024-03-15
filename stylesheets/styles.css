@@ -211,6 +211,34 @@ footer {
   bottom: -27px;
 }
 
+.star {
+  color: #EF1F10;
+  font-size: 1.2em;
+  line-height: 1em;
+  vertical-align: text-bottom;
+}
+
+.live {
+  vertical-align: middle;
+  width: 22px;
+  margin-bottom: 3px;
+}
+
+.footer {
+  border-top: 1px solid #dddddd;
+  font-size: 0.8em;
+  color: #777777;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.callout {
+  border-radius: 5px;
+  padding: 10px 20px;
+  background: #fff8db;
+  font-size: 0.9em;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
