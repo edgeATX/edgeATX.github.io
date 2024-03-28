@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Bleeding Edge Web: March 2024</title>
+
+		<link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+		<link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+		<link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+	</head>
+  <body>
+		<div class="reveal">
+			<div class="slides">
+
+        <!----------------------  Intro  ---------------------->
+
+				<section class="center">
+					<h1>Bleeding Edge Web</h1>
+					<h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+					<h2><a href="https://www.edgeatx.org/">edgeATX.org</a></h2>
+				</section>
+
+				<section>
+					<h2>March 2024</h2>
+					<h3 class="star">News From the Bleeding Edge</h3>
+          <p>&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+					<h3 class="star">PyScript and the Magic of Python in the Browser</h3>
+					<p class="indent">&mdash; Fabio Pliger</p>
+				</section>
+
+        <!----------------------  Housekeeping  ---------------------->
+
+				<section>
+					<h2>Housekeeping</h2>
+					<ul>
+						<li class="fragment">Join us on <a
+								href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+						</li>
+						<li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+							<ul class="">
+								<li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+								<li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+        <!----------------------  Sponsors  ---------------------->
+
+        <section>
+          <h2>Thanks to Our Host!</h2>
+          <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+            <a href="https://www.expedia.com/" target="_blank"><img
+                src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+            </a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Thanks to Our Sponsor!</h2>
+          <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+            <a href="https://teamtopia.com/" target="_blank"><img
+                src="../../shared/resources/images/sponsors/team-topia.png" alt="Team Topia">
+            </a>
+          </div>
+        </section>
+
+        <!----------------------  Libs & Frameworks  ---------------------->
+
+        <section data-background-color="#661f34" class="center main-title">
+          <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+        </section>
+
+        <section>
+          <h2><a href="https://glaze.dev/">Glaze v1.0</a></h2>
+          <small>Released March 3</small>
+          <blockquote>Utility-based animations for the web.</blockquote>
+          <p>Tailwind-inspired CSS animation utilities</p>
+          <pre>
+            <code data-trim data-noescape>
+              &lt;h1 data-animate="@lg:[&>span>span]:to:y-0|stagger-0.025">
+            </code>
+          </pre>
+          <ul>
+            <li class="fragment">Based on <a href="https://gsap.com/">GSAP</a> JS lib</li>
+            <li class="fragment">Responsive breakpoints, timelines</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="https://storybook.js.org/blog/storybook-8/">Storybook v8.0</a></h2>
+          <small>Released March 8</small>
+          <blockquote>Build UIs without the grunt work</blockquote>
+          <ul>
+            <li class="fragment">Built-in visual testing</li>
+            <li class="fragment">React Server Component support</li>
+            <li class="fragment">Vite support, rebuit mobile UX, more</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="https://glaze.dev/">Atrament v4.0</a></h2>
+          <small>Released March 19</small>
+          <blockquote>A small JS library for beautiful drawing and handwriting on the HTML Canvas</blockquote>
+          <p>Not new, but <a href="https://github.com/jakubfiala/atrament/releases/tag/v4.0.0">4.0</a>
+            is a huge rewrite (<a href="https://fiala.space/atrament/demo/">demo</a>)
+          </p>
+          <p class="center">
+            <img src="images/atrament.png" alt="Atrament" width="50%">
+          </p>
+        </section>
+
+        <section>
+          <h2><a href="https://nuejs.org/blog/introducing-nue-css/">Nue CSS v0.5</a></h2>
+          <small>Released March 20</small>
+          <blockquote>A scalable alternative to Tailwind, BEM, and CSS-in-JS</blockquote>
+          <p>Basically, plain CSS + a design system</p>
+          <ul>
+            <li class="fragment">Last part of broader <a href="https://nuejs.org/">Nue</a> "core"</li>
+            <li class="fragment">Latest "content-first web framework"</li>
+            <li class="fragment">Minimalism, web standards, "stupidly fast"</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Angular Merging with... Wiz?</h2>
+          <small>Announced March 20</small>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=nIBseTi6RVk&t=1857s">Announced</a> at NG Conf 2024</li>
+            <li class="fragment">Wiz is a mature internal framework at Google</li>
+            <li class="fragment">Not to be confused with:
+              <p class="center">
+                <img src="images/the-wiz.png" alt="The Wiz" width="50%">
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="https://blog.vuejs.org/posts/vitepress-1.0">VitePress v1.0</a></h2>
+          <small>Released March 21</small>
+          <blockquote>A (Vue-based) Static Site Generator (SSG) designed for building fast, content-centric websites.</blockquote>
+          <ul>
+            <li class="fragment">Default <a href="https://vuejs.org/guide/introduction.html">technical docs</a> theme</li>
+            <li class="fragment">Vue-enhanced Markdown</li>
+            <li class="fragment">Static &rarr; SPA strategy</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="https://atlassian.design/components/pragmatic-drag-and-drop/about">Pragmatic drag &amp; drop</a></h2>
+          <small>Released March 26</small>
+          <blockquote>Fast drag and drop for any experience on any tech stack</blockquote>
+          <ul>
+            <li class="fragment">Made by Atlassian (used in Jira, Trello, etc.)</li>
+            <li class="fragment">Low-level core + optional visual styling</li>
+            <li class="fragment">Also, Atlassian has a <a href="https://atlassian.design/get-started">Design System site</a>!</li>
+          </ul>
+        </section>
+
+        <!----------------------  Tips & Tricks  ---------------------->
+
+
+        <!----------------------  Industry News  ---------------------->
+
+        <section data-background-color="#661f34" class="center main-title">
+          <h2 style="color:white;">Industry News</h2>
+        </section>
+
+        <section>
+          <h2>The Web's 35th Birthday</h2>
+          <small>Announced March 12</small>
+          <blockquote>"Three and a half decades ago, when I invented the web..."</blockquote>
+          <ul>
+            <li>An <a href="https://webfoundation.org/2024/03/marking-the-webs-35th-birthday-an-open-letter/">open
+              letter</a> by Sir Tim Berners-Lee</li>
+            <li class="fragment">Two most fundamental issues today:
+              <ul>
+                <li class="fragment">centralized power concentration</li>
+                <li class="fragment">exploitative personal data market</li>
+              </ul>
+            </li>
+            <li class="fragment">See: <a href="https://contractfortheweb.org/">Contract for the Web</a>,
+              <a href="https://solidproject.org/">Solid Protocol</a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's Encrypt / Cloudflare SSL</h2>
+          <small>Announced March 14</small>
+          <ul>
+            <li>LetsEncrypt's cert chain cross-signed with IdenTrust is expiring Sept 30, 2024</li>
+            <li class="fragment">Cloudflare will <a
+                href="https://blog.cloudflare.com/upcoming-lets-encrypt-certificate-chain-change-and-impact-for-cloudflare-customers">stop
+              issuing these</a> May 15</li>
+            <li class="fragment">Mostly only impacts really old Android devices</li>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Introducing vlt</h2>
+          <small>Announced March 20</small>
+          <blockquote>vlt /vōlt/: We are building the future of JavaScript packages.</blockquote>
+          <ul>
+            <li>Founded by former <a href="https://blog.vlt.sh/blog/the-team">npm principles</a>, well-funded</li>
+            <li class="fragment">"The packaging ecosystem has stagnated & so there is a wealth of opportunity to innovate."</li>
+            <li class="fragment">Other than that... ¯\_(ツ)_/¯</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Redis Drops BSD License</h2>
+          <small>Announced March 20</small>
+          <ul>
+            <li>Switching to "<a
+                href="https://redis.com/blog/redis-adopts-dual-source-available-licensing/">Dual
+              Source-Available Licensing</a>"
+            </li>
+            <li class="fragment">End users / customers: "no change"</li>
+            <li class="fragment">Targeted at "competitive offerings"</li>
+            <li class="fragment">Not <a href="https://opensource.org/">OSI</a>-approved, so... YMMV</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Web Neural Network API</h2>
+          <small>Updated March 28</small>
+          <blockquote>A web-friendly hardware-agnostic ML abstraction layer</blockquote>
+          <ul>
+            <li>Is now a <a href="https://www.w3.org/TR/webnn/">W3C Candidate Recommendation Draft</a></li>
+            <li class="fragment">Useful explainer on <a href="https://github.com/webmachinelearning/webnn/blob/main/explainer.md">ML web architecture</a></li>
+          </ul>
+        </section>
+
+        <!----------------------  Events  ---------------------->
+
+
+        <!----------------------  ICYMI  ---------------------->
+
+        <section data-background-color="#661f34" class="center main-title">
+          <h2 style="color:white;">In Case You <br> Missed It</h2>
+        </section>
+
+        <section>
+          <h2>WebAwesome</h2>
+          <p class="center">
+            <img src="images/webawesome.png" alt="WebAwesome" width="50%">
+          </p>
+          <p>= <a href="https://fontawesome.com/">FontAwesome</a> + <a href="https://shoelace.style/">Shoelace</a></p>
+          <ul>
+            <li class="fragment">Currently on <a href="https://www.kickstarter.com/projects/fontawesome/web-awesome">Kickstarter</a> (shipping 2025)</li>
+            <li class="fragment">Web components + icons + templates</li>
+            <li class="fragment">Visual theme builder</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Node.js: The Documentary</h2>
+          <p>An origin story of Node.js</p>
+          <p class="center">
+            <img src="images/nodejs-origin.png" alt="Node.js video" width="50%">
+          </p>
+          <ul>
+            <li>Watch on <a href="https://www.youtube.com/watch?v=LB8KwiiUGy0">YouTube</a>,
+              courtesy of <a href="https://www.youtube.com/@Honeypotio">Honeypot</a></li>
+          </ul>
+        </section>
+
+        <!----------------------  And Last But Not Least  ---------------------->
+
+        <section data-background-color="#661f34" class="center main-title">
+          <h2 style="color:white;">And Last, But <br> Not Least</h2>
+        </section>
+
+        <section>
+          <h2>F.C. Variable</h2>
+          <p>A <a href="https://robenrobin.nl/fcvariable">soccer-based experiment</a> in variable font craziness</p>
+          <p class="center">
+            <img src="images/fc-variable.png" alt="F.C. Variable" width="70%">
+          </p>
+        </section>
+
+        <section>
+          <h2>emojisplosion</h2>
+          <blockquote>💥 Blasts 😄 emoji 😊 like 🎆 fireworks 🎇 all up in your 💻 HTML 📄 page. 😍</blockquote>
+          <pre><code data-trim data-noescape>
+            &lt;script&gt;
+              // Commence explosions!
+              emojisplosions();
+            &lt;/script&gt;
+          </code></pre>
+          <p class="fragment">Better to just try (all of) <a href="https://www.emojisplosion.dev/demo">the demos</a> 😄</p>
+        </section>
+
+        <!----------------------  Fin!  ---------------------->
+
+				<section>
+					<h2>Thanks!</h2>
+					<p>Brian Moeskau</p>
+					<ul>
+						<li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+						<li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="../../shared/reveal.js/dist/reveal.js"></script>
+		<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+		<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
