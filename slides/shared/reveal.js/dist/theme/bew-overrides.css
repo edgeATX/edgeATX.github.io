@@ -29,6 +29,33 @@
   /*font-weight: 500;*/
 }
 
+/* Small immediately following H2, usually a release date */
+.reveal h2 + small {
+  margin: -20px 0 0 5px;
+  color: #aaaaaa;
+}
+
+.reveal blockquote {
+  margin: 0;
+  width: 90%;
+  border-left: .2em solid #555555;
+  padding: .5em 1em;
+  border-radius: 5px;
+  font-size: 80%;
+  color: #aaaaaa;
+}
+
+.reveal blockquote + p,
+.reveal blockquote + ul,
+.reveal blockquote + ol {
+  margin-top: 30px;
+}
+
+.reveal pre code {
+  border-radius: 5px;
+  padding: .5em 1em;
+}
+
 .reveal .highlight {
   color: #E91E63;
 }
