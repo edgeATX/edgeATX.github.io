@@ -218,10 +218,34 @@ footer {
   vertical-align: text-bottom;
 }
 
-.live {
+.live-icon-sm {
   vertical-align: middle;
-  width: 22px;
   margin-bottom: 3px;
+  width: 22px;
+}
+.live-icon-lg {
+  vertical-align: middle;
+  margin-bottom: 3px;
+  width: 50px;
+}
+.off .live-icon-lg {
+  opacity: .3;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(60deg) brightness(86%) contrast(92%);
+}
+
+.live-info {
+  margin-top: 10px;
+  border: 1px solid #ff2020;
+  background: #ffffff;
+  padding: 30px 20px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: .9em;
+}
+.live-info.off {
+  border: 1px solid #cccccc;
+  background: #f8f8f8;
+  color: #888888;
 }
 
 .footer {
