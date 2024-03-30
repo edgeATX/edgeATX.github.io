@@ -34,9 +34,13 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color: #2d97cc;
   font-weight:400;
   text-decoration:none;
+}
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #2083b6;
 }
 
 a small {
@@ -100,6 +104,17 @@ header {
   width:270px;
   float:left;
   position:fixed;
+}
+
+header h1 > a {
+  color: #000000;
+  font-weight: inherit;
+}
+
+header .subhead {
+  font-size: .8em;
+  font-style: italic;
+  color: #EF1F10;
 }
 
 header ul {
@@ -257,10 +272,11 @@ footer {
 }
 
 .callout {
+  border: 1px solid #f8d893;
   border-radius: 5px;
   padding: 10px 20px;
   background: #fff8db;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 @media print, screen and (max-width: 960px) {
