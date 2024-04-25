@@ -216,8 +216,13 @@
 		<script>
 			Reveal.initialize({
 				hash: true,
+        transition: 'fade',
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+      document.querySelectorAll('a').forEach((el) => {
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+      });
 		</script>
 	</body>
 </html>
