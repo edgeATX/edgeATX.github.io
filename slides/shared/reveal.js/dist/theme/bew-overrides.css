@@ -66,6 +66,11 @@
   font-size: 1.8em;
 }
 
+.reveal .speaker-list .small {
+  margin-left: 75px;
+  margin-top: 15px;
+}
+
 .star:before {
   content: '\2606'; /* &star; */
   color: #E91E63;
