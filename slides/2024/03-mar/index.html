@@ -97,7 +97,7 @@
           <ul>
             <li class="fragment">Built-in visual testing</li>
             <li class="fragment">React Server Component support</li>
-            <li class="fragment">Vite support, rebuit mobile UX, more</li>
+            <li class="fragment">Vite support, rebuilt mobile UX, more</li>
           </ul>
         </section>
 
@@ -317,8 +317,13 @@
 		<script>
 			Reveal.initialize({
 				hash: true,
+        transition: 'fade',
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+      document.querySelectorAll('a').forEach((el) => {
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
+      });
 		</script>
 	</body>
 </html>

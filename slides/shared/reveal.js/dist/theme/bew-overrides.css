@@ -17,38 +17,37 @@
 }
 .reveal h2 {
   color: #E91E63;
-  /*border-bottom: 0;*/
-  /*padding: 20px 0 10px 0;*/
   letter-spacing: -.03em;
-  /*font-size: 2.4em;*/
   margin-bottom: 20px;
   text-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 .reveal h3 {
-  /*margin-bottom: .7em;*/
-  /*font-weight: 500;*/
 }
 
 /* Small immediately following H2, usually a release date */
 .reveal h2 + small {
   margin: -20px 0 0 5px;
-  color: #aaaaaa;
+}
+.reveal h2 + .subhead {
+  margin: -15px 0 25px 5px;
+  font-size: 65%;
 }
 
 .reveal blockquote {
   margin: 0;
   width: 90%;
-  border-left: .2em solid #555555;
+  border: 1px solid #333333;
+  border-left: .3em solid #444444;
   padding: .5em 1em;
   border-radius: 5px;
-  font-size: 80%;
+  font-size: 75%;
   color: #aaaaaa;
 }
 
 .reveal blockquote + p,
 .reveal blockquote + ul,
 .reveal blockquote + ol {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .reveal pre code {
@@ -97,7 +96,7 @@ ul {
   margin-left: .5em;
 }
 li {
-  line-height: 1.5em;
+  line-height: 1.2em;
   list-style: none;
   padding: .15em 0;
 }
@@ -127,4 +126,16 @@ ul ul li:before {
 }
 .dim {
   opacity: .4;
+}
+
+ul.date-list li:before {
+  content: none;
+}
+ul.date-list .date {
+  background: #333333;
+  border-radius: 5px;
+  padding: 2px 12px;
+  font-size: .6em;
+  vertical-align: bottom;
+  margin-right: 5px;
 }
