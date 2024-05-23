@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: May 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">edgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>May 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">Thinking About Your Code: Push vs Pull</h3>
+      <p class="small">&mdash; Ben Lesh (<a href="https://x.com/benlesh">@benlesh</a>)
+      </p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Thanks to Our Sponsor!</h2>
+      <div style="background-color: #fff;padding: 0 0 0 40px;border-radius: 15px;width:70%;">
+        <a href="https://jam.dev" target="_blank">
+          <img src="../../shared/resources/images/sponsors/jam-dev.webp" alt="Jam.dev">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>React 19 Beta</h2>
+      <p class="subhead"><a href="https://react.dev/blog/2024/04/25/react-19">Released</a> April 25</p>
+      <ul>
+        <li><a href="https://react.dev/reference/rsc/server-components">Server Components</a></li>
+        <li class="fragment">Actions / Server Actions</li>
+        <li class="fragment"><code>useOptimistic</code> / <code>useActionState</code> / <code>useFormStatus</code></li>
+        <li class="fragment"><code>use</code> API</li>
+        <li class="fragment">and more...</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>SolidStart 1.0</h2>
+      <p class="subhead"><a href="https://www.solidjs.com/blog/solid-start-the-shape-frameworks-to-come">Released</a> May 21</p>
+      <blockquote>Fine-grained reactivity goes fullstack</blockquote>
+      <ul>
+        <li>"Composable meta-framework" built on <a href="https://www.solidjs.com/">SolidJS</a></li>
+        <li class="fragment">Performant and React-like (reactive, no v-DOM)</li>
+        <li class="fragment">Includes many <a href="https://primitives.solidjs.community/">primitives</a></li>
+        <li class="fragment">Bundles serializer, bundler, runtime, router, etc.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Other notable releases</h2>
+      <ul class="date-list">
+        <li><span class="date">April 30</span> <a
+            href="https://svelte.dev/blog/svelte-5-release-candidate">Svelte 5 RC</a>
+        </li>
+        <li><span class="date">May 8</span> <a
+            href="https://nx.dev/blog/2024-05-08-nx-19-release">Nx 19.0</a>
+        </li>
+        <li><span class="date">May 18</span> <a
+            href="https://github.com/neuroneural/brainchop/releases/tag/v4.0.0">Brainchop 4.0</a>
+        </li>
+        <li><span class="date">May 22</span> <a
+            href="https://blog.angular.dev/angular-v18-is-now-available-e79d5ac0affe">Angular 18</a>
+          (and <a href="https://angular.dev/">angular.dev</a>)
+        </li>
+        <li><span class="date">May 23</span> <a
+            href="https://nextjs.org/blog/next-15-rc">Next.js 15 RC</a> (React 19 support)
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="small"><a href="https://web.dev/baseline">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>What is Baseline?</h2>
+      <blockquote>Web platform features that are ready to use in your projects today.</blockquote>
+      <p>How do features become Baseline?</p>
+      <ul>
+        <li class="fragment">
+          <strong class="highlight">Newly available</strong>: <span class="small">supported by all core browsers *</span>
+        </li>
+        <li class="fragment">
+          <strong class="highlight">Widely available</strong>: <span class="small">30 months since interoperable date</span>
+        </li>
+      </ul>
+      <p class="fragment small">* Chrome / Firefox (desktop + Android), Safari (macOS + iOS), Edge</p>
+    </section>
+
+    <section>
+      <h2><code>Intl.Segmenter</code></h2>
+      <p class="subhead"><a href="https://web.dev/blog/intl-segmenter">Baseline Available</a> as of April 16</p>
+      <blockquote>Locale-sensitive text segmentation to split a string into words, sentences, or graphemes.</blockquote>
+      <pre><code data-trim data-noescape>
+        const segmenter = new Intl.Segmenter('en', { granularity: 'word' });
+        const segments = segmenter.segment('This has four words!');
+        Array.from(segments).map((segment) => segment.segment);
+        // ['This', ' ', 'has', ' ', 'four', ' ', 'words', '!']
+      </code></pre>
+    </section>
+
+    <section>
+      <h2><code>Intl.Segmenter</code></h2>
+      <p class="subhead"><a href="https://web.dev/blog/intl-segmenter">Baseline Available</a> as of April 16</p>
+      <p>Handy for parsing other locales easily:</p>
+      <pre><code data-trim data-noescape>
+        const segmenter = new Intl.Segmenter('ja', { granularity: 'word' });
+        const segments = segmenter.segment('これは日本語のテキストです');
+        Array.from(segments).map((segment) => segment.segment);
+        // ['これ', 'は', '日本語', 'の', 'テキスト', 'です']
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>CSS <code>light-dark()</code></h2>
+      <p class="subhead"><a href="https://web.dev/articles/light-dark">Baseline Available</a> as of May 13</p>
+      <p>Previously, only built-in <a href="https://drafts.csswg.org/css-color-4/#css-system-colors">system
+        colors</a> could react to <code>color-scheme</code> changes:</p>
+      <pre><code data-trim data-noescape>
+        :root {
+          color-scheme: dark;
+        }
+        body {
+          background-color: Canvas;
+        }
+        a {
+          color: LinkText;
+        }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>CSS <code>light-dark()</code></h2>
+      <p class="subhead"><a href="https://web.dev/articles/light-dark">Baseline Available</a> as of May 13</p>
+      <p>Now custom classes can also react to <code>color-scheme</code> (simplifies the <code>prefers-color-dark</code> approach):</p>
+      <pre><code data-trim data-noescape>
+        :root {
+          color-scheme: light dark;
+          --primary-color: light-dark(#333, #fafafa);
+          --primary-background: light-dark(#e4e4e4, #121212);
+          --highlight-color: light-dark(hotpink, lime);
+        }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Screen Wake Lock API</h2>
+      <p class="subhead"><a href="https://web.dev/blog/screen-wake-lock-supported-in-all-browsers">Baseline Available</a> as of May 14</p>
+      <blockquote>Control a device's screen wake behavior, ensuring uninterrupted interactions with web applications.</blockquote>
+      <p>Use cases:</p>
+      <ul>
+        <li class="fragment">Prevents dimming in web-based slideshows</li>
+        <li class="fragment">Keeps screen on while following a
+          <a href="https://web.dev/case-studies/betty-crocker">baking recipe</a>
+          <div class="center"><img src="images/wake-lock.png" alt="Wake lock" style="width: 250px;"></div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Screen Wake Lock API</h2>
+      <p class="subhead"><a href="https://web.dev/blog/screen-wake-lock-supported-in-all-browsers">Baseline Available</a> as of May 14</p>
+      <pre><code data-trim data-noescape>
+        let wakeLock = null;
+        const requestWakeLock = async () => {
+          try {
+            wakeLock = await navigator.wakeLock.request();
+            wakeLock.addEventListener('release', () => {
+              // do something after released
+            });
+          }
+        };
+
+        await requestWakeLock();
+
+        // release it some time later:
+        wakeLock.release();
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>CSS stepped value functions</h2>
+      <p class="subhead"><a href="https://web.dev/blog/css-stepped-value-functions">Baseline Available</a> as of May 14</p>
+      <blockquote>Transform a given value according to another step value.</blockquote>
+      <pre><code data-trim data-noescape>
+        // rounding:
+        font-size: round(nearest, var(--my-font-size), 1rem);
+        opacity: round(.56, 0.1); /* 0.6 */
+
+        // remainder:
+        margin: rem(18px, 5px); /* 3px */
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>Web Platform Dashboard</h2>
+      <p class="subhead"><a href="https://web.dev/blog/web-platform-dashboard">Announced</a> May 14</p>
+      <blockquote>See the entire web platform mapped as a set of features, along with their support in browsers.</blockquote>
+      <div class="center">
+        <a href="https://webstatus.dev/">
+          <img src="images/web-platform-dashboard.png" alt="Web Platform Dashboard">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Industry News  ---------------------->
+
+
+    <!----------------------  Standards Spotlight  ---------------------->
+
+
+    <!----------------------  Events  ---------------------->
+
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">In Case You <br> Missed It</h2>
+    </section>
+
+    <section>
+      <h2>Bugzilla #33654</h2>
+      <blockquote>
+        TEXTAREA incorrectly applying ROWS= and COLS= (horizontal / vertical scrollbar extra space,
+        with overlay scrollbars disabled)
+      </blockquote>
+      <ul>
+        <li>Reported March 28, <span class="highlight">2000</span> (predated Firefox)</li>
+        <li class="fragment">Finally <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=33654">resolved</a> last Tuesday :)</li>
+        <li class="fragment">Previously: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=62151">#61215</a> "Can't check checkbox
+          when within an &lt;a href&gt;"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Deep Dive: xkcd's "Machine"</h2>
+      <p class="subhead"><a href="https://javascriptweekly.com/link/155003/b4f3069936">Published</a> May 8</p>
+      <ul>
+        <li>xkcd released <a href="https://xkcd.com/2916/">Machine</a> April 5th</li>
+        <li class="fragment">An infinite, user-defined Rube Goldberg machine</li>
+        <li class="fragment">Haskell, React and <a href="https://rapier.rs/">Rapier</a> (entirely in the DOM!)</li>
+        <li class="fragment">It's also <a href="https://github.com/xkcd/incredible">open source</a></li>
+        <img src="images/machine.png" alt="Machine">
+      </ul>
+    </section>
+
+    <!----------------------  And Last, But Not Least  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Last But <br> Not Least</h2>
+    </section>
+
+    <section>
+      <h2>Doom Scroll</h2>
+      <div class="center">
+        <img src="images/doom-scroll.png" alt="DOOM Scroll">
+      </div>
+      <ul>
+        <li>Abuses the experimental <code><a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-timeline">scroll-timeline</a></code>
+        </li>
+        <li><a href="https://codepen.io/cobra_winfrey/pen/oNOMRav">Play DOOM Scroll</a></li>
+      </ul>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>

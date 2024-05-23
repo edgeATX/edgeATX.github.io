@@ -22,6 +22,7 @@
   text-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 .reveal h3 {
+  font-size: 1.2em;
 }
 
 /* Small immediately following H2, usually a release date */
@@ -121,6 +122,25 @@ ul ul li:before {
   content: '\2192'; // &rarr;
   color: #E91E63;
   padding-right: 20px;
+}
+
+code {
+  font-size: 0.7em;
+  background: #333333;
+  color: #cccccc;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+pre > code {
+  font-size: 0.8em;
+  background: inherit;
+  border: inherit;
+  color: inherit;
+}
+h2 > code {
+  font-size: 0.9em;
+  background: inherit;
+  color: inherit;
 }
 
 .small {
