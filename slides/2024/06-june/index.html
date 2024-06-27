@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: June 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">edgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>June 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">The Root of All (Web) Evils</h3>
+      <p class="small">&mdash; Kyle Simpson (<a href="https://github.com/getify">github.com/getify</a>)
+      </p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>React 19 (not) released</h2>
+      <p>A subtle RC change <a
+          href="https://x.com/TkDodo/status/1800501040766144676">just
+          got noticed</a> on June 11th.</p>
+      <p class="fragment">React 18 rendered suspense children in parallel:</p>
+      <div class="fragment">
+        <pre><code data-trim data-noescape>
+          &lt;Suspense fallback={"Loading..."}>
+            &lt;ComponentThatFetchesData val={1} />
+            &lt;ComponentThatFetchesData val={2} />
+            &lt;ComponentThatFetchesData val={3} />
+          &lt;/Suspense>
+        </code></pre>
+      </div>
+      <p class="fragment">v19 RC changed this loading to <span class="highlight">sequential</span>.</p>
+      <p class="fragment">The Internet was not happy.</p>
+    </section>
+
+    <section>
+      <h2>React 19 (not) released</h2>
+      <p>Long story short: the React team relented.</p>
+      <ul>
+        <li class="fragment">They still recommend hoisting data loading...</li>
+        <li class="fragment">but decided not to drastically slow the Internet</li>
+      </ul>
+      <p class="fragment">So React 19 is paused until they fix this!</p>
+    </section>
+
+    <section>
+      <h2>State of JS 2023</h2>
+      <p class="subhead"><a href="https://2023.stateofjs.com/en-US">Published</a> June 23rd</p>
+      <p>A few nuggets:</p>
+      <ul>
+        <li class="fragment">Most <span class="highlight">liked</span>: Vite, Jest, React, Svelte</li>
+        <li class="fragment">Most <span class="highlight">hated</span>: Gatsby, Angular, Selenium, Webpack</li>
+        <li class="fragment">Most popular non-JS: Python, PHP, Java</li>
+      </ul>
+      <p class="fragment">Also check out the <a href="https://2023.stateofhtml.com/en-US/">State of HTML 2023</a> report</p>
+      <p class="fragment small">And a note on <a
+          href="https://www.reddit.com/r/javascript/comments/1ai45f0/comment/la0maua/">developer burnout</a></p>
+    </section>
+
+    <section>
+      <h2>Other notable releases</h2>
+      <ul class="date-list">
+        <li><span class="date">May 23</span> <a
+            href="https://storybook.js.org/blog/storybook-8-1/">Storybook 8.1</a>
+        </li>
+        <li><span class="date">June 11</span> <a
+            href="https://www.electronjs.org/blog/electron-31-0">Electron 31.0</a>
+        </li>
+        <li><span class="date">June 17</span> <a
+            href="https://htmx.org/posts/2024-06-17-htmx-2-0-0-is-released/">htmx 2.0</a>
+        </li>
+        <li><span class="date">June 20</span> <a
+            href="https://devblogs.microsoft.com/typescript/announcing-typescript-5-5/">TypeScript 5.5</a>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="small"><a href="https://web.dev/baseline">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>What is Baseline?</h2>
+      <blockquote>Web platform features that are ready to use in your projects today.</blockquote>
+      <p>How features become Baseline "available":</p>
+      <ul>
+        <li class="fragment">
+          <strong class="highlight">Newly available</strong>: <span class="small">supported by all core browsers *</span>
+        </li>
+        <li class="fragment">
+          <strong class="highlight">Widely available</strong>: <span class="small">30 months since interoperable date</span>
+        </li>
+      </ul>
+      <p class="fragment x-small dim">* Chrome / Firefox (desktop + Android), Safari (macOS + iOS), Edge</p>
+    </section>
+
+    <section>
+      <h2>June browser releases</h2>
+      <p>Stable version releases:</p>
+      <ul class="date-list">
+        <li><span class="date">June 11</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/127">Firefox 127</a>
+        </li>
+        <li><span class="date">June 11</span> <a
+            href="https://developer.chrome.com/release-notes/126">Chrome 126</a>
+        </li>
+      </ul>
+      <p>Also notable:</p>
+      <ul class="date-list">
+        <li><span class="date">June 10</span> <a
+            href="https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/">Safari 18 beta</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>JS Set methods</h2>
+      <p class="subhead">Baseline newly available as of Firefox 127</p>
+      <ul>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection">intersection()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/union">union()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/difference">difference()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/symmetricDifference">symmetricDifference()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSubsetOf">isSubsetOf()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isSupersetOf">isSupersetOf()</a></code></li>
+        <li><code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set/isDisjointFrom">isDisjointFrom()</a></code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Async Clipboard API</h2>
+      <p class="subhead">Baseline newly available as of Firefox 127</p>
+      <ul>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand">execCommand()</a></code>
+          was the old (synchronous) way</li>
+        <li class="fragment">Now we have async <code>read()</code> and </code><code>write()</code></li>
+        <li class="fragment">Customize via <code>copy</code> and <code>paste</code> events</li>
+        <li class="fragment"><a href="https://web.dev/articles/async-clipboard">Learn more</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Safari 18 beta</h2>
+      <p class="subhead"><a href="https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/">Announced</a> June 10th</p>
+      <ul>
+        <li>Support for WebXR and <a href="https://immersive-web.github.io/webxr-hand-input/">hand tracking</a></li>
+        <li class="fragment"><a href="https://www.w3.org/TR/css-view-transitions-1/">CSS view transitions</a></li>
+        <li class="fragment"><code><a href="https://html.spec.whatwg.org/#writing-suggestions">writingsuggestions</a></code> attribute (on by default)</li>
+        <li class="fragment">Improved Passkey support</li>
+        <li class="fragment">Support for <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/parse_static">URL.parse</a></code></li>
+        <li class="fragment">And lots more &mdash; <a href="https://webkit.org/blog/15443/news-from-wwdc24-webkit-in-safari-18-beta/">check it out</a>!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Safari 18 beta</h2>
+      <p>Also, a few interesting deprecations:</p>
+      <ul>
+        <li>Removed <a href="https://en.wikipedia.org/wiki/JPEG_2000">JPEG2000</a> image support</li>
+        <li class="fragment">Deprecated the <code>:-khtml-drag</code> pseduo-class</li>
+      </ul>
+      <p class="fragment"><span class="highlight">Web history pop quiz</span>: what does <code>khtml</code> mean?</p>
+    </section>
+
+    <!----------------------  Web History Spotlight  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Web History Spotlight</h2>
+    </section>
+
+    <section>
+      <h2>KHTML</h2>
+      <ul>
+        <li class="fragment">Was the <a href="https://en.wikipedia.org/wiki/KHTML">browser engine</a> for
+          KDE <a href="https://apps.kde.org/konqueror/">Konqueror</a></li>
+        <li class="fragment">Konqueror peaked at ~0% market share, but...</li>
+        <li class="fragment"><span class="highlight">2002</span>: Apple forks KHTML to create WebKit</li>
+        <li class="fragment"><span class="highlight">2103</span>: Google forks WebKit to create Blink</li>
+        <li class="fragment">So ~93% of browsers today descend from KHTML!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>History of Web Browser Engines</h2>
+      <p>This is a cool <a href="https://eylenburg.github.io/browser_engines.htm">visual</a> of 34 years of browser history.</p>
+      <img src="images/browser-history.png" alt="Browser history">
+    </section>
+
+    <!----------------------  Industry News  ---------------------->
+
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Web Standards Spotlight</h2>
+    </section>
+
+    <section>
+      <h2>ES2024</h2>
+      <p class="subhead"><a href="https://github.com/tc39/ecma262/releases/tag/es2024">Approved</a> June 26th</p>
+      <p><a href="https://2ality.com/2024/06/ecmascript-2024.html">Overview</a> of what's included:</p>
+      <ul>
+        <li class="fragment"><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy">Map.groupBy</a></code>
+          / <code><a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy">Object.groupBy</a></code>
+        </li>
+        <li class="fragment"><code><a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/withResolvers">Promise.withResolvers</a></code>
+        </li>
+        <li class="fragment">Regex flag <code><a href="">/v</a></code> <span class="small">(upgraded <code>/u</code> Unicode flag)</span></li>
+        <li class="fragment"><code>String</code> <code><a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed">isWellFormed</a></code>
+            and <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toWellFormed">toWellFormed</a></code>
+        </li>
+        <li class="fragment"><code>[Shared]ArrayBuffer</code> <code><a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize">resize</a></code> *
+            and <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer">transfer</a></code>
+        </li>
+        <li class="fragment"><code><a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync">Atomics.waitAsync</a></code> **
+        </li>
+      </ul>
+      <p class="fragment x-small dim">* Baseline with Firefox 128 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ** No Firefox support yet</p>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">In Case You <br> Missed It</h2>
+    </section>
+
+    <section>
+      <h2>Chrome Console Insights</h2>
+      <blockquote>Gemini provides insights right in the DevTools Console, so you can better
+        understand errors and warnings.</blockquote>
+      <ul>
+        <li>Sign into Chrome, then <a href="https://developer.chrome.com/docs/devtools/console/understand-messages">try
+          the demo</a>.</li>
+        <li class="fragment">Requires Chrome 125+</li>
+      </ul>
+      <p class="fragment small"><strong class="highlight">Disclaimer</strong>: "Sometimes, the responses that LLMs produce sound convincing
+        but are actually misleading or meaningless to a human web developer."</p>
+    </section>
+
+    <!----------------------  And Last, But Not Least  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Last But <br> Not Least</h2>
+    </section>
+
+    <section>
+      <h2>Night Cityscape in 140 bytes of JS</h2>
+      <img src="images/night-cityscape.png" alt="Night cityscape" width="70%">
+      <ul>
+        <li class="fragment">
+          <a href="https://frankforce.com/byte-city-nights-a-bitwise-cityscape/">Learn
+        how</a> to create it in 10 minutes</li>
+        <li class="fragment">Remix the code <a href="https://www.dwitter.net/d/17507">on Dwitter</a></li>
+      </ul>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>

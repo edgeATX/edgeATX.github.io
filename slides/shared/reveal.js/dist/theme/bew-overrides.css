@@ -73,7 +73,7 @@
 }
 
 .star:before {
-  content: '\2606'; /* &star; */
+  content: '\2606';
   color: #E91E63;
   padding-right: 20px;
 }
@@ -107,7 +107,7 @@ li {
   padding: .15em 0;
 }
 li:before {
-  content: '\029BF'; // &ofcir;
+  content: '\029BF';
   color: #E91E63;
   padding-right: 20px;
 }
@@ -119,7 +119,7 @@ ul ul li {
   padding-left: .6em;
 }
 ul ul li:before {
-  content: '\2192'; // &rarr;
+  content: '\2192';
   color: #E91E63;
   padding-right: 20px;
 }
@@ -146,11 +146,14 @@ h2 > code {
 .small {
   font-size: 75%;
 }
+.x-small {
+  font-size: 50%;
+}
 .strike {
   text-decoration: line-through;
 }
 .dim {
-  opacity: .4;
+  opacity: .5 !important;
 }
 
 ul.date-list li:before {
