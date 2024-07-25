@@ -34,6 +34,24 @@
   font-size: 65%;
 }
 
+.reveal a {
+  text-decoration: underline dotted #1c4968;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+.reveal a:hover {
+  text-decoration-style: solid;
+  text-decoration-color: #E91E63;
+}
+
+.reveal ::selection {
+  background: #222222; /* WebKit/Blink */
+  color: inherit;
+}
+.reveal ::-moz-selection {
+  background: #ffb7b7; /* Gecko */
+}
+
 .reveal blockquote {
   margin: 0;
   width: 90%;
