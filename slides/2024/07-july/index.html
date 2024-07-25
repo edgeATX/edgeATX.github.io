@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: July 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>July 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="lightning">Speed Vector Indexing</h3>
+      <p class="small">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="star">RAG in Bedrock</h3>
+      <p class="small">&mdash; Zeb Evans (<a href="https://www.clientpoint.me/cp/zebulon.evans">clientpoint.com</a>)</p>
+      <h3 class="star">Turbo Charge Your Stack with AI</h3>
+      <p class="small">&mdash; Ryan Vice (<a href="https://vicesoftware.com/">vicesoftware.com</a>)
+      </p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>es-toolkit 1.0</h2>
+      <p class="subhead"><a href="https://es-toolkit.slash.page/intro.html">Released</a> May 31st</p>
+      <blockquote>A state-of-the-art, high-performance JS utility library with a small bundle size and strong type annotations.</blockquote>
+      <ul>
+        <li class="fragment">Basically an upgraded / modern lodash</li>
+        <li class="fragment">Built in Typescript with 100% test coverage</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Other notable releases</h2>
+      <ul class="date-list">
+        <li><span class="date">June 29</span> <a href="http://fabricjs.com/">Fabric.js 6.0</a></li>
+        <li><span class="date">July 5</span> <a href="https://tinybase.org/guides/releases/#v5-0">Tinybase 5.0</a></li>
+        <li><span class="date">July 8</span> <a href="https://github.com/vitest-dev/vitest/releases/tag/v2.0.0">Vitest 2.0</a></li>
+        <li><span class="date">July 16</span> <a href="https://forums.meteor.com/t/its-official-meteor-3-0-official-release-is-out/61860">Meteor 3.0</a></li>
+        <li><span class="date">July 17</span> <a href="https://nodejs.org/en/blog/release/v22.5.0">Node.js 22.5</a></li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline" style="color: white;">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>July browser releases</h2>
+      <p>Stable version releases:</p>
+      <ul class="date-list">
+        <li><span class="date">July 9</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/128">Firefox 128</a>
+        </li>
+        <li><span class="date">July 23</span> <a
+            href="https://developer.chrome.com/release-notes/127">Chrome 127</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>@property</h2>
+      <blockquote>Extends CSS by providing meaning and context to CSS variables.</blockquote>
+      <p>Default custom properties are simple strings:</p>
+      <pre><code data-trim data-noescape>
+        :root {
+          --myColor: hotpink;
+        }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>@property</h2>
+      <p>Use <code><a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/@property">@property</a></code>
+        to provide a detailed style definition:
+      </p>
+      <pre><code data-trim data-noescape>
+        @property --myColor {
+          syntax: '&lt;color>';
+          inherits: false;
+          initial-value: hotpink;
+        }
+      </code></pre>
+      <ul>
+        <li class="fragment">Provides type info</li>
+        <li class="fragment">Control over style inheritance</li>
+        <li class="fragment">Ability to define a default / fallback value</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>font-size-adjust</h2>
+      <blockquote>Control lowercase letter size relative to uppercase letters.</blockquote>
+      <div class="fragment">
+        <p>Verdana vs Times at <code>font-size: 40px</code>:</p>
+        <ul style="font-size: 40px;">
+          <li><span style="font-family: Verdana, sans-serif">This is Verdana.</span></li>
+          <li><span style="font-family: Times, serif;">This is Times.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>font-size-adjust</h2>
+      <blockquote>Control lowercase letter size relative to uppercase letters.</blockquote>
+      <p>Times with <code>font-size-adjust: 0.54</code>:</p>
+      <ul style="font-size: 40px;">
+        <li><span style="font-family: Verdana, sans-serif">This is Verdana.</span></li>
+        <li><span style="font-family: Times, serif; font-size-adjust: 0.54;">This is Times.</span></li>
+      </ul>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Security &amp; Privacy</h2>
+    </section>
+
+    <section>
+      <h2>Polyfill.io Supply Chain Attack</h2>
+      <p class="subhead"><a href="https://sansec.io/research/polyfill-supply-chain-attack">Reported</a> June 25th</p>
+      <p>A shady Chinese company bought the domain + repo</p>
+      <ul>
+        <li class="fragment"><code>cdn.polyfill.io</code> started injecting malware</li>
+        <li class="fragment">Same with <code>bootcdn.net</code> and several other CDNs</li>
+        <li class="fragment">Google, Cloudflare and others blocked it quickly</li>
+        <li class="fragment">Cloudflare has a <a href="https://cdnjs.cloudflare.com/polyfill">polyfill.io
+          mirror</a> <span class="x-small">(but you don't need it)</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Privacy Sandbox</h2>
+      <p>Google announced <a href="https://privacysandbox.com/intl/en_us/">Privacy Sandbox</a> 4+ years ago.</p>
+      <p class="fragment">That was to include phasing out third-party cookies.</p>
+      <div class="fragment">
+        <p>They just announced a
+          "<a href="https://privacysandbox.com/news/privacy-sandbox-update/">new path</a>" forward:
+        </p>
+        <blockquote>
+          Instead of deprecating third-party cookies, we would introduce a new experience in Chrome that
+          lets people make an informed choice that applies across their web browsing, and they’d be able
+          to adjust that choice at any time. We're discussing this new path with regulators, and will
+          engage with the industry as we roll this out.
+        </blockquote>
+      </div>
+    </section>
+
+    <section>
+      <h2>Private Browsing 2.0</h2>
+      <p>Apple OTOH is <a href="https://webkit.org/blog/15697/private-browsing-2-0/">cracking down</a>
+        further in Safari 17.</p>
+      <p>New private browsing defaults:</p>
+      <ul>
+        <li class="fragment">Link tracking and fingerprinting protection</li>
+        <li class="fragment">Blocking known / cloaked network trackers</li>
+        <li class="fragment">Disabled extensions with history access</li>
+      </ul>
+      <p class="fragment">Plus, additional safeguards in ALL browsing modes</p>
+    </section>
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Industry News</h2>
+    </section>
+
+    <section>
+      <h2>Ladybird Browser Initiative</h2>
+      <p class="subhead"><a href="https://ladybird.org/posts/announcement/">Announced</a> Jul1 1st</p>
+      <blockquote>A brand-new browser from scratch, backed by a non-profit.</blockquote>
+      <ul>
+        <li class="fragment">Open source, web standards-first</li>
+        <li class="fragment">No user monetization, "ever"</li>
+        <li class="fragment">Backed by Andreas Kling and Chris Wanstrath</li>
+      </ul>
+      <p class="fragment">Targeting "early adopter" alpha in... 2026</p>
+    </section>
+
+    <section>
+      <h2>CrowdStrike Outage</h2>
+      <p class="subhead"><a href="https://www.crowdstrike.com/falcon-content-update-remediation-and-guidance-hub/">Occurred</a> July 18th</p>
+      <p>Faulty config sent to ~1% of all Windows machines</p>
+      <ul>
+        <li class="fragment">Led to a BSOD + reboot loop</li>
+        <li class="fragment">Cause: "a bug in the content-validation system"</li>
+        <li class="fragment">Took down airlines, banks, TV stations, hospitals</li>
+        <li class="fragment">Delta <a href="https://www.cnn.com/2024/07/23/business/delta-flight-cancellations/index.html">still</a>
+          hasn't recovered as of today!</li>
+      </ul>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <!----------------------  Just For Fun  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Just For Fun</h2>
+    </section>
+
+    <section>
+      <h2>Sliderland</h2>
+      <blockquote>A minimalist coding playground (using sliders)</blockquote>
+      <div class="center">
+        <img src="images/sliderland.png" alt="Sliderland" style="width:500px;">
+      </div>
+      <p><a href="https://sliderland.blinry.org/">Demos</a></p>
+    </section>
+
+    <section>
+      <h2>Batman-comic.css</h2>
+      <blockquote>Easily create comics with Batman and Robin.</blockquote>
+      <pre><code data-trim data-noescape>
+        &lt;article class="batman-comic">
+          &lt;section>
+            &lt;div class="batman">&lt;/div>
+          &lt;/section>
+        &lt;/article>
+      </code></pre>
+      <a href="batman-comics/">Demo</a>
+      <div class="center">
+        <img src="images/batman.png" style="width: 250px;" alt="Batman">
+      </div>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>
