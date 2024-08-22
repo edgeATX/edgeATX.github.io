@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: August 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>August 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">Repurpose Your JS Frontend As A Desktop and Mobile App With Tauri</h3>
+      <p class="small">&mdash; Jason Levitt</p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>Notable releases</h2>
+      <ul class="date-list">
+        <li><span class="date">Aug 1</span>
+          <a href="https://v2.tauri.app/blog/tauri-2-0-0-release-candidate/">Tauri 2.0 RC</a>
+        </li>
+        <li><span class="date">Aug 5</span>
+          <a href="https://blog.jqueryui.com/2024/08/jquery-ui-1-14-0-released/">jQuery UI 1.14.0</a>
+        </li>
+        <li><span class="date">Aug 14</span>
+          <a href="https://reactnative.dev/blog/2024/08/12/release-0.75">React Native 0.75</a>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline" style="color: white;">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>Latest browser releases</h2>
+      <ul class="date-list">
+        <li><span class="date">July 29</span> <a
+            href="https://webkit.org/blog/15739/webkit-features-in-safari-17-6/">Safari 17.6</a>
+        </li>
+        <li><span class="date">August 6</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/129">Firefox 129</a>
+        </li>
+        <li><span class="date">August 20</span> <a
+            href="https://developer.chrome.com/release-notes/127">Chrome 127</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Flexbox safe alignment</h2>
+      <p class="subhead">Baseline with Safari 17.6</p>
+      <blockquote>Prevent data loss when using CSS flexbox.</blockquote>
+      <p>Prevents overflowed content from being cut off</p>
+      <pre><code data-trim data-noescape>
+        .container {
+          display: flex;
+          flex-direction: column;
+          align-items: safe center;
+          width: 50%;
+        }
+      </code></pre>
+      <p>Best explained <a href="https://www.stefanjudis.com/today-i-learned/safe-unsafe-alignment-in-css-flexbox/">by example</a></p>
+    </section>
+
+    <section>
+      <h2>@starting-style</h2>
+      <p class="subhead">Baseline with Firefox 129</p>
+      <blockquote>Defines initial styles for elements that aren't yet rendered.</blockquote>
+      <p>Used when animating in from <code>display: none</code></p>
+      <pre><code data-trim data-noescape>
+        @starting-style {
+          dialog[open] {
+            /*   Styles before the dialog opens   */
+          }
+        }
+      </code></pre>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style">Learn more</a></p>
+    </section>
+
+    <section>
+      <h2>allow-discrete</h2>
+      <p class="subhead">Baseline with Firefox 129</p>
+      <blockquote>Enables animation of discrete properties.</blockquote>
+      <p>Discrete properties can't interpolate between values</p>
+      <ul>
+        <li>Binary values like <code>display</code> and <code>visibility</code></li>
+        <li><code>allow-discrete</code> swaps values at the 50% point</li>
+      </ul>
+      <pre><code data-trim data-noescape>
+        transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;
+      </code></pre>
+      <p><a href="https://web.dev/blog/baseline-entry-animations?hl=en#enabling_discrete_animations_with_allow-discrete">Learn more</a></p>
+    </section>
+
+    <section>
+      <h2>Putting it together</h2>
+      <p>Example of how these work together:</p>
+      <pre><code data-trim data-noescape>
+        dialog[open] {
+          translate: 0 0;
+          transition: translate 0.7s ease-out, display 0.7s ease-out allow-discrete;
+
+          @starting-style {
+            translate: 0 100vh;
+          }
+        }
+      </code></pre>
+      <p>Also shows <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting">CSS nesting</a>
+        <span class="small">(baseline since December 2023)</span>
+      </p>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Industry News</h2>
+    </section>
+
+    <section>
+      <h2>W3C: 3rd Party Cookies Must Go</h2>
+      <p class="subhead"><a href="https://www.w3.org/blog/2024/third-party-cookies-have-got-to-go/">Published</a> July 29th</p>
+      <p>In response to Google's <a href="https://privacysandbox.com/news/privacy-sandbox-update/">Privacy Sandbox announcement</a></p>
+      <ul>
+        <li class="fragment">Official W3C <a href="https://www.w3.org/2001/tag/doc/web-without-3p-cookies/">TAG recommendation</a></li>
+        <li class="fragment">Google's reversal "came out of the blue"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>EU Artificial Intelligence Act</h2>
+      <p class="subhead">Went into force August 1st</p>
+      <p>First <a href="https://alvaromontoro.com/blog/68057/ai-act-is-here">comprehensive AI legislation</a> in the world</p>
+      <ul>
+        <li class="fragment">Risk levels: minimal, limited, high, unacceptable</li>
+        <li class="fragment">Requires levels of disclosure and mitigation</li>
+        <li class="fragment">Unacceptable risk is banned</li>
+        <li class="fragment">Enforcement phases in through August 2027</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Fair Source Licensing</h2>
+      <p class="subhead"><a href="https://blog.sentry.io/sentry-is-now-fair-source/">Announced</a> August 6th by Sentry</p>
+      <p>New middle ground between OSS and closed source.</p>
+      <p>Fair Source (<a href="https://fair.io/">fair.io</a>) software:</p>
+      <ul class="small">
+        <li class="fragment">is publicly available to read;</li>
+        <li class="fragment">allows use, modification, and redistribution with minimal restrictions to protect the producer’s business model; and</li>
+        <li class="fragment">undergoes Delayed OSS Publication (<a href="https://opensource.org/delayed-open-source-publication">DOSP</a>)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2024 SO Developer Survey</h2>
+      <p>65k developers responded this year:</p>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://survey.stackoverflow.co/2024">https://survey.stackoverflow.co/2024</a>
+      </p>
+      <p>Random trivia:</p>
+      <ul>
+        <li>Most <span class="highlight">popular</span> language?
+          <strong class="fragment highlight">JS</strong>
+        </li>
+        <li class="fragment">Most <span class="highlight">admired</span> language?
+          <strong class="fragment highlight">Rust</strong>
+        </li>
+        <li class="fragment">Highest <span class="highlight">median salary</span> language?
+          <strong class="fragment highlight">Erlang</strong>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Events</h2>
+    </section>
+
+    <section>
+      <h2>React Conf 2024</h2>
+      <p class="subhead">May 15-16 in Las Vegas</p>
+      <p>All talks are now online!</p>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://conf.react.dev/talks">https://conf.react.dev/talks</a>
+      </p>
+    </section>
+
+    <!----------------------  Handy Tools  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Handy Tools</h2>
+    </section>
+
+    <section>
+      <h2>SENDUNE HTML Email Designer</h2>
+      <p><a href="https://github.com/SendWithSES/Drag-and-Drop-Email-Designer">Open source</a>
+        WYSIWYG email design tool
+      </p>
+      <ul>
+        <li class="fragment">Install and run it locally</li>
+        <li class="fragment">Free and OSS, built on email best practices</li>
+        <li class="fragment">Try it online: <a href="https://designer.sendune.com/">designer.sendune.com</a></li>
+      </ul>
+      <img src="images/sendune.png" alt="SENDUNE">
+    </section>
+
+    <section>
+      <h2>Svg.wtf</h2>
+      <ul>
+        <li>Super useful SVG playground / editor</li>
+        <li>Try it at <a href="https://svg.wtf/">https://svg.wtf</a></li>
+      </ul>
+      <p class="center"><img src="images/svg-wtf.png" alt="svg.wtf" style="width: 70%;"></p>
+    </section>
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <!----------------------  Just For Fun  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Just For Fun</h2>
+    </section>
+
+    <section>
+      <h2>WhenFS</h2>
+      <p><a href="https://github.com/lvkv/whenfs">Turns</a> any Google Calendar into a <a
+          href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE filesystem</a>
+      </p>
+      <img src="images/mona-lisa.png" alt="Mona Lisa" style="vertical-align: middle"> is stored as:
+      <img class="fragment" src="images/whenfs-example.png" alt="WhenFS">
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>
