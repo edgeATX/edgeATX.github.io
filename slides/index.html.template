@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: September 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>September 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">?</h3>
+      <p class="small">&mdash; ?</p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>Notable releases</h2>
+      <ul class="date-list">
+        <li><span class="date">Sept ?</span>
+          <a href="#">?</a>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline" style="color: white;">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>Latest browser releases</h2>
+      <ul class="date-list">
+        <li><span class="date">Sept ?</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/130">Firefox 130</a>
+        </li>
+        <li><span class="date">Sept ?</span> <a
+            href="https://developer.chrome.com/release-notes/128">Chrome 128</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>?</h2>
+      <p class="subhead">Baseline with ?</p>
+      <blockquote>?</blockquote>
+      <p>?</p>
+      <pre><code data-trim data-noescape>
+        ?
+      </code></pre>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Industry News</h2>
+    </section>
+
+    <section>
+      <h2>?</h2>
+      <p class="subhead"><a href="https://www.w3.org/blog/2024/third-party-cookies-have-got-to-go/">Published</a> ?</p>
+      <p>?</p>
+      <ul>
+        <li class="fragment">?</li>
+      </ul>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <!----------------------  Handy Tools  ---------------------->
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <!----------------------  Just For Fun  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Just For Fun</h2>
+    </section>
+
+    <section>
+      <h2>?</h2>
+      <p>?</p>
+      <ul>
+        <li class="fragment">?</li>
+      </ul>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>

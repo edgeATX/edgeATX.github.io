@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: September 2024</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>September 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">Coding with AI Assistants</h3>
+      <p class="small">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="star">Supercharging Development with AI: A Modern Toolchain Revolution</h3>
+      <p class="small">&mdash; Ryan Vice (<a href="https://vicesoftware.com/">vicesoftware.com</a>)
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2>Spotlight: Deno</h2>
+      <blockquote>The open-source JavaScript runtime for the modern web. </blockquote>
+      <p><a href="https://deno.com/">Deno</a> is designed to fix Node's shortcomings:</p>
+      <ul>
+        <li class="fragment">Secure by default</li>
+        <li class="fragment">Built-in TypeScript, JSX/TSX</li>
+        <li class="fragment">Batteries included (linting, testing, etc)</li>
+      </ul>
+      <p class="fragment">It's also Node.js-compatible</p>
+    </section>
+
+    <section>
+      <h2>Deno 1.46</h2>
+      <p class="subhead"><a href="https://deno.com/blog/v1.46">Released</a> Aug 22, 2024</p>
+      <p>1.46 is the <a href="https://deno.com/blog/v1.46">last 1.x release</a> and includes:</p>
+      <ul>
+        <li class="fragment">Built-in code signing for <code>deno compile</code></li>
+        <li class="fragment">Faster <code>deno serve</code></li>
+        <li class="fragment">Improvements to CLI, Node compatibility</li>
+        <li class="fragment">And lots more...</li>
+      </ul>
+      <p class="fragment">Plus, the standard library <a
+          href="https://deno.com/blog/v1.46#the-standard-library-is-stable">is now stable</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Deno 2.0 RC</h2>
+      <p class="subhead"><a href="https://deno.com/blog/v2.0-release-candidate">Released</a> Sept 19, 2024</p>
+      <ul>
+        <li class="fragment">Standardized <code>window</code> and <code>process</code></li>
+        <li class="fragment">Dependency management improvements</li>
+        <li class="fragment"><strong class="highlight">Note</strong>: Lots of API removals!</li>
+        <li class="fragment">And more...</li>
+      </ul>
+      <p class="fragment">So now's a great time to check it out!</p>
+    </section>
+
+    <section>
+      <h2>Notable releases</h2>
+      <ul class="date-list">
+        <li>
+          <span class="date">Aug 25</span>
+          <a href="https://mui.com/blog/material-ui-v6-is-out/">Material UI 6.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Aug 28</span>
+          <a href="https://rspack.dev/blog/announcing-1-0">Rspack 1.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 6</span>
+          <a href="https://github.com/kpdecker/jsdiff">Jsdiff 7.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 6</span>
+          <a href="https://redwoodjs.com/upgrade/v8">Redwood 8.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 9</span>
+          <a href="https://www.trevorlasn.com/blog/whats-new-in-express-5">Express 5.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 12</span>
+          <a href="https://biomejs.dev/blog/biome-v1-9/">Biome 1.9</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 16</span>
+          <a href="https://blog.date-fns.org/v40-with-time-zone-support/">Date-fns 4.0</a> <span
+              class="small">&mdash; now with timezones</span>
+        </li>
+        <li class="fragment">
+          <span class="date">Sep 18</span>
+          <a href="https://bun.sh/blog/bun-v1.1.28">Bun 1.1.28</a> <span class="small"> &mdash;
+            now runs <a href="https://bun.sh/blog/compile-and-run-c-in-js">C</a> from JS!</span>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline" style="color: white;">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>Latest browser releases</h2>
+      <ul class="date-list">
+        <li><span class="date">Aug 20</span> <a
+            href="https://developer.chrome.com/release-notes/128">Chrome 128</a>
+        </li>
+        <li><span class="date">Sept 3</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/130">Firefox 130</a>
+        </li>
+        <li><span class="date">Sept 16</span> <a
+            href="https://webkit.org/blog/15865/webkit-features-in-safari-18-0/">Safari 18</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mutually exclusive &lt;details&gt;</h2>
+      <p class="subhead"><a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details#name">MDN</a>
+        | <a href="https://web-platform-dx.github.io/web-features-explorer/features/details-name/">Newly
+          available</a> since Firefox 130
+      </p>
+      <blockquote>Easily implement accordions via the <code>name</code> attribute</blockquote>
+      <ul>
+        <li><code>name</code> specifies group name</li>
+        <li>Elements do not have to be DOM-adjacent!</li>
+      </ul>
+      <pre><code data-trim data-noescape>
+        &lt;details name="my-accordion">
+          &lt;summary>Section 1&lt;/summary>
+          Section 1 info here.
+        &lt;/details>
+        &lt;details name="my-accordion">
+          &lt;summary>Section 2&lt;/summary>
+          Section 2 info here.
+        &lt;/details>
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>backdrop-filter</h2>
+      <p class="subhead"><a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter">MDN</a>
+        | <a href="https://web-platform-dx.github.io/web-features-explorer/features/backdrop-filter/">Newly
+          available</a> since Safari 18
+      </p>
+      <blockquote>Apply effects like blur or color shift behind an element</blockquote>
+      <pre><code data-trim data-noescape>
+        backdrop-filter: blur(2px);
+        backdrop-filter: brightness(60%);
+        backdrop-filter: contrast(40%);
+        backdrop-filter: blur(4px) saturate(150%) invert(70%);
+      </code></pre>
+      <div class="center">
+        <img src="images/backdrop-filter-example.png" alt="backdrop-filter example" style="max-width: 300px;">
+      </div>
+    </section>
+
+    <section>
+      <h2>willReadFrequently</h2>
+      <p class="subhead"><a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext#willreadfrequently">MDN</a>
+        | <a href="https://web-platform-dx.github.io/web-features-explorer/features/canvas-2d-willreadfrequently/">Newly
+          available</a> since Safari 18
+      </p>
+      <blockquote>Canvas optimization hint to skip hardware acceleration</blockquote>
+      <ul>
+        <li>Speeds up frequent calls to <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData</a>
+        </li>
+        <li>Forces software-accelerated rendering</li>
+      </ul>
+      <pre><code data-trim data-noescape>
+        const img = canvas.getContext("2d", {
+          willReadFrequently: true
+        });
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>content-visibility</h2>
+      <p class="subhead"><a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">MDN</a>
+        | <a href="https://web-platform-dx.github.io/web-features-explorer/features/content-visibility/">Newly
+          available</a> since Safari 18
+      </p>
+      <blockquote>Defers layout/paint of an element's subtree until requested</blockquote>
+      <ul>
+        <li>Allows the UA to skip via <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents">CSS
+          containment</a></li>
+        <li>Useful to speed up initial page load</li>
+      </ul>
+      <pre><code data-trim data-noescape>
+        &lt;style>
+          .some-container {
+            content-visibility: hidden;
+          }
+        &lt;/style>
+      </code></pre>
+      <p class="small"><a
+        href="https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility/">Deep
+        dive</a> for more info
+      </p>
+    </section>
+
+    <section>
+      <h2>Web features explorer</h2>
+      <blockquote>Aka "Release notes for the web"</blockquote>
+      <p><a href="https://web-platform-dx.github.io/web-features-explorer">Website</a> maintained by the
+        <a href="https://www.w3.org/community/webdx/">WebDX Community Group</a>
+      </p>
+      <ul>
+        <li><a href="https://github.com/web-platform-dx/web-features">Open source</a>, community-managed</li>
+        <li>Tracks newly and widely available web features</li>
+        <li>The data powers <a href="https://web-platform-dx.github.io/web-features/">Baseline</a></li>
+      </ul>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Industry News</h2>
+    </section>
+
+    <section>
+      <h2>Laravel Raises $57M Series A</h2>
+      <p class="subhead"><a href="https://laravel-news.com/laravel-raises-57-million-series-a">Published</a> Sep 5</p>
+      <p><a href="https://laravel.com/">Laravel</a> is "the PHP framework for Web Artisans"</p>
+      <ul>
+        <li class="fragment">$ is for hiring and full-time OSS focus</li>
+        <li class="fragment">Also building out <a href="https://laravel-news.com/introducing-laravel-cloud">Laravel Cloud</a></li>
+      </ul>
+      <p class="fragment">Related: <a href="https://www.mux.com/blog/php-is-the-new-javascript">PHP is the new JavaScript</a></p>
+    </section>
+
+    <section>
+      <h2>Kia Takeover Hack</h2>
+      <p class="subhead"><a href="https://www.wired.com/story/kia-web-vulnerability-vehicle-hack-track">Published</a> Sep 26</p>
+      <p>Researchers could access millions of vehicles remotely</p>
+      <ul>
+        <li class="fragment">Track location, open locks, start ignition</li>
+        <li class="fragment">Also exposed PII, payment and location history</li>
+        <li class="fragment">How? Lack of authorization in a public web API</li>
+      </ul>
+      <p class="fragment small"><span class="highlight">Don't own a Kia?</span>
+        Similar issues found for Honda, Toyota, Infiniti, Nissan, Acura,
+        Mercedes-Benz, Hyundai, Genesis, BMW, Rolls Royce, and Ferrari
+      </p>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Events</h2>
+    </section>
+
+    <section>
+      <h2>ViteConf 2024</h2>
+      <p class="subhead">October 3rd</p>
+      <blockquote>24 hour marathon of talks from the teams innovating in the Vite Ecosystem!</blockquote>
+      <p>Free and virtual, excellent speaker list</p>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://viteconf.org/">Register for free</a>
+      </p>
+      <em class="highlight">Highly recommended for all web devs!</em>
+    </section>
+
+    <section>
+      <h2>DevSecCon 2024</h2>
+      <p class="subhead">October 8&ndash;9th</p>
+      <blockquote>Explore the critical intersection of AI and application security</blockquote>
+      <p>Free and virtual, hosted by <a href="https://snyk.io/">Snyk</a></p>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://theanchorgroup.swoogo.com/devseccon">Register for free</a>
+      </p>
+      <em class="highlight">Recommended for devs focused on AI and security</em>
+    </section>
+
+    <section>
+      <h2>JetBrains JS Day 2024</h2>
+      <p class="subhead">October 24th</p>
+      <blockquote>Explore the latest trends in modern JS and TS development</blockquote>
+      <ul>
+        <li>A single day of interactive sessions and demos</li>
+        <li>Livestreamed and recorded on YouTube</li>
+      </ul>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://lp.jetbrains.com/javascript-day-2024">Register for free</a>
+      </p>
+      <em class="highlight">Recommended for web devs with less free time :)</em>
+    </section>
+
+    <section>
+      <h2>Next.js Conf 2024</h2>
+      <p class="subhead">October 24th</p>
+      <blockquote>Learn to build the best apps on the web (mostly with Next.js)</blockquote>
+      <p>In person in SF for $500, or free online</p>
+      <p><span class="highlight">&rarr;</span>
+        <a href="https://nextjs.org/conf">Register</a>
+      </p>
+      <em class="highlight">Recommended for React devs</em>
+    </section>
+
+    <!----------------------  Handy Tools  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Handy Tools</h2>
+    </section>
+
+    <section>
+      <h2>Server Mono</h2>
+      <p>A <a href="https://servermono.com/">typeface</a> inspired by typewriters, ASCII art and CLIs</p>
+      <ul>
+        <li>Focus on readability amd uniformity</li>
+      </ul>
+      <div class="center">
+        <img src="images/server-mono.png" alt="server mono">
+      </div>
+    </section>
+
+    <section>
+      <h2>Departure Mono</h2>
+      <p>A <a href="https://departuremono.com/">typeface</a> inspired by 80s/90s GUIs and Sci-Fi</p>
+      <ul>
+        <li>The website is pretty neat!</li>
+      </ul>
+      <div class="center">
+        <img src="images/departure-mono.png" alt="server mono" style="max-width:80%;">
+      </div>
+    </section>
+
+    <section>
+      <h2>Distraction Control</h2>
+      <p>New in <a href="https://webkit.org/blog/15865/webkit-features-in-safari-18-0/">Safari 18</a></p>
+      <div class="center">
+        <video autoplay="" muted="" height="500" class="distraction-control"><source src="images/distraction-control.mov"></video>
+      </div>
+    </section>
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <!----------------------  Just For Fun  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Just For Fun</h2>
+    </section>
+
+    <section>
+      <h2>Unbeatable tic-tac-toe in CSS</h2>
+      <p class="codepen" data-height="400"
+         data-default-tab="html,result" data-slug-hash="BaVNvdy"
+         data-pen-title="Pure css tic tac toe AI" data-user="leemeyer"
+         style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+        <span>See the Pen <a href="https://codepen.io/leemeyer/pen/BaVNvdy">
+          Pure css tic tac toe AI</a> by lee (<a href="https://codepen.io/leemeyer">@leemeyer</a>)
+          on <a href="https://codepen.io">CodePen</a>.
+        </span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+      <p><a href="https://css-tricks.com/time-travelling-css-with-target/">Learn how</a> (and why?) this was done</p>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>
