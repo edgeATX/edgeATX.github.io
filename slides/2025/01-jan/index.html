@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: January 2025</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>January 2025</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+      <h3 class="star">Express Forward</h3>
+      <p class="small">&mdash; Wesley Todd (<a href="https://wesleytodd.com/">wesleytodd.com</a>)
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+      <p>Expedia is always hiring! <a href="https://careers.expediagroup.com/" target="_blank">expediajobs.com</a></p>
+    </section>
+
+    <section>
+      
+          <a href="https://www.acumity.com" target="_blank">
+          <h1>Acumity</h1>
+          <ul>
+            <li>Smart, Simple, Secure</li>
+            <li>AI Solutions Designed for the Enterprise</li>
+          </ul>
+        </a>
+    </section>
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2><a href="https://bun.sh/blog/bun-v1.1.44">Bun v1.1.44 - Jan 16</a></h2>
+      <ul>
+        <li>Bun.serve() - serve and bundle frontend</li>
+        <li class="fragment">HTML Imports <pre><code data-trim data-noescape>
+          import mySinglePageApp from "./index.html";
+        </code></pre></li>
+        <li class="fragment">43 bugs fixed</li>
+      </ul>
+      
+    </section>
+
+    <section>
+      <h2>Spotlight: Tailwind v4</h2>
+      <blockquote>Rapidly build modern websites without ever leaving your HTML. </blockquote>
+      <p><a href="https://tailwindcss.com/">Tailwind</a> utility classes to style without CSS</p>
+      <ul>
+        <li>Oxide Engine - faster in Rust</li>
+        <li class="fragment">Variants, Cascade Layers, Container Queries</li>
+        <li class="fragment">Zero-configuration Content Detection</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><a href="https://v5.daisyui.com/components/button/">Daisy UI v5 beta</a></h2>
+      <div class="center">
+        <img src="https://img.daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="backdrop-filter example" style="max-width: 100px;">
+      </div>
+      <ul>
+        <li>Semantic Tailwind Components in HTML/JSX <pre><code data-trim data-noescape>
+          &lt;button class="btn btn-primary">Press Me&lt;/button>
+        </code></pre></li>
+        <li class="fragment">Zero dependencies</li>
+        <li class="fragment">Smaller Size 34kB (Down from 137kB)</li>
+      </ul>
+      
+    </section>
+
+    <section>
+      <h2><a href="https://react.dev/blog/2024/12/05/react-19">React 19 (Dec 12)</a></h2>
+      <ul>
+        <li>&lt;form&gt; Actions</li>
+        <li class="fragment">New hook: useOptimistic and useFormStatus</li>
+        <li class="fragment">New API: use<pre><code>import {use} from 'react';
+
+function Comments({commentsPromise}) {
+  // `use` will suspend until the promise resolves.
+  const comments = use(commentsPromise);
+  return comments.map(c => &lt;p key={c.id}&gt;{c}&lt;/p&gt;);
+}</code></pre></li>
+      </ul>
+    </section>
+    
+
+    <section>
+      <h2>Notable releases</h2>
+      <ul>
+        <li>
+          <span class="date">Jan 10</span>
+          <a href="https://eslint.org/blog/2025/01/eslint-v9.18.0-released/">ESLint 9.18.0</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Jan 14</span>
+          <a href="https://www.electronjs.org/blog/electron-34-0">Electron 34</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Jan 15</span>
+          <a href="https://pptr.dev/">Puppeteer 24</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Jan 15</span>
+          <a href="https://github.com/storybookjs/storybook/releases/tag/v8.5.0">Storybook 8.5</a>
+        </li>
+        <li class="fragment">
+          <span class="date">Jan 16</span>
+          <a href="https://www.cypress.io/blog/cypress-14-is-here-see-whats-new">Cypress 14</a>
+        </li>
+      </ul>
+    </section>
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline" style="color: white;">https://web.dev/baseline</a></p>
+    </section>
+
+    <section>
+      <h2>Latest browser releases</h2>
+      <ul class="date-list">
+        <li><span class="date">Dec 9</span> <a
+            href="https://webkit.org/blog/16301/webkit-features-in-safari-18-2/">Safari 18.2</a>
+        </li>
+        <li><span class="date">Jan 7</span> <a
+          href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/134">Firefox 134</a>
+        </li>
+        <li><span class="date">Jan 14</span> <a
+            href="https://developer.chrome.com/release-notes/132">Chrome 132</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Baseline 2025: Promise.try</h2>
+      <ul>
+        <li>Baseline 2025 on Jan 26th</li>
+        <li>Simplified error handling with Promise</li>
+      </ul>
+      <pre><code data-trim data-noescape>
+        // If the callback is synchronous and it throws
+        // an exception, the error won't be caught here:
+        new Promise(resolve => resolve(callback());
+
+        // But it will be here:
+        Promise.try(callback)
+          .then(result => console.log(result))
+          .catch(error => console.log(error))
+          .finally(() => console.log("All settled."));
+      </code></pre>
+    </section>
+
+    <section>
+      <h2>WebGPU (Not Baseline!)</h2>
+      <ul>
+        <li>Utilize a GPU from JavaScript</li>
+        <li class="fragment">High-performance, low-level 3D graphics API</li>
+        <li class="fragment">Built on OS APIs... Vulkan, Metal, or Direct3D 12<pre><code>
+const canvas = document.querySelector('cv') as HTMLCanvasElement;
+const adapter = await navigator.gpu?.requestAdapter();
+const device = await adapter?.requestDevice();
+const context = canvas.getContext('webgpu') as GPUCanvasContext;
+        </code></pre></li>
+        <li class="fragment">Both <a href="https://webgpu.github.io/webgpu-samples/?sample=rotatingCube">Graphics</a> + <a href="https://www.kmeans.org/">Data Processing (AI Models)</a></li>
+      </ul>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section>
+      <h2><a href="https://htmx.org/essays/future/">Future of htmx (Jan 1)</a></h2>
+      <ul>
+        <li>Evolution of htmx</li>
+        <li class="fragment">Focus lib on stability, not features</li>
+        <li class="fragment">Goal is to be the next jquery</li>
+      </ul>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <!----------------------  Handy Tools  ---------------------->
+
+    <section>
+      <h2><a href="https://opensource.author.io/nvm-for-windows-v120">NPM for Windows v1.2.0</a></h2>
+      <ul>
+        <li class="fragment">Desktop Notifications</li>
+        <li class="fragment">ARM Support</li>
+        <li class="fragment">Congrats Corey!</li>
+      </ul>
+    </section>
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <!----------------------  Just For Fun  ---------------------->
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Just For Fun</h2>
+    </section>
+
+    <section>
+      <h2><a href="https://www.edgeatx.org/">document.designMode = 'on'</a></h2>
+    </section>
+
+    <section>
+      <h2><a href="https://codepen.io/miocene/pen/QwLOQBB?utm_source=CSS-Weekly&utm_campaign=Issue-603&utm_medium=web">Pure CSS 3D Cat</a></h2>
+    </section>
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Ted Patrick</p>
+      <ul>
+        <li><a href="https://www.acumity.com/">Co-founder at Acumity.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>
