@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bleeding Edge Web: May 2025</title>
+
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reset.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/black-contrast.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/dist/theme/bew-overrides.css">
+  <link rel="stylesheet" href="../../shared/reveal.js/plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!----------------------  Intro  ---------------------->
+
+    <section class="center">
+      <h1>Bleeding Edge Web</h1>
+      <h2><a href="https://twitter.com/edgeatx">@edgeATX</a></h2>
+      <h2><a href="https://www.edgeatx.org/">EdgeATX.org</a></h2>
+    </section>
+
+    <section class="speaker-list">
+      <h2>September 2024</h2>
+      <h3 class="lightning">News From the Bleeding Edge</h3>
+      <p class="small">&mdash; Brian Moeskau (<a href="https://twitter.com/bmoeskau">@bmoeskau</a>)</p>
+      <h3 class="star">Infrastructure as Code with AWS CDK and TypeScript</h3>
+      <p class="small">&mdash; Ted Patrick (<a href="https://twitter.com/__ted__">@__ted__</a>)</p>
+    </section>
+
+    <!----------------------  Housekeeping  ---------------------->
+
+    <section>
+      <h2>Housekeeping</h2>
+      <ul>
+        <li class="fragment">Join us on <a
+            href="https://join.slack.com/t/edgeatx/shared_invite/zt-1onzae2c4-0JBegV3EvF5VV4R_MDQsUA">Slack</a>
+        </li>
+        <li class="fragment">Speakers and sponsors <strong class="highlight">always wanted</strong>
+          <ul class="">
+            <li><a href="https://www.edgeatx.org/speak.html">edgeatx.org / speak.html</a></li>
+            <li><a href="https://www.edgeatx.org/sponsorship.html">edgeatx.org / sponsorship.html</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Sponsors  ---------------------->
+
+    <section>
+      <h2>Thanks to Our Host!</h2>
+      <div style="background-color: #fff;padding: 25px 0 0 40px;border-radius: 15px;">
+        <a href="https://www.expedia.com/" target="_blank"><img
+            src="../../shared/resources/images/sponsors/expedia-logo.jpg" alt="Expedia">
+        </a>
+      </div>
+      <p>Expedia is always hiring! <a href="https://careers.expediagroup.com/" target="_blank">expediajobs.com</a></p>
+    </section>
+
+
+    <!----------------------  Libs & Frameworks  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Libraries &amp; Frameworks</h2>
+    </section>
+
+    <section>
+      <h2><a href="https://m3.material.io/blog/building-with-m3-expressive">Material 3 Expressive</a></h2>
+      <blockquote>Material’s latest evolution helps you make products even more engaging and easier to use.</blockquote>
+      <ul>
+        <li class="fragment">Not just aesthetics; enhances the UX</li>
+        <li class="fragment">Based on 46 studies (18k participants)</li>
+        <li class="fragment">User prefer: playfulness, energy, friendliness</li>
+        <li class="fragment">Measurable ease of use improvements</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><a href="https://m3.material.io/blog/building-with-m3-expressive">Material 3 Expressive</a></h2>
+      <video autoplay="" loop="" muted="" playsinline="" controls=""
+             style="aspect-ratio: 4.511 / 3; border-radius: 9px;">
+        <source src="images/material-3.mp4" type="video/mp4">
+      </video>
+    </section>
+
+
+    <section>
+      <h2><a href="https://data-star.dev/">Datastar 1.0-beta</a></h2>
+      <blockquote>Build reactive web applications with the simplicity of server-side rendering and the power of a full-stack SPA framework.</blockquote>
+      <ul>
+        <li class="fragment">Claims to be Alpine.js + htmx</li>
+        <li class="fragment">Embraces simplicity and first principles</li>
+        <li class="fragment">Only 14.5Kb including all plugins</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><a href="https://basecoatui.com/">Basecoat v0.1</a></h2>
+      <blockquote>All of the shadcn/ui magic, none of the React.</blockquote>
+      <p>A components library built with Tailwind CSS that works with any web stack.</p>
+      <img src="images/basecoat.png" alt="Basecoat preview"/>
+    </section>
+
+    <section>
+      <h2>Other notable releases</h2>
+      <ul class="date-list">
+        <li>
+          <span class="date">April 28</span>
+          <a href="https://www.electronjs.org/blog/electron-36-0">Electron 26.0</a>
+        </li>
+        <li>
+          <span class="date">April 29</span>
+          <a href="https://github.com/MrRefactoring/jira.js">Jira.js 5.0</a>
+        </li>
+        <li>
+          <span class="date">May 2</span>
+          <a href="https://github.com/facebook/relay/releases/tag/v19.0.0">Relay 19.0</a>
+        </li>
+        <li>
+          <span class="date">May 6</span>
+          <a href="https://nodesource.com/blog/Node.js-version-24">Node.js 24.0</a>
+        </li>
+        <li>
+          <span class="date">May 8</span>
+          <a href="https://code.visualstudio.com/updates/v1_100">VS Code 1.100</a>
+        </li>
+        <li>
+          <span class="date">May 12</span>
+          <a href="https://github.com/kpdecker/jsdiff">Jsdiff 8.0</a>
+        </li>
+        <li>
+          <span class="date">May 20</span>
+          <a href="https://zod.dev/v4">Zod 4.0</a>
+        </li>
+      </ul>
+    </section>
+
+    <!----------------------  Baseline Updates  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Baseline News</h2>
+      <p class="x-small"><a href="https://web.dev/baseline/2025" style="color: white;">Baseline 2025</a></p>
+    </section>
+
+    <section>
+      <h2>Latest browser releases</h2>
+      <ul class="date-list">
+        <li><span class="date">May 27</span> <a
+            href="https://developer.chrome.com/release-notes/137">Chrome 137</a>
+        </li>
+        <li><span class="date">May 27</span> <a
+            href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/139">Firefox 139</a>
+          &mdash; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal">Temporal API</a>
+        </li>
+        <li><span class="date">May 12</span> <a
+            href="https://webkit.org/blog/16923/webkit-features-in-safari-18-5/">Safari 18.5</a>
+          &mdash; <a href="https://webkit.org/blog/16535/meet-declarative-web-push/">Declarative Web Push</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><code>Float16Array</code></h2>
+      <p class="subhead"><a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float16Array">MDN</a>
+        | <a href="https://www.trevorlasn.com/blog/float16array-javascript">Newly
+          available</a>
+      </p>
+      <blockquote>New JS array type that stores 16-bit (2-byte) floating point numbers</blockquote>
+      <ul>
+        <li class="fragment">Joins <code>Float32Array</code> and <code>Float64Array</code></li>
+        <li class="fragment">Less memory, great for large datasets</li>
+        <li class="fragment">Optimized for newer GPUs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>VS Code now supports Baseline</h2>
+      <p class="subhead"><a href="https://web.dev/blog/baseline-vscode">Published</a> May 20</p>
+      <p>See baseline stats inline as of v1.100:</p>
+      <video autoplay="" loop="" muted="" playsinline="" controls=""
+             style="aspect-ratio: 4.511 / 3; border-radius: 9px;">
+        <source src="images/vscode-new.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!----------------------  Browser News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Browser News</h2>
+    </section>
+
+    <section>
+      <h2>Firefox is now open source</h2>
+      <p><a href="https://github.com/mozilla-firefox/firefox">https://github.com/mozilla-firefox/firefox</a></p>
+      <ul>
+        <li class="fragment">As of May 17, after a year of planning</li>
+        <li class="fragment">Learn <a
+            href="https://firefox-source-docs.mozilla.org/contributing/contribution_quickref.html">how to contribute</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><a href="https://www.opera.com/air">Opera Air</a> <span class="small">(early access)</span></h2>
+      <blockquote>The world’s first browser with mindfulness at its core.</blockquote>
+      <ul>
+        <li class="fragment">Guided mindfulness and meditation</li>
+        <li class="fragment">Smart exercise lessons</li>
+        <li class="fragment">"Boosts" for dream recall, creativity, relaxation</li>
+        <li class="fragment">Free AI assistant, ad blocker, VPN</li>
+        <li class="fragment">Of course, <a
+            href="https://www.cnet.com/tech/mobile/opera-defends-its-android-apps-after-accusation-of-predatory-lending/">buyer beware</a> ¯\_(ツ)_/¯</li>
+      </ul>
+    </section>
+
+    <!----------------------  Web Standards Spotlight  ---------------------->
+
+    <!----------------------  AI News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">AI News</h2>
+    </section>
+
+    <section>
+      <h2>Gemini 2.5 Pro Preview</h2>
+      <p class="subhead"><a href="https://developers.googleblog.com/en/gemini-2-5-pro-io-improved-coding-performance/">Published</a> May 6</p>
+      <p>Updated ahead of Google I/O</p>
+      <ul>
+        <li class="fragment">Best-in-class frontend web dev</li>
+        <li class="fragment"><a href="https://www.youtube.com/watch?v=mZNLegBg8BA&t=264s">Image / video to code</a> capability</li>
+        <li class="fragment">Includes starter apps</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Claude 4</h2>
+      <p class="subhead"><a href="https://www.anthropic.com/news/claude-4">Published</a> May 22</p>
+      <p>Next generation Claude models:</p>
+      <ul>
+        <li class="fragment">
+          <span class="highlight">Claude Sonnet 4</span> &mdash; Superior coding / reasoning
+        </li>
+        <li class="fragment">
+          <span class="highlight">Claude Opus 4</span> &mdash; Complex / long-running tasks, agent workflows
+        </li>
+        <li class="fragment">
+          <a href="https://www.anthropic.com/claude-code" class="highlight">Claude Code</a> &mdash; Terminal / IDE integration
+        </li>
+        <li class="fragment">Extended thinking with tools like web search</li>
+        <li class="fragment">Parallel tool use, improved memory, knowledge continuity over time</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><a href="https://www.prompt-kit.com/">Prompt-kit</a></h2>
+      <blockquote>Customizable, high-quality components for AI applications.</blockquote>
+      <p>Input:</p>
+      <pre><code data-trim data-noescape>
+        import {
+          PromptInput,
+          PromptInputTextarea,
+          PromptInputAction,
+        } from '@/components/ui/prompt-input';
+
+        function PromptInputBasic() {
+          return (
+            &lt;PromptInput>
+              &lt;PromptInputTextarea placeholder='Message ChatGPT' />
+              &lt;PromptInputActions>
+                &lt;PromptInputAction tooltip='Upload File'>
+                  &lt;Button>Upload File</Button>
+                &lt;/PromptInputAction>
+                &lt;PromptInputAction tooltip='Send'>
+                  &lt;Button>Send</Button>
+                &lt;/PromptInputAction>
+              &lt;/PromptInputActions>
+            &lt;/PromptInput>
+          );
+        }
+      </code></pre>
+    </section>
+
+    <section>
+      <h2><a href="https://www.prompt-kit.com/">Prompt-kit</a></h2>
+      <blockquote>Customizable, high-quality components for AI applications.</blockquote>
+      <p>Output:</p>
+      <img src="images/prompt-kit-ui.png" alt="Prompt-kit example"/>
+    </section>
+
+    <!----------------------  Security & Privacy  ---------------------->
+
+    <!----------------------  Industry News  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">Industry News</h2>
+    </section>
+
+    <section>
+      <h2>TLS Cert Lifetime</h2>
+      <p class="subhead"><a href="https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days">Published</a> April 14</p>
+      <blockquote>TLS certificate lifetimes will officially reduce to 47 days</blockquote>
+      <ul>
+        <li class="fragment">Currently 398 days until <span class="highlight">March 15, 2026</span></li>
+        <li class="fragment">Then:
+          <strong class="highlight">200</strong> <span class="small">(3/15/26)</span> &rarr;
+          <strong class="highlight">100</strong> <span class="small">(3/15/27)</span> &rarr;
+          <strong class="highlight">47</strong> <span class="small">(3/15/<strong class="highlight">29</strong>)</span>
+        </li>
+        <li class="fragment"><strong class="highlight">47</strong> = 1 maximal month (31 days) + 1/2 30-day month (15 days) + 1 day wiggle room</li>
+        <li class="fragment">Automation will be essentially mandatory</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Redis 8 Released</h2>
+      <p class="subhead"><a href="https://redis.io/blog/redis-8-ga/">Published</a> May 1</p>
+      <ul>
+        <li class="fragment">Added <a href="https://redis.io/blog/agplv3/">OSI-approved AGCLv3</a> option as of v8</li>
+        <li class="fragment">This means it is now <span class="highlight">open source</span> once again</li>
+        <li class="fragment">Also added 30 performance improvements</li>
+        <li class="fragment">New data type: <a href="https://redis.io/blog/announcing-vector-sets-a-new-redis-data-type-for-vector-similarity/">vector sets</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>WCAG 3.0</h2>
+      <p class="subhead"><a href="https://www.smashingmagazine.com/2025/05/wcag-3-proposed-scoring-model-shift-accessibility-evaluation/">Published</a> May 2</p>
+      <blockquote>WCAG 3.0 isn’t just an update — it’s a paradigm shift.</blockquote>
+      <ul>
+        <li class="fragment">The <a href="https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/">3.0 spec</a> is still in draft status</li>
+        <li class="fragment">Focus on real-world usability over compliance</li>
+        <li class="fragment">Flexible graded <a href="https://www.w3.org/TR/wcag-3.0-explainer/#additional-concepts">scoring system</a></li>
+        <li class="fragment"><span class="highlight">WCAG 2.2 Level AA</span> is still the gold standard</li>
+      </ul>
+    </section>
+
+    <!----------------------  Events  ---------------------->
+
+    <!----------------------  Handy Tools  ---------------------->
+
+    <!----------------------  ICYMI  ---------------------->
+
+    <section data-background-color="#661f34" class="center main-title">
+      <h2 style="color:white;">ICYMI</h2>
+    </section>
+
+    <section>
+      <h2>ESLint v9.0.0: A retrospective</h2>
+      <p class="subhead"><a href="https://eslint.org/blog/2025/05/eslint-v9.0.0-retrospective/">Published</a> May 21</p>
+      <blockquote>It's been over a year since ESLint v9.0.0 was released... What went well, what didn't, and what we've learned.</blockquote>
+      <p class="fragment">After 5 years in development, 9.0 "didn't work" and "broke the ecosystem". Why?</p>
+      <ul>
+        <li class="fragment">Too many breaking changes</li>
+        <li class="fragment">Tooling first, documentation second</li>
+        <li class="fragment">Errors need context</li>
+        <li class="fragment">Ecosystem outreach needs improvement</li>
+      </ul>
+    </section>
+
+    <!----------------------  Just For Fun  ---------------------->
+
+    <!----------------------  Fin!  ---------------------->
+
+    <section>
+      <h2>Thanks!</h2>
+      <p>Brian Moeskau</p>
+      <ul>
+        <li><a href="https://www.moeskau.com/">moeskau.com</a></li>
+        <li><a href="https://www.edgeatx.org/slides/">edgeATX.org / slides</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script src="../../shared/reveal.js/dist/reveal.js"></script>
+<script src="../../shared/reveal.js/plugin/notes/notes.js"></script>
+<script src="../../shared/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="../../shared/reveal.js/plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+  });
+  document.querySelectorAll('a').forEach((el) => {
+    el.setAttribute('target', '_blank');
+    el.setAttribute('rel', 'noopener');
+  });
+</script>
+</body>
+</html>
