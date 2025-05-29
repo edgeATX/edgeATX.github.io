@@ -262,6 +262,7 @@ footer {
   border: 1px solid #cccccc;
   background: #f8f8f8;
   color: #888888;
+  box-shadow: none;
 }
 
 .footer {
